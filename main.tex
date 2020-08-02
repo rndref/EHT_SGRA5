@@ -6,6 +6,7 @@
 %==============================================================================
 %% Text mode macros; should postfix with "\xspace"
 \newcommand\sgra{Sgr~A*\xspace}
+\def\M87{M\,87\xspace}
 
 %% Math mode macros
 \newcommand\mbh{{M}} % should we use M_* or M_\mathrm{bh} ?
@@ -28,13 +29,13 @@
 \newcommand\note[1]{{\color{OliveGreen}[note: #1]}}
 \newcommand\ckc[1]{{\color{MidnightBlue}[ckc: #1]}}
 
-%% EHT publication package 
-\defcitealias{2019ApJ...875L...1E}{M87~I}
-\defcitealias{2019ApJ...875L...2E}{M87~II}
-\defcitealias{2019ApJ...875L...3E}{M87~III}
-\defcitealias{2019ApJ...875L...4E}{M87~IV}
-\defcitealias{2019ApJ...875L...5E}{M87~V}
-\defcitealias{2019ApJ...875L...6E}{M87~IV}
+%% EHT publication package
+\defcitealias{2019ApJ...875L...1E}{\M87 Paper~I}
+\defcitealias{2019ApJ...875L...2E}{\M87 Paper~II}
+\defcitealias{2019ApJ...875L...3E}{\M87 Paper~III}
+\defcitealias{2019ApJ...875L...4E}{\M87 Paper~IV}
+\defcitealias{2019ApJ...875L...5E}{\M87 Paper~V}
+\defcitealias{2019ApJ...875L...6E}{\M87 Paper~IV}
 
 %==============================================================================
 \begin{document}
@@ -168,9 +169,9 @@ range $-1 < \abh < 1$.
 Here $\abh \equiv Jc/G\mbh^2$, where $J$, $G$, and $c$ are the black
 hole angular momentum, gravitational constant, and speed of light,
 respectively.
-We follow the convention of \citep{2019ApJ...875L...5E} that $\abh <
-0$ indicate anti-aligned angular momentum between the accretion flow
-and that of the black hole.
+We follow the convention of \citetalias{2019ApJ...875L...5E} that
+$\abh < 0$ indicate anti-aligned angular momentum between the
+accretion flow and that of the black hole.
 Using GRMHD models for the accretion flow and GRRT images calculated
 from these simulations, we test whether or not the results of the 2017
 EHT observing campaign (hereafter EHT2017) are consistent with the
@@ -380,7 +381,7 @@ D. Lee and C. Gammie fit the covariance of the ALMA light curve to a Mat\'ern co
 \begin{equation}
     C(\Delta t) = \mbox{const.} \, \times \, q^\nu K_\nu(q).
 \end{equation}
-Here $q \equiv \sqrt{2\nu} |\Delta t|/\tau$, $\tau$ is a characteristic timescale, $K_\nu$ is a modified Bessel function, and $\nu$ is a parameter that determines the high frequency falloff of the power spectrum, with $P_\omega \propto \omega^{-2}$ for $\nu = 1/2$.  In general $P_\omega \propto \omega^{-2\nu - 1}$. The special case $\nu = 1/2$ is equivalent to the damped random walk that is commonly used to model AGN light curves, and has been used to model \sgra and M87's submm light curve. A maximum likelihood fit to the ALMA data yields $\tau \sim 0.9$hr and $\nu \sim 1.5$.
+Here $q \equiv \sqrt{2\nu} |\Delta t|/\tau$, $\tau$ is a characteristic timescale, $K_\nu$ is a modified Bessel function, and $\nu$ is a parameter that determines the high frequency falloff of the power spectrum, with $P_\omega \propto \omega^{-2}$ for $\nu = 1/2$.  In general $P_\omega \propto \omega^{-2\nu - 1}$. The special case $\nu = 1/2$ is equivalent to the damped random walk that is commonly used to model AGN light curves, and has been used to model \sgra and \M87's submm light curve. A maximum likelihood fit to the ALMA data yields $\tau \sim 0.9$hr and $\nu \sim 1.5$.
 
 It remains to be seen whether this provides a strong constraint on the models; a preliminary study of model light curves suggests that at least some models are also well fit by a Mat\'ern covariance with similar parameters.
 
@@ -402,7 +403,7 @@ For the Illinois segment of the \sgra GRMHD models $\< F\>$ varies widely, $\sig
 
 The circular polarization in GRMHD models also varies widely, with  $0.09 < \<|C|\> < 3.8 \%$.  The smallest $\<|C|\>$ is in a MAD model with $a = -0.5$, $i = 90$, and $R_{high} = 1$.  The largest $\<|C|\>$ is in a SANE model with $a = 0.94$, $i = 50$, and $R_{high} = 10$.
 
-Comment: this is a very limited set of models.  We may want to consider $R_{low} = 10$ models, as in the M87 polarization theory effort.   We do not know if the distribution of polarizations is converged, and we do not fully understand sensitivity to all the parameters: this analysis has many of the same issues as the M87 polarization analysis, except that we know that almost all the flux is compact.
+Comment: this is a very limited set of models.  We may want to consider $R_{low} = 10$ models, as in the \M87 polarization theory effort.   We do not know if the distribution of polarizations is converged, and we do not fully understand sensitivity to all the parameters: this analysis has many of the same issues as the \M87 polarization analysis, except that we know that almost all the flux is compact.
 
 %------------------------------------------------------------------------------
 \subsection{NIR constraints}
