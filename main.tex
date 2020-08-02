@@ -61,7 +61,8 @@
 \keywords{black hole}
 
 %==============================================================================
-\section{Introduction} \label{sec:intro}
+\section{Introduction}
+\label{sec:intro}
 
 Similar to the concept of black hole itself, the Galactic Center black
 hole was first predicted theoretically before it was observed.
@@ -153,6 +154,7 @@ questions that are await of answers.
 
 %==============================================================================
 \section{The Standard \sgra Models}
+\label{sec:basemodels}
 
 \ckc{Not sure if people like definiting ``standard models'' here.
   Maybe we can call it ``base models'', in the sense these are well
@@ -187,6 +189,7 @@ There is reason to believe that, if Sgr A* is fed by stellar winds as in Ressler
 
 %------------------------------------------------------------------------------
 \subsection{Phenomenological Models}
+\label{sec:phenomodels}
 
 \ckc{Is this the right place to put disk vs. jet discussion?
 
@@ -196,10 +199,9 @@ There is reason to believe that, if Sgr A* is fed by stellar winds as in Ressler
   And then the actual fits to these phenomenological models may go
   into a different, e.g., MCFE, paper.}
 
-...
-
 %------------------------------------------------------------------------------
 \subsection{Analytical Models}
+\label{sec:anamodels}
 
 \ckc{Should we actually fit ADAF models?  Should we ray trace ADAF models?}
 
@@ -207,6 +209,7 @@ There is reason to believe that, if Sgr A* is fed by stellar winds as in Ressler
 
 %------------------------------------------------------------------------------
 \subsection{Numerical Models}
+\label{sec:numodels}
 
 \ckc{Only study quiescent state for now and leave flare/variability to
   different papers (time domain, MWL, etc)?}
@@ -234,11 +237,13 @@ Summarize main characteristics that constrain the models.
 
 %==============================================================================
 \section{EHT Derived Constraints}
+\label{sec:ehtconst}
 
 Consider two measurements from Sgr A* imaging: the asymmetry of the image and the size of the image.
 
 %------------------------------------------------------------------------------
 \subsection{Image size constraints}
+\label{sec:sizeconst}
 
 M. Johnson (private communication) reports that the best-fit size of Sgr A* obtained by measuring the FWHM of a Gaussian fit along a direction 45 deg E of N is approximately $57 \pm 11 \mu$as.  This implies $\sigma = 24 \pm 4.7 \mu$as.  What is expected from the models?
 
@@ -256,6 +261,7 @@ Comment: model size may be sensitive to the presence of a nonthermal tail in the
 
 %------------------------------------------------------------------------------
 \subsection{Image asymmetry constraint}
+\label{sec:asymconst}
 
 Current results from the imaging group suggest Sgr A* is a surprisingly symmetric ring.   What level of asymmetry is expected in the model library?
 
@@ -278,11 +284,13 @@ Alternative analysis: one could fit a slashed crescent model to the data and est
 
 %==============================================================================
 \section{Non-EHT Constraints}
+\label{sec:nonehtconst}
 
 Sgr A* is one of the most well-characterized objects on the sky. Simultaneous and non-simultaneous observations at $230$GHz and  other frequencies have the potential to sharply constrain models.
 
 %------------------------------------------------------------------------------
 \subsection{ALMA light curve properties}
+\label{sec:lcconst}
 
 Because the ALMA light curve is tightly sampled with intervals  between measurements as little as a second and high signal to noise (typically $\sim 60$), it can provide tight new constraints on the high temporal frequency variability of Sgr A*.  This high frequency variability can also be computed from GRMHD models and compared to the data using various statistics.
 
@@ -307,6 +315,7 @@ It remains to be seen whether this provides a strong constraint on the models; a
 
 %------------------------------------------------------------------------------
 \subsection{ALMA polarization constraints}
+\label{sec:polconst}
 
 A typical linear polarization fraction for ALMA is $P \sim 6\%$ during the 2017 campaign, with EVPA $\sim -60$deg.  A typical circular polarization fraction is $C \sim 1\%$.  Historical data may also be useful.
 
@@ -327,6 +336,7 @@ Comment: this is a very limited set of models.  We may want to consider $R_{low}
 
 %------------------------------------------------------------------------------
 \subsection{NIR constraints}
+\label{sec:nirconst}
 
 Although we have relatively little simultaneous NIR data from the 2017 campaign, the NIR lightcurve is observationally well characterized, with NIR flares peaking at $\sim 30$mJy and quiescent flux of order a few mJy.  NIR emission is produced by synchrotron emission in all models that we are aware of.  The NIR/mm color of models is sensitive to the eDF, and in particular nonthermal tails on the eDF, which tend to increase the NIR flux (this point needs to be thoroughly tested).  Thermal eDF models that consistently produce flux densities above a few $mJy$ at K band can therefore be ruled out.
 
@@ -341,6 +351,7 @@ An example analysis based on preliminary NIR images from the Illinois segment of
 
 %------------------------------------------------------------------------------
 \subsection{X-ray constraints}
+\label{sec:xrayconst}
 
 We are fortunate to have good X-ray coverage on 6 April 2017 from Chandra and NuSTAR.
 
@@ -359,6 +370,7 @@ Nevertheless, it is possible to apply a not-to-exceed threshold constraint simil
 
 %------------------------------------------------------------------------------
 \subsection{Low frequency SED}
+\label{sec:lfconst}
 
 Purely thermal $R_{high}$ eDF models do not match the low frequency SED.
 
@@ -366,12 +378,19 @@ Needed: nonthermal models, or thermal models with an extended isothermal compone
 
 %------------------------------------------------------------------------------
 \subsection{Low frequency image size}
+\label{sec:lfsizeconst}
+
 ...
 
 %==============================================================================
 \section{Joint analysis of constraints}
+\label{sec:allconst}
+
+...
+
 %------------------------------------------------------------------------------
 \subsection{Unsupervised Learning}
+\label{sec:ml}
 
 Apply k-mean clustering (or so) to classify different phenomenological models that satisfy most constraints.
 
@@ -381,10 +400,15 @@ Score each category independently and study top sets from each category.  May le
 
 %==============================================================================
 \section{Caveats/Limitations}
+\label{sec:caveats}
+
+...
 
 %==============================================================================
 \section{Conclusions}
 \label{sec:conclusions}
+
+...
 
 %==============================================================================
 \acknowledgments
@@ -392,21 +416,34 @@ Score each category independently and study top sets from each category.  May le
 Standard EHT acknowledgments.
 
 \vspace{5mm}
-\facilities{HST(STIS), Swift(XRT and UVOT), AAVSO, CTIO:1.3m,
-CTIO:1.5m,CXO}
+\facilities{%
+  HST(STIS),
+  Swift(XRT and UVOT),
+  AAVSO,
+  CTIO:1.3m,
+  CTIO:1.5m,
+  CXO%
+}
 
-\software{astropy \citep{2013A&A...558A..33A},
-          Cloudy \citep{2013RMxAA..49..137F},
-          SExtractor \citep{1996A&AS..117..393B}
-          }
+\software{
+  astropy~\citep{2013A&A...558A..33A},
+  Cloudy~\citep{2013RMxAA..49..137F},
+  SExtractor~\citep{1996A&AS..117..393B}%
+}
 
 %==============================================================================
 \appendix
 %------------------------------------------------------------------------------
 \section{Details}
+\label{sec:details}
+
+...
 
 %------------------------------------------------------------------------------
-\section{Pass-Fail Table }
+\section{Pass-Fail Table}
+\label{sec:passfail}
+
+...
 
 %==============================================================================
 %\bibliography{sample63}{}
