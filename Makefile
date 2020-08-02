@@ -1,3 +1,7 @@
+f: fast
+v: view
+c: clean
+
 main.pdf: main.tex main.bbl
 	pdflatex main
 
@@ -10,6 +14,9 @@ main.bbl: main.bib
 main.bib: main.aux
 	bash tools/adsbib.sh main
 	bash tools/fix.sh
+
+fast:
+	pdflatex main
 
 view:
 	open -a texshop main.pdf # this is for Mac
