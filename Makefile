@@ -1,4 +1,7 @@
-main.pdf main.aux: main.tex main.bbl
+main.pdf: main.tex main.bbl
+	pdflatex main
+
+main.aux: main.tex
 	pdflatex main
 
 main.bbl: main.bib
