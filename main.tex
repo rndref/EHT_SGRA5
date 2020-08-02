@@ -1,6 +1,6 @@
 \documentclass[twocolumn,tighten,dvipsnames]{aastex63}
 %\documentclass[modern]{aastex63}
-\usepackage{xspace}
+\usepackage{xspace,amsmath}
 \graphicspath{{./}{figures/}}
 
 %==============================================================================
@@ -8,12 +8,19 @@
 \newcommand\sgra{Sgr~A*\xspace}
 
 %% Math mode macros
+\newcommand\mbh{{M}} % should we use M_* or M_\mathrm{bh} ?
+\newcommand\abh{{a}} % should we use a_* or a_\mathrm{bh} ?
+
 \newcommand\msun{{M_\odot}}
 \newcommand\yr{{\rm \, yr}}
 \newcommand\erg{{\rm \, erg}}
+\newcommand\Jy{{\rm \, Jy}}
 \newcommand\cm{{\rm \, cm}}
 \newcommand\pc{{\rm \, pc}}
 \newcommand\gm{{\rm \, g}}
+\newcommand\uas{{\rm \, \mu as}}
+\newcommand\GHz{{\rm \, GHz}}
+
 \newcommand\<{{\langle}}
 \renewcommand\>{{\rangle}} %% "\>" is defined in the "tabbing" environment to advance to next tab stop
 
@@ -139,14 +146,14 @@ This helps astrophysicists study spacetimes beyound the Kerr solution.
 
 In this Letter, we scope ourselves on the astrophysics of \sgra and
 adopt the standard model that \sgra is a black hole described by the
-Kerr metric, with mass $M$ and dimensionless spin $a*$ within the
-range $-1 < a_* < 1$.
-Here $a \equiv Jc/GM^2$, where $J$, $G$, and $c$ are the black hole
-angular momentum, gravitational constant, and speed of light,
+Kerr metric, with mass $\mbh$ and dimensionless spin $\abh$ within the
+range $-1 < \abh < 1$.
+Here $\abh \equiv Jc/G\mbh^2$, where $J$, $G$, and $c$ are the black
+hole angular momentum, gravitational constant, and speed of light,
 respectively.
-We follow the convention of \citep{2019ApJ...875L...5E} that $a_* < 0$
-indicate anti-aligned angular momentum between the accretion flow and
-that of the black hole.
+We follow the convention of \citep{2019ApJ...875L...5E} that $\abh <
+0$ indicate anti-aligned angular momentum between the accretion flow
+and that of the black hole.
 Using GRMHD models for the accretion flow and GRRT images calculated
 from these simulations, we test whether or not the results of the 2017
 EHT observing campaign (hereafter EHT2017) are consistent with the
@@ -176,25 +183,60 @@ pre-EHT2017 data.
 %------------------------------------------------------------------------------
 \subsection{One-Zone Model/Estimate}
 
-Assumed mass for \sgra is $M = 4.14 \times 10^6 \msun$, and distance $D = 8127\pc$ (based on GRAVITY results).
+Assumed mass for \sgra is $\mbh = 4.14 \times 10^6 \msun$, and
+distance $D = 8127\pc$ (based on GRAVITY results).
 
-The implied characteristic length is $G M/c^2 = 6.1 \times 10^{11} \cm$, characteristic time is $G M/c^3 = 20.4\sec$, angular scale is $G M/(c^2 D) = 5.03\mu$as.  The radius of the shadow is $26.1\mu$as.
+The implied characteristic length is $G\mbh/c^2 = 6.1 \times 10^{11}
+\cm$, characteristic time is $G\mbh/c^3 = 20.4 \sec$, angular scale is
+$G\mbh/(c^2 D) = 5.03\uas$.
+The radius of the shadow is $26.1\uas$.
 
-Then $\nu L_\nu = 4 \pi d^2 \nu F_\nu = 1.8 \times 10^{34} (d/8127 \pc)^2 (\nu/230 {\rm GHz})(F_\nu/{\rm Jy}) \erg \sec^{-1}$.
+Then $\nu L_\nu = 4 \pi d^2 \nu F_\nu = 1.8 \times 10^{34} (d/8127
+\pc)^2 (\nu/230 \GHz)(F_\nu/{\rm Jy}) \erg \sec^{-1}$.
 
-The Eddington luminosity for \sgra is $L_{Edd} = 4\pi G M c/\kappa_{es} = 5.2 \times 10^{44} \erg\sec^{-1}$. The Eddington accretion rate is $\dot{M}_{Edd} \equiv  L_{Edd}/(0.1 c^2) = 5.8 \times 10^{24} \gm \sec^{-1} = 0.09 \msun \yr^{-1}$.  The Eddington ratio is $L_{bol}/L_{Edd} = 1.9 \times 10^{-10} (L_{bol}/10^{35})$.
+The Eddington luminosity for \sgra is $L_{Edd} = 4\pi G\mbh
+c/\kappa_{es} = 5.2 \times 10^{44} \erg\sec^{-1}$. The Eddington
+accretion rate is $\dot\mbh_{Edd} \equiv L_{Edd}/(0.1 c^2) = 5.8
+\times 10^{24} \gm \sec^{-1} = 0.09 \msun \yr^{-1}$.
+The Eddington ratio is $L_{bol}/L_{Edd} = 1.9 \times 10^{-10}
+(L_{bol}/10^{35})$.
 
-Next we consider a one zone model for \sgra.  The model consists of a single temperature sphere with magnetic field oriented at $\pi/3$ to the line of sight.  Assumed flux is $2$Jy, which is the average flux for Sgr A* measured by ALMA during the 2017 campaign.  The sphere radius is $5 G M/c^2$.  The ratio of ion to electron temperature $R \equiv T_i/T_e = 3$.  Assumed plasma $\beta \equiv  P_{gas}/(B^2/(8\pi)) = 1$, electron temperature $\Theta_e \equiv k T_e/(m_e c^2) = 10$.
+Next we consider a one zone model for \sgra.
+The model consists of a single temperature sphere with magnetic field
+oriented at $\pi/3$ to the line of sight.
+Assumed flux is $2\Jy$, which is the average flux for \sgra measured
+by ALMA during the 2017 campaign.
+The sphere radius is $5 G\mbh/c^2$.
+The ratio of ion to electron temperature $R \equiv T_i/T_e = 3$.
+Assumed plasma $\beta \equiv P_{gas}/(B^2/(8\pi)) = 1$, electron
+temperature $\Theta_e \equiv k T_e/(m_e c^2) = 10$.
 
 The one zone model flux density is
-\begin{equation}
-    F_\nu = \int I_\nu \, d\Omega = \frac{2 k T_e \nu^2}{c^2 D^2} \int \, dx dy\,  (1 - \exp(-\tau_\nu(x,y))
-\end{equation}
-where $d\Omega$ is a differential solid angle, $x$ and $y$ are coordinates on the source plane in the same units as $D$, and $\tau_\nu(x,y) = 2 \alpha_\nu (G M/c^2) \sqrt{X_0^2 - X^2}$, where $X$ is the offset on the sky from the center of the sphere in units of $GM/c^2$, and $X_0 = 5 G M/c^2$.  Finally, $\alpha_\nu$ is the thermal synchrotron absorption coefficient (units: $\cm^{-1}$).  The density is adjusted until the flux density is $2$Jy.
+\begin{align}
+  F_\nu = \int I_\nu \, d\Omega =
+  \frac{2 k T_e \nu^2}{c^2 D^2} \int dx dy\,\left[1 - \exp(-\tau_\nu(x,y)\right]
+\end{align}
+where $d\Omega$ is a differential solid angle, $x$ and $y$ are
+coordinates on the source plane in the same units as $D$, and
+$\tau_\nu(x,y) = 2 \alpha_\nu (G\mbh/c^2) \sqrt{X_0^2 - X^2}$, where
+$X$ is the offset on the sky from the center of the sphere in units of
+$GM/c^2$, and $X_0 = 5 G\mbh/c^2$.
+Finally, $\alpha_\nu$ is the thermal synchrotron absorption
+coefficient (units: $\cm^{-1}$).
+The density is adjusted until the flux density is $2\Jy$.
 
-For a pure hydrogen model, resulting parameters are: $n_e = 1.1 \times 10^6$, $B = 30$G, $\tau_I = 0.48$, $\tau_Q = 0.35 $, $\tau_V = 0.27$, Thomson depth $\tau_e = 5 G M/c^2 \sigma_T = 2.2 \times 10^{-6}$, Compton $y = \tau_e 16 \Theta_e^2 = 3.6 \times 10^{-3}$, synchrotron cooling time is $t_{cool} = 3.1 \times 10^4\sec = 1.5 \times 10^3 G M/c^3$.
+For a pure hydrogen model, resulting parameters are: $n_e = 1.1 \times
+10^6$, $B = 30\,\mathrm{G}$, $\tau_I = 0.48$, $\tau_Q = 0.35 $,
+$\tau_V = 0.27$, Thomson depth $\tau_e = 5 G\mbh/c^2 \sigma_T = 2.2
+\times 10^{-6}$, Compton $y = \tau_e 16 \Theta_e^2 = 3.6 \times
+10^{-3}$, synchrotron cooling time is $t_{cool} = 3.1 \times 10^4\sec
+= 1.5 \times 10^3 G\mbh/c^3$.
 
-There is reason to believe that, if Sgr A* is fed by stellar winds as in Ressler et al. 2019, the inflowing plasma is almost pure helium.  In this case the results change only slightly; the cooling time drops slightly because the rest-mass density (and therefore field strength) per electron increases.
+There is reason to believe that, if \sgra is fed by stellar winds as
+in Ressler et al. 2019, the inflowing plasma is almost pure helium.
+In this case the results change only slightly; the cooling time drops
+slightly because the rest-mass density (and therefore field strength)
+per electron increases.
 
 %------------------------------------------------------------------------------
 \subsection{Phenomenological Models}
@@ -248,21 +290,21 @@ Summarize main characteristics that constrain the models.
 \section{EHT Derived Constraints}
 \label{sec:ehtconst}
 
-Consider two measurements from Sgr A* imaging: the asymmetry of the image and the size of the image.
+Consider two measurements from \sgra imaging: the asymmetry of the image and the size of the image.
 
 %------------------------------------------------------------------------------
 \subsection{Image size constraints}
 \label{sec:sizeconst}
 
-M. Johnson (private communication) reports that the best-fit size of Sgr A* obtained by measuring the FWHM of a Gaussian fit along a direction 45 deg E of N is approximately $57 \pm 11 \mu$as.  This implies $\sigma = 24 \pm 4.7 \mu$as.  What is expected from the models?
+M. Johnson (private communication) reports that the best-fit size of \sgra obtained by measuring the FWHM of a Gaussian fit along a direction 45 deg E of N is approximately $57 \pm 11 \uas$.  This implies $\sigma = 24 \pm 4.7 \uas$.  What is expected from the models?
 
 As a first step, consider the following statistic measured from the image library.  For each image in each model, compute the trace of the second moment tensor, i.e.
 \begin{equation}
-    R^2 = \frac{1}{F_\nu} \int \, d\alpha d\beta \, I_\nu \,\, (\alpha^2 + \beta^2).
+    R^2 = \frac{1}{F_\nu} \int d\alpha d\beta \, I_\nu \, (\alpha^2 + \beta^2).
 \end{equation}
 This produces a distribution of characteristic isotropic size $R$ for each model.
 
-We have done a preliminary analysis of $\langle R \rangle$ and $\sigma_R$ for the Illinois segment of the image library, 360 models in all.  The models have  $18.3 \le \langle R \rangle 64.6 \mu$as; the smallest is an edge-on SANE, $a = 0.94$ model while the largest is a nearly face-on SANE, $a = -0.94$ model.  Only 22 models have $\langle R \rangle < 30\mu$as.  All of these are SANE models, and most have positive spin.  This is in tension with a possible low  asymmetry constraint because this is precisely the set of models with largest asymmetry.
+We have done a preliminary analysis of $\langle R \rangle$ and $\sigma_R$ for the Illinois segment of the image library, 360 models in all.  The models have  $18.3 \le \langle R \rangle 64.6 \uas$; the smallest is an edge-on SANE, $a = 0.94$ model while the largest is a nearly face-on SANE, $a = -0.94$ model.  Only 22 models have $\langle R \rangle < 30\uas$.  All of these are SANE models, and most have positive spin.  This is in tension with a possible low  asymmetry constraint because this is precisely the set of models with largest asymmetry.
 
 Improvement in analysis: measure the full second moment tensor for each image and produce a distribution of $R$ measured for a random chord drawn across the model.  Since the major and minor axes are likely quite different, at least for some models (Issaoun et al. 2019) this likely relaxes the constraint.  Since the observed size is rather small, this will favor either small models or larger models with a large axis ratio and a particular orientation.
 
@@ -272,22 +314,22 @@ Comment: model size may be sensitive to the presence of a nonthermal tail in the
 \subsection{Image asymmetry constraint}
 \label{sec:asymconst}
 
-Current results from the imaging group suggest Sgr A* is a surprisingly symmetric ring.   What level of asymmetry is expected in the model library?
+Current results from the imaging group suggest \sgra is a surprisingly symmetric ring.   What level of asymmetry is expected in the model library?
 
 To answer this we must first define an asymmetry statistic.  To start, we defined
 \begin{equation}
     A = \frac{1}{F_\nu} \int \, d\alpha d\beta \, | I_\nu - {\rm AXI}(I_\nu) |
 \end{equation}
-where AXI indicates an axisymmetrized version of the image.  We use a crude centering algorithm, and studied only the average image from each model.  This statistic measures how much of the flux is in nonaxisymmetric piece of the image.   The result from measuring $A$ for the average image of the Illinois segment of the Sgr A* model library is shown in Figure \ref{fig:asymm}.
+where AXI indicates an axisymmetrized version of the image.  We use a crude centering algorithm, and studied only the average image from each model.  This statistic measures how much of the flux is in nonaxisymmetric piece of the image.   The result from measuring $A$ for the average image of the Illinois segment of the \sgra model library is shown in Figure \ref{fig:asymm}.
 
 \begin{figure}\label{fig:asymm}
     \plotone{asymm.pdf}
-    \caption{Asymmetry statistic $A$ for models in the Sgr A* image library.  Lower $A$ is more symmetric.  All models are more symmetric when viewed nearly face on (or anti-face-on).  The $R_{high} = 1$ models exhibit distinct trends and the models will likely be eliminated by other considerations.  For $R_{high} \ge 10$ SANE edge-on models are most asymmetric at high positive spin, while the MAD edge-on models are most asymmetric at moderate negative spin.}
+    \caption{Asymmetry statistic $A$ for models in the \sgra image library.  Lower $A$ is more symmetric.  All models are more symmetric when viewed nearly face on (or anti-face-on).  The $R_{high} = 1$ models exhibit distinct trends and the models will likely be eliminated by other considerations.  For $R_{high} \ge 10$ SANE edge-on models are most asymmetric at high positive spin, while the MAD edge-on models are most asymmetric at moderate negative spin.}
 \end{figure}
 
 Improvements in analysis: a better approach to this analysis might be to generate multiple realizations of synthetic data from models, reconstruct an image using one of the imaging pipelines, and measure an asymmetry from the image.  This would produce a distribution $f(A)$ for each model from which a likelihood could be generated.
 
-This should be done for all models in the Sgr A* image library.
+This should be done for all models in the \sgra image library.
 
 Alternative analysis: one could fit a slashed crescent model to the data and estimate an asymmetry parameter $h$.
 
@@ -295,13 +337,13 @@ Alternative analysis: one could fit a slashed crescent model to the data and est
 \section{Non-EHT Constraints}
 \label{sec:nonehtconst}
 
-Sgr A* is one of the most well-characterized objects on the sky. Simultaneous and non-simultaneous observations at $230$GHz and  other frequencies have the potential to sharply constrain models.
+\sgra is one of the most well-characterized objects on the sky. Simultaneous and non-simultaneous observations at $230$GHz and  other frequencies have the potential to sharply constrain models.
 
 %------------------------------------------------------------------------------
 \subsection{ALMA light curve properties}
 \label{sec:lcconst}
 
-Because the ALMA light curve is tightly sampled with intervals  between measurements as little as a second and high signal to noise (typically $\sim 60$), it can provide tight new constraints on the high temporal frequency variability of Sgr A*.  This high frequency variability can also be computed from GRMHD models and compared to the data using various statistics.
+Because the ALMA light curve is tightly sampled with intervals  between measurements as little as a second and high signal to noise (typically $\sim 60$), it can provide tight new constraints on the high temporal frequency variability of \sgra.  This high frequency variability can also be computed from GRMHD models and compared to the data using various statistics.
 
 An example light curve for 3598 is shown in Figure \ref{fig:LC3598}.
 
@@ -316,9 +358,9 @@ V. Ramakrishnan is carrying out an analysis of correlation times and power spect
 
 D. Lee and C. Gammie fit the covariance of the ALMA light curve to a Mat\'ern covariance function, which has the form
 \begin{equation}
-    C(\Delta t) = const. \, \times \, q^\nu K_\nu(q).
+    C(\Delta t) = \mbox{const.} \, \times \, q^\nu K_\nu(q).
 \end{equation}
-Here $q \equiv \sqrt{2\nu} |\Delta t|/\tau$, $\tau$ is a characteristic timescale, $K_\nu$ is a modified Bessel function, and $\nu$ is a parameter that determines the high frequency falloff of the power spectrum, with $P_\omega \propto \omega^{-2}$ for $\nu = 1/2$.  In general $P_\omega \propto \omega^{-2\nu - 1}$. The special case $\nu = 1/2$ is equivalent to the damped random walk that is commonly used to model AGN light curves, and has been used to model Sgr A* and M87's submm light curve. A maximum likelihood fit to the ALMA data yields $\tau \sim 0.9$hr and $\nu \sim 1.5$.
+Here $q \equiv \sqrt{2\nu} |\Delta t|/\tau$, $\tau$ is a characteristic timescale, $K_\nu$ is a modified Bessel function, and $\nu$ is a parameter that determines the high frequency falloff of the power spectrum, with $P_\omega \propto \omega^{-2}$ for $\nu = 1/2$.  In general $P_\omega \propto \omega^{-2\nu - 1}$. The special case $\nu = 1/2$ is equivalent to the damped random walk that is commonly used to model AGN light curves, and has been used to model \sgra and M87's submm light curve. A maximum likelihood fit to the ALMA data yields $\tau \sim 0.9$hr and $\nu \sim 1.5$.
 
 It remains to be seen whether this provides a strong constraint on the models; a preliminary study of model light curves suggests that at least some models are also well fit by a Mat\'ern covariance with similar parameters.
 
@@ -337,7 +379,7 @@ GRMHD models with fixed eDFs make definite predictions for the distribution of $
     \label{fig:lpexamp}
 \end{figure}
 
-For the Illinois segment of the Sgr A* GRMHD models $\< F\>$ varies widely, $\sigma_F/\<F\>$ is typically small or of order $1$, and therefore linear polarization has considerable power to discriminate between models.  The linear polarization fraction varies from $0.08 < \<F\> < 42 \%$.  The smallest $\<F\>$ is in a SANE model with $a = 0$, $i = 90$deg, $R_{high} = 10$; $\sigma_F$ for this model is $0.05\%$. The largest $\<F\>$ is in a SANE model with $a = 0.94$, $i = 90$deg, $R_{high} = 1$; $\sigma_F$ for this model is $5.2\%$.  All of the highest polarization models have $R_{high} = 1$.  Other groups' models should be checked for consistency.
+For the Illinois segment of the \sgra GRMHD models $\< F\>$ varies widely, $\sigma_F/\<F\>$ is typically small or of order $1$, and therefore linear polarization has considerable power to discriminate between models.  The linear polarization fraction varies from $0.08 < \<F\> < 42 \%$.  The smallest $\<F\>$ is in a SANE model with $a = 0$, $i = 90$deg, $R_{high} = 10$; $\sigma_F$ for this model is $0.05\%$. The largest $\<F\>$ is in a SANE model with $a = 0.94$, $i = 90$deg, $R_{high} = 1$; $\sigma_F$ for this model is $5.2\%$.  All of the highest polarization models have $R_{high} = 1$.  Other groups' models should be checked for consistency.
 
 The circular polarization in GRMHD models also varies widely, with  $0.09 < \<|C|\> < 3.8 \%$.  The smallest $\<|C|\>$ is in a MAD model with $a = -0.5$, $i = 90$, and $R_{high} = 1$.  The largest $\<|C|\>$ is in a SANE model with $a = 0.94$, $i = 50$, and $R_{high} = 10$.
 
