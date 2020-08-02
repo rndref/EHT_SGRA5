@@ -333,10 +333,11 @@ To answer this we must first define an asymmetry statistic.  To start, we define
 \end{equation}
 where AXI indicates an axisymmetrized version of the image.  We use a crude centering algorithm, and studied only the average image from each model.  This statistic measures how much of the flux is in nonaxisymmetric piece of the image.   The result from measuring $A$ for the average image of the Illinois segment of the \sgra model library is shown in Figure \ref{fig:asymm}.
 
-\begin{figure}\label{fig:asymm}
-    \plotone{asymm.pdf}
-    \caption{Asymmetry statistic $A$ for models in the \sgra image library.  Lower $A$ is more symmetric.  All models are more symmetric when viewed nearly face on (or anti-face-on).  The $R_{high} = 1$ models exhibit distinct trends and the models will likely be eliminated by other considerations.  For $R_{high} \ge 10$ SANE edge-on models are most asymmetric at high positive spin, while the MAD edge-on models are most asymmetric at moderate negative spin.}
-\end{figure}
+\begin{figure*}
+  \plotone{asymm.pdf}
+  \caption{Asymmetry statistic $A$ for models in the \sgra image library.  Lower $A$ is more symmetric.  All models are more symmetric when viewed nearly face on (or anti-face-on).  The $R_{high} = 1$ models exhibit distinct trends and the models will likely be eliminated by other considerations.  For $R_{high} \ge 10$ SANE edge-on models are most asymmetric at high positive spin, while the MAD edge-on models are most asymmetric at moderate negative spin.}
+  \label{fig:asymm}
+\end{figure*}
 
 Improvements in analysis: a better approach to this analysis might be to generate multiple realizations of synthetic data from models, reconstruct an image using one of the imaging pipelines, and measure an asymmetry from the image.  This would produce a distribution $f(A)$ for each model from which a likelihood could be generated.
 
@@ -383,12 +384,11 @@ A typical linear polarization fraction for ALMA is $P \sim 6\%$ during the 2017 
 
 GRMHD models with fixed eDFs make definite predictions for the distribution of $P$ and $C$.  An example PDF for linear polarization fraction is shown in Figure \ref{fig:lpexamp}.
 
-\begin{figure}
-    \centering
-    \plottwo{flin_distr.pdf}{fcirc_distr.pdf}
-    \caption{Left: distribution of linear polarization fraction from a MAD model with $a = 0$, $i = 30$deg, $R_{high} = 10$. Right: distribution of circular polarization fraction for the same model.}
-    \label{fig:lpexamp}
-\end{figure}
+\begin{figure*}
+  \plottwo{flin_distr.pdf}{fcirc_distr.pdf}
+  \caption{Left: distribution of linear polarization fraction from a MAD model with $a = 0$, $i = 30$deg, $R_{high} = 10$. Right: distribution of circular polarization fraction for the same model.}
+  \label{fig:lpexamp}
+\end{figure*}
 
 For the Illinois segment of the \sgra GRMHD models $\< F\>$ varies widely, $\sigma_F/\<F\>$ is typically small or of order $1$, and therefore linear polarization has considerable power to discriminate between models.  The linear polarization fraction varies from $0.08 < \<F\> < 42 \%$.  The smallest $\<F\>$ is in a SANE model with $a = 0$, $i = 90$deg, $R_{high} = 10$; $\sigma_F$ for this model is $0.05\%$. The largest $\<F\>$ is in a SANE model with $a = 0.94$, $i = 90$deg, $R_{high} = 1$; $\sigma_F$ for this model is $5.2\%$.  All of the highest polarization models have $R_{high} = 1$.  Other groups' models should be checked for consistency.
 
@@ -404,12 +404,11 @@ Although we have relatively little simultaneous NIR data from the 2017 campaign,
 
 An example analysis based on preliminary NIR images from the Illinois segment of the simulations is presented in Figure \ref{fig:NIRmodels}.  Evidently $R_{high} = 1$ MAD models are strongly disfavored because they overproduce NIR, presumably because they contain more high energy electrons.  A few other models are ruled out, they tend to have large spin and/or be viewed edge on.
 
-\begin{figure}
-    \centering
-    \plottwo{NIR_MAD.pdf}{NIR_SANE.pdf}
-    \caption{Left: MAD models, Right: SANE models.  Models marked with a red dot consistently overproduce NIR emission, green dots indicate models that do not overproduce NIR.  The inclination is indicated by the position of the dot, with face-on models near twelve o'clock and edge-on models near three o'clock.}
-    \label{fig:NIRmodels}
-\end{figure}
+\begin{figure*}
+  \plottwo{NIR_MAD.pdf}{NIR_SANE.pdf}
+  \caption{Left: MAD models, Right: SANE models.  Models marked with a red dot consistently overproduce NIR emission, green dots indicate models that do not overproduce NIR.  The inclination is indicated by the position of the dot, with face-on models near twelve o'clock and edge-on models near three o'clock.}
+  \label{fig:NIRmodels}
+\end{figure*}
 
 %------------------------------------------------------------------------------
 \subsection{X-ray constraints}
