@@ -1,6 +1,6 @@
-\documentclass[twocolumn,tighten]{aastex63}
+\documentclass[twocolumn,tighten,dvipsnames]{aastex63}
 %\documentclass[modern]{aastex63}
-\usepackage{xspace,xcolor}
+\usepackage{xspace}
 \graphicspath{{./}{figures/}}
 
 %==============================================================================
@@ -18,7 +18,8 @@
 \renewcommand\>{{\rangle}} %% "\>" is defined in the "tabbing" environment to advance to next tab stop
 
 %% Inline comments
-\newcommand\ckc[1]{{\color{blue}[ckc] #1}}
+\newcommand\note[1]{{\color{OliveGreen}[note] #1}}
+\newcommand\ckc[1]{{\color{MidnightBlue}[ckc] #1}}
 
 %==============================================================================
 \begin{document}
@@ -35,11 +36,11 @@
 %\submitjournal{ApJ}
 
 \begin{abstract}
-    This is a NOTES draft for the physical interpretation of EHTC 2017 campaign data for \sgra.
+  \note{This is a NOTES draft for the physical interpretation of EHTC 2017 campaign data for \sgra.}
 
-    Tentative title may be ``First \sgra Event Horizon Telescope Results. IV. Constraining the Physical Properties of the Galactic Center Black Hole''
+  \note{Tentative title may be ``First \sgra Event Horizon Telescope Results. IV. Constraining the Physical Properties of the Galactic Center Black Hole''}
 
-    Please feel free to add your work and comment on existing notes, but do not delete anything without consulting the paper coordinators.
+  \note{Please feel free to add your work and comment on existing notes, but do not delete anything without consulting the paper coordinators.}
 \end{abstract}
 
 \keywords{black hole}
