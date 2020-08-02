@@ -1,0 +1,13 @@
+*
+
+!*/
+!*.sh
+
+!main.tex
+!main.bib
+
+!*.png
+!*.jpg
+!*.eps
+!*.pdf
+main.pdf
