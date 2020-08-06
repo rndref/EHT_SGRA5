@@ -125,8 +125,8 @@ Its x-ray observations and early mm-VLBI measurements motivated the
 development of the relativistic jet models~\citep{2000A&A...362..113F,
   2004A&A...414..895F, 2005ApJ...635.1203M}.
 \note{Please add other theoretical milestones.}
-Many of these groundbreak work still defined key directions of black
-hole research even today.
+Many of these groundbreak work still define key directions of black
+hole research today.
 
 % Numerical work
 On the numeric front, after two decades of innovtations, global
@@ -140,26 +140,26 @@ plasma around black holes.
 \note{GRMHD code comparison coordinators, please provide proper list
   of references.}
 Similarly, there were rapid development in general relativistic ray
-tracing (GRRT) and related methods
-\citep[e.g.,][]{2009ApJ...696.1616D, 2009ApJS..184..387D,
+tracing (GRRT) \citep[e.g.,][]{2009ApJ...696.1616D,
   2012ApJ...745....1P, 2013ApJ...777...11S, 2013ApJ...777...13C,
   2016MNRAS.462..115D, 2016ApJ...820..105P, 2018ApJ...867...59C,
-  2018A&A...613A...2B, 2020ApJ...897..148G, 2020arXiv200703045B} that
-enabled us to convert GRMHD simulations to observables such as SED,
-images, and polarization maps.
+  2018A&A...613A...2B, 2020ApJ...897..148G, 2020arXiv200703045B} and
+general relativistic monte carlo ratiive transfer
+\citep{2009ApJS..184..387D, 2020MNRAS.491.4807M} have enabled us to
+convert GRMHD simulations to observables such as SED, images, and
+polarization maps.
 \note{GRRT code comparison coordinators, please provide proper list of
   references.}
 These numeric tools are now used routinely to perform numerical
 experiments on \sgra.
 
 % Beyond Einstein; test GR
-On the gravity front, the facts that (\emph{i}) radio
-Very-Long-Baseline Interferometry~(VLBI) is able to resolve \sgra's
-predicted black hole shadow~\citep{2000ApJ...528L..13F} and
-(\emph{ii}) the shape of the photon ring is purely a general
-relativistic effect~\citep{2010ApJ...718..446J} makes \sgra an ideal
-laboratory to test general relativity in the strong field
-regime~\citep{2010ApJ...718..446J, 2014ApJ...784....7B,
+On the gravity front, the facts that radio Very-Long-Baseline
+Interferometry~(VLBI) is able to resolve \sgra's predicted black hole
+shadow~\citep{2000ApJ...528L..13F} and the shape of the photon ring is
+purely a general relativistic effect~\citep{2010ApJ...718..446J} make
+\sgra an ideal laboratory to test general relativity in the strong
+field regime~\citep{2010ApJ...718..446J, 2014ApJ...784....7B,
   2015ApJ...802...63B, 2015ApJ...814..115P, 2016ApJ...818..121P,
   2016PhRvL.117i1101J, 2019GReGr..51..137P}.
 ...
@@ -182,8 +182,8 @@ The above developments have led to a large number of studies of
   2020ApJ...896L...6R, 2020ApJ...897...99T, 2020MNRAS.492.3272R,
   2020MNRAS.493.1404A, 2020MNRAS.494.4168D, 2020MNRAS.494.5923P,
   2020arXiv200514251B, 2020arXiv200603657D, 2020arXiv200603658P}.
-\ckc{Ideally we should cite the above paper in subsequent sections and
-  describe why they are relevent to this paper.}
+\ckc{Ideally we should cite the above papers in subsequent sections
+  and describe why they are relevent to this paper.}
 On one hand, these studies in general lead to very rich of images, and
 make previous observations of \sgra non-conclusive.
 On the other hand, however, even the most sophisticate models to date
@@ -342,8 +342,14 @@ per electron increases.
 \subsection{Numerical Models}
 \label{sec:numodels}
 
+\note{Describe the numerical model and simultion library.}
+
 \ckc{Only study quiescent state for now and leave flare/variability to
-  different papers (time domain, MWL, etc)?}
+  different papers (time domain, MWL, etc)?
+  Use slow light only?
+  What information should be included for the GRMHD models?
+  Boundary conditions, including that at the pole, as which may have
+  an effect on the jet.}
 
 %% Propose process:
 %% \begin{itemize}
@@ -355,8 +361,6 @@ per electron increases.
 %%   \item ...
 %%   \item Use image/ring size to rule score models.
 %% \end{itemize}
-
-\note{Describe the numerical model and simultion library.}
 
 %==============================================================================
 \section{Data}
@@ -379,8 +383,8 @@ per electron increases.
   in one place''.}
 
 %==============================================================================
-\section{EHT Derived Constraints}
-\label{sec:ehtconst}
+\section{EHT VLBI Data Derived Constraints}
+\label{sec:EHT_VLBI}
 
 Consider two measurements from \sgra imaging: the asymmetry of the
 image and the size of the image.
@@ -428,8 +432,8 @@ This should be done for all models in the \sgra image library.
 Alternative analysis: one could fit a slashed crescent model to the data and estimate an asymmetry parameter $h$.
 
 %==============================================================================
-\section{Non-EHT Constraints}
-\label{sec:nonehtconst}
+\section{EHT Non-VLBI Constraints}
+\label{sec:EHT_nonVLBI}
 
 \sgra is one of the most well-characterized objects on the sky. Simultaneous and non-simultaneous observations at $230$GHz and  other frequencies have the potential to sharply constrain models.
 
@@ -508,6 +512,10 @@ Model comparison requires computation of SEDs from the models, which are both ex
 \end{figure}
 
 Nevertheless, it is possible to apply a not-to-exceed threshold constraint similar to that used in the NIR: if a thermal eDF model consistently produces too much x-ray then it can be ruled out.  Early work by \citet{2009ApJ...706..497M} finds that x-ray emission provides a powerful constraint on constant temperature ratio models.
+
+%==============================================================================
+\section{Recent Non-EHT Constraints}
+\label{sec:nonEHT}
 
 %------------------------------------------------------------------------------
 \subsection{Low frequency SED}
