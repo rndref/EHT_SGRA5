@@ -235,8 +235,8 @@ We will also describe a list of open theoretical and numerical
 questions that are await of answers.
 
 %==============================================================================
-\section{The Fiducial \sgra Models}
-\label{sec:basemodels}
+\section{Fiducial Accretion Models for \sgra}
+\label{sec:fiducial}
 
 \ckc{Not sure if people like to define ``standard models'' here.
   Maybe we can call them ``fiducial models'', in the sense these are
@@ -257,7 +257,8 @@ capture the dynamics, thermodyanmics, and ...
 We also summarize some phenomenological models in ...
 
 %------------------------------------------------------------------------------
-\subsection{One-Zone Model/Estimate}
+\subsection{One-Zone Model and Estimate}
+\label{sec:onezone}
 
 Assumed mass for \sgra is
 $\mbh = 4.14 \times 10^6 \msun$,
@@ -326,7 +327,20 @@ slightly because the rest-mass density (and therefore field strength)
 per electron increases.
 
 %------------------------------------------------------------------------------
-\subsection{Analytical Models}
+\subsection{Phenomenological Models}
+\label{sec:phenomodels}
+
+\ckc{Is this the right place to put disk vs. jet discussion?
+  How about different favors of hotspot models?
+
+  Depending on the development of other papers, it may make sense to
+  use the fiducial models defined above to guide a reasonable set of
+  phenomenological models.
+  And then the actual fits to these phenomenological models may go
+  into a different, e.g., MCFE, paper.}
+
+%------------------------------------------------------------------------------
+\subsection{Analytical Accretion Models}
 \label{sec:anamodels}
 
 \ckc{Should we actually fit ADAF?
@@ -335,7 +349,7 @@ per electron increases.
 ...
 
 %------------------------------------------------------------------------------
-\subsection{Numerical Models}
+\subsection{Numerical Models of the Inner Accretion Flows}
 \label{sec:numodels}
 
 \note{Describe the numerical model and simultion library.}
@@ -358,19 +372,9 @@ per electron increases.
 %%   \item Use image/ring size to rule score models.
 %% \end{itemize}
 
-
 %------------------------------------------------------------------------------
-\subsection{Phenomenological Models}
-\label{sec:phenomodels}
-
-\ckc{Is this the right place to put disk vs. jet discussion?
-  How about different favors of hotspot models?
-
-  Depending on the development of other papers, it may make sense to
-  use the fiducial models defined above to guide a reasonable set of
-  phenomenological models.
-  And then the actual fits to these phenomenological models may go
-  into a different, e.g., MCFE, paper.}
+\subsection{Plasma Models and Electron Distribution Functions}
+\label{sec:eDF}
 
 %==============================================================================
 \section{Data}
@@ -392,12 +396,32 @@ per electron increases.
   We may create a table to summarize these constraints so ``they are
   in one place''.}
 
+%------------------------------------------------------------------------------
+\subsection{Ray Traced Images}
+\label{sec:images}
+
+...
+
+%------------------------------------------------------------------------------
+\subsection{Spectral Energy Distribution}
+\label{sec:SED}
+
+...
+
+%------------------------------------------------------------------------------
+\subsection{Forward Modeling of Visibility}
+\label{sec:visibility}
+
+...
+
 %==============================================================================
 \section{EHT VLBI Data Derived Constraints}
 \label{sec:EHT_VLBI}
 
 Consider two measurements from \sgra imaging: the asymmetry of the
 image and the size of the image.
+\ckc{Should we directly compare reconstructed images and simulated
+  images by, e.g., \texttt{nxcinf}.}
 
 %------------------------------------------------------------------------------
 \subsection{Image size constraints}
