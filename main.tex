@@ -450,7 +450,7 @@ image and the size of the image.
 ...
 
 %------------------------------------------------------------------------------
-\subsection{Image Size Constraints}
+\subsection{Image Size (Pre-Imaging) Constraints}
 \label{sec:sizeconst}
 
 M. Johnson (private communication) reports that the best-fit size of \sgra obtained by measuring the FWHM of a Gaussian fit along a direction 45 deg E of N is approximately $57 \pm 11 \uas$.  This implies $\sigma = 24 \pm 4.7 \uas$.  What is expected from the models?
@@ -492,6 +492,12 @@ This should be done for all models in the \sgra image library.
 Alternative analysis: one could fit a slashed crescent model to the data and estimate an asymmetry parameter $h$.
 
 %------------------------------------------------------------------------------
+\subsection{Crescent Fitting}
+\label{sec:crescent}
+
+...
+
+%------------------------------------------------------------------------------
 \subsection{Full Image Comparison}
 \label{sec:imgconst}
 
@@ -504,7 +510,7 @@ Alternative analysis: one could fit a slashed crescent model to the data and est
 \sgra is one of the most well-characterized objects on the sky. Simultaneous and non-simultaneous observations at $230$GHz and  other frequencies have the potential to sharply constrain models.
 
 %------------------------------------------------------------------------------
-\subsection{ALMA light curve properties}
+\subsection{Light Curve Covariance}
 \label{sec:lcconst}
 
 Because the ALMA light curve is tightly sampled with intervals  between measurements as little as a second and high signal to noise (typically $\sim 60$), it can provide tight new constraints on the high temporal frequency variability of \sgra.  This high frequency variability can also be computed from GRMHD models and compared to the data using various statistics.
@@ -528,7 +534,7 @@ Here $q \equiv \sqrt{2\nu} |\Delta t|/\tau$, $\tau$ is a characteristic timescal
 It remains to be seen whether this provides a strong constraint on the models; a preliminary study of model light curves suggests that at least some models are also well fit by a Mat\'ern covariance with similar parameters.
 
 %------------------------------------------------------------------------------
-\subsection{ALMA polarization constraints}
+\subsection{ALMA Linear Polarization Constraints}
 \label{sec:polconst}
 
 A typical linear polarization fraction for ALMA is $P \sim 6\%$ during the 2017 campaign, with EVPA $\sim -60$deg.  A typical circular polarization fraction is $C \sim 1\%$.  Historical data may also be useful.
@@ -548,7 +554,7 @@ The circular polarization in GRMHD models also varies widely, with  $0.09 < \<|C
 Comment: this is a very limited set of models.  We may want to consider $R_{low} = 10$ models, as in the \M87 polarization theory effort.   We do not know if the distribution of polarizations is converged, and we do not fully understand sensitivity to all the parameters: this analysis has many of the same issues as the \M87 polarization analysis, except that we know that almost all the flux is compact.
 
 %------------------------------------------------------------------------------
-\subsection{NIR constraints}
+\subsection{NIR (Non-Overproduction) Constraints}
 \label{sec:nirconst}
 
 Although we have relatively little simultaneous NIR data from the 2017 campaign, the NIR lightcurve is observationally well characterized, with NIR flares peaking at $\sim 30$mJy and quiescent flux of order a few mJy.  NIR emission is produced by synchrotron emission in all models that we are aware of.  The NIR/mm color of models is sensitive to the eDF, and in particular nonthermal tails on the eDF, which tend to increase the NIR flux (this point needs to be thoroughly tested).  Thermal eDF models that consistently produce flux densities above a few $mJy$ at K band can therefore be ruled out.
@@ -562,7 +568,7 @@ An example analysis based on preliminary NIR images from the Illinois segment of
 \end{figure*}
 
 %------------------------------------------------------------------------------
-\subsection{X-ray constraints}
+\subsection{X-ray (Non-Overproduction) Constraints}
 \label{sec:xrayconst}
 
 We are fortunate to have good x-ray coverage on 6 April 2017 from Chandra and NuSTAR.
@@ -604,6 +610,12 @@ Needed: nonthermal models, or thermal models with an extended isothermal compone
 ...
 
 %------------------------------------------------------------------------------
+\subsection{Model Scoring}
+\label{sec:scoring}
+
+...
+
+%------------------------------------------------------------------------------
 \subsection{Unsupervised Learning}
 \label{sec:ml}
 
@@ -616,12 +628,6 @@ Score each category independently and study top sets from each category.  May le
 ...
 
 %------------------------------------------------------------------------------
-\subsection{Model Scoring}
-\label{sec:scoring}
-
-...
-
-%------------------------------------------------------------------------------
 \subsection{Perturbative Analysis of Best Fit Models}
 \label{sec:local-min}
 
@@ -629,10 +635,10 @@ Assuming our scoring/fitting methods involve some minimaization of
 loss/cost/objective function, then the best fits must be local minima
 (and could be a global minimum).
 Therefore, it makes sense to perform a pertubative analysis of the
-local minima and study how the fits change as one vary the hyper
-paramters.
-Similar method is proposed in the imaging WG to understand different
-image reconstruction.
+local minima and study how the fits change as one varies the weights
+between the different terms in the loss function.
+Similar method is proposed by CK in the imaging WG to understand
+different image reconstructions.
 
 ...
 
