@@ -344,6 +344,8 @@ per electron increases.
   And then the actual fits to these phenomenological models may go
   into a different, e.g., MCFE, paper.}
 
+...
+
 %------------------------------------------------------------------------------
 \subsection{Analytical Accretion Models}
 \label{sec:anamodels}
@@ -399,11 +401,13 @@ per electron increases.
   We may create a table to summarize these constraints so ``they are
   in one place''.}
 
+...
+
 %------------------------------------------------------------------------------
 \subsection{Plasma Models}
 \label{sec:eDF}
 
-Electron Distribution Functions ...
+Electron distribution functions ...
 
 \begin{itemize}
 \item $\kappa$-model with $\kappa = 5$ everywhere.
@@ -447,7 +451,11 @@ image and the size of the image.
 \subsection{Visibility Constraints}
 \label{sec:visconst}
 
-...
+\note{Identify the possible locations of nulls and use that for a
+  first pass of model selection.
+  See, e.g., \citet{2020arXiv200509632P, 2015ApJ...814..115P}.
+  Look at scatter noise levels etc and identify which part of the
+  visiblity domain is physically interpretable.}
 
 %------------------------------------------------------------------------------
 \subsection{Image Size (Pre-Imaging) Constraints}
@@ -495,11 +503,20 @@ Alternative analysis: one could fit a slashed crescent model to the data and est
 \subsection{Crescent Fitting}
 \label{sec:crescent}
 
+\note{Use some MCMC framework to fit for crescent models.}
+
 ...
 
 %------------------------------------------------------------------------------
 \subsection{Full Image Comparison}
 \label{sec:imgconst}
+
+\note{Use something like \texttt{nxcorr} or \texttt{nxcinf} to compare
+  directly the constructed images from the imaging WG and simulations.
+  Note that the \texttt{nxcorr} family of metrics, as is, do not
+  capture phases.
+  Improved metrics are required.
+  There are also work in developing movie comparison metrics.}
 
 ...
 
@@ -695,7 +712,7 @@ Standard EHT acknowledgments.
 \label{sec:converge}
 
 \note{Ensure that SANE and MAD simulations are run long enough so the
-  accretoin flows reach status states.
+  accretoin flows reach steady states.
   Cite SANE code comparison paper \citep{2019ApJS..243...26P}, MAD
   code comparison paper (in prep.) and \citet{2012MNRAS.426.3241N,
     2013MNRAS.436.3856S} instead of an appendix?}
