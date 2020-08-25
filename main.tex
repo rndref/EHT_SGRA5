@@ -183,7 +183,7 @@ The above developments have led to a large number of studies of
   2019ApJ...881L...2B, 2019ApJ...884..148B, 2019ApJ...886...96H,
   2020ApJ...896L...6R, 2020ApJ...897...99T, 2020MNRAS.492.3272R,
   2020MNRAS.493.1404A, 2020MNRAS.494.4168D, 2020MNRAS.494.5923P,
-  2020arXiv200514251B, 2020arXiv200603657D, 2020arXiv200603658P}.
+  2020arXiv200514251B, 2020MNRAS.tmp.2416D, 2020arXiv200603658P}.
 \ckc{Ideally we should cite the above papers in subsequent sections
   and describe why they are relevent to this paper.}
 On one hand, due to the richness in accretion and plasma physics, many
@@ -280,9 +280,9 @@ $G\mbh/(c^2 D) = 5.03\uas$.
 The radius of the shadow is $26.1\uas$.
 
 Then
-$\nu L_\nu = 4 \pi d^2 \nu F_\nu = 1.8 \times 10^{34} (d/8127 \pc)^2 (\nu/230 \GHz)(F_\nu/{\rm Jy}) \erg \sec^{-1}$.
+$\nu L_\nu = 4 \pi d^2 \nu F_\nu = 1.8 \times 10^{34} (d/8127 \pc)^2 \times\allowbreak (\nu/230 \GHz)(F_\nu/{\rm Jy}) \erg \sec^{-1}$.
 The Eddington luminosity for \sgra is
-$L_\mathrm{Edd} = 4\pi G\mbh c/\kappa_{es} = 5.2 \times 10^{44} \erg\sec^{-1}$.
+$L_\mathrm{Edd} = 4\pi G\mbh c/\kappa_{es} = 5.2 \times 10^{44}\allowbreak\erg\sec^{-1}$.
 The Eddington accretion rate is
 $\dot\mbh_\mathrm{Edd} \equiv L_\mathrm{Edd}/(0.1 c^2) = 5.8 \times 10^{24} \gm \sec^{-1} = 0.09 \msun \yr^{-1}$.
 The Eddington ratio is
@@ -403,7 +403,22 @@ per electron increases.
   We may create a table to summarize these constraints so ``they are
   in one place''.}
 
-...
+While GRMHD simulations provide numerical models of the plasma around
+black holes, there are many more parameters needed to model the black
+hole images and spectral energy distribution (SED).
+This is because, obviously, the GRMHD approximaion is scale free in
+both the black hole mass $\mbh$ and plasma density $\rho_0$.
+The former allows us to rescale length and time, while the later
+allows us to rescale magnetic field strength and energy density.
+
+In this paper, we adopted a weighted mean of
+\citet{2019Sci...365..664D} and \citet{2019A&A...625L..10G} and fix
+the mass of \sgra to
+\begin{align}
+  \mbh = 4.136 \pm 0.014 \times 10^6 \msun.
+\end{align}
+The density scale $\rho_0$ is a free parameter that we need to
+constraint.
 
 %------------------------------------------------------------------------------
 \subsection{Plasma Models}
