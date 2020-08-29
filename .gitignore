@@ -2,6 +2,7 @@
 
 !*/
 !*.sh
+!*.sty
 !*file
 
 !main.tex

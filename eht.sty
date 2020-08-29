@@ -1,0 +1,34 @@
+\ProvidesPackage{eht}[2020/08/29 EHT Style Package]
+
+\RequirePackage{xspace}
+
+% Text mode macros; should postfix with "\xspace"
+\newcommand\sgra{Sgr~A*\xspace}
+\def\M87{M\,87\xspace}
+
+% Math mode macros
+\newcommand\mbh{{M}} % should we use M_* or M_\mathrm{bh} ?
+\newcommand\abh{{a}} % should we use a_* or a_\mathrm{bh} ?
+\newcommand\Rh{{R_\mathrm{high}}}
+
+\newcommand\msun{{M_\odot}}
+\newcommand\yr{{\rm \, yr}}
+\newcommand\erg{{\rm \, erg}}
+\newcommand\Jy{{\rm \, Jy}}
+\newcommand\cm{{\rm \, cm}}
+\newcommand\pc{{\rm \, pc}}
+\newcommand\gm{{\rm \, g}}
+\newcommand\uas{{\rm \, \mu as}}
+\newcommand\GHz{{\rm \, GHz}}
+
+\newcommand\<{{\langle}}
+\renewcommand\>{{\rangle}} % "\>" is defined in the "tabbing" environment to
+                           % advance to next tab stop
+
+% EHT publication package
+\defcitealias{2019ApJ...875L...1E}{\M87 Paper~I}
+\defcitealias{2019ApJ...875L...2E}{\M87 Paper~II}
+\defcitealias{2019ApJ...875L...3E}{\M87 Paper~III}
+\defcitealias{2019ApJ...875L...4E}{\M87 Paper~IV}
+\defcitealias{2019ApJ...875L...5E}{\M87 Paper~V}
+\defcitealias{2019ApJ...875L...6E}{\M87 Paper~IV}
