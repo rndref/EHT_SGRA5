@@ -3,8 +3,6 @@
 \usepackage{eht,amsmath}
 \graphicspath{{./}{figures/}}
 
-%==============================================================================
-
 % Inline comments
 \newcommand\note[1]{{\color{OliveGreen}[note: #1]}}
 \newcommand\ckc[1]{{\color{MidnightBlue}[ckc: #1]}}
@@ -208,7 +206,7 @@ We will also describe a list of open theoretical and numerical
 questions that are await of answers.
 
 %==============================================================================
-\section{Fiducial Accretion Models of \sgra}
+\section{Fiducial Models of \sgra}
 \label{sec:fiducial}
 
 \ckc{Not sure if people like to define ``standard models'' here.
@@ -216,9 +214,12 @@ questions that are await of answers.
   well scoped (e.g., assumed Kerr, no tilde) and minimal/conservative
   models based on well known observation results.}
 
-In this section, we summarize various robust results on \sgra using
+The large number of observation and theoretical studies on \sgra have
+already lead to many robust constraints.
+
+In this section, we summarize various results on \sgra using
 pre-EHT2017 data.
-The large amount of observation and theoretical studies lead to ...
+
 We define a minimal set of fiducial models that can be used to coverge
 a wide range of phenomena.
 
@@ -233,16 +234,26 @@ We summarize some phenomenological models in \S\ref{sec:phenomodels}.
 ...
 
 %------------------------------------------------------------------------------
+\subsection{Standard Measurement and Assumptions}
+
+In this paper, we adopted a weighted mean of
+\citet{2019Sci...365..664D} and \citet{2019A&A...625L..10G} and fix
+the mass of \sgra to
+\begin{align}
+  \mbh &= (4.136 \pm 0.014) \times 10^6 \msun,\\
+  D    &= (8.142 \pm 0.023) \kpc.
+\end{align}
+\note{The \sgra parameter memo indicates that there's no errors in the
+  $M/D$ measurements.
+  The errors for $M$ and $D$ don't seem consistent.
+  Need to check with the parameter definition working group.}
+
+%------------------------------------------------------------------------------
 \subsection{One-Zone Model and Estimate}
 \label{sec:onezone}
 
-Assumed mass for \sgra is
-$\mbh = 4.14 \times 10^6 \msun$,
-and distance
-$D = 8127\pc$
-(based on GRAVITY results).
-
-The implied characteristic length is
+Using the above mass and distance, the implied characteristic length
+is
 $G\mbh/c^2 = 6.1 \times 10^{11}\cm$,
 characteristic time is
 $G\mbh/c^3 = 20.4 \sec$,
@@ -252,8 +263,8 @@ The radius of the shadow is $26.1\uas$.
 
 Then
 $ \nu L_\nu
-= 4 \pi d^2 \nu F_\nu
-= 1.8 \times 10^{34} (d/8127 \pc)^2 \times\allowbreak
+= 4 \pi D^2 \nu F_\nu
+= 1.8 \times 10^{34} (D/8127 \pc)^2 \times\allowbreak
   (\nu/230 \GHz)(F_\nu/{\rm Jy}) \erg \sec^{-1}$.
 The Eddington luminosity for \sgra is
 $ L_\mathrm{Edd}
@@ -311,6 +322,11 @@ In this case the results change only slightly; the cooling time drops
 slightly because the rest-mass density (and therefore field strength)
 per electron increases.
 
+%==============================================================================
+\section{Accretion Models}
+
+...
+
 %------------------------------------------------------------------------------
 \subsection{Phenomenological Models}
 \label{sec:phenomodels}
@@ -364,7 +380,7 @@ per electron increases.
 ...
 
 %==============================================================================
-\section{Image and Spectrum Modeling}
+\section{Emission Models}
 
 %% Abstract thinking: we are trying to connect theory and observation
 %% with a vector field $I$, $Q$, $U$, $V$ over 4 dimensions $t$,
@@ -390,15 +406,6 @@ This is because, obviously, the GRMHD approximaion is scale free in
 both the black hole mass $\mbh$ and plasma density $\rho_0$.
 The former allows us to rescale length and time, while the later
 allows us to rescale magnetic field strength and energy density.
-
-In this paper, we adopted a weighted mean of
-\citet{2019Sci...365..664D} and \citet{2019A&A...625L..10G} and fix
-the mass of \sgra to
-\begin{align}
-  \mbh = 4.136 \pm 0.014 \times 10^6 \msun.
-\end{align}
-The density scale $\rho_0$ is a free parameter that we need to
-constraint.
 
 %------------------------------------------------------------------------------
 \subsection{Plasma Models}
@@ -430,7 +437,7 @@ Electron distribution functions ...
 ...
 
 %==============================================================================
-\section{EHT Observation Modeling}
+\section{Observation Models}
 
 ...
 
