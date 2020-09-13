@@ -152,7 +152,8 @@ The above developments have led to a large number of studies of
   2019ApJ...881L...2B, 2019ApJ...884..148B, 2019ApJ...886...96H,
   2020ApJ...896L...6R, 2020ApJ...897...99T, 2020MNRAS.492.3272R,
   2020MNRAS.493.1404A, 2020MNRAS.494.4168D, 2020MNRAS.494.5923P,
-  2020arXiv200514251B, 2020MNRAS.tmp.2416D, 2020arXiv200603658P}.
+  2020arXiv200514251B, 2020MNRAS.497.4999D, 2020arXiv200603658P,
+  2020ApJ...896L...6R}.
 \ckc{Ideally we should cite the above papers in subsequent sections
   and describe why they are relevent to this paper.}
 On one hand, due to the richness in accretion and plasma physics, many
@@ -348,7 +349,7 @@ per electron increases.
   And then the actual fits to these phenomenological models may go
   into a different, e.g., MCFE, paper.
 
-  Recent paper: \citep{2020arXiv200804317Y}.}
+  Recent paper: \citep{2020MNRAS.tmp.2053Y}.}
 
 ...
 
@@ -407,29 +408,40 @@ per electron increases.
   We may create a table to summarize these constraints so ``they are
   in one place''.}
 
-While GRMHD simulations provide numerical models of the plasma around
-black holes, there are many more parameters needed to model the black
-hole images and spectral energy distribution (SED).
+While GRMHD simulations describe the plamas dynamics around black
+holes, there are more parameters needed to model the black hole images
+and spectral energy distribution (SED).
 This is because, obviously, the GRMHD approximaion is scale free in
 both the black hole mass $\mbh$ and plasma density $\rho_0$.
-The former allows us to rescale length and time, while the later
-allows us to rescale magnetic field strength and energy density.
-
-The plasma in the accretion flow around \sgra is mostly collisionless.
-This allows electron heating (e.g., accelerated by reconnection) and
-cooling (e.g., radiative cooling) mechanism to drive the electrons
-away from thermodynamic equilibrium.
-Therefore, it is expected that \emph{i}) electrons are cooling than
-the ions, and \emph{ii}) the electron distribution function (eDF) is
-non-thermal.
-The modeling details can signficiant change the predcited properties
-of \sgra~\citep{2000ApJ...541..234O}.
+The former allows us to rescale length and time, thereby changing the
+optical depth; the later allows us to rescale magnetic field strength
+and energy density, thereby changing the emissivity and absorptivity.
 
 %------------------------------------------------------------------------------
 \subsection{Plasma Models}
 \label{sec:eDF}
 
-Many different model were used to approximate the eDF.
+The plasma in the accretion flow around \sgra is mostly collisionless.
+This allows electron heating (e.g., accelerated by reconnection) and
+cooling (e.g., radiative cooling) mechanism to drive the electrons
+away from thermodynamic equilibrium.
+Therefore, it is expected that \emph{i}) electrons are cooler than the
+ions, and \emph{ii}) the electron distribution function (eDF) is
+non-thermal.
+The first point was used in \citet{1998ApJ...492..554N} to explain the
+spectrum of \sgra.
+The second point was used in \citep{2000ApJ...541..234O} to demostrate
+that the eDF can signficiant change the predcited properties of \sgra.
+
+Earlier numerical models simply assume a constant ratio between the
+electron and ion temperatures \citep{...}.
+In order to capture the different physics in the accretion disk and
+jets, refined models have been proposed.
+This includes using the Bernoulli parameter to distinguish the jet and
+the disk \citep{2014A&A...570A...7M}, using the plasma $\beta$
+\citep{2015ApJ...799....1C, 2015ApJ...812..103C}.
+
+...
 
 \begin{itemize}
 \item $\kappa$-model with $\kappa = 5$ everywhere.
