@@ -56,7 +56,8 @@
 \tableofcontents
 
 %==============================================================================
-\section{Introduction}
+\section{Introduction
+  [Coordinators, Markoff, Ripperda]}
 \label{sec:intro}
 
 %------------------------------------------------------------------------------
@@ -313,7 +314,8 @@ be used in this paper, which include 320\,GHz VLBI constraints
 obtained from the EHT 2017 Observation campaign and previous results.
 
 %------------------------------------------------------------------------------
-\subsection{230\,GHz VLBI Pre-Image Size}
+\subsection{230\,GHz VLBI Pre-Image Size
+  [Chael, Ramakrishnan]}
 \label{sec:230size}
 
 M. Johnson (private communication) reports that the best-fit size of \sgra obtained by measuring the FWHM of a Gaussian fit along a direction 45 deg E of N is approximately $57 \pm 11 \uas$.  This implies $\sigma = 24 \pm 4.7 \uas$.  What is expected from the models?
@@ -331,7 +333,8 @@ Improvement in analysis: measure the full second moment tensor for each image an
 Comment: model size may be sensitive to the presence of a nonthermal tail in the eDF.  The likely sense of the effect is that a nonthermal tail adds millimeter emission at larger radii, making the model larger.  Since most models are already too large, this may constrain the nonthermal tail.
 
 %------------------------------------------------------------------------------
-\subsection{230\,GHz VLBI Asymmetry [?]}
+\subsection{230\,GHz VLBI Asymmetry (May not be constraintive)
+  [Medeiros, Chan]}
 \label{sec:230asym}
 
 Current results from the imaging group suggest \sgra is a surprisingly symmetric ring.   What level of asymmetry is expected in the model library?
@@ -355,10 +358,11 @@ This should be done for all models in the \sgra image library.
 Alternative analysis: one could fit a slashed crescent model to the data and estimate an asymmetry parameter $h$.
 
 %------------------------------------------------------------------------------
-\subsection{230\,GHz VLBI Variability}
+\subsection{230\,GHz VLBI Variability
+  [Mariyama, Satapathy]}
 \label{sec:230variability}
 
-...
+\note{Closure phase variability etc.}
 
 %------------------------------------------------------------------------------
 %% \subsection{230\,GHz VLBI Visibility Nulls}
@@ -371,7 +375,8 @@ Alternative analysis: one could fit a slashed crescent model to the data and est
 %%   visiblity domain is physically interpretable.}
 
 %------------------------------------------------------------------------------
-\subsection{230\,GHz Light Curve Variability}
+\subsection{230\,GHz Light Curve Variability
+  [Ramakrishnan, Lee, cite TDWG paper]}
 \label{sec:230lightcurve}
 
 Because the ALMA light curve is tightly sampled with intervals  between measurements as little as a second and high signal to noise (typically $\sim 60$), it can provide tight new constraints on the high temporal frequency variability of \sgra.  This high frequency variability can also be computed from GRMHD models and compared to the data using various statistics.
@@ -415,13 +420,15 @@ It remains to be seen whether this provides a strong constraint on the models; a
 %% Comment: this is a very limited set of models.  We may want to consider $R_{low} = 10$ models, as in the \M87 polarization theory effort.   We do not know if the distribution of polarizations is converged, and we do not fully understand sensitivity to all the parameters: this analysis has many of the same issues as the \M87 polarization analysis, except that we know that almost all the flux is compact.
 
 %------------------------------------------------------------------------------
-\subsection{86\,GHz Image Size}
+\subsection{86\,GHz Image Size
+  [Issaoun, Chan]}
 \label{sec:86size}
 
 ...
 
 %------------------------------------------------------------------------------
-\subsection{Low Frequency SED}
+\subsection{Low Frequency SED
+  [Chatterjee, Witzel]}
 \label{sec:lfconst}
 
 \begin{figure*}
@@ -437,7 +444,8 @@ Purely thermal $\Rh$ eDF models do not match the low frequency SED.
 Needed: nonthermal models, or thermal models with an extended isothermal component, that match the SED.
 
 %------------------------------------------------------------------------------
-\subsection{NIR (Non-Overproduction) Constraints}
+\subsection{NIR (Non-Overproduction) Constraints
+  [Modelers and Witzel]}
 \label{sec:nirconst}
 
 Although we have relatively little simultaneous NIR data from the 2017 campaign, the NIR lightcurve is observationally well characterized, with NIR flares peaking at $\sim 30$mJy and quiescent flux of order a few mJy.  NIR emission is produced by synchrotron emission in all models that we are aware of.  The NIR/mm color of models is sensitive to the eDF, and in particular nonthermal tails on the eDF, which tend to increase the NIR flux (this point needs to be thoroughly tested).  Thermal eDF models that consistently produce flux densities above a few $mJy$ at K band can therefore be ruled out.
@@ -451,7 +459,8 @@ An example analysis based on preliminary NIR images from the Illinois segment of
 \end{figure*}
 
 %------------------------------------------------------------------------------
-\subsection{X-ray (Non-Overproduction) Constraints}
+\subsection{X-ray (Non-Overproduction) Constraints
+  [Markoff, Witzel, Ripperda, nonthermal group]}
 \label{sec:xrayconst}
 
 We are fortunate to have good x-ray coverage on 6 April 2017 from Chandra and NuSTAR.
@@ -474,7 +483,8 @@ Nevertheless, it is possible to apply a not-to-exceed threshold constraint simil
 ...
 
 %------------------------------------------------------------------------------
-\subsection{Analytical Accretion Models}
+\subsection{Analytical Accretion Models
+  [Pu, Anantua, Jeter]}
 \label{sec:anamodels}
 
 \ckc{Should we actually fit ADAF?
@@ -485,7 +495,8 @@ Nevertheless, it is possible to apply a not-to-exceed threshold constraint simil
 Semi-analytic RIAF models in \cite{Emami2021} include positrons using emission modeling motivated in \cite{Anantua:2019bna}. They show Stokes maps and polarized spectra indicating small non-thermal populations of positrons may: increase overall intensity in jet regions for fixed electron number density; modify the low-frequency spectral slope; cancel the observed intrinsic circular polarization and enhance circular polarization due to Faraday conversion-- particularly apparent when comparing declining tails of x-ray spectra of positron-rich versus positron-poor sources.
 
 %------------------------------------------------------------------------------
-\subsection{Numerical Models of the Inner Accretion Flows}
+\subsection{Numerical Models of the Inner Accretion Flows
+  [Mizuno, Wong, Ricarte]}
 \label{sec:numodels}
 
 \note{Describe the numerical model and simultion library.}
@@ -557,7 +568,8 @@ Semi-analytic RIAF models in \cite{Emami2021} include positrons using emission m
 %% ...
 
 %------------------------------------------------------------------------------
-\subsection{Plasma Models}
+\subsection{Plasma Models
+  []}
 \label{sec:eDF}
 
 The plasma in the accretion flow around \sgra is mostly collisionless.
@@ -594,13 +606,15 @@ the disk \citep{2014A&A...570A...7M}, using the plasma $\beta$
 ...
 
 %------------------------------------------------------------------------------
-\subsection{Ray Traced Images}
+\subsection{Ray Traced Images
+  []}
 \label{sec:images}
 
 ...
 
 %------------------------------------------------------------------------------
-\subsection{Spectral Energy Distribution}
+\subsection{Spectral Energy Distribution
+  [Nonthermal group, Moscibrodzka, Cruz-Osorio, Chan]}
 \label{sec:SED}
 
 ...
@@ -618,7 +632,8 @@ the disk \citep{2014A&A...570A...7M}, using the plasma $\beta$
 %% ...
 
 %==============================================================================
-\section{Comparisons}
+\section{Comparisons
+  [Fromm, Cruz-Osorio, Chatterjee]}
 \label{sec:comparisons}
 
 %------------------------------------------------------------------------------
@@ -694,7 +709,8 @@ the disk \citep{2014A&A...570A...7M}, using the plasma $\beta$
 ...
 
 %==============================================================================
-\section{Conclusions}
+\section{Conclusions
+  [Coordinators, Markoff, Moscibrodzka]}
 \label{sec:conclusions}
 
 ...
