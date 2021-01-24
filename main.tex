@@ -10,7 +10,7 @@
 %==============================================================================
 \begin{document}
 
-\title{First \sgra Event Horizon Telescope Results. IV.
+\title{First Sagittarius A* Event Horizon Telescope Results. IV.\\
   Constraining the Astrophysical Properties of the Galactic Center Black Hole}
 \author{EHTC et al.}
 
@@ -31,9 +31,9 @@
   Please feel free to add your work and comment on existing notes, but
   DO NOT delete anything without consulting the paper coordinators.
 
-  Tentative title is ``First \sgra Event Horizon Telescope
-  Results. IV. Constraining the Physical Properties of the Galactic
-  Center Black Hole''.
+  Tentative title is ``First Sagittarius A* Event Horizon Telescope
+  Results. IV. Constraining the Astrophysical Properties of the
+  Galactic Center Black Hole''.
 
   For adding references, simply cite the ADS key, e.g.,
   \texttt{\textbackslash citep\{2019ApJ...875L...5E\}}.
@@ -41,19 +41,6 @@
   the full BibTeX database from ADS.
   See \texttt{Makefile} to learn how to use the scripts in
   \texttt{tools/}.
-
-  \ckc{It may make sense to see the collection of EHT's first \sgra
-    papers as a book---and each paper is a chapter in the book.
-    Each paper should be self-contained but shouldn't repeat each
-    other too much.
-    Therefore, it makes sense to leave the general introduction of
-    \sgra to ``paper I''.
-    The papers should tell a coherent story on how the EHTC, as a
-    collaboration, advance our knowledge on \sgra.
-    Hence, assets such simulation libraries can take a similar role as
-    the observation.
-    This paper should focus mainly on theoretical development and
-    results.}
 
   \note{The abstract should summarize the scientific outcomes.
     Interesting key questions to address include disk vs jet, or at
@@ -326,7 +313,7 @@ be used in this paper, which include 320\,GHz VLBI constraints
 obtained from the EHT 2017 Observation campaign and previous results.
 
 %------------------------------------------------------------------------------
-\subsection{230\,GHz VLBI Image Size}
+\subsection{230\,GHz VLBI Pre-Image Size}
 \label{sec:230size}
 
 M. Johnson (private communication) reports that the best-fit size of \sgra obtained by measuring the FWHM of a Gaussian fit along a direction 45 deg E of N is approximately $57 \pm 11 \uas$.  This implies $\sigma = 24 \pm 4.7 \uas$.  What is expected from the models?
@@ -344,7 +331,7 @@ Improvement in analysis: measure the full second moment tensor for each image an
 Comment: model size may be sensitive to the presence of a nonthermal tail in the eDF.  The likely sense of the effect is that a nonthermal tail adds millimeter emission at larger radii, making the model larger.  Since most models are already too large, this may constrain the nonthermal tail.
 
 %------------------------------------------------------------------------------
-\subsection{230\,GHz VLBI Asymmetry}
+\subsection{230\,GHz VLBI Asymmetry [?]}
 \label{sec:230asym}
 
 Current results from the imaging group suggest \sgra is a surprisingly symmetric ring.   What level of asymmetry is expected in the model library?
@@ -374,14 +361,14 @@ Alternative analysis: one could fit a slashed crescent model to the data and est
 ...
 
 %------------------------------------------------------------------------------
-\subsection{230\,GHz VLBI Visibility Nulls}
-\label{sec:230nulls}
-
-\note{Identify the possible locations of nulls and use that for a
-  first pass of model selection.
-  See, e.g., \citet{2020arXiv200509632P, 2015ApJ...814..115P}.
-  Look at scatter noise levels etc and identify which part of the
-  visiblity domain is physically interpretable.}
+%% \subsection{230\,GHz VLBI Visibility Nulls}
+%% \label{sec:230nulls}
+%%
+%% \note{Identify the possible locations of nulls and use that for a
+%%   first pass of model selection.
+%%   See, e.g., \citet{2020arXiv200509632P, 2015ApJ...814..115P}.
+%%   Look at scatter noise levels etc and identify which part of the
+%%   visiblity domain is physically interpretable.}
 
 %------------------------------------------------------------------------------
 \subsection{230\,GHz Light Curve Variability}
@@ -428,7 +415,7 @@ It remains to be seen whether this provides a strong constraint on the models; a
 %% Comment: this is a very limited set of models.  We may want to consider $R_{low} = 10$ models, as in the \M87 polarization theory effort.   We do not know if the distribution of polarizations is converged, and we do not fully understand sensitivity to all the parameters: this analysis has many of the same issues as the \M87 polarization analysis, except that we know that almost all the flux is compact.
 
 %------------------------------------------------------------------------------
-\subsection{86\,GHz Size}
+\subsection{86\,GHz Image Size}
 \label{sec:86size}
 
 ...
@@ -474,7 +461,7 @@ Model comparison requires computation of SEDs from the models, which are both ex
 Nevertheless, it is possible to apply a not-to-exceed threshold constraint similar to that used in the NIR: if a thermal eDF model consistently produces too much x-ray then it can be ruled out.  Early work by \citet{2009ApJ...706..497M} finds that x-ray emission provides a powerful constraint on constant temperature ratio models.
 
 %==============================================================================
-\section{Accretion Models}
+\section{Astrophysical Models}
 
 ...
 
@@ -516,7 +503,7 @@ Semi-analytic RIAF models in \cite{Emami2021} include positrons using emission m
 ...
 
 %==============================================================================
-\section{Radiation Models}
+%\section{Radiation Models}
 
 %% Abstract thinking: we are trying to connect theory and observation
 %% with a vector field $I$, $Q$, $U$, $V$ over 4 dimensions $t$,
@@ -527,22 +514,22 @@ Semi-analytic RIAF models in \cite{Emami2021} include positrons using emission m
 %% and $v$.
 %% These limit what analyses we may do.
 
-\ckc{In the origin text, this section should ``summarize main
-  characteristics that constrain the models.''
-  But given current structure, it may make sense to reference to the
-  imaging or MCFE papers for the observational constraints, and just
-  state these constraints in the next two sections.
-  We may create a table to summarize these constraints so ``they are
-  in one place''.}
+%% \ckc{In the origin text, this section should ``summarize main
+%%   characteristics that constrain the models.''
+%%   But given current structure, it may make sense to reference to the
+%%   imaging or MCFE papers for the observational constraints, and just
+%%   state these constraints in the next two sections.
+%%   We may create a table to summarize these constraints so ``they are
+%%   in one place''.}
 
-While GRMHD simulations describe the plamas dynamics around black
-holes, there are more parameters needed to model the black hole images
-and spectral energy distribution (SED).
-This is because, obviously, the GRMHD approximaion is scale free in
-both the black hole mass $\mbh$ and plasma density $\rho_0$.
-The former allows us to rescale length and time, thereby changing the
-optical depth; the later allows us to rescale magnetic field strength
-and energy density, thereby changing the emissivity and absorptivity.
+%% While GRMHD simulations describe the plamas dynamics around black
+%% holes, there are more parameters needed to model the black hole images
+%% and spectral energy distribution (SED).
+%% This is because, obviously, the GRMHD approximaion is scale free in
+%% both the black hole mass $\mbh$ and plasma density $\rho_0$.
+%% The former allows us to rescale length and time, thereby changing the
+%% optical depth; the later allows us to rescale magnetic field strength
+%% and energy density, thereby changing the emissivity and absorptivity.
 
 %------------------------------------------------------------------------------
 %% \subsection{Phenomenological Models}
