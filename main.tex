@@ -2,6 +2,7 @@
 %\documentclass[modern]{aastex63}
 \usepackage{eht,amsmath}
 \graphicspath{{./}{figures/}}
+\usepackage{float}%
 
 % Inline comments
 \newcommand\note[1]{{\color{OliveGreen}[note: #1]}}
@@ -14,7 +15,7 @@
   Constraining the Astrophysical Properties of the Galactic Center Black Hole}
 \author{EHTC et al.}
 
-\shorttitle{First \sgra EHT Resutls on Astrophysics}
+\shorttitle{First \sgra EHT Results on Astrophysics}
 \shortauthors{EHTC et al.}
 
 \submitjournal{ApJL}
@@ -499,8 +500,18 @@ Nevertheless, it is possible to apply a not-to-exceed threshold constraint simil
 
 ...
 
-Semi-analytic RIAF models in \cite{Emami2021} include positrons using emission modeling motivated in \cite{Anantua:2019bna}. They show Stokes maps and polarized spectra indicating small non-thermal populations of positrons may: increase overall intensity in jet regions for fixed electron number density; modify the low-frequency spectral slope; cancel the observed intrinsic circular polarization and enhance circular polarization due to Faraday conversion-- particularly apparent when comparing declining tails of x-ray spectra of positron-rich versus positron-poor sources.
+\cite{Broderick2005} devised a canonical model of Sgr A* as a  radiatively inefficient accretion flow (RIAF). Semi-analytic RIAF models implementing  this using the general relativistic ray tracer GRTRANS \citep{2016MNRAS.462..115D} can be found in  \cite{Emami2021}, where  positrons are included using emission modeling motivated in  \cite{Anantua:2019bna}. The Fig. \ref{fig:EmamiRIAF} model from \cite{Emami2021}  shows Stokes maps and polarized spectra of a \cite{Broderick2005} RIAF with plasma $\beta=10$ and 1$\%$ of the emitting particles nonthermal electrons.
 
+The addition of small non-thermal populations of positrons \cite{Emami2021} tends to: increase overall intensity in jet regions for fixed electron number density; modify the low-frequency spectral slope; cancel the observed intrinsic circular polarization and enhance circular polarization due to Faraday conversion-- particularly apparent when comparing declining tails of x-ray spectra of positron-rich versus positron-poor sources.
+
+
+\begin{figure}[H]
+%   \plotone{RIAFSgrAPlaneTscl1Pt5e11beta1Pt0e01fpos0Pt0fNTH1Pt0e-02copy.png}
+  \includegraphics[width=.55\textwidth,height=25mm%,trim=0 380 0 200,clip
+]{RIAFSgrAPlaneTscl1Pt5e11beta1Pt0e01fpos0Pt0fNTH1Pt0e-02copy}
+  \caption{Caption}
+  \label{fig:EmamiRIAF}
+\end{figure}
 %------------------------------------------------------------------------------
 \subsection{Numerical Models of the Inner Accretion Flows
   [Mizuno, Wong, Ricarte]}

@@ -1,35 +1,77 @@
 \ProvidesPackage{eht}[2020/08/29 EHT Style Package]
-
-\RequirePackage{xspace}
-
-% Text mode macros; should postfix with "\xspace"
-\newcommand\sgra{Sgr~A*\xspace}
-\def\M87{M\,87\xspace}
+\RequirePackage{xspace,newunicodechar}
 
 % Math mode macros
-\newcommand\mbh{{M}} % should we use M_* or M_\mathrm{bh} ?
-\newcommand\abh{{a}} % should we use a_* or a_\mathrm{bh} ?
+%\newcommand\mbh{{M_{\rm BH}}} % should we use M_* or M_\mathrm{bh} ?
+\newcommand\abh{{a_{\rm BH}}} % should we use a_* or a_\mathrm{bh} ?
 \newcommand\Rh{{R_\mathrm{high}}}
 
 \newcommand\gm{{\rm \, g}}
-\newcommand\msun{{M_\odot}}
+%\newcommand\msun{{M_\odot}}
 \newcommand\GHz{{\rm \, GHz}}
 \newcommand\yr{{\rm \, yr}}
 \newcommand\cm{{\rm \, cm}}
 \newcommand\pc{{\rm \, pc}}
 \newcommand\kpc{{\rm \, kpc}}
-\newcommand\uas{{\rm \, \mu as}}
 \newcommand\erg{{\rm \, erg}}
+\newcommand{\ergsps}{{\rm[ ergs\,s^{-1}]}}
 \newcommand\Jy{{\rm \, Jy}}
 
 \newcommand\<{{\langle}}
 \renewcommand\>{{\rangle}} % "\>" is defined in the "tabbing" environment to
                            % advance to next tab stop
 
+\def\lsim{\mathrel{\raise.3ex\hbox{$<$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\def\gsim{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\def\gtwid{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\def\proptwid{\mathrel{\raise.3ex\hbox{$\propto$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+     
+% Alias: Units (not math but for the main text)
+\newcommand{\uas}{\ensuremath{\mathrm{\mu as}}\xspace}
+\newcommand{\mbh}{\ensuremath{M_{\rm BH}}\xspace}
+\newcommand{\msun}{\ensuremath{M_\odot}\xspace}
+
+% Alias: Source Names
+\def\M87{M87$^*$\xspace}
+\def\m87{M87$^*$\xspace}
+\def\sgra{Sgr~A$^*$\xspace}
+\def\3C279{3C\,279\xspace}
+\def\3c279{3C\,279\xspace}
+\def\NRAO530{NRAO\,530\xspace}
+\def\nrao530{NRAO\,530\xspace}
+\def\J1924{J1924-2914\xspace}
+\def\j1924{j1924-2914\xspace}
+
+% Alias: Hawaii
+\DeclareRobustCommand{\okina}{%
+  \raisebox{\dimexpr\fontcharht\font`A-\height}{%
+    \scalebox{0.8}{`}%
+  }%
+}
+\newunicodechar{ʻ}{\okina}
+\def\hawaii{Hawaiʻi\xspace}
+
+% Alias: Software packages
+\def\smili{\texttt{SMILI}\xspace}
+\def\ehtim{\texttt{eht-imaging}\xspace}
+\def\difmap{\texttt{DIFMAP}\xspace}
+\def\dmc{\texttt{DMC}\xspace}
+\def\themis{\textsc{Themis}\xspace}
+\def\foci{\texttt{foci}\xspace}
+\def\vida{\texttt{VIDA}\xspace}
+
 % EHT publication package
-\defcitealias{2019ApJ...875L...1E}{\M87 Paper~I}
-\defcitealias{2019ApJ...875L...2E}{\M87 Paper~II}
-\defcitealias{2019ApJ...875L...3E}{\M87 Paper~III}
-\defcitealias{2019ApJ...875L...4E}{\M87 Paper~IV}
-\defcitealias{2019ApJ...875L...5E}{\M87 Paper~V}
-\defcitealias{2019ApJ...875L...6E}{\M87 Paper~IV}
+\defcitealias{M87PaperI}{\m87~Paper~I}
+\defcitealias{M87PaperII}{\m87~Paper~II}
+\defcitealias{M87PaperIII}{\m87~Paper~III}
+\defcitealias{M87PaperIV}{\m87~Paper~IV}
+\defcitealias{M87PaperV}{\m87~Paper~V}
+\defcitealias{M87PaperVI}{\m87~Paper~VI}
+\defcitealias{M87PaperVII}{\m87~Paper~VII}
+\defcitealias{PaperI}{Paper~I}
+\defcitealias{PaperII}{Paper~II}
+\defcitealias{PaperIII}{Paper~III}
+\defcitealias{PaperIV}{Paper~IV}
+\defcitealias{PaperV}{Paper~V}
+\defcitealias{PaperVI}{Paper~VI}
+\defcitealias{PaperVII}{Paper~VII}
