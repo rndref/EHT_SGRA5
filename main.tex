@@ -11,7 +11,7 @@
 %==============================================================================
 \begin{document}
 
-\title{First Sagittarius A* Event Horizon Telescope Results. IV.\\
+\title{First Sagittarius A* Event Horizon Telescope Results. V.\\
   Constraining the Astrophysical Properties of the Galactic Center Black Hole}
 \author{EHTC et al.}
 
@@ -483,11 +483,11 @@ Rehearse estimates of one-zone emission from thermal synchrotron, Compton scatte
 
 Model comparison requires computation of SEDs from the models, which are both expensive (they use Monte Carlo to capture Compton scattering) and uncertain (there is evidence that x-ray arises via direct synchrotron from a long tail on the eDF).  C.-K. Chan will compute spectra using {\tt grmonty} and possibly {\tt kmonty} on the OSG.  An example SED is shown in Figure~\ref{fig:SEDexamp}.
 
-\begin{figure}
-  \plotone{img_Ma+0.94_1900.spectrum_1.0e16_avg.pdf}
-  \caption{Caption}
-  \label{fig:SEDexamp}
-\end{figure}
+%\begin{figure}
+%  \plotone{img_Ma+0.94_1900.spectrum_1.0e16_avg.pdf}
+%  \caption{Caption}
+%  \label{fig:SEDexamp}
+%\end{figure}
 
 Nevertheless, it is possible to apply a not-to-exceed threshold constraint similar to that used in the NIR: if a thermal eDF model consistently produces too much x-ray then it can be ruled out.  Early work by \citet{2009ApJ...706..497M} finds that x-ray emission provides a powerful constraint on constant temperature ratio models.
 
@@ -507,6 +507,7 @@ Nevertheless, it is possible to apply a not-to-exceed threshold constraint simil
 ...
 
 \cite{Broderick2005} devised a canonical model of Sgr A* as a  radiatively inefficient accretion flow (RIAF). Semi-analytic RIAF models implementing  this using the general relativistic ray tracer GRTRANS \citep{2016MNRAS.462..115D} can be found in  \cite{Emami2021}, where  positrons are included using emission modeling motivated in  \cite{Anantua:2019bna}. The Fig. \ref{fig:EmamiRIAF} model from \cite{Emami2021}  shows Stokes maps and polarized spectra of a \cite{Broderick2005} RIAF with plasma $\beta=10$ and 1$\%$ of the emitting particles nonthermal electrons.
+\textcolor{red}{Include a summary of analytic/semi-analytic models and Sgr A* simulations in the Literature} Analytic disk $\alpha$-model for angular momentum transport \cite{Shakura1973}. Semi-analytic model motivated in \cite{Yuan2003} and expanded in \cite{Broderick2011}. GRMHD Simulation with hotspots reproducing Sgr A* flares \cite{Ripperda2020}.
 
 The addition of small non-thermal populations of positrons \cite{Emami2021} tends to: increase overall intensity in jet regions for fixed electron number density; modify the low-frequency spectral slope; cancel the observed intrinsic circular polarization and enhance circular polarization due to Faraday conversion-- particularly apparent when comparing declining tails of x-ray spectra of positron-rich versus positron-poor sources.
 
@@ -614,7 +615,7 @@ In order to capture the different physics in the accretion disk and
 jets, refined models have been proposed.
 This includes using the Bernoulli parameter to distinguish the jet and
 the disk \citep{2014A&A...570A...7M}, using the plasma $\beta$
-\citep{2015ApJ...799....1C, 2015ApJ...812..103C}.
+\citep{2015ApJ...799....1C, 2015ApJ...812..103C} with sharp switches, ...
 
 ...
 
@@ -803,6 +804,22 @@ Standard EHT acknowledgments.
   Charles Gammie, Dimitrios Psaltis, Dom Pesce, George Wong, Lindy
   Blackburn, Michael Johnson, Yosuke Mizuno, Zachary Gelles, et al;
   cite \citet{2020arXiv200406210P}.}
+
+%------------------------------------------------------------------------------
+\subsection{Samping SED}
+\label{sec:sed-sample}
+
+\begin{figure*}
+  \plotone{sed_Ma0_lc.pdf}
+  \caption{X-ray lightcurves.}
+  \label{fig:lc}
+\end{figure*}
+
+\begin{figure}
+  \plotone{sed_Ma0_hist.pdf}
+  \caption{X-ray histogram.}
+  \label{fig:hist}
+\end{figure}
 
 %------------------------------------------------------------------------------
 %% \subsection{Fast Light vs Light-Speed Light}
