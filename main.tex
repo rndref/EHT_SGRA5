@@ -1,4 +1,4 @@
-\documentclass[twocolumn,tighten,dvipsnames]{aastex63}
+\documentclass[twocolumn,tighten,dvipsnames,linenumbers]{aastex63}
 %\documentclass[modern]{aastex63}
 \usepackage{eht,amsmath}
 \graphicspath{{./}{figures/}}
@@ -7,6 +7,7 @@
 % Inline comments
 \newcommand\note[1]{{\color{OliveGreen}[note: #1]}}
 \newcommand\ckc[1]{{\color{MidnightBlue}[ckc: #1]}}
+\newcommand\hyp[1]{{\color{Salmon}[HYP: #1]}}
 
 %==============================================================================
 \begin{document}
@@ -300,6 +301,7 @@ slightly because the rest-mass density (and therefore field strength)
 per electron increases.
 
 \note{How good Hung-Yi's one zone model match with Bower et al. 2019?}
+\hyp{working on new computation with optical depth analysis as in Bower et al.}
 
 %------------------------------------------------------------------------------
 % Organization
@@ -494,6 +496,30 @@ Nevertheless, it is possible to apply a not-to-exceed threshold constraint simil
 %==============================================================================
 \section{Astrophysical Models}
 
+\begin{deluxetable*}{c c c c c}
+\tablehead{
+\colhead{Type} & \colhead{Parameter} & \colhead{Notation} & \colhead{Range/Value(s)} & \colhead{Notes}
+}
+\startdata
+Gravity        & Black Hole Mass                & $M_\mathrm{bh}$      & 4.14\times10^6 M_\odot         & ... \\
+Gravity        & Dimensionless Black Hole Spin  & $a_\mathrm{spin}$    & -0.94, -0.5, 0, 0.5, 0.94      & ... \\
+Fluid          & Magnetization State            & ---                  & MAD, SANE                      & ... \\
+Fluid          & Adiabatic Index                & $\Gamma$             & 4/3, 5/3                       & ... \\
+Fluid          & Evolution time                 & $t$                  & [5000, 10000] $GM/c^3$         & ... \\
+Emission Model & Density normalization          & $\rho_\mathrm{unit}$ & Fitted by fixing 230\,GHz flux & ... \\
+Emission Model & Electron-Ion Temperature Ratio & $R_\mathrm{high}$    & 1, 10, 40, 160                 & ... \\
+Geometry       & Inclination                    & $i$                  & 10\textdegree, 30\textdegree, 50\textdegree, 70\textdegree, 90\textdegree & ... \\
+Image          & Image frequency                & $\nu$                & 86\,GHz, 230\,GHz              & ... \\
+Image          & Field of View                  & FoV                  & ...                            & ... \\
+Image          & Pixel size                     & ...                  & ...                            & ... \\
+SED            & SED frequency range            & $\nu$                & ...                            & ... \\
+SED            & SED frequency bin size         & $\Delta\nu$          & ...                            & ... \\
+SED            & SED inclination bin size       & $\Delta\theta$       & ...                            & ... \\
+\enddata
+\caption{Parameter space: grid of $5 \times 2 \times 4 \times 5$.}
+\label{tab:parameters}
+\end{deluxetable*}
+
 ...
 
 %------------------------------------------------------------------------------
@@ -503,13 +529,14 @@ Nevertheless, it is possible to apply a not-to-exceed threshold constraint simil
 
 \ckc{Should we actually fit ADAF?
   Should we ray trace ADAF?}
+\hyp{MCFE is planing to fit ADAF, need to keep update the progress}
 
 ...
 
 \cite{Broderick2005} devised a canonical model of Sgr A* as a  radiatively inefficient accretion flow (RIAF). Semi-analytic RIAF models implementing  this using the general relativistic ray tracer GRTRANS \citep{2016MNRAS.462..115D} can be found in  \cite{Emami2021}, where  positrons are included using emission modeling motivated in  \cite{Anantua:2019bna}. The Fig. \ref{fig:EmamiRIAF} model from \cite{Emami2021}  shows Stokes maps and polarized spectra of a \cite{Broderick2005} RIAF with plasma $\beta=10$ and 1$\%$ of the emitting particles nonthermal electrons.
-\textcolor{red}{Include a summary of analytic/semi-analytic models and Sgr A* simulations in the Literature} Analytic disk $\alpha$-model for angular momentum transport \cite{Shakura1973}. Semi-analytic model motivated in \cite{Yuan2003} and expanded in \cite{Broderick2011}. GRMHD Simulation with hotspots reproducing Sgr A* flares \cite{Ripperda2020}.
 
-The addition of small non-thermal populations of positrons \cite{Emami2021} tends to: increase overall intensity in jet regions for fixed electron number density; modify the low-frequency spectral slope; cancel the observed intrinsic circular polarization and enhance circular polarization due to Faraday conversion-- particularly apparent when comparing declining tails of x-ray spectra of positron-rich versus positron-poor sources.
+
+The addition of small non-thermal populations of positrons \cite{Emami2021} tends to: increase overall intensity in jet regions for fixed electron number density; modify the low-frequency spectral slope; cancel the observed intrinsic circular polarization and enhance circular polarization due to Faraday conversion-- particularly apparent when comparing declining tails of x-ray spectra of positron-rich versus positron-poor sources.\textcolor{red}{Include a summary of analytic/semi-analytic models and Sgr A* simulations in the Literature} Analytic disk $\alpha$-model for angular momentum transport \cite{Shakura1973}. Semi-analytic model motivated in \cite{Yuan2003} and expanded in \cite{Broderick2011}. GRMHD Simulation with hotspots reproducing Sgr A* flares \cite{Ripperda2020}.\note{to be discussed: how much we would like to discuss polarization emission?}\hyp{to-do :  adding historical RIAF fitting result to proto-EHT observations; how recent  GRMHD simulation and subsequent GRRT post-processing suggest other key parameters onto the Broderick 2005 RIAF model; jet componenet? cross referencing MCFE RIAF analysis product?}
 
 
 \begin{figure}[H]
