@@ -827,64 +827,61 @@ Standard EHT acknowledgments.
 
 \section{Pass/Fail Table}
 
-\begin{deluxetable*}{ccccccccc}
+\begin{deluxetable*}{cccccccccc}
 \tablehead{
-  & & & &
-  \multicolumn{5}{c}{Inclinations ($\degree$) that pass constraints}\\
-  \colhead{Flux} & \colhead{$a_\mathrm{spin}$} & \colhead{$\Gamma$} & % 3 fluid input
+  \colhead{Spacetime} &
+  \multicolumn{3}{c}{Fluid} &
+  \colhead{Plasma} &
+  \multicolumn{5}{c}{Inclinations ($\degree$) that pass constraints} \\
+  \colhead{$a_\mathrm{spin}$} & \colhead{Flux} & \colhead{$\Gamma$} & \colhead{Time} & % 3 fluid input
   \colhead{$R_\mathrm{high}$} & % 1 plasma input
   \colhead{86\,GHz}  & \colhead{230\,GHz}  & \colhead{NIR}  & \colhead{X-ray} & \colhead{All} % 4 constraints + 1 combined
 }
 \startdata
-MAD  & $-0.94$ & $5/3$ &   1 & ? & ? & ? & ---         & \textbf{---}         \\
-MAD  & $-0.94$ & $5/3$ &  10 & ? & ? & ? & All         & \textbf{All}         \\
-MAD  & $-0.94$ & $5/3$ &  40 & ? & ? & ? & All         & \textbf{All}         \\
-MAD  & $-0.94$ & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
+$-0.94$ & MAD  & $5/3$ & ... &   1 & ? & ? & ? & ---         & \textbf{---}         \\
+$-0.94$ & MAD  & $5/3$ & ... &  10 & ? & ? & ? & All         & \textbf{All}         \\
+$-0.94$ & MAD  & $5/3$ & ... &  40 & ? & ? & ? & All         & \textbf{All}         \\
+$-0.94$ & MAD  & $5/3$ & ... & 160 & ? & ? & ? & All         & \textbf{All}         \\
+$-0.94$ & SANE & $5/3$ & ... &   1 & ? & ? & ? & All         & \textbf{All}         \\
+$-0.94$ & SANE & $5/3$ & ... &  10 & ? & ? & ? & ---         & \textbf{---}         \\
+$-0.94$ & SANE & $5/3$ & ... &  40 & ? & ? & ? & 10,30,50,70 & \textbf{10,30,50,70} \\
+$-0.94$ & SANE & $5/3$ & ... & 160 & ? & ? & ? & All         & \textbf{All}         \\
 \hline
-MAD  & $-0.5$  & $5/3$ &   1 & ? & ? & ? & All         & \textbf{All}         \\
-MAD  & $-0.5$  & $5/3$ &  10 & ? & ? & ? & All         & \textbf{All}         \\
-MAD  & $-0.5$  & $5/3$ &  40 & ? & ? & ? & All         & \textbf{All}         \\
-MAD  & $-0.5$  & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
+$-0.5$  & MAD  & $5/3$ & ... &   1 & ? & ? & ? & All         & \textbf{All}         \\
+$-0.5$  & MAD  & $5/3$ & ... &  10 & ? & ? & ? & All         & \textbf{All}         \\
+$-0.5$  & MAD  & $5/3$ & ... &  40 & ? & ? & ? & All         & \textbf{All}         \\
+$-0.5$  & MAD  & $5/3$ & ... & 160 & ? & ? & ? & All         & \textbf{All}         \\
+$-0.5$  & SANE & $5/3$ & ... &   1 & ? & ? & ? & All         & \textbf{All}         \\
+$-0.5$  & SANE & $5/3$ & ... &  10 & ? & ? & ? & 10,30,50    & \textbf{10,30,50}    \\
+$-0.5$  & SANE & $5/3$ & ... &  40 & ? & ? & ? & ---         & \textbf{---}         \\
+$-0.5$  & SANE & $5/3$ & ... & 160 & ? & ? & ? & All         & \textbf{All}         \\
 \hline
-MAD  & $ 0$    & $5/3$ &   1 & ? & ? & ? & 10,30,50,70 & \textbf{10,30,50,70} \\
-MAD  & $ 0$    & $5/3$ &  10 & ? & ? & ? & All         & \textbf{All}         \\
-MAD  & $ 0$    & $5/3$ &  40 & ? & ? & ? & All         & \textbf{All}         \\
-MAD  & $ 0$    & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
+$ 0$    & MAD  & $5/3$ & ... &   1 & ? & ? & ? & 10,30,50,70 & \textbf{10,30,50,70} \\
+$ 0$    & MAD  & $5/3$ & ... &  10 & ? & ? & ? & All         & \textbf{All}         \\
+$ 0$    & MAD  & $5/3$ & ... &  40 & ? & ? & ? & All         & \textbf{All}         \\
+$ 0$    & MAD  & $5/3$ & ... & 160 & ? & ? & ? & All         & \textbf{All}         \\
+$ 0$    & SANE & $5/3$ & ... &   1 & ? & ? & ? & All         & \textbf{All}         \\
+$ 0$    & SANE & $5/3$ & ... &  10 & ? & ? & ? & 10,30,50    & \textbf{10,30,50}    \\
+$ 0$    & SANE & $5/3$ & ... &  40 & ? & ? & ? & ---         & \textbf{---}         \\
+$ 0$    & SANE & $5/3$ & ... & 160 & ? & ? & ? & All         & \textbf{All}         \\
 \hline
-MAD  & $+0.5$  & $5/3$ &   1 & ? & ? & ? & 10,30       & \textbf{10,30}       \\
-MAD  & $+0.5$  & $5/3$ &  10 & ? & ? & ? & All         & \textbf{All}         \\
-MAD  & $+0.5$  & $5/3$ &  40 & ? & ? & ? & All         & \textbf{All}         \\
-MAD  & $+0.5$  & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
+$+0.5$  & MAD  & $5/3$ & ... &   1 & ? & ? & ? & 10,30       & \textbf{10,30}       \\
+$+0.5$  & MAD  & $5/3$ & ... &  10 & ? & ? & ? & All         & \textbf{All}         \\
+$+0.5$  & MAD  & $5/3$ & ... &  40 & ? & ? & ? & All         & \textbf{All}         \\
+$+0.5$  & MAD  & $5/3$ & ... & 160 & ? & ? & ? & All         & \textbf{All}         \\
+$+0.5$  & SANE & $5/3$ & ... &   1 & ? & ? & ? & All         & \textbf{All}         \\
+$+0.5$  & SANE & $5/3$ & ... &  10 & ? & ? & ? & All         & \textbf{All}         \\
+$+0.5$  & SANE & $5/3$ & ... &  40 & ? & ? & ? & All         & \textbf{All}         \\
+$+0.5$  & SANE & $5/3$ & ... & 160 & ? & ? & ? & All         & \textbf{All}         \\
 \hline
-MAD  & $+0.94$ & $5/3$ &   1 & ? & ? & ? & ---         & \textbf{---}         \\
-MAD  & $+0.94$ & $5/3$ &  10 & ? & ? & ? & 30,50,70,90 & \textbf{30,50,70,90} \\
-MAD  & $+0.94$ & $5/3$ &  40 & ? & ? & ? & All         & \textbf{All}         \\
-MAD  & $+0.94$ & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
-\hline\hline
-SANE & $-0.94$ & $5/3$ &   1 & ? & ? & ? & All         & \textbf{All}         \\
-SANE & $-0.94$ & $5/3$ &  10 & ? & ? & ? & ---         & \textbf{---}         \\
-SANE & $-0.94$ & $5/3$ &  40 & ? & ? & ? & 10,30,50,70 & \textbf{10,30,50,70} \\
-SANE & $-0.94$ & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
-\hline
-SANE & $-0.5$  & $5/3$ &   1 & ? & ? & ? & All         & \textbf{All}         \\
-SANE & $-0.5$  & $5/3$ &  10 & ? & ? & ? & 10,30,50    & \textbf{10,30,50}    \\
-SANE & $-0.5$  & $5/3$ &  40 & ? & ? & ? & ---         & \textbf{---}         \\
-SANE & $-0.5$  & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
-\hline
-SANE & $ 0$    & $5/3$ &   1 & ? & ? & ? & All         & \textbf{All}         \\
-SANE & $ 0$    & $5/3$ &  10 & ? & ? & ? & 10,30,50    & \textbf{10,30,50}    \\
-SANE & $ 0$    & $5/3$ &  40 & ? & ? & ? & ---         & \textbf{---}         \\
-SANE & $ 0$    & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
-\hline
-SANE & $+0.5$  & $5/3$ &   1 & ? & ? & ? & All         & \textbf{All}         \\
-SANE & $+0.5$  & $5/3$ &  10 & ? & ? & ? & All         & \textbf{All}         \\
-SANE & $+0.5$  & $5/3$ &  40 & ? & ? & ? & All         & \textbf{All}         \\
-SANE & $+0.5$  & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
-\hline
-SANE & $+0.94$ & $5/3$ &   1 & ? & ? & ? & All         & \textbf{All}         \\
-SANE & $+0.94$ & $5/3$ &  10 & ? & ? & ? & All         & \textbf{All}         \\
-SANE & $+0.94$ & $5/3$ &  40 & ? & ? & ? & All         & \textbf{All}         \\
-SANE & $+0.94$ & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
+$+0.94$ & MAD  & $5/3$ & ... &   1 & ? & ? & ? & ---         & \textbf{---}         \\
+$+0.94$ & MAD  & $5/3$ & ... &  10 & ? & ? & ? & 30,50,70,90 & \textbf{30,50,70,90} \\
+$+0.94$ & MAD  & $5/3$ & ... &  40 & ? & ? & ? & All         & \textbf{All}         \\
+$+0.94$ & MAD  & $5/3$ & ... & 160 & ? & ? & ? & All         & \textbf{All}         \\
+$+0.94$ & SANE & $5/3$ & ... &   1 & ? & ? & ? & All         & \textbf{All}         \\
+$+0.94$ & SANE & $5/3$ & ... &  10 & ? & ? & ? & All         & \textbf{All}         \\
+$+0.94$ & SANE & $5/3$ & ... &  40 & ? & ? & ? & All         & \textbf{All}         \\
+$+0.94$ & SANE & $5/3$ & ... & 160 & ? & ? & ? & All         & \textbf{All}         \\
 \enddata
 \caption{Fixed parameters: black hole mass $M_\mathrm{bh} = 4.14\times10^6 M_\odot$. }
 \label{tab:parameters}
