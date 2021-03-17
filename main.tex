@@ -516,7 +516,7 @@ Nevertheless, it is possible to apply a not-to-exceed threshold constraint simil
 
 \begin{deluxetable*}{c c c c c}
 \tablehead{
-\colhead{Type} & \colhead{Parameter} & \colhead{Notation} & \colhead{Range/Value(s)} & \colhead{Notes}
+  \colhead{Type} & \colhead{Parameter} & \colhead{Notation} & \colhead{Range/Value(s)} & \colhead{Notes}
 }
 \startdata
 Gravity        & Black Hole Mass                & $M_\mathrm{bh}$      & $4.14\times10^6 M_\odot$            & ... \\
@@ -827,63 +827,64 @@ Standard EHT acknowledgments.
 
 \section{Pass/Fail Table}
 
-\begin{deluxetable*}{cccccccccccc}
+\begin{deluxetable*}{ccccccccc}
 \tablehead{
-\colhead{Flux} & \colhead{$a_\mathrm{spin}$} & \colhead{$\Gamma$} & % 3 fluid input
-\colhead{$R_\mathrm{high}$} & \colhead{$i$} & % 2 plasma input
-\colhead{$\dot{M}$} & \colhead{Time} & % 2 results
-\colhead{86\,GHz}  & \colhead{230\,GHz}  & \colhead{NIR}  & \colhead{X-ray} & \colhead{Pass/Fail} % 4 constraints + 1 combined
+  & & & &
+  \multicolumn{5}{c}{Inclinations ($\degree$) that pass constraints}\\
+  \colhead{Flux} & \colhead{$a_\mathrm{spin}$} & \colhead{$\Gamma$} & % 3 fluid input
+  \colhead{$R_\mathrm{high}$} & % 1 plasma input
+  \colhead{86\,GHz}  & \colhead{230\,GHz}  & \colhead{NIR}  & \colhead{X-ray} & \colhead{All} % 4 constraints + 1 combined
 }
 \startdata
-MAD  & $-0.94$ & $5/3$ &   1 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-MAD  & $-0.94$ & $5/3$ &  10 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-MAD  & $-0.94$ & $5/3$ &  40 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-MAD  & $-0.94$ & $5/3$ & 160 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $-0.94$ & $5/3$ &   1 & ? & ? & ? & ---         & \textbf{---}         \\
+MAD  & $-0.94$ & $5/3$ &  10 & ? & ? & ? & All         & \textbf{All}         \\
+MAD  & $-0.94$ & $5/3$ &  40 & ? & ? & ? & All         & \textbf{All}         \\
+MAD  & $-0.94$ & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
 \hline
-MAD  & $-0.5$  & $5/3$ &   1 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-MAD  & $-0.5$  & $5/3$ &  10 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-MAD  & $-0.5$  & $5/3$ &  40 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-MAD  & $-0.5$  & $5/3$ & 160 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $-0.5$  & $5/3$ &   1 & ? & ? & ? & All         & \textbf{All}         \\
+MAD  & $-0.5$  & $5/3$ &  10 & ? & ? & ? & All         & \textbf{All}         \\
+MAD  & $-0.5$  & $5/3$ &  40 & ? & ? & ? & All         & \textbf{All}         \\
+MAD  & $-0.5$  & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
 \hline
-MAD  & $ 0$    & $5/3$ &   1 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-MAD  & $ 0$    & $5/3$ &  10 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-MAD  & $ 0$    & $5/3$ &  40 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-MAD  & $ 0$    & $5/3$ & 160 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $ 0$    & $5/3$ &   1 & ? & ? & ? & 10,30,50,70 & \textbf{10,30,50,70} \\
+MAD  & $ 0$    & $5/3$ &  10 & ? & ? & ? & All         & \textbf{All}         \\
+MAD  & $ 0$    & $5/3$ &  40 & ? & ? & ? & All         & \textbf{All}         \\
+MAD  & $ 0$    & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
 \hline
-MAD  & $+0.5$  & $5/3$ &   1 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-MAD  & $+0.5$  & $5/3$ &  10 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-MAD  & $+0.5$  & $5/3$ &  40 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-MAD  & $+0.5$  & $5/3$ & 160 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $+0.5$  & $5/3$ &   1 & ? & ? & ? & 10,30       & \textbf{10,30}       \\
+MAD  & $+0.5$  & $5/3$ &  10 & ? & ? & ? & All         & \textbf{All}         \\
+MAD  & $+0.5$  & $5/3$ &  40 & ? & ? & ? & All         & \textbf{All}         \\
+MAD  & $+0.5$  & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
 \hline
-MAD  & $+0.94$ & $5/3$ &   1 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-MAD  & $+0.94$ & $5/3$ &  10 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-MAD  & $+0.94$ & $5/3$ &  40 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-MAD  & $+0.94$ & $5/3$ & 160 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $+0.94$ & $5/3$ &   1 & ? & ? & ? & ---         & \textbf{---}         \\
+MAD  & $+0.94$ & $5/3$ &  10 & ? & ? & ? & 30,50,70,90 & \textbf{30,50,70,90} \\
+MAD  & $+0.94$ & $5/3$ &  40 & ? & ? & ? & All         & \textbf{All}         \\
+MAD  & $+0.94$ & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
 \hline\hline
-SANE & $-0.94$ & $5/3$ &   1 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-SANE & $-0.94$ & $5/3$ &  10 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-SANE & $-0.94$ & $5/3$ &  40 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-SANE & $-0.94$ & $5/3$ & 160 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $-0.94$ & $5/3$ &   1 & ? & ? & ? & All         & \textbf{All}         \\
+SANE & $-0.94$ & $5/3$ &  10 & ? & ? & ? & ---         & \textbf{---}         \\
+SANE & $-0.94$ & $5/3$ &  40 & ? & ? & ? & 10,30,50,70 & \textbf{10,30,50,70} \\
+SANE & $-0.94$ & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
 \hline
-SANE & $-0.5$  & $5/3$ &   1 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-SANE & $-0.5$  & $5/3$ &  10 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-SANE & $-0.5$  & $5/3$ &  40 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-SANE & $-0.5$  & $5/3$ & 160 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $-0.5$  & $5/3$ &   1 & ? & ? & ? & All         & \textbf{All}         \\
+SANE & $-0.5$  & $5/3$ &  10 & ? & ? & ? & 10,30,50    & \textbf{10,30,50}    \\
+SANE & $-0.5$  & $5/3$ &  40 & ? & ? & ? & ---         & \textbf{---}         \\
+SANE & $-0.5$  & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
 \hline
-SANE & $ 0$    & $5/3$ &   1 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-SANE & $ 0$    & $5/3$ &  10 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-SANE & $ 0$    & $5/3$ &  40 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-SANE & $ 0$    & $5/3$ & 160 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $ 0$    & $5/3$ &   1 & ? & ? & ? & All         & \textbf{All}         \\
+SANE & $ 0$    & $5/3$ &  10 & ? & ? & ? & 10,30,50    & \textbf{10,30,50}    \\
+SANE & $ 0$    & $5/3$ &  40 & ? & ? & ? & ---         & \textbf{---}         \\
+SANE & $ 0$    & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
 \hline
-SANE & $+0.5$  & $5/3$ &   1 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-SANE & $+0.5$  & $5/3$ &  10 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-SANE & $+0.5$  & $5/3$ &  40 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-SANE & $+0.5$  & $5/3$ & 160 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $+0.5$  & $5/3$ &   1 & ? & ? & ? & All         & \textbf{All}         \\
+SANE & $+0.5$  & $5/3$ &  10 & ? & ? & ? & All         & \textbf{All}         \\
+SANE & $+0.5$  & $5/3$ &  40 & ? & ? & ? & All         & \textbf{All}         \\
+SANE & $+0.5$  & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
 \hline
-SANE & $+0.94$ & $5/3$ &   1 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-SANE & $+0.94$ & $5/3$ &  10 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-SANE & $+0.94$ & $5/3$ &  40 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
-SANE & $+0.94$ & $5/3$ & 160 &  $10$--$170\degree$ & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $+0.94$ & $5/3$ &   1 & ? & ? & ? & All         & \textbf{All}         \\
+SANE & $+0.94$ & $5/3$ &  10 & ? & ? & ? & All         & \textbf{All}         \\
+SANE & $+0.94$ & $5/3$ &  40 & ? & ? & ? & All         & \textbf{All}         \\
+SANE & $+0.94$ & $5/3$ & 160 & ? & ? & ? & All         & \textbf{All}         \\
 \enddata
 \caption{Fixed parameters: black hole mass $M_\mathrm{bh} = 4.14\times10^6 M_\odot$. }
 \label{tab:parameters}
