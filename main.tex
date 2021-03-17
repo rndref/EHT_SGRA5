@@ -1,6 +1,6 @@
 \documentclass[twocolumn,tighten,dvipsnames,linenumbers]{aastex63}
 %\documentclass[modern]{aastex63}
-\usepackage{eht,amsmath}
+\usepackage{eht,amsmath,gensymb}
 \graphicspath{{./}{figures/}}
 \usepackage{float}%
 
@@ -501,20 +501,20 @@ Nevertheless, it is possible to apply a not-to-exceed threshold constraint simil
 \colhead{Type} & \colhead{Parameter} & \colhead{Notation} & \colhead{Range/Value(s)} & \colhead{Notes}
 }
 \startdata
-Gravity        & Black Hole Mass                & $M_\mathrm{bh}$      & 4.14\times10^6 M_\odot         & ... \\
-Gravity        & Dimensionless Black Hole Spin  & $a_\mathrm{spin}$    & -0.94, -0.5, 0, 0.5, 0.94      & ... \\
-Fluid          & Magnetization State            & ---                  & MAD, SANE                      & ... \\
-Fluid          & Adiabatic Index                & $\Gamma$             & 4/3, 5/3                       & ... \\
-Fluid          & Evolution time                 & $t$                  & [5000, 10000] $GM/c^3$         & ... \\
-Emission Model & Density normalization          & $\rho_\mathrm{unit}$ & Fitted by fixing 230\,GHz flux & ... \\
-Emission Model & Electron-Ion Temperature Ratio & $R_\mathrm{high}$    & 1, 10, 40, 160                 & ... \\
-Geometry       & Inclination                    & $i$                  & 10\textdegree, 30\textdegree, 50\textdegree, 70\textdegree, 90\textdegree & ... \\
-Image          & Image frequency                & $\nu$                & 86\,GHz, 230\,GHz              & ... \\
-Image          & Field of View                  & FoV                  & ...                            & ... \\
-Image          & Pixel size                     & ...                  & ...                            & ... \\
-SED            & SED frequency range            & $\nu$                & ...                            & ... \\
-SED            & SED frequency bin size         & $\Delta\nu$          & ...                            & ... \\
-SED            & SED inclination bin size       & $\Delta\theta$       & ...                            & ... \\
+Gravity        & Black Hole Mass                & $M_\mathrm{bh}$      & $4.14\times10^6 M_\odot$            & ... \\
+Gravity        & Dimensionless Black Hole Spin  & $a_\mathrm{spin}$    & $-0.94$, $-0.5$, $0$, $0.5$, $0.94$ & ... \\
+Fluid          & Magnetization State            & ---                  & MAD, SANE                           & ... \\
+Fluid          & Adiabatic Index                & $\Gamma$             & $4/3$, $5/3$                        & ... \\
+Fluid          & Evolution time                 & $t$                  & $[5000, 10000] GM/c^3$              & ... \\
+Emission Model & Density normalization          & $\rho_\mathrm{unit}$ & Fitted by fixing 230\,GHz flux      & ... \\
+Emission Model & Electron-Ion Temperature Ratio & $R_\mathrm{high}$    & 1, 10, 40, 160                      & ... \\
+Geometry       & Inclination                    & $i$                  & $10\degree$, $30\degree$, $50\degree$, $70\degree$, $90\degree$ & ... \\
+Image          & Image frequency                & $\nu$                & 86\,GHz, 230\,GHz                   & ... \\
+Image          & Field of View                  & FoV                  & ...                                 & ... \\
+Image          & Pixel size                     & ...                  & ...                                 & ... \\
+SED            & SED frequency range            & $\nu$                & ...                                 & ... \\
+SED            & SED frequency bin size         & $\Delta\nu$          & ...                                 & ... \\
+SED            & SED inclination bin size       & $\Delta\theta$       & ...                                 & ... \\
 \enddata
 \caption{Parameter space: grid of $5 \times 2 \times 4 \times 5$.}
 \label{tab:parameters}
@@ -807,6 +807,63 @@ Standard EHT acknowledgments.
 %==============================================================================
 \appendix
 
+\section{Pass/Fail Table}
+
+\begin{deluxetable*}{cccccccccccc}
+\tablehead{
+\colhead{Flux} & \colhead{$a_\mathrm{spin}$} & \colhead{$\Gamma$} & % 3 fluid input
+\colhead{$R_\mathrm{high}$} & \colhead{$i$} & % 2 plasma input
+\colhead{$\dot{M}$} & \colhead{Time} & % 2 results
+\colhead{86\,GHz}  & \colhead{230\,GHz}  & \colhead{NIR}  & \colhead{X-ray} & \colhead{Pass/Fail} % 4 constraints + 1 combined
+}
+\startdata
+MAD  & $-0.94$ & $5/3$ &   1 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $-0.94$ & $5/3$ &  10 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $-0.94$ & $5/3$ &  40 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $-0.94$ & $5/3$ & 160 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $-0.5$  & $5/3$ &   1 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $-0.5$  & $5/3$ &  10 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $-0.5$  & $5/3$ &  40 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $-0.5$  & $5/3$ & 160 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $ 0$    & $5/3$ &   1 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $ 0$    & $5/3$ &  10 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $ 0$    & $5/3$ &  40 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $ 0$    & $5/3$ & 160 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $+0.5$  & $5/3$ &   1 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $+0.5$  & $5/3$ &  10 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $+0.5$  & $5/3$ &  40 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $+0.5$  & $5/3$ & 160 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $+0.94$ & $5/3$ &   1 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $+0.94$ & $5/3$ &  10 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $+0.94$ & $5/3$ &  40 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+MAD  & $+0.94$ & $5/3$ & 160 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+%
+SANE & $-0.94$ & $5/3$ &   1 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $-0.94$ & $5/3$ &  10 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $-0.94$ & $5/3$ &  40 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $-0.94$ & $5/3$ & 160 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $-0.5$  & $5/3$ &   1 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $-0.5$  & $5/3$ &  10 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $-0.5$  & $5/3$ &  40 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $-0.5$  & $5/3$ & 160 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $ 0$    & $5/3$ &   1 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $ 0$    & $5/3$ &  10 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $ 0$    & $5/3$ &  40 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $ 0$    & $5/3$ & 160 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $+0.5$  & $5/3$ &   1 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $+0.5$  & $5/3$ &  10 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $+0.5$  & $5/3$ &  40 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $+0.5$  & $5/3$ & 160 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $+0.94$ & $5/3$ &   1 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $+0.94$ & $5/3$ &  10 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $+0.94$ & $5/3$ &  40 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+SANE & $+0.94$ & $5/3$ & 160 &  10--170\textdegree & $... M_\odot/yr$ & $[5,000M, 10,000M]$ & P/F & P/F & P/F & P/F & \textbf{P/F} \\
+\enddata
+\caption{Fixed parameters: black hole mass $M_\mathrm{bh} = 4.14\times10^6 M_\odot$. }
+\label{tab:parameters}
+\end{deluxetable*}
+
+%==============================================================================
 \section{Details ...}
 \label{sec:details}
 
