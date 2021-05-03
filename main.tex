@@ -527,6 +527,7 @@ Nevertheless, it is possible to apply a not-to-exceed threshold constraint simil
 \section{Astrophysical Models}
 
 \begin{deluxetable*}{c c c c c}
+\tabletypesize{\footnotesize}
 \tablehead{
   \colhead{Type} & \colhead{Parameter} & \colhead{Notation} & \colhead{Range/Value(s)} & \colhead{Notes}
 }
@@ -563,10 +564,29 @@ SED            & SED inclination bin size       & $\Delta\theta$       & ...    
 
 ...
 
-\cite{Broderick2005} devised a canonical model of Sgr A* as a  radiatively inefficient accretion flow (RIAF). Semi-analytic RIAF models implementing  this using the general relativistic ray tracer GRTRANS \citep{2016MNRAS.462..115D} can be found in  \cite{Emami2021}, where  positrons are included using emission modeling motivated in  \cite{Anantua:2019bna}. The Fig. \ref{fig:EmamiRIAF} model from \cite{Emami2021}  shows Stokes maps and polarized spectra of a \cite{Broderick2005} RIAF with plasma $\beta=10$ and 1$\%$ of the emitting particles nonthermal electrons.
+\cite{Broderick2005} devised a canonical model of Sgr A* as a  radiatively inefficient accretion flow (RIAF). Semi-analytic RIAF models implementing  this using the general relativistic ray tracer GRTRANS \citep{2016MNRAS.462..115D} can be found in  \cite{Emami2021}, where  positrons are included using emission modeling motivated in  \cite{Anantua:2019bna}. The Fig. \ref{fig:EmamiRIAF} model from \cite{Emami2021}  shows Stokes maps and polarized spectra of a \cite{Broderick2005} RIAF with plasma $\beta=10$ and 1$\%$ of the emitting particles nonthermal electrons. The near-extremal ($a/M=0.998$) model shown exhibits Doppler boosting asymmetry in a crescent-shaped intensity pattern with a spiral global electric vector polarization angle (EVPA) pattern and polarization preferentially distributed within this region.  
 
 
-The addition of small non-thermal populations of positrons \citep{Emami2021} tends to: increase overall intensity in jet regions for fixed electron number density; modify the low-frequency spectral slope; cancel the observed intrinsic circular polarization and enhance circular polarization due to Faraday conversion-- particularly apparent when comparing declining tails of x-ray spectra of positron-rich versus positron-poor sources.
+The addition of small non-thermal populations of positrons \citep{Anantua:2019bna,Emami2021} tends to: increase overall intensity in jet regions for fixed electron number density; modify the low-frequency spectral slope; cancel the observed intrinsic circular polarization and enhance circular polarization due to Faraday conversion. The last of these positron effects is particularly apparent when comparing declining tails of x-ray spectra of positron-rich versus positron-poor sources, as seen in Fig. \ref{fig:EmamiRIAFSpectra}.
+
+\begin{figure}%[H]
+%   \plotone{RIAFSgrAPlaneTscl1Pt5e11beta1Pt0e01fpos0Pt0fNTH1Pt0e-02copy.png}
+\includegraphics[width=.5\textwidth,height=27mm%,trim=0 380 0 200,clip
+]{RIAFSgrAPlaneTscl1Pt5e11beta1Pt0e01fpos0Pt0fNTH1Pt0e-02copy}
+  \caption{Polarization maps of Stokes parameters $I$, $Q$, $U$ and $V$ at 230 GHz for a \cite{Broderick2005} RIAF with $\beta=10$.}
+  \label{fig:EmamiRIAF}
+\end{figure}
+
+\begin{figure}%[H]
+%\begin{figure*}%[H]
+%   \plotone{RIAFSgrAPlaneTscl1Pt5e11beta1Pt0e01fpos0Pt0fNTH1Pt0e-02copy.png}
+  \includegraphics[width=.4\textwidth%width=.55\textwidth,height=25mm%,trim=0 380 0 200,clip
+]{PositronModelEtAl2021RIAFPolSpectra%PolSpectscl1Pt5e11Beta1Pt0e1nth1Pt0em2fpos0Pt0
+}
+  \caption{Polarized SEDs for the Sgr A* RIAF model with  $\beta\in\{10^{-2},10^{0},10^{1}\}$, $f_\mathrm{pos}\in\{0.0,0.5,1.0\}$. The Top Panel shows the Stokes $I$ spectrum, while the Middle Panel shows the SED in linear polarization and the Bottom Panel shows the same for circular polarization.} 
+  \label{fig:EmamiRIAFSpectra}
+%\end{figure*}
+\end{figure}
 
 \textcolor{red}{RJA: Include a summary of analytic/semi-analytic models and Sgr A* simulations in the Literature} Analytic disk $\alpha$-model for angular momentum transport \cite{Shakura1973}. Semi-analytic model motivated in \cite{Yuan2003} and expanded in \cite{Broderick2011}. GRMHD Simulation with hotspots reproducing Sgr A* flares \cite{Ripperda2020}.
 
@@ -576,17 +596,11 @@ The addition of small non-thermal populations of positrons \citep{Emami2021} ten
 
 % EHT flux vs. baseline observations constrain the emitting region intrinsic size to 37 microarcseconds for a circular Gaussian emission profile
 
-More recent measurements of closure phases of a few degrees suggest an asymmetric ring-like profile, with major axis 56 microarcseconds
+More recent measurements of closure phases of a few degrees \cite{Fish2016} suggest an asymmetric ring-like profile, with major axis 56 microarcseconds
 
 
 
-\begin{figure}[H]
-%   \plotone{RIAFSgrAPlaneTscl1Pt5e11beta1Pt0e01fpos0Pt0fNTH1Pt0e-02copy.png}
-  \includegraphics[width=.55\textwidth,height=25mm%,trim=0 380 0 200,clip
-]{RIAFSgrAPlaneTscl1Pt5e11beta1Pt0e01fpos0Pt0fNTH1Pt0e-02copy}
-  \caption{Caption}
-  \label{fig:EmamiRIAF}
-\end{figure}
+
 %------------------------------------------------------------------------------
 \subsection{Numerical Models of the Inner Accretion Flows
   [Mizuno, Wong, Ricarte]}
@@ -697,6 +711,12 @@ the disk \citep{2014A&A...570A...7M}, using the plasma $\beta$
 \end{itemize}
 
 ...
+
+\begin{figure*}
+  \plottwo{Constraints_MAD_nonthermal3.pdf}{Constraints_SANE_nonthermal3.pdf}
+  \caption{Left: MAD models, Right: SANE models.  Models marked with a red dot are not satisfying the constraints, while green dots indicate models that are satisfying.  The inclination is indicated by the position of the dot. Each panel is concatenating  the NIR, x-ray (only bremsstrahlung) and 86 GHz(size and flux) constraints. See also Table \ref{tab:nonthermal3}. }
+  \label{fig:nonthermal3}
+\end{figure*}
 
 %------------------------------------------------------------------------------
 \subsection{Ray Traced Images
@@ -850,64 +870,187 @@ Standard EHT acknowledgments.
 
 \section{Pass/Fail Table}
 
-\begin{deluxetable*}{cccccccccc}
+\begin{deluxetable*}{cccccccccccc}
+\tabletypesize{\scriptsize}
 \tablehead{
   \colhead{Spacetime} &
   \multicolumn{3}{c}{Fluid} &
   \colhead{Plasma} &
-  \multicolumn{5}{c}{Inclinations ($\degree$) that pass constraints} \\
+  \multicolumn{6}{c}{Inclinations ($\degree$) that pass constraints} \\
   \colhead{$a_\mathrm{spin}$} & \colhead{Flux} & \colhead{$\Gamma$} & \colhead{Time} & % 3 fluid input
   \colhead{$R_\mathrm{high}$} & % 1 plasma input
-  \colhead{86\,GHz}  & \colhead{$\sigma(230\,\mathrm{GHz})$}  & \colhead{NIR}  & \colhead{X-ray} & \colhead{All} % 4 constraints + 1 combined
+  \colhead{86\,GHz}  & \colhead{230\,\mathrm{GHz} 2nd moment} & \colhead{Null Location} & \colhead{$\sigma(230\,\mathrm{GHz})$}  & \colhead{NIR}  & \colhead{X-ray} & \colhead{All} % 4 constraints + 1 combined
 }
 \startdata
-$-0.94$ & MAD  & $5/3$ & ... &   1 & ---         & ---         & ---         & ---         & \textbf{---        } \\
-$-0.94$ & MAD  & $5/3$ & ... &  10 & ---         & ---         & ---         & All         & \textbf{---        } \\
-$-0.94$ & MAD  & $5/3$ & ... &  40 & ---         & ---         & 10,30       & All         & \textbf{---        } \\
-$-0.94$ & MAD  & $5/3$ & ... & 160 & ---         & ---         & All         & All         & \textbf{---        } \\
-$-0.94$ & SANE & $5/3$ & ... &   1 & 70,90       & ---         & All         & All         & \textbf{---        } \\
-$-0.94$ & SANE & $5/3$ & ... &  10 & ---         & ---         & All         & ---         & \textbf{---        } \\
-$-0.94$ & SANE & $5/3$ & ... &  40 & ---         & ---         & ---         & 10,30,50,70 & \textbf{---        } \\
-$-0.94$ & SANE & $5/3$ & ... & 160 & ---         & ---         & All         & All         & \textbf{---        } \\
+$-0.94$ & MAD  & $5/3$ & ... &   1 & ---         & 70,90       & ---         &             & ---         & ---         & \textbf{---        } \\
+$-0.94$ & MAD  & $5/3$ & ... &  10 & ---         & 70,90       & 10,30       &             & ---         & All         & \textbf{---        } \\
+$-0.94$ & MAD  & $5/3$ & ... &  40 & ---         & 30,50,70,90 & 10,30       &             & 10,30       & All         & \textbf{---        } \\
+$-0.94$ & MAD  & $5/3$ & ... & 160 & ---         & All         & 10,30       &             & All         & All         & \textbf{---        } \\
+$-0.94$ & SANE & $5/3$ & ... &   1 & 70,90       & 70,90       & ---         &             & All         & All         & \textbf{---        } \\
+$-0.94$ & SANE & $5/3$ & ... &  10 & ---         & 70,90       & ---         &             & All         & ---         & \textbf{---        } \\
+$-0.94$ & SANE & $5/3$ & ... &  40 & ---         & All         & 30          &             & ---         & 10,30,50,70 & \textbf{---        } \\
+$-0.94$ & SANE & $5/3$ & ... & 160 & ---         & All         & 10,30       &             & All         & All         & \textbf{---        } \\
 \hline
-$-0.5 $ & MAD  & $5/3$ & ... &   1 & ---         & ---         & ---         & All         & \textbf{---        } \\
-$-0.5 $ & MAD  & $5/3$ & ... &  10 & ---         & ---         & 10,30,50,70 & All         & \textbf{---        } \\
-$-0.5 $ & MAD  & $5/3$ & ... &  40 & 90          & ---         & All         & All         & \textbf{---        } \\
-$-0.5 $ & MAD  & $5/3$ & ... & 160 & All         & ---         & All         & All         & \textbf{---        } \\
-$-0.5 $ & SANE & $5/3$ & ... &   1 & 70,90       & ---         & All         & All         & \textbf{---        } \\
-$-0.5 $ & SANE & $5/3$ & ... &  10 & ---         & ---         & All         & 10,30,50    & \textbf{---        } \\
-$-0.5 $ & SANE & $5/3$ & ... &  40 & ---         & 10,30,50,70 & All         & ---         & \textbf{---        } \\
-$-0.5 $ & SANE & $5/3$ & ... & 160 & ---         & 10,30,50,70 & All         & All         & \textbf{---        } \\
+$-0.5 $ & MAD  & $5/3$ & ... &   1 & ---         & 50,70,90    & ---         &             & ---         & All         & \textbf{---        } \\
+$-0.5 $ & MAD  & $5/3$ & ... &  10 & ---         & 50,70,90    & 10,30,50    &             & 10,30,50,70 & All         & \textbf{---        } \\
+$-0.5 $ & MAD  & $5/3$ & ... &  40 & 90          & 50,70,90    & 10,30,50    &             & All         & All         & \textbf{---        } \\
+$-0.5 $ & MAD  & $5/3$ & ... & 160 & All         & All         & 10,30       &             & All         & All         & \textbf{10,30      } \\
+$-0.5 $ & SANE & $5/3$ & ... &   1 & 70,90       & 70,90       & ---         &             & All         & All         & \textbf{---        } \\
+$-0.5 $ & SANE & $5/3$ & ... &  10 & ---         & 50,70,90    & 70          &             & All         & 10,30,50    & \textbf{---        } \\
+$-0.5 $ & SANE & $5/3$ & ... &  40 & ---         & All         & ---         &             & All         & ---         & \textbf{---        } \\
+$-0.5 $ & SANE & $5/3$ & ... & 160 & ---         & All         & ---         &             & All         & All         & \textbf{---        } \\
 \hline
-$ 0.0 $ & MAD  & $5/3$ & ... &   1 & 70,90       & 10,30,50,70 & ---         & 10,30,50,70 & \textbf{---        } \\
-$ 0.0 $ & MAD  & $5/3$ & ... &  10 & All         & 10,30,50    & 10,30,50,70 & All         & \textbf{10,30,50   } \\
-$ 0.0 $ & MAD  & $5/3$ & ... &  40 & All         & 10,30,50    & All         & All         & \textbf{10,30,50   } \\
-$ 0.0 $ & MAD  & $5/3$ & ... & 160 & All         & 10,30,50    & All         & All         & \textbf{10,30,50   } \\
-$ 0.0 $ & SANE & $5/3$ & ... &   1 & 50,70       & ---         & All         & All         & \textbf{---        } \\
-$ 0.0 $ & SANE & $5/3$ & ... &  10 & ---         & 50,70,90    & All         & 10,30,50    & \textbf{---        } \\
-$ 0.0 $ & SANE & $5/3$ & ... &  40 & ---         & All         & All         & ---         & \textbf{---        } \\
-$ 0.0 $ & SANE & $5/3$ & ... & 160 & ---         & All         & All         & All         & \textbf{---        } \\
+$ 0.0 $ & MAD  & $5/3$ & ... &   1 & 70,90       & 30,50,70,90 & ---         &             & ---         & 10,30,50,70 & \textbf{---        } \\
+$ 0.0 $ & MAD  & $5/3$ & ... &  10 & All         & All         & 10,30       &             & 10,30,50,70 & All         & \textbf{10,30      } \\
+$ 0.0 $ & MAD  & $5/3$ & ... &  40 & All         & 30,50,70,90 & 30          &             & All         & All         & \textbf{30         } \\
+$ 0.0 $ & MAD  & $5/3$ & ... & 160 & All         & 30,50,70,90 & ---         &             & All         & All         & \textbf{---        } \\
+$ 0.0 $ & SANE & $5/3$ & ... &   1 & 50,70       & 50,70,90    & ---         &             & All         & All         & \textbf{---        } \\
+$ 0.0 $ & SANE & $5/3$ & ... &  10 & ---         & 30,50,70,90 & 70          &             & All         & 10,30,50    & \textbf{---        } \\
+$ 0.0 $ & SANE & $5/3$ & ... &  40 & ---         & 30,50,70,90 & ---         &             & All         & ---         & \textbf{---        } \\
+$ 0.0 $ & SANE & $5/3$ & ... & 160 & ---         & 10,30,50,70 & ---         &             & All         & All         & \textbf{---        } \\
 \hline
-$ 0.5 $ & MAD  & $5/3$ & ... &   1 & 50,70,90    & ---         & ---         & 10,30       & \textbf{---        } \\
-$ 0.5 $ & MAD  & $5/3$ & ... &  10 & 30,50,70    & ---         & 10,30       & All         & \textbf{---        } \\
-$ 0.5 $ & MAD  & $5/3$ & ... &  40 & 30,50,70    & ---         & 10,30,50,70 & All         & \textbf{---        } \\
-$ 0.5 $ & MAD  & $5/3$ & ... & 160 & 30,50       & ---         & All         & All         & \textbf{---        } \\
-$ 0.5 $ & SANE & $5/3$ & ... &   1 & 50,70       & ---         & All         & All         & \textbf{---        } \\
-$ 0.5 $ & SANE & $5/3$ & ... &  10 & ---         & ---         & All         & All         & \textbf{---        } \\
-$ 0.5 $ & SANE & $5/3$ & ... &  40 & ---         & ---         & All         & All         & \textbf{---        } \\
-$ 0.5 $ & SANE & $5/3$ & ... & 160 & ---         & ---         & All         & All         & \textbf{---        } \\
+$ 0.5 $ & MAD  & $5/3$ & ... &   1 & 50,70,90    & All         & ---         &             & ---         & 10,30       & \textbf{---        } \\
+$ 0.5 $ & MAD  & $5/3$ & ... &  10 & 30,50,70    & All         & 10,30       &             & 10,30       & All         & \textbf{30         } \\
+$ 0.5 $ & MAD  & $5/3$ & ... &  40 & 30,50,70    & All         & 10,30       &             & 10,30,50,70 & All         & \textbf{30         } \\
+$ 0.5 $ & MAD  & $5/3$ & ... & 160 & 30,50       & All         & 10,30       &             & All         & All         & \textbf{30         } \\
+$ 0.5 $ & SANE & $5/3$ & ... &   1 & 50,70       & 50,70,90    & ---         &             & All         & All         & \textbf{---        } \\
+$ 0.5 $ & SANE & $5/3$ & ... &  10 & ---         & 10,30,50    & ---         &             & All         & All         & \textbf{---        } \\
+$ 0.5 $ & SANE & $5/3$ & ... &  40 & ---         & All         & 10,30       &             & All         & All         & \textbf{---        } \\
+$ 0.5 $ & SANE & $5/3$ & ... & 160 & ---         & All         & 10,30       &             & All         & All         & \textbf{---        } \\
 \hline
-$ 0.94$ & MAD  & $5/3$ & ... &   1 & 70,90       & ---         & ---         & ---         & \textbf{---        } \\
-$ 0.94$ & MAD  & $5/3$ & ... &  10 & 50,70,90    & ---         & ---         & 10,30,50,70 & \textbf{---        } \\
-$ 0.94$ & MAD  & $5/3$ & ... &  40 & 30,50,70,90 & ---         & 10,30       & All         & \textbf{---        } \\
-$ 0.94$ & MAD  & $5/3$ & ... & 160 & 30,50,70,90 & ---         & All         & All         & \textbf{---        } \\
-$ 0.94$ & SANE & $5/3$ & ... &   1 & 10,30,50,70 & ---         & All         & All         & \textbf{---        } \\
-$ 0.94$ & SANE & $5/3$ & ... &  10 & ---         & ---         & All         & All         & \textbf{---        } \\
-$ 0.94$ & SANE & $5/3$ & ... &  40 & ---         & ---         & All         & All         & \textbf{---        } \\
-$ 0.94$ & SANE & $5/3$ & ... & 160 & ---         & ---         & All         & All         & \textbf{---        } \\
+$ 0.94$ & MAD  & $5/3$ & ... &   1 & 70,90       & 30,50,70,90 & ---         &             & ---         & ---         & \textbf{---        } \\
+$ 0.94$ & MAD  & $5/3$ & ... &  10 & 50,70,90    & All         & 10,30       &             & ---         & 10,30,50,70 & \textbf{---        } \\
+$ 0.94$ & MAD  & $5/3$ & ... &  40 & 30,50,70,90 & All         & 10,30       &             & 10,30       & All         & \textbf{30         } \\
+$ 0.94$ & MAD  & $5/3$ & ... & 160 & 30,50,70,90 & All         & 10,30       &             & All         & All         & \textbf{30         } \\
+$ 0.94$ & SANE & $5/3$ & ... &   1 & 10,30,50,70 & 30,50       & ---         &             & All         & All         & \textbf{---        } \\
+$ 0.94$ & SANE & $5/3$ & ... &  10 & ---         & 10          & 10          &             & All         & All         & \textbf{---        } \\
+$ 0.94$ & SANE & $5/3$ & ... &  40 & ---         & All         & 10,30       &             & All         & All         & \textbf{---        } \\
+$ 0.94$ & SANE & $5/3$ & ... & 160 & ---         & All         & 10          &             & All         & All         & \textbf{---        } \\
 \enddata
 \caption{Fixed parameters: black hole mass $M_\mathrm{bh} = 4.14\times10^6 M_\odot$. }
 \label{tab:parameters}
+\end{deluxetable*}
+
+%Power-law models
+%MODEL 1: constant powerlaw index
+\begin{deluxetable*}{cccccccccc}
+\tabletypesize{\footnotesize}
+\tablehead{
+  \colhead{Spacetime} &
+  \multicolumn{3}{c}{Fluid} &
+  \colhead{Plasma} &
+  \multicolumn{5}{c}{Inclinations that pass constraints among 10$\degree$, 50$\degree$, 90$\degree$} \\
+  \colhead{$a_\mathrm{spin}$} & \colhead{Flux} & \colhead{$\Gamma$} & \colhead{Time} & % 3 fluid input
+  \colhead{$R_\mathrm{high}$} & % 1 plasma input
+  \colhead{86\,GHz flux}  & \colhead{$\sigma(230\,\mathrm{GHz})$}  & \colhead{NIR flux}  & \colhead{X-ray} & \colhead{All} % 4 constraints + 1 combined
+}
+\startdata
+$-0.94$ & MAD  & $13/9$ & ... &   1 & ---         & ---         & ---         & NA         & \textbf{---        } \\
+$-0.94$ & MAD  & $13/9$ & ... &  40 & ---         & ---         & 10          & NA         & \textbf{---        } \\
+$-0.94$ & MAD  & $13/9$ & ... & 160 & ---         & ---         & 50          & NA         & \textbf{---        } \\
+$-0.94$ & SANE & $5/3$  & ... &   1 & ---         & ---         & 50          & NA         & \textbf{---        } \\
+$-0.94$ & SANE & $5/3$  & ... &  40 & 90          & ---         & 10,50,90    & NA         & \textbf{---        } \\
+$-0.94$ & SANE & $5/3$  & ... & 160 & 50          & ---         & 50          & NA         & \textbf{---        } \\
+\hline
+$ 0.0 $ & MAD  & $13/9$ & ... &   1 & ---         & ---         & ---         & NA         & \textbf{---        } \\
+$ 0.0 $ & MAD  & $13/9$ & ... &  40 & ---         & ---         & 10,50,90    & NA         & \textbf{---        } \\
+$ 0.0 $ & MAD  & $13/9$ & ... & 160 & ---         & ---         & 50          & NA         & \textbf{---        } \\
+$ 0.0 $ & SANE & $5/3$  & ... &   1 & ---         & ---         & 50          & NA         & \textbf{---        } \\
+$ 0.0 $ & SANE & $5/3$  & ... &  40 & 90          & 10,50,90    & 10,50,90    & NA         & \textbf{90         } \\
+$ 0.0 $ & SANE & $5/3$  & ... & 160 & 50          & 50          & 50          & NA         & \textbf{50         } \\
+\hline
+$ 0.94$ & MAD  & $13/9$ & ... &   1 & ---         & ---         & ---         & NA         & \textbf{---        } \\
+$ 0.94$ & MAD  & $13/9$ & ... &  40 & 50,90       & ---         & 10          & NA         & \textbf{---        } \\
+$ 0.94$ & MAD  & $13/9$ & ... & 160 & 50          & ---         & 50          & NA         & \textbf{---        } \\
+$ 0.94$ & SANE & $5/3$  & ... &   1 & ---         & 50          & 50          & NA         & \textbf{---        } \\
+$ 0.94$ & SANE & $5/3$  & ... &  40 & ---         & 10,50,90    & 10          & NA         & \textbf{---        } \\
+$ 0.94$ & SANE & $5/3$  & ... & 160 & 50          & ---         & ---         & NA         & \textbf{---        } \\
+\enddata
+\caption{Non-thermal Power-law model 1: Fixed parameters: black hole mass $M_\mathrm{bh} = 4.14\times10^6 M_\odot$. Note: $\sigma(230\,\mathrm{GHz})$ has been calculated over 5.6 hr.}
+\label{tab:parameters}
+\end{deluxetable*}
+
+%MODEL 2: variable powerlaw index
+\begin{deluxetable*}{cccccccccc}
+\tabletypesize{\footnotesize}
+\tablehead{
+  \colhead{Spacetime} &
+  \multicolumn{3}{c}{Fluid} &
+  \colhead{Plasma} &
+  \multicolumn{5}{c}{Inclinations that pass constraints among 10$\degree$, 50$\degree$, 90$\degree$} \\
+  \colhead{$a_\mathrm{spin}$} & \colhead{Flux} & \colhead{$\Gamma$} & \colhead{Time} & % 3 fluid input
+  \colhead{$R_\mathrm{high}$} & % 1 plasma input
+  \colhead{86\,GHz flux}  & \colhead{$\sigma(230\,\mathrm{GHz})$}  & \colhead{NIR flux}  & \colhead{X-ray} & \colhead{All} % 4 constraints + 1 combined
+}
+\startdata
+$-0.94$ & MAD  & $13/9$ & ... &   1 & ---         & ---         & ---         & NA         & \textbf{---        } \\
+$-0.94$ & MAD  & $13/9$ & ... &  40 & 10          & ---         & 10,50       & NA         & \textbf{---        } \\
+$-0.94$ & MAD  & $13/9$ & ... & 160 & 50          & ---         & 50          & NA         & \textbf{---        } \\
+$-0.94$ & SANE & $5/3$  & ... &   1 & ---         & ---         & 50          & NA         & \textbf{---        } \\
+$-0.94$ & SANE & $5/3$  & ... &  40 & ---         & ---         & 10,50,90    & NA         & \textbf{---        } \\
+$-0.94$ & SANE & $5/3$  & ... & 160 & ---         & ---         & 50          & NA         & \textbf{---        } \\
+\hline
+$ 0.0 $ & MAD  & $13/9$ & ... &   1 & ---         & ---         & ---         & NA         & \textbf{---        } \\
+$ 0.0 $ & MAD  & $13/9$ & ... &  40 & ---         & ---         & 10,50,90    & NA         & \textbf{---        } \\
+$ 0.0 $ & MAD  & $13/9$ & ... & 160 & ---         & ---         & 50          & NA         & \textbf{---        } \\
+$ 0.0 $ & SANE & $5/3$  & ... &   1 & ---         & ---         & 50          & NA         & \textbf{---        } \\
+$ 0.0 $ & SANE & $5/3$  & ... &  40 & ---         & ---         & 10,50,90    & NA         & \textbf{---        } \\
+$ 0.0 $ & SANE & $5/3$  & ... & 160 & ---         & ---         & 50          & NA         & \textbf{---        } \\
+\hline
+$ 0.94$ & MAD  & $13/9$ & ... &   1 & ---         & ---         & 50          & NA         & \textbf{---        } \\
+$ 0.94$ & MAD  & $13/9$ & ... &  40 & 10,50,90    & ---         & 10          & NA         & \textbf{---        } \\
+$ 0.94$ & MAD  & $13/9$ & ... & 160 & 50          & ---         & 50          & NA         & \textbf{---        } \\
+$ 0.94$ & SANE & $5/3$  & ... &   1 & ---         & ---         & ---         & NA         & \textbf{---        } \\
+$ 0.94$ & SANE & $5/3$  & ... &  40 & ---         & 10          & 10          & NA         & \textbf{---        } \\
+$ 0.94$ & SANE & $5/3$  & ... & 160 & ---         & ---         & ---         & NA         & \textbf{---        } \\
+\enddata
+\caption{Non-thermal Power-law model 2: Fixed parameters: black hole mass $M_\mathrm{bh} = 4.14\times10^6 M_\odot$. Note: $\sigma(230\,\mathrm{GHz})$ has been calculated over 5.6 hr.}
+\label{tab:parameters}
+\end{deluxetable*}
+
+
+%MODEL 3: Kappa as function of beta and sigma
+\begin{deluxetable*}{cccccccccc}
+\tabletypesize{\footnotesize}
+\tablehead{
+  \colhead{Spacetime} &
+  \multicolumn{3}{c}{Fluid} &
+  \colhead{Plasma} &
+  \multicolumn{5}{c}{Inclinations that pass constraints among 10$\degree$, 50$\degree$, 90$\degree$} \\
+  \colhead{$a_\mathrm{spin}$} & \colhead{Flux} & \colhead{$\Gamma$} & \colhead{Time} & % 3 fluid input
+  \colhead{$R_\mathrm{high}$} & % 1 plasma input
+  \colhead{86\,GHz flux and size}  & \colhead{$\sigma(230\,\mathrm{GHz})$}  & \colhead{NIR flux}  & \colhead{X-ray} & \colhead{All} % 4 constraints + 1 combined
+}
+\startdata
+$-0.94$ & MAD  & $4/3$ & ... &   1 & All         & ---         & ---         & 10        & \textbf{---        } \\
+$-0.94$ & MAD  & $4/3$ & ... &  40 & All         & ---         & ---         & All       & \textbf{---        } \\
+$-0.94$ & MAD  & $4/3$ & ... &  80 & All         & ---         & ---         & All       & \textbf{---        } \\
+$-0.94$ & MAD  & $4/3$ & ... & 160 & All         & ---         & All         & All       & \textbf{---        } \\
+$-0.94$ & SANE & $4/3$ & ... &   1 & ---         & ---         & All         & All       & \textbf{---        } \\
+$-0.94$ & SANE & $4/3$ & ... &  40 & 10,50       & ---         & ---         & All       & \textbf{---        } \\
+$-0.94$ & SANE & $4/3$ & ... &  80 & 10          & ---         & ---         & All       & \textbf{---        } \\
+$-0.94$ & SANE & $4/3$ & ... & 160 & 10          & ---         & ---         & ---       & \textbf{---        } \\
+\hlin
+$ 0.0 $ & MAD  & $4/3$ & ... &   1 & All         & ---         & ---         & All       & \textbf{---        } \\
+$ 0.0 $ & MAD  & $4/3$ & ... &  40 & All         & ---         & 10,50       & All       & \textbf{---        } \\
+$ 0.0 $ & MAD  & $4/3$ & ... &  80 & All         & ---         & All         & All       & \textbf{---        } \\
+$ 0.0 $ & MAD  & $4/3$ & ... & 160 & All         & ---         & All         & All       & \textbf{---        } \\
+$ 0.0 $ & SANE & $4/3$ & ... &   1 & 10          & ---         & All         & All       & \textbf{---        } \\
+$ 0.0 $ & SANE & $4/3$ & ... &  40 & 10,50       & ---         & ---         & All       & \textbf{---        } \\
+$ 0.0 $ & SANE & $4/3$ & ... &  80 & 10          & ---         & ---         & All       & \textbf{---        } \\
+$ 0.0 $ & SANE & $4/3$ & ... & 160 & 10          & ---         & ---         & ---       & \textbf{---        } \\
+\hline
+$ 0.94$ & MAD  & $4/3$ & ... &   1 & All         & ---         & ---         & 10,50      & \textbf{---        } \\
+$ 0.94$ & MAD  & $4/3$ & ... &  40 & All         & ---         & ---         & All        & \textbf{---        } \\
+$ 0.94$ & MAD  & $4/3$ & ... &  80 & All         & ---         & 10          & All        & \textbf{---        } \\
+$ 0.94$ & MAD  & $4/3$ & ... & 160 & All         & ---         & 10,50       & All        & \textbf{---        } \\
+$ 0.94$ & SANE & $4/3$ & ... &   1 & 10          & ---         & All         & All        & \textbf{---        } \\
+$ 0.94$ & SANE & $4/3$ & ... &  40 & 10,50       & ---         & ---         & All        & \textbf{---        } \\
+$ 0.94$ & SANE & $4/3$ & ... &  80 & 10          & ---         & ---         & All        & \textbf{---        } \\
+$ 0.94$ & SANE & $4/3$ & ... & 160 & 10          & ---         & ---         & ---        & \textbf{---        } \\
+\enddata
+\caption{Non-thermal Kappa $\kappa=\kappa(\sigma, \beta)$ model 3. All=10,50,90. \textcolor{blue}{Note that the X-ray only consider bremsstrahlung emission.} }
+\label{tab:nonthermal3}
 \end{deluxetable*}
 
 %==============================================================================
