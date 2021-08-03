@@ -721,7 +721,7 @@ the disk \citep{2014A&A...570A...7M}, using the plasma $\beta$
 
 ...
 
-\begin{figure*}    
+\begin{figure*}
   \plottwo{Constraints_MAD_nonthermal3.pdf}{Constraints_SANE_nonthermal3.pdf}
   \caption{Left: MAD models, Right: SANE models.  Models marked with a red dot are not satisfying the constraints, while green dots indicate models that are satisfying.  The inclination is indicated by the position of the dot. Each panel is concatenating  the NIR, x-ray (only bremsstrahlung) and 86 GHz(size and flux) constraints. See also Table \ref{tab:nonthermal3}. }
   \label{fig:nonthermal3}
@@ -766,7 +766,7 @@ with the \sgra\ data involves an analysis in the Fourier domain. To this
 end, we first calculate the complex visibilities by performing a
 two-dimensional Fourier transform on each snapshot of each simulation
 \begin{equation}
-V(u,v) = \iint I(\alpha,\beta) e^{-2\pi i(u\alpha+v\beta)}d\alphad\beta,
+V(u,v) = \iint I(\alpha,\beta) e^{-2\pi i(u\alpha+v\beta)}d\alpha d\beta,
 \end{equation}
 where we defined $\alpha \equiv X/D$ and $\beta \equiv Y/D$, with D
 being the distance to \sgra. Figure~\ref{fig:VA} shows two example
@@ -784,7 +784,7 @@ addition, images that have a higher degree of azimuthal asymmetry show
 pronounced differences in their vertical and horizontal cross
 sections.
 
-\begin{figure*} 
+\begin{figure*}
  \centerline{
     \includegraphics[width=8.5cm] {783_image}
      \includegraphics[width=8.5cm] {783_va}}
@@ -847,16 +847,16 @@ $6-8$\;G$\lambda$ range (REF).  Refractive scattering, on the other
 hand, introduces a noise at these baselines of the order of $0.5-3\%$,
 depending on the particular characteristics of the scattering screen
 toward \sgra\ (REF). To account for both of these effects, we choose a
-$6\%$ upper limit to visibility amplitudes from a model snapshot 
+$6\%$ upper limit to visibility amplitudes from a model snapshot
 when defining compliance, as we show in Figure~\ref{fig:data_comp}.
 
 We assign a compliance fraction to a simulation based on the fraction
 of snapshots that pass both criteria we described above. We will
-discuss the results of this comparison in the next section, along with 
-the other model scoring criteria. [I will add to the discussion of the 
+discuss the results of this comparison in the next section, along with
+the other model scoring criteria. [I will add to the discussion of the
 scoring table when that part is written.]
 
-\begin{figure} 
+\begin{figure}
  \centerline{
     \includegraphics[width=7.5cm] {data_3599}}
 \caption{\footnotesize Visibility amplitude as a function of baseline length observed on 2017 April 7. The pink band marks the location of the first minima in the visibility amplitude along different orientations. The horizontal red line marks our conservative upper limit for the observed visibility amplitude between $6-8$G$\lambda$.}
