@@ -8,6 +8,7 @@
 \newcommand\note[1]{{\color{OliveGreen}[note: #1]}}
 \newcommand\ckc[1]{{\color{MidnightBlue}[ckc: #1]}}
 \newcommand\hyp[1]{{\color{Salmon}[HYP: #1]}}
+\newcommand\monika[1]{{\color{Orange}[MM: #1]}}
 
 %==============================================================================
 \begin{document}
@@ -154,7 +155,7 @@ The above developments have led to a large number of studies of
   2020arXiv200514251B, 2020MNRAS.497.4999D, 2020arXiv200603658P,
   2020ApJ...896L...6R}.
 \ckc{Ideally we should cite the above papers in subsequent sections
-  and describe why they are relevent to this paper.}
+  and describe why they are relevent to this paper.}\monika{Some of these cited papers are observational papers rather then source models.}
 On one hand, due to the richness in accretion and plasma physics, many
 of these can only probe a small parameter subspace.
 On the other hand, however, even the most sophisticate models to date
@@ -555,9 +556,15 @@ SED            & SED inclination bin size       & $\Delta\theta$       & ...    
 ...
 
 %------------------------------------------------------------------------------
+%MOVED from Sect. 3.1 to Sect 3.0 in accordance with Monika discussion 7/23/21
+
+\textcolor{red}{RJA: Include a summary of analytic/semi-analytic models and Sgr A* simulations in the Literature. Explain why ADAF is unlike disks seen by NASA.} Analytic disk $\alpha$-model for angular momentum transport \cite{Shakura1973}. Semi-analytic model motivated in \cite{Yuan2003} and expanded in \cite{Broderick2011}. GRMHD Simulation with hotspots reproducing Sgr A* flares \cite{Ripperda2020}.
+
 \subsection{Analytical Accretion Models
   [Pu, Anantua, Jeter]}
 \label{sec:anamodels}
+
+
 
 \ckc{Should we actually fit ADAF?
   Should we ray trace ADAF?}
@@ -589,7 +596,8 @@ The addition of small non-thermal populations of positrons \citep{Anantua:2019bn
 %\end{figure*}
 \end{figure}
 
-\textcolor{red}{RJA: Include a summary of analytic/semi-analytic models and Sgr A* simulations in the Literature} Analytic disk $\alpha$-model for angular momentum transport \cite{Shakura1973}. Semi-analytic model motivated in \cite{Yuan2003} and expanded in \cite{Broderick2011}. GRMHD Simulation with hotspots reproducing Sgr A* flares \cite{Ripperda2020}.
+%MOVED from Sect. 3.1 to Sect. 3.0
+% \textcolor{red}{RJA: Include a summary of analytic/semi-analytic models and Sgr A* simulations in the Literature} Analytic disk $\alpha$-model for angular momentum transport \cite{Shakura1973}. Semi-analytic model motivated in \cite{Yuan2003} and expanded in \cite{Broderick2011}. GRMHD Simulation with hotspots reproducing Sgr A* flares \cite{Ripperda2020}.
 
 \note{to be discussed: how much we would like to discuss polarization emission?}\textcolor{red}{RJA: We should mention the M87 Polarization Collaboration papers \cite{EHTCPaperVII}, including a comparison of whether Sgr A* is similar enough (e.g., MAD with vertical fields Faraday depolarized on much of the accretion flow) to have an azimuthally spiral EVPA pattern. Figures in  \citep{Emami2021} have similar morphology}.
 
@@ -713,7 +721,7 @@ the disk \citep{2014A&A...570A...7M}, using the plasma $\beta$
 
 ...
 
-\begin{figure*}
+\begin{figure*}    
   \plottwo{Constraints_MAD_nonthermal3.pdf}{Constraints_SANE_nonthermal3.pdf}
   \caption{Left: MAD models, Right: SANE models.  Models marked with a red dot are not satisfying the constraints, while green dots indicate models that are satisfying.  The inclination is indicated by the position of the dot. Each panel is concatenating  the NIR, x-ray (only bremsstrahlung) and 86 GHz(size and flux) constraints. See also Table \ref{tab:nonthermal3}. }
   \label{fig:nonthermal3}
@@ -749,6 +757,111 @@ the disk \citep{2014A&A...570A...7M}, using the plasma $\beta$
 \section{Comparisons
   [Fromm, Cruz-Osorio, Chatterjee]}
 \label{sec:comparisons}
+
+\subsection{Visibility Domain Characterization and Scoring}
+
+One way we characterize the GRMHD simulations carried out for different
+black hole and flow parameters and assess their compatibility
+with the \sgra\ data involves an analysis in the Fourier domain. To this
+end, we first calculate the complex visibilities by performing a
+two-dimensional Fourier transform on each snapshot of each simulation
+\begin{equation}
+V(u,v) = \iint I(\alpha,\beta) e^{-2\pi i(u\alpha+v\beta)}d\alphad\beta,
+\end{equation}
+where we defined $\alpha \equiv X/D$ and $\beta \equiv Y/D$, with D
+being the distance to \sgra. Figure~\ref{fig:VA} shows two example
+snapshots and the corresponding visibility amplitudes (VA) as a
+function of baseline length for a vertical and horizontal image cross
+sections from a simulation. Even though the locations and depths of
+the minima in the visibility amplitudes are primarily set by the image
+size, which is set by the black hole mass, this figure shows that they
+can exhibit significant variability from snapshot to snapshot because
+of the multitude of structures that originate in the turbulent flow
+(Medeiros et al. 2018). In particular, the minima tend to move to
+larger baselines as the ring thickness temporarily changes in response
+to, e.g., the appearance of a flux tube or a similar structure. In
+addition, images that have a higher degree of azimuthal asymmetry show
+pronounced differences in their vertical and horizontal cross
+sections.
+
+\begin{figure*} 
+ \centerline{
+    \includegraphics[width=8.5cm] {783_image}
+     \includegraphics[width=8.5cm] {783_va}}
+ \centerline{
+    \includegraphics[width=8.5cm] {852_image}
+    \includegraphics[width=8.5cm] {852_va}}
+\caption{\footnotesize The left panels show two snapshots from a
+    GRMHD simulation with SANE field configuration and black hole spin $a=0.5$
+    and the right panels the corresponding
+    visibility amplitudes for a horizontal and a vertical cross
+    section through the images. The snapshot in the top row obeys both
+    selection criteria: the minima are in the 2.5-3.5 G$\lambda$ range
+    and the amplitude in the $6-8$G$\lambda$ is below 6\%. The image in
+    the bottom row, on the other hand, is an example that has no minimum
+    in one cross section and too much power at long baselines, due to
+    the asymmetry introduced by a transient bright structure in the flow. }
+    \label{fig:VA}
+    \end{figure*}
+
+The degree of VA variability is different from model to model and also
+depends on some of the global characteristics of the flow. For
+example, the overall electron density in the disk plays a role by its
+effect on the ring thickness: thicker rings show more change in the
+visibility minima between snapshots than thinner ones (see also
+Satapathy et al. 2021 for the effect on closure phases). Because of
+this, while no model is expected to resemble the observed visibility
+amplitude data 100\% of the time, it is nevertheless possible as well
+as discriminating to require an agreement between the locations of the
+minima in each simulation snapshot and the visibility amplitude data
+from \sgra\ a reasonable fraction of the time.
+
+
+To carry out the comparison with the data, we focus on the VA observed
+on 2017 April 7, \#3599 because that night has the best u-v coverage
+near the minima. The first visibility minima in both the N-S and E-W
+directions occur between $2.5-3.5$\;G$\lambda$, as we show in
+Figure~\ref{fig:data_comp}. We define compliance for a snapshot by
+requiring that the VA obtained for {\it either} the horizontal {\it
+or} the vertical cross section of a snapshot have a minimum in this
+range of baseline lengths.
+
+A second feature of the visibility amplitudes that can help discern
+between models is the behavior of the VA at long baselines. April 7
+data also show that the amplitudes have declined to $<6\%$ of the zero
+baseline flux at baselines between $6-8$\;G$\lambda$ along all
+orientations. This is characteristic of ring-like images with a
+relatively high degree of azimuthal symmetry. Images that are more
+asymmetric, on the other hand, lead to significantly higher amplitudes
+at baselines much larger than the first minimum, or no minima at all,
+as the lower panels in Figure~\ref{fig:VA} illustrate. As a result,
+selecting models based on how frequently they produce snapshots with
+such large-baseline power helps identify models that are in accordance
+with the data.
+
+One consideration when comparing models to data at long baselines
+is the effect of interstellar scattering. Diffractive scattering has
+the effect of convolving the image with a smooth kernel and can
+reduce the amplitudes to $\sim 70\%$ of their intrinsic value in the
+$6-8$\;G$\lambda$ range (REF).  Refractive scattering, on the other
+hand, introduces a noise at these baselines of the order of $0.5-3\%$,
+depending on the particular characteristics of the scattering screen
+toward \sgra\ (REF). To account for both of these effects, we choose a
+$6\%$ upper limit to visibility amplitudes from a model snapshot 
+when defining compliance, as we show in Figure~\ref{fig:data_comp}.
+
+We assign a compliance fraction to a simulation based on the fraction
+of snapshots that pass both criteria we described above. We will
+discuss the results of this comparison in the next section, along with 
+the other model scoring criteria. [I will add to the discussion of the 
+scoring table when that part is written.]
+
+\begin{figure} 
+ \centerline{
+    \includegraphics[width=7.5cm] {data_3599}}
+\caption{\footnotesize Visibility amplitude as a function of baseline length observed on 2017 April 7. The pink band marks the location of the first minima in the visibility amplitude along different orientations. The horizontal red line marks our conservative upper limit for the observed visibility amplitude between $6-8$G$\lambda$.}
+\label{fig:data_comp}
+\end{figure}
 
 %------------------------------------------------------------------------------
 \subsection{Application of Constraints/Image Comparison Metrics/Model Scoring}
@@ -880,53 +993,53 @@ Standard EHT acknowledgments.
   \multicolumn{6}{c}{Inclinations ($\degree$) that pass constraints} \\
   \colhead{$a_\mathrm{spin}$} & \colhead{Flux} & \colhead{$\Gamma$} & \colhead{Time} & % 3 fluid input
   \colhead{$R_\mathrm{high}$} & % 1 plasma input
-  \colhead{86\,GHz}  & \colhead{230\,\mathrm{GHz} 2nd moment} & \colhead{Null Location} & \colhead{$\sigma(230\,\mathrm{GHz})$}  & \colhead{NIR}  & \colhead{X-ray} & \colhead{All} % 4 constraints + 1 combined
+  \colhead{86\,GHz}  & \colhead{230\,\mathrm{GHz} 2nd moment} & \colhead{Null Location} & \colhead{v3 $\sigma/\mu$}  & \colhead{NIR}  & \colhead{X-ray} & \colhead{All} % 4 constraints + 1 combined
 }
 \startdata
-$-0.94$ & MAD  & $5/3$ & ... &   1 & ---         & 70,90       & ---         & ---         & ---         & ---         & \textbf{---        } \\
-$-0.94$ & MAD  & $5/3$ & ... &  10 & ---         & 70,90       & 10,30       & ---         & ---         & ---         & \textbf{---        } \\
-$-0.94$ & MAD  & $5/3$ & ... &  40 & ---         & 30,50,70,90 & 10,30       & ---         & 10,30       & 10,30,50,70 & \textbf{---        } \\
-$-0.94$ & MAD  & $5/3$ & ... & 160 & ---         & All         & 10,30       & ---         & All         & All         & \textbf{---        } \\
-$-0.94$ & SANE & $5/3$ & ... &   1 & 70,90       & 70,90       & ---         & ---         & All         & All         & \textbf{---        } \\
-$-0.94$ & SANE & $5/3$ & ... &  10 & ---         & 70,90       & ---         & ---         & All         & ---         & \textbf{---        } \\
-$-0.94$ & SANE & $5/3$ & ... &  40 & ---         & All         & 30          & ---         & ---         & ---         & \textbf{---        } \\
-$-0.94$ & SANE & $5/3$ & ... & 160 & ---         & All         & 10,30       & ---         & All         & All         & \textbf{---        } \\
+$-0.94$ & MAD  & $4/3$ & 25,000--30,000 &   1 & ---         & 70,90       & ---         & ---         & ---         & ---         & \textbf{---        } \\
+$-0.94$ & MAD  & $4/3$ & 25,000--30,000 &  10 & ---         & 70,90       & 10,30       & ---         & ---         & ---         & \textbf{---        } \\
+$-0.94$ & MAD  & $4/3$ & 25,000--30,000 &  40 & ---         & 30,50,70,90 & 10,30       & ---         & 10,30       & 10,30,50,70 & \textbf{---        } \\
+$-0.94$ & MAD  & $4/3$ & 25,000--30,000 & 160 & ---         & All         & 10,30       & ---         & All         & All         & \textbf{---        } \\
+$-0.94$ & SANE & $4/3$ & 25,000--30,000 &   1 & 70,90       & 70,90       & ---         & ???         & All         & All         & \textbf{---        } \\
+$-0.94$ & SANE & $4/3$ & 25,000--30,000 &  10 & ---         & 70,90       & ---         & ???         & All         & ---         & \textbf{---        } \\
+$-0.94$ & SANE & $4/3$ & 25,000--30,000 &  40 & ---         & All         & 30          & ???         & ---         & ---         & \textbf{---        } \\
+$-0.94$ & SANE & $4/3$ & 25,000--30,000 & 160 & ---         & All         & 10,30       & ???         & All         & All         & \textbf{---        } \\
 \hline
-$-0.5 $ & MAD  & $5/3$ & ... &   1 & ---         & 50,70,90    & ---         & ---         & ---         & ---         & \textbf{---        } \\
-$-0.5 $ & MAD  & $5/3$ & ... &  10 & ---         & 50,70,90    & 10,30,50    & ---         & 10,30,50,70 & All         & \textbf{---        } \\
-$-0.5 $ & MAD  & $5/3$ & ... &  40 & 90          & 50,70,90    & 10,30,50    & ---         & All         & All         & \textbf{---        } \\
-$-0.5 $ & MAD  & $5/3$ & ... & 160 & All         & All         & 10,30       & ---         & All         & All         & \textbf{---        } \\
-$-0.5 $ & SANE & $5/3$ & ... &   1 & 70,90       & 70,90       & ---         & ---         & All         & All         & \textbf{---        } \\
-$-0.5 $ & SANE & $5/3$ & ... &  10 & ---         & 50,70,90    & 70          & ---         & All         & ---         & \textbf{---        } \\
-$-0.5 $ & SANE & $5/3$ & ... &  40 & ---         & All         & ---         & 10,30,50,70 & All         & ---         & \textbf{---        } \\
-$-0.5 $ & SANE & $5/3$ & ... & 160 & ---         & All         & ---         & 10,30,50,70 & All         & All         & \textbf{---        } \\
+$-0.5 $ & MAD  & $4/3$ & 25,000--30,000 &   1 & ---         & 50,70,90    & ---         & 10          & ---         & ---         & \textbf{---        } \\
+$-0.5 $ & MAD  & $4/3$ & 25,000--30,000 &  10 & ---         & 50,70,90    & 10,30,50    & 10,30       & 10,30,50,70 & All         & \textbf{---        } \\
+$-0.5 $ & MAD  & $4/3$ & 25,000--30,000 &  40 & 90          & 50,70,90    & 10,30,50    & 10,30,50,90 & All         & All         & \textbf{---        } \\
+$-0.5 $ & MAD  & $4/3$ & 25,000--30,000 & 160 & All         & All         & 10,30       & 10,30,50,90 & All         & All         & \textbf{10,30      } \\
+$-0.5 $ & SANE & $4/3$ & 25,000--30,000 &   1 & 70,90       & 70,90       & ---         & ???         & All         & All         & \textbf{---        } \\
+$-0.5 $ & SANE & $4/3$ & 25,000--30,000 &  10 & ---         & 50,70,90    & 70          & ???         & All         & ---         & \textbf{---        } \\
+$-0.5 $ & SANE & $4/3$ & 25,000--30,000 &  40 & ---         & All         & ---         & ???         & All         & ---         & \textbf{---        } \\
+$-0.5 $ & SANE & $4/3$ & 25,000--30,000 & 160 & ---         & All         & ---         & ???         & All         & All         & \textbf{---        } \\
 \hline
-$ 0.0 $ & MAD  & $5/3$ & ... &   1 & 70,90       & 30,50,70,90 & ---         & 10,30,50,70 & ---         & ---         & \textbf{---        } \\
-$ 0.0 $ & MAD  & $5/3$ & ... &  10 & All         & All         & 10,30       & 10,30,50    & 10,30,50,70 & 10,30,50,70 & \textbf{10,30      } \\
-$ 0.0 $ & MAD  & $5/3$ & ... &  40 & All         & 30,50,70,90 & 30          & 10,30,50    & All         & All         & \textbf{30         } \\
-$ 0.0 $ & MAD  & $5/3$ & ... & 160 & All         & 30,50,70,90 & ---         & 10,30,50    & All         & All         & \textbf{---        } \\
-$ 0.0 $ & SANE & $5/3$ & ... &   1 & 50,70       & 50,70,90    & ---         & ---         & All         & All         & \textbf{---        } \\
-$ 0.0 $ & SANE & $5/3$ & ... &  10 & ---         & 30,50,70,90 & 70          & 50,70,90    & All         & ---         & \textbf{---        } \\
-$ 0.0 $ & SANE & $5/3$ & ... &  40 & ---         & 30,50,70,90 & ---         & All         & All         & ---         & \textbf{---        } \\
-$ 0.0 $ & SANE & $5/3$ & ... & 160 & ---         & 10,30,50,70 & ---         & All         & All         & All         & \textbf{---        } \\
+$ 0.0 $ & MAD  & $4/3$ & 25,000--30,000 &   1 & 70,90       & 30,50,70,90 & ---         & all         & ---         & ---         & \textbf{---        } \\
+$ 0.0 $ & MAD  & $4/3$ & 25,000--30,000 &  10 & All         & All         & 10,30       & all         & 10,30,50,70 & 10,30,50,70 & \textbf{10,30      } \\
+$ 0.0 $ & MAD  & $4/3$ & 25,000--30,000 &  40 & All         & 30,50,70,90 & 30          & 10,30,50,70 & All         & All         & \textbf{30         } \\
+$ 0.0 $ & MAD  & $4/3$ & 25,000--30,000 & 160 & All         & 30,50,70,90 & ---         & all         & All         & All         & \textbf{---        } \\
+$ 0.0 $ & SANE & $4/3$ & 25,000--30,000 &   1 & 50,70       & 50,70,90    & ---         & ???         & All         & All         & \textbf{---        } \\
+$ 0.0 $ & SANE & $4/3$ & 25,000--30,000 &  10 & ---         & 30,50,70,90 & 70          & ???         & All         & ---         & \textbf{---        } \\
+$ 0.0 $ & SANE & $4/3$ & 25,000--30,000 &  40 & ---         & 30,50,70,90 & ---         & ???         & All         & ---         & \textbf{---        } \\
+$ 0.0 $ & SANE & $4/3$ & 25,000--30,000 & 160 & ---         & 10,30,50,70 & ---         & ???         & All         & All         & \textbf{---        } \\
 \hline
-$ 0.5 $ & MAD  & $5/3$ & ... &   1 & 50,70,90    & All         & ---         & ---         & ---         & ---         & \textbf{---        } \\
-$ 0.5 $ & MAD  & $5/3$ & ... &  10 & 30,50,70    & All         & 10,30       & ---         & 10,30       & 10,30,50    & \textbf{---        } \\
-$ 0.5 $ & MAD  & $5/3$ & ... &  40 & 30,50,70    & All         & 10,30       & ---         & 10,30,50,70 & All         & \textbf{---        } \\
-$ 0.5 $ & MAD  & $5/3$ & ... & 160 & 30,50       & All         & 10,30       & ---         & All         & All         & \textbf{---        } \\
-$ 0.5 $ & SANE & $5/3$ & ... &   1 & 50,70       & 50,70,90    & ---         & ---         & All         & All         & \textbf{---        } \\
-$ 0.5 $ & SANE & $5/3$ & ... &  10 & ---         & 10,30,50    & ---         & ---         & All         & All         & \textbf{---        } \\
-$ 0.5 $ & SANE & $5/3$ & ... &  40 & ---         & All         & 10,30       & ---         & All         & 10,30,50,70 & \textbf{---        } \\
-$ 0.5 $ & SANE & $5/3$ & ... & 160 & ---         & All         & 10,30       & ---         & All         & All         & \textbf{---        } \\
+$ 0.5 $ & MAD  & $4/3$ & 25,000--30,000 &   1 & 50,70,90    & All         & ---         & 30,50,70,90 & ---         & ---         & \textbf{---        } \\
+$ 0.5 $ & MAD  & $4/3$ & 25,000--30,000 &  10 & 30,50,70    & All         & 10,30       & 30,50,70,90 & 10,30       & 10,30,50    & \textbf{10,30      } \\
+$ 0.5 $ & MAD  & $4/3$ & 25,000--30,000 &  40 & 30,50,70    & All         & 10,30       & ---         & 10,30,50,70 & All         & \textbf{---        } \\
+$ 0.5 $ & MAD  & $4/3$ & 25,000--30,000 & 160 & 30,50       & All         & 10,30       & all         & All         & All         & \textbf{30         } \\
+$ 0.5 $ & SANE & $4/3$ & 25,000--30,000 &   1 & 50,70       & 50,70,90    & ---         & ???         & All         & All         & \textbf{---        } \\
+$ 0.5 $ & SANE & $4/3$ & 25,000--30,000 &  10 & ---         & 10,30,50    & ---         & ???         & All         & All         & \textbf{---        } \\
+$ 0.5 $ & SANE & $4/3$ & 25,000--30,000 &  40 & ---         & All         & 10,30       & ???         & All         & 10,30,50,70 & \textbf{---        } \\
+$ 0.5 $ & SANE & $4/3$ & 25,000--30,000 & 160 & ---         & All         & 10,30       & ???         & All         & All         & \textbf{---        } \\
 \hline
-$ 0.94$ & MAD  & $5/3$ & ... &   1 & 70,90       & 30,50,70,90 & ---         & ---         & ---         & ---         & \textbf{---        } \\
-$ 0.94$ & MAD  & $5/3$ & ... &  10 & 50,70,90    & All         & 10,30       & ---         & ---         & ---         & \textbf{---        } \\
-$ 0.94$ & MAD  & $5/3$ & ... &  40 & 30,50,70,90 & All         & 10,30       & ---         & 10,30       & 10,30,50    & \textbf{---        } \\
-$ 0.94$ & MAD  & $5/3$ & ... & 160 & 30,50,70,90 & All         & 10,30       & ---         & All         & All         & \textbf{---        } \\
-$ 0.94$ & SANE & $5/3$ & ... &   1 & 10,30,50,70 & 30,50       & ---         & ---         & All         & All         & \textbf{---        } \\
-$ 0.94$ & SANE & $5/3$ & ... &  10 & ---         & 10          & 10          & ---         & All         & All         & \textbf{---        } \\
-$ 0.94$ & SANE & $5/3$ & ... &  40 & ---         & All         & 10,30       & ---         & All         & All         & \textbf{---        } \\
-$ 0.94$ & SANE & $5/3$ & ... & 160 & ---         & All         & 10          & ---         & All         & All         & \textbf{---        } \\
+$ 0.94$ & MAD  & $4/3$ & 25,000--30,000 &   1 & 70,90       & 30,50,70,90 & ---         & ---         & ---         & ---         & \textbf{---        } \\
+$ 0.94$ & MAD  & $4/3$ & 25,000--30,000 &  10 & 50,70,90    & All         & 10,30       & ---         & ---         & ---         & \textbf{---        } \\
+$ 0.94$ & MAD  & $4/3$ & 25,000--30,000 &  40 & 30,50,70,90 & All         & 10,30       & ---         & 10,30       & 10,30,50    & \textbf{---        } \\
+$ 0.94$ & MAD  & $4/3$ & 25,000--30,000 & 160 & 30,50,70,90 & All         & 10,30       & ---         & All         & All         & \textbf{---        } \\
+$ 0.94$ & SANE & $4/3$ & 25,000--30,000 &   1 & 10,30,50,70 & 30,50       & ---         & ???         & All         & All         & \textbf{---        } \\
+$ 0.94$ & SANE & $4/3$ & 25,000--30,000 &  10 & ---         & 10          & 10          & ???         & All         & All         & \textbf{---        } \\
+$ 0.94$ & SANE & $4/3$ & 25,000--30,000 &  40 & ---         & All         & 10,30       & ???         & All         & All         & \textbf{---        } \\
+$ 0.94$ & SANE & $4/3$ & 25,000--30,000 & 160 & ---         & All         & 10          & ???         & All         & All         & \textbf{---        } \\
 \enddata
 \caption{Fixed parameters: black hole mass $M_\mathrm{bh} = 4.14\times10^6 M_\odot$. }
 \label{tab:parameters}
