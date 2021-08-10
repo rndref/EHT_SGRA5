@@ -1,0 +1,127 @@
+\ProvidesPackage{eht}[2020/08/29 EHT Style Package]
+\RequirePackage{graphicx,xspace,newunicodechar,color}
+
+\usepackage{url}
+\usepackage{epstopdf}
+\usepackage{gensymb}
+\usepackage{multirow}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{booktabs}
+%\usepackage{caption}
+\usepackage{comment}
+\usepackage{afterpage}
+\usepackage{mathtools}
+\usepackage{tabularx}
+\usepackage{bold-extra}
+\usepackage{xspace}
+\usepackage{relsize}
+\usepackage[utf8]{inputenc}
+\usepackage{braket}
+\usepackage{natbib}
+
+%==============================================================================
+% Graphic Extension
+\DeclareGraphicsExtensions{.pdf,.png,.jpeg}
+
+% Footnote
+% \usepackage[symbol]{footmisc}
+% Prevent footnotes from splitting across pages
+\interfootnotelinepenalty=10000
+
+% Misc
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcommand{\negphantom}[1]{\settowidth{\dimen0}{#1}\hspace*{-\dimen0}}
+
+%==============================================================================
+% Math mode macros
+%\newcommand\mbh{{M_{\rm BH}}} % should we use M_* or M_\mathrm{bh} ?
+\newcommand\abh{{a_{\rm BH}}} % should we use a_* or a_\mathrm{bh} ?
+\newcommand\Rh{{R_\mathrm{high}}}
+
+\newcommand\gm{{\rm \, g}}
+%\newcommand\msun{{M_\odot}}
+\newcommand\GHz{{\rm \, GHz}}
+\newcommand\yr{{\rm \, yr}}
+\newcommand\cm{{\rm \, cm}}
+\newcommand\pc{{\rm \, pc}}
+\newcommand\kpc{{\rm \, kpc}}
+\newcommand\erg{{\rm \, erg}}
+\newcommand{\ergsps}{{\rm[ ergs\,s^{-1}]}}
+\newcommand\Jy{{\rm \, Jy}}
+
+\newcommand\<{{\langle}}
+\renewcommand\>{{\rangle}} % "\>" is defined in the "tabbing" environment to
+                           % advance to next tab stop
+
+\def\lsim{\mathrel{\raise.3ex\hbox{$<$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\def\gsim{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\def\gtwid{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\def\proptwid{\mathrel{\raise.3ex\hbox{$\propto$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+
+% Alias: Units
+\newcommand{\uas}{\ensuremath{\mathrm{\mu as}}\xspace}
+\newcommand{\mbh}{\ensuremath{M_{\rm BH}}\xspace}
+\newcommand{\msun}{\ensuremath{M_\odot}\xspace}
+
+% Alias: Source Names
+\def\M87{M87$^*$\xspace}
+\def\m87{M87$^*$\xspace}
+\def\sgra{Sgr~A$^*$\xspace}
+\def\3C279{3C\,279\xspace}
+\def\3c279{3C\,279\xspace}
+\def\NRAO530{NRAO\,530\xspace}
+\def\nrao530{NRAO\,530\xspace}
+\def\J1924{J1924-2914\xspace}
+\def\j1924{j1924-2914\xspace}
+
+% Alias: Hawaii
+\DeclareRobustCommand{\okina}{%
+  \raisebox{\dimexpr\fontcharht\font`A-\height}{%
+    \scalebox{0.8}{`}%
+  }%
+}
+\newunicodechar{ʻ}{\okina}
+\def\hawaii{Hawaiʻi\xspace}
+
+% Alias: Software packages
+\def\smili{\texttt{SMILI}\xspace}
+\def\ehtim{\texttt{eht-imaging}\xspace}
+\def\difmap{\texttt{DIFMAP}\xspace}
+\def\dmc{\texttt{DMC}\xspace}
+\def\themis{\textsc{Themis}\xspace}
+\def\foci{\texttt{foci}\xspace}
+\def\vida{\texttt{VIDA}\xspace}
+\def\VIDA{\texttt{VIDA}\xspace}
+\def\rex{\texttt{REx}\xspace}
+\def\inoisy{\texttt{iNoisy}\xspace}
+
+%==============================================================================
+% EHT publication package
+\defcitealias{M87PaperI}{\m87~Paper~I}
+\defcitealias{M87PaperII}{\m87~Paper~II}
+\defcitealias{M87PaperIII}{\m87~Paper~III}
+\defcitealias{M87PaperIV}{\m87~Paper~IV}
+\defcitealias{M87PaperV}{\m87~Paper~V}
+\defcitealias{M87PaperVI}{\m87~Paper~VI}
+\defcitealias{M87PaperVII}{\m87~Paper~VII}
+\defcitealias{M87PaperVIII}{\m87~Paper~VIII}
+\defcitealias{M87PaperIX}{\m87~Paper~IX}
+\defcitealias{PaperI}{Paper~I}
+\defcitealias{PaperII}{Paper~II}
+\defcitealias{PaperIII}{Paper~III}
+\defcitealias{PaperIV}{Paper~IV}
+\defcitealias{PaperV}{Paper~V}
+\defcitealias{PaperVI}{Paper~VI}
+\defcitealias{PaperVII}{Paper~VII}
+\defcitealias{PaperVIII}{Paper~VIII}
+
+% To add Sgr A* papers without citations
+\nocite{PaperI}
+\nocite{PaperII}
+\nocite{PaperIII}
+\nocite{PaperIV}
+\nocite{PaperV}
+\nocite{PaperVI}
