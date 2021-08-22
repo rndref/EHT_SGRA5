@@ -39,25 +39,6 @@
   The original draft is backed up in the \texttt{2018-08-01/}
   directory on Overleaf.
 
-  The scinetific legacy of this paper may include:
-  %
-  \emph{i}) Describe a standard numerical methods that are used in
-  EHT's \sgra papers.
-  E.g., the ``grmhd'' test set for imaging, calibration sets for MCFE
-  and gravity.
-  %
-  \emph{ii}) Provide the first estimate on theoretical uncertainties.
-  I.e., the ``systematic error'' in theoretical modelings.
-  %
-  \emph{iii}) Provide the first theoretical/numerical interpretation
-  of the EHT \sgra VLBI observation, with helps from historical data.
-  %
-  \emph{iv}) Gather a legacy observation data set that \emph{all
-  future} theoretical studies should include.
-  %
-  \emph{v}) Outlook into future theoretical research directions, i.e.,
-  importance of variability and viscosity.
-
   For adding references, simply cite the ADS key, e.g.,
   \texttt{\textbackslash citep\{2019ApJ...875L...5E\}}.
   The bash script \texttt{tools/adsbib.sh} would automatically pull
@@ -71,9 +52,32 @@
   processing -- techniques: interferometric}
 
 \tableofcontents
+\clearpage
 
 %==============================================================================
 \section{Introduction}
+
+The scinetific goals and legacies of this paper may include:
+\begin{itemize}
+\item Describe a standard simulation library that is used in EHT's
+  first \sgra papers.
+  E.g., the ``grmhd'' test set for imaging, calibration sets for MCFE
+  and gravity.
+\item Provide the first estimate on uncertainties, i.e., the
+  ``systematic error'', in theoretical modelings by comparing models
+  from different realizations/groups in similar parameter space.
+\item Use the large number of models to extract theory-backed and
+  statistical significant trends.
+  Example includes edge on images are more asymmetric.
+\item Gather a standard observation data set that \emph{all future}
+  theoretical studies should use.
+\item Provide the first theoretical/numerical interpretation of the
+  EHT \sgra VLBI observation, with helps from historical data.
+  This should include ``scoring'' of the standard model sets, a few
+  best bet models.
+\item Outlook into future theoretical research directions, i.e.,
+  importance of variability and viscosity.
+\end{itemize}
 
 %==============================================================================
 \section{Observational Constraints}
@@ -130,8 +134,8 @@
 \subsection{Black Hole Spin}
 
 %==============================================================================
-\facility{EHT}
-\software{\ehtim, \difmap, \smili, \dmc, \themis, \foci}
+\facility{EHT} \software{\ehtim, \difmap, \smili, \dmc, \themis,
+  \foci}
 
 %==============================================================================
 \appendix
