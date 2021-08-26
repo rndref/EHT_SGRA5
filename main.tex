@@ -204,39 +204,34 @@ per electron increases.
 
 ...
 
-\begin{deluxetable*}{ccccccccccc}
+\begin{deluxetable*}{cccccccccc}
 \tabletypesize{\footnotesize}
 \tablehead{
-  \colhead{Name} & 
-  \colhead{Spacetime} &
-  \multicolumn{3}{c}{Fluid} &
-  \colhead{Plasma} &
-  \multicolumn{5}{c}{Inclinations that pass constraints among 10$\degree$, 50$\degree$, 90$\degree$} \\
-  \colhead{$a_\mathrm{spin}$} & \colhead{Flux} & \colhead{$\Gamma$} & \colhead{Time} & % 3 fluid input
+  & \colhead{Spacetime} & \multicolumn{3}{c}{Fluid} & \multicolumn{2}{c}{Plasma} & \multicolumn{2}{c}{Camera} & \colhead{Note} \\
+  \colhead{Name} &
+  \colhead{$a_\mathrm{spin}$} &
+  \colhead{Flux} & \colhead{$\Gamma$} & \colhead{$t_\mathrm{final}$ [$M$]} & % 3 fluid input
+  \colhead{$\rho_0$} &
   \colhead{$R_\mathrm{high}$} & % 1 plasma input
-  \colhead{86\,GHz flux}  & \colhead{$\sigma(230\,\mathrm{GHz})$}  & \colhead{NIR flux}  & \colhead{X-ray} & \colhead{All} % 4 constraints + 1 combined
+  \colhead{Inclination $i$ [$^\circ$]} &
+  \colhead{Realizations} &
+  \colhead{Reference}
 }
 \startdata
-$-0.94$ & MAD  & $13/9$ & ... &   1 & ---         & ---         & ---         & NA         & \textbf{---        } \\
-$-0.94$ & MAD  & $13/9$ & ... &  40 & ---         & ---         & 10          & NA         & \textbf{---        } \\
-$-0.94$ & MAD  & $13/9$ & ... & 160 & ---         & ---         & 50          & NA         & \textbf{---        } \\
-$-0.94$ & SANE & $5/3$  & ... &   1 & ---         & ---         & 50          & NA         & \textbf{---        } \\
-$-0.94$ & SANE & $5/3$  & ... &  40 & 90          & ---         & 10,50,90    & NA         & \textbf{---        } \\
-$-0.94$ & SANE & $5/3$  & ... & 160 & 50          & ---         & 50          & NA         & \textbf{---        } \\
+Illinois  Thermal & 0, $\pm1/2$, $\pm15/16$ & MAD, SANE  & $5/3$ & 30,000 & 3 & 1, 10, 40, 160 & 10, 30, ..., 170 & 1080 & This work \\
+Frankfurt Thermal & 0, $\pm1/2$, $\pm15/16$ & MAD, SANE  & $5/3$ & 30,000 &   & ...            &                  &      & This work \\
+HAMR      Thermal & 0, $\pm1/2$, $\pm15/16$ & MAD, SANE  & $5/3$ & 30,000 &   & ...            &                  &      & This work \\
 \hline
-$ 0.0 $ & MAD  & $13/9$ & ... &   1 & ---         & ---         & ---         & NA         & \textbf{---        } \\
-$ 0.0 $ & MAD  & $13/9$ & ... &  40 & ---         & ---         & 10,50,90    & NA         & \textbf{---        } \\
-$ 0.0 $ & MAD  & $13/9$ & ... & 160 & ---         & ---         & 50          & NA         & \textbf{---        } \\
-$ 0.0 $ & SANE & $5/3$  & ... &   1 & ---         & ---         & 50          & NA         & \textbf{---        } \\
-$ 0.0 $ & SANE & $5/3$  & ... &  40 & 90          & 10,50,90    & 10,50,90    & NA         & \textbf{90         } \\
-$ 0.0 $ & SANE & $5/3$  & ... & 160 & 50          & 50          & 50          & NA         & \textbf{50         } \\
+Frankfurt Nontheraml (powerlaw) & 0, $\pm1/2$, $\pm15/16$ & MAD,SANE  & $5/3$ & 30,000 & & & & & This work \\
+HAMR      Nontheraml (powerlaw) & 0, $\pm1/2$, $\pm15/16$ & MAD,SANE  & $5/3$ & 30,000 & & & & & This work \\
 \hline
-$ 0.94$ & MAD  & $13/9$ & ... &   1 & ---         & ---         & ---         & NA         & \textbf{---        } \\
-$ 0.94$ & MAD  & $13/9$ & ... &  40 & 50,90       & ---         & 10          & NA         & \textbf{---        } \\
-$ 0.94$ & MAD  & $13/9$ & ... & 160 & 50          & ---         & 50          & NA         & \textbf{---        } \\
-$ 0.94$ & SANE & $5/3$  & ... &   1 & ---         & 50          & 50          & NA         & \textbf{---        } \\
-$ 0.94$ & SANE & $5/3$  & ... &  40 & ---         & 10,50,90    & 10          & NA         & \textbf{---        } \\
-$ 0.94$ & SANE & $5/3$  & ... & 160 & 50          & ---         & ---         & NA         & \textbf{---        } \\
+Frankfurt Nontheraml ($\kappa$) & 0, $\pm1/2$, $\pm15/16$ & MAD,SANE  & $5/3$ & 30,000 & & & & & This work \\
+HAMR      Nontheraml ($\kappa$) & 0, $\pm1/2$, $\pm15/16$ & MAD,SANE  & $5/3$ & 30,000 & & & & & This work \\
+\hline
+Critical $\beta$ & & & & & & & & \\
+Stellar Wind Accretion & 0 & Stellar Wind & ? & & & & & \\
+Koral Long & \!\!\!\!\!\!0, $\pm0.3$, $\pm0.5$, $\pm0.7$, $\pm0.9$\!\!\!\!\!\! & MAD & ? & 100,000 & & & & & \\
+Tilted & ? & ? & ? & ? & & & & & Tilts at ...$^\circ$ \\
 \enddata
 \caption{Summary of numerical models used in this paper.}
 \label{tab:parameters}
@@ -249,20 +244,54 @@ $ 0.94$ & SANE & $5/3$  & ... & 160 & 50          & ---         & ---         & 
 
 \paragraph{Illinois Models}
 
-MAD and SANE, $a_\mathrm{spin} \in {-0.94, -0.5, 0, 0.5, 0.94}$, GRMHD
-carried up to 30,000\,$M$.
-Imaging were computed at 86\,GHz, 230\,GHz, 2\,$\mu$as and full
-spectra including inverse compoton were done for 15,000--30,000\,$M$
-with $R_\mathrm{high} \in {1, 10, 40, 160}$ and inclinations at $i \in
-\{10^\circ, 30^\circ, 50^\circ, ..., 170^\circ\}$.
+% Please fill in basic information of the model in the following list.
+% Please add more details if necesssary. A full paragraph description
+% of the model is welcome, but not required at this point.
+\begin{itemize}
+\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
+\item Magnetic Flux: MAD, SANE
+\item Adabatic Index $\Gamma$: 5/3
+\item Time $t_\mathrm{final}$: 30,000$M$
+\item $\rho_0$: 3 different density normalization chosen for each parameter set for $t \in [15,000, 20,000), [20,000, 25,000), [25,000, 30,000)$.
+\item $R_\mathrm{high}$: 1, 10, 40, 160
+\item Inclincation $i$: 10$^\circ$, 30$^\circ$, 50$^\circ$, ..., 170$^\circ$
+\item Reference: this work
+\item Status: w4 and w5 all done; w5 in progress
+\end{itemize}
 
 \paragraph{Frankfurt Models}
 
-...
+% Please fill in basic information of the model in the following list.
+% Please add more details if necesssary. A full paragraph description
+% of the model is welcome, but not required at this point.
+\begin{itemize}
+\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
+\item Magnetic Flux: MAD, SANE
+\item Adabatic Index $\Gamma$: 5/3
+\item Time $t_\mathrm{final}$:
+\item $\rho_0$:
+\item $R_\mathrm{high}$:
+\item Inclincation $i$:
+\item Reference:
+\item Status:
+\end{itemize}
 
 \paragraph{HAMR Models}
 
-...
+% Please fill in basic information of the model in the following list.
+% Please add more details if necesssary. A full paragraph description
+% of the model is welcome, but not required at this point.
+\begin{itemize}
+\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
+\item Magnetic Flux: MAD, SANE
+\item Adabatic Index $\Gamma$:
+\item Time $t_\mathrm{final}$:
+\item $\rho_0$:
+\item $R_\mathrm{high}$:
+\item Inclincation $i$:
+\item Reference:
+\item Status:
+\end{itemize}
 
 %..............................................................................
 \subsubsection{Non-thermal (power-law )Models}
@@ -271,44 +300,169 @@ with $R_\mathrm{high} \in {1, 10, 40, 160}$ and inclinations at $i \in
 
 \paragraph{Frankfurt Models}
 
-...
+% Please fill in basic information of the model in the following list.
+% Please add more details if necesssary. A full paragraph description
+% of the model is welcome, but not required at this point.
+\begin{itemize}
+\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
+\item Magnetic Flux: MAD, SANE
+\item Adabatic Index $\Gamma$:
+\item Time $t_\mathrm{final}$:
+\item $\rho_0$:
+\item Power law fraction $f$:
+\item Power law index $p$:
+\item Inclincation $i$:
+\item Reference:
+\item Status:
+\end{itemize}
 
 \paragraph{HAMR Models}
 
-...
+% Please fill in basic information of the model in the following list.
+% Please add more details if necesssary. A full paragraph description
+% of the model is welcome, but not required at this point.
+\begin{itemize}
+\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
+\item Magnetic Flux: MAD, SANE
+\item Adabatic Index $\Gamma$:
+\item Time $t_\mathrm{final}$:
+\item $\rho_0$:
+\item Power law fraction $f$:
+\item Power law index $p$:
+\item Inclincation $i$:
+\item Reference:
+\item Status:
+\end{itemize}
 
 %..............................................................................
 \subsubsection{Non-thermal ($\kappa$) Models}
 
 ...
 
+% Please fill in basic information of the model in the following list.
+% Please add more details if necesssary. A full paragraph description
+% of the model is welcome, but not required at this point.
+\begin{itemize}
+\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
+\item Magnetic Flux: MAD, SANE
+\item Adabatic Index $\Gamma$:
+\item Time $t_\mathrm{final}$:
+\item $\rho_0$:
+\item $\kappa$:
+\item Inclincation $i$:
+\item Reference:
+\item Status:
+\end{itemize}
+
 \paragraph{Frankfurt Models}
 
-...
+% Please fill in basic information of the model in the following list.
+% Please add more details if necesssary. A full paragraph description
+% of the model is welcome, but not required at this point.
+\begin{itemize}
+\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
+\item Magnetic Flux: MAD, SANE
+\item Adabatic Index $\Gamma$:
+\item Time $t_\mathrm{final}$:
+\item $\rho_0$:
+\item $\kappa$:
+\item Inclincation $i$:
+\item Reference:
+\item Status:
+\end{itemize}
 
 \paragraph{HAMR Models}
 
-...
+% Please fill in basic information of the model in the following list.
+% Please add more details if necesssary. A full paragraph description
+% of the model is welcome, but not required at this point.
+\begin{itemize}
+\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
+\item Magnetic Flux: MAD, SANE
+\item Adabatic Index $\Gamma$:
+\item Time $t_\mathrm{final}$:
+\item $\rho_0$:
+\item $\kappa$:
+\item Inclincation $i$:
+\item Reference:
+\item Status:
+\end{itemize}
 
 %..............................................................................
 \subsubsection{Critical $\beta$ Models}
 
-...
+% Please fill in basic information of the model in the following list.
+% Please add more details if necesssary. A full paragraph description
+% of the model is welcome, but not required at this point.
+\begin{itemize}
+\item $a_\mathrm{spin}$:
+\item Magnetic Flux: MAD, SANE
+\item Adabatic Index $\Gamma$:
+\item Time $t_\mathrm{final}$:
+\item $\rho_0$:
+\item Power law fraction $f$:
+\item Power law index $p$:
+\item Inclincation $i$:
+\item Reference:
+\item Status:
+\end{itemize}
 
 %..............................................................................
 \subsubsection{Stellar Wind Accretion Models}
 
-...
+% Please fill in basic information of the model in the following list.
+% Please add more details if necesssary. A full paragraph description
+% of the model is welcome, but not required at this point.
+\begin{itemize}
+\item $a_\mathrm{spin}$: 0
+\item Magnetic Flux: MAD, SANE
+\item Adabatic Index $\Gamma$:
+\item Time $t_\mathrm{final}$:
+\item $\rho_0$:
+\item Power law fraction $f$:
+\item Power law index $p$:
+\item Inclincation $i$:
+\item Reference:
+\item Status:
+\end{itemize}
 
 %..............................................................................
-\subsubsection{Harvard $100,000M$ MAD Models}
+\subsubsection{Koral Long MAD Models}
 
-...
+% Please fill in basic information of the model in the following list.
+% Please add more details if necesssary. A full paragraph description
+% of the model is welcome, but not required at this point.
+\begin{itemize}
+\item $a_\mathrm{spin}$: 0, $\pm0.3$, $\pm0.5$, $\pm0.7$, $\pm0.9$
+\item Magnetic Flux: MAD
+\item Adabatic Index $\Gamma$:
+\item Time $t_\mathrm{final}$: 100,000$M$
+\item $\rho_0$:
+\item Power law fraction $f$:
+\item Power law index $p$:
+\item Inclincation $i$:
+\item Reference:
+\item Status:
+\end{itemize}
 
 %..............................................................................
 \subsubsection{Tilted Models}
 
-...
+% Please fill in basic information of the model in the following list.
+% Please add more details if necesssary. A full paragraph description
+% of the model is welcome, but not required at this point.
+\begin{itemize}
+\item $a_\mathrm{spin}$:
+\item Magnetic Flux:
+\item Adabatic Index $\Gamma$:
+\item Time $t_\mathrm{final}$:
+\item $\rho_0$:
+\item Power law fraction $f$:
+\item Power law index $p$:
+\item Inclincation $i$:
+\item Reference:
+\item Status:
+\end{itemize}
 
 %------------------------------------------------------------------------------
 \subsection{Scattering Models}
