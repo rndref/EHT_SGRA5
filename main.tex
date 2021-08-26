@@ -60,25 +60,24 @@
 
 The scientific goals and legacies of this paper may include:
 \begin{itemize}
-\item Describe a standard simulation library that is used in EHT's
-  first \sgra papers and many subsequent papers.
-  E.g., the ``GRMHD'' test set for imaging and calibration sets for
-  MCFE and gravity, future papers that dive in the origin of
-  variabilities.
-\item Provide the first estimate on uncertainties in theoretical
+\item Description of a standard simulation library that is used in EHT's
+  first \sgra papers (the ``GRMHD'' test set for imaging and calibration sets for
+  MCFE and gravity) and subsequent papers (e.g., future papers that dive in the origin of
+  variabilities).
+\item Providing the first estimate on uncertainties in theoretical
   modelings by comparing models from different realizations/groups in
   similar parameter space.
-\item Use the large number of models to extract theory-backed and
+\item Using the large number of models to extract theory-backed and
   statistical significant trends.
   E.g., edge-on images are more asymmetric.
-\item Gather a standard observation data set that \emph{all future}
-  theoretical studies should include.
-\item Provide the first theoretical/numerical interpretation of the
+\item Gathering a standard observation data set that \emph{all future}
+  theoretical studies can use to test their models.
+\item Providing the first theoretical/numerical interpretation of the
   EHT \sgra VLBI observation, with helps from historical data.
   This should include ``scores'' of the standard model sets and a few
   best bet models.
-\item Summarize what models do not work and explain why.
-\item Summarize what models work and their implications and
+\item Summary of what models do not work and explain why.
+\item Summary of what models work and their implications and
   limitations.
 \item Outlook into future theoretical research directions, i.e.,
   importance of variability and viscosity, uncertainty in plasma
@@ -205,6 +204,44 @@ per electron increases.
 
 ...
 
+\begin{deluxetable*}{ccccccccccc}
+\tabletypesize{\footnotesize}
+\tablehead{
+  \colhead{Name} & 
+  \colhead{Spacetime} &
+  \multicolumn{3}{c}{Fluid} &
+  \colhead{Plasma} &
+  \multicolumn{5}{c}{Inclinations that pass constraints among 10$\degree$, 50$\degree$, 90$\degree$} \\
+  \colhead{$a_\mathrm{spin}$} & \colhead{Flux} & \colhead{$\Gamma$} & \colhead{Time} & % 3 fluid input
+  \colhead{$R_\mathrm{high}$} & % 1 plasma input
+  \colhead{86\,GHz flux}  & \colhead{$\sigma(230\,\mathrm{GHz})$}  & \colhead{NIR flux}  & \colhead{X-ray} & \colhead{All} % 4 constraints + 1 combined
+}
+\startdata
+$-0.94$ & MAD  & $13/9$ & ... &   1 & ---         & ---         & ---         & NA         & \textbf{---        } \\
+$-0.94$ & MAD  & $13/9$ & ... &  40 & ---         & ---         & 10          & NA         & \textbf{---        } \\
+$-0.94$ & MAD  & $13/9$ & ... & 160 & ---         & ---         & 50          & NA         & \textbf{---        } \\
+$-0.94$ & SANE & $5/3$  & ... &   1 & ---         & ---         & 50          & NA         & \textbf{---        } \\
+$-0.94$ & SANE & $5/3$  & ... &  40 & 90          & ---         & 10,50,90    & NA         & \textbf{---        } \\
+$-0.94$ & SANE & $5/3$  & ... & 160 & 50          & ---         & 50          & NA         & \textbf{---        } \\
+\hline
+$ 0.0 $ & MAD  & $13/9$ & ... &   1 & ---         & ---         & ---         & NA         & \textbf{---        } \\
+$ 0.0 $ & MAD  & $13/9$ & ... &  40 & ---         & ---         & 10,50,90    & NA         & \textbf{---        } \\
+$ 0.0 $ & MAD  & $13/9$ & ... & 160 & ---         & ---         & 50          & NA         & \textbf{---        } \\
+$ 0.0 $ & SANE & $5/3$  & ... &   1 & ---         & ---         & 50          & NA         & \textbf{---        } \\
+$ 0.0 $ & SANE & $5/3$  & ... &  40 & 90          & 10,50,90    & 10,50,90    & NA         & \textbf{90         } \\
+$ 0.0 $ & SANE & $5/3$  & ... & 160 & 50          & 50          & 50          & NA         & \textbf{50         } \\
+\hline
+$ 0.94$ & MAD  & $13/9$ & ... &   1 & ---         & ---         & ---         & NA         & \textbf{---        } \\
+$ 0.94$ & MAD  & $13/9$ & ... &  40 & 50,90       & ---         & 10          & NA         & \textbf{---        } \\
+$ 0.94$ & MAD  & $13/9$ & ... & 160 & 50          & ---         & 50          & NA         & \textbf{---        } \\
+$ 0.94$ & SANE & $5/3$  & ... &   1 & ---         & 50          & 50          & NA         & \textbf{---        } \\
+$ 0.94$ & SANE & $5/3$  & ... &  40 & ---         & 10,50,90    & 10          & NA         & \textbf{---        } \\
+$ 0.94$ & SANE & $5/3$  & ... & 160 & 50          & ---         & ---         & NA         & \textbf{---        } \\
+\enddata
+\caption{Summary of numerical models used in this paper.}
+\label{tab:parameters}
+\end{deluxetable*}
+
 %..............................................................................
 \subsubsection{Thermal Model}
 
@@ -264,7 +301,7 @@ with $R_\mathrm{high} \in {1, 10, 40, 160}$ and inclinations at $i \in
 ...
 
 %..............................................................................
-\subsubsection{$100,000M$ MAD Models}
+\subsubsection{Harvard $100,000M$ MAD Models}
 
 ...
 
