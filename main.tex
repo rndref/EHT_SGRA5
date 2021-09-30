@@ -2,6 +2,47 @@
 \usepackage{eht}
 
 \NewPageAfterKeywords
+% \NewPageAfterKeywords
+\usepackage{graphicx}		% needed for the figures
+\usepackage{url}
+\usepackage{epstopdf}
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{multirow}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{comment}
+\usepackage{afterpage}
+\usepackage{mathtools}
+\usepackage{tabularx}
+\usepackage{bold-extra}
+\usepackage{xspace}
+\usepackage{relsize}
+\usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+\usepackage[encapsulated]{CJK}
+\usepackage{ucs}
+%\usepackage[utf8x]{inputenc}
+\newcommand{\cntext}[1]{\begin{CJK}{UTF8}{gbsn}#1\end{CJK}}
+
+% Prevent footnotes from splitting across pages
+\interfootnotelinepenalty=10000
+
+%EHT publication package 
+\defcitealias{M87PaperI}{M87Paper~I}
+\defcitealias{M87PaperII}{M87Paper~II}
+\defcitealias{M87PaperIII}{M87Paper~III}
+\defcitealias{M87PaperIV}{M87Paper~IV}
+\defcitealias{M87PaperV}{M87Paper~V}
+\defcitealias{M87PaperVI}{M87Paper~VI}
+\defcitealias{M87PaperVII}{M87Paper~VII}
+\defcitealias{M87PaperVIII}{M87Paper~VIII}
+
+
 
 % Inline comments
 \newcommand\note[1]{{\color{OliveGreen}[note: #1]}}
@@ -15,6 +56,9 @@
 \title{First Sagittarius A* Event Horizon Telescope Results. V.\\
   Constraining the Astrophysical Properties of the Galactic Center Black Hole}
 \shorttitle{First \sgra EHT Results on Astrophysics}
+
+% \collaboration{The Event Horizon Telescope Collaboration}
+%\input{newGAL_ApJ}
 
 \author{Event Horizon Telescope Collaboration et al.}
 \shortauthors{EHT Collaboration et al.}
@@ -53,469 +97,20 @@
 
 \tableofcontents
 
+% no more editing here, to edit go to
+% separate tex files
 \clearpage
-
-%==============================================================================
-\section{Introduction}
-
-The scientific goals and legacies of this paper may include:
-\begin{itemize}
-\item Description of a standard simulation library that is used in EHT's
-  first \sgra papers (the ``GRMHD'' test set for imaging and calibration sets for
-  MCFE and gravity) and subsequent papers (e.g., future papers that dive in the origin of
-  variabilities).
-\item Providing the first estimate on uncertainties in theoretical
-  modelings by comparing models from different realizations/groups in
-  similar parameter space.
-\item Using the large number of models to extract theory-backed and
-  statistical significant trends.
-  E.g., edge-on images are more asymmetric.
-\item Gathering a standard observation data set that \emph{all future}
-  theoretical studies can use to test their models.
-\item Providing the first theoretical/numerical interpretation of the
-  EHT \sgra VLBI observation, with helps from historical data.
-  This should include ``scores'' of the standard model sets and a few
-  best bet models.
-\item Summary of what models do not work and explain why.
-\item Summary of what models work and their implications and
-  limitations.
-\item Outlook into future theoretical research directions, i.e.,
-  importance of variability and viscosity, uncertainty in plasma
-  models, etc.
-\end{itemize}
-
+\input{intro}
 \clearpage
-
-%==============================================================================
-\section{Astrophysical Models}
-
-Many of them have the common assumption that \sgra is a black hole
-described by the Kerr metric, with mass $\mbh$ and dimensionless spin
-$\abh$ within the range $-1 < \abh < 1$.
-Here $\abh \equiv Jc/G\mbh^2$, where $J$, $G$, and $c$ are the black
-hole angular momentum, gravitational constant, and speed of light,
-respectively.
-We follow the convention of \citetalias{2019ApJ...875L...5E} that
-$\abh < 0$ indicate anti-aligned angular momentum between the
-accretion flow and that of the black hole.
-\note{Describe other details of the current standard \sgra mode, e.g.,
-  thick SANE or MAD accretion disks without tilted, etc.
-  Describe main controversy in theory/model, e.g., disk vs jet.}
-
-...
-
-We adopted a weighted mean of \citet{2019Sci...365..664D} and
-\citet{2019A&A...625L..10G} and fix the mass of \sgra to
-\begin{align}
-  \mbh &= (4.136 \pm 0.014) \times 10^6 \msun,\\
-  D    &= (8.142 \pm 0.023) \kpc.
-\end{align}
-\note{The \sgra parameter memo indicates that there's no errors in the
-  $M/D$ measurements.
-  The errors for $M$ and $D$ don't seem consistent.
-  Need to check with the parameter definition working group.}
-
-...
-
-%------------------------------------------------------------------------------
-\subsection{One-Zone Model and Estimate}
-
-Using the above mass and distance, the implied characteristic length
-is $G\mbh/c^2 = 6.1 \times 10^{11}\cm$, characteristic time is
-$G\mbh/c^3 = 20.4 \sec$, angular scale is $G\mbh/(c^2 D) = 5.03\uas$.
-The radius of the shadow is $26.1\uas$.
-
-Then
-$ \nu L_\nu
-= 4 \pi D^2 \nu F_\nu
-= 1.8 \times 10^{34} (D/8127 \pc)^2 \times\allowbreak
-  (\nu/230 \GHz)(F_\nu/{\rm Jy}) \erg \sec^{-1}$.
-The Eddington luminosity for \sgra is
-$ L_\mathrm{Edd}
-= 4\pi G\mbh c/\kappa_{es}
-= 5.2 \times 10^{44}\allowbreak\erg\sec^{-1}$.
-The Eddington accretion rate is
-$ \dot\mbh_\mathrm{Edd}
-\equiv L_\mathrm{Edd}/(0.1 c^2)
-= 5.8 \times 10^{24} \gm \sec^{-1}
-= 0.09 \msun \yr^{-1}$.
-The Eddington ratio is
-$ L_\mathrm{bol}/L_\mathrm{Edd}
-= 1.9 \times 10^{-10} (L_\mathrm{bol}/10^{35})$.
-
-Next we consider a one zone model for \sgra.
-The model consists of a single temperature sphere with magnetic field
-oriented at $\pi/3$ to the line of sight.
-Assumed flux is $2\Jy$, which is the average flux for \sgra measured
-by ALMA during the 2017 campaign.
-The sphere radius is
-$5 G\mbh/c^2$.
-The ratio of ion to electron temperature
-$R \equiv T_i/T_e = 3$.
-Assumed plasma
-$\beta \equiv P_{gas}/(B^2/(8\pi)) = 1$,
-electron temperature
-$\Theta_e \equiv k T_e/(m_e c^2) = 10$.
-
-The one zone model flux density is
-\begin{align}
-  F_\nu = \int I_\nu \, d\Omega =
-  \frac{2 k T_e \nu^2}{c^2 D^2} \int dx dy\,\left[1-\exp(-\tau_\nu(x,y)\right]
-\end{align}
-where $d\Omega$ is a differential solid angle, $x$ and $y$ are
-coordinates on the source plane in the same units as $D$, and
-$\tau_\nu(x,y) = 2 \alpha_\nu (G\mbh/c^2) \sqrt{X_0^2 - X^2}$,
-where $X$ is the offset on the sky from the center of the sphere in
-units of
-$GM/c^2$, and $X_0 = 5 G\mbh/c^2$.
-Finally, $\alpha_\nu$ is the thermal synchrotron absorption
-coefficient (units: $\cm^{-1}$).
-The density is adjusted until the flux density is $2\Jy$.
-
-For a pure hydrogen model, resulting parameters are: $n_e = 1.1 \times
-10^6$, $B = 30\,\mathrm{G}$, $\tau_I = 0.48$, $\tau_Q = 0.35 $,
-$\tau_V = 0.27$, Thomson depth $\tau_e = 5 G\mbh/c^2 \sigma_T = 2.2
-\times 10^{-6}$, Compton $y = \tau_e 16 \Theta_e^2 = 3.6 \times
-10^{-3}$, synchrotron cooling time is $t_{cool} = 3.1 \times 10^4\sec
-= 1.5 \times 10^3 G\mbh/c^3$.
-
-There is reason to believe that, if \sgra is fed by stellar winds as
-in \citet{2019MNRAS.482L.123R}, the inflowing plasma is almost pure
-helium.
-In this case the results change only slightly; the cooling time drops
-slightly because the rest-mass density (and therefore field strength)
-per electron increases.
-
-%------------------------------------------------------------------------------
-\subsection{Semi-Analytical Accretion Models}
-
-...
-
-\subsubsection{RIAF Model}
-
-...
-
-\subsubsection{RIAF+Jet Model}
-
-...
-
-%------------------------------------------------------------------------------
-\subsection{Numerical Models of the Inner Accretion Flows}
-
-...
-
-\begin{deluxetable*}{cccccccccc}
-\tabletypesize{\footnotesize}
-\tablehead{
-  & \colhead{Spacetime} & \multicolumn{3}{c}{Fluid} & \multicolumn{2}{c}{Plasma} & \multicolumn{2}{c}{Camera} & \colhead{Note} \\
-  \colhead{Name} &
-  \colhead{$a_\mathrm{spin}$} &
-  \colhead{Flux} & \colhead{$\Gamma$} & \colhead{$t_\mathrm{final}$ [$M$]} & % 3 fluid input
-  \colhead{$\rho_0$} &
-  \colhead{$R_\mathrm{high}$} & % 1 plasma input
-  \colhead{Inclination $i$ [$^\circ$]} &
-  \colhead{Realizations} &
-  \colhead{Reference}
-}
-\startdata
-Illinois  Thermal & 0, $\pm1/2$, $\pm15/16$ & MAD, SANE  & $5/3$ & 30,000 & 3 & 1, 10, 40, 160 & 10, 30, ..., 170 & 1080 & This work \\
-Frankfurt Thermal & 0, $\pm1/2$, $\pm15/16$ & MAD, SANE  & $5/3$ & 30,000 &   & ...            &                  &      & This work \\
-HAMR      Thermal & 0, $\pm1/2$, $\pm15/16$ & MAD, SANE  & $5/3$ & 30,000 &   & ...            &                  &      & This work \\
-\hline
-Frankfurt Nontheraml (powerlaw) & 0, $\pm1/2$, $\pm15/16$ & MAD,SANE  & $5/3$ & 30,000 & & & & & This work \\
-HAMR      Nontheraml (powerlaw) & 0, $\pm1/2$, $\pm15/16$ & MAD,SANE  & $5/3$ & 30,000 & & & & & This work \\
-\hline
-Frankfurt Nontheraml ($\kappa$) & 0, $\pm1/2$, $\pm15/16$ & MAD,SANE  & $5/3$ & 30,000 & & & & & This work \\
-HAMR      Nontheraml ($\kappa$) & 0, $\pm1/2$, $\pm15/16$ & MAD,SANE  & $5/3$ & 30,000 & & & & & This work \\
-\hline
-Critical $\beta$ & & & & & & & & \\
-Stellar Wind Accretion & 0 & Stellar Wind & ? & & & & & \\
-Koral Long & \!\!\!\!\!\!0, $\pm0.3$, $\pm0.5$, $\pm0.7$, $\pm0.9$\!\!\!\!\!\! & MAD & ? & 100,000 & & & & & \\
-Tilted & ? & ? & ? & ? & & & & & Tilts at ...$^\circ$ \\
-\enddata
-\caption{Summary of numerical models used in this paper.}
-\label{tab:parameters}
-\end{deluxetable*}
-
-%..............................................................................
-\subsubsection{Thermal Model}
-
-...
-
-\paragraph{Illinois Models}
-
-% Please fill in basic information of the model in the following list.
-% Please add more details if necesssary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}
-\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-\item Magnetic Flux: MAD, SANE
-\item Adabatic Index $\Gamma$: 5/3
-\item Time $t_\mathrm{final}$: 30,000$M$
-\item $\rho_0$: 3 different density normalization chosen for each parameter set for $t \in [15,000, 20,000), [20,000, 25,000), [25,000, 30,000)$.
-\item $R_\mathrm{high}$: 1, 10, 40, 160
-\item Inclincation $i$: 10$^\circ$, 30$^\circ$, 50$^\circ$, ..., 170$^\circ$
-\item Reference: this work
-\item Status: w4 and w5 all done; w5 in progress
-\end{itemize}
-
-\paragraph{Frankfurt Models}
-
-% Please fill in basic information of the model in the following list.
-% Please add more details if necesssary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}
-\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-\item Magnetic Flux: MAD, SANE
-\item Adabatic Index $\Gamma$: 5/3
-\item Time $t_\mathrm{final}$:
-\item $\rho_0$:
-\item $R_\mathrm{high}$:
-\item Inclincation $i$:
-\item Reference:
-\item Status:
-\end{itemize}
-
-\paragraph{HAMR Models}
-
-% Please fill in basic information of the model in the following list.
-% Please add more details if necesssary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}
-\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-\item Magnetic Flux: MAD, SANE
-\item Adabatic Index $\Gamma$:
-\item Time $t_\mathrm{final}$:
-\item $\rho_0$:
-\item $R_\mathrm{high}$:
-\item Inclincation $i$:
-\item Reference:
-\item Status:
-\end{itemize}
-
-%..............................................................................
-\subsubsection{Non-thermal (power-law )Models}
-
-...
-
-\paragraph{Frankfurt Models}
-
-% Please fill in basic information of the model in the following list.
-% Please add more details if necesssary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}
-\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-\item Magnetic Flux: MAD, SANE
-\item Adabatic Index $\Gamma$:
-\item Time $t_\mathrm{final}$:
-\item $\rho_0$:
-\item Power law fraction $f$:
-\item Power law index $p$:
-\item Inclincation $i$:
-\item Reference:
-\item Status:
-\end{itemize}
-
-\paragraph{HAMR Models}
-
-% Please fill in basic information of the model in the following list.
-% Please add more details if necesssary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}
-\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-\item Magnetic Flux: MAD, SANE
-\item Adabatic Index $\Gamma$:
-\item Time $t_\mathrm{final}$:
-\item $\rho_0$:
-\item Power law fraction $f$:
-\item Power law index $p$:
-\item Inclincation $i$:
-\item Reference:
-\item Status:
-\end{itemize}
-
-%..............................................................................
-\subsubsection{Non-thermal ($\kappa$) Models}
-
-...
-
-% Please fill in basic information of the model in the following list.
-% Please add more details if necesssary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}
-\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-\item Magnetic Flux: MAD, SANE
-\item Adabatic Index $\Gamma$:
-\item Time $t_\mathrm{final}$:
-\item $\rho_0$:
-\item $\kappa$:
-\item Inclincation $i$:
-\item Reference:
-\item Status:
-\end{itemize}
-
-\paragraph{Frankfurt Models}
-
-% Please fill in basic information of the model in the following list.
-% Please add more details if necesssary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}
-\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-\item Magnetic Flux: MAD, SANE
-\item Adabatic Index $\Gamma$:
-\item Time $t_\mathrm{final}$:
-\item $\rho_0$:
-\item $\kappa$:
-\item Inclincation $i$:
-\item Reference:
-\item Status:
-\end{itemize}
-
-\paragraph{HAMR Models}
-
-% Please fill in basic information of the model in the following list.
-% Please add more details if necesssary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}
-\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-\item Magnetic Flux: MAD, SANE
-\item Adabatic Index $\Gamma$:
-\item Time $t_\mathrm{final}$:
-\item $\rho_0$:
-\item $\kappa$:
-\item Inclincation $i$:
-\item Reference:
-\item Status:
-\end{itemize}
-
-%..............................................................................
-\subsubsection{Critical $\beta$ Models}
-
-% Please fill in basic information of the model in the following list.
-% Please add more details if necesssary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}
-\item $a_\mathrm{spin}$:
-\item Magnetic Flux: MAD, SANE
-\item Adabatic Index $\Gamma$:
-\item Time $t_\mathrm{final}$:
-\item $\rho_0$:
-\item Power law fraction $f$:
-\item Power law index $p$:
-\item Inclincation $i$:
-\item Reference:
-\item Status:
-\end{itemize}
-
-%..............................................................................
-\subsubsection{Stellar Wind Accretion Models}
-
-% Please fill in basic information of the model in the following list.
-% Please add more details if necesssary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}
-\item $a_\mathrm{spin}$: 0
-\item Magnetic Flux: MAD, SANE
-\item Adabatic Index $\Gamma$:
-\item Time $t_\mathrm{final}$:
-\item $\rho_0$:
-\item Power law fraction $f$:
-\item Power law index $p$:
-\item Inclincation $i$:
-\item Reference:
-\item Status:
-\end{itemize}
-
-%..............................................................................
-\subsubsection{Koral Long MAD Models}
-
-% Please fill in basic information of the model in the following list.
-% Please add more details if necesssary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}
-\item $a_\mathrm{spin}$: 0, $\pm0.3$, $\pm0.5$, $\pm0.7$, $\pm0.9$
-\item Magnetic Flux: MAD
-\item Adabatic Index $\Gamma$:
-\item Time $t_\mathrm{final}$: 100,000$M$
-\item $\rho_0$:
-\item Power law fraction $f$:
-\item Power law index $p$:
-\item Inclincation $i$:
-\item Reference:
-\item Status:
-\end{itemize}
-
-%..............................................................................
-\subsubsection{Tilted Models}
-
-% Please fill in basic information of the model in the following list.
-% Please add more details if necesssary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}
-\item $a_\mathrm{spin}$:
-\item Magnetic Flux:
-\item Adabatic Index $\Gamma$:
-\item Time $t_\mathrm{final}$:
-\item $\rho_0$:
-\item Power law fraction $f$:
-\item Power law index $p$:
-\item Inclincation $i$:
-\item Reference:
-\item Status:
-\end{itemize}
-
-%------------------------------------------------------------------------------
-\subsection{Scattering Models}
-
+\input{observations}
 \clearpage
-
-%==============================================================================
-\section{Observational Constraints}
-
-\subsection{Standard Measurement and Assumptions}
-
-\subsection{EHT Observations}
-\subsubsection{230\,GHz Light Curve Variability}
-\subsubsection{230\,GHz VLBI Null Locations}
-\subsubsection{230\,GHz VLBI Pre-Image Size}
-\subsubsection{230\,GHz VLBI Ring Size}
-\subsubsection{230\,GHz VLBI Ring Thickness}
-\subsubsection{230\,GHz VLBI Ring Asymmetry}
-
-\subsection{Non-EHT Observations}
-\subsubsection{86\,GHz Flux}
-\subsubsection{86\,GHz Image Size}
-\subsubsection{NIR (Non-Overproduction) Constraints}
-\subsubsection{X-ray (Non-Overproduction) Constraints}
-
+\input{models}
 \clearpage
-
-%==============================================================================
-\section{Comparisons}
-
-\subsection{EHT Constraints}
-
-\subsection{Non-EHT Constraints}
-
-\subsection{Discussions}
-
-\subsection{Caveats and Limitations}
-
+\input{comparisons}
 \clearpage
-
-%==============================================================================
-\section{Conclusions}
-
-\subsection{MAD vs SANE}
-
-\subsection{Jet vs Disk}
-
-\subsection{Electron Temperature}
-
-\subsection{Inclination}
-
-\subsection{Black Hole Spin}
-
+\input{discussion}
+\clearpage
+\input{conclusions}
 \clearpage
 
 %==============================================================================
@@ -523,22 +118,11 @@ Tilted & ? & ? & ? & ? & & & & & Tilts at ...$^\circ$ \\
 
 %==============================================================================
 \appendix
-
-\section{Pass/Fail Tables}
-
+%\section{Pass/Fail Tables}
+\input{appendix_tables}
 \clearpage
-
-%==============================================================================
-\section{Numerical Details}
-
-\subsection{GRMHD Resolution and Convergence}
-
-\subsection{Image Resolution and Field of View}
-
-\subsection{Samping SED}
-
-\subsection{Fast Light vs Light-Speed Light}
-
+%\section{Numerical Details}
+\input{appendix_numerical}
 \clearpage
 
 %==============================================================================
