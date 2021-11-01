@@ -1,401 +1,449 @@
 \section{Astrophysical Models}\label{sec:models}
 
-Many of them have the common assumption that \sgra is a black hole
-described by the Kerr metric, with mass $\mbh$ and dimensionless spin
-$\abh$ within the range $-1 < \abh < 1$.
-Here $\abh \equiv Jc/G\mbh^2$, where $J$, $G$, and $c$ are the black
-hole angular momentum, gravitational constant, and speed of light,
-respectively.
-We follow the convention of \citetalias{2019ApJ...875L...5E} that
-$\abh < 0$ indicate anti-aligned angular momentum between the
-accretion flow and that of the black hole.
-\note{Describe other details of the current standard \sgra mode, e.g.,
-  thick SANE or MAD accretion disks without tilted, etc.
-  Describe main controversy in theory/model, e.g., disk vs jet.}
+\color{red}
+[{\bf Monika's first pass}]
+\color{black}
 
-...
+\subsection{Basic assumptions}\label{sec:basic}
 
-We adopted a weighted mean of \citet{2019Sci...365..664D} and
-\citet{2019A&A...625L..10G} and fix the mass of \sgra to
+Through out the paper we adopt a mean of \citet{2019Sci...365..664D} and
+\citet{2019A&A...625L..10G} and fix the mass and distance of \sgra to
 \begin{align}
-  \mbh &= (4.136 \pm 0.014) \times 10^6 \msun,\\
-  D    &= (8.142 \pm 0.023) \kpc.
+  \mbh &= (4.14 \pm 0.014) \times 10^6 \msun,\\
+  D    &= (8.127 \pm 0.023) \kpc.
 \end{align}
-\note{The \sgra parameter memo indicates that there's no errors in the
-  $M/D$ measurements.
-  The errors for $M$ and $D$ don't seem consistent.
-  Need to check with the parameter definition working group.}
 
-...
+
+In this work we assume that \sgra is a black hole so that the spacetime around it is described by Schwarzschild or Kerr metric. The black hole dimensionless spin, $\abh$, is treated as a free parameter in range: $-1 < \abh < 1$, where $\abh \equiv Jc/G\mbh^2$, where $J$, $G$, and $c$ are the black
+hole angular momentum, gravitational constant, and speed of light,
+respectively \footnote{We follow the convention of \citetalias{M87PaperV} that
+$\abh < 0$ indicate anti-aligned angular momentum between the
+accretion flow and that of the black hole.}.
+
+Using the above mass and distance, the implied characteristic length
+is $G\mbh/c^2 = 6.1 \times 10^{11}\cm$, characteristic time is
+$G\mbh/c^3 = 20.5 \sec$, and angular scale is $G\mbh/(c^2 D) = 5.03\uas$.
+The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D) = (52.2 \pm x) \uas $, where errorbars indicate uncertainty in the black hole spin and viewing angle.
+
+Assuming that the emitting plasma is made of ionized hydrogen (electron-proton plasma), the adopted black hole mass yields the  \sgra Eddington luminosity: 
+$ L_\mathrm{Edd}
+= 4\pi G\mbh c m_p/\sigma_{T}
+= 5.2 \times 10^{44}\allowbreak\erg\sec^{-1}$
+%The corresponding Eddington accretion rate is $ \dot\mbh_\mathrm{Edd}
+%\equiv L_\mathrm{Edd}/(0.1 c^2) 
+%= 5.8 \times 10^{24} \gm \sec^{-1}
+%= 0.09 \msun \yr^{-1}$ where efficiency of energy conversion is 10\%. 
+and the Eddington ratio:
+$ L_\mathrm{bol}/L_\mathrm{Edd}
+= 1.9 \times 10^{-10} (L_\mathrm{bol}  /10^{35} \erg\sec^{-1})$. In a quiescent state the bolometric luminosity of \sgra is $L_{bol} \sim 10^{35}\erg\sec^{-1}$ resulting in extremely small Eddington ratio. In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected and a model emission can be calculated in a post-processing step (e.g., \citealt{2012MNRAS.426.1928D}). 
+
+% below probably not necessary:
+% \footnote{Translation of the source flux to luminosity is given by: $ \nu L_\nu
+% = 4 \pi D^2 \nu F_\nu
+% = 1.8 \times 10^{34} (D/8127 \pc)^2 \times\allowbreak
+%   (\nu/230 \GHz)(F_\nu/{\rm Jy}) \erg \sec^{-1}$.}
+
 
 %------------------------------------------------------------------------------
 \subsection{One-Zone Model and Estimate}
 
-Using the above mass and distance, the implied characteristic length
-is $G\mbh/c^2 = 6.1 \times 10^{11}\cm$, characteristic time is
-$G\mbh/c^3 = 20.4 \sec$, angular scale is $G\mbh/(c^2 D) = 5.03\uas$.
-The radius of the shadow is $26.1\uas$.
+The development of complex models is guided by simple estimates. Following \citetalias{M87PaperV} we consider a one-zone model for \sgra. The model consists of a uniform plasma sphere of radius equal $5 G\mbh/c^2$ with magnetic field oriented at $\pi/3$ to the line-of-sight. The magnetic field in the sphere is in pressure equilibrium with the plasma: $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $beta=1$ and $T_i = 3 T_e$.  Assuming the dimentionless electron temperature $\Theta_e = kT_e / m_e c^2 = 10$, the values of $B$ and $n_e$ required to produce observed flux of 2 Jy (average flux of \sgra measured by ALMA during the 2017 campaign) are : \color{green}\begin{eqnarray}
+\label{eq:onezone}
+    n_e &\simeq& 1.1\times 10^6 \,\rm cm^{-3},\\
+    B &\simeq& 30 \rm\, G.
+\end{eqnarray}\color{black}
+These values are consistent with $n_e$ and $B$ of a similar one-zone model fitted to archival Sgr~A* spectrum reported in \citet{bower:2018}. 
 
-Then
-$ \nu L_\nu
-= 4 \pi D^2 \nu F_\nu
-= 1.8 \times 10^{34} (D/8127 \pc)^2 \times\allowbreak
-  (\nu/230 \GHz)(F_\nu/{\rm Jy}) \erg \sec^{-1}$.
-The Eddington luminosity for \sgra is
-$ L_\mathrm{Edd}
-= 4\pi G\mbh c/\kappa_{es}
-= 5.2 \times 10^{44}\allowbreak\erg\sec^{-1}$.
-The Eddington accretion rate is
-$ \dot\mbh_\mathrm{Edd}
-\equiv L_\mathrm{Edd}/(0.1 c^2)
-cd ..
-= 5.8 \times 10^{24} \gm \sec^{-1}
-= 0.09 \msun \yr^{-1}$.
-The Eddington ratio is
-$ L_\mathrm{bol}/L_\mathrm{Edd}
-= 1.9 \times 10^{-10} (L_\mathrm{bol}/10^{35})$.
+The one-zone model density and size translate into optical thickness for Compton scatterings, $\tau_e \approx \sigma_T n_e 5 GM/c^2 \approx 2 \times 10^{-5}$, which yields a small Compton parameter: $y =  16 \Theta_e^2 max(\tau_e,\tau_e^2) = 3 \times 10^{-2}$. This implies that the synchrotron emission is the main plasma cooling process. We can calculate the synchrotron cooling timescale $t_{cool} \equiv u/\Lambda$ where $u=?$ is the electron energy and $\Lambda=16 B^2 e^4 n_e \Theta_e^2 /(3 c^3 m_e^2)$ is the total synchrotron cooling rate from thermal population of electrons (for details see Appendix~A in \citealt{2011ApJ...735....9M}). For $n_e = 1.1 \times
+10^6$, $B = 30\,\mathrm{G}$ and $\Theta_e=10$, the estimated $t_{cool}=3.1 \times 10^4\sec
+= 1.5 \times 10^3 G\mbh/c^3$ which is much longer than the characteristic time scale in the system. One-zone models suggest that the cooling effects can be neglected in the complex models. 
 
-Next we consider a one zone model for \sgra.
-The model consists of a single temperature sphere with magnetic field
-oriented at $\pi/3$ to the line of sight.
-Assumed flux is $2\Jy$, which is the average flux for \sgra measured
-by ALMA during the 2017 campaign.
-The sphere radius is
-$5 G\mbh/c^2$.
-The ratio of ion to electron temperature
-$R \equiv T_i/T_e = 3$.
-Assumed plasma
-$\beta \equiv P_{gas}/(B^2/(8\pi)) = 1$,
-electron temperature
-$\Theta_e \equiv k T_e/(m_e c^2) = 10$.
-
-The one zone model flux density is
-\begin{align}
-  F_\nu = \int I_\nu \, d\Omega =
-  \frac{2 k T_e \nu^2}{c^2 D^2} \int dx dy\,\left[1-\exp(-\tau_\nu(x,y)\right]
-\end{align}
-where $d\Omega$ is a differential solid angle, $x$ and $y$ are
-coordinates on the source plane in the same units as $D$, and
-$\tau_\nu(x,y) = 2 \alpha_\nu (G\mbh/c^2) \sqrt{X_0^2 - X^2}$,
-where $X$ is the offset on the sky from the center of the sphere in
-units of
-$GM/c^2$, and $X_0 = 5 G\mbh/c^2$.
-Finally, $\alpha_\nu$ is the thermal synchrotron absorption
-coefficient (units: $\cm^{-1}$).
-The density is adjusted until the flux density is $2\Jy$.
-
-For a pure hydrogen model, resulting parameters are: $n_e = 1.1 \times
-10^6$, $B = 30\,\mathrm{G}$, $\tau_I = 0.48$, $\tau_Q = 0.35 $,
-$\tau_V = 0.27$, Thomson depth $\tau_e = 5 G\mbh/c^2 \sigma_T = 2.2
-\times 10^{-6}$, Compton $y = \tau_e 16 \Theta_e^2 = 3.6 \times
-10^{-3}$, synchrotron cooling time is $t_{cool} = 3.1 \times 10^4\sec
-= 1.5 \times 10^3 G\mbh/c^3$.
-
-There is reason to believe that, if \sgra is fed by stellar winds as
+There is a reason to believe that, if \sgra is fed by stellar winds as
 in \citet{2019MNRAS.482L.123R}, the inflowing plasma is almost pure
-helium.
-In this case the results change only slightly; the cooling time drops
+helium. In this case the results change only slightly; the cooling time drops
 slightly because the rest-mass density (and therefore field strength)
 per electron increases.
 
+Simple considerations also suggest that plasma around \sgra is mostly collisionless (mean free path for electron-ion collisions, $\lambda_F=x$ cm, is much longer than the characteristics length of the systems defined in Section~\ref{sec:basic}).
+This allows electron heating (e.g., accelerated by reconnection or turbulence) and
+cooling (e.g., radiative cooling) mechanism to drive the electrons
+away from thermodynamic equilibrium with ions.
+These findings motivate considering \emph{i}) two-temperature plasma models where electrons are cooler than the
+ions, and \emph{ii}) the non-thermal electron distribution functions. 
+As shown in early works by 
+\citet{1998ApJ...492..554N} and \citet{2000ApJ...541..234O} both 
+effects may significantly change the predicted properties of \sgra.
+
+\monika{ need to revise the numbers above}
 %------------------------------------------------------------------------------
-\subsection{Semi-Analytical Accretion Models}
+% \subsection{Semi-Analytical Accretion Models}
 
-...
+% ...
 
-\subsubsection{RIAF Model}
+% \subsubsection{RIAF Model}
 
-...
+% ...
 
-\subsubsection{RIAF+Jet Model}
+% \subsubsection{RIAF+Jet Model}
 
-...
+% ...
 
 %------------------------------------------------------------------------------
 \subsection{Numerical Models of the Inner Accretion Flows}
 
-...
+\color{red}
+[{\bf Monika's first pass}]
+\color{black}
 
-\begin{deluxetable*}{cccccccccc}
+\begin{deluxetable*}{cccccccc}
 \tabletypesize{\footnotesize}
+\renewcommand{\arraystretch}{1.1}
 \tablehead{
-  & \colhead{Spacetime} & \multicolumn{3}{c}{Fluid} & \multicolumn{2}{c}{Plasma} & \multicolumn{2}{c}{Camera} & \colhead{Note} \\
-  \colhead{Name} &
-  \colhead{$a_\mathrm{spin}$} &
-  \colhead{Flux} & \colhead{$\Gamma$} & \colhead{$t_\mathrm{final}$ [$M$]} & % 3 fluid input
-  \colhead{$\rho_0$} &
-  \colhead{$R_\mathrm{high}$} & % 1 plasma input
-  \colhead{Inclination $i$ [$^\circ$]} &
-  \colhead{Realizations} &
+  & \colhead{Spacetime} & \multicolumn{2}{c}{Fluid} & \multicolumn{3}{c}{Numerical} &  \colhead{Note} \\
+  \colhead{Name/Code} &
+  \colhead{$\abh$} &
+  \colhead{Mode} & \colhead{$\Gamma$} & \colhead{$t_\mathrm{final}$ [$M$]} 
+ & \colhead{Size [$M$]} & \colhead{Resolution} &
   \colhead{Reference}
 }
 \startdata
-Illinois  Thermal & 0, $\pm1/2$, $\pm15/16$ & MAD, SANE  & $4/3$ & 30,000 & 3 & 1, 10, 40, 160 & 10, 30, ..., 170 & 1080 & This work \\
-Frankfurt Thermal & 0, $\pm1/2$, $\pm15/16$ & MAD, SANE  & $4/3$ & 30,000 &   & ...            &                  &      & This work \\
-HAMR      Thermal & 0, $\pm1/2$, $\pm15/16$ & MAD, SANE  & $5/3$ & 30,000 &   & ...            &                  &      & This work \\
-\hline
-%Frankfurt Nontheraml (powerlaw) & 0, $\pm1/2$, $\pm15/16$ & MAD,SANE  & $5/3$ & 30,000 & & & & & This work \\
-HAMR      Nontheraml (powerlaw) & 0, $\pm1/2$, $\pm15/16$ & MAD,SANE  & $5/3$ & 30,000 & & & & & This work \\
-\hline
-Frankfurt Nontheraml ($\kappa$) & 0, $\pm1/2$, $\pm15/16$ & MAD,SANE  & $4/3$ & 30,000 & & & & & This work \\
-HAMR      Nontheraml ($\kappa$) & 0, $\pm1/2$, $\pm15/16$ & MAD,SANE  & $5/3$ & 30,000 & & & & & This work \\
-\hline
-Critical $\beta$ & & & & & & & & \\
-Stellar Wind Accretion & 0 & Stellar Wind & ? & & & & & \\
-Koral Long & \!\!\!\!\!\!0, $\pm0.3$, $\pm0.5$, $\pm0.7$, $\pm0.9$\!\!\!\!\!\! & MAD & ? & 100,000 & & & & & \\
-Tilted & ? & ? & ? & ? & & & & & Tilts at ...$^\circ$ \\
+iHARM/Illinois & 0,$\pm1/2$,$\pm15/16$ & MAD, SANE  & $4/3$ & 30,000 & ? & [1x1x1] & This work/patoka? \\
+BHAC/Frankfurt/Radboud & 0,$\pm1/2$,$\pm15/16$ & MAD, SANE  & $4/3$ & 30,000 & ?& AMR? & This work \\
+HAMR & 0,$\pm1/2$,$\pm15/16$ & MAD, SANE  & $13/9,5/3$ & 35,000 & 1000,200 & [348/240×192×192] &This work \\
+Koral Long &0,0.3,0.7,0.9 & MAD & ? & 100,000 & ? & ?&?\\
+HAMR-Tilted (Tilt=$?^\circ$) & $15/16$ & IN-SANE & $5/3$ & 100,000 & 100,000 & [448x144x240] & Chatterjee+20, Liska+18 \\
+Stellar Wind Accretion & 0 & Stellar Wind & ? & ? & ? &?& \citet{2019MNRAS.482L.123R}\\
 \enddata
-\caption{Summary of numerical models used in this paper.}
-\label{tab:parameters}
+\caption{Summary of GRMHD simulations in \sgra EHT GRMHD model library.}
+\label{tab:GRMHDmodels}
 \end{deluxetable*}
 
-%..............................................................................
-\subsubsection{Thermal Model}
 
-...
+\subsubsection{Gas Dynamics Simulations} 
 
-\paragraph{Illinois Models}
+% \paragraph{Methods, initial and boundary conditions:} 
+We model complex dynamics of RIAF/ADAF around a black hole by integrating standard relativistic equations of  non-radiative magnetohydrodynamics in Kerr metric where the black hole spin is a parameter (ref). We integrate the equations in three dimensions using several distinct numerical codes: iHARM (ref), BHAC (ref), HAMR (ref), Koral (ref) and Athena (ref). (For general comparison of GRMHD codes we refer the reader to the code comparison papers by Porth et al and Olivares et al. ).
+All simulations use adiabatic equation of state with adiabatic index, $\Gamma_{\rm ad}$, equal 5/3, 4/3 or 13/9. 
+In our standard simulation setup the plasma is initially confined into a Fishbone-Moncrief torus on co-rotating or counter-rotating orbit around the black hole. Only in one model, HARM-Tilted, started with torus angular momentum tilted with respect to black hole spin. The torus initial size is parametrized by the inner radius $R_{\rm in}=(6M,12M)$ and radius of the pressure maximum $R_{\rm max}=(12M,24M)$, where typically adopted values are given in parenthesis.  MAGNETIC FIELD AND FLUX MAD AND SANE
+All simulations in our library are evolved for at least 30000 M and up to 100,000M. In our standard models, the boundary conditions are set to "outflow" so the torus is a finite reservoir of matter.
+We also consider one non-standard GRMHD simulations in which \sgra black hole is feed directly by stellar winds produced by .... ARE THOSE SANE OR MADS?
+The content of the model library is summarized in Table~\ref{tab:GRMHDmodels}. Our simulations of \sgra are run at different numerical resolutions and using different numerical methods. We present convergence study between models and codes in Appendix~\ref{app:resolution_study}. We find that all solutions relax to quasitationary state and coverge to the same state? 
 
-% Please fill in basic information of the models in the following list.
-% Please add more details if necessary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}[noitemsep]
-\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-\item Magnetic Flux: MAD, SANE
-\item Adiabatic Index $\Gamma$: 4/3
-\item Time $t_\mathrm{final}$: 30,000$M$
-\item $\rho_0$: 3 different density normalization chosen for each parameter set for $t \in [15,000, 20,000), [20,000, 25,000), [25,000, 30,000)$.
-\item $R_\mathrm{high}$: 1, 10, 40, 160
-\item Inclination $i$: 10$^\circ$, 30$^\circ$, 50$^\circ$, ..., 170$^\circ$
-\item Resolution:
-\item Initial conditions:
-\item Reference: this work
-\item Status: w4 and w5 all done; w3 in progress
-\end{itemize}
 
-\paragraph{Frankfurt Models}
+\subsubsection{Electron distribution function models}
 
-% Please fill in basic information of the models in the following list.
-% Please add more details if necessary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}[noitemsep]
-\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-\item Magnetic Flux: MAD, SANE
-\item Adiabatic Index $\Gamma$: 4/3
-\item Time $t_\mathrm{final}$: 30000
-\item $\rho_0$: 3 different density normalizations chosen for each parameter set for $t \in [10,000, 15,000), [20,000, 25,000), [25,000, 30,000)$
-\item $R_\mathrm{high}$: 1, 2.5, 5, 10, 40, 160
-\item Inclination $i$: 10$^\circ$, 30$^\circ$, 50$^\circ$,..., 90$^\circ$ 
-\item Resolution:
-\item Initial conditions:
-\item Reference: this work
-\item Status: all done except for SANE a=-15o16
-\end{itemize}
+Most of our GRMHD models are carried out in dimensionless units and they are single fluid models meaning that they track total gas pressure or gas internal energy. To calculate model emission one has to make an assumption about electron distribution function (hereafter eDF). In this work we consider thermal and non-thremal electron distribution functions. In what follows we describe the details of our electron models.
 
-\paragraph{HAMR Models}
+\paragraph{Parametrized thermal electron distribution function}
+In thermal models electron energies are distributed 
+- thermal models, which parameters and which simulations, hilighting disk vs jet emission
+\begin{equation}
+\frac{T_i}{T_e} = R_{\rm high} \frac{b^2}{b^2+1} + R_{\rm low} \frac{1}{b^2+1} 
+\end{equation}
+where $b\equiv\beta/\beta_{crit}$, $\beta\equiv=P_{gas}/P_{mag}$. 
 
-% Please fill in basic information of the models in the following list.
-% Please add more details if necessary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}[noitemsep]
-\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-\item Magnetic Flux: MAD, SANE
-\item Adiabatic Index $\Gamma$: 13/9, 5/3
-\item Time $t_\mathrm{final}$: $35,000M$
-\item $\rho_0$: 1 density normalization for $[30,000-35,000)M$
-\item $R_\mathrm{high}$: 1, 40, 160
-\item Inclination $i$: 10$^\circ$, 50$^\circ$, 90$^\circ$
-\item Resolution: $348\times 192\times 192$, $240\times 192\times 192$
-\item Initial conditions: FM: $r_{\rm in}=6, 20M$; $r_{\rm pmax}=12, 41M$
-\item Grid outer radius: $1000M$, $200M$
-\item Reference: this work
-\item Status: GRMHD simulations done
-\end{itemize}
+\paragraph{Self-consistent thermal electron distribution function}
 
-%..............................................................................
-\subsubsection{Non-thermal (power-law )Models}
-
-...
-
-\paragraph{Frankfurt Models}
-
-% Please fill in basic information of the models in the following list.
-% Please add more details if necessary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}[noitemsep]
-\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-\item Magnetic Flux: MAD, SANE
-\item Adiabatic Index $\Gamma$: 
-\item Time $t_\mathrm{final}$: 
-\item $\rho_0$: 
-\item Power law fraction $f$:
-\item Power law index $p$:
-\item Inclination $i$:
-\item Reference:
-\item Status: no power-law model so far 
-\end{itemize}
-
-\paragraph{HAMR Models}
-
-% Please fill in basic information of the models in the following list.
-% Please add more details if necessary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}[noitemsep]
-\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-\item Magnetic Flux: MAD, SANE
-\item Adiabatic Index $\Gamma$: 13/9, 5/3
-\item Time $t_\mathrm{final}$: $35,000M$
-\item $\rho_0$: 1 density normalization for $[30,000-35,000)M$
-\item $R_\mathrm{high}$: 1, 40, 160
-\item Inclination $i$: 10$^\circ$, 50$^\circ$, 90$^\circ$
-\item Resolution: $348\times 192\times 192$, $240\times 192\times 192$
-\item Initial conditions: FM: $r_{\rm in}=6, 20M$; $r_{\rm pmax}=12, 41M$
-\item Grid outer radius: $1000M$, $200M$
-\item Reference: this work
-\item Status: GRMHD simulations same as for thermal models
-\end{itemize}
-
-%..............................................................................
-\subsubsection{Non-thermal ($\kappa$) Models}
-
-...
-
-% Please fill in basic information of the models in the following list.
-% Please add more details if necessary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}[noitemsep]
-\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-\item Magnetic Flux: MAD, SANE
-\item Adiabatic Index $\Gamma$:
-\item Time $t_\mathrm{final}$:
-\item $\rho_0$:
-\item $\kappa$:
-\item Inclination $i$:
-\item Reference:
-\item Status:
-\end{itemize}
-
-\paragraph{Frankfurt Models}
-
-% Please fill in basic information of the models in the following list.
-% Please add more details if necessary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}[noitemsep]
-\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-\item Magnetic Flux: MAD, SANE
-\item Adiabatic Index $\Gamma$: 4/3
-\item Time $t_\mathrm{final}$: 30000
-\item $\rho_0$: individual normalisation for each kappa model; only  for $t \in [25,000, 30,000)$
-\item $\kappa$: variable $\kappa(\beta, \sigma)$, fixed $\kappa=3.5$ with $\epsilon=\epsilon_{0} f(\beta,\sigma)$ for $\epsilon_{0}=0.05,0.10,0.20$
-\item $R_\mathrm{high}$: 1, 2.5, 5, 10, 40, 160
-\item Inclination $i$: 10$^\circ$, 30$^\circ$, 50$^\circ$,..., 90$^\circ$ 
-\item Reference: this work
-\item Status: in production
-\end{itemize}
-
-\paragraph{HAMR Models}
-
-% Please fill in basic information of the models in the following list.
-% Please add more details if necessary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}[noitemsep]
-\item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-\item Magnetic Flux: MAD, SANE
-\item Adiabatic Index $\Gamma$: 13/9, 5/3
-\item Time $t_\mathrm{final}$: $35,000M$
-\item $\rho_0$: 1 density normalization for $[30,000-35,000)M$
-\item $\kappa$: variable $\kappa (\beta, \sigma)$
-\item $R_\mathrm{high}$: 1, 40, 160
-\item Inclination $i$: 10$^\circ$, 50$^\circ$, 90$^\circ$
-\item Resolution: $348\times 192\times 192$, $240\times 192\times 192$
-\item Initial conditions: FM: $r_{\rm in}=6, 20M$; $r_{\rm pmax}=12, 41M$
-\item Grid outer radius: $1000M$, $200M$
-\item Reference: this work
-\item Status:
-\end{itemize}
-
-%..............................................................................
-\subsubsection{Critical $\beta$ Models}
-
-% Please fill in basic information of the models in the following list.
-% Please add more details if necessary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}[noitemsep]
-\item $a_\mathrm{spin}$:
-\item Magnetic Flux: MAD, SANE
-\item Adiabatic Index $\Gamma$:
-\item Time $t_\mathrm{final}$:
-\item $\rho_0$:
-\item Power law fraction $f$:
-\item Power law index $p$:
-\item Inclination $i$:
-\item Reference:
-\item Status:
-\end{itemize}
-
-%..............................................................................
-\subsubsection{Stellar Wind Accretion Models}
-
-% Please fill in basic information of the models in the following list.
-% Please add more details if necessary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}[noitemsep]
-\item $a_\mathrm{spin}$: 0
-\item Magnetic Flux: MAD, SANE
-\item Adiabatic Index $\Gamma$:
-\item Time $t_\mathrm{final}$:
-\item $\rho_0$:
-\item Power law fraction $f$:
-\item Power law index $p$:
-\item Inclination $i$:
-\item Reference:
-\item Status:
-\end{itemize}
-
-%..............................................................................
-\subsubsection{Koral Long MAD Models}
-
-% Please fill in basic information of the models in the following list.
-% Please add more details if necessary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}[noitemsep]
-\item $a_\mathrm{spin}$: 0, $\pm0.3$, $\pm0.5$, $\pm0.7$, $\pm0.9$
-\item Magnetic Flux: MAD
-\item Adiabatic Index $\Gamma$:
-\item Time $t_\mathrm{final}$: 100,000$M$
-\item $\rho_0$:
-\item Power law fraction $f$:
-\item Power law index $p$:
-\item Inclination $i$:
-\item Reference:
-\item Status:
-\end{itemize}
-
-%..............................................................................
-\subsubsection{Tilted Models}
-
-% Please fill in basic information of the models in the following list.
-% Please add more details if necessary. A full paragraph description
-% of the model is welcome, but not required at this point.
-\begin{itemize}[noitemsep]
-\item $a_\mathrm{spin}$: $+15/16$
-\item Magnetic Flux: INSANE
-\item Adiabatic Index $\Gamma$: 5/3
-\item Time $t_\mathrm{final}$: $>100,000M$
-\item $\rho_0$: 1 density normalization for $[100,000-103,000)M$
-\item $R_\mathrm{high}$: 1, 40, 160
-\item Inclination $i$: 10$^\circ$, 50$^\circ$, 90$^\circ$
-\item Resolution: $448\times 144\times 240$,
-\item Initial conditions: FM: $r_{\rm in}=12.5M$; $r_{\rm pmax}=25M$
-\item Grid outer radius: $100,000M$
-\item Reference: Chatterjee+20, Liska+18
-\end{itemize}
-
-%------------------------------------------------------------------------------
-\subsection{Cross Comparison Among Models}
+\paragraph{Non-thermal electron distribution functions}
+- nonthermal models, which parameters and which simulations, motivation and references to previous work
 
 \begin{itemize}
-\item Are GRMHD simulations from different group consistent with each other?
-\item Do GRMHD simulations reduce to semi-analytical models?
-\item Do GRMHD and semi-analytical models reduce to the one-zone model?
+\item $\kappa$-model with $\kappa = 5$ everywhere.
+\item $\kappa$-model with $\kappa = \kappa(\sigma)$ prescription
+  \citep{2016ApJ...826...77B}.
+\item Mixed thermal-non-thermal models $\kappa = 3.5$ with $\eta =
+  \eta(\sigma)$ using $\Rh$ like prescription; $\eta$ range from 0\%
+  to 20\%.
 \end{itemize}
+
+
+
+\subsubsection{Emission Simulations}
+
+\paragraph{Model Images}
+Model images are ray-traced at two frequencies: at the GMVA 86 GHz and at EHT frequency of 230 GHz. Ray-tracing simulations are carried out using several numerical codes (ipole, BHOSS, ? list codes are references). A detailed comparison between numerical radiative transfer methods presented in Gold et al. 2021 and in Prather et al. 2021 shows agreement between codes sufficient to make no difference. Our images are generated with different field-of-view, resolution (see discussion in Appendix B2).
+LIST ALL IMAGING PARAMETERS. REFERE TO TABLE 2.
+
+\paragraph{Model Spectra}
+HOW DO WE COMPUTE SEDS? refere to appendix for numerical details/
+
+\subsection{Summary of astrophysical models}
+summary of how many image templates we have and are they consistent with single zone model estimates?
+
+\monika{edited until here, but not finished}
+
+
+
+
+ 
+
+\begin{deluxetable*}{cccccccccccccc}
+\tabletypesize{\footnotesize}
+\renewcommand{\arraystretch}{1.5}
+\tablehead{
+  \colhead{$R_{\rm low}$} & \colhead{$R_{\rm high}$} & \colhead{\beta_{crit}} & \colhead{$p$} & \colhead{$\gamma_{\rm min/max}$}&  \colhead{$\kappa$} & \colhead{$i^\circ$} & \colhead{$\rho_{unit}$} & \colhead{$\nu$[GHz]} & \colhead{SED} &\colhead{$\Delta t$[1000 M]}& #snapshots &\colhead{Name}}
+\startdata
+\multicolumn{13}{c}{Thermal models}\\
+1 & [1;10;40;160] & 1 & - &  - & - & [10,30,...,170] & 3 & [86,230] & yes & [15,20) & x & iHARM-Thermal1\\
+1 & [1;10;40;160] & 1 & - &  - & - & [10,30,...,170] & 3 & [86,230] & yes & [20-25) & x & iHARM-Thermal2\\
+1 & [1;10;40;160] & 1 & - &  - & - & [10,30,...,170] & 3 & [86,230] & yes & [25-30) & x & iHARM-Thermal3\\
+1 & [1;2.5;5;10;40;160] & 1 &  - & - & - & [10,30,...,90] & 3 & [86,230] & yes & [10-15) & x & BHAC-Thermal1\\
+1 & [1;2.5;5;10;40;160] & 1 & - &  - & - & [10,30,...,90] & 3 & [86,230] & yes & [20-25) & x & BHAC-Thermal2\\1 & [1;2.5;5;10;40;160] & 1 & - &  - & - & [10,30,...,90] & 3 & [86,230] & yes & [25-30) & x & BHAC-Thermal3\\
+1 & [1,40,160] & 1 & - & - & - & [10,50,90] & 1 & [230] & ? & ? & x & HAMR-Thermal\\
+\hline
+\multicolumn{13}{c}{Non-thermal power-law models}\\
+- & - & - & ?  & ? & - & & & & & \\
+\hline
+\multicolumn{13}{c}{Non-thermal $\kappa$ models}\\
+- & - & - & -  & - & 5 & & & & & \\
+- & - & - & -  & - & 3.5 & & & & & \\
+- & - & - & -  & - & $\kappa(\beta,\sigma)$ & & & & & \\
+\enddata
+\caption{Summary of emission simulations in \sgra EHT model library.}~\label{tab:radiativemodels}
+\end{deluxetable*}
+
+
+% ----------------------------
+
+% %..............................................................................
+% \subsubsection{Thermal Models}
+
+% ...
+
+% \paragraph{Illinois Models}
+
+% % Please fill in basic information of the models in the following list.
+% % Please add more details if necessary. A full paragraph description
+% % of the model is welcome, but not required at this point.
+% \begin{itemize}[noitemsep]
+% \item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
+% \item Magnetic Flux: MAD, SANE
+% \item Adiabatic Index $\Gamma$: 4/3
+% \item Time $t_\mathrm{final}$: 30,000$M$
+% \item $\rho_0$: 3 different density normalization chosen for each parameter set for $t \in [15,000, 20,000), [20,000, 25,000), [25,000, 30,000)$.
+% \item $R_\mathrm{high}$: 1, 10, 40, 160
+% \item Inclination $i$: 10$^\circ$, 30$^\circ$, 50$^\circ$, ..., 170$^\circ$
+% \item Resolution:
+% \item Initial conditions:
+% \item Reference: this work
+% \item Status: w4 and w5 all done; w3 in progress
+% \end{itemize}
+
+% \paragraph{Frankfurt Models}
+
+% % Please fill in basic information of the models in the following list.
+% % Please add more details if necessary. A full paragraph description
+% % of the model is welcome, but not required at this point.
+% \begin{itemize}[noitemsep]
+% \item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
+% \item Magnetic Flux: MAD, SANE
+% \item Adiabatic Index $\Gamma$: 4/3
+% \item Time $t_\mathrm{final}$: 30000
+% \item $\rho_0$: 3 different density normalizations chosen for each parameter set for $t \in [10,000, 15,000), [20,000, 25,000), [25,000, 30,000)$
+% \item $R_\mathrm{high}$: 1, 2.5, 5, 10, 40, 160
+% \item Inclination $i$: 10$^\circ$, 30$^\circ$, 50$^\circ$,..., 90$^\circ$ 
+% \item Resolution:
+% \item Initial conditions:
+% \item Reference: this work
+% \item Status: all done except for SANE a=-15o16
+% \end{itemize}
+
+% \paragraph{HAMR Models}
+
+% % Please fill in basic information of the models in the following list.
+% % Please add more details if necessary. A full paragraph description
+% % of the model is welcome, but not required at this point.
+% \begin{itemize}[noitemsep]
+% \item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
+% \item Magnetic Flux: MAD, SANE
+% \item Adiabatic Index $\Gamma$: 13/9, 5/3
+% \item Time $t_\mathrm{final}$: $35,000M$
+% \item $\rho_0$: 1 density normalization for $[30,000-35,000)M$
+% \item $R_\mathrm{high}$: 1, 40, 160
+% \item Inclination $i$: 10$^\circ$, 50$^\circ$, 90$^\circ$
+% \item Resolution: $348\times 192\times 192$, $240\times 192\times 192$
+% \item Initial conditions: FM: $r_{\rm in}=6, 20M$; $r_{\rm pmax}=12, 41M$
+% \item Grid outer radius: $1000M$, $200M$
+% \item Reference: this work
+% \item Status: GRMHD simulations done
+% \end{itemize}
+
+% %..............................................................................
+% \subsubsection{Non-thermal (power-law )Models}
+
+% ...
+
+% \paragraph{Frankfurt Models}
+
+% % Please fill in basic information of the models in the following list.
+% % Please add more details if necessary. A full paragraph description
+% % of the model is welcome, but not required at this point.
+% \begin{itemize}[noitemsep]
+% \item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
+% \item Magnetic Flux: MAD, SANE
+% \item Adiabatic Index $\Gamma$: 
+% \item Time $t_\mathrm{final}$: 
+% \item $\rho_0$: 
+% \item Power law fraction $f$:
+% \item Power law index $p$:
+% \item Inclination $i$:
+% \item Reference:
+% \item Status: no power-law model so far 
+% \end{itemize}
+
+% \paragraph{HAMR Models}
+
+% % Please fill in basic information of the models in the following list.
+% % Please add more details if necessary. A full paragraph description
+% % of the model is welcome, but not required at this point.
+% \begin{itemize}[noitemsep]
+% \item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
+% \item Magnetic Flux: MAD, SANE
+% \item Adiabatic Index $\Gamma$: 13/9, 5/3
+% \item Time $t_\mathrm{final}$: $35,000M$
+% \item $\rho_0$: 1 density normalization for $[30,000-35,000)M$
+% \item $R_\mathrm{high}$: 1, 40, 160
+% \item Inclination $i$: 10$^\circ$, 50$^\circ$, 90$^\circ$
+% \item Resolution: $348\times 192\times 192$, $240\times 192\times 192$
+% \item Initial conditions: FM: $r_{\rm in}=6, 20M$; $r_{\rm pmax}=12, 41M$
+% \item Grid outer radius: $1000M$, $200M$
+% \item Reference: this work
+% \item Status: GRMHD simulations same as for thermal models
+% \end{itemize}
+
+% %..............................................................................
+% \subsubsection{Non-thermal ($\kappa$) Models}
+
+% ...
+
+% % Please fill in basic information of the models in the following list.
+% % Please add more details if necessary. A full paragraph description
+% % of the model is welcome, but not required at this point.
+% \begin{itemize}[noitemsep]
+% \item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
+% \item Magnetic Flux: MAD, SANE
+% \item Adiabatic Index $\Gamma$:
+% \item Time $t_\mathrm{final}$:
+% \item $\rho_0$:
+% \item $\kappa$:
+% \item Inclination $i$:
+% \item Reference:
+% \item Status:
+% \end{itemize}
+
+% \paragraph{Frankfurt Models}
+
+% % Please fill in basic information of the models in the following list.
+% % Please add more details if necessary. A full paragraph description
+% % of the model is welcome, but not required at this point.
+% \begin{itemize}[noitemsep]
+% \item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
+% \item Magnetic Flux: MAD, SANE
+% \item Adiabatic Index $\Gamma$: 4/3
+% \item Time $t_\mathrm{final}$: 30000
+% \item $\rho_0$: individual normalisation for each kappa model; only  for $t \in [25,000, 30,000)$
+% \item $\kappa$: variable $\kappa(\beta, \sigma)$, fixed $\kappa=3.5$ with $\epsilon=\epsilon_{0} f(\beta,\sigma)$ for $\epsilon_{0}=0.05,0.10,0.20$
+% \item $R_\mathrm{high}$: 1, 2.5, 5, 10, 40, 160
+% \item Inclination $i$: 10$^\circ$, 30$^\circ$, 50$^\circ$,..., 90$^\circ$ 
+% \item Reference: this work
+% \item Status: in production
+% \end{itemize}
+
+% \paragraph{HAMR Models}
+
+% % Please fill in basic information of the models in the following list.
+% % Please add more details if necessary. A full paragraph description
+% % of the model is welcome, but not required at this point.
+% \begin{itemize}[noitemsep]
+% \item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
+% \item Magnetic Flux: MAD, SANE
+% \item Adiabatic Index $\Gamma$: 13/9, 5/3
+% \item Time $t_\mathrm{final}$: $35,000M$
+% \item $\rho_0$: 1 density normalization for $[30,000-35,000)M$
+% \item $\kappa$: variable $\kappa (\beta, \sigma)$
+% \item $R_\mathrm{high}$: 1, 40, 160
+% \item Inclination $i$: 10$^\circ$, 50$^\circ$, 90$^\circ$
+% \item Resolution: $348\times 192\times 192$, $240\times 192\times 192$
+% \item Initial conditions: FM: $r_{\rm in}=6, 20M$; $r_{\rm pmax}=12, 41M$
+% \item Grid outer radius: $1000M$, $200M$
+% \item Reference: this work
+% \item Status:
+% \end{itemize}
+
+% %..............................................................................
+% \subsubsection{Critical $\beta$ Models}
+
+% % Please fill in basic information of the models in the following list.
+% % Please add more details if necessary. A full paragraph description
+% % of the model is welcome, but not required at this point.
+% \begin{itemize}[noitemsep]
+% \item $a_\mathrm{spin}$:
+% \item Magnetic Flux: MAD, SANE
+% \item Adiabatic Index $\Gamma$:
+% \item Time $t_\mathrm{final}$:
+% \item $\rho_0$:
+% \item Power law fraction $f$:
+% \item Power law index $p$:
+% \item Inclination $i$:
+% \item Reference:
+% \item Status:
+% \end{itemize}
+
+% %..............................................................................
+% \subsubsection{Stellar Wind Accretion Models}
+
+% % Please fill in basic information of the models in the following list.
+% % Please add more details if necessary. A full paragraph description
+% % of the model is welcome, but not required at this point.
+% \begin{itemize}[noitemsep]
+% \item $a_\mathrm{spin}$: 0
+% \item Magnetic Flux: MAD, SANE
+% \item Adiabatic Index $\Gamma$:
+% \item Time $t_\mathrm{final}$:
+% \item $\rho_0$:
+% \item Power law fraction $f$:
+% \item Power law index $p$:
+% \item Inclination $i$:
+% \item Reference:
+% \item Status:
+% \end{itemize}
+
+% %..............................................................................
+% \subsubsection{Koral Long MAD Models}
+
+% % Please fill in basic information of the models in the following list.
+% % Please add more details if necessary. A full paragraph description
+% % of the model is welcome, but not required at this point.
+% \begin{itemize}[noitemsep]
+% \item $a_\mathrm{spin}$: 0, $\pm0.3$, $\pm0.5$, $\pm0.7$, $\pm0.9$
+% \item Magnetic Flux: MAD
+% \item Adiabatic Index $\Gamma$:
+% \item Time $t_\mathrm{final}$: 100,000$M$
+% \item $\rho_0$:
+% \item Power law fraction $f$:
+% \item Power law index $p$:
+% \item Inclination $i$:
+% \item Reference:
+% \item Status:
+% \end{itemize}
+
+% %..............................................................................
+% \subsubsection{Tilted Models}
+
+% % Please fill in basic information of the models in the following list.
+% % Please add more details if necessary. A full paragraph description
+% % of the model is welcome, but not required at this point.
+% \begin{itemize}[noitemsep]
+% \item $a_\mathrm{spin}$: $+15/16$
+% \item Magnetic Flux: INSANE
+% \item Adiabatic Index $\Gamma$: 5/3
+% \item Time $t_\mathrm{final}$: $>100,000M$
+% \item $\rho_0$: 1 density normalization for $[100,000-103,000)M$
+% \item $R_\mathrm{high}$: 1, 40, 160
+% \item Inclination $i$: 10$^\circ$, 50$^\circ$, 90$^\circ$
+% \item Resolution: $448\times 144\times 240$,
+% \item Initial conditions: FM: $r_{\rm in}=12.5M$; $r_{\rm pmax}=25M$
+% \item Grid outer radius: $100,000M$
+% \item Reference: Chatterjee+20, Liska+18
+% \end{itemize}
+

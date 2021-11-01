@@ -1,20 +1,63 @@
-\section{Observational Constraints}\label{sec:observations}
+\section{Observations}\label{sec:observations}
 
 [CG to write first pass]
 
-\subsection{Standard Measurement and Assumptions}
-\subsubsection{Scattering Models}
+Sgr A* is one of the most observed objects in the sky.   We know a great deal about it from measurements conducted with a slew of telescopes, across 5 decades in time and more than 17 decades in frequency.  We must select a manageable subset of this data for comparison with the models.  The goal is to select (1) approximately uncorrelated constraints, so that each can test a distinct aspect of the model; (2) constraints based on data that can be simulated with the  models; (3) constraints based on EHT 2017 1.3mm VLBI data or based on photons produced within or close to the 1.3mm emission region.
 
-\subsection{EHT Observations}
-\subsubsection{230\,GHz Light Curve Variability}
+%==============================================================================
+\subsection{Standard Measurement and Assumptions}
+
+% \subsubsection{Scattering Models}
+
+%==============================================================================
+\subsection{EHT Observations Constraints}
+
+%==============================================================================
+
 \subsubsection{230\,GHz VLBI Null Locations}
+
 \subsubsection{230\,GHz VLBI Pre-Image Size}
-\subsubsection{230\,GHz VLBI Ring Size}
+
+The second moment of an EHT source corresponds, in the $uv$ domain, to the curvature of the visibility amplitude near zero baseline length.  That is, the 2nd moment tensor
+\begin{equation}
+    \sigma_{ij} \equiv \int \, d^2x\, x_i x_j I/\int \, d^2x \, I = (2\pi)^2 \left(\partial_i \partial_j \tilde{I}\right)/\tilde{I}
+\end{equation}
+where $I$ is the intensity, $\tilde{I}$ its Fourier transform, $i = x,y$ on the left and $i = u,v$ on the right, and the terms on the right are evaluated at $u = v = 0$.  A pair of visibility amplitudes ($|\tilde{I}|$) on short baselines or zero can therefore be used to estimate the second moments of the image.  
+
+This procedure is used in EHT3 to set an upper limit of $95\mu$as on the scattered source size and lower limit of $38\mu$as.  
+
+\subsubsection{230\,GHz M-Ring Fitting}
+
+EHT4 fits an ``m-ring'' source model to the 7 April data.  The simplified m-ring model we use here takes $I$ to be a $\delta$ function in radius multiplied by a truncated Fourier series, and convolves it with a Gaussian.  The resulting model is
+\begin{equation}
+    I(r,\theta) = 
+\end{equation}
+
 \subsubsection{230\,GHz VLBI Ring Thickness}
+
 \subsubsection{230\,GHz VLBI Ring Asymmetry}
 
-\subsection{Non-EHT Observations}
+
+
+%==============================================================================
+\subsection{Non-EHT Observations Constraints}
+
 \subsubsection{86\,GHz Flux}
 \subsubsection{86\,GHz Image Size}
 \subsubsection{NIR (Non-Overproduction) Constraints}
 \subsubsection{X-ray (Non-Overproduction) Constraints}
+
+%==============================================================================
+\subsection{Time Dependence}
+
+\subsubsection{EHT (Baseline variability)}
+
+
+
+\subsubsection{Non-EHT (ALMA Lightcurve)}
+
+ALMA produced a light curve for Sgr A* at 230GHz as a byproduct of the 2017 EHT campaign.  The light curve is presented and analyzed in \cite{wielgus2021}. We have chosen to compare the models to the 7 April 2017 ALMA light using the 3 hour {\em modulation index} $M_3$, where $M_T \equiv \sigma/\mu$, $\sigma$ is the standard deviation measured over some interval $T$, and $\mu$ is the mean measured over the same interval.  
+
+We use $M_T$ because it is: easy to describe; easy to compute; commonly used in the literature (in the X-ray astronomy literature it is ``rms \%''); and closely related to the structure function, since the expectation value for $\sigma^2$ is given by an integral over the structure function (see Lee et al. 2021).  We use $T = 3$ hours because: 3 hours is similar to the correlation time for $F_{230}$ in most of the models; 3 hours is similar to the characteristic timescales measured in damped random walk fits to the ALMA lightcurve (see table 9 of Wielgus et al.); 3 hours is the longest timescale for which we can consistently estimate the mean and variance of the distribution of MI$_3$ from the models.  One can show that for a damped random walk that $M_3$ is very weakly correlated over successive 3 hour intervals (Lee et al. 2021).
+
+The constraint comes $M_T$ measured over 3 maximally spaced intervals in the 7 April 2017 ALMA light curve, where $M_3 = 0.024, 0.051, 0.047$ (Wielgus et al. 2021).  These values are consistent with values drawn from historical light curves.
