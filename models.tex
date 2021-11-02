@@ -7,14 +7,15 @@
 %==============================================================================
 \subsection{Basic assumptions}\label{sec:basic}
 
-Through out the paper we adopt a mean of \citet{2019Sci...365..664D} and
-\citet{2019A&A...625L..10G} and fix the mass and distance of \sgra to
+Through out the paper we adopt mass and distance for \sgra to be
 \begin{align}
   \mbh &= (4.14 \pm 0.014) \times 10^6 \msun,\\
   D    &= (8.127 \pm 0.023) \kpc.
 \end{align}
+which is approximately the mean of \citet{2019Sci...365..664D} and
+\citet{2019A&A...625L..10G}.
 
-In this work we assume that \sgra is a black hole so that the spacetime around it is described by Schwarzschild or Kerr metric. The black hole dimensionless spin, $\abh$, is treated as a free parameter in range: $-1 < \abh < 1$, where $\abh \equiv Jc/G\mbh^2$, where $J$, $G$, and $c$ are the black
+We will assume that \sgra is a black hole so that the spacetime around it is described by Schwarzschild or Kerr metric. The black hole dimensionless spin, $\abh$, is treated as a free parameter in range: $-1 < \abh < 1$, where $\abh \equiv Jc/G\mbh^2$, where $J$, $G$, and $c$ are the black
 hole angular momentum, gravitational constant, and speed of light,
 respectively \footnote{We follow the convention of \citetalias{M87PaperV} that
 $\abh < 0$ indicate anti-aligned angular momentum between the
@@ -121,6 +122,12 @@ Stellar Wind Accretion & 0 & Stellar Wind & ? & ? & ? &?& \citet{2019MNRAS.482L.
 %------------------------------------------------------------------------------
 \subsubsection{Gas Dynamics Simulations} 
 
+\begin{figure*}[]
+  [altex: grid plot showing equaltorial and verical slides, and $phi$ averaged density, temperature, etc of MAD and SANE.]
+  \caption{Flow properties of fiducial GRMHD models.  ...}
+\label{fig:data_comp}
+\end{figure*}
+
 % \paragraph{Methods, initial and boundary conditions:} 
 We model complex dynamics of RIAF/ADAF around a black hole by integrating standard relativistic equations of  non-radiative magnetohydrodynamics in Kerr metric where the black hole spin is a parameter (ref). We integrate the equations in three dimensions using several distinct numerical codes: iHARM (ref), BHAC (ref), HAMR (ref), Koral (ref) and Athena (ref). (For general comparison of GRMHD codes we refer the reader to the code comparison papers by Porth et al and Olivares et al. ).
 All simulations use adiabatic equation of state with adiabatic index, $\Gamma_{\rm ad}$, equal 5/3, 4/3 or 13/9. 
@@ -132,7 +139,19 @@ The content of the model library is summarized in Table~\ref{tab:GRMHDmodels}. O
 %------------------------------------------------------------------------------
 \subsubsection{Electron distribution function models}
 
+\begin{figure}[]
+  [altex: assumed electron distribution functions]
+  \caption{The assumed eDF in thermal and kappa models.}
+  \label{fig:data_comp}
+\end{figure}
+
 Most of our GRMHD models are carried out in dimensionless units and they are single fluid models meaning that they track total gas pressure or gas internal energy. To calculate model emission one has to make an assumption about electron distribution function (hereafter eDF). In this work we consider thermal and non-thremal electron distribution functions. In what follows we describe the details of our electron models.
+
+\begin{figure*}[]
+  [altex: emissivity from different models]
+  \caption{Emissivity from thermal, critical beta, kappa, and variable kappa models.}
+  \label{fig:data_comp}
+\end{figure*}
 
 \paragraph{Parametrized thermal electron distribution function}
 In thermal models electron energies are distributed 
@@ -159,9 +178,21 @@ where $b\equiv\beta/\beta_{crit}$, $\beta\equiv=P_{gas}/P_{mag}$.
 %------------------------------------------------------------------------------
 \subsubsection{Emission Simulations}
 
+\begin{figure*}[]
+  [altex: Fiducial images at different wavelenghts]
+  \caption{Fiducial images at different wavelenghts.}
+  \label{fig:fiducial_imgs}
+\end{figure*}
+
 \paragraph{Model Images}
 Model images are ray-traced at two frequencies: at the GMVA 86 GHz and at EHT frequency of 230 GHz. Ray-tracing simulations are carried out using several numerical codes (ipole, BHOSS, ? list codes are references). A detailed comparison between numerical radiative transfer methods presented in Gold et al. 2021 and in Prather et al. 2021 shows agreement between codes sufficient to make no difference. Our images are generated with different field-of-view, resolution (see discussion in Appendix B2).
 LIST ALL IMAGING PARAMETERS. REFERE TO TABLE 2.
+
+\begin{figure*}[]
+  [altex: Fiducial SEDs]
+  \caption{Fiducial SEDs.}
+  \label{fig:fiducial_SEDs}
+\end{figure*}
 
 \paragraph{Model Spectra}
 HOW DO WE COMPUTE SEDS? refere to appendix for numerical details/
