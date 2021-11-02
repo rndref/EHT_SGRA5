@@ -12,10 +12,19 @@ Sgr A* is one of the most observed objects in the sky.   We know a great deal ab
 %==============================================================================
 \subsection{EHT Observations Constraints}
 
-%==============================================================================
+\begin{figure*}
+    \centering
+    %\includegraphics{}
+    [altex: (left) visibility amplitude vs baseline for the day(s) that this study use, overplotted by the visibility amplitude from a fiducial model.  Similar to paper~II, figure~7.  Visually mark null location constraint, pre-imaging size (i.e., second moment).  (right) SED from Gurther overplotted by the SEDs from a fiducial model.  Visually mark the SED constraints.]
+    \caption{(\emph{left}) Measured correlated flux densities of \sgra on [DAY X] from the HOPS pipeline overplotted with a fiducial GRMHD+GRRT model.   Details on the data can be found in paper~II, section~5.  A description of the fiducial model is in section~\ref{sec:models}. (\emph{right}) 
+    \ckc{Q: do we want to show only EHT observation and referencing to other papers for non-EHT constraints?  Or should we have representative figures for all measurements?}}
+    \label{fig:my_label}
+\end{figure*}
 
+%------------------------------------------------------------------------------
 \subsubsection{230\,GHz VLBI Null Locations}
 
+%------------------------------------------------------------------------------
 \subsubsection{230\,GHz VLBI Pre-Image Size}
 
 The second moment of an EHT source corresponds, in the $uv$ domain, to the curvature of the visibility amplitude near zero baseline length.  That is, the 2nd moment tensor
@@ -26,6 +35,7 @@ where $I$ is the intensity, $\tilde{I}$ its Fourier transform, $i = x,y$ on the 
 
 This procedure is used in EHT3 to set an upper limit of $95\mu$as on the scattered source size and lower limit of $38\mu$as.  
 
+%------------------------------------------------------------------------------
 \subsubsection{230\,GHz M-Ring Fitting}
 
 EHT4 fits an ``m-ring'' source model to the 7 April data.  The simplified m-ring model we use here takes $I$ to be a $\delta$ function in radius multiplied by a truncated Fourier series, and convolves it with a Gaussian.  The resulting model is
@@ -33,27 +43,39 @@ EHT4 fits an ``m-ring'' source model to the 7 April data.  The simplified m-ring
     I(r,\theta) = 
 \end{equation}
 
+%------------------------------------------------------------------------------
 \subsubsection{230\,GHz VLBI Ring Thickness}
 
+
+%------------------------------------------------------------------------------
 \subsubsection{230\,GHz VLBI Ring Asymmetry}
-
-
 
 %==============================================================================
 \subsection{Non-EHT Observations Constraints}
 
+%------------------------------------------------------------------------------
 \subsubsection{86\,GHz Flux}
+
+%------------------------------------------------------------------------------
 \subsubsection{86\,GHz Image Size}
+
+%------------------------------------------------------------------------------
 \subsubsection{NIR (Non-Overproduction) Constraints}
+
+%------------------------------------------------------------------------------
 \subsubsection{X-ray (Non-Overproduction) Constraints}
 
 %==============================================================================
 \subsection{Time Dependence}
 
+\ckc{we can model "long-term climate" well but not "long-term weather".  Hence we only compare the slowly varying quantities such as mean 2nd moments (climate) but not modulation index (depends on weather).  TODO: look up correct statistical terminology in weather/climate modeling and build that this into this paper.}
+
+%------------------------------------------------------------------------------
 \subsubsection{EHT (Baseline variability)}
 
+...
 
-
+%------------------------------------------------------------------------------
 \subsubsection{Non-EHT (ALMA Lightcurve)}
 
 ALMA produced a light curve for Sgr A* at 230GHz as a byproduct of the 2017 EHT campaign.  The light curve is presented and analyzed in \cite{wielgus2021}. We have chosen to compare the models to the 7 April 2017 ALMA light using the 3 hour {\em modulation index} $M_3$, where $M_T \equiv \sigma/\mu$, $\sigma$ is the standard deviation measured over some interval $T$, and $\mu$ is the mean measured over the same interval.  
@@ -61,3 +83,15 @@ ALMA produced a light curve for Sgr A* at 230GHz as a byproduct of the 2017 EHT 
 We use $M_T$ because it is: easy to describe; easy to compute; commonly used in the literature (in the X-ray astronomy literature it is ``rms \%''); and closely related to the structure function, since the expectation value for $\sigma^2$ is given by an integral over the structure function (see Lee et al. 2021).  We use $T = 3$ hours because: 3 hours is similar to the correlation time for $F_{230}$ in most of the models; 3 hours is similar to the characteristic timescales measured in damped random walk fits to the ALMA lightcurve (see table 9 of Wielgus et al.); 3 hours is the longest timescale for which we can consistently estimate the mean and variance of the distribution of MI$_3$ from the models.  One can show that for a damped random walk that $M_3$ is very weakly correlated over successive 3 hour intervals (Lee et al. 2021).
 
 The constraint comes $M_T$ measured over 3 maximally spaced intervals in the 7 April 2017 ALMA light curve, where $M_3 = 0.024, 0.051, 0.047$ (Wielgus et al. 2021).  These values are consistent with values drawn from historical light curves.
+
+%==============================================================================
+\subsection{Future Constraints}
+
+\monika{this section should be moved to the end of the paper}
+integrated polarization,
+
+resolved polarization
+
+fits to more sophisticated models such as RIAF analytic models,
+
+closure phase variability

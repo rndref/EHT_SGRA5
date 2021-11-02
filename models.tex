@@ -4,6 +4,7 @@
 [{\bf Monika's first pass}]
 \color{black}
 
+%==============================================================================
 \subsection{Basic assumptions}\label{sec:basic}
 
 Through out the paper we adopt a mean of \citet{2019Sci...365..664D} and
@@ -13,7 +14,6 @@ Through out the paper we adopt a mean of \citet{2019Sci...365..664D} and
   D    &= (8.127 \pm 0.023) \kpc.
 \end{align}
 
-
 In this work we assume that \sgra is a black hole so that the spacetime around it is described by Schwarzschild or Kerr metric. The black hole dimensionless spin, $\abh$, is treated as a free parameter in range: $-1 < \abh < 1$, where $\abh \equiv Jc/G\mbh^2$, where $J$, $G$, and $c$ are the black
 hole angular momentum, gravitational constant, and speed of light,
 respectively \footnote{We follow the convention of \citetalias{M87PaperV} that
@@ -21,21 +21,21 @@ $\abh < 0$ indicate anti-aligned angular momentum between the
 accretion flow and that of the black hole.}.
 
 Using the above mass and distance, the implied characteristic length
-is $G\mbh/c^2 = 6.1 \times 10^{11}\cm$, characteristic time is
-$G\mbh/c^3 = 20.5 \sec$, and angular scale is $G\mbh/(c^2 D) = 5.03\uas$.
+is $\rg = 6.1 \times 10^{11}\cm$, characteristic time is
+$\tg = 20.5 \sec$, and angular scale is $G\mbh/(c^2 D) = 5.03\uas$.
 The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D) = (52.2 \pm x) \uas $, where errorbars indicate uncertainty in the black hole spin and viewing angle.
 
-Assuming that the emitting plasma is made of ionized hydrogen (electron-proton plasma), the adopted black hole mass yields the  \sgra Eddington luminosity: 
+Assuming that the emitting plasma is made of ionized hydrogen (electron-proton plasma), the adopted black hole mass yields the \sgra Eddington luminosity: 
 $ L_\mathrm{Edd}
 = 4\pi G\mbh c m_p/\sigma_{T}
-= 5.2 \times 10^{44}\allowbreak\erg\sec^{-1}$
+= 5.2 \times 10^{44}\allowbreak \ergsps$
 %The corresponding Eddington accretion rate is $ \dot\mbh_\mathrm{Edd}
 %\equiv L_\mathrm{Edd}/(0.1 c^2) 
 %= 5.8 \times 10^{24} \gm \sec^{-1}
 %= 0.09 \msun \yr^{-1}$ where efficiency of energy conversion is 10\%. 
 and the Eddington ratio:
 $ L_\mathrm{bol}/L_\mathrm{Edd}
-= 1.9 \times 10^{-10} (L_\mathrm{bol}  /10^{35} \erg\sec^{-1})$. In a quiescent state the bolometric luminosity of \sgra is $L_{bol} \sim 10^{35}\erg\sec^{-1}$ resulting in extremely small Eddington ratio. In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected and a model emission can be calculated in a post-processing step (e.g., \citealt{2012MNRAS.426.1928D}). 
+= 1.9 \times 10^{-10} (L_\mathrm{bol}  /10^{35}) \erg\sec^{-1}$. In a quiescent state the bolometric luminosity of \sgra is $L_{bol} \sim 10^{35}\erg\sec^{-1}$ resulting in extremely small Eddington ratio. In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected and a model emission can be calculated in a post-processing step (e.g., \citealt{2012MNRAS.426.1928D}). 
 
 % below probably not necessary:
 % \footnote{Translation of the source flux to luminosity is given by: $ \nu L_\nu
@@ -43,20 +43,19 @@ $ L_\mathrm{bol}/L_\mathrm{Edd}
 % = 1.8 \times 10^{34} (D/8127 \pc)^2 \times\allowbreak
 %   (\nu/230 \GHz)(F_\nu/{\rm Jy}) \erg \sec^{-1}$.}
 
-
-%------------------------------------------------------------------------------
+%==============================================================================
 \subsection{One-Zone Model and Estimate}
 
-The development of complex models is guided by simple estimates. Following \citetalias{M87PaperV} we consider a one-zone model for \sgra. The model consists of a uniform plasma sphere of radius equal $5 G\mbh/c^2$ with magnetic field oriented at $\pi/3$ to the line-of-sight. The magnetic field in the sphere is in pressure equilibrium with the plasma: $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $beta=1$ and $T_i = 3 T_e$.  Assuming the dimentionless electron temperature $\Theta_e = kT_e / m_e c^2 = 10$, the values of $B$ and $n_e$ required to produce observed flux of 2 Jy (average flux of \sgra measured by ALMA during the 2017 campaign) are : \color{green}\begin{eqnarray}
+The development of complex models is guided by simple estimates. Following \citetalias{M87PaperV} we consider a one-zone model for \sgra. The model consists of a uniform plasma sphere of radius equal $5 \rg$ with magnetic field oriented at $\pi/3$ to the line-of-sight. The magnetic field in the sphere is in pressure equilibrium with the plasma: $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $\beta=1$ and $T_i = 3 T_e$.  Assuming the dimentionless electron temperature $\Theta_e = kT_e / m_e c^2 = 10$, the values of $B$ and $n_e$ required to produce observed flux of 2 Jy (average flux of \sgra measured by ALMA during the 2017 campaign) are : \color{green}\begin{eqnarray}
 \label{eq:onezone}
     n_e &\simeq& 1.1\times 10^6 \,\rm cm^{-3},\\
     B &\simeq& 30 \rm\, G.
 \end{eqnarray}\color{black}
 These values are consistent with $n_e$ and $B$ of a similar one-zone model fitted to archival Sgr~A* spectrum reported in \citet{bower:2018}. 
 
-The one-zone model density and size translate into optical thickness for Compton scatterings, $\tau_e \approx \sigma_T n_e 5 GM/c^2 \approx 2 \times 10^{-5}$, which yields a small Compton parameter: $y =  16 \Theta_e^2 max(\tau_e,\tau_e^2) = 3 \times 10^{-2}$. This implies that the synchrotron emission is the main plasma cooling process. We can calculate the synchrotron cooling timescale $t_{cool} \equiv u/\Lambda$ where $u=?$ is the electron energy and $\Lambda=16 B^2 e^4 n_e \Theta_e^2 /(3 c^3 m_e^2)$ is the total synchrotron cooling rate from thermal population of electrons (for details see Appendix~A in \citealt{2011ApJ...735....9M}). For $n_e = 1.1 \times
+The one-zone model density and size translate into optical thickness for Compton scatterings, $\tau_e \approx \sigma_T n_e 5 \rg \approx 2 \times 10^{-5}$, which yields a small Compton parameter: $y =  16 \Theta_e^2 max(\tau_e,\tau_e^2) = 3 \times 10^{-2}$. This implies that the synchrotron emission is the main plasma cooling process. We can calculate the synchrotron cooling timescale $t_{cool} \equiv u/\Lambda$ where $u=?$ is the electron energy and $\Lambda=16 B^2 e^4 n_e \Theta_e^2 /(3 c^3 m_e^2)$ is the total synchrotron cooling rate from thermal population of electrons (for details see Appendix~A in \citealt{2011ApJ...735....9M}). For $n_e = 1.1 \times
 10^6$, $B = 30\,\mathrm{G}$ and $\Theta_e=10$, the estimated $t_{cool}=3.1 \times 10^4\sec
-= 1.5 \times 10^3 G\mbh/c^3$ which is much longer than the characteristic time scale in the system. One-zone models suggest that the cooling effects can be neglected in the complex models. 
+= 1.5 \times 10^3 \tg$ which is much longer than the characteristic time scale in the system. One-zone models suggest that the cooling effects can be neglected in the complex models. 
 
 There is a reason to believe that, if \sgra is fed by stellar winds as
 in \citet{2019MNRAS.482L.123R}, the inflowing plasma is almost pure
@@ -75,7 +74,8 @@ As shown in early works by
 effects may significantly change the predicted properties of \sgra.
 
 \monika{ need to revise the numbers above}
-%------------------------------------------------------------------------------
+
+%==============================================================================
 % \subsection{Semi-Analytical Accretion Models}
 
 % ...
@@ -88,7 +88,7 @@ effects may significantly change the predicted properties of \sgra.
 
 % ...
 
-%------------------------------------------------------------------------------
+%==============================================================================
 \subsection{Numerical Models of the Inner Accretion Flows}
 
 \color{red}
@@ -118,7 +118,7 @@ Stellar Wind Accretion & 0 & Stellar Wind & ? & ? & ? &?& \citet{2019MNRAS.482L.
 \label{tab:GRMHDmodels}
 \end{deluxetable*}
 
-
+%------------------------------------------------------------------------------
 \subsubsection{Gas Dynamics Simulations} 
 
 % \paragraph{Methods, initial and boundary conditions:} 
@@ -129,7 +129,7 @@ All simulations in our library are evolved for at least 30000 M and up to 100,00
 We also consider one non-standard GRMHD simulations in which \sgra black hole is feed directly by stellar winds produced by .... ARE THOSE SANE OR MADS?
 The content of the model library is summarized in Table~\ref{tab:GRMHDmodels}. Our simulations of \sgra are run at different numerical resolutions and using different numerical methods. We present convergence study between models and codes in Appendix~\ref{app:resolution_study}. We find that all solutions relax to quasitationary state and coverge to the same state? 
 
-
+%------------------------------------------------------------------------------
 \subsubsection{Electron distribution function models}
 
 Most of our GRMHD models are carried out in dimensionless units and they are single fluid models meaning that they track total gas pressure or gas internal energy. To calculate model emission one has to make an assumption about electron distribution function (hereafter eDF). In this work we consider thermal and non-thremal electron distribution functions. In what follows we describe the details of our electron models.
@@ -156,8 +156,7 @@ where $b\equiv\beta/\beta_{crit}$, $\beta\equiv=P_{gas}/P_{mag}$.
   to 20\%.
 \end{itemize}
 
-
-
+%------------------------------------------------------------------------------
 \subsubsection{Emission Simulations}
 
 \paragraph{Model Images}
@@ -167,21 +166,38 @@ LIST ALL IMAGING PARAMETERS. REFERE TO TABLE 2.
 \paragraph{Model Spectra}
 HOW DO WE COMPUTE SEDS? refere to appendix for numerical details/
 
+%==============================================================================
 \subsection{Summary of astrophysical models}
+
 summary of how many image templates we have and are they consistent with single zone model estimates?
 
 \monika{edited until here, but not finished}
 
-
-
-
- 
+\begin{figure*}
+    \centering
+    %\includegraphics{}
+    [altex: figures showing image, SEDs, etc for a few fiducial models?  Maybe SANE and MAD thermal, Ressel and a nonthermal model?]
+    \caption{Fiducial images from the simulation library.  (a) thermal SANE, (b) thermal MAD, (c) nonthermal SANE, (d) Resseler.\monika{no, no images here, I want a 3D figure of MAD/SANE/TILTED DISK/Ressler model. we discussed that we will show only best bet images later on.}}
+    \label{fig:my_label}
+\end{figure*}
 
 \begin{deluxetable*}{cccccccccccccc}
 \tabletypesize{\footnotesize}
 \renewcommand{\arraystretch}{1.5}
 \tablehead{
-  \colhead{$R_{\rm low}$} & \colhead{$R_{\rm high}$} & \colhead{\beta_{crit}} & \colhead{$p$} & \colhead{$\gamma_{\rm min/max}$}&  \colhead{$\kappa$} & \colhead{$i^\circ$} & \colhead{$\rho_{unit}$} & \colhead{$\nu$[GHz]} & \colhead{SED} &\colhead{$\Delta t$[1000 M]}& #snapshots &\colhead{Name}}
+  \colhead{$R_{\rm low}$}          &%
+  \colhead{$R_{\rm high}$}         &%
+  \colhead{$\beta_{\rm crit}$}     &%
+  \colhead{$p$}                    &%
+  \colhead{$\gamma_{\rm min/max}$} &%
+  \colhead{$\kappa$}               &%
+  \colhead{$i^\circ$}              &%
+  \colhead{$\rho_{\rm unit}$}      &%
+  \colhead{$\nu$[GHz]}             &%
+  \colhead{SED}                    &%
+  \colhead{$\Delta t$ [1000 M]}    &%
+  \colhead{\#snapshots}            &%
+  \colhead{Name}}
 \startdata
 \multicolumn{13}{c}{Thermal models}\\
 1 & [1;10;40;160] & 1 & - &  - & - & [10,30,...,170] & 3 & [86,230] & yes & [15,20) & x & iHARM-Thermal1\\
@@ -197,7 +213,7 @@ summary of how many image templates we have and are they consistent with single 
 \multicolumn{13}{c}{Non-thermal $\kappa$ models}\\
 - & - & - & -  & - & 5 & & & & & \\
 - & - & - & -  & - & 3.5 & & & & & \\
-- & - & - & -  & - & $\kappa(\beta,\sigma)$ & & & & & \\
+- & - & - & -  & - & $\kappa(\beta,\sigma)$ & & & & &
 \enddata
 \caption{Summary of emission simulations in \sgra EHT model library.}~\label{tab:radiativemodels}
 \end{deluxetable*}

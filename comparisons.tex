@@ -1,9 +1,100 @@
 \section{Comparisons}\label{sec:comparisons}
 
-[CG to write]
+The fundamental problem in comparing Sgr A* models to the data is variability.  We do not expect even an ideal numerical evolution of a source model to match the data point for point, because the space of possible realizations of the model is very large.  But we do expect the {\em distribution} of observables to match an accurate model.  For example, we might expect that the observed 86 GHz flux $F_{86}$ is consistent with being drawn from the distribution of 86GHz fluxes from the model.
 
+Since most observables are correlated over some time $\tau \sim $few $\times 100 G M/c^3$, to obtain the mean and variance of the model distribution to accuracy $f$ we would need a simulation of duration $\sim \tau/f^2 \sim 30,000 (\tau/300) (f/0.1)^{-2}$.  This requires between $10^3$ and $10^4$ node-hours on a state of the art cluster node, depending on the desired resolution, duration, and code used.  This is expensive since $\sim 10$ runs are used for each model set, and runs frequently need to be repeated for multiple values of the numerical parameters (e.g. resolution).  Most of the models used here have been run for either $10,000$ or $30,000 \tg$, although a few have been run to $100,000 \tg$.   
+
+The constraints are heterogeneous in the sense that some are related to time-averaged non-contemporaneous measurements (e.g. the NIR flux constraint), while others are instantaneous values measured during the EHT observing campaign (e.g. the m-ring fits), so it is impossible at present to use a single technique to estimate $p$ values for all constraints.
+
+In what follows we will look at each constraint independently (i.e. we will ignore correlations) and generate a $p$ value.  We then cut models with $p < 0.01$.  
+
+[CG, Michi to write] 
+
+%==============================================================================
 \subsection{EHT Constraints}
 
+First we compare data and models using the VLBI null location statistic, the pre-image size, and the ring diameter, ring thickness, and ring asymmetry from m-ring fitting.  
+
+It turns out that the null location statistic is informative and tends to rule out edge-on models when $R_{high} > 1$.  The pre-image size statistic is simple but not powerful: most of the models are about the right size, and only a very few face-on, low $R_{high}$ models are too large.   The m-ring fitting is highly informative.  Many of our thermal models look like the data, but - for example - edge on MAD models are large values of $R_{high}$ and positive spin are strongly disfavored because they are too asymmetric.
+
+%==============================================================================
+\subsubsection{Null Location}
+
+\begin{figure}
+    \centering
+    %\includegraphics{}
+    [altex]
+    \caption{caption}
+    \label{fig:my_label}
+\end{figure}
+
+[CK to summarize]
+
+Statement about consistency between overlapping model sets.
+
+%==============================================================================
+\subsubsection{Pre-imaging Size}
+
+[Andrew to summarize]
+
+%==============================================================================
+\subsubsection{M-ring Diameter}
+
+[Michi to summarize]
+
+%==============================================================================
+\subsubsection{M-ring Width}
+
+[Michi to summarize]
+
+%==============================================================================
+\subsubsection{M-ring Asymmetry}
+
+[Michi to summarize]
+
+%==============================================================================
 \subsection{Non-EHT Constraints}
 
+Here we compare constraints from 86GHz, NIR, and X-ray observations.  Emission in these bands is believed to originate in the compact source from plasma that is close to or overlaps the plasma that produces the 230GHz emission observed by EHT.
+
+It turns out that the 86GHz flux and size do not discriminate strongly between models: most models have about the right size and spectral index.  The NIR and X-ray constraints - which require that our models not overproduce the observed emission - are highly informative.  It turns out that many SANE models with large $\Rh$ (and therefore cool midplane electron populations) overproduce X-ray emission through bremsstrahlung.  In addition, many of the nonthermal models have large populations, compared to the thermal models, of electrons that are energetic enough to produce NIR emission and therefore overproduce in the NIR.   We also find that some models are dominated by Compton scattering in the NIR.
+
+%------------------------------------------------------------------------------
+\subsubsection{86 GHz Flux}
+
+[Michi]
+
+%------------------------------------------------------------------------------
+\subsubsection{86 GHz Major Axis}
+
+[Michi]
+
+%------------------------------------------------------------------------------
+\subsubsection{NIR Median Flux}
+
+[Michi]
+
+%------------------------------------------------------------------------------
+\subsubsection{X-ray Luminosity}
+
+Estimates of flux from Compton
+
+Estimates of Bremss.  Discussion of Bremss. in SANE, large Rhigh models.
+
+[Michi]
+
+%==============================================================================
+\subsection{Variability}
+
+Variability is central to interpretation of Sgr A*: the small black hole size means that almost all observations considered here are taken over intervals when the source is expected to vary significantly.  This is different from the situation in M87*, where the source is expected to vary only over timescales long compared to a single track.
+
+%==============================================================================
 \subsection{Best Bet Models}
+
+\begin{figure*}
+    \centering
+    %\includegraphics{}
+    [altex: a grid figure showing the $\sim$ 4 best bet models.  Each model in a column.  Top two rows are the 230GHz images and 86GHz images, last row is SEDs.]
+    \caption{Best bet models.  Each column corresponds to one best bet model, top row shows the 230GHz image, middle row shows the 86GHz images, and the bottle row shows the SEDs.}
+    \label{fig:my_label}
+\end{figure*}
