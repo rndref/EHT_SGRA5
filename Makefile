@@ -11,10 +11,10 @@ main.aux: main.tex
 
 main.bbl: main.bib
 	bibtex main
-	bash tools/fix.sh
 
 main.bib: main.aux
 	bash tools/adsbib.sh main
+	bash tools/fix.sh
 
 fast:
 	pdflatex main
