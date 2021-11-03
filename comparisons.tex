@@ -24,15 +24,8 @@ It turns out that the null location statistic is informative and tends to rule o
 
 % Statement about consistency between overlapping model sets.
 
-\begin{figure*}[]
-  %\centerline{
-  %  \includegraphics[width=8.5cm]{783_image}%
-  %  \includegraphics[width=8.5cm]{783_va}%
-  %}
-  %\centerline{
-  %  \includegraphics[width=8.5cm]{852_image}%
-  %  \includegraphics[width=8.5cm]{852_va}%
-  %}
+\begin{figure*}
+  \centering
   [altex]
   \caption{The left panels show two snapshots from a GRMHD simulation
     with SANE field configuration and black hole spin $a=0.5$ and the
@@ -45,8 +38,20 @@ It turns out that the null location statistic is informative and tends to rule o
     has no minimum in one cross section and too much power at long
     baselines, due to the asymmetry introduced by a transient bright
     structure in the flow.}
-  \label{fig:VA}
+  \label{fig:cmp_VA}
 \end{figure*}
+
+\begin{figure}
+  \centering
+  [altex]
+  \caption{Visibility amplitude as a function of baseline length
+    observed on 2017 April 7.
+    The pink band marks the location of the first minima in the
+    visibility amplitude along different orientations.
+    The horizontal red line marks our conservative upper limit for the
+    observed visibility amplitude between $6-8$G$\lambda$.}
+  \label{fig:cmp_null}
+\end{figure}
 
 One way we characterize the GRMHD simulations carried out for
 different black hole and flow parameters and assess their
@@ -60,9 +65,10 @@ simulation
 \end{equation}
 where we defined $\alpha \equiv X/D$ and $\beta \equiv Y/D$, with D
 being the distance to \sgra.
-Figure~\ref{fig:VA} shows two example snapshots and the corresponding
-visibility amplitudes (VA) as a function of baseline length for a
-vertical and horizontal image cross sections from a simulation.
+Figure~\ref{fig:cmp_VA} shows two example snapshots and the
+corresponding visibility amplitudes (VA) as a function of baseline
+length for a vertical and horizontal image cross sections from a
+simulation.
 Even though the locations and depths of the minima in the visibility
 amplitudes are primarily set by the image size, which is set by the
 black hole mass, this figure shows that they can exhibit significant
@@ -93,7 +99,7 @@ on 2017 April 7, \#3599 because that night has the best u-v coverage
 near the minima.
 The first visibility minima in both the N-S and E-W directions occur
 between $2.5-3.5$\;G$\lambda$, as we show in
-Figure~\ref{fig:data_comp}.
+Figure~\ref{fig:cmp_null}.
 We define compliance for a snapshot by requiring that the VA obtained
 for {\it either} the horizontal {\it or} the vertical cross section of
 a snapshot have a minimum in this range of baseline lengths.
@@ -104,50 +110,55 @@ April 7 data also show that the amplitudes have declined to $<6\%$ of
 the zero baseline flux at baselines between $6-8$\;G$\lambda$ along
 all orientations.
 This is characteristic of ring-like images with a relatively high
-degree of azimuthal symmetry. Images that are more asymmetric, on the
-other hand, lead to significantly higher amplitudes at baselines much
-larger than the first minimum, or no minima at all, as the lower
-panels in Figure~\ref{fig:VA} illustrate. As a result, selecting
-models based on how frequently they produce snapshots with such
-large-baseline power helps identify models that are in accordance with
-the data.
+degree of azimuthal symmetry.
+Images that are more asymmetric, on the other hand, lead to
+significantly higher amplitudes at baselines much larger than the
+first minimum, or no minima at all, as the lower panels in
+Figure~\ref{fig:cmp_VA} illustrate.
+As a result, selecting models based on how frequently they produce
+snapshots with such large-baseline power helps identify models that
+are in accordance with the data.
 
 One consideration when comparing models to data at long baselines is
-the effect of interstellar scattering. Diffractive scattering has the
-effect of convolving the image with a smooth kernel and can reduce the
-amplitudes to $\sim 70\%$ of their intrinsic value in the
-$6-8$\;G$\lambda$ range (REF).
+the effect of interstellar scattering.
+Diffractive scattering has the effect of convolving the image with a
+smooth kernel and can reduce the amplitudes to $\sim 70\%$ of their
+intrinsic value in the $6-8$\;G$\lambda$ range (REF).
 Refractive scattering, on the other hand, introduces a noise at these
 baselines of the order of $0.5-3\%$, depending on the particular
-characteristics of the scattering screen toward \sgra\ (REF). To
-account for both of these effects, we choose a $6\%$ upper limit to
+characteristics of the scattering screen toward \sgra\ (REF).
+To account for both of these effects, we choose a $6\%$ upper limit to
 visibility amplitudes from a model snapshot when defining compliance,
-as we show in Figure~\ref{fig:data_comp}.
+as we show in Figure~\ref{fig:cmp_null}.
 
 We assign a compliance fraction to a simulation based on the fraction
-of snapshots that pass both criteria we described above. We will
-discuss the results of this comparison in the next section, along with
-the other model scoring criteria. [I will add to the discussion of the
-  scoring table when that part is written.]
-
-\begin{figure}
-  %\centerline{ \includegraphics[width=7.5cm] {data_3599}}
-  altex
-  \caption{Visibility amplitude as a function of baseline length
-    observed on 2017 April 7. The pink band marks the location of the
-    first minima in the visibility amplitude along different
-    orientations. The horizontal red line marks our conservative upper
-    limit for the observed visibility amplitude between $6-8$G$\lambda$.}
-\label{fig:data_comp}
-\end{figure}
+of snapshots that pass both criteria we described above.
+We will discuss the results of this comparison in the next section,
+along with the other model scoring criteria.
+[I will add to the discussion of the scoring table when that part is
+  written.]
 
 %==============================================================================
 \subsubsection{Pre-imaging Size}
+
+\begin{figure}
+  \centering
+  [altex: 2nd moment plots]
+  \caption{2nd moment plots}
+  \label{fig:cmp_2nd_moment}
+\end{figure}
 
 [Andrew to summarize]
 
 %==============================================================================
 \subsubsection{M-ring Diameter}
+
+\begin{figure}
+  \centering
+  [altex: m-ring fits]
+  \caption{m-ring fits}
+  \label{fig:cmp_m-ring}
+\end{figure}
 
 [Michi to summarize]
 
@@ -171,10 +182,24 @@ It turns out that the 86GHz flux and size do not discriminate strongly between m
 %------------------------------------------------------------------------------
 \subsubsection{86 GHz Flux}
 
+\begin{figure}
+  \centering
+  [altex: flux constraints]
+  \caption{flux constraints}
+  \label{fig:cmp_fluxes}
+\end{figure}
+
 [Michi]
 
 %------------------------------------------------------------------------------
 \subsubsection{86 GHz Major Axis}
+
+\begin{figure}
+  \centering
+  [altex: 86GHz size]
+  \caption{86GHz size}
+  \label{fig:cmp_86GHz_sz}
+\end{figure}
 
 [Michi]
 
@@ -197,22 +222,45 @@ Estimates of Bremss.  Discussion of Bremss. in SANE, large Rhigh models.
 %==============================================================================
 \subsection{Variability}
 
-Variability is central to interpretation of Sgr A*: the small black hole size means that observations considered here are taken over intervals when the source is expected to vary significantly.  This distinguished Sgr A* from M87*, where the source is expected to vary only over timescales long compared to a single track.  
+Variability is central to interpretation of Sgr A*: the small black hole size means that observations considered here are taken over intervals when the source is expected to vary significantly.  This distinguished Sgr A* from M87*, where the source is expected to vary only over timescales long compared to a single track.
 
 Variability is a strong constraint on the models.  Although models differ in their degree of variability, both in an integrated sense and on 4 $G\lambda$ baselines, only a very small fraction of models are as quiet as the data (these tend to be face-on SANE models).  This is true whether we use data from one day, all days, or include measurements of light curve variability from historical monitoring of Sgr A*.   In general, SANE models are quieter than MAD models, and (less strongly) face-on models are quieter than edge-on models.
 
-If we were to apply the variability constraints directly to the models there would be M/N successful models left (M1/N for the ALMA constraint and M2/N for the visibility amplitude constraint).  One interpretation of this result is that the surviving models are the correct description of the source (although we would expect some misclassification of models as consistent or inconsistent when using 1\% cuts on such a large model set).  Another interpretation is that there is a missing physical ingredient in the models, see Section \ref{sec:discussions} for a discussion.   
+If we were to apply the variability constraints directly to the models there would be M/N successful models left (M1/N for the ALMA constraint and M2/N for the visibility amplitude constraint).  One interpretation of this result is that the surviving models are the correct description of the source (although we would expect some misclassification of models as consistent or inconsistent when using 1\% cuts on such a large model set).  Another interpretation is that there is a missing physical ingredient in the models, see Section \ref{sec:discussions} for a discussion.
 
+%------------------------------------------------------------------------------
 \subsubsection{ALMA Light Curve}
+
+\begin{figure}
+  \centering
+  [altex: lightcurve variability]
+  \caption{lightcurve variability}
+  \label{fig:cmp_ALMA_var}
+\end{figure}
 
 [David Lee to provide first draft]
 
+%------------------------------------------------------------------------------
 \subsubsection{4 $G\lambda$ Visibility Amplitude Variability}
+
+\begin{figure}
+  \centering
+  [altex: 4G$\lambda$ variability]
+  \caption{4G$\lambda$ variability}
+  \label{fig:cmp_VLBI_var}
+\end{figure}
 
 [Boris to provide first draft]
 
 %==============================================================================
 \subsection{Best Bet Models}
+
+\begin{figure*}
+    \centering
+    [altex: a grid figure showing the $\sim$ 4 best bet models.  Each model in a column.  Top two rows are the 230GHz images and 86GHz images, last row is SEDs.]
+    \caption{Best bet models.  Each column corresponds to one best bet model; top row shows a 230GHz image [average or selected image; or use GIF?]; middle row shows an 86GHz images; bottom row shows SEDs.}
+    \label{fig:my_label}
+\end{figure*}
 
 [Michi to provide first draft]
 
@@ -222,12 +270,4 @@ Figure showing combined constraints for thermal models.
 
 Figure showing combined constraints for nonthermal models.
 
-We then inspected the remaining models and selected four best-bet models that approximately span the space of successful models.  [Written characterization of remaining models; possibly 3 or 5].  
-
-\begin{figure*}
-    \centering
-    %\includegraphics{}
-    [altex: a grid figure showing the $\sim$ 4 best bet models.  Each model in a column.  Top two rows are the 230GHz images and 86GHz images, last row is SEDs.]
-    \caption{Best bet models.  Each column corresponds to one best bet model; top row shows a 230GHz image [average or selected image; or use GIF?]; middle row shows an 86GHz images; bottom row shows SEDs.}
-    \label{fig:my_label}
-\end{figure*}
+We then inspected the remaining models and selected four best-bet models that approximately span the space of successful models.  [Written characterization of remaining models; possibly 3 or 5].
