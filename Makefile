@@ -23,4 +23,4 @@ view:
 	open -a texshop main.pdf # this is for Mac
 
 clean:
-	rm -f main.aux main.bib main.bbl main.blg main.log main.out main.pdf
+	rm -f main.aux main.bbl main.blg main.log main.out main.pdf
