@@ -1,83 +1,153 @@
-%\ProvidesPackage{eht}[2020/08/29 EHT Style Package]
-%\RequirePackage{xspace}
-%\RequirePackage{graphicx,xspace,newunicodechar,color}
+\ProvidesPackage{eht}[2020/08/29 EHT Style Package]
 
-%\usepackage{url}
-%\usepackage{epstopdf}
-%\usepackage{gensymb}
-%\usepackage{multirow}
-%\usepackage{ragged2e}
-%\usepackage{hyperref}
-%\usepackage{amsmath}
-%\usepackage{booktabs}
+%==============================================================================
+\RequirePackage{amsmath,gensymb}
+\RequirePackage{graphicx,epstopdf}
+\RequirePackage{color}
+\RequirePackage{bold-extra}
+\RequirePackage{xspace}
+\RequirePackage{url,hyperref}
+\RequirePackage{CJK,inputenc,newunicodechar}
+\RequirePackage{natbib}
+
+\PassOptionsToPackage{encapsulated}{CJK}
+\PassOptionsToPackage{utf8}{inputenc}
+
+\usepackage{afterpage}
+\usepackage{booktabs}
+\usepackage{braket}
 %\usepackage{caption}
-%\usepackage{comment}
-%\usepackage{afterpage}
-%\usepackage{mathtools}
-%\usepackage{tabularx}
-%\usepackage{bold-extra}
-%\usepackage{xspace}
-%\usepackage{relsize}
-%\usepackage[utf8]{inputenc}
-%\usepackage{braket}
-%\usepackage{natbib}
-%\usepackage{enumitem}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{ragged2e}
+\usepackage{relsize}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{ucs}
+
+%==============================================================================
+\newcommand{\cntext}[1]{\begin{CJK}{UTF8}{gbsn}#1\end{CJK}}
+
+% Prevent footnotes from splitting across pages
+\interfootnotelinepenalty=10000
 
 %==============================================================================
 % Graphic Extension
-%\DeclareGraphicsExtensions{.pdf,.png,.jpeg}
+\DeclareGraphicsExtensions{.pdf,.eps,.png,.jpeg,.jpg}
 
 % Footnote
 % \usepackage[symbol]{footmisc}
 % Prevent footnotes from splitting across pages
-%\interfootnotelinepenalty=10000
+\interfootnotelinepenalty=10000
 
 % Misc
-%\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
-%\newcommand{\negphantom}[1]{\settowidth{\dimen0}{#1}\hspace*{-\dimen0}}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcommand{\negphantom}[1]{\settowidth{\dimen0}{#1}\hspace*{-\dimen0}}
 
 %==============================================================================
 
-%\newcommand\<{{\langle}}
-%\renewcommand\>{{\rangle}} % "\>" is defined in the "tabbing" environment to
-                           % advance to next tab stop
+\newcommand{\<}{{\langle}}
+\renewcommand{\>}{{\rangle}} % "\>" is defined in the "tabbing" environment
+                             % to advance to next tab stop
 
-%\def\lsim{\mathrel{\raise.3ex\hbox{$<$\kern-.75em\lower1ex\hbox{$\sim$}}}}
-%\def\gsim{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
-%\def\gtwid{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
-%\def\proptwid{\mathrel{\raise.3ex\hbox{$\propto$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\def\lsim{\mathrel{\raise.3ex\hbox{$<$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\def\gsim{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\def\gtwid{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+\def\proptwid{\mathrel{\raise.3ex\hbox{$\propto$\kern-.75em\lower1ex\hbox{$\sim$}}}}
 
 % Alias: Units
-\newcommand{\uas}{\ensuremath{\mathrm{\mu as}}\xspace}
+\newcommand{\uas}{\ensuremath{\,\mathrm{\mu as}}\xspace}
+\newcommand{\gm}{\ensuremath{\,\mathrm{g}}\xspace}
+\newcommand{\GHz}{\ensuremath{\,\mathrm{GHz}}\xspace}
+\newcommand{\yr}{\ensuremath{\,\mathrm{yr}}\xspace}
+\newcommand{\cm}{\ensuremath{\,\mathrm{cm}}\xspace}
+\newcommand{\second}{\ensuremath{\,\mathrm{sec}}\xspace}
+\newcommand{\pc}{\ensuremath{\,\mathrm{pc}}\xspace}
+\newcommand{\kpc}{\ensuremath{\,\mathrm{kpc}}\xspace}
+\newcommand{\erg}{\ensuremath{\,\mathrm{erg}}\xspace}
+\newcommand{\ergsps}{\ensuremath{\,\mathrm{ergs\,s^{-1}}}\xspace}
+\newcommand{\Jy}{\ensuremath{\,\mathrm{Jy}}\xspace}
 
-% Alias: Source Names
-%\def\M87{M87$^*$\xspace}
-%\def\m87{M87$^*$\xspace}
+% Alias: Parameters
+\newcommand{\msun}{\ensuremath{M_\odot}\xspace}
+\newcommand{\mbh}{\ensuremath{M}\xspace}
+\newcommand{\abh}{\ensuremath{a_*}\xspace}
+\newcommand{\tg}{\ensuremath{G\mbh/c^3}\xspace}
+\newcommand{\rg}{\ensuremath{G\mbh/c^2}\xspace}
+\newcommand\Rh{\ensuremath{R_\mathrm{high}}\xspace}
+\newcommand\Rl{\ensuremath{R_\mathrm{low}}\xspace}
+
+% Alias: Source Names [forced to use low level \def to include numbers
+% in the macros]
+\def\M87{M87$^*$\xspace}
+\def\m87{M87$^*$\xspace}
 \newcommand{\sgra}{Sgr~A$^*$\xspace}
-%\def\3C279{3C\,279\xspace}
-%\def\3c279{3C\,279\xspace}
-%\def\NRAO530{NRAO\,530\xspace}
-%\def\nrao530{NRAO\,530\xspace}
-%\def\J1924{J1924-2914\xspace}
-%\def\j1924{j1924-2914\xspace}
+\def\3C279{3C\,279\xspace}
+\def\3c279{3C\,279\xspace}
+\def\NRAO530{NRAO\,530\xspace}
+\def\nrao530{NRAO\,530\xspace}
+\def\J1924{J1924-2914\xspace}
+\def\j1924{j1924-2914\xspace}
 
 % Alias: Hawaii
-%\DeclareRobustCommand{\okina}{%
-%  \raisebox{\dimexpr\fontcharht\font`A-\height}{%
-%    \scalebox{0.8}{`}%
-%  }%
-%}
-%\newunicodechar{ʻ}{\okina}
-%\def\hawaii{Hawaiʻi\xspace}
+\DeclareRobustCommand{\okina}{%
+ \raisebox{\dimexpr\fontcharht\font`A-\height}{%
+   \scalebox{0.8}{`}%
+ }%
+}
+\newunicodechar{ʻ}{\okina}
+\newcommand{\hawaii}{Hawaiʻi\xspace}
 
 % Alias: Software packages
-\def\smili{\texttt{SMILI}\xspace}
-\def\ehtim{\texttt{eht-imaging}\xspace}
-\def\difmap{\texttt{DIFMAP}\xspace}
-\def\dmc{\texttt{DMC}\xspace}
-\def\themis{\textsc{Themis}\xspace}
-\def\foci{\texttt{foci}\xspace}
-\def\vida{\texttt{VIDA}\xspace}
-\def\VIDA{\texttt{VIDA}\xspace}
-\def\rex{\texttt{REx}\xspace}
-\def\inoisy{\texttt{iNoisy}\xspace}
+\newcommand\bhac{\texttt{bhac}\xspace}
+\newcommand\smili{\texttt{SMILI}\xspace}
+\newcommand\ehtim{\texttt{eht-imaging}\xspace}
+\newcommand\difmap{\texttt{DIFMAP}\xspace}
+\newcommand\dmc{\texttt{DMC}\xspace}
+\newcommand\themis{\textsc{Themis}\xspace}
+\newcommand\foci{\texttt{foci}\xspace}
+\newcommand\vida{\texttt{VIDA}\xspace}
+\newcommand\VIDA{\texttt{VIDA}\xspace}
+\newcommand\rex{\texttt{REx}\xspace}
+\newcommand\inoisy{\texttt{iNoisy}\xspace}
+\def\iharm3d{\texttt{iharm3d}\xspace}
+\newcommand\hamr{\texttt{hamr}\xspace}
+
+%==============================================================================
+%EHT publication package
+
+% M87
+\defcitealias{M87PaperI}{M87Paper~I}
+\defcitealias{M87PaperII}{M87Paper~II}
+\defcitealias{M87PaperIII}{M87Paper~III}
+\defcitealias{M87PaperIV}{M87Paper~IV}
+\defcitealias{M87PaperV}{M87Paper~V}
+\defcitealias{M87PaperVI}{M87Paper~VI}
+\defcitealias{M87PaperVII}{M87Paper~VII}
+\defcitealias{M87PaperVIII}{M87Paper~VIII}
+
+% Sgr A*
+\defcitealias{PaperI}{Paper~I}
+\defcitealias{PaperII}{Paper~II}
+\defcitealias{PaperIII}{Paper~III}
+\defcitealias{PaperIV}{Paper~IV}
+\defcitealias{PaperV}{Paper~V}
+\defcitealias{PaperVI}{Paper~VI}
+
+% Ensure that papers are listed in the references
+\nocite{M87PaperI}
+\nocite{M87PaperII}
+\nocite{M87PaperIII}
+\nocite{M87PaperIV}
+\nocite{M87PaperV}
+\nocite{M87PaperVI}
+\nocite{M87PaperVII}
+\nocite{M87PaperVIII}
+\nocite{PaperI}
+\nocite{PaperII}
+\nocite{PaperIII}
+\nocite{PaperIV}
+\nocite{PaperV}
+\nocite{PaperVI}

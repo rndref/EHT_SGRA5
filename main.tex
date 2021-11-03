@@ -1,78 +1,6 @@
 \documentclass[twocolumn,twocolappendix,tighten,dvipsnames,linenumbers]{aastex63}
 \usepackage{eht}
 
-\NewPageAfterKeywords
-% \NewPageAfterKeywords
-\usepackage{graphicx}		% needed for the figures
-\usepackage{url}
-\usepackage{epstopdf}
-\usepackage{color}
-\usepackage{textcomp}
-\usepackage{gensymb}
-\usepackage{multirow}
-\usepackage{ragged2e}
-\usepackage{hyperref}
-\usepackage{amsmath}
-\usepackage{booktabs}
-\usepackage{comment}
-\usepackage{afterpage}
-\usepackage{mathtools}
-\usepackage{tabularx}
-\usepackage{bold-extra}
-\usepackage{xspace}
-\usepackage{relsize}
-\usepackage[utf8]{inputenc}
-\usepackage{newunicodechar}
-\usepackage[encapsulated]{CJK}
-\usepackage{ucs}
-%\usepackage[utf8x]{inputenc}
-\newcommand{\cntext}[1]{\begin{CJK}{UTF8}{gbsn}#1\end{CJK}}
-
-% Prevent footnotes from splitting across pages
-\interfootnotelinepenalty=10000
-
-%EHT publication package 
-%% M87
-\defcitealias{M87PaperI}{M87Paper~I}
-\defcitealias{M87PaperII}{M87Paper~II}
-\defcitealias{M87PaperIII}{M87Paper~III}
-\defcitealias{M87PaperIV}{M87Paper~IV}
-\defcitealias{M87PaperV}{M87Paper~V}
-\defcitealias{M87PaperVI}{M87Paper~VI}
-\defcitealias{M87PaperVII}{M87Paper~VII}
-\defcitealias{M87PaperVIII}{M87Paper~VIII}
-
-%% Sgr A*
-\defcitealias{PaperI}{Paper~I}
-\defcitealias{PaperII}{Paper~II}
-\defcitealias{PaperIII}{Paper~III}
-\defcitealias{PaperIV}{Paper~IV}
-\defcitealias{PaperV}{Paper~V}
-\defcitealias{PaperVI}{Paper~VI}
-
-%% standard definitions here:
-\newcommand{\mbh}{\ensuremath{M}\xspace}
-\newcommand{\msun}{\ensuremath{M_\odot}\xspace}
-\newcommand{\tg}{G M/c^3}
-\newcommand{\rg}{G M/c^2}
-\newcommand\abh{{a_*}} % should we use a_* or a_\mathrm{bh} ?
-\def\iharm3d{\texttt{iharm3d}\xspace}
-\newcommand\bhac{\texttt{bhac}\xspace}
-\newcommand\hamr{\texttt{hamr}\xspace}
-\newcommand\Rh{{R_\mathrm{high}}}
-\newcommand\Rl{{R_\mathrm{low}}}
-\newcommand\gm{{\rm \, g}}
-\renewcommand\msun{{M_\odot}}
-\newcommand\GHz{{\rm \, GHz}}
-\newcommand\yr{{\rm \, yr}}
-\newcommand\cm{{\rm \, cm}}
-\newcommand\second{{\rm \, sec}}
-\newcommand\pc{{\rm \, pc}}
-\newcommand\kpc{{\rm \, kpc}}
-\newcommand\erg{{\rm \, erg}}
-\newcommand{\ergsps}{{\rm[ ergs\,s^{-1}]}}
-\newcommand\Jy{{\rm \, Jy}}
-
 % Inline comments
 \newcommand\note[1]{{\color{OliveGreen}[note: #1]}}
 \newcommand\ckc[1]{{\color{MidnightBlue}[ckc: #1]}}
@@ -86,9 +14,8 @@
   Constraining the Astrophysical Properties of the Galactic Center Black Hole}
 \shorttitle{First \sgra EHT Results on Astrophysics}
 
-% \collaboration{The Event Horizon Telescope Collaboration}
+%\collaboration{The Event Horizon Telescope Collaboration}
 %\input{newGAL_ApJ}
-
 \author{Event Horizon Telescope Collaboration et al.}
 \shortauthors{EHT Collaboration et al.}
 
@@ -124,52 +51,43 @@
 \keywords{galaxies: individual: \sgra -- Galaxy: center -- black hole
   physics -- techniques: high angular resolution -- techniques: image
   processing -- techniques: interferometric}
+\NewPageAfterKeywords
 
 %------------------------------------------------------------------------------
 \tableofcontents
-
-%------------------------------------------------------------------------------
-\nocite{PaperI}
-\nocite{PaperII}
-\nocite{PaperIII}
-\nocite{PaperIV}
-\nocite{PaperV}
-\nocite{PaperVI}
-\nocite{M87PaperI}
-\nocite{M87PaperII}
-\nocite{M87PaperIII}
-\nocite{M87PaperIV}
-\nocite{M87PaperV}
-\nocite{M87PaperVI}
-\nocite{M87PaperVII}
-\nocite{M87PaperVIII}
+\clearpage
 
 %==============================================================================
 % no more editing here, to edit go to
 % separate tex files
-\clearpage
+
 \input{intro}
 \clearpage
+
 \input{observations}
 \clearpage
+
 \input{models}
 \clearpage
+
 \input{comparisons}
 \clearpage
+
 \input{discussion}
 \clearpage
+
 \input{conclusions}
 \clearpage
 
 %==============================================================================
-\facility{EHT} \software{\ehtim, \difmap, \smili, \dmc, \themis, \foci}
+\facility{EHT} \software{\difmap, \dmc, \ehtim, \foci, \smili, \themis}
 
 %==============================================================================
 \appendix
-%\section{Pass/Fail Tables}
+
 \input{appendix_tables}
 \clearpage
-%\section{Numerical Details}
+
 \input{appendix_numerical}
 \clearpage
 
