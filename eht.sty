@@ -1,73 +1,74 @@
-\ProvidesPackage{eht}[2020/08/29 EHT Style Package]
-\RequirePackage{graphicx,xspace,newunicodechar,color}
+%\ProvidesPackage{eht}[2020/08/29 EHT Style Package]
+%\RequirePackage{xspace}
+%\RequirePackage{graphicx,xspace,newunicodechar,color}
 
-\usepackage{url}
-\usepackage{epstopdf}
-\usepackage{gensymb}
-\usepackage{multirow}
-\usepackage{ragged2e}
-\usepackage{hyperref}
-\usepackage{amsmath}
-\usepackage{booktabs}
+%\usepackage{url}
+%\usepackage{epstopdf}
+%\usepackage{gensymb}
+%\usepackage{multirow}
+%\usepackage{ragged2e}
+%\usepackage{hyperref}
+%\usepackage{amsmath}
+%\usepackage{booktabs}
 %\usepackage{caption}
-\usepackage{comment}
-\usepackage{afterpage}
-\usepackage{mathtools}
-\usepackage{tabularx}
-\usepackage{bold-extra}
-\usepackage{xspace}
-\usepackage{relsize}
-\usepackage[utf8]{inputenc}
-\usepackage{braket}
-\usepackage{natbib}
-\usepackage{enumitem}
+%\usepackage{comment}
+%\usepackage{afterpage}
+%\usepackage{mathtools}
+%\usepackage{tabularx}
+%\usepackage{bold-extra}
+%\usepackage{xspace}
+%\usepackage{relsize}
+%\usepackage[utf8]{inputenc}
+%\usepackage{braket}
+%\usepackage{natbib}
+%\usepackage{enumitem}
 
 %==============================================================================
 % Graphic Extension
-\DeclareGraphicsExtensions{.pdf,.png,.jpeg}
+%\DeclareGraphicsExtensions{.pdf,.png,.jpeg}
 
 % Footnote
 % \usepackage[symbol]{footmisc}
 % Prevent footnotes from splitting across pages
-\interfootnotelinepenalty=10000
+%\interfootnotelinepenalty=10000
 
 % Misc
-\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
-\newcommand{\negphantom}[1]{\settowidth{\dimen0}{#1}\hspace*{-\dimen0}}
+%\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+%\newcommand{\negphantom}[1]{\settowidth{\dimen0}{#1}\hspace*{-\dimen0}}
 
 %==============================================================================
 
-\newcommand\<{{\langle}}
-\renewcommand\>{{\rangle}} % "\>" is defined in the "tabbing" environment to
+%\newcommand\<{{\langle}}
+%\renewcommand\>{{\rangle}} % "\>" is defined in the "tabbing" environment to
                            % advance to next tab stop
 
-\def\lsim{\mathrel{\raise.3ex\hbox{$<$\kern-.75em\lower1ex\hbox{$\sim$}}}}
-\def\gsim{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
-\def\gtwid{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
-\def\proptwid{\mathrel{\raise.3ex\hbox{$\propto$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+%\def\lsim{\mathrel{\raise.3ex\hbox{$<$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+%\def\gsim{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+%\def\gtwid{\mathrel{\raise.3ex\hbox{$>$\kern-.75em\lower1ex\hbox{$\sim$}}}}
+%\def\proptwid{\mathrel{\raise.3ex\hbox{$\propto$\kern-.75em\lower1ex\hbox{$\sim$}}}}
 
 % Alias: Units
 \newcommand{\uas}{\ensuremath{\mathrm{\mu as}}\xspace}
 
 % Alias: Source Names
-\def\M87{M87$^*$\xspace}
-\def\m87{M87$^*$\xspace}
-\def\sgra{Sgr~A$^*$\xspace}
-\def\3C279{3C\,279\xspace}
-\def\3c279{3C\,279\xspace}
-\def\NRAO530{NRAO\,530\xspace}
-\def\nrao530{NRAO\,530\xspace}
-\def\J1924{J1924-2914\xspace}
-\def\j1924{j1924-2914\xspace}
+%\def\M87{M87$^*$\xspace}
+%\def\m87{M87$^*$\xspace}
+\newcommand{\sgra}{Sgr~A$^*$\xspace}
+%\def\3C279{3C\,279\xspace}
+%\def\3c279{3C\,279\xspace}
+%\def\NRAO530{NRAO\,530\xspace}
+%\def\nrao530{NRAO\,530\xspace}
+%\def\J1924{J1924-2914\xspace}
+%\def\j1924{j1924-2914\xspace}
 
 % Alias: Hawaii
-\DeclareRobustCommand{\okina}{%
-  \raisebox{\dimexpr\fontcharht\font`A-\height}{%
-    \scalebox{0.8}{`}%
-  }%
-}
-\newunicodechar{ʻ}{\okina}
-\def\hawaii{Hawaiʻi\xspace}
+%\DeclareRobustCommand{\okina}{%
+%  \raisebox{\dimexpr\fontcharht\font`A-\height}{%
+%    \scalebox{0.8}{`}%
+%  }%
+%}
+%\newunicodechar{ʻ}{\okina}
+%\def\hawaii{Hawaiʻi\xspace}
 
 % Alias: Software packages
 \def\smili{\texttt{SMILI}\xspace}
