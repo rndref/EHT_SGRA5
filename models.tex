@@ -5,7 +5,7 @@
 \color{black}
 
 %==============================================================================
-\subsection{Basic assumptions}\label{sec:basic}
+\subsection{Basic Assumptions}\label{sec:basic}
 
 Through out the paper we adopt mass and distance for \sgra to be
 \begin{align}
@@ -17,7 +17,7 @@ which is approximately the mean of \citet{2019Sci...365..664D} and
 
 We will assume that \sgra is a black hole so that the spacetime around it is described by Schwarzschild or Kerr metric. The black hole dimensionless spin, $\abh$, is treated as a free parameter in range: $-1 < \abh < 1$, where $\abh \equiv Jc/G\mbh^2$, where $J$, $G$, and $c$ are the black
 hole angular momentum, gravitational constant, and speed of light,
-respectively \footnote{We follow the convention of \citetalias{M87PaperV} that
+respectively~\footnote{We follow the convention of \citetalias{M87PaperV} where
 $\abh < 0$ indicate anti-aligned angular momentum between the
 accretion flow and that of the black hole.}.
 
@@ -36,7 +36,7 @@ $ L_\mathrm{Edd}
 %= 0.09 \msun \yr^{-1}$ where efficiency of energy conversion is 10\%.
 and the Eddington ratio:
 $ L_\mathrm{bol}/L_\mathrm{Edd}
-= 1.9 \times 10^{-10} (L_\mathrm{bol}  /10^{35}) \erg\sec^{-1}$. In a quiescent state the bolometric luminosity of \sgra is $L_{bol} \sim 10^{35}\erg\sec^{-1}$ resulting in extremely small Eddington ratio. In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected and a model emission can be calculated in a post-processing step (e.g., \citealt{2012MNRAS.426.1928D}).
+= 1.9 \times 10^{-10} (L_\mathrm{bol}  /10^{35}) \erg\sec^{-1}$. In a quiescent state the bolometric luminosity of \sgra is $L_{bol} \sim 10^{35}\erg\sec^{-1}$ resulting in extremely small Eddington ratio. In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected and a model emission can be calculated in a post-processing step .
 
 % below probably not necessary:
 % \footnote{Translation of the source flux to luminosity is given by: $ \nu L_\nu
@@ -56,7 +56,7 @@ These values are consistent with $n_e$ and $B$ of a similar one-zone model fitte
 
 The one-zone model density and size translate into optical thickness for Compton scatterings, $\tau_e \approx \sigma_T n_e 5 \rg \approx 2 \times 10^{-5}$, which yields a small Compton parameter: $y =  16 \Theta_e^2 max(\tau_e,\tau_e^2) = 3 \times 10^{-2}$. This implies that the synchrotron emission is the main plasma cooling process. We can calculate the synchrotron cooling timescale $t_{cool} \equiv u/\Lambda$ where $u=?$ is the electron energy and $\Lambda=16 B^2 e^4 n_e \Theta_e^2 /(3 c^3 m_e^2)$ is the total synchrotron cooling rate from thermal population of electrons (for details see Appendix~A in \citealt{2011ApJ...735....9M}). For $n_e = 1.1 \times
 10^6$, $B = 30\,\mathrm{G}$ and $\Theta_e=10$, the estimated $t_{cool}=3.1 \times 10^4\sec
-= 1.5 \times 10^3 \tg$ which is much longer than the characteristic time scale in the system. One-zone models suggest that the cooling effects can be neglected in the complex models.
+= 1.5 \times 10^3 \tg$ which is much longer than the characteristic time scale in the system. One-zone models confirms that the cooling effects can be neglected in the complex models (e.g., \citealt{2012MNRAS.426.1928D}).
 
 There is a reason to believe that, if \sgra is fed by stellar winds as
 in \citet{2019MNRAS.482L.123R}, the inflowing plasma is almost pure
@@ -92,9 +92,6 @@ effects may significantly change the predicted properties of \sgra.
 %==============================================================================
 \subsection{Numerical Models of the Inner Accretion Flows}
 
-\color{red}
-[{\bf Monika's first pass}]
-\color{black}
 
 \begin{deluxetable*}{cccccccc}
 \tabletypesize{\footnotesize}
@@ -113,7 +110,7 @@ BHAC/Frankfurt/Radboud & 0,$\pm1/2$,$\pm15/16$ & MAD, SANE  & $4/3$ & 30,000 & ?
 HAMR & 0,$\pm1/2$,$\pm15/16$ & MAD, SANE  & $13/9,5/3$ & 35,000 & 1000,200 & [348/240×192×192] &This work \\
 Koral Long &0,0.3,0.7,0.9 & MAD & ? & 100,000 & ? & ?&?\\
 HAMR-Tilted (Tilt=$?^\circ$) & $15/16$ & IN-SANE & $5/3$ & 100,000 & 100,000 & [448x144x240] & Chatterjee+20, Liska+18 \\
-Stellar Wind Accretion & 0 & Stellar Wind & ? & ? & ? &?& \citet{2019MNRAS.482L.123R}
+Self-consistent Wind Feeding & 0 & MAD? & ? & ? & ? &?& \citet{2019MNRAS.482L.123R}
 \enddata
 \caption{Summary of GRMHD simulations in \sgra EHT GRMHD model library.}
 \label{tab:GRMHDmodels}
@@ -136,10 +133,11 @@ All simulations use adiabatic equation of state with adiabatic index, $\Gamma_{\
 In our standard simulation setup the plasma is initially confined into a Fishbone-Moncrief torus on co-rotating or counter-rotating orbit around the black hole. Only in one model, HARM-Tilted, started with torus angular momentum tilted with respect to black hole spin. The torus initial size is parametrized by the inner radius $R_{\rm in}=(6M,12M)$ and radius of the pressure maximum $R_{\rm max}=(12M,24M)$, where typically adopted values are given in parenthesis.  MAGNETIC FIELD AND FLUX MAD AND SANE
 All simulations in our library are evolved for at least 30000 M and up to 100,000M. In our standard models, the boundary conditions are set to "outflow" so the torus is a finite reservoir of matter.
 We also consider one non-standard GRMHD simulations in which \sgra black hole is feed directly by stellar winds produced by .... ARE THOSE SANE OR MADS?
-The content of the model library is summarized in Table~\ref{tab:GRMHDmodels}. Our simulations of \sgra are run at different numerical resolutions and using different numerical methods. We present convergence study between models and codes in Appendix~\ref{app:resolution_study}. We find that all solutions relax to quasitationary state and coverge to the same state?
+The content of the model library is summarized in Table~\ref{tab:GRMHDmodels}. Our simulations of \sgra are run at different numerical resolutions and using different numerical methods. We present convergence study between models and codes in Appendix~\ref{app:resolution_study}. We find that all solutions relax to quasitationary state and coverge to the same state until what radius? Our models
+
 
 %------------------------------------------------------------------------------
-\subsubsection{Electron distribution function models}
+\subsubsection{Emission Simulations}
 
 \begin{figure}
   \centering
@@ -187,7 +185,6 @@ where $b\equiv\beta/\beta_{crit}$, $\beta\equiv=P_{gas}/P_{mag}$.
 \end{itemize}
 
 %------------------------------------------------------------------------------
-\subsubsection{Emission Simulations}
 
 \begin{figure*}
   \centering
@@ -204,7 +201,9 @@ where $b\equiv\beta/\beta_{crit}$, $\beta\equiv=P_{gas}/P_{mag}$.
 \end{figure*}
 
 \paragraph{Model Images}
-Model images are ray-traced at two frequencies: at the GMVA 86 GHz and at EHT frequency of 230 GHz. Ray-tracing simulations are carried out using several numerical codes (ipole, BHOSS, ? list codes are references). A detailed comparison between numerical radiative transfer methods presented in Gold et al. 2021 and in Prather et al. 2021 shows agreement between codes sufficient to make no difference. Our images are generated with different field-of-view, resolution (see discussion in Appendix B2).
+Model images are ray-traced at two frequencies: at the GMVA 86 GHz and at EHT frequency of 230 GHz. 
+OPTICALLY THICKER AT 86 GHz BUT RELATIVISTIC EFFECTS STILL MATTER
+Ray-tracing simulations are carried out using several numerical codes (ipole, BHOSS, ? list codes are references). A detailed comparison between numerical radiative transfer methods presented in Gold et al. 2021 and in Prather et al. 2021 shows agreement between codes sufficient to make no difference. Our images are generated with different field-of-view, resolution (see discussion in Appendix B2).
 LIST ALL IMAGING PARAMETERS. REFERE TO TABLE 2.
 
 \begin{figure*}
@@ -216,12 +215,14 @@ LIST ALL IMAGING PARAMETERS. REFERE TO TABLE 2.
     Resseler.\monika{no, no images here, I want a 3D figure of
       MAD/SANE/TILTED DISK/Ressler model. we discussed that we will
       show only best bet images later on.}
-    \ckc{updated fig.~\ref{fig:GRMHD} to show 3d plots.  It will be odd to show emissivity (fig.~\ref{fig:jnu}) but not the SEDs.  Maybe skip fig.~\ref{fig:jnu} as well?}}
+    \ckc{updated fig.~\ref{fig:GRMHD} to show 3d plots.  It will be odd to show emissivity (fig.~\ref{fig:jnu}) but not the SEDs.  Maybe skip fig.~\ref{fig:jnu} as well?}\monika{how about showing model SEDs for all models in the appendix? (a big grid of seds showing convergence between models/codes etc); in the main text we only show the best bet models SEDs but in the "result" section or "data" section. we can do the same for images.what do you think?}}
   \label{fig:fiducial_SEDs}
 \end{figure*}
 
 \paragraph{Model Spectra}
-HOW DO WE COMPUTE SEDS? refere to appendix for numerical details/
+what code and what processes are included...
+HOW DO WE COMPUTE SEDS? mention that we do not attempt to recover entire radio spectrm because some of the models are not relaxed at large radii, maybe some of them are. refer to appendix for numerical details/
+
 
 %==============================================================================
 \subsection{Summary of astrophysical models}
