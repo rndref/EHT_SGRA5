@@ -45,7 +45,7 @@ $ L_\mathrm{bol}/L_\mathrm{Edd}
 %   (\nu/230 \GHz)(F_\nu/{\rm Jy}) \erg \sec^{-1}$.}
 
 %==============================================================================
-\subsection{One-Zone Model and Estimate}
+\subsection{One-Zone Model and Estimates}
 
 The development of complex models is guided by simple estimates. Following \citetalias{M87PaperV} we consider a one-zone model for \sgra. The model consists of a uniform plasma sphere of radius equal $5 \rg$ with magnetic field oriented at $\pi/3$ to the line-of-sight. The magnetic field in the sphere is in pressure equilibrium with the plasma: $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $\beta=1$ and $T_i = 3 T_e$.  Assuming the dimentionless electron temperature $\Theta_e = kT_e / m_e c^2 = 10$, the values of $B$ and $n_e$ required to produce observed flux of 2 Jy (average flux of \sgra measured by ALMA during the 2017 campaign) are : \color{green}\begin{eqnarray}
 \label{eq:onezone}
@@ -139,12 +139,6 @@ The content of the model library is summarized in Table~\ref{tab:GRMHDmodels}. O
 %------------------------------------------------------------------------------
 \subsubsection{Emission Simulations}
 
-\begin{figure}
-  \centering
-  [altex: assumed electron distribution functions]
-  \caption{The assumed eDF in thermal and kappa models.}
-  \label{fig:eDF}
-\end{figure}
 
 Most of our GRMHD models are carried out in dimensionless units and
 they are single fluid models meaning that they track total gas
@@ -170,7 +164,6 @@ In thermal models electron energies are distributed
 \end{equation}
 where $b\equiv\beta/\beta_{crit}$, $\beta\equiv=P_{gas}/P_{mag}$.
 
-\paragraph{Self-consistent thermal electron distribution function}
 
 \paragraph{Non-thermal electron distribution functions}
 - nonthermal models, which parameters and which simulations, motivation and references to previous work

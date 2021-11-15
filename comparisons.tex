@@ -1,4 +1,4 @@
-\section{Comparisons}\label{sec:comparisons}
+\section{Model Comparison}\label{sec:comparisons}
 
 The fundamental problem in comparing Sgr A* models to the data is variability.  We do not expect even an ideal numerical evolution of a source model to match the data point for point, because the space of possible realizations of the model is very large.  But we do expect the {\em distribution} of observables to match an accurate model.  For example, we might expect that the observed 86 GHz flux $F_{86}$ is consistent with being drawn from the distribution of 86GHz fluxes from the model.
 
@@ -11,14 +11,19 @@ In what follows we will look at each constraint independently (i.e. we will igno
 [CG, Michi to write]
 
 %==============================================================================
-\subsection{EHT Constraints}
+\subsection{Thermal, Aligned Models}
+
+Illinois, Frankfurt, HAMR, critical beta thermal models
+
+%------------------------------------------------------------------------------
+\subsubsection{EHT Constraints}
 
 First we compare data and models using the VLBI null location statistic, the pre-image size, and the ring diameter, ring thickness, and ring asymmetry from m-ring fitting.
 
 It turns out that the null location statistic is informative and tends to rule out edge-on models when $R_{high} > 1$.  The pre-image size statistic is simple but not powerful: most of the models are about the right size, and only a very few face-on, low $R_{high}$ models are too large.   The m-ring fitting is highly informative.  Many of our thermal models look like the data, but - for example - edge on MAD models are large values of $R_{high}$ and positive spin are strongly disfavored because they are too asymmetric.
 
-%==============================================================================
-\subsubsection{Null Location}
+%..............................................................................
+\subsubsubsection{Null Location}
 
 [CK to summarize]
 
@@ -137,9 +142,9 @@ We will discuss the results of this comparison in the next section,
 along with the other model scoring criteria.
 [I will add to the discussion of the scoring table when that part is
   written.]
-
-%==============================================================================
-\subsubsection{Pre-imaging Size}
+  
+%..............................................................................
+\subsubsubsection{Pre-imaging Size}
 
 \begin{figure}
   \centering
@@ -150,8 +155,12 @@ along with the other model scoring criteria.
 
 [Andrew to summarize]
 
-%==============================================================================
-\subsubsection{M-ring Diameter}
+%..............................................................................
+\subsubsubsection{M-ring Fits}
+
+Diameter, Width, and Asymmetry of M-rings.
+
+Michi
 
 \begin{figure}
   \centering
@@ -160,67 +169,8 @@ along with the other model scoring criteria.
   \label{fig:cmp_m-ring}
 \end{figure}
 
-[Michi to summarize]
-
-%==============================================================================
-\subsubsection{M-ring Width}
-
-[Michi to summarize]
-
-%==============================================================================
-\subsubsection{M-ring Asymmetry}
-
-[Michi to summarize]
-
-%==============================================================================
-\subsection{Non-EHT Constraints}
-
-Here we compare constraints from 86GHz, NIR, and X-ray observations.  Emission in these bands is believed to originate in the compact source from plasma that is close to or overlaps the plasma that produces the 230GHz emission observed by EHT.
-
-It turns out that the 86GHz flux and size do not discriminate strongly between models: most models have about the right size and spectral index.  The NIR and X-ray constraints - which require that our models not overproduce the observed emission - are highly informative.  It turns out that many SANE models with large $\Rh$ (and therefore cool midplane electron populations) overproduce X-ray emission through bremsstrahlung.  In addition, many of the nonthermal models have large populations, compared to the thermal models, of electrons that are energetic enough to produce NIR emission and therefore overproduce in the NIR.   We also find that some models are dominated by Compton scattering in the NIR.
-
 %------------------------------------------------------------------------------
-\subsubsection{86 GHz Flux}
-
-\begin{figure}
-  \centering
-  [altex: flux constraints]
-  \caption{flux constraints}
-  \label{fig:cmp_fluxes}
-\end{figure}
-
-[Michi]
-
-%------------------------------------------------------------------------------
-\subsubsection{86 GHz Major Axis}
-
-\begin{figure}
-  \centering
-  [altex: 86GHz size]
-  \caption{86GHz size}
-  \label{fig:cmp_86GHz_sz}
-\end{figure}
-
-[Michi]
-
-%------------------------------------------------------------------------------
-\subsubsection{NIR Median Flux}
-
-[Michi]
-
-%------------------------------------------------------------------------------
-\subsubsection{X-ray Luminosity}
-
-[George to provide physical overview]
-
-Estimates of flux from Compton.
-
-Estimates of Bremss.  Discussion of Bremss. in SANE, large Rhigh models.
-
-[Michi]
-
-%==============================================================================
-\subsection{Variability}
+\subsubsection{Variability}
 
 Variability is central to interpretation of Sgr A*: the small black hole size means that observations considered here are taken over intervals when the source is expected to vary significantly.  This distinguished Sgr A* from M87*, where the source is expected to vary only over timescales long compared to a single track.
 
@@ -228,8 +178,8 @@ Variability is a strong constraint on the models.  Although models differ in the
 
 If we were to apply the variability constraints directly to the models there would be M/N successful models left (M1/N for the ALMA constraint and M2/N for the visibility amplitude constraint).  One interpretation of this result is that the surviving models are the correct description of the source (although we would expect some misclassification of models as consistent or inconsistent when using 1\% cuts on such a large model set).  Another interpretation is that there is a missing physical ingredient in the models, see Section \ref{sec:discussions} for a discussion.
 
-%------------------------------------------------------------------------------
-\subsubsection{ALMA Light Curve}
+%..............................................................................
+\subsubsubsection{ALMA Light Curve}
 
 \begin{figure}
   \centering
@@ -240,8 +190,8 @@ If we were to apply the variability constraints directly to the models there wou
 
 [David Lee to provide first draft]
 
-%------------------------------------------------------------------------------
-\subsubsection{4 $G\lambda$ Visibility Amplitude Variability}
+%..............................................................................
+\subsubsubsection{4 $G\lambda$ Visibility Amplitude Variability}
 
 \begin{figure}
   \centering
@@ -251,6 +201,64 @@ If we were to apply the variability constraints directly to the models there wou
 \end{figure}
 
 [Boris to provide first draft]
+
+%------------------------------------------------------------------------------
+\subsubsection{Non-EHT Constraints}
+
+Here we compare constraints from 86GHz, NIR, and X-ray observations.  Emission in these bands is believed to originate in the compact source from plasma that is close to or overlaps the plasma that produces the 230GHz emission observed by EHT.
+
+It turns out that the 86GHz flux and size do not discriminate strongly between models: most models have about the right size and spectral index.  The NIR and X-ray constraints - which require that our models not overproduce the observed emission - are highly informative.  It turns out that many SANE models with large $\Rh$ (and therefore cool midplane electron populations) overproduce X-ray emission through bremsstrahlung.  In addition, many of the nonthermal models have large populations, compared to the thermal models, of electrons that are energetic enough to produce NIR emission and therefore overproduce in the NIR.   We also find that some models are dominated by Compton scattering in the NIR.
+
+
+%..............................................................................
+\subsubsubsection{NIR Median Flux}
+
+[Michi]
+
+%..............................................................................
+\subsubsubsection{X-ray Luminosity}
+
+[George to provide physical overview]
+
+Estimates of flux from Compton.
+
+Estimates of Bremss.  Discussion of Bremss. in SANE, large Rhigh models.
+
+[Michi]
+
+%..............................................................................
+\subsubsubsection{86 GHz Median Flux}
+
+...
+
+[Michi]
+
+%..............................................................................
+\subsubsubsection{86 GHz Major Axis}
+
+\begin{figure}
+  \centering
+  [altex: 86GHz size]
+  \caption{86GHz size}
+  \label{fig:cmp_86GHz_sz}
+\end{figure}
+
+[Michi]
+
+%==============================================================================
+\subsection{Nonthermal Aligned Models}
+
+\ckc{Write subsections only if they are different from the thermal models.}
+
+%==============================================================================
+\subsection{Tilted Models}
+
+\ckc{Write subsections only if they are different from the thermal models.}
+
+%==============================================================================
+\subsection{Stellar Wind Fed Models}
+
+\ckc{Write subsections only if they are different from the thermal models.}
 
 %==============================================================================
 \subsection{Best Bet Models}

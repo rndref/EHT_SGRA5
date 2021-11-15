@@ -1,6 +1,8 @@
 \documentclass[twocolumn,twocolappendix,tighten,dvipsnames,linenumbers]{aastex63}
 \usepackage{eht}
 
+\newcommand\subsubsubsection[1]{\paragraph{#1}}
+
 % Inline comments
 \newcommand\note[1]{{\color{OliveGreen}[note: #1]}}
 \newcommand\ckc[1]{{\color{MidnightBlue}[ckc: #1]}}
@@ -27,25 +29,30 @@
 
 %==============================================================================
 \begin{abstract}
-  We present theory interpretations of the accretion flow around the
-  supermassive black hole Sagittarius A* (\sgra) using the Event
-  Horizon Telescope (EHT) observation at 1.3\,mm collected during the
-  2017 April 5--11 observing campaign.
+
+In this paper we provide a first physical interpretation for the 2017 EHT observations of Sgr A*.  Our main approach is to compare EHT data and non-EHT, unresolved data to a library of time-dependent general relativistic magnetohydrodynamics (GRMHD) models, including aligned, tilted, and stellar wind-fed models; the library is ray-traced assuming both thermal and nonthermal electron distribution functions.  Many of our models have  spatial structure that is consistent with the EHT data alone.  The EHT data alone are, however, strongly constraining and disfavor edge-on models.  Nearly all models exhibit fluctuations in the $230$GHz light curve or in the visibility amplitudes that are larger than seen in the data; the data are quieter than the models.  All models with equal ion and electron temperatures fail one or more constraints.  About half the  models overproduce quiescent near-infrared and x-ray flux, underscoring the importance of continued multiwavelength monitoring of Sgr A*.  We discuss and rule out several possible explanations for too-large fluctuations in the models and highlight the possibility that collisionless corrections to ideal fluid models may be responsible.  Although the models are remarkably close to the data, these results herald a new era of precision black hole astrophysics in which theoretical models are strongly challenged by the data.   
+
+%We present theory interpretations of the accretion flow around the
+%  supermassive black hole Sagittarius A* (\sgra) using the Event
+%%  Horizon Telescope (EHT) observation at 1.3\,mm collected during the
+%%  2017 April 5--11 observing campaign.
 
   \color{BrickRed}
 
-  [This is EHT's \sgra paper V.
-  We are at the position to turn this from a sketchpad to an actual
-  draft of the paper.
-  The original draft is backed up in the \texttt{2018-08-01/}
-  directory on Overleaf.
+%  [This is EHT's \sgra paper V.
+%  We are at the position to turn this from a sketchpad to an actual
+%  draft of the paper.
+%  The original draft is backed up in the \texttt{2018-08-01/}
+%  directory on Overleaf.
 
-  For adding references, simply cite the ADS key, e.g.,
-  \texttt{\textbackslash citep\{2019ApJ...875L...5E\}}.
-  The bash script \texttt{tools/adsbib.sh} would automatically pull
-  the full BibTeX database from ADS.
-  See \texttt{Makefile} to learn how to use the scripts in
-  \texttt{tools/}.]
+%  For adding references, simply cite the ADS key, e.g.,
+%  \texttt{\textbackslash citep\{2019ApJ...875L...5E\}}.
+%  The bash script \texttt{tools/adsbib.sh} would automatically pull
+%  the full BibTeX database from ADS.
+%  See \texttt{Makefile} to learn how to use the scripts in
+%  \texttt{tools/}.]
+
+
 \end{abstract}
 
 \keywords{galaxies: individual: \sgra -- Galaxy: center -- black hole
