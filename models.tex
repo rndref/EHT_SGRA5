@@ -47,12 +47,13 @@ $ L_\mathrm{bol}/L_\mathrm{Edd}
 %==============================================================================
 \subsection{One-Zone Model and Estimates}
 
-The development of complex models is guided by simple estimates. Following \citetalias{M87PaperV} we consider a one-zone model for \sgra. The model consists of a uniform plasma sphere of radius $5 \rg$ with magnetic field oriented at $\pi/3$ to the line-of-sight. The magnetic field in the sphere is in pressure equilibrium with the plasma: $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where we assume $\beta=1$ and $T_i = 3 T_e$.  Assuming the dimensionless electron temperature $\Theta_e = kT_e / m_e c^2 = 10$, using the thermal emissivity of \cite{2011ApJ...737...21L}, assuming optically thin emission, the values of $B$ and $n_e$ required to produce observed flux of 2 Jy (average flux of \sgra measured by ALMA during the 2017 campaign) are : \color{green}\begin{eqnarray}
+The development of complex models is guided by simple estimates. Following \citetalias{M87PaperV} we consider a one-zone model for \sgra. The model consists of a uniform plasma sphere of radius $5 \rg$ with magnetic field oriented at $\pi/3$ to the line-of-sight. The magnetic field in the sphere is in pressure equilibrium with the plasma: $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where we assume $\beta=1$ and $T_i = 3 T_e$.  Assuming the dimensionless electron temperature $\Theta_e \equiv  kT_e / m_e c^2 = 10$, using the thermal emissivity of \cite{2011ApJ...737...21L}, and assuming optically thin emission, the values of $B$ and $n_e$ required to produce observed flux of 2.4 Jy (average flux of \sgra measured by ALMA during the 2017 campaign) are : \color{green}\begin{eqnarray}
 \label{eq:onezone}
     n_e &\simeq& 1.1\times 10^6 \,\rm cm^{-3},\\
     B &\simeq& 30 \rm\, G.
 \end{eqnarray}\color{black}
 These values are consistent with $n_e$ and $B$ of a similar one-zone model fitted to archival Sgr~A* spectrum reported in \citet{2018ApJ...868..101B}.
+% CFG: I've placed a mathematica script implementing this model in 
 
 The one-zone model density and size translate into optical thickness for Compton scatterings, $\tau_e \approx \sigma_T n_e 5 \rg \approx 2 \times 10^{-5}$, which yields a small Compton parameter: $y =  16 \Theta_e^2 max(\tau_e,\tau_e^2) = 3 \times 10^{-2}$. This implies that the synchrotron emission is the main plasma cooling process. We can calculate the synchrotron cooling timescale $t_{cool} \equiv u/\Lambda$ where $u=?$ is the electron energy and $\Lambda=16 B^2 e^4 n_e \Theta_e^2 /(3 c^3 m_e^2)$ is the total synchrotron cooling rate from thermal population of electrons (for details see Appendix~A in \citealt{2011ApJ...735....9M}). For $n_e = 1.1 \times
 10^6$, $B = 30\,\mathrm{G}$ and $\Theta_e=10$, the estimated $t_{cool}=3.1 \times 10^4\sec
