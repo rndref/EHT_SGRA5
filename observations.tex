@@ -1,16 +1,16 @@
-\section{Observations}\label{sec:observations}
+\section{Observational Constraints}\label{sec:observations}
 
 [CG to write first pass]
 
-Sgr A* is one of the most observed objects in the sky.   We know a great deal about it from measurements conducted with a slew of telescopes, across 5 decades in time and more than 17 decades in frequency.  We must select a manageable subset of this data for comparison with the models.  The goal is to select (1) approximately uncorrelated constraints, so that each can test a distinct aspect of the model; (2) constraints based on data that can be simulated with the  models; (3) constraints based on EHT 2017 1.3mm VLBI data or based on photons produced within or close to the 1.3mm emission region.
+Sgr A* is one of the most observed objects in the sky.   We know a great deal about it from measurements conducted with a slew of telescopes, across 5 decades in time and more than 17 decades in frequency.  We must select a manageable subset of this data for comparison with the models.  The goal is to select (1) approximately uncorrelated constraints, so that each can test a distinct aspect of the model; (2) constraints based on data that can be simulated with the  models; (3) constraints based on EHT 2017 1.3mm VLBI data or based on photons produced within or close to the 1.3mm emission region that are contemporaneous or near-contemporaneous.
 
 %==============================================================================
-\subsection{Standard Measurement and Assumptions}
-
 % \subsubsection{Scattering Models}
 
 %==============================================================================
-\subsection{EHT Observations Constraints}
+\subsection{EHT Observational Constraints}
+
+\ckc{ck's first pass}
 
 \begin{figure*}
   \centering
@@ -33,14 +33,115 @@ Sgr A* is one of the most observed objects in the sky.   We know a great deal ab
     (\emph{right}) \ckc{Q: do we want to show only EHT observation and
       referencing to other papers for non-EHT constraints?
       Or should we have representative figures for all measurements?}}
-  \label{fig:observations}
+  \label{fig:visibility}
 \end{figure*}
+
+The EHT observed \sgra at 1.3 mm during the 2017 April 5--11 observing campaign and obtained
+the first horizon scale visibility information of the Galactic center supermassive black hole.
+Figure~\ref{fig:visibility} shows the measured correlated flux densities of \sgra on April 6
+and 7 of the HOPS pipeline, overplotted with a fiducial GRMHD + GRRT model.
+It is possible to identify a nulls near $\sim 5\mathrm{G}\lambda$ and $7\mathrm{G}\lambda$,
+suggesting a ring like feature.
+
+We will use the visibility in three different ways.
+First, the location of the first null and the visibility amplitude of the ... provide an informative non-parametric constraint of the models.
+Second, the short baseline provide a quantitative size estimate of the source.
+Third, we follow the procedure in Paper~\ref{PaperIV} to fit for diameter, width, and asymmetry of the visibility data.
 
 %------------------------------------------------------------------------------
 \subsubsection{230\,GHz VLBI Null Locations}
 
+\ckc{ck's first pass}
+
+One way we characterize the GRMHD simulations carried out for
+different black hole and flow parameters and assess their
+compatibility with the \sgra\ data involves an analysis in the Fourier
+domain.
+To this end, we first calculate the complex visibilities by performing
+a two-dimensional Fourier transform on each snapshot of each
+simulation
+\begin{equation}
+  V(u,v) = \iint I(\alpha,\beta) e^{-2\pi i(u\alpha+v\beta)}d\alpha d\beta,
+\end{equation}
+where we defined $\alpha \equiv X/D$ and $\beta \equiv Y/D$, with D
+being the distance to \sgra.
+Figure~\ref{fig:cmp_VA} shows two example snapshots and the
+corresponding visibility amplitudes (VA) as a function of baseline
+length for a vertical and horizontal image cross sections from a
+simulation.
+Even though the locations and depths of the minima in the visibility
+amplitudes are primarily set by the image size, which is set by the
+black hole mass, this figure shows that they can exhibit significant
+variability from snapshot to snapshot because of the multitude of
+structures that originate in the turbulent flow (Medeiros et
+al. 2018).
+In particular, the minima tend to move to larger baselines as the ring
+thickness temporarily changes in response to, e.g., the appearance of
+a flux tube or a similar structure.
+In addition, images that have a higher degree of azimuthal asymmetry
+show pronounced differences in their vertical and horizontal cross
+sections.
+
+The degree of VA variability is different from model to model and also
+depends on some of the global characteristics of the flow.
+For example, the overall electron density in the disk plays a role by
+its effect on the ring thickness: thicker rings show more change in
+the visibility minima between snapshots than thinner ones (see also
+Satapathy et al. 2021 for the effect on closure phases).
+Because of this, while no model is expected to resemble the observed
+visibility amplitude data 100\% of the time, it is nevertheless
+possible as well as discriminating to require an agreement between the
+locations of the minima in each simulation snapshot and the visibility
+amplitude data from \sgra\ a reasonable fraction of the time.
+
+To carry out the comparison with the data, we focus on the VA observed
+on 2017 April 7, \#3599 because that night has the best u-v coverage
+near the minima.
+The first visibility minima in both the N-S and E-W directions occur
+between $2.5-3.5$\;G$\lambda$, as we show in
+Figure~\ref{fig:cmp_null}.
+We define compliance for a snapshot by requiring that the VA obtained
+for {\it either} the horizontal {\it or} the vertical cross section of
+a snapshot have a minimum in this range of baseline lengths.
+
+A second feature of the visibility amplitudes that can help discern
+between models is the behavior of the VA at long baselines.
+April 7 data also show that the amplitudes have declined to $<6\%$ of
+the zero baseline flux at baselines between $6-8$\;G$\lambda$ along
+all orientations.
+This is characteristic of ring-like images with a relatively high
+degree of azimuthal symmetry.
+Images that are more asymmetric, on the other hand, lead to
+significantly higher amplitudes at baselines much larger than the
+first minimum, or no minima at all, as the lower panels in
+Figure~\ref{fig:cmp_VA} illustrate.
+As a result, selecting models based on how frequently they produce
+snapshots with such large-baseline power helps identify models that
+are in accordance with the data.
+
+One consideration when comparing models to data at long baselines is
+the effect of interstellar scattering.
+Diffractive scattering has the effect of convolving the image with a
+smooth kernel and can reduce the amplitudes to $\sim 70\%$ of their
+intrinsic value in the $6-8$\;G$\lambda$ range (REF).
+Refractive scattering, on the other hand, introduces a noise at these
+baselines of the order of $0.5-3\%$, depending on the particular
+characteristics of the scattering screen toward \sgra\ (REF).
+To account for both of these effects, we choose a $6\%$ upper limit to
+visibility amplitudes from a model snapshot when defining compliance,
+as we show in Figure~\ref{fig:cmp_null}.
+
+We assign a compliance fraction to a simulation based on the fraction
+of snapshots that pass both criteria we described above.
+We will discuss the results of this comparison in the next section,
+along with the other model scoring criteria.
+[I will add to the discussion of the scoring table when that part is
+  written.]
+
 %------------------------------------------------------------------------------
 \subsubsection{230\,GHz VLBI Pre-Image Size}
+
+\ckc{ck's first pass}
 
 The second moment of an EHT source corresponds, in the $uv$ domain, to the curvature of the visibility amplitude near zero baseline length.  That is, the 2nd moment tensor
 \begin{equation}

@@ -7,7 +7,7 @@
 %==============================================================================
 \subsection{Basic Assumptions}\label{sec:basic}
 
-Through out the paper we adopt mass and distance for \sgra to be
+Throughout the paper we assume a mass and distance for \sgra:
 \begin{align}
   \mbh &= (4.14 \pm 0.014) \times 10^6 \msun,\\
   D    &= (8.127 \pm 0.023) \kpc.
@@ -15,11 +15,10 @@ Through out the paper we adopt mass and distance for \sgra to be
 which is approximately the mean of \citet{2019Sci...365..664D} and
 \citet{2019A&A...625L..10G}.
 
-We will assume that \sgra is a black hole so that the spacetime around it is described by Schwarzschild or Kerr metric. The black hole dimensionless spin, $\abh$, is treated as a free parameter in range: $-1 < \abh < 1$, where $\abh \equiv Jc/G\mbh^2$, where $J$, $G$, and $c$ are the black
+We will also assume that \sgra is a black hole so that the spacetime around it is described by the Kerr metric. The black hole dimensionless spin, $\abh$, is a free parameter with $-1 < \abh < 1$, where $\abh \equiv Jc/G\mbh^2$, where $J$, $G$, and $c$ are the black
 hole angular momentum, gravitational constant, and speed of light,
-respectively~\footnote{We follow the convention of \citetalias{M87PaperV} where
-$\abh < 0$ indicate anti-aligned angular momentum between the
-accretion flow and that of the black hole.}.
+respectively.  Following \citetalias{M87PaperV}, 
+$\abh < 0$ indicates the angular momentum of the accretion flow and black hole are antiparallel (the disk is ``retrograde'').
 
 Using the above mass and distance, the implied characteristic length
 is $\rg = 6.1 \times 10^{11}\cm$, characteristic time is
@@ -30,13 +29,14 @@ Assuming that the emitting plasma is made of ionized hydrogen (electron-proton p
 $ L_\mathrm{Edd}
 = 4\pi G\mbh c m_p/\sigma_{T}
 = 5.2 \times 10^{44}\allowbreak \ergsps$
+% CG: no effficiency?  usually use 0.1
 %The corresponding Eddington accretion rate is $ \dot\mbh_\mathrm{Edd}
 %\equiv L_\mathrm{Edd}/(0.1 c^2)
 %= 5.8 \times 10^{24} \gm \sec^{-1}
 %= 0.09 \msun \yr^{-1}$ where efficiency of energy conversion is 10\%.
 and the Eddington ratio:
 $ L_\mathrm{bol}/L_\mathrm{Edd}
-= 1.9 \times 10^{-10} (L_\mathrm{bol}  /10^{35}) \erg\sec^{-1}$. In a quiescent state the bolometric luminosity of \sgra is $L_{bol} \sim 10^{35}\erg\sec^{-1}$ resulting in extremely small Eddington ratio. In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected and a model emission can be calculated in a post-processing step .
+= 1.9 \times 10^{-10} (L_\mathrm{bol}  /10^{35}) \erg\sec^{-1}$. In a quiescent state the bolometric luminosity of \sgra is $L_{bol} \sim 10^{35}\erg\sec^{-1}$ resulting in extremely small Eddington ratio. In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected and that model emission can be calculated in a post-processing step.
 
 % below probably not necessary:
 % \footnote{Translation of the source flux to luminosity is given by: $ \nu L_\nu
@@ -47,7 +47,7 @@ $ L_\mathrm{bol}/L_\mathrm{Edd}
 %==============================================================================
 \subsection{One-Zone Model and Estimates}
 
-The development of complex models is guided by simple estimates. Following \citetalias{M87PaperV} we consider a one-zone model for \sgra. The model consists of a uniform plasma sphere of radius equal $5 \rg$ with magnetic field oriented at $\pi/3$ to the line-of-sight. The magnetic field in the sphere is in pressure equilibrium with the plasma: $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $\beta=1$ and $T_i = 3 T_e$.  Assuming the dimentionless electron temperature $\Theta_e = kT_e / m_e c^2 = 10$, the values of $B$ and $n_e$ required to produce observed flux of 2 Jy (average flux of \sgra measured by ALMA during the 2017 campaign) are : \color{green}\begin{eqnarray}
+The development of complex models is guided by simple estimates. Following \citetalias{M87PaperV} we consider a one-zone model for \sgra. The model consists of a uniform plasma sphere of radius $5 \rg$ with magnetic field oriented at $\pi/3$ to the line-of-sight. The magnetic field in the sphere is in pressure equilibrium with the plasma: $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where we assume $\beta=1$ and $T_i = 3 T_e$.  Assuming the dimensionless electron temperature $\Theta_e = kT_e / m_e c^2 = 10$, using the thermal emissivity of \cite{2011ApJ...737...21L}, assuming optically thin emission, the values of $B$ and $n_e$ required to produce observed flux of 2 Jy (average flux of \sgra measured by ALMA during the 2017 campaign) are : \color{green}\begin{eqnarray}
 \label{eq:onezone}
     n_e &\simeq& 1.1\times 10^6 \,\rm cm^{-3},\\
     B &\simeq& 30 \rm\, G.
