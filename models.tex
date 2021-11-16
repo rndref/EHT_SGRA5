@@ -47,24 +47,23 @@ $ L_\mathrm{bol}/L_\mathrm{Edd}
 %==============================================================================
 \subsection{One-Zone Model and Estimates}
 
-The development of complex models is guided by simple estimates. Following \citetalias{M87PaperV} we consider a one-zone model for \sgra. The model consists of a uniform plasma sphere of radius $r = 5 \rg$ with magnetic field oriented at $\pi/3$ to the line-of-sight. The magnetic field in the sphere is in pressure equilibrium with the plasma: $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $\beta=1$ and $T_i = 3 T_e$.  We also take the dimensionless electron temperature $\Theta_e \equiv  kT_e / m_e c^2 = 10$. Using the thermal emissivity $j_\nu$ of \cite{2011ApJ...737...21L} and assuming optically thin emission then the flux density in Jy is $F_\nu = (4/3)\pi r^3 j_\nu D^{-2} 10^{23}$.  Setting this equal to $2.4$Jy, the observed average flux of \sgra measured by ALMA during the 2017 campaign yields a nonlinear equation for $B$ or $n_e$, which can be solved numerically:
+The development of complex models is guided by simple estimates. Following \citetalias{M87PaperV} we consider a one-zone model for \sgra. These results largely follow one-zone models developed in the literature over many decades (refs).
+
+The one-zone model is a uniform plasma sphere of radius $r = 5 \rg$ with magnetic field oriented at $\pi/3$ to the line-of-sight. The magnetic pressure is assumed to be in fixed ratio to the gas pressure: $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $\beta=1$ and $T_i = 3 T_e$.  We assume the dimensionless electron temperature $\Theta_e \equiv  kT_e / m_e c^2 = 10$. 
+
+Using the thermal emissivity $j_\nu$ of \cite{2011ApJ...737...21L} and assuming optically thin emission, the flux density in Jy is $F_\nu = (4/3)\pi r^3 j_\nu D^{-2} 10^{23}$.  Setting this equal to $2.4$Jy, the observed average flux of \sgra measured by ALMA during the 2017 campaign yields a nonlinear equation for $B$ or $n_e$, which can be solved numerically:
 \color{green}\begin{eqnarray}
 \label{eq:onezone}
     n_e &\simeq& 1.1\times 10^6 \,\rm cm^{-3},\\
     B &\simeq& 30 \rm\, G.
 \end{eqnarray}\color{black}
+(the synchrotron optical depth $\tau_S = r j_\nu/B_\nu \simeq 0.4$, so the optically thin approximation is marginal).  
 These values are consistent with $n_e$ and $B$ of a similar one-zone model fitted to archival Sgr~A* spectrum reported in \citet{2018ApJ...868..101B}.
 % CFG: I've placed a mathematica script implementing the one zone model in eht.astro.illinois.edu://bd4/eht/paperV/OneZoneThin.ma
 
-The one-zone model has a small  optical thickness to Compton scattering $\tau_e \approx \sigma_T n_e 5 \rg \approx 2 \times 10^{-5}$, and thus a small Compton parameter: $y =  16 \Theta_e^2 max(\tau_e,\tau_e^2) = 3 \times 10^{-2}$. Synchrotron emission is therefore expected to be the main plasma cooling process. The synchrotron cooling timescale is $t_{cool} \equiv u/\Lambda$ where $u$ is the electron internal energy and $\Lambda=16 B^2 e^4 n_e \Theta_e^2 /(3 c^3 m_e^2)$ is the synchrotron cooling rate from thermal population of electrons (for details see Appendix~A in \citealt{2011ApJ...735....9M}). For $n_e = 1.1 \times
-10^6$, $B = 30\,\mathrm{G}$ and $\Theta_e=10$, the estimated $t_{cool}=3.1 \times 10^4\sec
-= 1.5 \times 10^3 \tg$ which is much longer than the characteristic time scale in the system. One-zone models confirms that the cooling effects can be neglected in the complex models (e.g., \citealt{2012MNRAS.426.1928D}).
+The one-zone model has a small optical depth to Compton scattering $\tau_e \approx \sigma_T n_e r  \approx 2 \times 10^{-5}$, and thus a small Compton parameter: $y =  16 \Theta_e^2 max(\tau_e,\tau_e^2) = 3 \times 10^{-2}$. Synchrotron emission is therefore expected to be the dominant plasma cooling process. 
 
-There is a reason to believe that, if \sgra is fed by stellar winds as
-in \citet{2019MNRAS.482L.123R}, the inflowing plasma is almost pure
-helium. In this case the results change only slightly; the cooling time drops
-slightly because the rest-mass density (and therefore field strength)
-per electron increases.
+The synchrotron cooling timescale is $t_{cool} \equiv u/\Lambda$ where $u_e = 3 n_e k T_e$ is the electron internal energy and $\Lambda \approx 5.4 B^2 e^4 n_e \Theta_e^2 /(c^3 m_e^2)$ is the synchrotron cooling rate from thermal population of electrons (for details see Appendix~A in \citealt{2011ApJ...735....9M}; finite optical depth reduces $\Lambda$). The cooling time in the one-zone model is therefore $t_{cool}=2.3 \times 10^4\sec \simeq 1.1 \times 10^3 \tg$ which is longer than the characteristic time scale in the system. Cooling can therefore be neglected in the complex models (e.g., \citealt{2012MNRAS.426.1928D}). \footnote{Notice that if \sgra is fed by stellar winds then the inflowing plasma may be mainly helium \citep{2019MNRAS.482L.123R}; this changes the one-zone model only slightly.  Helium accretion is discussed at greater length in \ref{app:variability}.}
 
 Simple considerations also suggest that plasma around \sgra is mostly collisionless (mean free path for electron-ion collisions, $\lambda_F=x$ cm, is much longer than the characteristics length of the systems defined in Section~\ref{sec:basic}).
 This allows electron heating (e.g., accelerated by reconnection or turbulence) and
