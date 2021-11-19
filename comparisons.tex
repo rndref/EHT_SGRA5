@@ -58,6 +58,13 @@ It turns out that the null location statistic is informative and tends to rule o
   \label{fig:cmp_null}
 \end{figure}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{./figures/Ozel.png}
+  \caption{Ozel constraints plots}
+  \label{fig:cmp_ozel}
+\end{figure}
+
 ...
 
 %..............................................................................
@@ -65,7 +72,7 @@ It turns out that the null location statistic is informative and tends to rule o
 
 \begin{figure}
   \centering
-  [altex: 2nd moment plots]
+  \includegraphics[width=\columnwidth]{./figures/230GHz_size.png}
   \caption{2nd moment plots}
   \label{fig:cmp_2nd_moment}
 \end{figure}
@@ -81,9 +88,30 @@ Michi
 
 \begin{figure}
   \centering
-  [altex: m-ring fits]
-  \caption{m-ring fits}
-  \label{fig:cmp_m-ring}
+  \includegraphics[width=\columnwidth]{./figures/r0.png}
+  \caption{M-Ring diameter.}
+  \label{fig:cmp_m-ring_diam}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{./figures/w.png}
+  \caption{m-ring widths}
+  \label{fig:cmp_m-ring_width}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{./figures/f1.png}
+  \caption{m-ring asymmetry}
+  \label{fig:cmp_m-ring_asymm}
+\end{figure}
+
+\subsubsubsection{EHT Constraint Summary}
+
+\begin{figure}
+  \centering
+    \includegraphics[width=\columnwidth]{./figures/Interferometric_Hard_Cut.png}
+  \caption{Combined interferometric constraints (logical {\em and}) including the second moment, null location, and m-ring fit constraints.}
+  \label{fig:all_EHT_constraints}
 \end{figure}
 
 %------------------------------------------------------------------------------
@@ -100,8 +128,8 @@ If we were to apply the variability constraints directly to the models there wou
 
 \begin{figure}
   \centering
-  [altex: lightcurve variability]
-  \caption{lightcurve variability}
+    \includegraphics[width=\columnwidth]{./figures/mi_dist.png}
+  \caption{Distributions of MI for Illinois thermal models, compared to distributions from historical observations and the values from the 2017 ALMA light curve. }
   \label{fig:cmp_ALMA_var}
 \end{figure}
 
@@ -112,8 +140,8 @@ If we were to apply the variability constraints directly to the models there wou
 
 \begin{figure}
   \centering
-  [altex: 4G$\lambda$ variability]
-  \caption{4G$\lambda$ variability}
+    \includegraphics[width=\columnwidth]{./figures/va_dist.png}
+  \caption{Distributions of $PSD(4G\lambda)$ for Illinois thermal models, compared to the observed value from the 2017 EHT campaign. }
   \label{fig:cmp_VLBI_var}
 \end{figure}
 
@@ -130,6 +158,13 @@ It turns out that the 86GHz flux and size do not discriminate strongly between m
 %..............................................................................
 \subsubsubsection{NIR Median Flux}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{./figures/2um_flux.png}
+  \caption{NIR flux limit}
+  \label{fig:cmp_2um_flux}
+\end{figure}
+
 [Michi]
 
 %..............................................................................
@@ -141,12 +176,24 @@ Estimates of flux from Compton.
 
 Estimates of Bremss.  Discussion of Bremss. in SANE, large Rhigh models.
 
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{./figures/Xray_flux.png}
+  \caption{X-ray flux limits}
+  \label{fig:cmp_xray_flux}
+\end{figure}
+
 [Michi]
 
 %..............................................................................
 \subsubsubsection{86 GHz Median Flux}
 
-...
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{./figures/86GHz_flux.png}
+  \caption{86GHz median flux limits}
+  \label{fig:cmp_86ghz_flux}
+\end{figure}
 
 [Michi]
 
@@ -155,20 +202,39 @@ Estimates of Bremss.  Discussion of Bremss. in SANE, large Rhigh models.
 
 \begin{figure}
   \centering
-  [altex: 86GHz size]
+  \includegraphics[width=\columnwidth]{./figures/86GHz_size.png}
   \caption{86GHz size}
-  \label{fig:cmp_86GHz_sz}
+  \label{fig:cmp_86ghz_size}
 \end{figure}
 
 [Michi]
 
-\subsection{Inter-Model Comparison}
+\subsubsubsection{Summary of Non-EHT constraints}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{./figures/Noninterferometric_Hard_Cut.png}
+  \caption{Combined non-EHT constraints}
+  \label{fig:non_eht_cuts}
+\end{figure}
+
+\subsubsection{Summary of All Constraints}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{./figures/All_Hard_Cut.png}
+  \caption{Combined EHT and non-EHT constraints}
+  \label{fig:all_cuts}
+\end{figure}
+
+\subsubsection{Inter-Model Comparison}
 
 
 [Doosoo, Koushik to write here about HAMR thermal models.  Define a subsection, describe the results.]
 
-[Angelo and Richard to write here about HAMR thermal models.  Define a subsection, describe the results.]
+[Angelo and Richard to write here about critical beta models.  Define a subsection, describe the results.]
+
+
 
 
 %==============================================================================
@@ -179,7 +245,30 @@ Estimates of Bremss.  Discussion of Bremss. in SANE, large Rhigh models.
 [Razi to write here about variable kappa models.  Define a subsection, describe the results and how they differ from the thermal results.]
 
 [Christian to write here about constant kappa models.  Define a subsection, describe the results and how they differ from the thermal results.]
+\subsection{Constant kappa models $\kappa=3.5$ with variable efficiency, $\varepsilon(\sigma,\beta)$}
+In order to investigate the fraction on thermal to non-thermal particles we combine a thermal electron distribution function with a kappa electron distribution with $\kappa=3.5$. The value of $kappa=3.5$ is motivated from the spectral slope in the NIR during a quiescent state \cmf{add reference here}. In addition to the fixed kappa value we assume that the fraction between thermal and non-thermal particles depends on the local plasma properties, e.g, the magnetisation, $\simga$, and the plasma beta parameter, $\beta_{\rm p}$. Given this assumption we can write the total emissivity as:
+\begin{equation}
+j_{\nu,\rm{tot}}=\left[1-\epsilon(\varepsilon,\beta, \sigma)\right] j_{\nu,\rm{thermal}} + \epsilon(\varepsilon,\beta, \sigma) j_{\nu, \kappa},
+\end{equation}
+where the efficiency, $\epsilon(\varepsilon,\beta,\sigma)$, is given by:
+\begin{equation}
+    \epsilon(\varepsilon,\beta,\sigma)=\varepsilon\left[] 1 - \exp\left(-\beta_{\rm p}^{-2}\right)\right]\left[1-\exp\left(\frac{-\sigma^2}{\sigma_{\rm min}^2}\right)\right].
+\end{equation}
+Throughout this work we fix $\sigma_{\rm min}=0.01$ and vary the base efficiency, $\varepsilon$, between 0.05, 0.1 and 0.2. For each base efficiency we generate a set of models spanning the same parameter space as the thermal models (see Table \ref{tab:radiativemodels} for details). For each model we iterate the mass accretion rate to obtain an average flux of 2.4\,Jy at 230\,GHz across a time interval of 5000\,M. In order to explore a several values of $\varepsilon$ we increased the cadence of the radiative transfer to 50\,M. This allows us to keep the numerical costs for this parameter sweep low while still being within the correlation time of the GRMHD simulations ($t_{\rm corr}\approx 50-100\,M$) \cmf{ do we have reference for this? So far this result is not published, maybe Boris paper?}. An example for the distribution of the efficiency can be seen in the right half of  Fig. \ref{fig:varepsilon}. The efficiency quickly approaches $\epsilon=0$ within the disk region while within the jet the efficiency reaches the defined base-efficiency. Thus, togehter with the used cut of in sigma, $\sigma_{\rm cut}=1$ the non-thermal particles are mainly located in jet sheath.
 
+\begin{figure}
+  \centering
+    \includegraphics[width=\columnwidth]{./figures/GRMHDphiavera0.94sigmaeta.pdf}
+  \caption{Time and azimuthal averaged distribution of the magnetization, $\sigma$ (left half) and the efficiency, $\epsilon(\varepsilon,\beta,\sigma)$ using $\varepsilon=0.2 $ for a BHAC MAD GRMHD simulation with spin $a_{\star}=0.94$. The solid gray line corresponds to $\sigma=1$ and the dashed line indicates out-flowing plasma vi the Bernoulli parameter ($-h u_{t}>1.02$).}
+  \label{fig:varepsilon}
+\end{figure}
+
+\begin{itemize}
+    \item definition of efficiency and parameters used
+    \item effect on 230\,GHz 3h modulation index and source size
+    \item effect on 86\,GHz flux and source size
+    \item effect on NIR flux
+\end{itemize}
 [Alejandro to write here about Frankfurt nonthermal models.  Define a subsection, describe the results and how they differ from the thermal results.]
 
 [Tomohisa to write here about UWABAMI nonthermal power-law models]
