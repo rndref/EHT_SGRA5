@@ -7,7 +7,7 @@
 %==============================================================================
 \subsection{Basic Assumptions}\label{sec:basic}
 
-When modeling Sgr~A* emission, we assume it's mass and distance:
+When modeling Sgr~A* emission, we assume its mass and distance:
 \begin{align}
   \mbh &= (4.14 \pm 0.014) \times 10^6 \msun,\\
   D    &= (8.127 \pm 0.023) \kpc
@@ -15,27 +15,22 @@ When modeling Sgr~A* emission, we assume it's mass and distance:
 which is approximately the mean of values reported by \citet{2019Sci...365..664D} and
 \citet{2019A&A...625L..10G}.
 
-We will also assume that \sgra is a black hole so that the spacetime around it is described by the Kerr metric. The black hole dimensionless spin, $\abh$, is a free parameter with $-1 < \abh < 1$, where $\abh \equiv Jc/G\mbh^2$, where $J$, $G$, and $c$ are the black
-hole angular momentum, gravitational constant, and speed of light,
-respectively.  Following \citetalias{M87PaperV}, 
-$\abh < 0$ indicates the angular momentum of the accretion flow and black hole are antiparallel (the accretion flow is ``retrograde'').
+We also assume that \sgra is a black hole so that the spacetime around it is described by the Kerr metric. The black hole dimensionless spin, $\abh$, is a free parameter with $-1 < \abh < 1$, where $\abh \equiv Jc/G\mbh^2$, where $J$, $G$, and $c$ are the black hole angular momentum, gravitational constant, and speed of light, respectively.  Following \citetalias{M87PaperV}, $\abh < 0$ indicates the angular momentum of the accretion flow and black hole are antiparallel (the accretion flow is ``retrograde'').
 
 Using the above mass and distance, the implied characteristic length
-is $\rg = 6.1 \times 10^{11}\cm$, characteristic time is
-$\tg = 20.5 \sec$, and angular scale is $G\mbh/(c^2 D) = 5.03\uas$.
-The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D) = (52.2 \pm 2.08) \uas $, where errorbars enclose uncertainty in the black hole spin and viewing angle (see e.g., \citealt{2020ApJ...896....7M}).
+$\rg \equiv G M/c^2 = 6.1 \times 10^{11}\cm$, characteristic time 
+$\tg \equiv G M/c^3 = 20.5 \sec$, and angular scale $\thg \equiv G\mbh/(c^2 D) = 5.03\uas$.  The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D) = (52.2 \pm 2.08) \uas $, where errorbars enclose uncertainty in the black hole spin and viewing angle (see e.g., \citealt{2020ApJ...896....7M}).
 
-Assuming that the emitting plasma is made of ionized hydrogen (electron-proton plasma), the adopted black hole mass yields the \sgra Eddington luminosity:
+Assuming that the emitting plasma is ionized hydrogen (electron-proton plasma), the Eddington luminosity is 
 $ L_\mathrm{Edd}
 = 4\pi G\mbh c m_p/\sigma_{T}
 = 5.2 \times 10^{44}\allowbreak \ergsps$.
-% CG: no effficiency?  usually use 0.1
 The corresponding Eddington accretion rate is $ \dot\mbh_\mathrm{Edd} \equiv L_\mathrm{Edd}/(0.1 c^2)
 = 5.8 \times 10^{24} \gm \sec^{-1}
-= 0.09 \msun \yr^{-1}$ where efficiency of energy conversion is 10\% 
+= 0.09 \msun \yr^{-1}$ where nominal efficiency is 10\% 
 and the Eddington ratio:
 $ L_\mathrm{bol}/L_\mathrm{Edd}
-= 1.9 \times 10^{-10} (L_\mathrm{bol} /10^{35}) $ where $L_\mathrm{bol}$ is given in $\erg\sec^{-1}$. In a quiescent, non-flaring state the bolometric luminosity of \sgra is $L_{bol} \sim 10^{35}\erg\sec^{-1}$ resulting in extremely small Eddington ratio. In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected and that model emission can be calculated in a post-processing step.
+= 1.9 \times 10^{-10} (L_\mathrm{bol} /10^{35}) $ where $L_\mathrm{bol}$ is in $\erg\sec^{-1}$. In a quiescent, non-flaring state the bolometric luminosity of \sgra is $L_{bol} \sim 10^{35}\erg\sec^{-1}$ resulting in an extremely small Eddington ratio. In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected and that model emission can be calculated in a post-processing step.
 
 % below probably not necessary:
 % \footnote{Translation of the source flux to luminosity is given by: $ \nu L_\nu
@@ -44,13 +39,13 @@ $ L_\mathrm{bol}/L_\mathrm{Edd}
 %   (\nu/230 \GHz)(F_\nu/{\rm Jy}) \erg \sec^{-1}$.}
 
 %==============================================================================
-\subsection{One-Zone Model and Estimates}
+\subsection{Estimate from One-Zone Model}
 
-The development of complex models is guided by simple estimates. Following \citetalias{M87PaperV} we consider a one-zone model for \sgra. These results largely follow one-zone models developed in the literature over many decades (refs).
+The development of complex models is guided by simple estimates. Following \citetalias{M87PaperV} we consider a one-zone model for \sgra. These results follow one-zone models developed in the literature over many decades (refs).
 
-The one-zone model is a uniform plasma sphere of radius $r = 5 \rg$ with magnetic field oriented at $\pi/3$ to the line-of-sight. The magnetic pressure is assumed to be in fixed ratio to the gas pressure: $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $\beta=1$ and $T_i = 3 T_e$.  We assume the dimensionless electron temperature $\Theta_e \equiv  kT_e / m_e c^2 = 10$. 
+Our one-zone model is a uniform plasma sphere of radius $r = 5 \rg$ with uniform magnetic field oriented at $\pi/3$ to the line-of-sight. The magnetic pressure is given by $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $T_i \equiv$ ion temperature, $T_e \equiv$ electron temperature, $\beta=1$, and $T_i = 3 T_e$.  We assume $\Theta_e \equiv  k T_e / m_e c^2 = 10$. 
 
-Using the thermal emissivity for synchrotron radiation $j_{\nu}$ (e.g., \citealt{2011ApJ...737...21L}) and assuming optically thin emission, the flux density in Jy is $F_\nu = (4/3)\pi r^3 j_\nu D^{-2} 10^{23}$.  Setting this equal to $2.4$Jy, the observed average flux of \sgra measured by ALMA during the 2017 campaign yields a nonlinear equation for $B$ or $n_e$, which can be solved numerically:
+Using the thermal emissivity for synchrotron radiation $j_{\nu}$ (e.g., \citealt{2011ApJ...737...21L}) and assuming optically thin emission, the flux density in Jy is $F_\nu = (4/3)\pi r^3 j_\nu D^{-2} 10^{23}$.  Setting $F_\nu = 2.4$Jy (the average measured by ALMA during the 2017 campaign) yields a nonlinear equation for $n_e$ with solution
 \begin{eqnarray}
 \label{eq:onezone}
     n_e &\simeq& 1.1\times 10^6 \,\rm cm^{-3},\\
@@ -62,26 +57,17 @@ These values are consistent with $n_e$ and $B$ of a similar one-zone model fitte
 %MM: fit of similar one zone model to Terahertz spectrum from ALMA infers ne=2-5x10^6 cm^-3, B=10-50 Gauss, T_e=1-3x10^11 K => Thetae=16-50
 % CFG: I've placed a mathematica script implementing the one zone model in eht.astro.illinois.edu://bd4/eht/paperV/OneZoneThin.ma
 
-The one-zone model has a small optical depth to Compton scattering $\tau_e \approx \sigma_T n_e r  \approx 2 \times 10^{-5}$, and thus a small Compton parameter: $y =  16 \Theta_e^2 max(\tau_e,\tau_e^2) = 3 \times 10^{-2}$. Synchrotron emission is therefore expected to be the dominant plasma cooling process. 
+The one-zone model has optical depth to Compton scattering $\tau_e \approx \sigma_T n_e r  \approx 2 \times 10^{-5}$, and thus a small Compton parameter: $y = 16 \Theta_e^2 max(\tau_e,\tau_e^2) \simeq 3 \times 10^{-2}$. Synchrotron cooling therefore dominates Compton cooling. 
 
-The synchrotron cooling timescale is $t_{cool} \equiv u/\Lambda$ where $u_e = 3 n_e k T_e$ is the electron internal energy and $\Lambda \approx 5.4 B^2 e^4 n_e \Theta_e^2 /(c^3 m_e^2)$ is the synchrotron cooling rate from thermal population of electrons (for details see Appendix~A in \citealt{2011ApJ...735....9M}; finite optical depth reduces $\Lambda$). The cooling time in the one-zone model is therefore $t_{cool}=2.3 \times 10^4\sec \simeq 1.1 \times 10^3 \tg$ which is longer than the characteristic time scale in the system. Cooling can therefore be neglected in the complex models (e.g., \citealt{2012MNRAS.426.1928D}).~\footnote{Notice that if \sgra is fed by stellar winds then the inflowing plasma may be mainly helium \citep{2019MNRAS.482L.123R}; this changes the one-zone model only slightly.  Helium accretion is discussed at greater length in \ref{app:variability}.}
+The synchrotron cooling timescale is $t_{cool} \equiv u/\Lambda$ where $u_e = 3 n_e k T_e$ is the electron internal energy and $\Lambda \approx 5.4 B^2 e^4 n_e \Theta_e^2 /(c^3 m_e^2)$ is the synchrotron cooling rate from thermal population of electrons (for details see Appendix~A in \citealt{2011ApJ...735....9M}; finite optical depth would reduce $\Lambda$). The cooling time in the one-zone model is therefore $t_{cool}=2.3 \times 10^4\sec \simeq 1.1 \times 10^3 \tg$ which is longer than the characteristic inflow time. Cooling can therefore be neglected in the numerical models (e.g., \citealt{2012MNRAS.426.1928D}).~\footnote{Notice that if \sgra is fed by stellar winds then the inflowing plasma may be mainly helium \citep{2019MNRAS.482L.123R}; this changes the one-zone model only slightly.  Helium accretion is discussed at length in \ref{app:variability}.}
 
-At $\Theta_e = 10$ and $n \simeq 10^6 \cm^{-3}$ the accretion flow is {\em collisionless} in the sense that the mean free path to Coulomb scattering is large compared to $\rg$.  At $\Theta_e \sim 1$ the electron-electron Coulomb scattering cross section, for example, is comparable to \monika{???please finish the sentence whoever wrote this}
-This allows electron heating (e.g., accelerated by reconnection or turbulence) and
-cooling (e.g., radiative cooling) mechanism to drive the electrons
-away from thermodynamic equilibrium with ions.
-These findings motivate considering \emph{i}) two-temperature plasma models where electrons are cooler than the
-ions, and \emph{ii}) the non-thermal electron distribution functions.
-As shown in early works by
-\citet{1998ApJ...492..554N} and \citet{2000ApJ...541..234O} both
-effects may significantly change the predicted properties of \sgra.
-
-
+The one-zone model implies that the accretion flow is at high temperature and low density and is therefore collisionless, in the sense that the mean free path to Coulomb scattering is large compared to $\rg$. At $\Theta_e \sim 1$, for example, the Coulomb scattering cross section is comparable to the Thomson cross section, and the mean free path therefore $\sim \tau_e^{-1} \rg$.  The electron-ion Coulomb scattering timescale is also long, and the electrons and ions are therefore poorly coupled.  This motivates consideration of (1) a two-temperature model for the plasma where electrons are cooler than the ions \citep{1976ApJ...204..187S,1977ApJ...214..840I, 1982Natur.295...17R}, and (2) nonthermal electron distribution functions.  As demonstrated in \citet{2014A&A...570A...7M} and \citet{2000ApJ...541..234O} both effects may change the predicted properties of \sgra.
 
 %==============================================================================
 
 \subsection{Numerical Models of the Inner Accretion Flows}
 
+The one-zone model is too simple for comparison with the rich set of observational constraints that is now available for \sgra.  Analytic spherical accretion models \citep[e.g.]{2019ApJ...885L..33N, arXiv:2111.02178} incorporate the black hole gravitational field, and analytic disk-like (RIAF) accretion models in the Kerr metric \citep[e.g.]{2009ApJ...697...45B,2009ApJ...706..960H} also incorporate angular momentum.   Neither incorporates turbulent fluctuations, at least in their simplest form.  We therefore use a more complicated, dynamical model.  We simulate the plasma flow with an ideal general relativistic magnetohydrodynamics (GRMHD) model, assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations. 
 
 \begin{deluxetable*}{cccccccc}
 \tabletypesize{\footnotesize}
@@ -107,7 +93,7 @@ Self-consistent Wind Feeding\footnote{non-standard model} & 0 & MAD & ? & ? & ? 
 \end{deluxetable*}
 
 %------------------------------------------------------------------------------
-\subsubsection{Gas Dynamics Simulations}
+\subsubsection{Plasma Flow Model}
 
 \begin{figure*}
   \centering
@@ -118,43 +104,42 @@ Self-consistent Wind Feeding\footnote{non-standard model} & 0 & MAD & ? & ? & ? 
 \end{figure*}
 
 % \paragraph{Methods, initial and boundary conditions:}
-We model complex dynamics of plasma around supermassive black hole by integrating standard  equations of non-radiative\footnote{Also non-resistive and non-viscid.} relativistic magnetohydrodynamics in Kerr metric where the black hole spin, $\abh$, is a parameter \citep[see e.g.,][]{2003ApJ...589..444G,2005ApJ...635..723A,2007A&A...473...11D}. We integrate the equations in three dimensions using several distinct numerical codes: iHARM \citep{2021JOSS....6.3336P}, BHAC \citep{2017ComAC...4....1P}, HAMR \citep{2018MNRAS.474L..81L}, Koral \citep{2013MNRAS.429.3533S} and Athena \citep{2016ApJS..225...22W}. (For general comparison of GRMHD codes we refer the reader to the code comparison papers by \citealt{2019ApJS..243...26P} and Olivares et al. in prep).
-All simulations use adiabatic equation of state with adiabatic index, $\Gamma_{\rm ad}$, equal 5/3, 4/3 or 13/9.
+We model the plasma flow around \sgra using ideal, non-radiative, general relativistic magnetohydrodynamics (GRMHD).  The gravitational field is given by the Kerr metric, with mass given by Equation (\ref{eq:mass}) and with black hole spin $\abh$ a free parameter \citep[see e.g.,][]{2003ApJ...589..444G, 2005ApJ...635..723A, 2007A&A...473...11D}.  
 
-In our {\it standard} Sgr~A* simulation setup the plasma is initially confined into a Fishbone-Moncrief torus \citep{1976ApJ...207..962F} on co-rotating or counter-rotating orbit in equatorial plane around the black hole. One model, HAMR-Tilted, started with torus angular momentum tilted with respect to black hole spin. The torus initial size is parametrized by the inner radius $R_{\rm in}=(6,12)\rg$ and radius of the pressure maximum $R_{\rm max}=(12,24)\rg$, where typically adopted values are given in parenthesis. 
-The initial torus is seeded with weak, poloidal magnetic fields. 
-All simulations in our library are evolved for at least $t_f=30,000 \tg$ and some up to $t_f=100,000\tg$. The magnetorotational instability (MRI, \citealt{1992ApJ...400..610B}) drives the torus into a turbulent state. In all of our standard simulations the accretion flow can be divided into less magnetized equatorial inflow and strongly magnetized bipolar outflow. The outflow can be further divided into a disk wind (corona) and the relativistic jet (funnel).
-As shown in many previous studies (see e.g., \citetalias{M87PaperV}, \citetalias{M87PaperVIII} and references therein), the exact strength of the magnetic flux near the event horizon of the black hole qualitatively divides obtained solutions into two categories: the Magnetically Arrested Disk (MAD) state \citep[e.g.,][]{bisnovatyi:1974,Igumenschchev:2003,2003PASJ...55L..69N} in which the magnetic flux near the horizon saturates and significantly affects the dynamics of the flow, and the contrasting Standard and Normal Evolution (SANE) state \citep[e.g.,][]{2003ApJ...589..444G,devilliers:2003,Narayan:2012}.
-The relative importance of magnetic flux in a  simulation is quantitatively described by the dimensionless quantity: $\phi \equiv \Phi_{\mathrm{BH}}/ \sqrt{\dot{M} r_g^2 c}$, 
-where $\Phi_{\rm BH}$ is the magnitude of the magnetic flux crossing one hemisphere of the event horizon and $\dot{M\
-}$ is the mass accretion rate through the event horizon. The SANE simulations have values of $\phi \approx 5$.
-The flux saturates at values of $\phi \gtrsim 50$, and the flow becomes MAD. Both types of models are included in the standard set of the Sgr A* simulations and those are obtained by initializing simulations with different magnetic field strengths. 
+We integrate the GRMHD equations in three spatial dimensions using multiple methods: iHARM \citep{2021JOSS....6.3336P}, BHAC \citep{2017ComAC...4....1P}, HAMR \citep{2018MNRAS.474L..81L}, Koral \citep{2013MNRAS.429.3533S} and Athena++ \citep{2016ApJS..225...22W}; see \citealt{2019ApJS..243...26P} and Olivares et al. in prep) for a comparison of GRMHD codes.  All simulations assume a constant adiabatic index $\Gamma_{\rm ad}$.
 
-We also consider two {\it non-standard} GRMHD simulations: the SANE titled torus simulations \citep{ref} and a model in which \sgra black hole is feed directly by winds produced by stars in orbit around the supermassive black hole \citep{2020ApJ...896L...6R}. The self-consistent wind feeding simulations result in the MAD mode of accretion. Both non-standard GRMHD simulations are computed for a single arbitrarily chosen value of $\abh$.
+The {\em standard} initial conditions for the GRMHD integrations are a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F} in a prograde ($\abh > 0$) or retrograde ($\abh < 0$) orbit.  In all models except the HAMR-Tilted models the torus orbital angular momentum is either parallel or antiparallel to the black hole spin. The torus is parametrized by an inner radius $R_{\rm in}$, typically $12\rg$, and the pressure maximum radius $R_{\rm max}$, typically $24\rg$. 
+The torus is seeded with a weak, poloidal magnetic field.  
 
-The content of the model library is summarized in Table~\ref{tab:GRMHDmodels}. Our simulations of \sgra are run at different numerical resolutions and using different numerical methods. We present more detailed comparison of all models and numerical methods in Appendix~\ref{app:models} and in  Appendix~\ref{app:numerical}. 
+All simulations are run in Kerr-Schild coordinates, which are regular on the horizon.  Most are run in a variant of spherical polar coordinates.  The {\em standard} boundary conditions are outflow at the inner boundary, located inside the event horizon, outflow at the outer boundary, located at $r \gtrsim 100 \rg$, and reflecting boundary conditions at the poles.  Standard  simulations are evolved to $t_f=30,000 \tg$. 
+
+Once the evolution has started, a combination of instabilities including the magnetorotational instability (MRI, \citealt{1992ApJ...400..610B}) drives the torus to a turbulent, fluctuating state. The standard accretion flow models can be divided by  latitude into three zones: equatorial inflow, a mid-latitude disk wind (``corona''; $\beta \equiv p_{gas}/(B^2/(8\pi)) \sim 1$) and a polar relativistic jet (``funnel''; $\sigma \equiv B^2/(8\pi \rho c^2) \gtrsim 1$).  
+
+It is well established (see e.g., \citetalias{M87PaperV}, \citetalias{M87PaperVIII} and references therein) that the magnetic flux through the event horizon divides the outcomes into two categories: the Magnetically Arrested Disk (MAD) state \citep[e.g.,][]{bisnovatyi:1974,Igumenschchev:2003,2003PASJ...55L..69N} in which the magnetic flux near the horizon saturates and significantly affects the dynamics of the flow, and the Standard and Normal Evolution (SANE) state \citep[e.g.,][]{2003ApJ...589..444G, devilliers:2003, Narayan:2012}.  The relative importance of magnetic flux can be described by $\phi \equiv \Phi_{\mathrm{BH}}/ \sqrt{\dot{M} r_g^2 c}$, where $\Phi_{\rm BH}$ is the magnetic flux interior to the black hole equator and $\dot{M}$ is the mass accretion rate through the horizon. MAD models have $\phi \sim \phi_{crit} \sim 60$. \footnote{In the Lorentz-Heaviside units commonly used in GRMHD simulations $\phi_{crit}$ is smaller by a factor of $(4\pi)^{1/2} \simeq 3.545$.}  In MAD models magnetic flux accretes onto the hole until $\phi \gtrsim \phi_{crit}$, then magnetic flux is expelled from the hole and escapes through the inflowing plasma.  SANE models have $\phi < \phi_c$, and in most of our standard models have $\phi \sim 1$.  
+
+We also consider two {\it non-standard} GRMHD simulations: SANE tilted torus simulations \citep{ref} and a model in which \sgra is fed directly by winds from nearby stars \sgra \citep{2020ApJ...896L...6R}. The self-consistent wind feeding simulations result in a mode of accretion that is somewhat similar to MAD but typically has lower mean angular momentum and is less well organized.
+The wind-fed models have $\abh = 0$. 
+
+The GRMHD model library is summarized in Table~\ref{tab:GRMHDmodels}. The models vary in numerical method and in numerical resolution. We present more information on the models and numerical methods in Appendix~\ref{app:models} and in  Appendix~\ref{app:numerical}. 
 
 %------------------------------------------------------------------------------
-\subsubsection{Emission Simulations}
+\subsubsection{Radiative Transfer Model}
 
-The comparison of GRMHD models to Sgr~A* observations
-requires post-processing them with radiative transfer simulations. The GRMHD simulations are carried out in dimensionless units and
-they are single fluid models meaning that they track total gas
-pressure or gas internal energy. To calculate model emission one has
-to make an assumption about electron distribution function (hereafter
-eDF). In this work we consider thermal and non-thremal eDFs. In what follows we describe essential details of our emission models.
+Synthetic observations are generated from the GRMHD model in a radiative transfer step.  Typically, the transfer step requires: (1) a model for the electron distribution function (hereafter eDF); (2) an assignment of a density scale to the GRMHD model; (3) a numerical radiative transfer step done after the GRMHD model, assuming that the plasma evolution is unaffected by radiation.  
 
-\paragraph{Thermal electron model}
+\subsubsubsection{Electron Distribution Function}
 
-In {\it thermal} electron models electron energies are distributed into the Maxwell-J{\"u}ttner distribution function:
+In {\it thermal} models electron energies are distributed into the Maxwell-J{\"u}ttner distribution function:
 \begin{align}
-\frac{dn_e}{d\gamma}= n_e \frac{\gamma^2 \sqrt{1-1/\gamma^2}} {\Theta_e K_2(1/\Theta_e)} \exp^{(-\gamma/\Theta_e)}
+\frac{dn_e}{d\gamma}= n_e \frac{\gamma^2 \sqrt{1-1/\gamma^2}} {\Theta_e K_2(1/\Theta_e)} \exp^{(-\gamma/\Theta_e)};
 \end{align}
-where $\Theta_e=k_b T_e/m_e c^2$ is the dimensionless electron temperature. The electron temperature is calculated from:
+recall $\Theta_e=k_b T_e/m_e c^2$, which is given in terms of the ion-electron temperature ratio $R \equiv T_i/T_e$:
 \begin{align}
-T_e=\frac{2 m_p u}{3 k_B \rho (2+R)}
+T_e=\frac{2 m_p u}{3 k_B \rho (2+R)}.
 \end{align}
-where $u$ is the internal energy density given by GRMHD simulation, $\rho$ is the plasma density given by the GRMHD simulation, and $R$ is a ratio between ion and electron temperatures given by:
+Here $u$ and $\rho$ are the internal energy density and rest-mass density from the GRMHD simulation.  Thermal models are motivated by the idea that wave-particle scattering drives partial relaxation of the eDF, even though Coulomb scattering is ineffective.     
+
+In \cite{M87PaperV} and \cite{M87PaperVIII}, $R$ is assigned using a prescription that assumes (1) the temperature ratio is a function of local conditions (2) the 
 \begin{equation}
 R = \frac{T_i}{T_e} = R_{\rm high} \frac{b^2}{b^2+1} + R_{\rm low} \frac{1}{b^2+1}.
 \end{equation}
@@ -168,7 +153,9 @@ In {\it non-thermal} electron emission models we assume that entire or a portion
 \end{align}
 where $p$, $\eta$, $\gamma_{min}$ and $\gamma_{max}$ are parameters or into 
 $\kappa$ eDF \citep{?}
-\begin{align}                                           \frac{1}{n_e} \frac{d n_e}{d\gamma}= \gamma \sqrt{\gamma^2-1} \left(1+\frac{\gamma+1}{\kappa w}\right)^{-(\kappa+1)}                                \end{align}                                             where $\kappa$ and $w$ are distribution parameters.
+\begin{align}                                           \frac{1}{n_e} \frac{d n_e}{d\gamma}= \gamma \sqrt{\gamma^2-1} \left(1+\frac{\gamma+1}{\kappa w}\right)^{-(\kappa+1)}                                \end{align}                                             where $\kappa$ and $w$ are distribution parameters. 
+
+\kc{Perhaps add a plot of the different eDFs to display the variety of models considered.}
 
 %------------------------------------------------------------------------------
 
@@ -187,11 +174,13 @@ $\kappa$ eDF \citep{?}
 % \end{figure*}
 
 \paragraph{Model Images and Spectra} 
-Given eDF GRMHD simulations are post-processed using radiative transfer codes to create model images at two frequencies: at the GMVA 86~GHz and at EHT frequency of 230~GHz and broadband spectral energy distributions (SEDs). Our emission simulations include radiative processes such as: synchrotron emission (which peaks around 230~GHz), synchrotron self-absorption, electron-electron bremsstrahlung, electron-ion bremsstrahlung, and inverse-Compton scatterings. The three latter radiative processes are largely responsible for NIR/X-ray emission. Summary of all radiative transfer simulations is given in Table~\ref{tab:radiativemodels}.
+
+Given eDF GRMHD simulations are post-processed using radiative transfer codes to create model images at two frequencies: at the GMVA frequency of 86~GHz and at the EHT frequency of 230~GHz and broadband spectral energy distributions (SEDs). Our emission simulations include radiative processes such as: synchrotron emission (which peaks around 230~GHz), synchrotron self-absorption, electron-electron bremsstrahlung, electron-ion bremsstrahlung, and inverse-Compton scatterings. The three latter radiative processes are largely responsible for NIR/X-ray emission. Summary of all radiative transfer simulations is given in Table~\ref{tab:radiativemodels}.
 
 \paragraph{Scaling} Our standard GRMHD simulations care carried out in dimensionless units. Simulation with different electron model therefore are scaled into physical units using different mass scaling factor ${\mathcal M}$. \monika{this will be developed a bit more later on}
 
 \paragraph{Numerical tools}
+
 Radiative transfer simulations are carried out using several numerical codes (ipole, BHOSS, ? list codes are references). A detailed comparison between numerical radiative transfer methods presented in Gold et al. 2021 and in Prather et al. 2021 shows agreement between codes sufficient to make no difference. Our images are generated with different field-of-views, resolution (see discussion in Appendix B2).\monika{this will be developed a bit more once appendices are in place}
 
 % \begin{figure*}
@@ -238,8 +227,9 @@ Radiative transfer simulations are carried out using several numerical codes (ip
 1 & [1;10;40;160] & 1 & - &  - & - & [10,30,...,170] & 3 & [86,230] & yes & [15,20) & x & iHARM-Thermal1\\
 1 & [1;10;40;160] & 1 & - &  - & - & [10,30,...,170] & 3 & [86,230] & yes & [20-25) & x & iHARM-Thermal2\\
 1 & [1;10;40;160] & 1 & - &  - & - & [10,30,...,170] & 3 & [86,230] & yes & [25-30) & x & iHARM-Thermal3\\
-1 & [1;2.5;5;10;40;160] & 1 &  - & - & - & [10,30,...,90] & 3 & [86,230] & yes & [10-15) & x & BHAC-Thermal1\\
-1 & [1;2.5;5;10;40;160] & 1 & - &  - & - & [10,30,...,90] & 3 & [86,230] & yes & [20-25) & x & BHAC-Thermal2\\1 & [1;2.5;5;10;40;160] & 1 & - &  - & - & [10,30,...,90] & 3 & [86,230] & yes & [25-30) & x & BHAC-Thermal3\\
+1 & [1;10;40;160] & 1 &  - & - & - & [10,30,...,90] & 3 & [86,230] & yes & [10-15) & x & BHAC-Thermal1\\
+1 & [1;10;40;160] & 1 & - &  - & - & [10,30,...,90] & 3 & [86,230] & yes & [20-25) & x & BHAC-Thermal2\\
+1 & [1;10;40;160] & 1 & - &  - & - & [10,30,...,90] & 3 & [86,230] & yes & [25-30) & x & BHAC-Thermal3\\
 1 & [1,40,160] & 1 & - & - & - & [10,50,90] & 1 & [230] & ? & ? & x & HAMR-Thermal\\
 \hline
 \multicolumn{13}{c}{Non-thermal power-law models}\\
@@ -247,9 +237,9 @@ Radiative transfer simulations are carried out using several numerical codes (ip
 \hline
 \multicolumn{13}{c}{Non-thermal $\kappa$ models}\\
 - & - & - & -  & - & 5 & & & & & \\
-1 & [1;2.5;5;10;40;160]  & 1 & -  & - & 3.5 (\epsilon_0=0.05) & [10,30,...,90]  & 1 & [86,230] & no & [25-30) & x & BHAC-kappa005 \\
-1 & [1;2.5;5;10;40;160]  & 1 & -  & - & 3.5 (\epsilon_0=0.10) & [10,30,...,90]  & 1 &  [86,230] & no &[25-30) & x & BHAC-kappa010 \\
-1 & [1;2.5;5;10;40;160]  & 1 & -  & - & 3.5 (\epsilon_0=0.20) & [10,30,...,90]  & 1 & [86,230] & no & [25-30) & x & BHAC-kappa020 \\
+1 & [1;10;40;160]  & 1 & -  & - & 3.5 (\epsilon_0=0.05) & [10,30,...,90]  & 1 & [86,230] & no & [25-30) & x & BHAC-kappa005 \\
+1 & [1;10;40;160]  & 1 & -  & - & 3.5 (\epsilon_0=0.10) & [10,30,...,90]  & 1 &  [86,230] & no &[25-30) & x & BHAC-kappa010 \\
+1 & [1;10;40;160]  & 1 & -  & - & 3.5 (\epsilon_0=0.20) & [10,30,...,90]  & 1 & [86,230] & no & [25-30) & x & BHAC-kappa020 \\
 - & - & - & -  & - & $\kappa(\beta,\sigma)$ & & & & &
 \enddata
 \end{deluxetable*}
