@@ -139,21 +139,21 @@ T_e=\frac{2 m_p u}{3 k_B \rho (2+R)}.
 \end{align}
 Here $u$ and $\rho$ are the internal energy density and rest-mass density from the GRMHD simulation.  Thermal models are motivated by the idea that wave-particle scattering drives partial relaxation of the eDF, even though Coulomb scattering is ineffective.     
 
-In \cite{M87PaperV} and \cite{M87PaperVIII}, $R$ is assigned using a prescription that assumes (1) the temperature ratio is a function of local conditions (2) the 
+In \cite{M87PaperV} and \cite{M87PaperVIII}, $R$ is assigned using a prescription that assumes (1) the temperature ratio is a function only of local conditions (2) the ratio varies from one value at low plasma $\beta \equiv P_{gas}/P_{mag}$ to a second value at high $\beta$:
 \begin{equation}
 R = \frac{T_i}{T_e} = R_{\rm high} \frac{b^2}{b^2+1} + R_{\rm low} \frac{1}{b^2+1}.
 \end{equation}
-Here $b\equiv\beta/\beta_{crit}$ and $\beta \equiv P_{gas}/P_{mag}$. The thermal electron model has therefore three free parameters: $\beta_{crit}$, $R_{\rm low}$, $R_{\rm high}$. In this model increasing $R_{\rm high}$ parameter decouples electron from ions in regions of high $\beta$ and heats up electrons in regions of low $\beta$ therefore changing $R_{\rm high}$ parameter results in highlighting different portions of GRMHD simulations. The thermal electron model is adopted from \citet{2016A&A...586A..38M} and has been previously used to model EHT images of the M87 black hole (\citetalias{M87PaperV}, \citetalias{M87PaperVIII}). The model is motivated by first-principles simulations of collisionless plasma (ref). 
+Here $b \equiv \beta/\beta_{crit}$. This model has three free parameters: $\beta_{crit}$, $R_{\rm low}$, $R_{\rm high}$.  In the standard models $R_{\rm low} = 1$, $\beta_{crit} = 1$, and only $R_{\rm high}$ is allowed to vary from $1$ to $160$.  The $R_{high}$ model is motivated by plasma heating models in which the branching ratio for dissipation into ions and electrons approaches $1$ at low $\beta$ (refs, including Howes, Kawazura, ...). 
 
-\paragraph{Non-thermal electron model}
-
-In {\it non-thermal} electron emission models we assume that entire or a portion of electron population is distributed into a power-law eDF:
+In {\it non-thermal} models the eDF includes a power-law tail extending to high energy.  This is implemented in two ways: with a so-called $\kappa$ distribution function, inspired by observations of the solar wind:
+\begin{align}                                           \frac{1}{n_e} \frac{d n_e}{d\gamma}= \gamma \sqrt{\gamma^2-1} \left(1+\frac{\gamma+1}{\kappa w}\right)^{-(\kappa+1)}           \end{align} 
+which has width parameter $w$ and power-law index parameter $\kappa$, or with a power-law distribution function:
 \begin{align}
 \frac{d n_e}{d\gamma} = n_e \frac{ (p-1)}{(\gamma_{min}^{1-p} - \gamma_{max}^{1-p})} \gamma^{-p}
 \end{align}
-where $p$, $\eta$, $\gamma_{min}$ and $\gamma_{max}$ are parameters or into 
-$\kappa$ eDF \citep{?}
-\begin{align}                                           \frac{1}{n_e} \frac{d n_e}{d\gamma}= \gamma \sqrt{\gamma^2-1} \left(1+\frac{\gamma+1}{\kappa w}\right)^{-(\kappa+1)}                                \end{align}                                             where $\kappa$ and $w$ are distribution parameters. 
+which has power-law index $p$ and upper and lower limits  $\gamma_{min}$ and $\gamma_{max}$. 
+
+Evidently the eDF assignment schemes considered here are approximations in the sense that the eDF will in general depend on both local conditions and particle histories.   
 
 \kc{Perhaps add a plot of the different eDFs to display the variety of models considered.}
 
@@ -172,6 +172,10 @@ $\kappa$ eDF \citep{?}
 %     \ckc{updated fig.~\ref{fig:GRMHD} to show 3d plots.  It will be odd to show emissivity (fig.~\ref{fig:jnu}) but not the GRRT images.  Maybe skip fig.~\ref{fig:jnu} as well?}}
 %   \label{fig:fiducial_imgs}
 % \end{figure*}
+
+\subsubsubsection{Model Scaling}
+
+Our GRMHD models are test-fluid simulations: they are nonself-gravitating and  
 
 \paragraph{Model Images and Spectra} 
 
