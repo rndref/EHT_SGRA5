@@ -147,14 +147,17 @@ NOTE: data is descattered.
 %------------------------------------------------------------------------------
 \subsubsection{230\,GHz M-Ring Fitting}
 
-EHT4 fits an ``m-ring'' source model to the 7 April data.
-The simplified m-ring model we use here takes $I$ to be a $\delta$
-function in radius multiplied by a truncated Fourier series, and
-convolves it with a Gaussian.
-The resulting model is
-\begin{equation}
-    I(r,\theta) =
-\end{equation}
+EHT4 fits an ``m-ring'' source model to the 7 April data.  The simplified m-ring source-plane model used here is a $\delta$ function in radius with diameter $d$ multiplied by a truncated (for $m > 3$) Fourier series, convolved with a Gaussian of with $w$.  In addition the model contains a centered Gaussian component to absorb large scale emission and emission interior to the ring.
+
+The simplified m-ring model has 10 parameters; 3 are commonly well constrained and physically interpretable and are therefore used here: the m-ring diameter $d$, the m-ring width $w$ (FWHM of the convolved Gaussian), and the $m=1$ relative amplitude $\beta_1$.
+
+For the comparison dataset we selected 10 120s scans spread approximately uniformly through the best-times region on 7 April.  The scans were selected to .  Detections are obtained on LMT baselines for 7 of the scans.  Only 10 scans were selected due to computational cost.   No changes in model selection were observed if any one scan was removed from the comparison.  The data were de-scattered, that is, the visibility amplitudes were divided by the refractive scattering kernel.  Maximum likelihood m-ring parameters were found for each scan.  
+
+We then read in a series of model images, generate synthetic data from the models, and fit m-rings to the synthetic data.  This produces a distribution of m-ring parameters for each model.   
+
+The synthetic data is generated as follows.  The image $I(x,y)$ is fourier transformed to complex visibilities $V(u,v)$, and then sampled on baselines $i$ drawn from the comparison scan, $V_i \equiv V(u_i,v_i)$.  Normally distributed thermal noise $\delta V_{th,i}$ based on telescope performance during the scan is added, and multiplicative, normally distributed noise $N$ is added to (very crudely) model gain corrections: $\tilde{V}_i = V_i (1 + \epsilon N) + \delta V_{th,i}$; the synthetic data used here has $\epsilon = 0.05$, but no significant changes in fit parameters were observed for $\epsilon = 0.02$.  We then fit to the resulting visibility amplitudes $|\tilde{V}_i|$ and closure phases arg$(\tilde{V}_i \tilde{V}_i \tilde{V}_j \tilde{V}_k^*$, where $ijk$ form a triangle in the uv plane.  
+
+
 
 NOTE: data is descattered.
 
