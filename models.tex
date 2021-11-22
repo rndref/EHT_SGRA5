@@ -7,7 +7,7 @@
 %==============================================================================
 \subsection{Basic Assumptions}\label{sec:basic}
 
-When modeling Sgr~A* emission, we assume its mass and distance:
+We will assume that the mass and distance to \sgra is
 \begin{align}
   \mbh &= (4.14 \pm 0.014) \times 10^6 \msun,\\
   D    &= (8.127 \pm 0.023) \kpc
@@ -17,11 +17,9 @@ which is approximately the mean of values reported by \citet{2019Sci...365..664D
 
 We also assume that \sgra is a black hole so that the spacetime around it is described by the Kerr metric. The black hole dimensionless spin, $\abh$, is a free parameter with $-1 < \abh < 1$, where $\abh \equiv Jc/G\mbh^2$, where $J$, $G$, and $c$ are the black hole angular momentum, gravitational constant, and speed of light, respectively.  Following \citetalias{M87PaperV}, $\abh < 0$ indicates the angular momentum of the accretion flow and black hole are antiparallel (the accretion flow is ``retrograde'').
 
-Using the above mass and distance, the implied characteristic length
-$\rg \equiv G M/c^2 = 6.1 \times 10^{11}\cm$, characteristic time 
-$\tg \equiv G M/c^3 = 20.5 \sec$, and angular scale $\thg \equiv G\mbh/(c^2 D) = 5.03\uas$.  The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D) = (52.2 \pm 2.08) \uas $, where errorbars enclose uncertainty in the black hole spin and viewing angle (see e.g., \citealt{2020ApJ...896....7M}).
+Using the above mass and distance, the implied characteristic length $\rg \equiv G M/c^2 = 6.1 \times 10^{11}\cm$, characteristic time $\tg \equiv G M/c^3 = 20.5 \sec$, and angular scale $\thg \equiv G\mbh/(c^2 D) = 5.03\uas$.  The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D) = (52.2 \pm 2.08) \uas $, where errorbars enclose uncertainty in the black hole spin and viewing angle (see e.g., \citealt{2020ApJ...896....7M}).
 
-Assuming that the emitting plasma is ionized hydrogen (electron-proton plasma), the Eddington luminosity is 
+If the emitting plasma is ionized hydrogen (electron-proton plasma) then the Eddington luminosity is 
 $ L_\mathrm{Edd}
 = 4\pi G\mbh c m_p/\sigma_{T}
 = 5.2 \times 10^{44}\allowbreak \ergsps$.
@@ -125,15 +123,15 @@ The GRMHD model library is summarized in Table~\ref{tab:GRMHDmodels}. The models
 %------------------------------------------------------------------------------
 \subsubsection{Radiative Transfer Model}
 
-Synthetic observations are generated from the GRMHD model in a radiative transfer step.  Typically, the transfer step requires: (1) a model for the electron distribution function (hereafter eDF); (2) an assignment of a density scale to the GRMHD model; (3) a numerical radiative transfer step done after the GRMHD model, assuming that the plasma evolution is unaffected by radiation.  
+Synthetic observations are generated from the GRMHD model in a radiative transfer step.  The transfer step requires: (1) a model for the electron distribution function (hereafter eDF); (2) an assignment of a density scale to the GRMHD model; (3) a numerical radiative transfer step done after the GRMHD model, assuming that the plasma evolution is unaffected by radiation.  
 
 \subsubsubsection{Electron Distribution Function}
 
 In {\it thermal} models electron energies are distributed into the Maxwell-J{\"u}ttner distribution function:
 \begin{align}
-\frac{dn_e}{d\gamma}= n_e \frac{\gamma^2 \sqrt{1-1/\gamma^2}} {\Theta_e K_2(1/\Theta_e)} \exp^{(-\gamma/\Theta_e)};
+\frac{1}{n_e}\frac{dn_e}{d\gamma}= \frac{\gamma^2 \sqrt{1-1/\gamma^2}} {\Theta_e K_2(1/\Theta_e)} \exp (-\gamma/\Theta_e);
 \end{align}
-recall $\Theta_e=k_b T_e/m_e c^2$, which is given in terms of the ion-electron temperature ratio $R \equiv T_i/T_e$:
+recall $\Theta_e=k_b T_e/m_e c^2$, which is determined by the ion-electron temperature ratio $R \equiv T_i/T_e$:
 \begin{align}
 T_e=\frac{2 m_p u}{3 k_B \rho (2+R)}.
 \end{align}
@@ -153,7 +151,9 @@ which has width parameter $w$ and power-law index parameter $\kappa$, or with a 
 \end{align}
 which has power-law index $p$ and upper and lower limits  $\gamma_{min}$ and $\gamma_{max}$. 
 
-Evidently the eDF assignment schemes considered here are approximations in the sense that the eDF will in general depend on both local conditions and particle histories.   
+Evidently any eDF assignment schemes is an approximation in the sense that the eDF will in general depend on both local conditions and particle histories.  The eDF is assumed isotropic, and electron-positron pairs are neglected (refs!).
+
+Once the eDF is specified the radiative transfer coefficients (emissivities, absorptivities, and rotativities) can be readily calculated; see \cite{2021ApJ...921...17M} for a recent summary.
 
 \kc{Perhaps add a plot of the different eDFs to display the variety of models considered.}
 
@@ -175,17 +175,26 @@ Evidently the eDF assignment schemes considered here are approximations in the s
 
 \subsubsubsection{Model Scaling}
 
-Our GRMHD models are test-fluid simulations: they are nonself-gravitating and  
+\newcommand\Munit{\ensuremath{\mathcal{M}}\xspace}
 
-\paragraph{Model Images and Spectra} 
+The radiative transfer calculation requires that physical units be assigned to the GRMHD simulations.  The black hole mass $\mbh$ fixes the length unit $\rg$ and time unit $\tg$.  The GRMHD models are nonself-gravitating, however, and therefore one is free to set a density scale, or equivalently the accretion rate $\dot{M}$ or mass unit $\Munit$.  
 
-Given eDF GRMHD simulations are post-processed using radiative transfer codes to create model images at two frequencies: at the GMVA frequency of 86~GHz and at the EHT frequency of 230~GHz and broadband spectral energy distributions (SEDs). Our emission simulations include radiative processes such as: synchrotron emission (which peaks around 230~GHz), synchrotron self-absorption, electron-electron bremsstrahlung, electron-ion bremsstrahlung, and inverse-Compton scatterings. The three latter radiative processes are largely responsible for NIR/X-ray emission. Summary of all radiative transfer simulations is given in Table~\ref{tab:radiativemodels}.
+The density $\rho_{cgs}$ in cgs units is obtained from the density $\rho_{sim}$ in simulation units via $\rho_{cgs} = \rho_{sim} \Munit_{cgs} {\rg}_{cgs}^{-3}$.  Similarly, internal energy $u_{cgs} = u_{sim} \Munit_{cgs} {\rg}_{cgs}^{-3} c_{cgs}^2$, and $B_{cgs} = (4\pi)^{1/2} B_{sim} \Munit_{cgs}^{1/2} {\rg}_{cgs}^{-3/2} c_{cgs}$, where the factor of $(4\pi)^{1/2}$ comes from converting Heaviside-Lorentz units (used in GRMHD simulations) to cgs.  
 
-\paragraph{Scaling} Our standard GRMHD simulations care carried out in dimensionless units. Simulation with different electron model therefore are scaled into physical units using different mass scaling factor ${\mathcal M}$. \monika{this will be developed a bit more later on}
+The simulation density scale $\Munit$ is a free parameter.  It is fixed through an iterative process so that the mean $230$GHz flux density of the model matches the $\simeq 2.4$Jy observed mean from the 2017 campaign.   
 
-\paragraph{Numerical tools}
+\subsubsubsection{Radiative Transfer Calculation}
 
-Radiative transfer simulations are carried out using several numerical codes (ipole, BHOSS, ? list codes are references). A detailed comparison between numerical radiative transfer methods presented in Gold et al. 2021 and in Prather et al. 2021 shows agreement between codes sufficient to make no difference. Our images are generated with different field-of-views, resolution (see discussion in Appendix B2).\monika{this will be developed a bit more once appendices are in place}
+Given an eDF, density scale $\Munit$, and radiative transfer coefficients, the emergent radiation is obtained by solution of the radiative transfer equation.  We use two classes of methods: ray tracing to generate synthetic images, and a Monte Carlo scheme to generate spectral energy distributions (SEDs).  Further detail on numerical methods is given Appendix \ref{app:radtrans}.  Comparisons of numerical methods \citep[][, Prather et al. 2021]{2020ApJ...897..148G} shows that differences between numerical schemes do not contribute significantly to the error budget.  A summary of  radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
+
+The models are imaged at $86$GHz, $230$GHz, \footnote{The actual band center for EHT observations is $228$GHz} and $2.2\mu$m.  Direct imaging includes synchrotron emission and absorption and bremsstrahlung (both ion-electron and electron-electron; see \citet{2020ApJ...898...50Y} for a recent review).  The SED is averaged over a narrow range in inclination and over all position angles.  The SED includes synchrotron, bremsstrahlung, and Compton scattering.  Usually synchrotron, and occasionally Compton scattering, dominate at $2.2\mu$m.  Bremsstrahlung or Compton scattering dominate in the X-ray.   
+
+\cfg{should we give example images and SEDs?}
+
+
+
+%Radiative transfer simulations are carried out using several numerical codes (ipole, BHOSS, ? list codes are references). A detailed comparison between numerical radiative transfer methods presented in Gold et al. 2021 and in Prather et al. 2021 shows agreement between codes sufficient to make no difference. Our images are generated with different field-of-views, resolution (see discussion in Appendix B2).\monika{this will be developed a bit more once appendices are in place}
+% CFG: I incorporated this in the first paragraph
 
 % \begin{figure*}
 %   \centering
@@ -200,18 +209,25 @@ Radiative transfer simulations are carried out using several numerical codes (ip
 %   \label{fig:fiducial_SEDs}
 % \end{figure*}
 
+%================
 
 
 %==============================================================================
 \subsection{Summary of Sgr~A* model library}
 
+All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ images, and occupies $GGG$ gigabytes.
+
 \monika{summary of how many image templates we have}
 
+\pagebreak
 
+\movetabledown=3cm % recommended in AASTeX docs to center
+    % table on page
+\begin{rotatetable}
 \begin{deluxetable*}{cccccccccccccc}
-\tabletypesize{\footnotesize}
+%\tabletypesize{\footnotesize}
 \renewcommand{\arraystretch}{1.5}
-\caption{Summary of emission simulations in \sgra EHT model library.}~\label{tab:radiativemodels}
+\tablecaption{Summary of emission simulations in \sgra EHT model library.}~\label{tab:radiativemodels}
 \tablehead{
   \colhead{$R_{\rm low}$}          &%
   \colhead{$R_{\rm high}$}         &%
@@ -225,7 +241,8 @@ Radiative transfer simulations are carried out using several numerical codes (ip
   \colhead{SED}                    &%
   \colhead{$\Delta t$ [1000 M]}    &%
   \colhead{\#snapshots}            &%
-  \colhead{Name}}
+  \colhead{Name}%
+  }
 \startdata
 \multicolumn{13}{c}{Thermal models}\\
 1 & [1;10;40;160] & 1 & - &  - & - & [10,30,...,170] & 3 & [86,230] & yes & [15,20) & x & iHARM-Thermal1\\
@@ -247,6 +264,10 @@ Radiative transfer simulations are carried out using several numerical codes (ip
 - & - & - & -  & - & $\kappa(\beta,\sigma)$ & & & & &
 \enddata
 \end{deluxetable*}
+\end{rotatetable}
+\pagebreak
+
+
 
 
 % ----------------------------
