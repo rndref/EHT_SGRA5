@@ -48,17 +48,9 @@ We test the models using interferometric data in three ways.  First, we compare 
 
 One way we characterize the GRMHD simulations carried out for
 different black hole and flow parameters and assess their
-compatibility with the \sgra\ data involves an analysis in the Fourier
+compatibility with the \sgra\ data involves an analysis in the visibility
 domain.
-To this end, we first calculate the complex visibilities by performing
-a two-dimensional Fourier transform on each snapshot of each
-simulation
-\begin{equation}
-  V(u,v) = \iint I(\alpha,\beta) e^{-2\pi i(u\alpha+v\beta)}d\alpha d\beta,
-\end{equation}
-where we defined $\alpha \equiv X/D$ and $\beta \equiv Y/D$, with D
-being the distance to \sgra.
-Figure~\ref{fig:cmp_VA} shows two example snapshots and the
+Figure~\ref{fig:visibility} shows two example snapshots and the
 corresponding visibility amplitudes (VA) as a function of baseline
 length for a vertical and horizontal image cross sections from a
 simulation.
@@ -128,8 +120,6 @@ We assign a compliance fraction to a simulation based on the fraction
 of snapshots that pass both criteria we described above.
 We will discuss the results of this comparison in the next section,
 along with the other model scoring criteria.
-[I will add to the discussion of the scoring table when that part is
-  written.]
 
 %------------------------------------------------------------------------------
 \subsubsection{230\,GHz VLBI Pre-Image Size}

@@ -102,7 +102,7 @@ Self-consistent Wind Feeding\footnote{non-standard model} & 0 & MAD & ? & ? & ? 
 \end{figure*}
 
 % \paragraph{Methods, initial and boundary conditions:}
-We model the plasma flow around \sgra using ideal, non-radiative, general relativistic magnetohydrodynamics (GRMHD).  The gravitational field is given by the Kerr metric, with mass given by Equation (\ref{eq:mass}) and with black hole spin $\abh$ a free parameter \citep[see e.g.,][]{2003ApJ...589..444G, 2005ApJ...635..723A, 2007A&A...473...11D}.  
+We model the plasma flow around \sgra using ideal, non-radiative, general relativistic magnetohydrodynamics (GRMHD).  The gravitational field is given by the Kerr metric, with mass given by Equation (\ref{eq:mass}) and with black hole spin $\abh$ as free parameter \citep[see e.g.,][]{2003ApJ...589..444G, 2005ApJ...635..723A, 2007A&A...473...11D}.  
 
 We integrate the GRMHD equations in three spatial dimensions using multiple methods: iHARM \citep{2021JOSS....6.3336P}, BHAC \citep{2017ComAC...4....1P}, HAMR \citep{2018MNRAS.474L..81L}, Koral \citep{2013MNRAS.429.3533S} and Athena++ \citep{2016ApJS..225...22W}; see \citealt{2019ApJS..243...26P} and Olivares et al. in prep) for a comparison of GRMHD codes.  All simulations assume a constant adiabatic index $\Gamma_{\rm ad}$.
 
@@ -137,7 +137,7 @@ T_e=\frac{2 m_p u}{3 k_B \rho (2+R)}.
 \end{align}
 Here $u$ and $\rho$ are the internal energy density and rest-mass density from the GRMHD simulation.  Thermal models are motivated by the idea that wave-particle scattering drives partial relaxation of the eDF, even though Coulomb scattering is ineffective.     
 
-In \cite{M87PaperV} and \cite{M87PaperVIII}, $R$ is assigned using a prescription that assumes (1) the temperature ratio is a function only of local conditions (2) the ratio varies from one value at low plasma $\beta \equiv P_{gas}/P_{mag}$ to a second value at high $\beta$:
+In \cite{M87PaperV} and \cite{M87PaperVIII}, $R$ is assigned using a prescription, adopted from \cite{2016A&A...586A..38M}, that assumes (1) the temperature ratio is a function only of local conditions (2) the ratio varies from one value at low plasma $\beta \equiv P_{gas}/P_{mag}$ to a second value at high $\beta$:
 \begin{equation}
 R = \frac{T_i}{T_e} = R_{\rm high} \frac{b^2}{b^2+1} + R_{\rm low} \frac{1}{b^2+1}.
 \end{equation}
