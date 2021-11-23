@@ -126,7 +126,7 @@ along with the other model scoring criteria.
 \ckc{ck's first pass}
 
 The second moment of an EHT source corresponds, in the $(u,v)$ domain, to
-the curvature of the visibility amplitude near zero baseline length.
+the second derivative of the visibility amplitude near zero baseline length.
 That is, the 2nd moment tensor
 \begin{equation}
     \sigma_{ij} \equiv \int \, d^2x\, x_i x_j I/\int \, d^2x \, I = (2\pi)^2 \left(\partial_i \partial_j \tilde{I}\right)/\tilde{I}
@@ -134,12 +134,13 @@ That is, the 2nd moment tensor
 where $I$ is the intensity, $\tilde{I}$ its Fourier transform, $i =
 x,y$ on the left and $i = u,v$ on the right, and the terms on the
 right are evaluated at $u = v = 0$.
-A pair of visibility amplitudes ($|\tilde{I}|$) on short baselines or
-zero can therefore be used to estimate the second moments of the
+Depending on the structure of the visilbiity amplitudes, a pair of visibility amplitudes ($|\tilde{I}|$) on short baselines or
+the zero baseline flux can therefore be used to estimate the second moments of the
 image.
 
-This procedure is used in EHT3 \citetalias{PaperIII} to set an upper limit of $95\mu$as on
+Without assuming a ring prior, this procedure is used in EHT3 \citetalias{PaperIII} to set an upper limit of $95\mu$as on
 the scattered source size and lower limit of $38\mu$as.
+Note that, if we used the prior information that there is a ring and a null, the constraint can be narrower.
 
 NOTE: data is descattered.
 
@@ -169,20 +170,51 @@ In addition to the EHT data, the SED of \sgra is well constrained \citep{PaperII
 
 The Global Millimeter VLBI Array (GMVA) observed \sgra on 3 April 2017, just 3 days ($\approx 13,000 \tg$) before the EHT campaign.  \cite{2019ApJ...871...30I} estimate that the compact flux is $2.0 \pm 0.2$Jy ($2\sigma$ errors).  
 
-We will assume that the 86GHz variability over spans of order $3$days is fully captured by the model.
+We compute 86GHz images for all models, and from that the 86GHz flux density $F_{86}$.  We implicitly assume that the 86GHz variability over spans of order $3$days is sampled during the model integration.  
+
+We reject models if $< 1\%$ of model snapshots have $1.8 < F_{86} < 2.2$Jy.
+\cfg{We are likely to change this to read: we convolve the model $F_{86}$ distribution with a distribution corresponding to $0.1$Jy errors, and reject the model if the resulting CDF $< 1\%$ or $> 99\%$ at $2.0$Jy.}
 
 \subsubsection{86\,GHz Image Size}
+
+The GMVA observations from 3 April 2017 also constrain the FWHM of the source major axis ${\rm FWHM}_{maj} = 146^{+11}_{-12}\mu$as \citep[95\% confidence][]{2021ApJ...915...99I}.
+
+We compute the major axis FWHM from the model images.  Again assuming that the models are run sufficiently long to sample the full range of 86 GHz major axis sizes, we reject models if $< 1\%$ of model snapshots lie within the 95\% limits.   
 
 %------------------------------------------------------------------------------
 \subsubsection{NIR (Non-Overproduction) Constraints}
 
+\sgra flares in the near infrared a few times per day, and in 2017 had a median $2.2\mu$m flux density $\simeq 1.0$mJy \citep{2020A&A...638A...2G}.
+
+We compute $2.2\mu$m images for all models.  We reject the model if the median flux exceeds the observed median flux.  
+
+We do not require that the model produce NIR flares, for which there is as yet no generally accepted model.  Our working hypothesis is that models that underproduce NIR and which do not flare can be saved by accelerating a small fraction of the electron population into a nonthermal tail.  
+
 %------------------------------------------------------------------------------
 \subsubsection{X-ray (Non-Overproduction) Constraints}
+
+\sgra flares in the X-ray less frequently than in the NIR.  Chandra observations during the 2017 campaign 
 
 %==============================================================================
 \subsection{Time Dependence}
 
-\ckc{we can model "long-term climate" well but not "long-term weather".  Hence we only compare the slowly varying quantities such as mean 2nd moments (climate) but not modulation index (depends on weather).  TODO: look up correct statistical terminology in weather/climate modeling and build that this into this paper.}
+% * we can model ``long-term climate'' well but not ``long-term weather''.
+% * Hence we only compare the slowly varying quantities such as mean/median 2nd moments (climate) but not modulation index (weather).
+% * TODO: look up correct statistical terminology in weather/climate modeling and build that this into this paper.
+% * Use review: https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019EA000586 , https://ui.adsabs.harvard.edu/abs/1993RvMP...65.1331A/abstract 
+%
+% * multi-time scale
+% * feeding at large and slow scale
+% * time scale much shorter when the plasma reach horizon
+% * at 1.3mm, we only see the flow near the horizon
+% * a "hidden variable" problem that there're slowly varying "boundary conditions" that control the nature of the accretion flow
+% * but we only see the fast varying flow
+% * Given the boundary conditions (environment), GRMHD + GRRT is very successfully in predicting the time average images.  (Refer to consistent checks in appendex)
+% * At the short time scale, the system is chaotic and sensittive to initial conditions.
+% * We reach order-of-magnitude agreement.  But in terms of constraint they should not be used.
+% * For the date we use, EHT observations show lower variability compared to what we expected.
+
+Compared to other astrophysical systems, optically thin black hole accretion systems such as \sgra are expected to show variabilities in an extremely wide range of time scale, from the "environment" determined boundary conditions at the Bondi radius, all the way to the turbulent fluctuations near the horizon scale, or even plasma instability driven phenomena.  Even excluding flares and detailed plasma physics, observations have shown intrinsic variability in \sgra~\citep{sgra lightcurve papers}.  The standard theoretical interpretation is that the turbulence in the accretion flow drives the fluctuations in, e.g., temperature and magnetic fields, which then drive the fluctuations in the electromagnetic signals.  Assuming that the magnetorotational instability is the driving mechanism, the turbulence integrated time scale is simply the orbital time scale.  Given that synchrotron radiation mainly comes from the inner accretion disk, this time scale is of order of 10 minutes.  However, the chaotic nature of turbulence makes these short time scale variability extremely difficult to predict.  On the other hand, given the slowly varying boundary conditions, numerical simulations are very successful in predicting slowly varying the mean images, SEDs, etc.  Because of this, the constraints described above use only the mean/median quantities.  And we will only discuss the variability, but not use them to rule out models.
 
 %------------------------------------------------------------------------------
 \subsubsection{EHT (Baseline variability)}
