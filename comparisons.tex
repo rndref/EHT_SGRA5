@@ -255,6 +255,7 @@ j_{\nu,\rm{tot}}=\left[1-\epsilon(\varepsilon,\beta, \sigma)\right] j_{\nu,\rm{t
 where the efficiency, $\epsilon(\varepsilon,\beta,\sigma)$, is given by:
 \begin{equation}
     \epsilon(\varepsilon,\beta,\sigma)=\varepsilon\left[] 1 - \exp\left(-\beta_{\rm p}^{-2}\right)\right]\left[1-\exp\left(\frac{-\sigma^2}{\sigma_{\rm min}^2}\right)\right].
+    \label{eq:efficiencybetasigma}
 \end{equation}
 Throughout this work we fix $\sigma_{\rm min}=0.01$ and vary the base efficiency, $\varepsilon$, between 0.05, 0.1 and 0.2. For each base efficiency we generate a set of models spanning the same parameter space as the thermal models (see Table \ref{tab:radiativemodels} for details). For each model we iterate the mass accretion rate to obtain an average flux of 2.4\,Jy at 230\,GHz across a time interval of 5000\,M. In order to explore a several values of $\varepsilon$ we increased the cadence of the radiative transfer to 50\,M. This allows us to keep the numerical costs for this parameter sweep low while still being within the correlation time of the GRMHD simulations ($t_{\rm corr}\approx 50-100\,M$) \cmf{ do we have reference for this? So far this result is not published, maybe Boris paper?}. An example for the distribution of the efficiency can be seen in the right half of  Fig. \ref{fig:varepsilon}. The efficiency quickly approaches $\epsilon=0$ within the disk region while within the jet the efficiency reaches the defined base-efficiency. Thus, togehter with the used cut of in sigma, $\sigma_{\rm cut}=1$ the non-thermal particles are mainly located in jet sheath.
 
@@ -300,8 +301,16 @@ As can be seen in the figure, including non-thermal particles changes the distri
 For the comparison with the ALMA light curves we compute the modulation index for a 3\,hour time window and across the entire simulated time window of 28\,hours (5000\,GM/c$^3$). Similar to the 86\,GHz flux the 230\,GHz flux is mainly produced within a few gravitational radii and thus not affected by the addition of non-thermal particles using Eq. \ref{eq:kappaeff}. As in the previous constraints, the MAD accretion models are insensitive to the addition of non-thermal particles whereas the SANE models show some increased modulation index for $R_{\rm high}>40$. However, the distributions for thermal and non-thermal eDF are still largely overlapping. 
 
 
-\subsubsection{Conclusions}
-The effect of adding non-thermal particles via a kappa electron distribution function with fixed $kappa=3.4$ values and 
+\subsubsection{Summary}
+The effect of adding non-thermal particles via a kappa electron distribution function with fixed $\kappa=3.4$ values and variable efficiency via Eq.~\ref{eq:efficiencybetasigma} can be summarised in the following way:
+\begin{itemize}
+    \item The 86\,GHz and 230\,GHz constraints are hardly effected by the addition of non-thermal particles.
+    \item Even the lowest a base efficiency considered, $\varepsilon=0.05$, leads to an over-production of NIR flux. \cmf{indication that we need very localised regions of non-thermal particle productions and no "global" approach?} 
+\end{itemize}
+
+
+
+
 [Alejandro to write here about Frankfurt nonthermal models.  Define a subsection, describe the results and how they differ from the thermal results.]
 
 [Tomohisa to write here about UWABAMI nonthermal power-law models]

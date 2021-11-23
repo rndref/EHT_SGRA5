@@ -83,11 +83,13 @@ iHARM/Illinois & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $13/9$ & 30,000 & 1000 & [3
 BHAC/Frankfurt/Radboud & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 3333& AMR equiv. [512x192x192] & This work \\
 HAMR & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $13/9,5/3$ & 35,000 & 1000,200 & [348/240×192×192] &This work \\
 Koral Long &0,0.3,0.7,0.9 & MAD & ? & 100,000 & ? & ?&?\\
-HAMR-Tilted (Tilt=$?^\circ$)\footnote{non-standard model} & $15/16$ & IN-SANE & $5/3$ & 100,000 & 100,000 & [448x144x240] & Chatterjee+20, Liska+18 \\
-Self-consistent Wind Feeding\footnote{non-standard model} & 0 & MAD & ? & ? & ? & ? & \citet{2020ApJ...896L...6R}
+HAMR-Tilted (Tilt=$?^\circ$)$^*$ & $15/16$ & IN-SANE & $5/3$ & 100,000 & 100,000 & [448x144x240] & Chatterjee+20, Liska+18 \\
+Self-consistent Wind Feeding$^*$ & 0 & MAD & ? & ? & ? & ? & \citet{2020ApJ...896L...6R}
 \enddata
-\caption{Summary of GRMHD simulations in \sgra EHT GRMHD model library. The fist four entries are standard Sgr A* simulations. \monika{Please check the numbers}}
-\label{tab:GRMHDmodels}
+\begin{tablenotes}
+$^*$non-standard model
+\end{tablenotes}
+\caption{Summary of GRMHD simulations in \sgra EHT GRMHD model library. The first four entries are standard \sgra simulations.\monika{Please check the numbers}}\label{tab:GRMHDmodels}
 \end{deluxetable*}
 
 %------------------------------------------------------------------------------
@@ -155,7 +157,7 @@ Evidently any eDF assignment schemes is an approximation in the sense that the e
 
 Once the eDF is specified the radiative transfer coefficients (emissivities, absorptivities, and rotativities) can be readily calculated; see \cite{2021ApJ...921...17M} for a recent summary.
 
-\kc{Perhaps add a plot of the different eDFs to display the variety of models considered.}
+\kc{Perhaps add a plot of the different eDFs to display the variety of models considered.}\monika{that would be a boring plot..}
 
 %------------------------------------------------------------------------------
 
@@ -179,7 +181,7 @@ Once the eDF is specified the radiative transfer coefficients (emissivities, abs
 
 The radiative transfer calculation requires that physical units be assigned to the GRMHD simulations.  The black hole mass $\mbh$ fixes the length unit $\rg$ and time unit $\tg$.  The GRMHD models are nonself-gravitating, however, and therefore one is free to set a density scale, or equivalently the accretion rate $\dot{M}$ or mass unit $\Munit$.
 
-The density $\rho_{cgs}$ in cgs units is obtained from the density $\rho_{sim}$ in simulation units via $\rho_{cgs} = \rho_{sim} \Munit_{cgs} {\rg}_{cgs}^{-3}$.  Similarly, internal energy $u_{cgs} = u_{sim} \Munit_{cgs} {\rg}_{cgs}^{-3} c_{cgs}^2$, and $B_{cgs} = (4\pi)^{1/2} B_{sim} \Munit_{cgs}^{1/2} {\rg}_{cgs}^{-3/2} c_{cgs}$, where the factor of $(4\pi)^{1/2}$ comes from converting Heaviside-Lorentz units (used in GRMHD simulations) to cgs.
+The density $\rho_{cgs}$ in cgs units is obtained from the density $\rho_{sim}$ in simulation units via $\rho_{cgs} = \rho_{sim} \Munit_{cgs} {\rg}_{cgs}^{-3}$.  Similarly, internal energy $u_{cgs} = u_{sim} \Munit_{cgs} {\rg}_{cgs}^{-3} c_{cgs}^2$, and $B_{cgs} = (4\pi)^{1/2} B_{sim} \Munit_{cgs}^{1/2} {\rg}_{cgs}^{-3/2} c_{cgs}$, where the factor of $(4\pi)^{1/2}$ comes from converting Heaviside-Lorentz units (used in GRMHD simulations) to cgs.\monika{what is $\rho_{unit}$ in Table 2? do we want to keep this parameter; if yes then what does it mean?}
 
 The simulation density scale $\Munit$ is a free parameter.  It is fixed through an iterative process so that the mean $230$GHz flux density of the model matches the $\simeq 2.4$Jy observed mean from the 2017 campaign.
 
@@ -187,7 +189,7 @@ The simulation density scale $\Munit$ is a free parameter.  It is fixed through 
 
 Given an eDF, density scale $\Munit$, and radiative transfer coefficients, the emergent radiation is obtained by solution of the radiative transfer equation.  We use two classes of methods: ray tracing to generate synthetic images, and a Monte Carlo scheme to generate spectral energy distributions (SEDs).  Further detail on numerical methods is given Appendix \ref{app:radtrans}.  Comparisons of numerical methods \citep[][, Prather et al. 2021]{2020ApJ...897..148G} shows that differences between numerical schemes do not contribute significantly to the error budget.  A summary of  radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
 
-The models are imaged at $86$GHz, $230$GHz, \footnote{The actual band center for EHT observations is $228$GHz} and $2.2\mu$m.  Direct imaging includes synchrotron emission and absorption and bremsstrahlung (both ion-electron and electron-electron; see \citet{2020ApJ...898...50Y} for a recent review).  The SED is averaged over a narrow range in inclination and over all position angles.  The SED includes synchrotron, bremsstrahlung, and Compton scattering.  Usually synchrotron, and occasionally Compton scattering, dominate at $2.2\mu$m.  Bremsstrahlung or Compton scattering dominate in the X-ray.
+The models are imaged at $86$GHz, $230$~GHz~\footnote{The actual band center for EHT observations is $228$~GHz} and $2.2\mu$m.  Direct imaging includes synchrotron emission and absorption and bremsstrahlung (both ion-electron and electron-electron; see \citet{2020ApJ...898...50Y} for a recent review).  The SED is averaged over a narrow range in inclination and over all position angles.\monika{position angles?} The SED includes synchrotron, bremsstrahlung, and Compton scattering.  Usually synchrotron, and occasionally Compton scattering, dominate at $2.2\mu$m.  Bremsstrahlung or Compton scattering dominate in the X-ray.
 
 \cfg{should we give example images and SEDs?}
 
