@@ -1,26 +1,22 @@
 \section{Model Comparison}\label{sec:comparisons}
 
-The fundamental problem in comparing Sgr A* models to the data is variability.  We do not expect even an ideal numerical evolution of a source model to match the data point for point, because the space of possible realizations of the model is very large.  But we do expect the {\em distribution} of observables to match an accurate model.  For example, we might expect that the observed 86 GHz flux $F_{86}$ is consistent with being drawn from the distribution of 86GHz fluxes from the model.
+In addition to limited uv coverage, variability complicates comparison of Sgr A* models to the data. Even an ideal evolution of a successful model will never match the data point for point because the space of possible realizations of the model is large; the dataset is high dimensional.  We expect the {\em distribution} of  observables derived from a successful model to match the data, however, if the model is run long enough to sample the distribution.  For example, the
+observed $F_{86}$ ought to lie within the distribution of $F_{86}$ of a successful model.
 
-Since most observables are correlated over some time $\tau \sim $few $\times 100 G M/c^3$, to obtain the mean and variance of the model distribution to accuracy $f$ we would need a simulation of duration $\sim \tau/f^2 \sim 30,000 (\tau/300) (f/0.1)^{-2}$.  This requires between $10^3$ and $10^4$ node-hours on a state of the art cluster node, depending on the desired resolution, duration, and code used.  This is expensive since $\sim 10$ runs are used for each model set, and runs frequently need to be repeated for multiple values of the numerical parameters (e.g. resolution).  Most of the models used here have been run for either $10,000$ or $30,000 \tg$, although a few have been run to $100,000 \tg$.
-
-The constraints are heterogeneous in the sense that some are related to time-averaged non-contemporaneous measurements (e.g. the NIR flux constraint), while others are instantaneous values measured during the EHT observing campaign (e.g. the m-ring fits), so it is impossible at present to use a single technique to estimate $p$ values for all constraints.
-
-In what follows we will look at each constraint independently (i.e. we will ignore correlations) and generate a $p$ value.  We then cut models with $p < 0.01$.
-
-[CG, Michi to write]
+Most observables are correlated over $\tau \sim $few $\times 100 G M/c^3$.  To obtain the mean and variance of the model distribution to accuracy $f$, then, we would need a simulation duration $\sim \tau/f^2 \sim 30,000 (\tau/300) (f/0.1)^{-2}$, assuming the model decorrelates completely at $\Delta t \gg \tau$.  A GRMHD model of this duration costs  between $10^3-10^4$ node-hours, depending on the resolution, code, and hardware.  This is expensive since $\sim 10$ runs are used for each model set, and runs frequently need to be repeated for multiple values of the numerical parameters (e.g. resolution).  Most of our models are run for $30,000 \tg$; a few are run to $100,000 \tg$.  The model distributions therefore contain sampling noise, and this must be accounted for in model selection.  For some  constraints (e.g. m-ring fits) this can be done by sampling the model at a cadence similar to the correlation time and then using a 2-sample KS test to compare the observed and model distributions.
 
 %==============================================================================
 \subsection{Thermal, Aligned Models}
 
-Illinois, Frankfurt, HAMR, critical beta thermal models
+We start with a fiducial model set
+Our fiducial model sets have a thermal eDF, and assign the temperature according to the $R_{high}$ model.  This includes the Illinois, Frankfurt, and HAMR thermal models (see Table \ref{tab:radiativemodels}).  
 
 %------------------------------------------------------------------------------
 \subsubsection{EHT Constraints}
 
-First we compare data and models using the VLBI null location statistic, the pre-image size, and the ring diameter, ring thickness, and ring asymmetry from m-ring fitting.
+First we ask which models are consistent with the EHT data alone, using the VLBI null location statistic, the 2nd moment, and the m-ring fit parameters. 
 
-It turns out that the null location statistic is informative and tends to rule out edge-on models when $R_{high} > 1$.  The pre-image size statistic is simple but not powerful: most of the models are about the right size, and only a very few face-on, low $R_{high}$ models are too large.   The m-ring fitting is highly informative.  Many of our thermal models look like the data, but - for example - edge on MAD models are large values of $R_{high}$ and positive spin are strongly disfavored because they are too asymmetric.
+The null location test is informative and tends to rule out edge-on models.  The pre-image size constraint is simple but weak: only two face-on, low $R_{high}$ models lie outside the observational limits.   The m-ring fitting is highly informative.  Many thermal models look like the data, but - with one exception - edge-on models are strongly disfavored.
 
 %..............................................................................
 \subsubsubsection{Null Location}
@@ -60,56 +56,67 @@ It turns out that the null location statistic is informative and tends to rule o
 
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{./figures/Ozel.png}
-  \caption{Ozel constraints plots}
+  \includegraphics[width=\columnwidth]{./figures/Null_loc_Constraints.png}
+  \caption{Null Location Constraint}
   \label{fig:cmp_ozel}
 \end{figure}
 
-...
+The null location constraint rules out edge-on MAD models at positive spin and a few large $R_{high}$ SANE models.
+
+The models that fail tend to...
+
+Null location constraint passes 77\% of models.
 
 %..............................................................................
-\subsubsubsection{Pre-imaging Size}
+\subsubsubsection{Second Moment}
 
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{./figures/230GHz_size.png}
+  \includegraphics[width=\columnwidth]{./figures/230GHz_size_Constraints.png}
   \caption{2nd moment plots}
   \label{fig:cmp_2nd_moment}
 \end{figure}
 
-[Andrew to summarize]
+The second moment constraint passes 99\% of models.  The models that fail are retrograde, face-on, SANE models with $\Rh = 1$. These models have extremely extended rings of emission with angular size much larger than the critical impact parameter.
 
 %..............................................................................
 \subsubsubsection{M-ring Fits}
 
-Diameter, Width, and Asymmetry of M-rings.
+The m-ring fits pass 97\%, 58\%, and 47\% of models for the ring asymmetry, diameter, and width respectively.  
 
-Michi
+A small set of high inclination models with positive spin fail the asymmetry test.  The failing models have asymmetries that are large because Doppler boosting concentrates emission in an equatorial spot on the approaching side of the disk.  
 
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{./figures/r0.png}
+  \includegraphics[width=\columnwidth]{./figures/Mring_f1_Constraints.png}
+  \caption{m-ring asymmetry}
+  \label{fig:cmp_m-ring_asymm}
+\end{figure}
+
+A much larger set of models fails the ring diameter test.
+The SANE, low inclination, high $\Rh$ models fail because most of the mass of the model distribution is too large.  In other cases the fit distribution fails because it is too broad, with too little mass close to the center of the distribution.  In still other cases (positive spin, low inclination SANE models) the bulk of the model distribution is at too low diameter.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{./figures/Mring_d_Constraints.png}
   \caption{M-Ring diameter.}
   \label{fig:cmp_m-ring_diam}
 \end{figure}
+
+The m-ring widths are most constraining of all.  Essentially all models that fail have m-ring widths that are too small.  This includes a large set of MAD models at $\spin < 0.5$, with a few exceptions.  
+
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{./figures/w.png}
+  \includegraphics[width=\columnwidth]{./figures/Mring_w_Constraints.png}
   \caption{m-ring widths}
   \label{fig:cmp_m-ring_width}
-\end{figure}
-\begin{figure}
-  \centering
-  \includegraphics[width=\columnwidth]{./figures/f1.png}
-  \caption{m-ring asymmetry}
-  \label{fig:cmp_m-ring_asymm}
 \end{figure}
 
 \subsubsubsection{EHT Constraint Summary}
 
 \begin{figure}
   \centering
-    \includegraphics[width=\columnwidth]{./figures/Interferometric_Hard_Cut.png}
+    \includegraphics[width=\columnwidth]{./figures/Interferometric_Constraints.png}
   \caption{Combined interferometric constraints (logical {\em and}) including the second moment, null location, and m-ring fit constraints.}
   \label{fig:all_EHT_constraints}
 \end{figure}
@@ -160,7 +167,7 @@ It turns out that the 86GHz flux and size do not discriminate strongly between m
 
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{./figures/2um_flux.png}
+  \includegraphics[width=\columnwidth]{./figures/2um_flux_Constraints.png}
   \caption{NIR flux limit}
   \label{fig:cmp_2um_flux}
 \end{figure}
@@ -178,7 +185,7 @@ Estimates of Bremss.  Discussion of Bremss. in SANE, large Rhigh models.
 
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{./figures/Xray_flux.png}
+  \includegraphics[width=\columnwidth]{./figures/Xray_flux_Constraints.png}
   \caption{X-ray flux limits}
   \label{fig:cmp_xray_flux}
 \end{figure}
@@ -190,7 +197,7 @@ Estimates of Bremss.  Discussion of Bremss. in SANE, large Rhigh models.
 
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{./figures/86GHz_flux.png}
+  \includegraphics[width=\columnwidth]{./figures/86GHz_flux_Constraints.png}
   \caption{86GHz median flux limits}
   \label{fig:cmp_86ghz_flux}
 \end{figure}
@@ -202,7 +209,7 @@ Estimates of Bremss.  Discussion of Bremss. in SANE, large Rhigh models.
 
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{./figures/86GHz_size.png}
+  \includegraphics[width=\columnwidth]{./figures/86GHz_size_Constraints.png}
   \caption{86GHz size}
   \label{fig:cmp_86ghz_size}
 \end{figure}
@@ -213,7 +220,7 @@ Estimates of Bremss.  Discussion of Bremss. in SANE, large Rhigh models.
 
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{./figures/Noninterferometric_Hard_Cut.png}
+  \includegraphics[width=\columnwidth]{./figures/Non_Interferometric_Constraints.png}
   \caption{Combined non-EHT constraints}
   \label{fig:non_eht_cuts}
 \end{figure}
@@ -222,7 +229,7 @@ Estimates of Bremss.  Discussion of Bremss. in SANE, large Rhigh models.
 
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{./figures/All_Hard_Cut.png}
+  \includegraphics[width=\columnwidth]{./figures/All_Constraints.png}
   \caption{Combined EHT and non-EHT constraints}
   \label{fig:all_cuts}
 \end{figure}
