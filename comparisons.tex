@@ -1,22 +1,16 @@
 \section{Model Comparison}\label{sec:comparisons}
 
-In addition to limited uv coverage, variability complicates comparison of Sgr A* models to the data. Even an ideal evolution of a successful model will never match the data point for point because the space of possible realizations of the model is large; the dataset is high dimensional.  We expect the {\em distribution} of  observables derived from a successful model to match the data, however, if the model is run long enough to sample the distribution.  For example, the
-observed $F_{86}$ ought to lie within the distribution of $F_{86}$ of a successful model.
-
-Most observables are correlated over $\tau \sim $few $\times 100 G M/c^3$.  To obtain the mean and variance of the model distribution to accuracy $f$, then, we would need a simulation duration $\sim \tau/f^2 \sim 30,000 (\tau/300) (f/0.1)^{-2}$, assuming the model decorrelates completely at $\Delta t \gg \tau$.  A GRMHD model of this duration costs  between $10^3-10^4$ node-hours, depending on the resolution, code, and hardware.  This is expensive since $\sim 10$ runs are used for each model set, and runs frequently need to be repeated for multiple values of the numerical parameters (e.g. resolution).  Most of our models are run for $30,000 \tg$; a few are run to $100,000 \tg$.  The model distributions therefore contain sampling noise, and this must be accounted for in model selection.  For some  constraints (e.g. m-ring fits) this can be done by sampling the model at a cadence similar to the correlation time and then using a 2-sample KS test to compare the observed and model distributions.
+We now apply the observational constraints from Section 2 to the models described in section 3. 
 
 %==============================================================================
 \subsection{Thermal, Aligned Models}
 
-We start with a fiducial model set
-Our fiducial model sets have a thermal eDF, and assign the temperature according to the $R_{high}$ model.  This includes the Illinois, Frankfurt, and HAMR thermal models (see Table \ref{tab:radiativemodels}).
+As a reference point we start with a set of ``standard'' models with aligned (prograde or retrograde) GRMHD simulations, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \cite{M87PaperV}.  This includes model from the Illinois, Frankfurt, and HAMR model sets (see Table \ref{tab:radiativemodels}).
 
 %------------------------------------------------------------------------------
 \subsubsection{EHT Constraints}
 
-First we ask which models are consistent with the EHT data alone, using the VLBI null location statistic, the 2nd moment, and the m-ring fit parameters.
-
-The null location test is informative and tends to rule out edge-on models.  The pre-image size constraint is simple but weak: only two face-on, low $R_{high}$ models lie outside the observational limits.   The m-ring fitting is highly informative.  Many thermal models look like the data, but - with one exception - edge-on models are strongly disfavored.
+How do the models fare when compared to the EHT data alone, using the null location, size, and m-ring fitting constraints.  The null location test is informative and tends to rule out edge-on models.  The pre-image size constraint is simple but weak: only two face-on, low $R_{high}$ models lie outside the observational limits.   The m-ring fitting is noisy but highly informative.  Many thermal model distributions look like the data, but edge-on models are strongly disfavored.
 
 %..............................................................................
 \subsubsubsection{Null Location}
@@ -77,7 +71,7 @@ Null location constraint passes 77\% of models.
   \label{fig:cmp_2nd_moment}
 \end{figure}
 
-The second moment constraint passes 99\% of models.  The models that fail are retrograde, face-on, SANE models with $\Rh = 1$. These models have extremely extended rings of emission with angular size much larger than the critical impact parameter.
+The second moment constraint passes 99\% of models.  The models that fail are retrograde, face-on, SANE models with $\Rh = 1$. These models have extremely extended rings of emission with angular extent much larger than the critical impact parameter.
 
 %..............................................................................
 \subsubsubsection{M-ring Fits}
