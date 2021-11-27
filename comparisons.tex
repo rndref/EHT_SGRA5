@@ -78,7 +78,9 @@ The second moment constraint passes 99\% of models.  The models that fail are re
 
 The m-ring fits pass 94\%, 65\%, and 36\% of models for the ring asymmetry, diameter, and width respectively.
 
-A small set of high inclination models with positive spin fail the asymmetry test.  The failing models have asymmetries that are large because Doppler boosting concentrates emission in an equatorial spot on the approaching side of the disk.
+As noted above, the m-ring fits work relatively well for some models and poorly for others.
+
+The asymmetry parameter is typically not very well constrained.  Nevertheless, a small set of high inclination models with positive spin fail the asymmetry test.  The failing models have asymmetries that are large because Doppler boosting concentrates emission in an equatorial spot on the approaching side of the disk.
 
 \begin{figure}
   \centering
@@ -87,8 +89,9 @@ A small set of high inclination models with positive spin fail the asymmetry tes
   \label{fig:cmp_m-ring_asymm}
 \end{figure}
 
+The ring diameter is typically much better constrained than the asymmetry parameter. 
 A much larger set of models fails the ring diameter test.
-The SANE, low inclination, high $\Rh$ models fail because most of the mass of the model distribution is too large.  In other cases the fit distribution fails because it is too broad, with too little mass close to the center of the distribution.  In still other cases (positive spin, low inclination SANE models) the bulk of the model distribution is at too low diameter.
+The SANE, low inclination, high $\Rh$ models fail because most fits in the model distribution are too large.  In other cases the fit distribution fails because it is too broad, with too little mass close to the center of the distribution.  In still other cases (positive spin, low inclination SANE models) the bulk of the model fits are too small compared to the data.
 
 \begin{figure}
   \centering
@@ -97,7 +100,7 @@ The SANE, low inclination, high $\Rh$ models fail because most of the mass of th
   \label{fig:cmp_m-ring_diam}
 \end{figure}
 
-The m-ring widths are most constraining of all.  Essentially all models that fail have m-ring widths that are too small.  This includes a large set of MAD models at $\abh < 0.5$, with a few exceptions.
+The m-ring width is typically the best constrained and therefore the most constraining.  Although the closure phases depend on the m-ring width as well, it is easy to see how the visibility amplitudes are affected by the m-ring width: the width controls the long-baseline amplitudes.  All models that fail have m-ring widths that are too small.  This includes all but 6 MAD models at $abh \le 0$ and all MAD models at $i = 90$deg.  
 
 \begin{figure}
   \centering
@@ -127,17 +130,29 @@ If we were to apply the variability constraints directly to the models there wou
 %..............................................................................
 \subsubsubsection{ALMA Light Curve}
 
+The distribution of 3 hour modulation index (rms \%) is shown in Figure \ref{fig:cmp_ALMA_var}.  Evidently SANE models are quieter than MAD models.  
+
+Figure \ref{fig:cmp_ALMA_var} groups all SANE models and all MAD models together, and it is possible that individual models may pass (particularly SANE models) even though as a group SANE models are clearly offset and noiser than the data.  
+
+If we compare each model only to the 5 samples from the EHT 2017 campaign using a 2-sample KS test, we find that XX\% models pass with $p > 1\%$.  [Comment on which models pass: entirely SANE models].
+
+If we compare the models to the full historical distribution (NN 3-hr MIs in all, including the ALMA MIs), we find that 20\% of models pass with $p > 1\%$.  This is more stringent than comparison with the ALMA values alone because the historical (observed)  distribution now has more samples and is therefore more strongly constrained.  [Comment on which models pass: entirely SANE models]
+
 \begin{figure}
   \centering
     \includegraphics[width=\columnwidth]{./figures/mi_dist.png}
-  \caption{Distributions of MI for Illinois thermal models, compared to distributions from historical observations and the values from the 2017 ALMA light curve. }
+  \caption{Distributions of MI for Illinois thermal models, compared to distributions from historical observations and the values from the 2017 ALMA light curve. The latter are shown as vertical lines.}
   \label{fig:cmp_ALMA_var}
 \end{figure}
 
-[David Lee to provide first draft]
-
 %..............................................................................
 \subsubsubsection{4 $G\lambda$ Visibility Amplitude Variability}
+
+The distribution of model $4G\lambda$ lightcurve-normalized PSDs are shown in Figure \ref{fig:cmp_VLBI_var}.  The best fit PSD from the data on April 6 and 7 is shown as a solid vertical line, with the other vertical lines showing percentiles in the posterior.  Evidently the observations are  quieter than both SANEs and MADs as a group.  
+
+The PSD estimates for the models are broken up into 3 $5000\tg$ windows for each model.  We estimate a probability that the data are drawn from the model sample as follows...
+
+With this approach only XX\% of the models pass, and all of them are SANE.
 
 \begin{figure}
   \centering
@@ -146,18 +161,30 @@ If we were to apply the variability constraints directly to the models there wou
   \label{fig:cmp_VLBI_var}
 \end{figure}
 
-[Boris to provide first draft]
+Taking the PSD constraint and the Modulation Index constraint together, only $YY\%$ of the models pass.  None of the passing models for variability also pass the full set of other tests.    
 
 %------------------------------------------------------------------------------
 \subsubsection{Non-EHT Constraints}
 
-Here we compare constraints from 86GHz, NIR, and X-ray observations.  Emission in these bands is believed to originate in the compact source from plasma that is close to or overlaps the plasma that produces the 230GHz emission observed by EHT.
+Here we compare constraints from 86GHz, NIR, and X-ray observations.  Most or all of the emission in these bands is believed to originate in the compact source from plasma that is close to or overlaps the plasma that produces the 230GHz emission observed by EHT.
 
 It turns out that the 86GHz flux and size do not discriminate strongly between models: most models have about the right size and spectral index.  The NIR and X-ray constraints - which require that our models not overproduce the observed emission - are highly informative.  It turns out that many SANE models with large $\Rh$ (and therefore cool midplane electron populations) overproduce X-ray emission through bremsstrahlung.  In addition, many of the nonthermal models have large populations, compared to the thermal models, of electrons that are energetic enough to produce NIR emission and therefore overproduce in the NIR.   We also find that some models are dominated by Compton scattering in the NIR.
 
 
 %..............................................................................
 \subsubsubsection{NIR Median Flux}
+
+[Michi]
+
+NIR photons are produced by synchrotron process from photons at the high energy end of the distribution function.  For a one-zone model with $B = 30$G, the  critical frequency $\nu_{crit} \simeq \gamma^2 e B/(m_e c) \simeq 80$GHz and emission at $2.2\mu$m is therefore produced by electrons with $\gamma \simeq 10^3$, compared to a mean Lorentz factor of $30$ for plasma with $\Theta_e = 10$.  NIR flux density will therefore be sensitive to $\Theta_e$ and therefore to $\Rh$. 
+
+Interestingly, we find that some models are synchrotron-weak and Compton-strong in the NIR.  [Discussion of which models fall in this category]
+
+Models that pass the NIR flux limit are shown in Figure \re{fig:cmp_2um_flux}.  
+
+All but 6/100 of the SANE models pass; the exceptions are high spin, high inclination models where Doppler boosting increases the NIR flux from the bright spot on the approaching side of the disk.   
+
+Approximately XX\% of the MAD models fail the NIR test, including all but 1 model at $\Rg = 1$ and $10$.   
 
 \begin{figure}
   \centering
@@ -166,10 +193,12 @@ It turns out that the 86GHz flux and size do not discriminate strongly between m
   \label{fig:cmp_2um_flux}
 \end{figure}
 
-[Michi]
+
 
 %..............................................................................
 \subsubsubsection{X-ray Luminosity}
+
+The thermal models produce X-ray emission through Compton upscattering of thermal synchroton photons.  Typically the X-ray band lies in the first Compton bump, although that is sensitive to the temperature of the electrons doing the upscattering.  
 
 [George to provide physical overview]
 
@@ -263,7 +292,7 @@ Throughout this work we fix $\sigma_{\rm min}=0.01$ and vary the base efficiency
 \begin{figure}
   \centering
     \includegraphics[width=\columnwidth]{./figures/GRMHDphiavera0.94sigmaeta.pdf}
-  \caption{Time and azimuthal averaged distribution of the magnetization, $\sigma$ (left half) and the efficiency, $\epsilon(\varepsilon,\beta,\sigma)$ using $\varepsilon=0.2 $ for a BHAC MAD GRMHD simulation with spin $a_{\star}=0.94$. The solid gray line corresponds to $\sigma=1$ and the dashed line indicates out-flowing plasma vi the Bernoulli parameter ($-h u_{t}>1.02$).}
+  \caption{Time and azimuthal averaged distribution of the magnetization, $\sigma$ (left half) and the efficiency, $\epsilon(\varepsilon,\beta,\sigma)$ using $\varepsilon=0.2 $ for a BHAC MAD GRMHD simulation with spin $a_{\star}=0.94$. The solid gray line corresponds to $\sigma=1$ and the dashed line indicates out-flowing plasma via the Bernoulli parameter ($-h u_{t}>1.02$).}
   \label{fig:varepsilon}
 \end{figure}
 
