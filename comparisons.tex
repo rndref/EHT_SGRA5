@@ -111,6 +111,8 @@ The m-ring width is typically the best constrained and therefore the most constr
 
 \subsubsubsection{EHT Constraint Summary}
 
+The interferometric (EHT) constraints are summarized in Figure \ref{fig:all_EHT_constraints}.  The cuts favor spin $> 0$ models.
+
 \begin{figure}
   \centering
     \includegraphics[width=\columnwidth]{./figures/Interferometric_Constraints.png}
@@ -166,10 +168,7 @@ Taking the PSD constraint and the Modulation Index constraint together, only $YY
 %------------------------------------------------------------------------------
 \subsubsection{Non-EHT Constraints}
 
-Here we compare constraints from 86GHz, NIR, and X-ray observations.  Most or all of the emission in these bands is believed to originate in the compact source from plasma that is close to or overlaps the plasma that produces the 230GHz emission observed by EHT.
-
-It turns out that the 86GHz flux and size do not discriminate strongly between models: most models have about the right size and spectral index.  The NIR and X-ray constraints - which require that our models not overproduce the observed emission - are highly informative.  It turns out that many SANE models with large $\Rh$ (and therefore cool midplane electron populations) overproduce X-ray emission through bremsstrahlung.  In addition, many of the nonthermal models have large populations, compared to the thermal models, of electrons that are energetic enough to produce NIR emission and therefore overproduce in the NIR.   We also find that some models are dominated by Compton scattering in the NIR.
-
+Here we compare constraints from 86GHz, NIR, and X-ray observations.  Most or all of the emission in these bands is believed to originate in the compact source from plasma that is close to or overlaps the plasma the 230GHz-emitting plasma observed by EHT.
 
 %..............................................................................
 \subsubsubsection{NIR Median Flux}
@@ -198,13 +197,17 @@ Approximately XX\% of the MAD models fail the NIR test, including all but 1 mode
 %..............................................................................
 \subsubsubsection{X-ray Luminosity}
 
-The thermal models produce X-ray emission through Compton upscattering of thermal synchroton photons.  Typically the X-ray band lies in the first Compton bump, although that is sensitive to the temperature of the electrons doing the upscattering.  
+[Michi]
 
-[George to provide physical overview]
+Most thermal models produce X-ray emission through Compton upscattering of thermal synchroton photons.  Typically the X-ray band lies in the first Compton bump, although that is sensitive to the temperature of the electrons doing the upscattering.  In the first Compton bump $\nu L_\nu$ is proportional to the y-parameter $y \sim 16 \Theta_e^2 \tau_e$ where $\tau_e$ is a characteristic electron-scattering optical depth and $\Theta_e$ is a typical electron temperature. 
 
-Estimates of flux from Compton.
+In many large $\Rh$ SANE models, however, X-ray emission is dominated by bremsstrahlung.  Bremsstrahlung comes from the midplane where the density is largest, at larger radius than the synchrotron and Compton-upscattered X-ray emission.  It dominates in high accretion rate models (this turns out to mean large $\Rh$ models; see \S 5) where $\Theta_e < 1$, and is significant only when the midplane is cool and $r: \Theta_e = 1 < YY$, i.e. at large $\Rh$.  The resurgence of bremsstrahlung in cool disks occurs because at $\Theta_e < 1$, $j_\nu \propto n^2 \Theta_e^{-1/2}$.  When the disk is cool and dense the latter is large.   
 
-Estimates of Bremss.  Discussion of Bremss. in SANE, large Rhigh models.
+The set of models that passes the X-ray cut is shown in Figure \ref{fig:cmp_xray_flux}.
+
+Many large $\Rh$ SANE models fail the X-ray test: all but 3/25 at $\Rh = 160$ and all but 6/25 at $\Rh = 40$.  These models all fail due to excess bremsstrahlung.
+
+The MAD models that fail tend to sit at large absolute spin and low $\Rh$.  These models are Compton-dominated and are therefore temperature sensitive, and so are at greater risk at low $\Rh$.  
 
 \begin{figure}
   \centering
@@ -213,10 +216,15 @@ Estimates of Bremss.  Discussion of Bremss. in SANE, large Rhigh models.
   \label{fig:cmp_xray_flux}
 \end{figure}
 
-[Michi]
-
 %..............................................................................
 \subsubsubsection{86 GHz Median Flux}
+
+In a naive picture \sgra's millimeter flux is produced at a photosphere that decreases in size as frequency increases.  Because of the marginal optical depth at $1.3$mm ($\sim 0.3$ in the one-zone model) and the complicated source structure (the optical depth varies across the image; the $\tau = 2/3$ surface is non-spherical, folded, and not even simply connected) this picture does not hold exactly.  Nevertheless 86GHz photons are typically produced at larger radius than 230GHz photons, and the 86GHz source size is therefore larger than the 230GHz source size; see Ricarte et al. 2021 for a discussion.
+
+The 86GHz/230GHz color therefore probes the optical depth and radial structure of the source plasma.  Figure \ref{fig:cmp_86ghz_flux} shows the result of requiring that the 86GHz flux match the observed flux 3 days before the beginning of the EHT 2017 campaign. 
+
+Many $\Rh = 1$ models, both MAD and SANE, fail the $86$GHz flux density test: 23/25 SANE and 9/25 MAD.  These models overproduce $86$GHz emission.
+There are also a substantial set of SANE models, 19/100 in all, that underproduce $86$GHz emission.  These models have larger $\Rh$.   
 
 \begin{figure}
   \centering
@@ -230,6 +238,14 @@ Estimates of Bremss.  Discussion of Bremss. in SANE, large Rhigh models.
 %..............................................................................
 \subsubsubsection{86 GHz Major Axis}
 
+As for the $86$GHz flux, the $86$GHz size is sensitive to optical depth as a function of radius in the source plasma.  
+
+The models that pass and fail are shown in Figure \ref{fig:cmp_86ghz_size}.
+
+Many face-on models fail because they are too small (purple in the figure), while a few other high inclination models fail because they are too large.  Overall only about $50\%$ of models pass, making this one of the tightest constraints.  
+
+The physical picture for 86GHz source size is complicated, as is the extraction of the constraint itself from observations.  We note that (1) two different values for the 86GHz intrinsic source size have been reported in the literature; (2) scattering is $7$ times stronger at $86$GHz than at $230$GHz; (3) scattering must be subtracted accurately to obtain the intrinsic source size; (4) the error bars for the 86GHz source size are narrow and this is the principal strength of the constraint.
+
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{./figures/86GHz_size_Constraints.png}
@@ -237,9 +253,12 @@ Estimates of Bremss.  Discussion of Bremss. in SANE, large Rhigh models.
   \label{fig:cmp_86ghz_size}
 \end{figure}
 
-[Michi]
 
 \subsubsubsection{Summary of Non-EHT constraints}
+
+After all non-EHT constraints are applied, and only non-EHT constraints, we are left with the models shown in Figure \ref{fig:non_eht_cuts}.   
+
+The surviving models include a set of SANE models at intermediate $\Rh$ and modest inclination, as well as MAD models at large $\Rh \ge 40$.  No $\Rh = 1$ models survive the non-EHT cuts. 
 
 \begin{figure}
   \centering
