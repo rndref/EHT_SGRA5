@@ -5,7 +5,7 @@ We now apply the observational constraints from Section 2 to the models describe
 %==============================================================================
 \subsection{Thermal, Aligned Models}
 
-As a reference point, consider a set of ``standard'' models with aligned (prograde or retrograde) GRMHD simulations, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \cite{M87PaperV}.  This includes model from the Illinois, Frankfurt, and HAMR model sets (see Table \ref{tab:radiativemodels}).
+As a reference point, consider a set of ``standard'' models with aligned (prograde or retrograde) GRMHD simulations, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.  This includes model from the Illinois, Frankfurt, and HAMR model sets (see Table \ref{tab:radiativemodels}).
 
 %------------------------------------------------------------------------------
 \subsubsection{EHT Constraints}
@@ -112,6 +112,7 @@ The m-ring width is typically the best constrained and therefore the most constr
 \subsubsubsection{EHT Constraint Summary}
 
 The interferometric (EHT) constraints are summarized in Figure \ref{fig:all_EHT_constraints}.  The cuts favor spin $> 0$ models.
+We are left with $31/100$ SANE models and $20/100$ MAD models.  
 
 \begin{figure}
   \centering
@@ -154,7 +155,7 @@ The distribution of model $4G\lambda$ lightcurve-normalized PSDs are shown in Fi
 
 The PSD estimates for the models are broken up into 3 $5000\tg$ windows for each model.  We estimate a probability that the data are drawn from the model sample as follows...
 
-With this approach only XX\% of the models pass, and all of them are SANE.
+With this approach only XX\% of the models pass, and all SANE.  Evidently SANE models are quieter than MAD models.  
 
 \begin{figure}
   \centering
@@ -163,7 +164,7 @@ With this approach only XX\% of the models pass, and all of them are SANE.
   \label{fig:cmp_VLBI_var}
 \end{figure}
 
-Taking the PSD constraint and the Modulation Index constraint together, only $YY\%$ of the models pass.  None of the passing models for variability also pass the full set of other tests.    
+Taking the PSD constraint and the Modulation Index constraint together, only $YY\%$ of the models pass.  None of the models with acceptable variability pass the other tests.    
 
 %------------------------------------------------------------------------------
 \subsubsection{Non-EHT Constraints}
@@ -207,7 +208,7 @@ The set of models that passes the X-ray cut is shown in Figure \ref{fig:cmp_xray
 
 Many large $\Rh$ SANE models fail the X-ray test: all but 3/25 at $\Rh = 160$ and all but 6/25 at $\Rh = 40$.  These models all fail due to excess bremsstrahlung.
 
-The MAD models that fail tend to sit at large absolute spin and low $\Rh$.  These models are Compton-dominated and are therefore temperature sensitive, and so are at greater risk at low $\Rh$.  
+Many of the MAD models that fail have large absolute spin and low $\Rh$.  These models are Compton-dominated.  The midplane temperature is highest at low $\Rh$.  Since the midplane contributes most of the electron scattering optical depth, low $\Rh$ models have the largest $y$ parameter.
 
 \begin{figure}
   \centering
@@ -256,9 +257,10 @@ The physical picture for 86GHz source size is complicated, as is the extraction 
 
 \subsubsubsection{Summary of Non-EHT constraints}
 
-After all non-EHT constraints are applied, and only non-EHT constraints, we are left with the models shown in Figure \ref{fig:non_eht_cuts}.   
+Applying only non-EHT constraints, we are left with the 9/100 SANE models and 25/100 MAD models shown in Figure \ref{fig:non_eht_cuts}.   
 
 The surviving models include a set of SANE models at intermediate $\Rh$ and modest inclination, as well as MAD models at large $\Rh \ge 40$.  No $\Rh = 1$ models survive the non-EHT cuts. 
+
 
 \begin{figure}
   \centering
@@ -267,7 +269,17 @@ The surviving models include a set of SANE models at intermediate $\Rh$ and mode
   \label{fig:non_eht_cuts}
 \end{figure}
 
-\subsubsection{Summary of All Constraints}
+\subsubsection{Summary of Constraints}
+
+If we set aside variability constraints but use all the remaining constraints we are left with the models shown in Figure \ref{fig:all_cuts}.  Only 1/100 SANE models and 8/100 MAD models survive. The passing models cluster amongst low inclination ($i \le 50$deg) MAD models with $\Rh > 10$.  
+
+It is remarkable both that so many of the models look like the EHT data, lending confidence to the models, and that EHT data alone are capable of distinguishing between models in the model set, with only $N = 6$ antennas.  Future experiments with more antennas will contain much more information and provide even tighter constraints.  
+
+All $\Rh = 1$ models have been eliminated, most by multiple constraints, and we conclude that models with equal ion and electron temperatures are unacceptable. 
+
+All models with $i > 50$deg are eliminated, most by multiple constraints, and we conclude that high inclination models are disfavored.  In the SED edge-on models have a clear signature derived from Doppler boosting, with increased NIR and X-ray flux density.  In EHT constraints many edge-on models have a clear signature derived from low m-ring widths, strong asymmetry (although only for a few models), and failed null location constraint.  
+
+For thermal model sets both EHT and non-EHT constraints individually eliminate many models, but together the eliminate all but 5\%.  The success of the models for EHT constraints (apart from variability) supports the use of the models for applying non-EHT constraints and highlights the importance of contemporaneous monitoring of \sgra at other wavelengths.  
 
 \begin{figure}
   \centering
@@ -275,6 +287,35 @@ The surviving models include a set of SANE models at intermediate $\Rh$ and mode
   \caption{Combined EHT and non-EHT constraints}
   \label{fig:all_cuts}
 \end{figure}
+
+Variablity, were it included in the constraint map, would eliminate all thermal models.  Although a few models pass the variability constraints alone this does not mean that we should regard them as favored, since we are likely to find some false positives using a $1\%$ cut in a set of $200$ models.  
+
+\subsubsection{Inter-Model Comparison for thermal models}
+
+\cmf{First version}
+As can be seen in Table \ref{tab:GRMHDmodels} the thermal models have been calculated for an identical parameter space from two different codes, namely iHARM and BHAC for the GRMHD simulations and iPOLE and BHOSS for the GRRT calculations. This allows us for the first time to perform an in depth comparison between the different numerical methods used in this work in addition to the EHTC code comparison projects \citep{2019ApJS..243...26P,2020ApJ...897..148G}. 
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{./figures/BHAC_iharm_correlation}
+  \caption{Correlation between BHAC and iHARM models based on model constraints}
+  \label{fig:modelcorrelation}
+\end{figure}
+
+In Figure \ref{fig:modelcorrelation} we show the correlation between the thermal iHARM and BHAC models for various constraints.
+\newline The top row shows from left to right the 230\,GHz flux density, the 230\,GHz modulation index, MI, computed for a time window of 3 hours, and the 230\,GHz image size obtained from image moments. Since we normalise the 230\,GHz images to an average flux of 2.4\,Jy within a time window of 5000\,M (corresponds to 28.5 h for SgrA a mass of $4.14\times 10^6\,\msun$), the scatter around this values is small. The deviation from an ideal correlation reflects the precision and number of GRMHD snapshots included during normalisation procedure.
+\newline The correlation in the 3\,hour modulation index spreads over $\Delta \rm{MI}=0.75$ which reflects the intra-code ( e.g., MAD vs. SANE accretion and plasma models) and inter-code (BHAC vs. iHARM) differences. Despite these differences the models show a strong correlation throughout the investigated models and parameter space.
+\newline We found a strong correlation between models and codes for the image size computed from image moments, i.e. second moments analysis. \\
+
+The middle row presents the correlation plots for the 86\,GHz flux density (left), the 86\,GHz image size using second moments (middle) and the NIR flux (right). The 86\,GHz flux and 86\,GHz image size exhibit a shift toward larger values for the BHAC models. This difference can be explained by the larger field of view used for the BHAC models at 86\,GHz during the radiative transfer calculations. Thus, more extended structure and therefore a larger total flux is included in the BHAC models. This affects mainly models with large inclinations $i\geq70^\circ$ and jet dominated emission models ($\rm{R}_{\rm high}\geq 40$). 
+\newline The NIR fluxes show a tight correlation over four orders of magnitude and systematically larger flux for the BHAC models for low NIR fluxes ($\log_{10}(NIR)<-7$). These fluxes are far below the NIR constraints of $\sim 1mJy$, and therefore they do not affect the passing or failing of the models. In the thermal models the NIR flux is generated from the tail of the electron distribution function and thus very sensitive to the electron temperature. Thus, small differences in the distribution and value of the electron temperature between the two codes explain the observed de-correlation at very low NIR flux.  \\
+
+The correlation between the models for the m-ring parameters is presented in the third row of Fig.~\ref{fig:modelcorrelation}. The correlation of the diameter of the m-ring is plotted in the left panel. The spread covers nearly the same extent as the 230\,GHz image size (top row, right panel) however the scatter in the correlation is larger. 
+The same is true for the width of the m-ring (middle panel in the last row of Fig.~\ref{fig:modelcorrelation}). Compared to the diameter and width of the m-ring, the asymmetry of the m-ring is less correlated (right panel). Notice, that the horizontal and vertical line in the asymmetries occurs since the parameter hits the boundary of the allowed range. 
+
+\newline The smaller correlation of the m-ring parameters as compared to the other parameters presented in Fig.~\ref{fig:modelcorrelation} can be 
+ understood by the different nature of the constraint i.e. image plane vs. Fourier space with sparse u-v coverage. For example, the m-ring fit fails for high inclination and large $R_{\rm high}$ values which leads to a large scatter in parameters for these models. \\
+ \newline Nevertheless, the correlation between the two different codes and various models is astonishing and provides a robust basis for applied analysis and conclusions drawn from our model/image library.
 
 \subsubsection{Inter-Model Comparison}
 
@@ -318,6 +359,7 @@ Throughout this work we fix $\sigma_{\rm min}=0.01$ and vary the base efficiency
 In the following we will elaborate the impact of adding non-thermal particles via the kappa electron distribution with fixed kappa value ($\kappa=3.5$) and there different base efficiencies $\varepsilon=$0.05, 0.1 and 0.2 on the observational constraints listed in Sect. \ref{}.
 
 \subsubsection{230\,GHz VLBI pre-image size}
+
 The addition of non-thermal particles alters the 230\,GHz VLBI pre-image sizes hardly for the MAD models and shows a minor effect on the SANE models. In the SANE case only models with $R_{\rm high}>40$ exhibit a minor increase in the source size where we see a monotonic increase of the source size with inclination. This effect can be understood if we consider that the bulk of the emission in all cases consider here is still produce by the thermal electron distribution, their temperature is given by Eq. \ref{} and an increase in $R_{\rm high}$ suppresses the emission from particles in the disk (by decreasing the electron temperature) and thus enhances the emission from jet.
 Given that most the non-thermal particles are located in the sheath of the jet their impact on the source size is largest if bulk of the thermal emission is also produced there. In addition the emissivity of thermal synchrotron radiation decreases as $j_{\nu}\propto \exp{\left(-\nu^{1/3}
 \right)}$ while for the kappa distribution as $j_{\nu}\propto \nu^{-(\kappa -2)/2}$. This implies that for the same electron temperature the non-thermal flux is compared to a thermal one higher and thus leads to a more extended jet structure for the models including non-thermal particles.
@@ -349,6 +391,8 @@ As can be seen in the figure, including non-thermal particles changes the distri
 \subsubsection{ALMA Light curves}
 For the comparison with the ALMA light curves we compute the modulation index for a 3\,hour time window and across the entire simulated time window of 28\,hours (5000\,GM/c$^3$). Similar to the 86\,GHz flux the 230\,GHz flux is mainly produced within a few gravitational radii and thus not affected by the addition of non-thermal particles using Eq. \ref{eq:kappaeff}. As in the previous constraints, the MAD accretion models are insensitive to the addition of non-thermal particles whereas the SANE models show some increased modulation index for $R_{\rm high}>40$. However, the distributions for thermal and non-thermal eDF are still largely overlapping.
 
+\subsubsection{m-ring}
+The m-ring fitting is applied to the 230\,GHz images. As mentioned earlier the flux and size of the 230\,GHz images are not affected by the inclusion of non-thermal particles with fixed kappa and variable efficiency. Thus, we do not expect any changes in the distribution of the m-ring parameters.  Applying m-ring fitting to non-thermal models and a detailed comparison with the thermal results confirmed our initial assumption. \cmf{based on the results of Kotaro, who run the m-ring on non-thermal models} 
 
 \subsubsection{Summary}
 The effect of adding non-thermal particles via a kappa electron distribution function with fixed $\kappa=3.4$ values and variable efficiency via Eq.~\ref{eq:efficiencybetasigma} can be summarised in the following way:
