@@ -177,8 +177,6 @@ Once the eDF is specified the radiative transfer coefficients (emissivities, abs
 
 \subsubsubsection{Model Scaling}
 
-\newcommand\Munit{\ensuremath{\mathcal{M}}\xspace}
-
 The radiative transfer calculation requires that physical units be assigned to the GRMHD simulations.  The black hole mass $\mbh$ fixes the length unit $\rg$ and time unit $\tg$.  The GRMHD models are nonself-gravitating, however, and therefore one is free to set a density scale, or equivalently the accretion rate $\dot{M}$ or mass unit $\Munit$.
 
 The density $\rho_{cgs}$ in cgs units is obtained from the density $\rho_{sim}$ in simulation units via $\rho_{cgs} = \rho_{sim} \Munit_{cgs} {\rg}_{cgs}^{-3}$.  Similarly, internal energy $u_{cgs} = u_{sim} \Munit_{cgs} {\rg}_{cgs}^{-3} c_{cgs}^2$, and $B_{cgs} = (4\pi)^{1/2} B_{sim} \Munit_{cgs}^{1/2} {\rg}_{cgs}^{-3/2} c_{cgs}$, where the factor of $(4\pi)^{1/2}$ comes from converting Heaviside-Lorentz units (used in GRMHD simulations) to cgs.\monika{what is $\rho_{unit}$ in Table 2? do we want to keep this parameter; if yes then what does it mean?}
@@ -191,27 +189,34 @@ Given an eDF, density scale $\Munit$, and radiative transfer coefficients, the e
 The models are imaged at $86$GHz, $230$~GHz~\footnote{The actual band center for EHT observations is $228$~GHz} and $2.2\mu$m.  Direct imaging includes synchrotron emission and absorption and bremsstrahlung (both ion-electron and electron-electron; see \citet{2020ApJ...898...50Y} for a recent review).  The SED is averaged over a narrow range in inclination and over all position angles.\monika{position angles?} The SED includes synchrotron, bremsstrahlung, and Compton scattering.  Usually synchrotron, and occasionally Compton scattering, dominate at $2.2\mu$m.  Bremsstrahlung or Compton scattering dominate in the X-ray.
 
 \cfg{should we give example images and SEDs?}
-
-
+\ckc{Uncommented the SED figure.}
 
 %Radiative transfer simulations are carried out using several numerical codes (ipole, BHOSS, ? list codes are references). A detailed comparison between numerical radiative transfer methods presented in Gold et al. 2021 and in Prather et al. 2021 shows agreement between codes sufficient to make no difference. Our images are generated with different field-of-views, resolution (see discussion in Appendix B2).\monika{this will be developed a bit more once appendices are in place}
 % CFG: I incorporated this in the first paragraph
 
-% \begin{figure*}
-%   \centering
-%   [altex: figures showing SEDs for a few fiducial models?
-%     Maybe SANE and MAD thermal, Ressel and a nonthermal model?]
-%   \caption{Fiducial SEDs from the simulation library.
-%     (a) thermal SANE, (b) thermal MAD, (c) nonthermal SANE, (d)
-%     Resseler.\monika{no, no images here, I want a 3D figure of
-%       MAD/SANE/TILTED DISK/Ressler model. we discussed that we will
-%       show only best bet images later on.}
-%     \ckc{updated fig.~\ref{fig:GRMHD} to show 3d plots.  It will be odd to show emissivity (fig.~\ref{fig:jnu}) but not the SEDs.  Maybe skip fig.~\ref{fig:jnu} as well?}\monika{how about showing model SEDs for all models in the appendix? (a big grid of seds showing convergence between models/codes etc); in the main text we only show the best bet models SEDs but in the "result" section or "data" section. we can do the same for images.what do you think?}}
-%   \label{fig:fiducial_SEDs}
-% \end{figure*}
+\begin{figure*}
+  \centering
+  \includegraphics[width=0.333\textwidth]{figures/avgsample_SANE.pdf}%
+  \includegraphics[width=0.333\textwidth]{figures/avgsample_MAD.pdf}%
+  \includegraphics[width=0.333\textwidth]{figures/avgsample_kappa.pdf}
+  \caption{Fiducial images from the simulation library.
+    (a) thermal SANE, (b) thermal MAD, and (c) nonthermal SANE.}
+  \label{fig:fiducial_imgs}
+\end{figure*}
 
-%================
-
+\begin{figure*}
+  \centering
+  \includegraphics[width=0.333\textwidth]{figures/sedsample_SANE.pdf}%
+  \includegraphics[width=0.333\textwidth]{figures/sedsample_MAD.pdf}%
+  \includegraphics[width=0.333\textwidth]{figures/sedsample_kappa.pdf}
+  \caption{Fiducial SEDs from the simulation library.
+    (a) thermal SANE, (b) thermal MAD, and (c) nonthermal SANE.
+    \monika{no, no images here, I want a 3D figure of
+      MAD/SANE/TILTED DISK/Ressler model. we discussed that we will
+      show only best bet images later on.}
+    \ckc{updated fig.~\ref{fig:GRMHD} to show 3d plots.  It will be odd to show emissivity (fig.~\ref{fig:jnu}) but not the SEDs.  Maybe skip fig.~\ref{fig:jnu} as well?}\monika{how about showing model SEDs for all models in the appendix? (a big grid of seds showing convergence between models/codes etc); in the main text we only show the best bet models SEDs but in the "result" section or "data" section. we can do the same for images.what do you think?}}
+  \label{fig:fiducial_SEDs}
+\end{figure*}
 
 %==============================================================================
 \subsection{Summary of Sgr~A* model library}
