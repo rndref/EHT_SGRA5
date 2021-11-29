@@ -157,31 +157,32 @@ How can we extract information about the spatial structure of the source from no
 
 The simplified m-ring model has 10 parameters; 3 are commonly well constrained and physically interpretable and are therefore used here: the m-ring diameter $d$, the m-ring width $w$ (FWHM of the convolved Gaussian), and the $m=1$ relative amplitude $\beta_1$.
 
-For the comparison dataset we selected 10 120s scans spread approximately uniformly through the ``best-times'' region on 7 April.  The scans were selected to have > 10 baselines, and integration time at all stations $> 40s$.  We were limited to 10 scans by computational cost.   Only modest changes in model selection were observed if any one scan was removed from the comparison.  The data were de-scattered, that is, the visibility amplitudes were divided by the scattering kernel.  Maximum likelihood m-ring parameters were then found for each scan.  
+For the comparison dataset we selected 10 120s scans spread approximately uniformly through the ``best-times'' region on 7 April.  They are separated by an average of   The scans were selected to have > 10 baselines, and integration time at all stations $> 40s$.  We were limited to 10 scans by computational cost.   Only modest changes in model selection were observed if any one scan was removed from the comparison.  The data were de-scattered, that is, the visibility amplitudes were divided by the scattering kernel.  Maximum likelihood m-ring parameters were then found for each scan.  
 
-The fits are listed in Table \ref{tab:mringfits}.  Evidently the fit parameters are noisy.  The fit for $d$ from $39\mu$as to $84\mu$as, for $w$ from $9\mu$as to $21\mu$as, and for $\beta_1$ from $0.04$ to $0.48$ (we require $\beta_1 < 0.5$ for positivity).  
+The fits are listed in Table \ref{tab:mringfits}.  Evidently the fit parameters are noisy.  The fit for $d$ from $39\mu$as to $84\mu$as, for $w$ from $9\mu$as to $21\mu$as, and for $\beta_1$ from $0.04$ to $0.48$ ($\beta_1 < 0.5$ is sufficient for positivity of the model image).  
 
 
 
-\begin{deluxetable}{cccc}
+\begin{deluxetable}{ccccc}
 \tablecaption{M-Ring Fits to EHT Observations}
 \tablehead{ %
 \colhead{Scan \#} & %
-\colhead{d} & %
-\colhead{w} & %
+\colhead{t [UTC hrs]} & %
+\colhead{d [$\mu$as]} & %
+\colhead{w [$\mu$as] } & %
 \colhead{$\beta_1$} %
 }
 \startdata
-111 & 83.87 & 8.87  & 0.122 \\
-121 & 57.09 & 13.98 & 0.220 \\
-125 & 55.63 & 16.46 & 0.132 \\
-130 & 40.68 & 19.08 & 0.039 \\
-134 & 57.22 & 17.22 & 0.368 \\
-142 & 58.80 & 17.55 & 0.208 \\
-149 & 52.31 & 21.16 & 0.278 \\
-155 & 38.94 & 18.17 & 0.482 \\
-163 & 56.22 & 19.86 & 0.470 \\
-171 & 39.48 & 17.71 & 0.408 \\
+111 & 11.28 & 83.87 & 8.87  & 0.122 \\
+121 & 11.78 & 57.09 & 13.98 & 0.220 \\
+125 & 11.92 & 55.63 & 16.46 & 0.132 \\
+130 & 12.35 & 40.68 & 19.08 & 0.039 \\
+134 & 12.62 & 57.22 & 17.22 & 0.368 \\
+142 & 12.92 & 58.80 & 17.55 & 0.208 \\
+149 & 13.28 & 52.31 & 21.16 & 0.278 \\
+155 & 13.75 & 38.94 & 18.17 & 0.482 \\
+163 & 14.05 & 56.22 & 19.86 & 0.470 \\
+171 & 14.38 & 39.48 & 17.71 & 0.408 \\
 \enddata
 \end{deluxetable}
 \label{tab:mringfits}
