@@ -83,12 +83,10 @@ iHARM/Illinois & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 1000 & [28
 BHAC/Frankfurt/Radboud & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 3333& AMR equiv. [512x192x192] & This work \\
 HAMR & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $13/9,5/3$ & 35,000 & 1000,200 & [348/240×192×192] &This work \\
 Koral Long &0,0.3,0.7,0.9 & MAD & $13/9$ & 100,000 & ? & ?&?\\
-HAMR-Tilted (Tilt=$?^\circ$)$^*$ & $15/16$ & IN-SANE & $5/3$ & 100,000 & 100,000 & [448x144x240] & Chatterjee+20, Liska+18 \\
-Self-consistent Wind Feeding$^*$ & 0 & MAD & ? & ? & ? & ? & \citet{2020ApJ...896L...6R}
+HAMR-Tilted (Tilt=$?^\circ$)\tablenotemark{*} & $15/16$ & IN-SANE & $5/3$ & 100,000 & 100,000 & [448x144x240] & Chatterjee+20, Liska+18 \\
+Self-consistent Wind Feeding\tablenotemark{*} & 0 & MAD & ? & ? & ? & ? & \citet{2020ApJ...896L...6R}
 \enddata
-\begin{tablenotes}
-$^*$non-standard model
-\end{tablenotes}
+\tablenotetext{*}{non-standard model}
 \caption{Summary of GRMHD simulations in \sgra EHT GRMHD model library. The first four entries are standard \sgra simulations.\monika{Please check the numbers}}\label{tab:GRMHDmodels}
 \end{deluxetable*}
 
@@ -145,7 +143,7 @@ R = \frac{T_i}{T_e} = R_{\rm high} \frac{b^2}{b^2+1} + R_{\rm low} \frac{1}{b^2+
 \end{equation}
 Here $b \equiv \beta/\beta_{crit}$. This model has three free parameters: $\beta_{crit}$, $R_{\rm low}$, $R_{\rm high}$.  In the standard models $R_{\rm low} = 1$, $\beta_{crit} = 1$, and only $R_{\rm high}$ is allowed to vary from $1$ to $160$.  The $R_{high}$ model is motivated by plasma heating models in which the branching ratio for dissipation into ions and electrons approaches $1$ at low $\beta$ (refs, including Howes, Kawazura, ...).
 
-In {\it non-thermal} models the eDF includes a power-law tail extending to high energy. \jd{this needs some references to kappa-jet work. e.g. Davelaar+2018&2019}  This is implemented in two ways: with a so-called $\kappa$ distribution function, inspired by observations of the solar wind \jd{only solar wind? this looks not complete yet, Kunz+2015, and two papers on kappa-jet models that show that kappa-df models get the SED of SgrA*/M87 right...}:
+In {\it non-thermal} models the eDF includes a power-law tail extending to high energy. \jd{this needs some references to kappa-jet work. e.g. Davelaar+2018\&2019}  This is implemented in two ways: with a so-called $\kappa$ distribution function, inspired by observations of the solar wind \jd{only solar wind? this looks not complete yet, Kunz+2015, and two papers on kappa-jet models that show that kappa-df models get the SED of SgrA*/M87 right...}:
 \begin{align}                                           \frac{1}{n_e} \frac{d n_e}{d\gamma}= \gamma \sqrt{\gamma^2-1} \left(1+\frac{\gamma+1}{\kappa w}\right)^{-(\kappa+1)}           \end{align}
 which has width parameter $w$ and power-law index parameter $\kappa$, or with a power-law distribution function:
 \begin{align}
