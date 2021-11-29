@@ -157,11 +157,9 @@ How can we extract information about the spatial structure of the source from no
 
 The simplified m-ring model has 10 parameters; 3 are commonly well constrained and physically interpretable and are therefore used here: the m-ring diameter $d$, the m-ring width $w$ (FWHM of the convolved Gaussian), and the $m=1$ relative amplitude $\beta_1$.
 
-For the comparison dataset we selected 10 120s scans spread approximately uniformly through the ``best-times'' region on 7 April.  They are separated by an average of   The scans were selected to have > 10 baselines, and integration time at all stations $> 40s$.  We were limited to 10 scans by computational cost.   Only modest changes in model selection were observed if any one scan was removed from the comparison.  The data were de-scattered, that is, the visibility amplitudes were divided by the scattering kernel.  Maximum likelihood m-ring parameters were then found for each scan.  
+For the comparison dataset we selected 10 120s scans spread approximately uniformly through the ``best-times'' region on 7 April.  They are separated by an average of $\simeq 1240\sec \simeq 60 \tg$. The selected scans have > 10 baselines, and integration time at all stations $> 40s$.  We chose 10 scans to limit computational cost.   Only modest changes in model selection were observed if any one scan was removed from the comparison.  The data were de-scattered, that is, the visibility amplitudes were divided by the scattering kernel.  Maximum likelihood m-ring parameters were then found for each scan.  
 
 The fits are listed in Table \ref{tab:mringfits}.  Evidently the fit parameters are noisy.  The fit for $d$ from $39\mu$as to $84\mu$as, for $w$ from $9\mu$as to $21\mu$as, and for $\beta_1$ from $0.04$ to $0.48$ ($\beta_1 < 0.5$ is sufficient for positivity of the model image).  
-
-
 
 \begin{deluxetable}{ccccc}
 \tablecaption{M-Ring Fits to EHT Observations}
@@ -187,7 +185,7 @@ The fits are listed in Table \ref{tab:mringfits}.  Evidently the fit parameters 
 \end{deluxetable}
 \label{tab:mringfits}
 
-The variation in fit parameters is caused by a combination of variability in the source, thermal noise, uncertain in the position angle, and gain variations.  In the models the main source of variation is variability in the models themselves.
+The variation in fit parameters is caused by a combination of variability in the source, thermal noise, uncertain in the position angle, and gain variations.  In the models the main driver of fit variations is variability in the models themselves.
 
 Next, we read in a series of model images, generated synthetic data from the models, and fit m-rings to the synthetic data.  This produces a distribution of m-ring parameters for each model.   
 
