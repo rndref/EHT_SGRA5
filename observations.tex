@@ -151,19 +151,46 @@ In evaluating a model we find which images in a model could lie within the allow
 %------------------------------------------------------------------------------
 \subsubsection{230\,GHz M-Ring Fitting}
 
-How can we extract information about the spatial structure of the source from noisy, fluctuating data with limited UV coverage, and compare that to noisy, fluctuating models? Our strategy is to fit a source-plan model to the data and summarize the source structure using the distribution of fit parameters.  
+How can we extract information about the spatial structure of the source from noisy, fluctuating data with limited UV coverage, and compare that to noisy, fluctuating models? Our strategy is to fit a source-plane model to the data and summarize the source structure using the distribution of fit parameters.  
 
-\citetalias{PaperIV} fits an ``m-ring'' source model to the April 7 data.  Here we use a simplified m-ring model: a $\delta$ function in radius with diameter $d$ multiplied by a truncated (for $m > 3$) Fourier series, convolved with a Gaussian of with $w$.  In addition the model contains a centered Gaussian component to absorb large scale emission and emission interior to the ring.
+\citetalias{PaperIV} fits an ``m-ring'' source model to the April 7 data.  Here we use a simplified m-ring model: a $\delta$ function in radius with diameter $d$ multiplied by a truncated (for $m > 3$) Fourier series, convolved with a Gaussian of width $w$.  In addition the model contains a centered Gaussian component, with amplitude and width as free parameters, to absorb large scale emission and emission interior to the ring.
 
 The simplified m-ring model has 10 parameters; 3 are commonly well constrained and physically interpretable and are therefore used here: the m-ring diameter $d$, the m-ring width $w$ (FWHM of the convolved Gaussian), and the $m=1$ relative amplitude $\beta_1$.
 
-For the comparison dataset we selected 10 120s scans spread approximately uniformly through the best-times region on 7 April.  The scans were selected to have > 10 baselines, and integration time at all stations $> 40s$.  We were limited to 10 scans by computational cost.   Only modest changes in model selection were observed if any one scan was removed from the comparison.  The data were de-scattered, that is, the visibility amplitudes were divided by the scattering kernel.  Maximum likelihood m-ring parameters were then found for each scan.
+For the comparison dataset we selected 10 120s scans spread approximately uniformly through the ``best-times'' region on 7 April.  The scans were selected to have > 10 baselines, and integration time at all stations $> 40s$.  We were limited to 10 scans by computational cost.   Only modest changes in model selection were observed if any one scan was removed from the comparison.  The data were de-scattered, that is, the visibility amplitudes were divided by the scattering kernel.  Maximum likelihood m-ring parameters were then found for each scan.  
 
-Next, we read in a series of model images, generated synthetic data from the models, and fit m-rings to the synthetic data.  This produced a distribution of m-ring parameters for each model.   
+The fits are listed in Table \ref{tab:mringfits}.  Evidently the fit parameters are noisy.  The fit for $d$ from $39\mu$as to $84\mu$as, for $w$ from $9\mu$as to $21\mu$as, and for $\beta_1$ from $0.04$ to $0.48$ (we require $\beta_1 < 0.5$ for positivity).  
 
-The synthetic data is generated as follows.  A model image $I(x,y)$ is fourier transformed to complex visibilities $V(u,v)$ with an assumed position angle, then sampled on baselines $i$ drawn from the comparison scan, $V_i \equiv V(u_i,v_i)$.  Normally distributed thermal noise $\delta V_{th,i}$, with amplitude based on telescope performance during the scan is added, and multiplicative, normally distributed noise $N$ is added to (very crudely) model gain corrections: $\tilde{V}_i = V_i (1 + \epsilon N) + \delta V_{th,i}$.  We set $\epsilon = 0.05$, but no significant changes in fit parameters were observed for $\epsilon = 0.02$.  We then fit to the visibility amplitudes $|\tilde{V}_i|$ and closure phases arg$(\tilde{V}_i \tilde{V}_i \tilde{V}_j \tilde{V}_k^*)$, where $ijk$ form a triangle in the $(u,v)$ plane.  The procedure was repeated for 4 positions angles and for a set of model images separated by $500 \tg$ (comparable to a correlation time).  This results in, for example, a sample of $30$ fits per scan per position angle for the Illinois thermal model set.  
+The variation in fit parameters is caused by a combination of variability in the source, thermal noise, uncertain in the position angle, and gain variations.  In the models the main source of variation is variability in the models themselves.
 
-In comparing the models to the data we (1) generate the distribution of fit parameters for each position angle; (2) run a Kolmogorov-Smirnov test at fixed position angle comparing the distribution of $\sim 300$ fits to synthetic data to the distribution of $10$ fits to the observations, to obtain a p-value; (3) average p-values over position angles; (4) reject the model if $p < 0.01$.
+\begin{deluxetable}{cccc}
+\tablecaption{M-Ring Fits to EHT Observations}
+\tablehead{ %
+\colhead{Scan \#} & %
+\colhead{d} & %
+\colhead{w} & %
+\colhead{$\beta_1$} %
+}
+\startdata
+111 & 83.87 & 8.87  & 0.122 \\
+121 & 57.09 & 13.98 & 0.220 \\
+125 & 55.63 & 16.46 & 0.132 \\
+130 & 40.68 & 19.08 & 0.039 \\
+134 & 57.22 & 17.22 & 0.368 \\
+142 & 58.80 & 17.55 & 0.208 \\
+149 & 52.31 & 21.16 & 0.278 \\
+155 & 38.94 & 18.17 & 0.482 \\
+163 & 56.22 & 19.86 & 0.470 \\
+171 & 39.48 & 17.71 & 0.408 \\
+\enddata
+\end{deluxetable}
+\label{tab:mringfits}
+
+Next, we read in a series of model images, generated synthetic data from the models, and fit m-rings to the synthetic data.  This produces a distribution of m-ring parameters for each model.   
+
+The synthetic data is generated as follows.  A model image $I(x,y)$ is fourier transformed to complex visibilities $V(u,v)$ with an assumed position angle, then sampled on baselines $i$ drawn from the comparison scan, $V_i \equiv V(u_i,v_i)$.  Normally distributed thermal noise $\delta V_{th,i}$, with amplitude based on telescope performance during the scan is added, and multiplicative, normally distributed noise $N$ is added to (very crudely) model gain corrections: $\tilde{V}_i = V_i (1 + \epsilon N) + \delta V_{th,i}$.  We set $\epsilon = 0.05$, but no significant changes in fit parameters were observed for $\epsilon = 0.02$.  We then fit to the visibility amplitudes $|\tilde{V}_i|$ and closure phases arg$(\tilde{V}_i \tilde{V}_i \tilde{V}_j \tilde{V}_k^*)$, where $ijk$ form a triangle in the $(u,v)$ plane.  The procedure was repeated for 4 positions angles and for a set of model images separated by $500 \tg$ (comparable to a correlation time).  This results in, for example, a sample of $30$ fits per scan per position angle for the Illinois thermal model set, or a total of $30 \times 10 = 300$ samples in each distribution.  
+
+In comparing the models to the data we (1) generate the distribution of fit parameters at each position angle; (2) run a Kolmogorov-Smirnov test comparing the distribution of $300$ fits to synthetic data with the distribution of $10$ fits to the observations, to obtain a p-value (what is the probability they are drawn from the same underlying distribution?); (3) average p-values over position angles; (4) reject the model if $p < 0.01$.
 
 %==============================================================================
 \subsection{Non-EHT Constraints}
