@@ -139,9 +139,9 @@ Here $u$ and $\rho$ are the internal energy density and rest-mass density from t
 
 In \cite{M87PaperV} and \cite{M87PaperVIII}, $R$ is assigned using a prescription, adopted from \cite{2016A&A...586A..38M}, that assumes (1) the temperature ratio is a function only of local conditions (2) the ratio varies from one value at low plasma $\beta \equiv P_{gas}/P_{mag}$ to a second value at high $\beta$:
 \begin{equation}
-R = \frac{T_i}{T_e} = R_{\rm high} \frac{b^2}{b^2+1} + R_{\rm low} \frac{1}{b^2+1}.
+R = \frac{T_i}{T_e} = \Rh \frac{b^2}{b^2+1} + \Rl \frac{1}{b^2+1}.
 \end{equation}
-Here $b \equiv \beta/\beta_{crit}$. This model has three free parameters: $\beta_{crit}$, $R_{\rm low}$, $R_{\rm high}$.  In the standard models $R_{\rm low} = 1$, $\beta_{crit} = 1$, and only $R_{\rm high}$ is allowed to vary from $1$ to $160$.  The $R_{high}$ model is motivated by plasma heating models in which the branching ratio for dissipation into ions and electrons approaches $1$ at low $\beta$ (refs, including Howes, Kawazura, ...).
+Here $b \equiv \beta/\beta_{crit}$. This model has three free parameters: $\beta_{crit}$, $\Rl$, $\Rh$.  In the standard models $\Rl = 1$, $\beta_{crit} = 1$, and only $\Rh$ is allowed to vary from $1$ to $160$.  The $\Rh$ model is motivated by plasma heating models in which the branching ratio for dissipation into ions and electrons approaches $1$ at low $\beta$ (refs, including Howes, Kawazura, ...).
 
 In {\it non-thermal} models the eDF includes a power-law tail extending to high energy. \jd{this needs some references to kappa-jet work. e.g. Davelaar+2018\&2019}  This is implemented in two ways: with a so-called $\kappa$ distribution function, inspired by observations of the solar wind \jd{only solar wind? this looks not complete yet, Kunz+2015, and two papers on kappa-jet models that show that kappa-df models get the SED of SgrA*/M87 right...}:
 \begin{align}                                           \frac{1}{n_e} \frac{d n_e}{d\gamma}= \gamma \sqrt{\gamma^2-1} \left(1+\frac{\gamma+1}{\kappa w}\right)^{-(\kappa+1)}           \end{align}
@@ -232,8 +232,8 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 \renewcommand{\arraystretch}{1.5}
 \tablecaption{Summary of emission simulations in \sgra EHT model library.}~\label{tab:radiativemodels}
 \tablehead{
-  \colhead{$R_{\rm low}$}          &%
-  \colhead{$R_{\rm high}$}         &%
+  \colhead{$\Rh$}                  &%
+  \colhead{$\Rh$}                  &%
   \colhead{$\beta_{\rm crit}$}     &%
   \colhead{$p$}                    &%
   \colhead{$\gamma_{\rm min/max}$} &%
@@ -291,7 +291,7 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Adiabatic Index $\Gamma$: 4/3
 % \item Time $t_\mathrm{final}$: 30,000$M$
 % \item $\rho_0$: 3 different density normalization chosen for each parameter set for $t \in [15,000, 20,000), [20,000, 25,000), [25,000, 30,000)$.
-% \item $R_\mathrm{high}$: 1, 10, 40, 160
+% \item $\Rh$: 1, 10, 40, 160
 % \item Inclination $i$: 10$^\circ$, 30$^\circ$, 50$^\circ$, ..., 170$^\circ$
 % \item Resolution:
 % \item Initial conditions:
@@ -310,7 +310,7 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Adiabatic Index $\Gamma$: 4/3
 % \item Time $t_\mathrm{final}$: 30000
 % \item $\rho_0$: 3 different density normalizations chosen for each parameter set for $t \in [10,000, 15,000), [20,000, 25,000), [25,000, 30,000)$
-% \item $R_\mathrm{high}$: 1, 2.5, 5, 10, 40, 160
+% \item $\Rh$: 1, 2.5, 5, 10, 40, 160
 % \item Inclination $i$: 10$^\circ$, 30$^\circ$, 50$^\circ$,..., 90$^\circ$
 % \item Resolution:
 % \item Initial conditions:
@@ -329,7 +329,7 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Adiabatic Index $\Gamma$: 13/9, 5/3
 % \item Time $t_\mathrm{final}$: $35,000M$
 % \item $\rho_0$: 1 density normalization for $[30,000-35,000)M$
-% \item $R_\mathrm{high}$: 1, 40, 160
+% \item $\Rh$: 1, 40, 160
 % \item Inclination $i$: 10$^\circ$, 50$^\circ$, 90$^\circ$
 % \item Resolution: $348\times 192\times 192$, $240\times 192\times 192$
 % \item Initial conditions: FM: $r_{\rm in}=6, 20M$; $r_{\rm pmax}=12, 41M$
@@ -372,7 +372,7 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Adiabatic Index $\Gamma$: 13/9, 5/3
 % \item Time $t_\mathrm{final}$: $35,000M$
 % \item $\rho_0$: 1 density normalization for $[30,000-35,000)M$
-% \item $R_\mathrm{high}$: 1, 40, 160
+% \item $\Rh$: 1, 40, 160
 % \item Inclination $i$: 10$^\circ$, 50$^\circ$, 90$^\circ$
 % \item Resolution: $348\times 192\times 192$, $240\times 192\times 192$
 % \item Initial conditions: FM: $r_{\rm in}=6, 20M$; $r_{\rm pmax}=12, 41M$
@@ -413,7 +413,7 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Time $t_\mathrm{final}$: 30000
 % \item $\rho_0$: individual normalisation for each kappa model; only  for $t \in [25,000, 30,000)$
 % \item $\kappa$: variable $\kappa(\beta, \sigma)$, fixed $\kappa=3.5$ with $\epsilon=\epsilon_{0} f(\beta,\sigma)$ for $\epsilon_{0}=0.05,0.10,0.20$
-% \item $R_\mathrm{high}$: 1, 2.5, 5, 10, 40, 160
+% \item $\Rh$: 1, 2.5, 5, 10, 40, 160
 % \item Inclination $i$: 10$^\circ$, 30$^\circ$, 50$^\circ$,..., 90$^\circ$
 % \item Reference: this work
 % \item Status: in production
@@ -431,7 +431,7 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Time $t_\mathrm{final}$: $35,000M$
 % \item $\rho_0$: 1 density normalization for $[30,000-35,000)M$
 % \item $\kappa$: variable $\kappa (\beta, \sigma)$
-% \item $R_\mathrm{high}$: 1, 40, 160
+% \item $\Rh$: 1, 40, 160
 % \item Inclination $i$: 10$^\circ$, 50$^\circ$, 90$^\circ$
 % \item Resolution: $348\times 192\times 192$, $240\times 192\times 192$
 % \item Initial conditions: FM: $r_{\rm in}=6, 20M$; $r_{\rm pmax}=12, 41M$
@@ -509,7 +509,7 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Adiabatic Index $\Gamma$: 5/3
 % \item Time $t_\mathrm{final}$: $>100,000M$
 % \item $\rho_0$: 1 density normalization for $[100,000-103,000)M$
-% \item $R_\mathrm{high}$: 1, 40, 160
+% \item $\Rh$: 1, 40, 160
 % \item Inclination $i$: 10$^\circ$, 50$^\circ$, 90$^\circ$
 % \item Resolution: $448\times 144\times 240$,
 % \item Initial conditions: FM: $r_{\rm in}=12.5M$; $r_{\rm pmax}=25M$
