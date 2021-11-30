@@ -176,7 +176,7 @@ Once the eDF is specified the radiative transfer coefficients (emissivities, abs
 
 The radiative transfer calculation requires that physical units be assigned to the GRMHD simulations.  The black hole mass $\mbh$ fixes the length unit $\rg$ and time unit $\tg$.  The GRMHD models are nonself-gravitating, however, and therefore one is free to set a density scale, or equivalently the accretion rate $\dot{M}$ or mass unit $\Munit$.
 
-The density in cgs units ($\rho_\mathrm{cgs}$) is obtained from the density  in simulation units ($\rho_{sim}$) via $\rho_\mathrm{cgs} = \rho_{sim} \Munit_\mathrm{cgs} {(\rg)}_\mathrm{cgs}^{-3}$.  Similarly, $u_\mathrm{cgs} = u_{sim} \Munit_\mathrm{cgs} {(\rg)}_\mathrm{cgs}^{-3} c_\mathrm{cgs}^2$, and $B_\mathrm{cgs} = (4\pi)^{1/2} B_{sim} \Munit_\mathrm{cgs}^{1/2} {\rg}_\mathrm{cgs}^{-3/2} c_\mathrm{cgs}$; the factor of $(4\pi)^{1/2}$ comes from converting Heaviside-Lorentz units (used in GRMHD simulations) to cgs.\monika{what is $\rho_{unit}$ in Table 2? do we want to keep this parameter; if yes then what does it mean?}
+The density in cgs units ($\rho_\mathrm{cgs}$) is obtained from the density  in simulation units ($\rho_\mathrm{sim}$) via $\rho_\mathrm{cgs} = \rho_\mathrm{sim} \Munit_\mathrm{cgs} {(\rg)}_\mathrm{cgs}^{-3}$.  Similarly, $u_\mathrm{cgs} = u_\mathrm{sim} \Munit_\mathrm{cgs} {(\rg)}_\mathrm{cgs}^{-3} c_\mathrm{cgs}^2$, and $B_\mathrm{cgs} = (4\pi)^{1/2} B_\mathrm{sim} \Munit_\mathrm{cgs}^{1/2} {\rg}_\mathrm{cgs}^{-3/2} c_\mathrm{cgs}$; the factor of $(4\pi)^{1/2}$ comes from converting Heaviside-Lorentz units (used in GRMHD simulations) to cgs.\monika{what is $\rho_{unit}$ in Table 2? do we want to keep this parameter; if yes then what does it mean?}
 The simulation density scale $\Munit$ is a free parameter.  It is fixed through an iterative process so that the mean $230$GHz flux density of the model matches the $\simeq 2.4$Jy observed mean from the 2017 campaign.
 
 %..............................................................................
@@ -189,6 +189,8 @@ The models are imaged at $86$GHz, $230$~GHz~\footnote{The actual band center for
 \cfg{should we give example images and SEDs?}
 \ckc{Uncommented the SED figure.}
 \monika{i merged image with sed plots into one figure, ok?}
+\ckc{sure, will fix labels around subplots once we get the nonthermal plots.}
+
 %Radiative transfer simulations are carried out using several numerical codes (ipole, BHOSS, ? list codes are references). A detailed comparison between numerical radiative transfer methods presented in Gold et al. 2021 and in Prather et al. 2021 shows agreement between codes sufficient to make no difference. Our images are generated with different field-of-views, resolution (see discussion in Appendix B2).\monika{this will be developed a bit more once appendices are in place}
 % CFG: I incorporated this in the first paragraph
 
