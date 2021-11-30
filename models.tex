@@ -60,7 +60,6 @@ The synchrotron cooling timescale is $t_{cool} \equiv u/\Lambda$ where $u_e = 3 
 The one-zone model implies that the accretion flow is at high temperature and low density and is therefore collisionless, in the sense that the mean free path to Coulomb scattering is large compared to $\rg$. At $\Theta_e \sim 1$, for example, the Coulomb scattering cross section is comparable to the Thomson cross section, and the mean free path therefore $\sim \tau_e^{-1} \rg$. \jd{mention GRPIC papers here, e.g. Parfrey+2018, Crinquand+2020, Bransgrove+2021, Bart can maybe add more, since he is the expert on PIC/non-ideal MHD?}  The electron-ion Coulomb scattering timescale is also long, and the electrons and ions are therefore poorly coupled.  This motivates consideration of (1) a two-temperature model for the plasma where electrons are cooler than the ions \citep{1976ApJ...204..187S,1977ApJ...214..840I, 1982Natur.295...17R}, and (2) nonthermal electron distribution functions  \br{I think this sentence needs to mention that due to collisionlessness, GRMHD is not the fully correct description (it is collisional) and that the Vlasov equation should be solved instead. First efforts have been made in 2D to capture aspects as jet formation, flaring, reconnection, radiation, gap formation for Sgr and M87 in grpic (Parfrey+2019; Crinquand+2020; Crinquand+2021; Bransgrove+2021; Chen+2020a,b). Approximations of collisionless/kinetic physics are made with non-ideal GRMHD, capturing pressure anisotropy (Kharma/GRIM papers by Charles group; resistive GRMHD from Ripperda+2019 and Ripperda+2020 and some papers by Fendt+, and Nathanail+2021) and efforts towards two-fluid relativistic MHD (Kharma/GRIM/Foucart papers; Most+2021). We cannot go without citing all these works if we mention the issues with ideal MHD and the collisionless nature of the plasma. I am happy to write 2-3 sentences and add the references}.\monika{there reference list is naturally incomplete at this stage of paper writing , but this will be fixed once we have more  "meat" in the latter part of the paper}  As demonstrated in \citet{2014A&A...570A...7M} \jd{Davelaar+2018} and \citet{2000ApJ...541..234O} both effects may change the predicted properties of \sgra.
 
 %==============================================================================
-
 \subsection{Numerical Models of the Inner Accretion Flows}
 
 The one-zone model is too simple for comparison with the rich set of observational constraints that is now available for \sgra.  Analytic spherical accretion models \citep[e.g.]{2019ApJ...885L..33N, 2021arXiv211102178B} incorporate the black hole gravitational field, and analytic disk-like (RIAF) accretion models in the Kerr metric \citep[e.g.]{2009ApJ...697...45B, 2009ApJ...706..960H} also incorporate angular momentum.   Neither incorporates turbulent fluctuations, at least in their simplest form.  We therefore use a more complicated, dynamical model.  We simulate the plasma flow with an ideal general relativistic magnetohydrodynamics (GRMHD) model, assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
@@ -93,7 +92,7 @@ Self-consistent Wind Feeding\tablenotemark{*} & 0 & MAD & ? & ? & ? & ? & \citet
 
 \begin{figure*}
   \centering
-  [altext: 3d plots of MAD, SANE, tilted disk, Resseler]
+  \note{altext: 3d plots of MAD, SANE, tilted disk, Resseler}
   \caption{Flow properties of fiducial GRMHD models.
     ...Flow properties of fiducial GRMHD models.Flow properties of fiducial GRMHD models.Flow properties of fiducial GRMHD models.Flow properties of fiducial GRMHD models.Flow properties of fiducial GRMHD models.Flow properties of fiducial GRMHD models.}
   \label{fig:GRMHD}
@@ -155,8 +154,6 @@ Once the eDF is specified the radiative transfer coefficients (emissivities, abs
 
 \kc{Perhaps add a plot of the different eDFs to display the variety of models considered.}\monika{that would be a boring plot..}
 
-%------------------------------------------------------------------------------
-
 % \begin{figure*}
 %   \centering
 %   [altex: figures showing images for a few fiducial models?
@@ -171,6 +168,7 @@ Once the eDF is specified the radiative transfer coefficients (emissivities, abs
 %   \label{fig:fiducial_imgs}
 % \end{figure*}
 
+%..............................................................................
 \subsubsubsection{Model Scaling}
 
 The radiative transfer calculation requires that physical units be assigned to the GRMHD simulations.  The black hole mass $\mbh$ fixes the length unit $\rg$ and time unit $\tg$.  The GRMHD models are nonself-gravitating, however, and therefore one is free to set a density scale, or equivalently the accretion rate $\dot{M}$ or mass unit $\Munit$.
@@ -178,6 +176,7 @@ The radiative transfer calculation requires that physical units be assigned to t
 The density in cgs units ($\rho_{cgs}$) is obtained from the density  in simulation units ($\rho_{sim}$) via $\rho_{cgs} = \rho_{sim} \Munit_{cgs} {(\rg)}_{cgs}^{-3}$.  Similarly, $u_{cgs} = u_{sim} \Munit_{cgs} {(\rg)}_{cgs}^{-3} c_{cgs}^2$, and $B_{cgs} = (4\pi)^{1/2} B_{sim} \Munit_{cgs}^{1/2} {\rg}_{cgs}^{-3/2} c_{cgs}$; the factor of $(4\pi)^{1/2}$ comes from converting Heaviside-Lorentz units (used in GRMHD simulations) to cgs.\monika{what is $\rho_{unit}$ in Table 2? do we want to keep this parameter; if yes then what does it mean?}
 The simulation density scale $\Munit$ is a free parameter.  It is fixed through an iterative process so that the mean $230$GHz flux density of the model matches the $\simeq 2.4$Jy observed mean from the 2017 campaign.
 
+%..............................................................................
 \subsubsubsection{Radiative Transfer Calculation}
 
 Given an eDF, density scale $\Munit$, and radiative transfer coefficients, the emergent radiation is obtained by solution of the radiative transfer equation.  We use two classes of methods: ray tracing to generate synthetic images, and a Monte Carlo scheme to generate spectral energy distributions (SEDs).  Further detail on numerical methods is given Appendix \ref{app:radtrans}.  Comparisons of numerical methods \citep[][, Prather et al. 2021]{2020ApJ...897..148G} shows that differences between numerical schemes do not contribute significantly to the error budget.  A summary of  radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
@@ -195,23 +194,13 @@ The models are imaged at $86$GHz, $230$~GHz~\footnote{The actual band center for
   \includegraphics[width=0.333\textwidth]{figures/avgsample_SANE.pdf}%
   \includegraphics[width=0.333\textwidth]{figures/avgsample_MAD.pdf}%
   \includegraphics[width=0.333\textwidth]{figures/avgsample_kappa.pdf}\\
-    \includegraphics[width=0.333\textwidth]{figures/sedsample_SANE.pdf}%
+  \includegraphics[width=0.333\textwidth]{figures/sedsample_SANE.pdf}%
   \includegraphics[width=0.333\textwidth]{figures/sedsample_MAD.pdf}%
   \includegraphics[width=0.333\textwidth]{figures/sedsample_kappa.pdf}
   \caption{Time-averaged images from the simulation library.
     (a) thermal SANE, (b) thermal MAD, and (c) nonthermal SANE and corresponding time-averaged SEDs.}
   \label{fig:fiducial_imgs}
 \end{figure*}
-
-% \begin{figure*}
-%   \centering
-%   \includegraphics[width=0.333\textwidth]{figures/sedsample_SANE.pdf}%
-%   \includegraphics[width=0.333\textwidth]{figures/sedsample_MAD.pdf}%
-%   \includegraphics[width=0.333\textwidth]{figures/sedsample_kappa.pdf}
-%   \caption{Time-averaged SEDs from the simulation library.
-%     (a) thermal SANE, (b) thermal MAD, and (c) nonthermal SANE.}
-%   \label{fig:fiducial_SEDs}
-% \end{figure*}
 
 %==============================================================================
 \subsection{Summary of Sgr~A* model library}
@@ -268,18 +257,13 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 \end{rotatetable}
 \pagebreak
 
-
-
-
-% ----------------------------
-
 % %..............................................................................
 % \subsubsection{Thermal Models}
-
+%
 % ...
-
+%
 % \paragraph{Illinois Models}
-
+%
 % % Please fill in basic information of the models in the following list.
 % % Please add more details if necessary. A full paragraph description
 % % of the model is welcome, but not required at this point.
@@ -296,9 +280,9 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Reference: this work
 % \item Status: w4 and w5 all done; w3 in progress
 % \end{itemize}
-
+%
 % \paragraph{Frankfurt Models}
-
+%
 % % Please fill in basic information of the models in the following list.
 % % Please add more details if necessary. A full paragraph description
 % % of the model is welcome, but not required at this point.
@@ -315,9 +299,9 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Reference: this work
 % \item Status: all done except for SANE a=-15o16
 % \end{itemize}
-
+%
 % \paragraph{HAMR Models}
-
+%
 % % Please fill in basic information of the models in the following list.
 % % Please add more details if necessary. A full paragraph description
 % % of the model is welcome, but not required at this point.
@@ -335,14 +319,14 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Reference: this work
 % \item Status: GRMHD simulations done
 % \end{itemize}
-
+%
 % %..............................................................................
 % \subsubsection{Non-thermal (power-law )Models}
-
+%
 % ...
-
+%
 % \paragraph{Frankfurt Models}
-
+%
 % % Please fill in basic information of the models in the following list.
 % % Please add more details if necessary. A full paragraph description
 % % of the model is welcome, but not required at this point.
@@ -378,12 +362,12 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Reference: this work
 % \item Status: GRMHD simulations same as for thermal models
 % \end{itemize}
-
+%
 % %..............................................................................
 % \subsubsection{Non-thermal ($\kappa$) Models}
-
+%
 % ...
-
+%
 % % Please fill in basic information of the models in the following list.
 % % Please add more details if necessary. A full paragraph description
 % % of the model is welcome, but not required at this point.
@@ -398,9 +382,9 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Reference:
 % \item Status:
 % \end{itemize}
-
+%
 % \paragraph{Frankfurt Models}
-
+%
 % % Please fill in basic information of the models in the following list.
 % % Please add more details if necessary. A full paragraph description
 % % of the model is welcome, but not required at this point.
@@ -416,9 +400,9 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Reference: this work
 % \item Status: in production
 % \end{itemize}
-
+%
 % \paragraph{HAMR Models}
-
+%
 % % Please fill in basic information of the models in the following list.
 % % Please add more details if necessary. A full paragraph description
 % % of the model is welcome, but not required at this point.
@@ -437,10 +421,10 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Reference: this work
 % \item Status:
 % \end{itemize}
-
+%
 % %..............................................................................
 % \subsubsection{Critical $\beta$ Models}
-
+%
 % % Please fill in basic information of the models in the following list.
 % % Please add more details if necessary. A full paragraph description
 % % of the model is welcome, but not required at this point.
@@ -456,10 +440,10 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Reference:
 % \item Status:
 % \end{itemize}
-
+%
 % %..............................................................................
 % \subsubsection{Stellar Wind Accretion Models}
-
+%
 % % Please fill in basic information of the models in the following list.
 % % Please add more details if necessary. A full paragraph description
 % % of the model is welcome, but not required at this point.
@@ -475,10 +459,10 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Reference:
 % \item Status:
 % \end{itemize}
-
+%
 % %..............................................................................
 % \subsubsection{Koral Long MAD Models}
-
+%
 % % Please fill in basic information of the models in the following list.
 % % Please add more details if necessary. A full paragraph description
 % % of the model is welcome, but not required at this point.
@@ -494,10 +478,10 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 % \item Reference:
 % \item Status:
 % \end{itemize}
-
+%
 % %..............................................................................
 % \subsubsection{Tilted Models}
-
+%
 % % Please fill in basic information of the models in the following list.
 % % Please add more details if necessary. A full paragraph description
 % % of the model is welcome, but not required at this point.

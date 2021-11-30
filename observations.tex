@@ -7,7 +7,7 @@ Variability complicates the comparison of Sgr A* models to the data. Even an ide
 Most observables are correlated over $\tau \sim $few $\times 100 G M/c^3$.  To obtain the mean and variance of the model distribution to accuracy $f$ from a GRMHD model, then, requires running it for $\sim \tau/f^2 \sim 30,000 (\tau/300) (f/0.1)^{-2}$, assuming the model decorrelates completely at intervals $\gg \tau$.  A GRMHD model of duration $30,000 \tg$  between $10^3-10^4$ node-hours, depending on resolution, code, and hardware.  This is expensive since $\sim 10$ runs are used for each model set, and runs need to be repeated for multiple values of numerical parameters (e.g. resolution).  Most of our models are run for $30,000 \tg$; a few are run to $100,000 \tg$.  The model distributions therefore contain sampling noise, and this must be accounted for in model selection.  For some  constraints (e.g. m-ring fits; see below) this can be done by sampling the model at a cadence similar to the correlation time and then using a 2-sample KS test to compare the observed and model distributions.
 
 %==============================================================================
-% \subsubsection{Scattering Models}
+% \subsection{Scattering Models}
 
 %==============================================================================
 \subsection{EHT Observational Constraints}
@@ -19,7 +19,7 @@ Most observables are correlated over $\tau \sim $few $\times 100 G M/c^3$.  To o
 \begin{figure*}
   \centering
   %\includegraphics{}
-  [altex: (left) visibility amplitude vs baseline for the day(s) that
+  \note{altex: (left) visibility amplitude vs baseline for the day(s) that
     this study use, overplotted by the visibility amplitude from a
     fiducial model.
     Similar to paper~II, figure~7.
@@ -27,7 +27,7 @@ Most observables are correlated over $\tau \sim $few $\times 100 G M/c^3$.  To o
     second moment).
     (right) SED from Gurther overplotted by the SEDs from a fiducial
     model.
-    Visually mark the SED constraints.]
+    Visually mark the SED constraints.}
   \caption{(\emph{left}) Measured correlated flux densities of \sgra
     on April 7, 2017, from the HOPS pipeline, overplotted with a fiducial
     GRMHD+GRRT model.
@@ -41,7 +41,7 @@ Most observables are correlated over $\tau \sim $few $\times 100 G M/c^3$.  To o
 
 The EHT observed \sgra at 1.3 mm during the 2017 April 5--11 observing campaign and obtained horizon scale complex visibilities.  Figure~\ref{fig:visibility} shows the visibility amplitudes on April 6 and 7 from  the HOPS pipeline, overplotted with visibility amplitudes derived from a model.  Evidently there are nulls near $\sim 5\mathrm{G}\lambda$ and $7\mathrm{G}\lambda$, suggesting a ringlike structure.\monika{mention already here is the shown data is descattered?}
 
-We test the models against EHT interferometric data in three ways.  First, we compare the location of the first null and the visibility amplitude at long baselines to the model (``null constraint'').  Second, we compare an estimate of the source size (``second moment constraint'') to an estimate from short baselines.  Finally, using a variant of the procedure used in \citetalias{PaperIV}, we compare fits for the diameter, width, and asymmetry of an m-ring to the model.  
+We test the models against EHT interferometric data in three ways.  First, we compare the location of the first null and the visibility amplitude at long baselines to the model (``null constraint'').  Second, we compare an estimate of the source size (``second moment constraint'') to an estimate from short baselines.  Finally, using a variant of the procedure used in \citetalias{PaperIV}, we compare fits for the diameter, width, and asymmetry of an m-ring to the model.
 
 %------------------------------------------------------------------------------
 \subsubsection{230\,GHz VLBI Null Locations}
@@ -151,15 +151,15 @@ In evaluating a model we find which images in a model could lie within the allow
 %------------------------------------------------------------------------------
 \subsubsection{230\,GHz M-Ring Fitting}
 
-How can we extract information about the spatial structure of the source from noisy, fluctuating data with limited UV coverage, and compare that to noisy, fluctuating models? Our strategy is to fit a source-plane model to the data and summarize the source structure using the distribution of fit parameters.  
+How can we extract information about the spatial structure of the source from noisy, fluctuating data with limited UV coverage, and compare that to noisy, fluctuating models? Our strategy is to fit a source-plane model to the data and summarize the source structure using the distribution of fit parameters.
 
 \citetalias{PaperIV} fits an ``m-ring'' source model to the April 7 data.  Here we use a simplified m-ring model: a $\delta$ function in radius with diameter $d$ multiplied by a truncated (for $m > 3$) Fourier series, convolved with a Gaussian of width $w$.  In addition the model contains a centered Gaussian component, with amplitude and width as free parameters, to absorb large scale emission and emission interior to the ring.
 
 The simplified m-ring model has 10 parameters; 3 are commonly well constrained and physically interpretable and are therefore used here: the m-ring diameter $d$, the m-ring width $w$ (FWHM of the convolved Gaussian), and the $m=1$ relative amplitude $\beta_1$.
 
-For the comparison dataset we selected 10 120s scans spread approximately uniformly through the ``best-times'' region on 7 April.  They are separated by an average of $\simeq 1240\sec \simeq 60 \tg$. The selected scans have > 10 baselines, and integration time at all stations $> 40s$.  We chose 10 scans to limit computational cost.   Only modest changes in model selection were observed if any one scan was removed from the comparison.  The data were de-scattered, that is, the visibility amplitudes were divided by the scattering kernel.  Maximum likelihood m-ring parameters were then found for each scan.  
+For the comparison dataset we selected 10 120s scans spread approximately uniformly through the ``best-times'' region on 7 April.  They are separated by an average of $\simeq 1240\sec \simeq 60 \tg$. The selected scans have > 10 baselines, and integration time at all stations $> 40s$.  We chose 10 scans to limit computational cost.   Only modest changes in model selection were observed if any one scan was removed from the comparison.  The data were de-scattered, that is, the visibility amplitudes were divided by the scattering kernel.  Maximum likelihood m-ring parameters were then found for each scan.
 
-The fits are listed in Table \ref{tab:mringfits}.  Evidently the fit parameters are noisy.  The fit for $d$ from $39\mu$as to $84\mu$as, for $w$ from $9\mu$as to $21\mu$as, and for $\beta_1$ from $0.04$ to $0.48$ ($\beta_1 < 0.5$ is sufficient for positivity of the model image).  
+The fits are listed in Table \ref{tab:mringfits}.  Evidently the fit parameters are noisy.  The fit for $d$ from $39\mu$as to $84\mu$as, for $w$ from $9\mu$as to $21\mu$as, and for $\beta_1$ from $0.04$ to $0.48$ ($\beta_1 < 0.5$ is sufficient for positivity of the model image).
 
 \begin{deluxetable}{ccccc}
 \tablecaption{M-Ring Fits to EHT Observations}
@@ -187,20 +187,21 @@ The fits are listed in Table \ref{tab:mringfits}.  Evidently the fit parameters 
 
 The variation in fit parameters is caused by a combination of variability in the source, thermal noise, uncertain in the position angle, and gain variations.  In the models the main driver of fit variations is variability in the models themselves.
 
-Next, we read in a series of model images, generated synthetic data from the models, and fit m-rings to the synthetic data.  This produces a distribution of m-ring parameters for each model.   
+Next, we read in a series of model images, generated synthetic data from the models, and fit m-rings to the synthetic data.  This produces a distribution of m-ring parameters for each model.
 
-The synthetic data is generated as follows.  A model image $I(x,y)$ is fourier transformed to complex visibilities $V(u,v)$ with an assumed position angle, then sampled on baselines $i$ drawn from the comparison scan, $V_i \equiv V(u_i,v_i)$.  Normally distributed thermal noise $\delta V_{th,i}$, with amplitude based on telescope performance during the scan is added, and multiplicative, normally distributed noise $N$ is added to (very crudely) model gain corrections: $\tilde{V}_i = V_i (1 + \epsilon N) + \delta V_{th,i}$.  We set $\epsilon = 0.05$, but no significant changes in fit parameters were observed for $\epsilon = 0.02$.  We then fit to the visibility amplitudes $|\tilde{V}_i|$ and closure phases arg$(\tilde{V}_i \tilde{V}_i \tilde{V}_j \tilde{V}_k^*)$, where $ijk$ form a triangle in the $(u,v)$ plane.  The procedure was repeated for 4 positions angles and for a set of model images separated by $500 \tg$ (comparable to a correlation time).  This results in, for example, a sample of $30$ fits per scan per position angle for the Illinois thermal model set, or a total of $30 \times 10 = 300$ samples in each distribution.  
+The synthetic data is generated as follows.  A model image $I(x,y)$ is fourier transformed to complex visibilities $V(u,v)$ with an assumed position angle, then sampled on baselines $i$ drawn from the comparison scan, $V_i \equiv V(u_i,v_i)$.  Normally distributed thermal noise $\delta V_{th,i}$, with amplitude based on telescope performance during the scan is added, and multiplicative, normally distributed noise $N$ is added to (very crudely) model gain corrections: $\tilde{V}_i = V_i (1 + \epsilon N) + \delta V_{th,i}$.  We set $\epsilon = 0.05$, but no significant changes in fit parameters were observed for $\epsilon = 0.02$.  We then fit to the visibility amplitudes $|\tilde{V}_i|$ and closure phases arg$(\tilde{V}_i \tilde{V}_i \tilde{V}_j \tilde{V}_k^*)$, where $ijk$ form a triangle in the $(u,v)$ plane.  The procedure was repeated for 4 positions angles and for a set of model images separated by $500 \tg$ (comparable to a correlation time).  This results in, for example, a sample of $30$ fits per scan per position angle for the Illinois thermal model set, or a total of $30 \times 10 = 300$ samples in each distribution.
 
 In comparing the models to the data we (1) generate the distribution of fit parameters at each position angle; (2) run a Kolmogorov-Smirnov test comparing the distribution of $300$ fits to synthetic data with the distribution of $10$ fits to the observations, to obtain a p-value (what is the probability they are drawn from the same underlying distribution?); (3) average p-values over position angles; (4) reject the model if $p < 0.01$.
 
 %==============================================================================
 \subsection{Non-EHT Constraints}
 
-In addition to the EHT data, the SED of \sgra is well constrained \citetalias{PaperII} and thus potentially constraining for the models.  We limit comparison to three bands: 86GHz VLBI data; $2.2\mu$m flux; and X-ray luminosity.  
+In addition to the EHT data, the SED of \sgra is well constrained \citetalias{PaperII} and thus potentially constraining for the models.  We limit comparison to three bands: 86GHz VLBI data; $2.2\mu$m flux; and X-ray luminosity.
 
+%------------------------------------------------------------------------------
 \subsubsection{86\,GHz Flux}
 
-The Global Millimeter VLBI Array (GMVA) observed \sgra on 3 April 2017, just 3 days ($\approx 13,000 \tg$) before the EHT campaign.  \cite{2019ApJ...871...30I} estimate that the compact flux is $F_{86}=2.0 \pm 0.2$Jy ($2\sigma$ errors).  
+The Global Millimeter VLBI Array (GMVA) observed \sgra on 3 April 2017, just 3 days ($\approx 13,000 \tg$) before the EHT campaign.  \cite{2019ApJ...871...30I} estimate that the compact flux is $F_{86}=2.0 \pm 0.2$Jy ($2\sigma$ errors).
 
 We compute 86GHz images for all models, and from that the 86GHz flux density $F_{86}$.  This implicitly assumes that the 86GHz variability over $\sim 3$days is well sampled during the model integration.  We assume normally distributed errors with $\sigma = 0.1$Jy, and convolve the $F_{86}$ distribution for each model with the resulting Gaussian.  We reject models with CDF $< 1\%$ or $> 99\%$ at $2.0$Jy.
 \monika{do we need to split 86 GHz into two separate sub-sections?}
@@ -215,19 +216,18 @@ We compute 86GHz images for all models, and for every model image compute the ma
 
 \sgra flares in the near infrared a few times per day, and in 2017 had a median $2.2\mu$m flux density $\simeq 1.0$mJy \citep{2020A&A...638A...2G}.
 
-We compute $2.2\mu$m images for all models.  We reject the model if its median flux exceeds the observed median flux.  
+We compute $2.2\mu$m images for all models.  We reject the model if its median flux exceeds the observed median flux.
 
-There is as yet no generally accepted model for the NIR flares, so we accept models that do not produce flares. Our working hypothesis is that models that underproduce NIR and which do not flare can be saved by accelerating a small fraction of the electron population into a nonthermal tail.  
+There is as yet no generally accepted model for the NIR flares, so we accept models that do not produce flares. Our working hypothesis is that models that underproduce NIR and which do not flare can be saved by accelerating a small fraction of the electron population into a nonthermal tail.
 
 %------------------------------------------------------------------------------
 \subsubsection{X-ray (Non-Overproduction) Constraints}
 
-\sgra flares in the X-ray less about once per day.  Chandra observations during the 2017 campaign suggest an upper limit on the median (quiescent) flux of $10^{33}$erg/s.  
+\sgra flares in the X-ray less about once per day.  Chandra observations during the 2017 campaign suggest an upper limit on the median (quiescent) flux of $10^{33}$erg/s.
 
 We compute SEDs for most models.  We reject the model if its median flux exceeds the upper limit on the quiescent flux.
 
-As for the NIR, we do not require that the model produce X-ray flares.  
-
+As for the NIR, we do not require that the model produce X-ray flares.
 
 %==============================================================================
 \subsection{Time Dependence}
@@ -235,7 +235,7 @@ As for the NIR, we do not require that the model produce X-ray flares.
 % * we can model ``long-term climate'' well but not ``long-term weather''.
 % * Hence we only compare the slowly varying quantities such as mean/median 2nd moments (climate) but not modulation index (weather).
 % * TODO: look up correct statistical terminology in weather/climate modeling and build that this into this paper.
-% * Use review: https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019EA000586 , https://ui.adsabs.harvard.edu/abs/1993RvMP...65.1331A/abstract 
+% * Use review: https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019EA000586 , https://ui.adsabs.harvard.edu/abs/1993RvMP...65.1331A/abstract
 %
 % * multi-time scale
 % * feeding at large and slow scale
@@ -253,11 +253,11 @@ As for the NIR, we do not require that the model produce X-ray flares.
 
 \sgra shows variability on a wide range of timescales.  This is expected: there are likely variations induced by fluctuations in stellar wind feeding at the scale of the S-stars down to the turbulent fluctuations in the flow on the scale of the event horizon.  Quantitative comparison of observed variability to the models is a potentially powerful tool for model selection.
 
-Here we consider two measures of variability: one from the ALMA light curves and another based on variability of visibility amplitudes in EHT data.  
+Here we consider two measures of variability: one from the ALMA light curves and another based on variability of visibility amplitudes in EHT data.
 
-Nearly all models fail the variability tests, in that the models fluctuate more than the data.  We will discuss possible reasons for this {\em variability crisis} in \S 5. 
+Nearly all models fail the variability tests, in that the models fluctuate more than the data.  We will discuss possible reasons for this {\em variability crisis} in \S 5.
 
-Although we provide a full discussion of model variability, we will not use it for model selection, under the notion that the variability is a higher-order - and therefore less well predicted -  feature of the models while lower order features, such as 86GHz flux density and 230GHz source geometry, are still well predicted.  This hypothesis can only be tested once models that accurately predicted variability are available.   
+Although we provide a full discussion of model variability, we will not use it for model selection, under the notion that the variability is a higher-order - and therefore less well predicted -  feature of the models while lower order features, such as 86GHz flux density and 230GHz source geometry, are still well predicted.  This hypothesis can only be tested once models that accurately predicted variability are available.
 
 %Compared to other astrophysical systems, optically thin black hole accretion systems such as \sgra are expected to show variabilities in a wide range of time scales, from the boundary conditions at the Bondi radius determined by the ``environment'', all the way to the turbulent fluctuations near the event horizon, or even plasma instability driven phenomena.
 %Even excluding flares and detailed plasma physics, observations have shown intrinsic variability in \sgra~\citep{sgra lightcurve papers}.
@@ -270,12 +270,10 @@ Although we provide a full discussion of model variability, we will not use it f
 %This justifies the usage of mean and median quantities to constraint models described in the earlier sections.
 
 %------------------------------------------------------------------------------
-
-%------------------------------------------------------------------------------
 \subsubsection{ALMA Light curves}
 
 \mw{I edited this a bit}
-\\
+
 ALMA and SMA produced \sgra light curves at 230GHz as a byproduct of the 2017 EHT VLBI observing campaign. The complete set of light curves is presented and analyzed in \cite{Wielgus2022}. We have chosen to compare the models to the 7 April 2017 ALMA light using
 the 3 hour {\em modulation index} $M_3$, where $M_T \equiv
 \sigma/\mu$, $\sigma$ is the standard deviation measured over some
@@ -285,13 +283,14 @@ We use $M_T$ because it is easy to describe, easy to compute, commonly used in t
 
 We use $T = 3$ hours because 3 hours is similar to the correlation time for $F_{230}$ in most of the models, 3 hours is similar to the characteristic timescales measured in damped random walk fits to the ALMA lightcurve \citep[see Table 10 of][]{Wielgus2022}, and 3 hours is the longest timescale for which we can consistently estimate the mean and variance of the distribution of M$_3$ from the models.  For a damped random walk process one can show that $M_3$ is only weakly correlated over successive 3 hour intervals (Lee et al. 2021).
 
-We measure $M_3$ in maximally spaced intervals in the ALMA lightcurve on April 6, 7, and 11.\footnote{The results are not sensitive to interval spacing.}  We have also measured $M_3$ in historical data for \sgra from 2005-2017 light curves.  The April 6, 7, and 11 values for $M_3$ (5 in all) are consistent with having been drawn from the historical distribution, although April 7 is among the quietest intervals on record.  
+We measure $M_3$ in maximally spaced intervals in the ALMA lightcurve on April 6, 7, and 11.\footnote{The results are not sensitive to interval spacing.}  We have also measured $M_3$ in historical data for \sgra from 2005-2017 light curves.  The April 6, 7, and 11 values for $M_3$ (5 in all) are consistent with having been drawn from the historical distribution, although April 7 is among the quietest intervals on record.
 
 %The constraint comes from $M_T$ measured over 3 maximally spaced intervals
 %in the 7 April 2017 ALMA light curve, where $M_3 = 0.024, 0.051,
 %0.047$ (Wielgus et al. 2021). These values are consistent with being drawn from the distribution estimated from historical non-EHT 2005-2017 light curves.
 %curves. \mw{maybe sth like "from the estimated distribution of the historical 2005-2017 lightcurves"?}
 
+%------------------------------------------------------------------------------
 \subsubsection{EHT (Baseline variability)}
 
 \ckc{I think Boris needs to write this...}
@@ -299,4 +298,4 @@ We measure $M_3$ in maximally spaced intervals in the ALMA lightcurve on April 6
 Fluctuations in source structure are expected to lead to fluctuations in visibility amplitudes.  An accompanying paper  (Georgiev et al.) describes a technique for characterizing this variability by calculating the temporal power spectral density of ALMA-light-curve-normalized visibility amplitudes in a band in $uv$ distance around $4$G$\lambda$.
 
 Applying this technique to the full 2017 EHT dataset (April 6, 7, and 11), the normalized PSD is $\approx 2 \times 10^{-2} \pm $.
-Georgiev et al. also compute the normalized PSD for most of our models.  
+Georgiev et al. also compute the normalized PSD for most of our models.
