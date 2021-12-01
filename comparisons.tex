@@ -340,7 +340,7 @@ Nevertheless, the correlation between the two different codes and various models
 
 \note{Razi to write here about variable kappa models.  Define a subsection, describe the results and how they differ from the thermal results.}
 
-\note{Christian to write here about constant kappa models.  Define a subsection, describe the results and how they differ from the thermal results.}
+\note{Christian to write here about constant kappa models.  Define a subsection, describe the results and how they differ from the thermal results.}\cmf{done}
 
 %------------------------------------------------------------------------------
 \subsubsection{Constant kappa models $\kappa=3.5$ with variable efficiency, $\varepsilon(\sigma,\beta)$}
@@ -352,7 +352,8 @@ j_{\nu,\rm{tot}}=\left[1-\epsilon(\varepsilon,\beta, \sigma)\right] j_{\nu,\rm{t
 \end{equation}
 where the efficiency, $\epsilon(\varepsilon,\beta,\sigma)$, is given by:
 \begin{equation}
-    \epsilon(\varepsilon,\beta,\sigma)=\varepsilon\left[] 1 - \exp\left(-\beta_{\rm p}^{-2}\right)\right]\left[1-\exp\left(\frac{-\sigma^2}{\sigma_{\rm min}^2}\right)\right].
+    \epsilon(\varepsilon,\beta,\sigma)=\varepsilon\bigg[1 - \exp\left(-\beta_{\rm p}^{-2}\right)\bigg]
+    \left[1-\exp\left(\frac{-\sigma^2}{\sigma_{\rm min}^2}\right)\right].
     \label{eq:efficiencybetasigma}
 \end{equation}
 Throughout this work we fix $\sigma_{\rm min}=0.01$ and vary the base efficiency, $\varepsilon$, between 0.05, 0.1 and 0.2. For each base efficiency we generate a set of models spanning the same parameter space as the thermal models (see Table \ref{tab:radiativemodels} for details). For each model we iterate the mass accretion rate to obtain an average flux of 2.4\,Jy at 230\,GHz across a time interval of 5000\,M. In order to explore a several values of $\varepsilon$ we increased the cadence of the radiative transfer to 50\,M. This allows us to keep the numerical costs for this parameter sweep low while still being within the correlation time of the GRMHD simulations ($t_{\rm corr}\approx 50-100\,M$) \cmf{ do we have reference for this? So far this result is not published, maybe Boris paper?}. An example for the distribution of the efficiency can be seen in the right half of  Fig. \ref{fig:varepsilon}. The efficiency quickly approaches $\epsilon=0$ within the disk region while within the jet the efficiency reaches the defined base-efficiency. Thus, togehter with the used cut of in sigma, $\sigma_{\rm cut}=1$ the non-thermal particles are mainly located in jet sheath.
