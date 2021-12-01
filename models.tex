@@ -91,7 +91,11 @@ Self-consistent Wind Feeding\tablenotemark{*} & 0 & MAD & ? & ? & ? & ? & \citet
 
 \begin{figure*}
   \centering
-  \note{altext: 3d plots of MAD, SANE, tilted disk, Resseler}
+  \includegraphics[width=0.25\textwidth]{figures/volrnd_SANE_Illinois.pdf}%
+  \includegraphics[width=0.25\textwidth]{figures/volrnd_MAD_Frankfurt.pdf}%
+  \includegraphics[width=0.25\textwidth]{figures/volrnd_tilde_HAMR.pdf}%
+  \includegraphics[width=0.25\textwidth]{figures/volrnd_Resseler_athena.pdf}\\
+  \note{altext: 3d volume rendering plots of MAD, SANE, tilted disks, and Resseler models}
   \caption{Flow properties of fiducial GRMHD models.
     ...Flow properties of fiducial GRMHD models.Flow properties of fiducial GRMHD models.Flow properties of fiducial GRMHD models.Flow properties of fiducial GRMHD models.Flow properties of fiducial GRMHD models.Flow properties of fiducial GRMHD models.}
   \label{fig:GRMHD}
@@ -125,7 +129,7 @@ Synthetic observations are generated from the GRMHD model in a radiative transfe
 
 In {\it thermal} models electron energies are distributed into the Maxwell-J{\"u}ttner distribution function:
 \begin{align}
-\frac{1}{n_e}\frac{dn_e}{d\gamma}= \frac{\gamma^2 \sqrt{1-1/\gamma^2}} {\Theta_e K_2(1/\Theta_e)} \exp (-\gamma/\Theta_e);
+\frac{1}{n_e}\frac{dn_e}{d\gamma}= \frac{\gamma^2 \sqrt{1-1/\gamma^2}} {\Theta_e K_2(1/\Theta_e)} \exp\left(-\frac{\gamma}{\Theta_e}\right);
 \end{align}
 recall $\Theta_e=k_b T_e/m_e c^2$, which is determined by the ion-electron temperature ratio $R \equiv T_i/T_e$:
 \begin{align}
@@ -137,7 +141,7 @@ In \citetalias{M87PaperV} and \citetalias{M87PaperVIII}, $R$ is assigned using a
 \begin{equation}
 R = \frac{T_i}{T_e} = \Rh \frac{b^2}{b^2+1} + \Rl \frac{1}{b^2+1}.
 \end{equation}
-Here $b \equiv \beta/\beta_\mathrm{crit}$. This model has three free parameters: $\beta_{crit}$, $\Rl$, $\Rh$.  In the standard models $\Rl = 1$, $\beta_\mathrm{crit} = 1$, and only $\Rh$ is allowed to vary from $1$ to $160$.  The $\Rh$ model is motivated by plasma heating models in which the branching ratio for dissipation into ions and electrons approaches $1$ at low $\beta$ \citep[[]{ref} (refs, including Howes, Kawazura, ...]).
+Here $b \equiv \beta/\beta_\mathrm{crit}$. This model has three free parameters: $\beta_{crit}$, $\Rl$, $\Rh$.  In the standard models $\Rl = 1$, $\beta_\mathrm{crit} = 1$, and only $\Rh$ is allowed to vary from $1$ to $160$.  The $\Rh$ model is motivated by plasma heating models in which the branching ratio for dissipation into ions and electrons approaches $1$ at low $\beta$ \citep[][]{ref} (refs, including Howes, Kawazura, ...).
 
 In {\it non-thermal} models the eDF includes a power-law tail extending to high energy. \jd{this needs some references to kappa-jet work. e.g. Davelaar+2018\&2019}  This is implemented in two ways: with a so-called $\kappa$ distribution function, inspired by observations of the solar wind \jd{only solar wind? this looks not complete yet, Kunz+2015, and two papers on kappa-jet models that show that kappa-df models get the SED of SgrA*/M87 right...}:
 \begin{align}
@@ -181,7 +185,7 @@ The simulation density scale $\Munit$ is a free parameter.  It is fixed through 
 %..............................................................................
 \subsubsubsection{Radiative Transfer Calculation}
 
-Given an eDF, density scale $\Munit$, and radiative transfer coefficients, the emergent radiation is obtained by solution of the radiative transfer equation.  We use two classes of methods: ray tracing to generate synthetic images, and a Monte Carlo scheme to generate spectral energy distributions (SEDs).  Further detail on numerical methods is given Appendix \ref{app:radtrans}.  Comparisons of numerical methods \citep[][, Prather et al. 2021]{2020ApJ...897..148G} shows that differences between numerical schemes do not contribute significantly to the error budget.  A summary of  radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
+Given an eDF, density scale $\Munit$, and radiative transfer coefficients, the emergent radiation is obtained by solution of the radiative transfer equation.  We use two classes of methods: ray tracing to generate synthetic images, and a Monte Carlo scheme to generate spectral energy distributions (SEDs).  Further detail on numerical methods is given Appendix \ref{app:radtrans}.  Comparisons of numerical methods \citep[][Prather et al. 2021]{2020ApJ...897..148G} shows that differences between numerical schemes do not contribute significantly to the error budget.  A summary of  radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
 
 The models are imaged at $86$GHz, $230$~GHz~\footnote{The actual band center for EHT observations is $228$~GHz} and $2.2\mu$m.  Direct imaging includes synchrotron emission and absorption and bremsstrahlung (both ion-electron and electron-electron; see \citet{2020ApJ...898...50Y} for a recent review).  The SED is averaged over a narrow range in inclination and over all position angles.\monika{position angles?} The SED includes synchrotron, bremsstrahlung, and Compton scattering.  Usually synchrotron, and occasionally Compton scattering, dominate at $2.2\mu$m.  Bremsstrahlung or Compton scattering dominate in the X-ray.
 
