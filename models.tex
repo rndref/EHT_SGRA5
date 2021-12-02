@@ -220,11 +220,10 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
 \clearpage
 %\pagebreak
 
-\movetabledown=3cm % recommended in AASTeX docs to center
-    % table on page
+\movetabledown=3cm % recommended in AASTeX docs to center table on page
 \begin{rotatetable}
-\begin{deluxetable*}{cccccccccccccc}
-%\tabletypesize{\footnotesize}
+\begin{deluxetable*}{ccccccccccccc}
+\tabletypesize{\footnotesize}
 \renewcommand{\arraystretch}{1.5}
 \tablecaption{Summary of emission simulations in \sgra EHT model library.}~\label{tab:radiativemodels}
 \tablehead{
@@ -235,7 +234,6 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
   \colhead{$\gamma_{\rm min/max}$} &%
   \colhead{$\kappa$}               &%
   \colhead{$i^\circ$}              &%
-  \colhead{$\rho_{\rm unit}$}      &%
   \colhead{$\nu$[GHz]}             &%
   \colhead{SED}                    &%
   \colhead{$\Delta t$ [1000 M]}    &%
@@ -244,26 +242,27 @@ All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ im
   }
 \startdata
 \multicolumn{13}{c}{Thermal models}\\
-1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,170] & 3 & [86,230] & yes & [15,20) & x & iHARM-Thermal1\\
-1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,170] & 3 & [86,230] & yes & [20-25) & x & iHARM-Thermal2\\
-1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,170] & 3 & [86,230] & yes & [25-30) & x & iHARM-Thermal3\\
-1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,90]  & 3 & [86,230] & yes & [10-15) & x & BHAC-Thermal1\\
-1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,90]  & 3 & [86,230] & yes & [20-25) & x & BHAC-Thermal2\\
-1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,90]  & 3 & [86,230] & yes & [25-30) & x & BHAC-Thermal3\\
-1 & [1,40,160]    & 1 & - & - & - & [10,50,90]      & 1 & [230]    & ?   & ?       & x & HAMR-Thermal\\
+1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [15,20) & x & iHARM-Thermal1\\
+1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [20-25) & x & iHARM-Thermal2\\
+1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [25-30) & x & iHARM-Thermal3\\
+1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,90]  & [86,230] & yes & [10-15) & x & BHAC-Thermal1\\
+1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,90]  & [86,230] & yes & [20-25) & x & BHAC-Thermal2\\
+1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,90]  & [86,230] & yes & [25-30) & x & BHAC-Thermal3\\
+1 & [1,40,160]    & 1 & - & - & - & [10,50,90]      & [230]    & ?   & ?       & x & HAMR-Thermal\\
 \hline
 \multicolumn{13}{c}{Non-thermal power-law models}\\
 - & - & - & ?  & ? & - & & & & & \\
 \hline
 \multicolumn{13}{c}{Non-thermal $\kappa$ models}\\
 - & - & - & -  & - & 5 & & & & & \\
-1 & [1;10;40;160]  & 1 & -  & - & 3.5 ($\epsilon_0=0.05$) & [10,30,...,90]  & 1 & [86,230] & no & [25-30) & x & BHAC-kappa005 \\
-1 & [1;10;40;160]  & 1 & -  & - & 3.5 ($\epsilon_0=0.10$) & [10,30,...,90]  & 1 & [86,230] & no & [25-30) & x & BHAC-kappa010 \\
-1 & [1;10;40;160]  & 1 & -  & - & 3.5 ($\epsilon_0=0.20$) & [10,30,...,90]  & 1 & [86,230] & no & [25-30) & x & BHAC-kappa020 \\
+1 & [1;10;40;160]  & 1 & -  & - & 3.5 ($\epsilon_0=0.05$) & [10,30,...,90]  & [86,230] & no & [25-30) & x & BHAC-kappa005 \\
+1 & [1;10;40;160]  & 1 & -  & - & 3.5 ($\epsilon_0=0.10$) & [10,30,...,90]  & [86,230] & no & [25-30) & x & BHAC-kappa010 \\
+1 & [1;10;40;160]  & 1 & -  & - & 3.5 ($\epsilon_0=0.20$) & [10,30,...,90]  & [86,230] & no & [25-30) & x & BHAC-kappa020 \\
 - & - & - & -  & - & $\kappa(\beta,\sigma)$ & & & & &
 \enddata
 \end{deluxetable*}
 \end{rotatetable}
+
 %\pagebreak
 \clearpage
 % %..............................................................................
