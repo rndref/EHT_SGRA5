@@ -30,14 +30,56 @@ Comparison of Monika model initial conditions
 
 Discussion of model with $\Theta_{e,max}(r, \tau_{cool})$
 
-7. Electron distribution function model is inadequate.
+%7. Electron distribution function model is inadequate.
 
-a.  Discussion of models with varying electron heating models.  Discussion of Jason's eheating models.   Forward reference to Diaz et al.  [Vedant]
+%a.  Discussion of models with varying electron heating models.  Discussion of Jason's eheating models.   Forward reference to Diaz et al.  [Vedant]
 
-b. Discussion of models with $\Rl = 10$. [Vedant]
+%b. Discussion of models with $\Rl = 10$. [Vedant]
+
+\subsection{Effects of self-consistent electron heating models}
+
+The \textit{thermal} models considered in \textcolor{magenta}{ref. models section} assign a local electron temperature as a post-processing step based on local magnetic field strength, parameterized by plasma $\beta$ (\textcolor{magenta}{ref. Rhigh and critical beta equations}).
+
+\citealt{10.1093/mnras/stv2084} provided a formulation to self-consistently model electron thermodynamics during the fluid evolution. Numerical dissipation at grid scale sources entropy generation and is used to heat the electrons based on a microphysical, sub-grid heating prescription. Local fluid and electromagnetic variables are used to compute the electron entropy which along with the ideal gas equation of state, can be converted into a temperature ($\Theta_{e}$). This approach allows computing the electron temperature at each timestep of the simulation, and not during post-processing, as it is done in the $R_{high}$ and Critical-$\beta$ prescriptions.
+
+We consider three sub-grid heating models that prescribe the partition of dissipated energy into electrons and ions. \citealt{2010MNRAS.409L.104H} computed the ratio of ion-to-electron heating due to dissipation of Alfv\'enic turbulent cascade, while \citealt{10.1093/mnras/stx2530} and \citealt{Rowan_2017} considered magnetic reconnection as the source of energy dissipation at sub-grid scales. These studies provide an approximate fitting formula for the ion-to-electron heating rate ($Q_{i}/Q_{e}$) based on local ion-to-electron temperature ratio ($T_{i}/T_{e}$) and local magnetic field strength -- parameterized by $\sigma$ or plasma $\beta$. 
+
+The GRMHD simulations considered here are a subset of the simulations analyzed in \citealt{2020MNRAS.494.4168D}. These include MAD and SANE accretion flows at spins, $a_{*}=0,+1/2,+15/16$. We compute the 3 hour modulation index $M_{3}$, over the time interval (5k-10k)$GM/c^{3}$. The average $M_{3}$ values are comparable to similar $R_{high}$ models, with SANE reconnection models exhibiting a reduced variability as compared to the corresponding turbulent heating models. However, the average $M_{3}$ for all the models is greater than the $M_{3}$ measured from the ALMA lightcurve on three days.
+
+\subsection{Effect of $R_{\lowercase{low}}$}
+
+The $R_{high}$ prescription (Equation \textcolor{magenta}{ref. Rhigh equation}) has three free parameters: $R_{high}$, $R_{low}$ and $\beta_{crit}$. During post-processing, the $R_{high}$ parameter is generally varied while $R_{low}$ and $\beta_{crit}$ is set to unity. In this section we investigate the effect of varying $R_{low}$ on the 3 hour modulation index, $M_{3}$.
+
+Paticle-in-cell (PIC) simulations modelling turbulent dissipation or dissipation associated with magnetic reconnection suggest preferential heating of the electrons in regions of low plasma $\beta$ (\citealt{2010MNRAS.409L.104H, Rowan_2017, 10.1093/mnras/stx2530, Rowan_2019, Kawazura771, PhysRevX.10.041050, kawazura2021energy}). The $R_{low}$ parameter dictates the electron temperature in these regions, that is, in the funnel. Figure \ref{fig:rlow_comparison} shows the effect of $R_{low}$ on image morphology.
+
+\begin{figure*}
+\centering
+\includegraphics[width=0.95\textwidth]{figures/rlow_comparison_rhigh160.png}
+\caption{Comparison of images for the same fluid snapshot with varying $R_{low}$. The density scale $\mathcal{M}$, and FOV were increased to accentuate the differences between the images. The total emission in the funnel is an inverse function of $R_{low}$.}
+\label{fig:rlow_comparison}
+\end{figure*}
+
+For systems with low accretion rates, $\Dot{M}\ll\Dot{M}_{Edd}$, such as SgrA$^{*}$ (\textcolor{magenta}{include refs for SgrA accretion rate and ref. to section on accretion rates}), radiative processes can be neglected during fluid evolution (\citealt{2012MNRAS.426.1928D, 10.1093/mnras/stw3116, Ryan_2017}) and the plasma can be considered Coulomb collisionless (\citealt{Mahadevan_1997, 10.1093/mnras/stw3116, Ryan_2017}). However, the uncertainties with electron heating and advection, and a limited understanding of the funnel warrant a discussion of cooler electrons in regions of high magnetization, and in particular, its effect on submm lightcurve variability. We vary $R_{low}$ for a select set of the best bet Illinois/Thermal models and plot the distribution of the 3 hour modulation index $M_{3}$ in Figure \ref{fig:mi_rlow}.
+
+\begin{figure*}
+\centering
+\includegraphics[width=0.95\textwidth]{figures/mi_rlow_select_models.pdf}
+\caption{Modulation index computed over 3 hour intervals $M_{3}$ for a subset of the Illinois/Thermal models that pass all the constraints. For this analysis, we considered the (25k-30k)$GM/c^{3}$ time interval.}
+\label{fig:mi_rlow}
+\end{figure*}
+
+Although the minimum value of the distribution decreases when $R_{low}$ is increased, there is no clear trend for the mean of the distribution. In addition, the average $M_{3}$ still does not match observational values.
 
 8. The flow is actually made of helium. [George]
 
 brief discussion, forward reference to Wong+.
 
-9. $\gamma = 5/3$ rather than $4/3$.   [Vedant]  When $\gamma = 4/3$ the compression ratio across the shock is larger.
+%9. $\gamma = 5/3$ rather than $4/3$.   [Vedant]  When $\gamma = 4/3$ the compression ratio across the shock is larger.
+
+\subsection{Effect of fluid adiabatic index, $\Gamma_{\lowercase{ad}}$}
+
+We expect the ions and electrons in in hot accretion flows to be thermally decoupled and the resulting plasma to be two-temperature (\citealt{1976ApJ...204..187S, Quataert_1998, 10.1093/mnras/stw3116, Ryan_2018}). The electrons in such flows are relativistic and can be modelled as a fluid with an adiabatic index $\Gamma_{e}=4/3$, while the ions are nonrelativistic and possess an adiabatic index, $\Gamma_{i}=5/3$.
+
+The adiabatic index of the fluid assumes a value between $\Gamma_{e}$ and $\Gamma_{i}$ dictated by the thermodynamics of the ions and electrons (cf. Figure 4 in \citealt{10.1093/mnras/stw3116}). Since we do not model electron thermodynamics and ignore radiative effects during our fluid simulations, we consider a constant value $\Gamma_{ad}$, and set it to 4/3 for the \textit{standard} set of simulations, ie. $\Gamma_{ad}=\Gamma_{e}$. While this may be the case in the funnel, where the electrons are the hottest and highly relativistic; the fluid adiabatic index value away from the poles can be higher than the relativistic value.
+
+We look at the interplay between fluid adiabatic index and lightcurve variability by evaluating $M_{3}$ for thermal, GRMHD models with a higher fluid adiabatic index. This includes MAD models with $\Gamma_{ad}=13/9$ (\textcolor{magenta}{ref. section on KORAL models}; \citealt{2021arXiv210812380N}) and SANE models with $\Gamma_{ad}=5/3$. The models exhibit lightcurve variability similar to the \textit{standard} library and have an average $M_{3}$ that is greater than the value obtained from the ALMA lightcurves.
