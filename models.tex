@@ -56,12 +56,12 @@ The one-zone model has optical depth to Compton scattering $\tau_e \approx \sigm
 
 The synchrotron cooling timescale is $t_\mathrm{cool} \equiv u/\Lambda$ where $u_e = 3 n_e k T_e$ is the electron internal energy and $\Lambda \approx 5.4 B^2 e^4 n_e \Theta_e^2 /(c^3 m_e^2)$ is the synchrotron cooling rate from thermal population of electrons (for details see Appendix~A in \citealt{2011ApJ...735....9M}; finite optical depth would reduce $\Lambda$). The cooling time in the one-zone model is therefore $t_\mathrm{cool}=2.3 \times 10^4\sec \simeq 1.1 \times 10^3 \tg$ which is longer than the characteristic inflow time. Cooling can therefore be neglected in the numerical models (e.g., \citealt{2012MNRAS.426.1928D}).~\footnote{Notice that if \sgra is fed by stellar winds then the inflowing plasma may be mainly helium \citep{2019MNRAS.482L.123R}; this changes the one-zone model only slightly.  Helium accretion is discussed at length in \ref{app:variability}.}
 
-The one-zone model implies that the accretion flow is at high temperature and low density and is therefore collisionless, in the sense that the mean free path to Coulomb scattering is large compared to $\rg$. At $\Theta_e \sim 1$, for example, the Coulomb scattering cross section is comparable to the Thomson cross section, and the mean free path therefore $\sim \tau_e^{-1} \rg$. The electron-ion Coulomb scattering timescale is also long, and the electrons and ions are therefore poorly coupled.  This motivates consideration of (1) a two-temperature model for the plasma where electrons are cooler than the ions \citep{1976ApJ...204..187S,1977ApJ...214..840I, 1982Natur.295...17R}, and (2) nonthermal electron distribution functions. As demonstrated in \citet{2014A&A...570A...7M} and \citet{2000ApJ...541..234O} (see also more recent work by \citealt{2018A&A...612A..34D} and references therein) both effects may change the predicted properties of \sgra.\br{I agree with shifting to discussion section, but we can of course not say this here about nonthermal distributions and collisionless plasma and then ignore the citations. I also think if we mention collisionless here, we simply need to say that MHD cannot capture that (also two-temperature does not help and also nonthermal edf in postprocessing does not solve that. We are simply missing the physics}\monika{but at this point we did not say anything about MHD yet. here we only make a simple estimate and from that we conclude that possibly the plasma is collisionless which suggest two temperatures and nonthermal DF effects but we dont say anything about dynamics, structure or behavior of such plasmas...}
+The one-zone model implies that the accretion flow is at high temperature and low density and is therefore collisionless, in the sense that the mean free path to Coulomb scattering is large compared to $\rg$. At $\Theta_e \sim 1$, for example, the Coulomb scattering cross section is comparable to the Thomson cross section, and the mean free path therefore $\sim \tau_e^{-1} \rg$. The electron-ion Coulomb scattering timescale is also long, and the electrons and ions are therefore poorly coupled.  This motivates consideration of (1) a two-temperature model for the plasma where electrons are cooler than the ions \citep{1976ApJ...204..187S,1977ApJ...214..840I, 1982Natur.295...17R}, and (2) nonthermal electron distribution functions. As demonstrated in \citet{2000ApJ...541..234O} and \citet{2014A&A...570A...7M} (see also more recent work by \citealt{2018A&A...612A..34D} and references therein) both effects may change the predicted properties of \sgra.\br{I agree with shifting to discussion section, but we can of course not say this here about nonthermal distributions and collisionless plasma and then ignore the citations. I also think if we mention collisionless here, we simply need to say that MHD cannot capture that (also two-temperature does not help and also nonthermal edf in postprocessing does not solve that. We are simply missing the physics}\monika{but at this point we did not say anything about MHD yet. here we only make a simple estimate and from that we conclude that possibly the plasma is collisionless which suggest two temperatures and nonthermal DF effects but we dont say anything about dynamics, structure or behavior of such plasmas...}
 
 %==============================================================================
 \subsection{Numerical Models of the Inner Accretion Flows}
 
-The one-zone model is too simple for comparison with the rich set of observational constraints that is now available for \sgra.  Analytic spherical accretion models \citep[e.g.][]{2019ApJ...885L..33N, 2021arXiv211102178B} incorporate the black hole gravitational field, and analytic disk-like (RIAF) accretion models in the Kerr metric \citep[e.g.][]{2009ApJ...697...45B, 2009ApJ...706..960H,2018ApJ...863..148P} also incorporate angular momentum.   Neither incorporates turbulent fluctuations, at least in their simplest form.  We therefore use a more complicated, dynamical model.  We simulate the plasma flow with an ideal general relativistic magnetohydrodynamics (GRMHD\footnote{\monika{comment about collisionless plasma and grmhd approximaton... } }) model, assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
+The one-zone model is too simple for comparison with the rich set of observational constraints that is now available for \sgra.  Analytic spherical accretion models \citep[e.g.][]{2019ApJ...885L..33N, 2021arXiv211102178B} incorporate the black hole gravitational field, and analytic disk-like (RIAF) accretion models in the Kerr metric \citep[e.g.][]{2009ApJ...697...45B, 2009ApJ...706..960H,2018ApJ...863..148P} also incorporate angular momentum.   Neither incorporates turbulent fluctuations, at least in their simplest form.  We therefore use a more complicated, dynamical model.  We simulate the plasma flow with an ideal general relativistic magnetohydrodynamics (GRMHD\footnote{\monika{comment about collisionless plasma and grmhd approximation... } }) model, assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
 
 \begin{deluxetable*}{cccccccc}
 \tabletypesize{\footnotesize}
@@ -175,9 +175,16 @@ The simulation density scale $\Munit$ is a free parameter.  It is fixed through 
 %..............................................................................
 \subsubsubsection{Radiative Transfer Calculation}
 
-Given an eDF, density scale $\Munit$, and radiative transfer coefficients, the emergent radiation is obtained by solution of the radiative transfer equation.  We use two classes of methods: ray tracing to generate synthetic images, and a Monte Carlo scheme to generate spectral energy distributions (SEDs).  Further detail on numerical methods is given Appendix \ref{app:radtrans}.  Comparisons of numerical methods \citep[][Prather et al. 2021]{2020ApJ...897..148G} shows that differences between numerical schemes do not contribute significantly to the error budget.  A summary of  radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
+Given an eDF, density scale $\Munit$, and radiative transfer coefficients, the emergent radiation is obtained by solution of the radiative transfer equation.  We use two classes of methods: ray tracing to generate synthetic images, and a Monte Carlo scheme to generate spectral energy distributions (SEDs).  Further detail on numerical methods is given Appendix \ref{app:radtrans}.  Comparisons of numerical methods \citep[][Prather et al. 2021]{2020ApJ...897..148G} shows that differences between numerical schemes do not contribute significantly to the error budget.  
 
-The models are imaged at $86$GHz, $230$~GHz~\footnote{The actual band center for EHT observations is $228$~GHz} and $2.2\mu$m.  Direct imaging includes synchrotron emission and absorption and bremsstrahlung (both ion-electron and electron-electron; see \citet{2020ApJ...898...50Y} for a recent review).  The SED is averaged over a narrow range in inclination and over all position angles. The SED includes synchrotron, bremsstrahlung, and Compton scattering.  Usually synchrotron, and occasionally Compton scattering, dominate at $2.2\mu$m.  Bremsstrahlung or Compton scattering dominate in the X-ray. We present a few examples of model images and multiwavelenght SEDs of selected SANE and MAD models in Figure~\ref{fig:fiducial_imgs}.
+The models are imaged at $86$GHz, $230$~GHz~\footnote{The actual band center for EHT observations is $228$~GHz} and $2.2\mu$m.  Direct imaging includes synchrotron emission and absorption and bremsstrahlung (both ion-electron and electron-electron; see \citet{2020ApJ...898...50Y} for a recent review).  The SED is averaged over a narrow range in inclination and over all position angles. The SED includes synchrotron, bremsstrahlung, and Compton scattering.  Usually synchrotron, and occasionally Compton scattering, dominate at $2.2\mu$m.  Bremsstrahlung or Compton scattering dominate in the X-ray. 
+
+%==============================================================================
+\subsection{Summary of Sgr~A* model library}
+
+In Figure~\ref{fig:fiducial_imgs} we present a few examples of time-averaged model images and multiwavelenght SEDs of selected standard \sgra models. A summary of all radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
+
+Entire image library contains $MMM$ model sets, $NNN$ models, and $PPP$ images, and occupies $GGG$ gigabytes.
 
 \begin{figure*}
   \centering
@@ -195,59 +202,56 @@ The models are imaged at $86$GHz, $230$~GHz~\footnote{The actual band center for
   \label{fig:fiducial_imgs}
 \end{figure*}
 
-%==============================================================================
-\subsection{Summary of Sgr~A* model library}
-
-All told the image library contains $MMM$ model sets, $NNN$ models, and $PPP$ images, and occupies $GGG$ gigabytes.
-
-\clearpage
+%\clearpage
 %\pagebreak
-
-\movetabledown=3cm % recommended in AASTeX docs to center table on page
-\begin{rotatetable}
-\begin{deluxetable*}{ccccccccccccc}
+%\movetabledown=3cm % recommended in AASTeX docs to center table on page
+%\begin{rotatetable}
+\begin{deluxetable*}{cccccccccccc}
 \tabletypesize{\footnotesize}
-\renewcommand{\arraystretch}{1.5}
-\tablecaption{Summary of emission simulations in \sgra EHT model library.}~\label{tab:radiativemodels}
+\renewcommand{\arraystretch}{1.1}
 \tablehead{
-  \colhead{$\Rh$}                  &%
+  \colhead{Model} &%
+  \colhead{$\Rl$}                  &%
   \colhead{$\Rh$}                  &%
   \colhead{$\beta_{\rm crit}$}     &%
   \colhead{$p$}                    &%
   \colhead{$\gamma_{\rm min/max}$} &%
   \colhead{$\kappa$}               &%
   \colhead{$i^\circ$}              &%
-  \colhead{$\nu$[GHz]}             &%
+  \colhead{$\nu$}             &%
   \colhead{SED}                    &%
-  \colhead{$\Delta t$ [1000 M]}    &%
-  \colhead{\#snapshots}            &%
-  \colhead{Name}%
-  }
+  \colhead{$\Delta t$}    &%
+  \colhead{\#images}       \\
+ &  & & & & & & & \colhead{[GHz]} & & \colhead{[1000 M]} &
+    }
 \startdata
-\multicolumn{13}{c}{Thermal models}\\
-1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [15,20) & x & iHARM-Thermal1\\
-1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [20-25) & x & iHARM-Thermal2\\
-1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [25-30) & x & iHARM-Thermal3\\
-1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,90]  & [86,230] & yes & [10-15) & x & BHAC-Thermal1\\
-1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,90]  & [86,230] & yes & [20-25) & x & BHAC-Thermal2\\
-1 & [1;10;40;160] & 1 & - & - & - & [10,30,...,90]  & [86,230] & yes & [25-30) & x & BHAC-Thermal3\\
-1 & [1,40,160]    & 1 & - & - & - & [10,50,90]      & [230]    & ?   & ?       & x & HAMR-Thermal\\
+\multicolumn{12}{c}{Thermal models}\\
+iHARM & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [15,20) & x \\
+iHARM & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [20-25) & x \\
+iHARM & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [25-30) & x \\
+BHAC & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,90]  & [86,230] & yes & [10-15) & x \\
+BHAC & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,90]  & [86,230] & yes & [20-25) & x \\
+BHAC & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,90]  & [86,230] & yes & [25-30) & x \\
+KORAL& 1 & [?]    & 1 & - & - & - & [10,30,...,90]      & [230,86]  & ?   & ?       & x \\
+Wind Accretion& 1 & [?]    & 1 & - & - & - & [10,30,...,90]      & [230,86]  & ?   & ?       & x \\
 \hline
-\multicolumn{13}{c}{Non-thermal power-law models}\\
-- & - & - & ?  & ? & - & & & & & \\
-\hline
-\multicolumn{13}{c}{Non-thermal $\kappa$ models}\\
+\multicolumn{12}{c}{Non-thermal $\kappa$ models}\\
 - & - & - & -  & - & 5 & & & & & \\
-1 & [1;10;40;160]  & 1 & -  & - & 3.5 ($\epsilon_0=0.05$) & [10,30,...,90]  & [86,230] & no & [25-30) & x & BHAC-kappa005 \\
-1 & [1;10;40;160]  & 1 & -  & - & 3.5 ($\epsilon_0=0.10$) & [10,30,...,90]  & [86,230] & no & [25-30) & x & BHAC-kappa010 \\
-1 & [1;10;40;160]  & 1 & -  & - & 3.5 ($\epsilon_0=0.20$) & [10,30,...,90]  & [86,230] & no & [25-30) & x & BHAC-kappa020 \\
-1 & [1;10;40;160]  & 1 & -  & - & $\kappa(\beta,\sigma)$  & [10,30,...,90]  & [86,230] & no & [25-30) & x & BHAC-varkappa
+BHAC & 1 & [1,10,40,160]  & 1 & -  & - & 3.5 ($\epsilon_0=0.05$) & [10,30,...,90]  & [86,230] & no & [25-30) & x  \\
+BHAC & 1 & [1,10,40,160]  & 1 & -  & - & 3.5 ($\epsilon_0=0.10$) & [10,30,...,90]  & [86,230] & no & [25-30) & x  \\
+BHAC & 1 & [1,10,40,160]  & 1 & -  & - & 3.5 ($\epsilon_0=0.20$) & [10,30,...,90]  & [86,230] & no & [25-30) & x \\
+BHAC & 1 & [1,10,40,160]  & 1 & -  & - & variable $\kappa=\kappa(\beta,\sigma)$  & [10,30,...,90]  & [86,230] & no & [25-30) & x \\
+HAMR & 1 & [1,10,40,160] & 1 & - & - & variable $\kappa=\kappa(\beta,\sigma)$ & [10,30,...,90]  & [86,230] & yes & [25-30) & x \\
+\hline
+\multicolumn{12}{c}{Non-thermal power-law models}\\
+& - & - & - & ?  & ? & - & & & &  \\
 \enddata
+\caption{Summary of emission simulations in \sgra EHT model library.}~\label{tab:radiativemodels}
 \end{deluxetable*}
-\end{rotatetable}
+%\end{rotatetable}
 
 %\pagebreak
-\clearpage
+%\clearpage
 % %..............................................................................
 % \subsubsection{Thermal Models}
 %
