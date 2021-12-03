@@ -61,7 +61,7 @@ The one-zone model implies that the accretion flow is at high temperature and lo
 %==============================================================================
 \subsection{Numerical Models of the Inner Accretion Flows}
 
-The one-zone model is too simple for comparison with the rich set of observational constraints that is now available for \sgra.  Analytic spherical accretion models \citep[e.g.][]{2019ApJ...885L..33N, 2021arXiv211102178B} incorporate the black hole gravitational field, and analytic disk-like (RIAF) accretion models in the Kerr metric \citep[e.g.][]{2009ApJ...697...45B, 2009ApJ...706..960H,2018ApJ...863..148P} also incorporate angular momentum.   Neither incorporates turbulent fluctuations, at least in their simplest form.  We therefore use a more complicated, dynamical model.  We simulate the plasma flow with an ideal general relativistic magnetohydrodynamics (GRMHD\footnote{\monika{comment about collisionless plasma and grmhd approximation... } }) model, assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
+The one-zone model is too simple for comparison with the rich set of observational constraints that is now available for \sgra.  Analytic spherical accretion models \citep[e.g.][]{2019ApJ...885L..33N, 2021arXiv211102178B} incorporate the black hole gravitational field, and analytic disk-like (RIAF) accretion models in the Kerr metric \citep[e.g.][]{2009ApJ...697...45B, 2009ApJ...706..960H,2018ApJ...863..148P} also incorporate angular momentum.   Neither incorporates turbulent fluctuations, at least in their simplest form.  We therefore use a more complicated, dynamical model.  We simulate the plasma flow with an ideal GRMHD\footnote{\monika{comment or note about collisionless plasma and grmhd approximation, reference to discussion section to be written by Bart... } } model, assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
 
 \begin{deluxetable*}{cccccccc}
 \tabletypesize{\footnotesize}
@@ -91,18 +91,16 @@ Wind Accretion\tablenotemark{*} & 0 & MAD & ? & ? & 2,400 & [356x128x128] & \cit
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.25\textwidth]{figures/volrnd_SANE_Illinois.pdf}%
-  \includegraphics[width=0.25\textwidth]{figures/volrnd_MAD_Frankfurt.pdf}%
-  \includegraphics[width=0.25\textwidth]{figures/volrnd_tilde_HAMR.pdf}%
-  \includegraphics[width=0.25\textwidth]{figures/volrnd_Resseler_athena.pdf}\\
-  \note{altext: 3d volume rendering plots of MAD, SANE, tilted disks, and Resseler models\monika{plots are on their way}}
-  \caption{Flow properties of fiducial GRMHD models.
-    ...Flow properties of fiducial GRMHD models.Flow properties of fiducial GRMHD models.Flow properties of fiducial GRMHD models.Flow properties of fiducial GRMHD models.Flow properties of fiducial GRMHD models.Flow properties of fiducial GRMHD models.}
+  \includegraphics[width=0.5\textwidth]{figures/sane_3D.png}%
+  \includegraphics[width=0.5\textwidth]{figures/ressler_3D.png}\\
+  \includegraphics[width=0.5\textwidth]{figures/mad_3D.png}%
+  \includegraphics[width=0.5\textwidth]{figures/whatever_3D.png}\\
+  \caption{3-D overview of selected GRMHD simulations of \sgra in our library. The color marks constant density surfaces and lines are magnetic field lines. Panels from left to right show SANE ($a_*=$), Wind Accretion, MAD ($a_*=$) and x models.\monika{plots are not final, more detailed quantitative plots of models are expected to be in the appendix.}}
   \label{fig:GRMHD}
 \end{figure*}
 
 % \paragraph{Methods, initial and boundary conditions:}
-We model the plasma flow around \sgra using ideal, non-radiative, general relativistic magnetohydrodynamics (GRMHD).  The gravitational field is given by the Kerr metric, with mass given by Equation (\ref{eq:mass}) and with black hole spin $\abh$ as free parameter \citep[see e.g.,][]{2003ApJ...589..444G, 2005ApJ...635..723A, 2007A&A...473...11D}.
+We model the plasma flow around \sgra using ideal, non-radiative GRMHD.  The gravitational field is given by the Kerr metric, with mass given by Equation (\ref{eq:mass}) and with black hole spin $\abh$ as free parameter \citep[see e.g.,][]{2003ApJ...589..444G, 2005ApJ...635..723A, 2007A&A...473...11D}.
 
 We integrate the GRMHD equations in three spatial dimensions using multiple methods: {\tt iharm3D} \citep{2021JOSS....6.3336P}, BHAC \citep{2017ComAC...4....1P}, HAMR \citep{2018MNRAS.474L..81L}, Koral \citep{2013MNRAS.429.3533S} and Athena++ \citep{2016ApJS..225...22W}; see \citealt{2019ApJS..243...26P} and \citet[in prep]{Olivares_et_al} for a comparison of GRMHD codes.  All simulations assume a constant adiabatic index $\Gamma_{\rm ad}$.
 
@@ -155,6 +153,7 @@ collisionless plasma simulations (e.g., Kunz et al. 2015 and references therein)
 which has width parameter $w$ and power-law index parameter $\kappa$, or with a power-law distribution function:
 \begin{align}
   \frac{d n_e}{d\gamma} = n_e \frac{ (p-1)}{(\gamma_{\min}^{1-p} - \gamma_{\max}^{1-p})} \gamma^{-p}
+  \label{eq:nonthermaleDF}
 \end{align}
 which has power-law index $p$ and upper and lower limits  $\gamma_{\min}$ and $\gamma_{\max}$.
 
@@ -198,7 +197,7 @@ Entire image library contains $MMM$ model sets, $NNN$ models, and $PPP$ images, 
   \includegraphics[width=0.333\textwidth]{figures/sedsample_MAD.pdf}%
   \includegraphics[width=0.333\textwidth]{figures/sedsample_kappa.pdf}
   \caption{Time-averaged images and corresponding time-averaged SEDs from the simulation library:
-    (a) thermal SANE, (b) thermal MAD, and (c) non-thermal SANE.\monika{labels have to be made larger}\ckc{will do.  86GHz currently uses lower resolution.  We can either interpolate, or increase the resolution for these fudicial models.}}
+    (a) thermal SANE, (b) thermal MAD, and (c) non-thermal SANE.\monika{labels have to be made larger}\ckc{will do.  86GHz currently uses lower resolution.  We can either interpolate, or increase the resolution for these fudicial models.}\monika{I suggest to make big white labels on images with frequency and viewing angle and model type, window time we can give in figure caption. SEDs could have small arrows pointing at which frequency in the SED the images are made demonstraitng that we see only synchrotron emission at 86 and 230 GHz (and no e.g. bremsstrahlung), spins could be also mentioned in figure caption.}}
   \label{fig:fiducial_imgs}
 \end{figure*}
 
