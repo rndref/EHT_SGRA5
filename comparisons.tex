@@ -420,27 +420,24 @@ For the comparison with the ALMA light curves we compute the modulation index fo
 The m-ring fitting is applied to the 230\,GHz images. As mentioned earlier the flux and size of the 230\,GHz images are not affected by the inclusion of non-thermal particles with fixed kappa and variable efficiency. Thus, we do not expect any changes in the distribution of the m-ring parameters.  Applying m-ring fitting to non-thermal models and a detailed comparison with the thermal results confirmed our initial assumption. \cmf{based on the results of Kotaro, who run the m-ring on non-thermal models}
 
 %------------------------------------------------------------------------------
-\subsubsection{Variable kappa model $\kappa(\sigma,beta)$}
+\subsubsection{Variable kappa model $\kappa(\sigma,\beta)$}
 
 \aco{Starting first draft}
-The general form of the non-thermal electron distribution function in Equation \eqref{eq:nonthermaleDF} can be written by using  the power-law slope dependent of the magnetisation $\sigma $and plasma-$\beta$, $\kappa(\sigma, \beta):=p+1$, assuming non-thermal particle acceleration by magnetic reconnection following particle-in-cell small scale simulation from \citep{2018ApJ...862...80B}
+The general form of the non-thermal electron distribution function in Equation \eqref{eq:nonthermaleDF} can be written by using  the power-law slope dependent of the magnetisation $\sigma $ and plasma-$\beta$, $\kappa(\sigma, \beta)$ from GRMHD simulations, assuming non-thermal particle acceleration by magnetic reconnection following particle-in-cell small scale simulation from \citep{2018ApJ...862...80B}
 
-\begin{equation}
-    \kappa :=2.8 +0.7\sigma^{-1/2} + 3.7\sigma^{-0.19}\tanh{(23.4\sigma^{0.26} \beta)}\label{eq:kappa} 
-\end{equation}
+\begin{align}
+\kappa=2.8 +0.7\sigma^{-1/2} + 3.7\sigma^{-0.19}\tanh{(23.4\sigma^{0.26} \beta)}\label{eq:kappa} \\
+w= \frac{ \kappa -3 }{\kappa} \Theta_{\rm e} + \frac{\varepsilon}{2}\left[1+\tanh(r-r_{\rm inj})\right]\, \frac{ \kappa -3 }{6 \kappa} \frac{m_{\rm p}}{m_{\rm e}} \sigma \label{eq:w}, 
+\end{align}
 
-
-
-\begin{equation}
-   w:= \frac{ \kappa -3 }{\kappa} \Theta_{\rm e} + \frac{\varepsilon}{2}\left[1+\tanh(r-r_{\rm inj})\right]\, \frac{ \kappa -3 }{6 \kappa} \frac{m_{\rm p}}{m_{\rm e}} \sigma \label{eq:w} 
-\end{equation}
-
-
-
+where the width function contain thermal temperature and non-thermal contributions, second part defined by the magnetization and non-thermal particle acceleration efficiency \citep{2019A&A...632A...2D,2021NatAs.tmp..218C,2021arXiv211102518F}. Although efficiency can be computed from first principles in PIC simulations
+for convenience we only considered $\varepsilon=0$ and injection radius $r_{\rm inj}=10r_{g}$ following previous studies. The emission, $j_{\nu}$, and absorption coefficients, $\alpha_{\nu}$, computed numerically can be found for the  interval $3< \kappa\leq 8$ \citep{2016ApJ...822...34P}. In order to compute the emission from regions where $\kappa$ is out of the validity range we use the thermal model, and neglect the emission in the jet spine, $\sigma > 1$ (see Figure \ref{fig:varepsilon}). 
+\aco{I'll continue later...}
 
 %..............................................................................
 \subsubsubsection{86\,GHz image size}
 
+...
 
 \note{Razi, Angelo, Richard?}
 \ckc{Write subsections only if they are different from the thermal models.}

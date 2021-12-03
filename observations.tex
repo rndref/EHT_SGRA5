@@ -69,7 +69,7 @@ Diffractive scattering effectively convolves the image with a smooth kernel and 
 Refractive scattering, on the other hand, introduces noise at all baselines of order 0.5--3\%, depending on the particular characteristics of the scattering screen (ref).  To account for these effects, we classify a model snapshot with $|V|$ in this range that is $\sim 5\%$ of the zero baseline flux as compliant.
 
 To apply this constraint, we compute the visibility amplitudes $V$ of each model snapshot along position angles $0^\degree$, $45^\degree$, $90^\degree$, $135^\degree$, ...  We find the first minimum numerically and compute the median visibility amplitude between 6 and 8\,G$\lambda$.
-We classify a snapshot as compliant if \emph{i}) for at least one position angle the first minimum falls between 2.5 and 3.5\,G$\lambda$ and \emph{ii}) at no position does the median visibility amplitude 
+We classify a snapshot as compliant if \emph{i}) for at least one position angle the first minimum falls between 2.5 and 3.5\,G$\lambda$ and \emph{ii}) at no position angle grdoes the median visibility amplitude 
 exceed $(0.04 / 0.5) V_0$.
 
 To assess each model we evaluate what fraction of snapshots from the model are compliant using the criteria described above.
@@ -158,7 +158,7 @@ In addition to the EHT data, the SED of \sgra is well constrained \citetalias{Pa
 
 The Global Millimeter VLBI Array (GMVA) observed \sgra on 3 April 2017, just 3 days ($\approx 13,000 \tg$) before the EHT campaign.  \cite{2019ApJ...871...30I} estimate that the compact flux is $F_{86}=2.0 \pm 0.2$Jy ($2\sigma$ errors).
 
-We compute 86GHz images for all models, and from that the 86GHz flux density $F_{86}$.  This implicitly assumes that the 86GHz variability over $\sim 3$days is well sampled during the model integration.  We assume normally distributed errors with $\sigma = 0.1$Jy, and convolve the $F_{86}$ distribution for each model with the resulting Gaussian.  We reject models with CDF $< 1\%$ or $> 99\%$ at $2.0$Jy.
+We compute 86GHz images for all images for all models, and from that the 86GHz flux density $F_{86}$.  This implicitly assumes that the 86GHz variability over $\sim 3$ days is well sampled during the model integration.  We assume normally distributed errors with $\sigma = 0.1$Jy, and convolve the $F_{86}$ distribution for each model with the resulting Gaussian.  We reject models with CDF $< 1\%$ or $> 99\%$ at $2.0$Jy.
 
 \subsubsection{86\,GHz Image Size}
 
@@ -166,10 +166,12 @@ The GMVA observations from 3 April 2017 also constrain the FWHM of the source ma
 
 We compute 86GHz images for all models, and for every model image compute the major axis FWHM.  We assume normally distributed errors with $\sigma = 6\mu$as, and convolve the model distribution with the resulting Gaussian.  We reject models with CDF $< 1\%$ or $> 99\%$ at $146\mu$as.
 
+Our synthetic $86$GHz images have a $400\mu$as field of view.  A $200\mu$as field of view cuts off enough emission that the major axis is biased downward in many models by $\sim 20\%$.  Increasing the field of view beyond $400\mu$as has negligible effect.
+
 %------------------------------------------------------------------------------
 \subsubsection{NIR (Non-Overproduction) Constraints}
 
-\sgra flares in the near infrared a few times per day, and in 2017 had a median $2.2\mu$m flux density $\simeq 1.0$mJy \citep{2020A&A...638A...2G}.
+\sgra flares in the near infrared (NIR; $2.2\mu$m) a few times per day (1 day is $\simeq 4200 \tg$). In 2017 \sgra had a median quiescent NIR flux density $\simeq 1.0$mJy \citep{2020A&A...638A...2G}.
 
 We compute $2.2\mu$m images for all models.  We reject the model if its median flux exceeds the observed median flux.
 
@@ -178,9 +180,9 @@ There is as yet no generally accepted model for the NIR flares, so we accept mod
 %------------------------------------------------------------------------------
 \subsubsection{X-ray (Non-Overproduction) Constraints}
 
-\sgra flares in the X-ray less about once per day.  Chandra observations during the 2017 campaign suggest an upper limit on the median (quiescent) flux of $10^{33}$erg/s.
+\sgra flares in the X-ray less than about once per day.  Chandra observations during the 2017 campaign suggest an upper limit on the median (quiescent) $\nu L_\nu$ at $6$keV of $10^{33}$erg/s.
 
-We compute SEDs for most models.  We reject the model if its median flux exceeds the upper limit on the quiescent flux.
+We compute SEDs for some but not all models using the {\tt grmonty} code \citep[][also Wong et al. 2022]{2009ApJS..184..387D}.  The SED calculation is expensive and requires that simulation coordinates and data format be understood by the Monte Carlo code.  We reject a model if its median flux exceeds the upper limit on the quiescent flux.
 
 As for the NIR, we do not require that the model produce X-ray flares.
 
