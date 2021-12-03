@@ -48,31 +48,39 @@ We test the models against EHT interferometric data in three ways.  First, we co
 \subsubsection{230\,GHz VLBI Null Locations}
 
 \ckc{Feryal and CK's first pass}
-\cfg{heavily edited to make consistent with length and tone of other constraints, and to remove figures.}
-\ckc{Filled in details}
+\cfg{heavily edited to make consistent with length and tone of other
+  constraints, and to remove figures.}
 
-Our first constraint provides a simple morphological check on the visibility amplitudes.  We ask two questions of each model snapshot: is the first minimum in the visibilities in about the right place?  and are the long-baseline visibility amplitudes comparable to the data?  For comparison, we use data from \aprilvii, which has the best $u$-$v$ coverage near the minima in the visibility amplitudes.
+Our first constraint provides a simple morphological check on the visibility amplitudes.
+We ask two questions of each model snapshot: is the first minimum in the visibilities in about the right place?
+and are the long-baseline visibility amplitudes comparable to the data?
+For comparison, we use data from \aprilvii, which has the best $u$-$v$ coverage near the minima in the visibility amplitudes.
 
-The minima locations and long-baseline amplitudes are sensitive to the source structure.  For example if the source is a simple, circularly symmetric ring of finite width then the location of the first minimum depends only on the ring diameter, while the visibility amplitude on long baselines depends mainly on  ring width.  GRMHD models are more complicated, with significant structural fluctuations.  The minima locations and depths, and long-baseline amplitudes, are expected to fluctuate \citep[e.g.,]{2018ApJ...856..163M, M87PaperV}.
+The minima locations and long-baseline amplitudes are sensitive to the source structure.
+For example if the source is a simple, circularly symmetric ring of finite width then the location of the first minimum depends only on the ring diameter, while the visibility amplitude on long baselines depends mainly on ring width.
+GRMHD models are more complicated, with significant structural fluctuations.
+The minima locations and depths, and long-baseline amplitudes, are expected to fluctuate \citep[e.g.,]{2018ApJ...856..163M, M87PaperV}.
 
-In the data, the first visibility minimum in both the N-S and E-W directions occurs between 2.5-3.5\,$G\lambda$, and in this interval $|V_A| < XXX$Jy, always.  A model snapshot with $|V_A| < XXX$Jy in this interval is therefore classified as ``compliant''.  
+For the ``null locatoin'', the first visibility minimum in both the N-S and E-W directions occurs between 2.5--3.5\,G$\lambda$ in the data.
+We do not consider the depth of the null in this simple check.
 
-The ``long baseline'' interval between $a6-8$G$\lambda$ has $|V_A| < YYY$Jy in the data, or $ < 6\%$ of the zero-baseline flux, always.  One consideration when comparing models to data at long baselines is the effect of interstellar scattering.  Diffractive scattering effectively convolves the image with a smooth kernel and can reduce the amplitudes to about $\sim 70\%$ of their unscattered values in the $6-8$G$\lambda$ range (ref!!).  Refractive scattering, on the other hand, introduces noise at all baselines of order $0.5-3\%$, depending on the particular characteristics of the scattering screen (ref).  To account for these effects, we classify a model snapshot with $|V_A|$ in this range that is $< 6\%$ of the zero baseline flux as compliant.   
+For the ``long baseline'' interval between 6--8\,G$\lambda$, the visilbity amplitude has $\simless 6\%$ of the zero-baseline flux, always.
+One complication when comparing models to data at these long baselines is the effect of interstellar scattering.
+Diffractive scattering effectively convolves the image with a smooth kernel and can reduce the amplitudes to about $\sim 70\%$ of their unscattered values in the 6--8\,GG$\lambda$ range (ref!!).
+Refractive scattering, on the other hand, introduces noise at all baselines of order $0.5-3\%$, depending on the particular characteristics of the scattering screen (ref).
+To account for these effects, we classify a model snapshot with $|V_A|$ in this range that is $\sim 5\%$ of the zero baseline flux as compliant.
 
-\cfg{Don't understand how the limit is being applied}.  
+To apply the constraint, we compute the visilibty amplitude of each model snapshot along position angles $0^\degree$, $45^\degree$, $90^\degree$, ...
+We then numerically solve the first minima and compute the median visibility amplitude between 6 and 8\,G$\lambda$.
+We consider a snapshot as ``compliant'' if
+\emph{i}) at least one of the first minima falls between 2.5 and 3.5\,G$\lambda$ and
+\emph{ii}) none of the median visibility amplitude exceed $(0.04 / 0.5) V_0$.
 
-% old version
-%One way we characterize the GRMHD simulations carried out for different black hole and flow parameters and assess their compatibility with the \sgra\ data involves an analysis in the visibility domain. Figure~\ref{fig:visibility} shows two example snapshots and the corresponding visibility amplitudes (VA) as a function of baseline length for a vertical and horizontal image cross sections from a simulation. Even though the locations and depths of the minima in the visibility amplitudes are primarily set by the image size, which is set by the black hole mass, this figure shows that they can exhibit significant variability from snapshot to snapshot because of the multitude of structures that originate in the turbulent flow (Medeiros et al. 2018). In particular, the minima tend to move to larger baselines as the ring thickness temporarily changes in response to, e.g., the appearance of a flux tube or a similar structure. In addition, images that have a higher degree of azimuthal asymmetry show pronounced differences in their vertical and horizontal cross sections.
+To assess each model we evaluate what fraction of snapshots from the model are compliant using the criteria described above.
+If the compliance fraction is $< 1\%$ the model is failed.
 
-%The degree of VA variability is different from model to model and also depends on some of the global characteristics of the flow. For example, the overall electron density in the disk plays a role by its effect on the ring thickness: thicker rings show more change in the visibility minima between snapshots than thinner ones (see also Satapathy et al. 2021 for the effect on closure phases). Because of this, while no model is expected to resemble the observed visibility amplitude data 100\% of the time, it is nevertheless possible as well as discriminating to require an agreement between the locations of the minima in each simulation snapshot and the visibility amplitude data from \sgra\ a reasonable fraction of the time.
-
-% To carry out the comparison with the data, we focus on the VA observed on 2017 April 7, \#3599 because that night has the best u-v coverage near the minima. The first visibility minima in both the N-S and E-W directions occur between $2.5-3.5$\;G$\lambda$, as we show in Figure~\ref{fig:cmp_null}. We define compliance for a snapshot by requiring that the VA obtained for {\it either} the horizontal {\it or} the vertical cross section of a snapshot have a minimum in this range of baseline lengths.
-
-% A second feature of the visibility amplitudes that can help discern between models is the behavior of the VA at long baselines. April 7 data also show that the amplitudes have declined to $<6\%$ of the zero baseline flux at baselines between $6-8$\;G$\lambda$ along all orientations. This is characteristic of ring-like images with a relatively high degree of azimuthal symmetry. Images that are more asymmetric, on the other hand, lead to significantly higher amplitudes at baselines much larger than the first minimum, or no minima at all, as the lower panels in Figure~\ref{fig:cmp_VA} illustrate. As a result, selecting models based on how frequently they produce snapshots with such large-baseline power helps identify models that are in accordance with the data.
-
-%One consideration when comparing models to data at long baselines is the effect of interstellar scattering. Diffractive scattering has the effect of convolving the image with a smooth kernel and can reduce the amplitudes to $\sim 70\%$ of their intrinsic value in the $6-8$\;G$\lambda$ range (REF). Refractive scattering, on the other hand, introduces a noise at these baselines of the order of $0.5-3\%$, depending on the particular characteristics of the scattering screen toward \sgra\ (REF). To account for both of these effects, we choose a $6\%$ upper limit to visibility amplitudes from a model snapshot when defining compliance, as we show in Figure~\ref{fig:cmp_null}.
-
-To assess each model we evaluate what fraction of snapshots from the model are compliant using the criteria described above.  If the compliance fraction is $< 1\%$ the model is failed.
+\cfg{Don't understand how the limit is being applied}.
+\ckc{Filled in the details}
 
 %------------------------------------------------------------------------------
 \subsubsection{230\,GHz VLBI Pre-Image Size}
@@ -80,7 +88,7 @@ To assess each model we evaluate what fraction of snapshots from the model are c
 \ckc{ck's first pass}
 \cfg{edited on 2 dec}
 
-The source size can be defined through the second moments of the source image on the sky.  The second moments in the image domain map, in the $uv$ domain, to the second derivatives of the visibility near zero baseline.  The visibility amplitudes on short baselines can therefore be used to estimate the second moments.  
+The source size can be defined through the second moments of the source image on the sky.  The second moments in the image domain map, in the $uv$ domain, to the second derivatives of the visibility near zero baseline.  The visibility amplitudes on short baselines can therefore be used to estimate the second moments.
 
 %The second moment of an EHT source corresponds, in the $(u,v)$ domain, to
 %the second derivative of the visibility amplitude near zero baseline length.
@@ -96,7 +104,7 @@ The source size can be defined through the second moments of the source image on
 
 Without assuming a ring prior, this procedure is used in EHT3 \citetalias{PaperIII} to set an upper limit of $95\mu$as FWHM on the second moment and lower limit of $38\mu$as on the second moment along a particular directions through the source, with the direction determined by the orientation of the short baselines.  Notice that if we used the prior information that there is a ring and a null the constraint can be narrower.
 
-To assess a model we evaluate, for each synthetic $230$GHz image, the second moment tensor and find its eigenvalues $\lambda_{maj}^2/(8\log 2)$ and $\lambda_{min}^2/(8\log 2)$, where $\lambda_{maj}$ and $\lambda_{min}$ are the FWHM of the major and minor axis.  The image is deemed compliant if it is consistent with the data for any orientation, that is, if $\lambda_{maj} > 38\mu$as {\em or} $\lambda_{min} < 95\mu$as.  We pass models with a compliance fraction $ > 0.01$.   
+To assess a model we evaluate, for each synthetic $230$GHz image, the second moment tensor and find its eigenvalues $\lambda_{maj}^2/(8\log 2)$ and $\lambda_{min}^2/(8\log 2)$, where $\lambda_{maj}$ and $\lambda_{min}$ are the FWHM of the major and minor axis.  The image is deemed compliant if it is consistent with the data for any orientation, that is, if $\lambda_{maj} > 38\mu$as {\em or} $\lambda_{min} < 95\mu$as.  We pass models with a compliance fraction $ > 0.01$.
 
 %------------------------------------------------------------------------------
 \subsubsection{230\,GHz M-Ring Fitting}
