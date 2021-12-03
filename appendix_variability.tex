@@ -47,18 +47,18 @@ Discussion of model with $\Theta_{e,max}(r, \tau_{cool})$
 
 The \textit{thermal} models considered in \textcolor{magenta}{ref. models section} assign a local electron temperature as a post-processing step based on local magnetic field strength, parameterized by plasma $\beta$ (\textcolor{magenta}{ref. Rhigh and critical beta equations}).
 
-\citealt{10.1093/mnras/stv2084} provided a formulation to self-consistently model electron thermodynamics during the fluid evolution. Numerical dissipation at grid scale sources entropy generation and is used to heat the electrons based on a microphysical, sub-grid heating prescription. Local fluid and electromagnetic variables are used to compute the electron entropy which along with the ideal gas equation of state, can be converted into a temperature ($\Theta_{e}$). This approach allows computing the electron temperature at each timestep of the simulation, and not during post-processing, as it is done in the $R_{high}$ and Critical-$\beta$ prescriptions.
+\citealt{10.1093/mnras/stv2084} provided a formulation to self-consistently model electron thermodynamics during the fluid evolution. Numerical dissipation at grid scale sources entropy generation and is used to heat the electrons based on a microphysical, sub-grid heating prescription. Local fluid and electromagnetic variables are used to compute the electron entropy which along with the ideal gas equation of state, can be converted into a temperature ($\Theta_{e}$). This approach allows computing the electron temperature at each timestep of the simulation, and not during post-processing, as it is done in the $\Rh$ and Critical-$\beta$ prescriptions.
 
 We consider three sub-grid heating models that prescribe the partition of dissipated energy into electrons and ions. \citealt{2010MNRAS.409L.104H} computed the ratio of ion-to-electron heating due to dissipation of Alfv\'enic turbulent cascade, while \citealt{10.1093/mnras/stx2530} and \citealt{Rowan_2017} considered magnetic reconnection as the source of energy dissipation at sub-grid scales. These studies provide an approximate fitting formula for the ion-to-electron heating rate ($Q_{i}/Q_{e}$) based on local ion-to-electron temperature ratio ($T_{i}/T_{e}$) and local magnetic field strength -- parameterized by $\sigma$ or plasma $\beta$.
 
-The GRMHD simulations considered here are a subset of the simulations analyzed in \citealt{2020MNRAS.494.4168D}. These include MAD and SANE accretion flows at spins, $a_{*}=0,+1/2,+15/16$. We compute the 3 hour modulation index $M_{3}$, over the time interval (5k-10k)$GM/c^{3}$. The average $M_{3}$ values are comparable to similar $R_{high}$ models, with SANE reconnection models exhibiting a reduced variability as compared to the corresponding turbulent heating models. However, the average $M_{3}$ for all the models is greater than the $M_{3}$ measured from the ALMA lightcurve on three days.
+The GRMHD simulations considered here are a subset of the simulations analyzed in \citealt{2020MNRAS.494.4168D}. These include MAD and SANE accretion flows at spins, $a_{*}=0,+1/2,+15/16$. We compute the 3 hour modulation index $M_{3}$, over the time interval (5k-10k)$GM/c^{3}$. The average $M_{3}$ values are comparable to similar $\Rh$ models, with SANE reconnection models exhibiting a reduced variability as compared to the corresponding turbulent heating models. However, the average $M_{3}$ for all the models is greater than the $M_{3}$ measured from the ALMA lightcurve on three days.
 
 %==============================================================================
 \subsection{Effect of $\Rl$}
 
-The $R_{high}$ prescription (Equation \textcolor{magenta}{ref. Rhigh equation}) has three free parameters: $R_{high}$, $R_{low}$ and $\beta_{crit}$. During post-processing, the $R_{high}$ parameter is generally varied while $R_{low}$ and $\beta_{crit}$ is set to unity. In this section we investigate the effect of varying $R_{low}$ on the 3 hour modulation index, $M_{3}$.
+The $\Rh$ prescription (Equation \textcolor{magenta}{ref. Rhigh equation}) has three free parameters: $\Rh$, $\Rl$ and $\beta_{crit}$. During post-processing, the $\Rh$ parameter is generally varied while $\Rl$ and $\beta_{crit}$ is set to unity. In this section we investigate the effect of varying $\Rl$ on the 3 hour modulation index, $M_{3}$.
 
-Paticle-in-cell (PIC) simulations modelling turbulent dissipation or dissipation associated with magnetic reconnection suggest preferential heating of the electrons in regions of low plasma $\beta$ (\citealt{2010MNRAS.409L.104H, Rowan_2017, 10.1093/mnras/stx2530, Rowan_2019, Kawazura771, PhysRevX.10.041050, kawazura2021energy}). The $R_{low}$ parameter dictates the electron temperature in these regions, that is, in the funnel. Figure \ref{fig:rlow_comparison} shows the effect of $R_{low}$ on image morphology.
+Paticle-in-cell (PIC) simulations modelling turbulent dissipation or dissipation associated with magnetic reconnection suggest preferential heating of the electrons in regions of low plasma $\beta$ (\citealt{2010MNRAS.409L.104H, Rowan_2017, 10.1093/mnras/stx2530, Rowan_2019, Kawazura771, PhysRevX.10.041050, kawazura2021energy}). The $\Rl$ parameter dictates the electron temperature in these regions, that is, in the funnel. Figure \ref{fig:rlow_comparison} shows the effect of $\Rl$ on image morphology.
 
 \begin{figure*}
 \centering
@@ -67,7 +67,7 @@ Paticle-in-cell (PIC) simulations modelling turbulent dissipation or dissipation
 \label{fig:rlow_comparison}
 \end{figure*}
 
-For systems with low accretion rates, $\Dot{M}\ll\Dot{M}_{Edd}$, such as SgrA$^{*}$ (\textcolor{magenta}{include refs for SgrA accretion rate and ref. to section on accretion rates}), radiative processes can be neglected during fluid evolution (\citealt{2012MNRAS.426.1928D, 10.1093/mnras/stw3116, Ryan_2017}) and the plasma can be considered Coulomb collisionless (\citealt{Mahadevan_1997, 10.1093/mnras/stw3116, Ryan_2017}). However, the uncertainties with electron heating and advection, and a limited understanding of the funnel warrant a discussion of cooler electrons in regions of high magnetization, and in particular, its effect on submm lightcurve variability. We vary $R_{low}$ for a select set of the best bet Illinois/Thermal models and plot the distribution of the 3 hour modulation index $M_{3}$ in Figure \ref{fig:mi_rlow}.
+For systems with low accretion rates, $\Dot{M}\ll\Dot{M}_{Edd}$, such as SgrA$^{*}$ (\textcolor{magenta}{include refs for SgrA accretion rate and ref. to section on accretion rates}), radiative processes can be neglected during fluid evolution (\citealt{2012MNRAS.426.1928D, 10.1093/mnras/stw3116, Ryan_2017}) and the plasma can be considered Coulomb collisionless (\citealt{Mahadevan_1997, 10.1093/mnras/stw3116, Ryan_2017}). However, the uncertainties with electron heating and advection, and a limited understanding of the funnel warrant a discussion of cooler electrons in regions of high magnetization, and in particular, its effect on submm lightcurve variability. We vary $\Rl$ for a select set of the best bet Illinois/Thermal models and plot the distribution of the 3 hour modulation index $M_{3}$ in Figure \ref{fig:mi_rlow}.
 
 \begin{figure*}
 \centering
@@ -76,7 +76,7 @@ For systems with low accretion rates, $\Dot{M}\ll\Dot{M}_{Edd}$, such as SgrA$^{
 \label{fig:mi_rlow}
 \end{figure*}
 
-Although the minimum value of the distribution decreases when $R_{low}$ is increased, there is no clear trend for the mean of the distribution. In addition, the average $M_{3}$ still does not match observational values.
+Although the minimum value of the distribution decreases when $\Rl$ is increased, there is no clear trend for the mean of the distribution. In addition, the average $M_{3}$ still does not match observational values.
 
 %==============================================================================
 8. The flow is actually made of helium. [George]

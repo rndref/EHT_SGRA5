@@ -79,10 +79,10 @@ iHARM & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 1000 & [288x128x128
 BHAC  & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 3333& AMR equiv. [512x192x192] & This work \\
 HAMR & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $13/9,5/3$ & 35,000 & 1000,200 & [348/240×192×192] &This work \\
 KORAL &0,0.3,0.7,0.9 & MAD & $13/9$ & 100,000 & ? & ?&?\\
-HAMR-Tilt\tablenotemark{$^*$} & $15/16$ & IN-SANE & $5/3$ & 100,000 & 100,000 & [448x144x240] & Chatterjee+20, Liska+18 \\
-Wind Accretion\tablenotemark{$^*$} & 0 & MAD & ? & ? & 2,400 & [356x128x128] & \citet{2020ApJ...896L...6R}
+HAMR-Tilt\tablenotemark{*} & $15/16$ & IN-SANE & $5/3$ & 100,000 & 100,000 & [448x144x240] & Chatterjee+20, Liska+18 \\
+Wind Accretion\tablenotemark{*} & 0 & MAD & ? & ? & 2,400 & [356x128x128] & \citet{2020ApJ...896L...6R}
 \enddata
-\tablenotetext{$^*$}{Non-standard model.}
+\tablenotetext{*}{Non-standard model.}
 \caption{Summary of GRMHD simulations in \sgra EHT GRMHD model library. The first four entries are standard \sgra simulations.}\label{tab:GRMHDmodels}
 \end{deluxetable*}
 
@@ -143,12 +143,12 @@ R = \frac{T_i}{T_e} = \Rh \frac{b^2}{b^2+1} + \Rl \frac{1}{b^2+1}.
 \end{equation}
 Here $b \equiv \beta/\beta_\mathrm{crit}$. This model has three free parameters: $\beta_{crit}$, $\Rl$, $\Rh$.  In the standard models $\Rl = 1$, $\beta_\mathrm{crit} = 1$, and only $\Rh$ is allowed to vary from $1$ to $160$.  The $\Rh$ model is motivated by plasma heating models in which the branching ratio for dissipation into ions and electrons approaches $1$ at low $\beta$ \citep[e.g.,][]{2010MNRAS.409L.104H,Kawazura771}.
 
-In {\it non-thermal} models the eDF includes a power-law tail extending to high energy. 
+In {\it non-thermal} models the eDF includes a power-law tail extending to high energy.
 %\jd{this needs some references to kappa-jet work. e.g. Davelaar+2018\&2019} % already cited earlier in text
-This is implemented in two ways: with a so-called $\kappa$ distribution function, inspired by observations of the solar wind and by results of 
+This is implemented in two ways: with a so-called $\kappa$ distribution function, inspired by observations of the solar wind and by results of
 collisionless plasma simulations (e.g., Kunz et al. 2015 and references therein):
 %\jd{only solar wind? this looks not complete yet, Kunz+2015, and two papers on kappa-jet models that show that kappa-df models get the SED of SgrA*/M87 right...}
-%Davelaar wonderful papers are already cited earlier 
+%Davelaar wonderful papers are already cited earlier
 \begin{align}
   \frac{1}{n_e} \frac{d n_e}{d\gamma}= \gamma \sqrt{\gamma^2-1} \left(1+\frac{\gamma+1}{\kappa w}\right)^{-(\kappa+1)}
 \end{align}
@@ -177,7 +177,7 @@ The simulation density scale $\Munit$ is a free parameter.  It is fixed through 
 
 Given an eDF, density scale $\Munit$, and radiative transfer coefficients, the emergent radiation is obtained by solution of the radiative transfer equation.  We use two classes of methods: ray tracing to generate synthetic images, and a Monte Carlo scheme to generate spectral energy distributions (SEDs).  Further detail on numerical methods is given Appendix \ref{app:radtrans}.  Comparisons of numerical methods \citep[][Prather et al. 2021]{2020ApJ...897..148G} shows that differences between numerical schemes do not contribute significantly to the error budget.  A summary of  radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
 
-The models are imaged at $86$GHz, $230$~GHz~\footnote{The actual band center for EHT observations is $228$~GHz} and $2.2\mu$m.  Direct imaging includes synchrotron emission and absorption and bremsstrahlung (both ion-electron and electron-electron; see \citet{2020ApJ...898...50Y} for a recent review).  The SED is averaged over a narrow range in inclination and over all position angles. The SED includes synchrotron, bremsstrahlung, and Compton scattering.  Usually synchrotron, and occasionally Compton scattering, dominate at $2.2\mu$m.  Bremsstrahlung or Compton scattering dominate in the X-ray. We present a few examples of model images and multiwavelenght SEDs of selected SANE and MAD models in Figure~\ref{fig:fiducial_imgs}. 
+The models are imaged at $86$GHz, $230$~GHz~\footnote{The actual band center for EHT observations is $228$~GHz} and $2.2\mu$m.  Direct imaging includes synchrotron emission and absorption and bremsstrahlung (both ion-electron and electron-electron; see \citet{2020ApJ...898...50Y} for a recent review).  The SED is averaged over a narrow range in inclination and over all position angles. The SED includes synchrotron, bremsstrahlung, and Compton scattering.  Usually synchrotron, and occasionally Compton scattering, dominate at $2.2\mu$m.  Bremsstrahlung or Compton scattering dominate in the X-ray. We present a few examples of model images and multiwavelenght SEDs of selected SANE and MAD models in Figure~\ref{fig:fiducial_imgs}.
 
 \begin{figure*}
   \centering
@@ -187,7 +187,7 @@ The models are imaged at $86$GHz, $230$~GHz~\footnote{The actual band center for
   \includegraphics[width=0.333\textwidth]{figures/sedsample_SANE.pdf}%
   \includegraphics[width=0.333\textwidth]{figures/sedsample_MAD.pdf}%
   \includegraphics[width=0.333\textwidth]{figures/sedsample_kappa.pdf}
-  \caption{Time-averaged images and corresponding time-averaged SEDs from the simulation library: 
+  \caption{Time-averaged images and corresponding time-averaged SEDs from the simulation library:
     (a) thermal SANE, (b) thermal MAD, and (c) non-thermal SANE.\monika{labels have to be made larger}}
   \label{fig:fiducial_imgs}
 \end{figure*}
