@@ -1,16 +1,16 @@
 \section{Model Comparison}\label{sec:comparisons}
 
-We now apply the observational constraints from Section 2 to the models described in section 3.
+We now apply the observational constraints from Section \ref{sec:observations} to the models described in Section \ref{sec:constraints}.
 
 %==============================================================================
 \subsection{Thermal, Aligned Models}
 
-As a reference point, consider a set of ``standard'' models with aligned (prograde or retrograde) GRMHD simulations, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.  This includes model from the Illinois, Frankfurt, and HAMR model sets (see Table \ref{tab:radiativemodels}).
+We begin with a set of ``standard'' models with aligned (prograde or retrograde) GRMHD simulations, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.  This includes the Illinois, Frankfurt, and HAMR model sets (see Table \ref{tab:radiativemodels}).
 
 %------------------------------------------------------------------------------
 \subsubsection{EHT Constraints}
 
-How do the models fare when compared to the EHT data alone, using the null location, size, and m-ring fitting constraints.  The null location test is informative and tends to rule out edge-on models.  The pre-image size constraint is simple but weak: only two face-on, low $\Rh$ models lie outside the observational limits.   The m-ring fitting is noisy but highly informative.  Many thermal model distributions look like the data, but edge-on models are strongly disfavored.
+How do the models fare when compared to the EHT data alone, using the null location, size, and m-ring fitting constraints?  The null location test is informative and tends to rule out edge-on models.  The pre-image size constraint is simple but uninformative: only two face-on, $\Rh = 1$ models fail the test.   The m-ring fitting is noisy but highly informative.  Many thermal model distributions look like the data, but edge-on models are strongly disfavored.
 
 %..............................................................................
 \subsubsubsection{Null Location}
@@ -115,63 +115,17 @@ The m-ring width is typically the best constrained and therefore the most constr
 
 \subsubsubsection{EHT Constraint Summary}
 
-The interferometric (EHT) constraints are summarized in Figure \ref{fig:all_EHT_constraints}.  The cuts favor spin $> 0$ models.
+Constraints based on EHT data are summarized in Figure \ref{fig:all_EHT_constraints}.  The cuts favor spin $> 0$ models.
 We are left with $31/100$ SANE models and $20/100$ MAD models.
 
 \begin{figure}
   \centering
     \includegraphics[width=\columnwidth]{./figures/Interferometric_Constraints.png}
-  \caption{Combined interferometric constraints (logical {\em and}) including the second moment, null location, and m-ring fit constraints.}
+  \caption{Combined EHT constraints (logical {\em and}) including the second moment, null location, and m-ring fit constraints.}
   \label{fig:all_EHT_constraints}
 \end{figure}
 
-%------------------------------------------------------------------------------
-\subsubsection{Variability}
 
-Variability is central to interpretation of Sgr A*: the small black hole size means that observations considered here are taken over intervals when the source is expected to vary significantly.  This distinguishes Sgr A* from M87*, where the source is expected to vary only over timescales that are long compared to a single track.
-
-Variability is a strong constraint on the models.  Although models differ in their degree of variability, both in an integrated sense and on 4 $G\lambda$ baselines, only a very small fraction of models are as quiet as the data.  For the light curve variability, this remains true whether we use data from 2017 April 7, all days from the 2017 observing campaign, or from historical monitoring of Sgr A*.   In general, SANE models are quieter than MAD models, and (less strongly) face-on models are quieter than edge-on models.
-
-If we were to apply the variability constraints directly to the models, there would be 12/200 successful models left using 1\% cuts (65/200 for the ALMA constraint and 12/200 for the visibility amplitude constraint, with all models that pass the latter also passing the former)\dl{numbers and overlap between constraints subject to change}.  One interpretation of this result is that the surviving models are the correct description of the source (although we would expect some misclassification of models as consistent or inconsistent when using 1\% cuts on such a large model set).  Another interpretation is that there is a missing physical ingredient in the models, see Section \ref{sec:discussions} for a discussion.
-
-%..............................................................................
-\subsubsubsection{ALMA Light Curve}
-
-The distributions of 3 hour modulation index (rms \%) across all SANE models, across all MAD models, and across the historical dataset are shown in Figure \ref{fig:cmp_ALMA_var}, along with individual distributions for the models with the lowest and highest MI for SANEs and MADs. Although individually, some models may pass (particularly SANE models), the distributions for the SANEs and the MADs are noticeably offset from the data, with the MADs in particular being more variable. As can be seen, even the quietest MAD model lies above the historical distribution. 
-
-If we compare each individual model to the three segments from the 7 April 2017 ALMA observation using a 2-sample KS test, we find that 56 SANE models and 9 MAD models pass with $p > 1\%$. 
-
-If we instead compare the models to the full historical distribution (40 3h MIs in all, including the ALMA MIs), we find that 53 SANE models and no MAD models pass with $p > 1\%$. This is more stringent than the comparison with just 7 April, since the historical distribution has more samples and thus disparate models can be eliminated with higher confidence. 
-
-%If we compare each individual model to the five segments from the EHT 2017 campaign using a 2-sample KS test, we find that 80 (75) SANE and 21 (19) MAD models pass with $p > 1\%$. 
-
-\begin{figure}
-  \centering
-  \includegraphics[width=\columnwidth]{./figures/mi_dist.pdf}
-  \caption{Distributions of MI for Illinois thermal models (black), compared to distributions from historical observations (gray) and the values from the 2017 ALMA light curve. The latter are shown as vertical lines. The distributions for models with the lowest (blue) and highest (red) average MI for SANEs and MADs are also shown. }
-  \label{fig:cmp_ALMA_var}
-\end{figure}
-
-%..............................................................................
-\subsubsubsection{4 $G\lambda$ Visibility Amplitude Variability}
-
-The distribution of model $4G\lambda$ lightcurve-normalized PSDs are shown in Figure \ref{fig:cmp_VLBI_var}.  The best fit PSD from the 2017 EHT campaign (excluding April 11) is shown as a solid vertical line, with the other vertical lines showing percentiles in the posterior.  Evidently the observations are quieter than both SANEs and MADs as a group.
-
-The PSD estimates for the models are broken up into $5000\tg$ windows for each model. To compare the models to the observation, we take the mean value across all windows and assume the width of the distribution is of $\log_{10} a_{4G\lambda} \pm 0.1$. A model is considered passing if this estimated distribution overlaps with the median observed value. \note{refer GRMHD variability paper appendix} \dl{passing criterion subject to change}
-
-With this approach only 6\% of the models pass, and all SANE. While the quietest models tend to be SANEs, the general distribution across all MADs is not as offset from the SANEs as in the MI distributions. 
-
-\begin{figure}
-  \centering
-    \includegraphics[width=\columnwidth]{./figures/va_dist.pdf}
-  \caption{Distributions of $PSD(4G\lambda)$ for thermal models, compared to the observed distribution from the 2017 EHT campaign.
-  \dl{HAMR distribution will be updated later. }}
-  \label{fig:cmp_VLBI_var}
-\end{figure}
-
-At a 1\% cut, the models that pass the PSD constraint also all pass the MI constraint. It should be noted that this is partially because these constraints are weakly correlated \dl{also partially because we're imposing constraints differently between VLBI and light curve, and the light curve constraint is more lenient} None of the 12 models with acceptable variability pass the other tests.
-
-%------------------------------------------------------------------------------
 \subsubsection{Non-EHT Constraints}
 
 Here we compare constraints from 86GHz, NIR, and X-ray observations.  Most or all of the emission in these bands is believed to originate in the compact source from plasma that is close to or overlaps the plasma the 230GHz-emitting plasma observed by EHT.
@@ -270,6 +224,54 @@ The surviving models include a set of SANE models at intermediate $\Rh$ and mode
   \caption{Combined non-EHT constraints}
   \label{fig:non_eht_cuts}
 \end{figure}
+
+%------------------------------------------------------------------------------
+\subsubsection{Variability}
+
+Variability is central to interpretation of Sgr A*: the small black hole size means that observations considered here are taken over intervals when the source is expected to vary significantly.  This distinguishes Sgr A* from M87*, where the source is expected to vary only over timescales that are long compared to a single track.
+
+Variability is a strong constraint on the models.  Although models differ in their degree of variability, both in an integrated sense and on 4 $G\lambda$ baselines, only a very small fraction of models are as quiet as the data.  For the light curve variability, this remains true whether we use data from 2017 April 7, all days from the 2017 observing campaign, or from historical monitoring of Sgr A*.   In general, SANE models are quieter than MAD models, and (less strongly) face-on models are quieter than edge-on models.
+
+If we were to apply the variability constraints directly to the models, there would be 12/200 successful models left using 1\% cuts (65/200 for the ALMA constraint and 12/200 for the visibility amplitude constraint, with all models that pass the latter also passing the former)\dl{numbers and overlap between constraints subject to change}.  One interpretation of this result is that the surviving models are the correct description of the source (although we would expect some misclassification of models as consistent or inconsistent when using 1\% cuts on such a large model set).  Another interpretation is that there is a missing physical ingredient in the models, see Section \ref{sec:discussions} for a discussion.
+
+%..............................................................................
+\subsubsubsection{ALMA Light Curve}
+
+The distributions of 3 hour modulation index (rms \%) across all SANE models, across all MAD models, and across the historical dataset are shown in Figure \ref{fig:cmp_ALMA_var}, along with individual distributions for the models with the lowest and highest MI for SANEs and MADs. Although individually, some models may pass (particularly SANE models), the distributions for the SANEs and the MADs are noticeably offset from the data, with the MADs in particular being more variable. As can be seen, even the quietest MAD model lies above the historical distribution. 
+
+If we compare each individual model to the three segments from the 7 April 2017 ALMA observation using a 2-sample KS test, we find that 56 SANE models and 9 MAD models pass with $p > 1\%$. 
+
+If we instead compare the models to the full historical distribution (40 3h MIs in all, including the ALMA MIs), we find that 53 SANE models and no MAD models pass with $p > 1\%$. This is more stringent than the comparison with just 7 April, since the historical distribution has more samples and thus disparate models can be eliminated with higher confidence. 
+
+%If we compare each individual model to the five segments from the EHT 2017 campaign using a 2-sample KS test, we find that 80 (75) SANE and 21 (19) MAD models pass with $p > 1\%$. 
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{./figures/mi_dist.pdf}
+  \caption{Distributions of MI for Illinois thermal models (black), compared to distributions from historical observations (gray) and the values from the 2017 ALMA light curve. The latter are shown as vertical lines. The distributions for models with the lowest (blue) and highest (red) average MI for SANEs and MADs are also shown. }
+  \label{fig:cmp_ALMA_var}
+\end{figure}
+
+%..............................................................................
+\subsubsubsection{4 $G\lambda$ Visibility Amplitude Variability}
+
+The distribution of model $4G\lambda$ lightcurve-normalized PSDs are shown in Figure \ref{fig:cmp_VLBI_var}.  The best fit PSD from the 2017 EHT campaign (excluding April 11) is shown as a solid vertical line, with the other vertical lines showing percentiles in the posterior.  Evidently the observations are quieter than both SANEs and MADs as a group.
+
+The PSD estimates for the models are broken up into $5000\tg$ windows for each model. To compare the models to the observation, we take the mean value across all windows and assume the width of the distribution is of $\log_{10} a_{4G\lambda} \pm 0.1$. A model is considered passing if this estimated distribution overlaps with the median observed value. \note{refer GRMHD variability paper appendix} \dl{passing criterion subject to change}
+
+With this approach only 6\% of the models pass, and all SANE. While the quietest models tend to be SANEs, the general distribution across all MADs is not as offset from the SANEs as in the MI distributions. 
+
+\begin{figure}
+  \centering
+    \includegraphics[width=\columnwidth]{./figures/va_dist.pdf}
+  \caption{Distributions of $PSD(4G\lambda)$ for thermal models, compared to the observed distribution from the 2017 EHT campaign.
+  \dl{HAMR distribution will be updated later. }}
+  \label{fig:cmp_VLBI_var}
+\end{figure}
+
+At a 1\% cut, the models that pass the PSD constraint also all pass the MI constraint. It should be noted that this is partially because these constraints are weakly correlated \dl{also partially because we're imposing constraints differently between VLBI and light curve, and the light curve constraint is more lenient} None of the 12 models with acceptable variability pass the other tests.
+
+%------------------------------------------------------------------------------
 
 %------------------------------------------------------------------------------
 \subsubsection{Summary of Constraints}
