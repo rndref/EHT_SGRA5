@@ -290,9 +290,9 @@ For thermal model sets both EHT and non-EHT constraints individually eliminate m
 Variablity, were it included in the constraint map, would eliminate all thermal models.  Although a few models pass the variability constraints alone this does not mean that we should regard them as favored, since we expect to eliminate at least a couple of models incorrectly when using a $1\%$ cut for $200$ models.
 
 %------------------------------------------------------------------------------
-\subsubsection{Inter-Model Comparison for Thermal Models}
+\subsubsection{Inter-Model Comparison: $\Rh$ Thermal Models}
 
-\cmf{First version}
+\subsubsubsection{Frankfurt Models}
 
 As can be seen in Table \ref{tab:GRMHDmodels} the thermal models have been calculated for an identical parameter space from two different codes, namely KHARMA and BHAC for the GRMHD simulations and iPOLE and BHOSS for the GRRT calculations. This allows us for the first time to perform an in depth comparison between the different numerical methods used in this work in addition to the EHTC code comparison projects \citep{2019ApJS..243...26P,2020ApJ...897..148G}.
 
@@ -320,22 +320,30 @@ The correlation between models for the m-ring parameters is presented in the thi
 
 The smaller correlation of the m-ring parameters as compared to the other parameters presented in Fig.~\ref{fig:modelcorrelation} is a consequence of the noisy nature of the m-ring fits.  Still, the distributions are quite symmetric under reflection across the diagonal, so the models are at least not biased with respect to each other.  Notice also that these plots do not capture all the information that is contained in the distribution of m-ring parameters, just the central value.   
 
-We find ourselves somewhat surprised by the strength of the correlations seen in Figure \ref{fig:modelcorrelation}.  The range of each constraint is significantly larger than the width of the correlation, so the variations between models are real, detectable, and reproducible with distinct codes.  The question of the origin of the systematic offsets between models for some parameters (for example, in the NIR) is interesting, but beyond the scope of this paper.   
+We find ourselves somewhat surprised by the strength of the correlations seen in Figure \ref{fig:modelcorrelation}.  The range of each constraint is significantly larger than the width of the correlation, so the variations between models are real, detectable, and reproducible with independent codes.  The question of the origin of the systematic offsets between models for some constraints (for example, in the NIR) is interesting but beyond the scope of this paper.   
+
+\subsubsubsection{HAMR Models}
+
+\note{Doosoo, Koushik to write here about HAMR thermal models.}
+
+\subsubsubsection{KORAL Long Models}
+
+We have also considered a set of thermal, $\Rh$, MAD models run with the \koral code out to $\sim 100,000\tg$.  These models help control for the effect of finite 
 
 %------------------------------------------------------------------------------
-\subsubsection{Inter-Model Comparison}
+\subsubsection{Inter-Model Comparison: Critical Beta Model}
 
-\note{Doosoo, Koushik to write here about HAMR thermal models.  Define a subsection, describe the results.}
+The $\Rh$ eDF model has been the default parameterization used to span the uncertainties in emitting particle thermodynamics in EHT analyses. The $\Rh$ models  are compatible with the well-motivated turbulent plasma heating ADAF models of \cite{1999ApJ...520..248Q} in asymptotic behavior of electron-to-total heating ratio as a function of plasma $\beta$. There is, however, a vast function space of possible alternative parameterizations.
 
-\note{Angelo and Richard to write here about critical beta models.  Define a subsection, describe the results.}
+Here we consider the Critical Beta model \cite{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  The model is motivated by the observation that when the transition between electron heating domination and proton heating domination is smoothed (controlled by increasing exponent parameter $\beta_c$), the 230 GHz emitting region profile tends to be less coronally dominated and more compact and asymmetric. This is a consequence, when fixing synthetic image flux, of higher critical beta values shifting the locus of electrons dominating the emission profile towards the colder, higher density equatorial inflow.  We consider only a single point in the critical beta parameter space, with $f = \beta_c = 1$.  
 
-The $\Rh$ eDF model has been the default parameterization used to span the vast uncertainties in emitting particle thermodynamics in EHT analyses. The $\Rh$ models  are compatible with the well-motivated turbulent plasma heating ADAF models of \cite{1999ApJ...520..248Q} in asymptotic behavior of electron-to-total heating ratio as a function of plasma $\beta$. There is, however, a vast function space of possible alternative parameterizations.
+We have applied a subset of tests to the critical beta models (all except X-ray; NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix \ref{app:tables}, Table \ref{tab:betacrit}.  To summarize...
 
-Here we consider the Critical Beta model \cite{2020MNRAS.493.1404A}, which is motivated by the observation that when the transition between electron heating domination and proton heating domination is smoothed (controlled by increasing exponent parameter $\beta_c$), the 230 GHz emitting region profile tends to be less coronally dominated and more compact and asymmetric. This is a consequence, when fixing synthetic image flux, of higher critical beta values shifting the locus of electrons dominating the emission profile towards the colder, higher density equatorial inflow.
-
-A second motivation is that there are preliminary indications that the exponential electron cooling in the Critical Beta Model suppressed the SANE bremsstrahlung spectral component allowing more to pass the X-ray constraint.
+% CFG: we shouldn't report preliminary indications here
+%A second motivation is that there are preliminary indications that the exponential electron cooling in the Critical Beta Model suppressed the SANE bremsstrahlung spectral component allowing more to pass the X-ray constraint.
 
 %==============================================================================
+
 \subsection{Nonthermal Aligned Models}
 
 \note{Koushik to write here about powerlaw nonthermal HAMR models.  Define a subsection, describe the results and how they differ from the thermal results.][Maybe add Tomohisa's models here as well.] [by including power-law, we see this and that change (only include significant changes from the thermal models)}
