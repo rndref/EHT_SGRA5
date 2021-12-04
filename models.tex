@@ -75,7 +75,7 @@ The one-zone model is too simple for comparison with the rich set of observation
   \colhead{Reference}
 }
 \startdata
-iHARM & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 1000 & [288x128x128] & This work, Wong+2021 \\
+KHARMA & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 1000 & [288x128x128] & This work, Wong+2021 \\
 BHAC  & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 3333& AMR equiv. [512x192x192] & This work \\
 HAMR & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $13/9,5/3$ & 35,000 & 1000,200 & [348/240×192×192] &This work \\
 KORAL &0,0.3,0.7,0.9 & MAD & $13/9$ & 100,000 & ? & ?&?\\
@@ -92,17 +92,17 @@ Wind Accretion\tablenotemark{*} & 0 & MAD & ? & ? & 2,400 & [356x128x128] & \cit
 \begin{figure*}
   \centering
   \includegraphics[width=0.45\textwidth]{figures/sane_3D.png}\hspace{1.5pt}%
-  \includegraphics[width=0.45\textwidth]{figures/ressler_3D.png}\\
-  \includegraphics[width=0.45\textwidth]{figures/mad_3D.png}\hspace{1.5pt}%
-  \includegraphics[width=0.45\textwidth]{figures/mad_3D.png}
-  \caption{3-D overview of selected GRMHD simulations of \sgra in our library. The color marks constant dimensionless density surfaces and lines follow magnetic field lines. Two top panels from left to right show SANE ($a_*=+15/16$) and Wind Accretion ($a_*=0$). Two bottom panels from left to right display MAD ($a_*=$) and titled disk (for now it is a place holder but plot is comming) models.\monika{plots are not final, more detailed quantitative plots of models are expected to be in the appendix.}}
+  \includegraphics[width=0.45\textwidth]{figures/mad_3D.png}\\
+  \includegraphics[width=0.45\textwidth]{figures/tilted_3D.png}\hspace{1.5pt}%
+  \includegraphics[width=0.45\textwidth]{figures/ressler_3D.png}
+  \caption{3-D overview of selected GRMHD simulations of \sgra in our library. The color marks constant dimensionless density surfaces and lines follow magnetic field lines. Two top panels show standard accretion models: SANE (left panel, $a_*=+15/16$) and MAD (right panel, $a_*=x$). Two bottom panels show non-standard accretion models: tilted disk (left panel, $a_*=+15/16$ and titlt angle of 60 deg) and Wind Accretion (right panel, $a_*=0$). In case of spinning black holes, the spin is aligned with z-axis. \monika{plots are not final, more detailed quantitative plots of models are expected to be in the appendix.}}
   \label{fig:GRMHD}
 \end{figure*}
 
 % \paragraph{Methods, initial and boundary conditions:}
 We model the plasma flow around \sgra using ideal, non-radiative GRMHD.  The gravitational field is given by the Kerr metric, with mass given by Equation (\ref{eq:mass}) and with black hole spin $\abh$ as free parameter \citep[see e.g.,][]{2003ApJ...589..444G, 2005ApJ...635..723A, 2007A&A...473...11D}.
 
-We integrate the GRMHD equations in three spatial dimensions using multiple methods: {\tt iharm3D} \citep{2021JOSS....6.3336P}, BHAC \citep{2017ComAC...4....1P}, HAMR \citep{2018MNRAS.474L..81L}, Koral \citep{2013MNRAS.429.3533S} and Athena++ \citep{2016ApJS..225...22W}; see \citealt{2019ApJS..243...26P} and \citet[in prep]{Olivares_et_al} for a comparison of GRMHD codes.  All simulations assume a constant adiabatic index $\Gamma_{\rm ad}$.
+We integrate the GRMHD equations in three spatial dimensions using multiple methods: {KHARMA} \citep{2021JOSS....6.3336P}, BHAC \citep{2017ComAC...4....1P}, HAMR \citep{2018MNRAS.474L..81L}, Koral \citep{2013MNRAS.429.3533S} and Athena++ \citep{2016ApJS..225...22W}; see \citealt{2019ApJS..243...26P} and \citet[in prep]{Olivares_et_al} for a comparison of GRMHD codes.  All simulations assume a constant adiabatic index $\Gamma_{\rm ad}$.
 
 The \emph{standard} initial conditions for the GRMHD integrations are a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F} in a prograde ($\abh > 0$) or retrograde ($\abh < 0$) orbit.  In all models except the HAMR-Tilted models the torus orbital angular momentum is either parallel or antiparallel to the black hole spin. The torus is parametrized by an inner radius $R_{\rm in}$, typically $12\rg$, and the pressure maximum radius $R_{\rm max}$, typically $24\rg$.
 The torus is seeded with a weak, poloidal magnetic field.
@@ -225,9 +225,9 @@ Entire image library contains $MMM$ model sets, $NNN$ models, and $PPP$ images, 
     }
 \startdata
 \multicolumn{12}{c}{Thermal models}\\
-iHARM & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [15,20) & x \\
-iHARM & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [20-25) & x \\
-iHARM & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [25-30) & x \\
+KHARMA & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [15,20) & x \\
+KHARMA & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [20-25) & x \\
+KHARMA & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [25-30) & x \\
 BHAC & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,90]  & [86,230] & yes & [10-15) & x \\
 BHAC & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,90]  & [86,230] & yes & [20-25) & x \\
 BHAC & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,90]  & [86,230] & yes & [25-30) & x \\

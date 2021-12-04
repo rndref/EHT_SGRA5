@@ -220,14 +220,14 @@ The surviving models include a set of SANE models at intermediate $\Rh$ and mode
 
 Variability is central to interpretation of Sgr A*: the small black hole size means that observations considered here are taken over intervals when the source is expected to vary significantly.  This distinguishes Sgr A* from M87*, where the source is expected to vary only over timescales that are long compared to a single track.\footnote{This does not mean that M87* is less variable than \sgra.  In 2017 EHT observed M87* over only $\sim 15\tg$, so it is not possible to characterize M87* variability using EHT data alone.  To obtain variability information for M87* similar to what we present here for \sgra would require multi-year observations.}
 
-Variability is a strong constraint on the models.  Although models differ in their degree of variability, both in an integrated sense and on 4 $G\lambda$ baselines, only a small fraction of models are as quiet as the data.  For the light curve variability, this remains true whether we use data from 2017 April 7, all days from the 2017 observing campaign, or from historical monitoring of Sgr A*.   In general, SANE models are quieter than MAD models, and (less strongly) face-on models are quieter than edge-on models.
+Variability is a strong constraint on the models.  Although models differ in their degree of variability, both in an integrated sense and on 4 $G\lambda$ baselines, only a small fraction of models are as quiet as the data.  For the light curve variability, this remains true whether we use data from 2017 April 7, all days from the 2017 observing campaign, or from historical monitoring of Sgr A*.   In general, we find that SANE models are quieter than MAD models, and (less strongly) face-on models are quieter than edge-on models.
 
 If we were to apply the variability constraints directly to the models, there would be 12/200 successful models left using 1\% cuts (65/200 for the ALMA constraint and 12/200 for the visibility amplitude constraint, with all models that pass the latter also passing the former)\dl{numbers and overlap between constraints subject to change}.  One interpretation of this result is that the surviving models are the correct description of the source (although we would expect some misclassification of models as consistent or inconsistent when using 1\% cuts on such a large model set).  Another interpretation is that there is a missing physical ingredient in the models, see Section \ref{sec:discussions} for a discussion.
 
 %..............................................................................
 \subsubsubsection{ALMA Light Curve}
 
-The distributions of 3 hour modulation index (rms \%) across all SANE models, across all MAD models, and across the historical dataset are shown in Figure \ref{fig:cmp_ALMA_var}, along with individual distributions for the models with the lowest and highest MI for SANEs and MADs. Although individually, some models may pass (particularly SANE models), the distributions for the SANEs and the MADs are noticeably offset from the data, with the MADs in particular being more variable. As can be seen, even the quietest MAD model lies above the historical distribution. 
+The distributions of 3 hour modulation index (rms \%) across all SANE models, across all MAD models, and across the historical dataset are shown in Figure \ref{fig:cmp_ALMA_var}, along with individual distributions for the models with the lowest and highest MI for SANEs and MADs. Although some individual models  pass (particularly SANE models), the distributions for the SANEs and the MADs are noticeably offset from the data, with the MADs in particular being more variable. As can be seen, even the quietest MAD model lies above the historical distribution. 
 
 If we compare each individual model to the three segments from the 7 April 2017 ALMA observation using a 2-sample KS test, we find that 56 SANE models and 9 MAD models pass with $p > 1\%$. 
 
@@ -270,15 +270,15 @@ At a 1\% cut, the models that pass the PSD constraint also all pass the MI const
 %------------------------------------------------------------------------------
 \subsubsection{Summary of Constraints}
 
-If we set aside variability constraints but use all the remaining constraints we are left with the models shown in Figure \ref{fig:all_cuts}.  Only 1/100 SANE models and 8/100 MAD models survive. The passing models cluster amongst low inclination ($i \le 50$deg) MAD models with $\Rh > 10$.
+If we set aside variability but use all the remaining constraints we are left with the models shown in Figure \ref{fig:all_cuts}.  Only 1/100 SANE models and 8/100 MAD models survive. The passing models cluster at low inclination ($i \le 50$deg) MAD models with $\Rh > 10$.  A full set of pass/fail values is provided in Appendix \ref{app:tables}.
 
-It is remarkable both that so many of the models look like the EHT data, lending confidence to the models, and that EHT data alone are capable of distinguishing between models in the model set, with only $N = 6$ antennas.  Future experiments with more antennas will contain much more information and provide even tighter constraints.
+It is remarkable that so many of the models look like the EHT data, which lends some  confidence to the models, and that EHT data alone are capable of distinguishing between models in the model set with only $N = 6$ antennas.  Future experiments with more antennas will contain much more information and provide even tighter constraints.
 
 All $\Rh = 1$ models have been eliminated, most by multiple constraints, and we conclude that models with equal ion and electron temperatures are unacceptable.
 
 All models with $i > 50$deg are eliminated, most by multiple constraints, and we conclude that high inclination models are disfavored.  In the SED edge-on models have a clear signature derived from Doppler boosting, with increased NIR and X-ray flux density.  In EHT constraints many edge-on models have a clear signature derived from low m-ring widths, strong asymmetry (although only for a few models), and failed null location constraint.
 
-For thermal model sets both EHT and non-EHT constraints individually eliminate many models, but together the eliminate all but 5\%.  The success of the models for EHT constraints (apart from variability) supports the use of the models for applying non-EHT constraints and highlights the importance of contemporaneous monitoring of \sgra at other wavelengths.
+For thermal model sets both EHT and non-EHT constraints individually eliminate many models, but together they eliminate all but 5\%.  The success of the models for EHT constraints (apart from variability) supports the use of the models for applying non-EHT constraints and highlights the importance of contemporaneous multiwavelength monitoring of \sgra.
 
 \begin{figure}
   \centering
@@ -287,37 +287,40 @@ For thermal model sets both EHT and non-EHT constraints individually eliminate m
   \label{fig:all_cuts}
 \end{figure}
 
-Variablity, were it included in the constraint map, would eliminate all thermal models.  Although a few models pass the variability constraints alone this does not mean that we should regard them as favored, since we are likely to find some false positives using a $1\%$ cut in a set of $200$ models.
+Variablity, were it included in the constraint map, would eliminate all thermal models.  Although a few models pass the variability constraints alone this does not mean that we should regard them as favored, since we expect to eliminate at least a couple of models incorrectly when using a $1\%$ cut for $200$ models.
 
 %------------------------------------------------------------------------------
-\subsubsection{Inter-Model Comparison for thermal models}
+\subsubsection{Inter-Model Comparison for Thermal Models}
 
 \cmf{First version}
-As can be seen in Table \ref{tab:GRMHDmodels} the thermal models have been calculated for an identical parameter space from two different codes, namely iHARM and BHAC for the GRMHD simulations and iPOLE and BHOSS for the GRRT calculations. This allows us for the first time to perform an in depth comparison between the different numerical methods used in this work in addition to the EHTC code comparison projects \citep{2019ApJS..243...26P,2020ApJ...897..148G}.
+
+As can be seen in Table \ref{tab:GRMHDmodels} the thermal models have been calculated for an identical parameter space from two different codes, namely KHARMA and BHAC for the GRMHD simulations and iPOLE and BHOSS for the GRRT calculations. This allows us for the first time to perform an in depth comparison between the different numerical methods used in this work in addition to the EHTC code comparison projects \citep{2019ApJS..243...26P,2020ApJ...897..148G}.
 
 \begin{figure*}
   \centering
   \includegraphics[width=0.8\textwidth]{./figures/BHAC_iharm_correlation}
-  \caption{Correlation between BHAC and iHARM models based on model constraints}
+  \caption{Correlation between BHAC and KHARMA models for 9 model constraints.  The horizontal axis is the constraint value from \bhac/\bhoss, and the vertical axis shows the constraint value from \kharma/\ipole.  Each point corresponds to a single model, with the width of the distribution shown by the error bars.  See text for details.}
   \label{fig:modelcorrelation}
 \end{figure*}
 
-In Figure \ref{fig:modelcorrelation} we show the correlation between the thermal iHARM and BHAC models for various constraints.
-\newline The top row shows from left to right the 230\,GHz flux density, the 230\,GHz modulation index, MI, computed for a time window of 3 hours, and the 230\,GHz image size obtained from image moments. Since we normalise the 230\,GHz images to an average flux of 2.4\,Jy within a time window of 5000\,M (corresponds to 28.5 h for SgrA a mass of $4.14\times 10^6\,\msun$), the scatter around this values is small. The deviation from an ideal correlation reflects the precision and number of GRMHD snapshots included during normalisation procedure.
-\newline The correlation in the 3\,hour modulation index spreads over $\Delta \rm{MI}=0.75$ which reflects the intra-code ( e.g., MAD vs. SANE accretion and plasma models) and inter-code (BHAC vs. iHARM) differences. Despite these differences the models show a strong correlation throughout the investigated models and parameter space.
-\newline We found a strong correlation between models and codes for the image size computed from image moments, i.e. second moments analysis. \\
+In Figure \ref{fig:modelcorrelation} we show the correlation between the thermal KHARMA and BHAC models for constraints where we have predictions from both models.
 
+The top row shows from left to right the 230\,GHz flux density, the 230\,GHz modulation index, MI, computed for a time window of 3 hours, and the 230\,GHz image size obtained from image moments. Since we normalise the 230\,GHz images to an average flux of 2.4\,Jy within a time window of 5000\,M (corresponds to 28.5 h for SgrA a mass of $4.14\times 10^6\,\msun$), the scatter around this values is small. The deviation from an ideal correlation reflects the precision and number of GRMHD snapshots included during normalization procedure.
+
+The correlation in the 3\,hour modulation index spreads over $\Delta \rm{MI}=0.75$ which serves as a measure of intra-code ( e.g., MAD vs. SANE accretion) and inter-code (BHAC vs. KHARMA) differences. Despite these differences the models show a strong correlation throughout the investigated models and parameter space.
+
+We found a strong correlation between models and codes for the image size computed from image moments, i.e. second moments analysis.
+
+\cfg{This may change if we recompute the major axis, etc., for the IL 86 GHz large fov images}
 The middle row presents the correlation plots for the 86\,GHz flux density (left), the 86\,GHz image size using second moments (middle) and the NIR flux (right). The 86\,GHz flux and 86\,GHz image size exhibit a shift toward larger values for the BHAC models. This difference can be explained by the larger field of view used for the BHAC models at 86\,GHz during the radiative transfer calculations. Thus, more extended structure and therefore a larger total flux is included in the BHAC models. This affects mainly models with large inclinations $i\geq70^\circ$ and jet dominated emission models ($\rm{R}_{\rm high}\geq 40$).
-\newline The NIR fluxes show a tight correlation over four orders of magnitude and systematically larger flux for the BHAC models for low NIR fluxes ($\log_{10}(NIR)<-7$). These fluxes are far below the NIR constraints of $\sim 1mJy$, and therefore they do not affect the passing or failing of the models. In the thermal models the NIR flux is generated from the tail of the electron distribution function and thus very sensitive to the electron temperature. Thus, small differences in the distribution and value of the electron temperature between the two codes explain the observed de-correlation at very low NIR flux.  \\
 
-The correlation between the models for the m-ring parameters is presented in the third row of Fig.~\ref{fig:modelcorrelation}. The correlation of the diameter of the m-ring is plotted in the left panel. The spread covers nearly the same extent as the 230\,GHz image size (top row, right panel) however the scatter in the correlation is larger.
-The same is true for the width of the m-ring (middle panel in the last row of Fig.~\ref{fig:modelcorrelation}). Compared to the diameter and width of the m-ring, the asymmetry of the m-ring is less correlated (right panel). Notice, that the horizontal and vertical line in the asymmetries occurs since the parameter hits the boundary of the allowed range.
+The NIR fluxes show a tight correlation over four orders of magnitude and systematically larger flux for the BHAC models for low NIR fluxes ($\log_{10}(NIR)<-7$). These fluxes are far below the NIR constraints of $\sim 1mJy$, and therefore they do not affect the passing or failing of the models. In the thermal models the NIR flux is generated from the tail of the electron distribution function and is thus very sensitive to the electron temperature. Small differences in the distribution and value of the electron temperature between the two codes explain the observed de-correlation at very low NIR flux. 
 
-%\newline
-The smaller correlation of the m-ring parameters as compared to the other parameters presented in Fig.~\ref{fig:modelcorrelation} can be
- understood by the different nature of the constraint i.e. image plane vs. Fourier space with sparse u-v coverage. For example, the m-ring fit fails for high inclination and large $\Rh$ values which leads to a large scatter in parameters for these models. %\\
-%\newline
-Nevertheless, the correlation between the two different codes and various models is astonishing and provides a robust basis for applied analysis and conclusions drawn from our model/image library.
+The correlation between models for the m-ring parameters is presented in the third row of Fig.~\ref{fig:modelcorrelation}. The correlation of the diameter of the m-ring is plotted in the left panel. The spread covers nearly the same extent as the 230\,GHz image size (top row, right panel) however the scatter in the correlation is larger.  The same is true for the width of the m-ring (middle panel in the last row of Fig.~\ref{fig:modelcorrelation}). Compared to the diameter and width of the m-ring, the asymmetry of the m-ring is less correlated (right panel). Notice that horizontal and vertical limits in the asymmetries occur since the parameter hits the boundary of the allowed range.
+
+The smaller correlation of the m-ring parameters as compared to the other parameters presented in Fig.~\ref{fig:modelcorrelation} is a consequence of the noisy nature of the m-ring fits.  Still, the distributions are quite symmetric under reflection across the diagonal, so the models are at least not biased with respect to each other.  Notice also that these plots do not capture all the information that is contained in the distribution of m-ring parameters, just the central value.   
+
+We find ourselves somewhat surprised by the strength of the correlations seen in Figure \ref{fig:modelcorrelation}.  The range of each constraint is significantly larger than the width of the correlation, so the variations between models are real, detectable, and reproducible with distinct codes.  The question of the origin of the systematic offsets between models for some parameters (for example, in the NIR) is interesting, but beyond the scope of this paper.   
 
 %------------------------------------------------------------------------------
 \subsubsection{Inter-Model Comparison}
@@ -326,11 +329,11 @@ Nevertheless, the correlation between the two different codes and various models
 
 \note{Angelo and Richard to write here about critical beta models.  Define a subsection, describe the results.}
 
-The $R$-$\beta$ model has been the default parametric model to span the vast uncertainties in emitting particle thermodynamics in EHT's computational pipelines. They are compatible with the well-motivated turbulent plasma heating ADAF models of \cite{1999ApJ...520..248Q} in asymptotic behavior of electron-to-total heating ratio as a function of plasma $\beta$. However, there is a vast function space of alternate interpolations with different behavior over various $\beta$ ranges.
+The $\Rh$ eDF model has been the default parameterization used to span the vast uncertainties in emitting particle thermodynamics in EHT analyses. The $\Rh$ models  are compatible with the well-motivated turbulent plasma heating ADAF models of \cite{1999ApJ...520..248Q} in asymptotic behavior of electron-to-total heating ratio as a function of plasma $\beta$. There is, however, a vast function space of possible alternative parameterizations.
 
-The main theoretical motivation for the Critical Beta Model of \cite{2020MNRAS.493.1404A} is that when the transition between electron heating domination and proton heating domination is smoothed (controlled by increasing exponent parameter $\beta_c$), the 230 GHz emitting region profile tends to be less coronally dominated and more compact and asymmetric. This is a consequence, when fixing synthetic image flux, of higher critical beta values  shifting the locus of electrons dominating the emission profile towards a relativistically colder, higher density equatorial inflow.
+Here we consider the Critical Beta model \cite{2020MNRAS.493.1404A}, which is motivated by the observation that when the transition between electron heating domination and proton heating domination is smoothed (controlled by increasing exponent parameter $\beta_c$), the 230 GHz emitting region profile tends to be less coronally dominated and more compact and asymmetric. This is a consequence, when fixing synthetic image flux, of higher critical beta values shifting the locus of electrons dominating the emission profile towards the colder, higher density equatorial inflow.
 
-Another motivation is that there are preliminary indications that the exponential electron cooling in the Critical Beta Model suppressed the SANE bremsstrahlung spectral component allowing more to pass the X-ray constraint.
+A second motivation is that there are preliminary indications that the exponential electron cooling in the Critical Beta Model suppressed the SANE bremsstrahlung spectral component allowing more to pass the X-ray constraint.
 
 %==============================================================================
 \subsection{Nonthermal Aligned Models}
