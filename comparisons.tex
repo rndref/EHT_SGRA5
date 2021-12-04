@@ -36,7 +36,8 @@ How do the models fare when compared to the EHT data alone, using the null locat
     has no minimum in one cross section and too much power at long
     baselines, due to the asymmetry introduced by a transient bright
     structure in the flow.
-    \ckc{The above plot looks odd because it's just one of the snapshot.  Do we want to show the mean?  The range?}}
+    \ckc{The above plot looks odd because it's just one of the snapshot.  Do we want to show the mean?  The range?}
+    \aeb{A few very minor pedantic points: 1. Can we fix the plot domain to avoid the sudden ending of lines?  They are misleading in that they seem to show an end to a function that certainly continue. 2. The fonts are wrong and the font size is too small.  3. Colors are not being used effectively to indicate conceptual closeness.  4. This plot fails the Jon Aarons test: if it were printed in grayscale or seen by a colorblind individual it would be impenetrable.}}
   \label{fig:cmp_VA}
 \end{figure*}
 
@@ -140,9 +141,7 @@ Interestingly, we find that some models are synchrotron-weak and Compton-strong 
 
 Models that pass the NIR flux limit are shown in Figure \ref{fig:cmp_2um_flux}.
 
-All but $6\%$ of the SANE models pass; the exceptions are high spin, high inclination models where Doppler boosting increases the NIR flux from the bright spot on the approaching side of the disk.
-
-Considering MAD models alone, $68\%$ fail the NIR test, including all but 1 model at $\Rh = 1$ and $10$.
+All but $6\%$ of the SANE models pass; the exceptions are high spin, high inclination models where Doppler boosting increases the NIR flux from the bright spot on the approaching side of the disk.  Considering MAD models alone, $68\%$ fail the NIR test, including all but 1 model at $\Rh = 1$ and $10$.
 
 \begin{figure}
   \centering
@@ -160,11 +159,11 @@ Most thermal models produce X-ray emission through Compton upscattering of therm
 
 In many large $\Rh$ SANE models, however, X-ray emission is dominated by bremsstrahlung.  Since the bremsstrahlung emissivity $\propto n^2$, bremsstrahlung comes from the midplane where the density is largest, at larger radius than the synchrotron and Compton-upscattered X-ray emission.  It dominates in high accretion rate models (this turns out to mean large $\Rh$ models; see \S 5) where $\Theta_e < 1$, and is significant only when the midplane is cool and $r: \Theta_e = 1 < YY$, i.e. at large $\Rh$.  The resurgence of bremsstrahlung in cool disks occurs because at $\Theta_e < 1$, $j_\nu \propto n^2 \Theta_e^{-1/2}$.  When the disk is cool and dense the latter is large.
 
-The e X-ray cut results are shown in Figure \ref{fig:cmp_xray_flux}.
+The X-ray cut results are shown in Figure \ref{fig:cmp_xray_flux}.
 
-Many large $\Rh$ SANE models fail the X-ray test: all but 3/25 at $\Rh = 160$ and all but 6/25 at $\Rh = 40$.  These models all fail due to excess bremsstrahlung.
+Many large $\Rh$ SANE models fail the X-ray test: all but 3/25 at $\Rh = 160$ and all but 6/25 at $\Rh = 40$.  These models fail due to excess bremsstrahlung.
 
-Many MAD models that fail have large absolute spin and low $\Rh$.  These models are Compton-dominated.  The midplane temperature is highest at low $\Rh$.  Since the midplane contributes most of the electron scattering optical depth, low $\Rh$ models have the largest $y$ parameter and are therefore most at risk of overproducing X-rays.
+Many MAD models that fail have large absolute spin and low $\Rh$.  These models are Compton-dominated.  The midplane temperature is highest at low $\Rh$.  Since the midplane contributes most of the electron scattering optical depth, low $\Rh$ models have the largest $y$ parameter and are most at risk of overproducing X-rays.
 
 \begin{figure}
   \centering
@@ -176,12 +175,12 @@ Many MAD models that fail have large absolute spin and low $\Rh$.  These models 
 %..............................................................................
 \subsubsubsection{86 GHz Median Flux}
 
-In a naive picture \sgra's millimeter flux is produced at a photosphere that decreases in size as frequency increases.  Because of the marginal optical depth at $1.3$mm ($\sim 0.3$ in the one-zone model) and the complicated source structure (the optical depth varies across the image; the $\tau = 2/3$ surface is non-spherical, folded, and not even simply connected) this picture does not hold exactly.  Nevertheless 86GHz photons are typically produced at larger radius than 230GHz photons, and the 86GHz source size is therefore larger than the 230GHz source size; see Ricarte et al. 2021 for a discussion.
+In a naive picture \sgra's millimeter flux is produced at a photosphere that decreases in size as frequency increases.  Because of the marginal optical depth at $1.3$mm ($\sim 0.3$ in the one-zone model) and the complicated source structure (the optical depth varies across the image; the $\tau = 2/3$ surface is non-spherical, folded, not even simply connected) this picture does not hold exactly.  Nevertheless 86GHz photons are on average produced at larger radius than 230GHz photons, and the 86GHz source size is therefore larger than the 230GHz source size; see Ricarte et al. 2022 for a discussion.
 
 The 86GHz/230GHz color therefore probes the radial structure of the source plasma.  Figure \ref{fig:cmp_86ghz_flux} shows the result of requiring that the 86GHz flux match the observed flux 3 days before the beginning of the EHT 2017 campaign.
 
 Many $\Rh = 1$ models, both MAD and SANE, fail the $86$GHz flux density test: 23/25 SANE and 9/25 MAD.  These models overproduce $86$GHz emission.
-There are also a substantial set of SANE models, 19/100 in all, that underproduce $86$GHz emission.  These models have larger $\Rh$.
+There is also a substantial set of SANE models, 19/100 in all, that underproduce $86$GHz emission.  These models have larger $\Rh$.  
 
 \begin{figure}
   \centering
@@ -190,16 +189,14 @@ There are also a substantial set of SANE models, 19/100 in all, that underproduc
   \label{fig:cmp_86ghz_flux}
 \end{figure}
 
-\note{Michi}
-
 %..............................................................................
 \subsubsubsection{86 GHz Major Axis}
 
 As for the $86$GHz flux, the $86$GHz size is sensitive to optical depth as a function of radius in the source plasma. Models that pass and fail are shown in Figure \ref{fig:cmp_86ghz_size}.
 
-Many face-on models fail because they are too small (purple in the figure), while a few other high inclination models fail because they are too large.  Overall only about $50\%$ of models pass, making this one of the tightest constraints.
+Many face-on models fail because they are too small (purple in the figure), while a few other high inclination models fail because they are too large.  Only $52\%$ of models pass, making this one of the tightest constraints.
 
-The physical picture for 86GHz source size is complicated, as is the extraction of the constraint itself from observations.  We note that (1) two different values for the 86GHz intrinsic source size have been reported in the literature; (2) scattering is $7$ times stronger at $86$GHz than at $230$GHz; (3) scattering must be subtracted accurately to obtain the intrinsic source size; (4) the error bars for the 86GHz source size are narrow and this determines the strength of the constraint.
+The physical picture for 86GHz source size is complicated, as is the extraction of the constraint itself from observations.  Notice that (1) two different values for the 86GHz intrinsic source size have been reported in the literature; (2) scattering is $7$ times stronger at $86$GHz than at $230$GHz; (3) scattering must be subtracted accurately to obtain the intrinsic source size; (4) the error bars for the 86GHz source size are narrow and this determines the strength of the constraint.
 
 \begin{figure}
   \centering
@@ -225,9 +222,9 @@ The surviving models include a set of SANE models at intermediate $\Rh$ and mode
 %------------------------------------------------------------------------------
 \subsubsection{Variability}
 
-Variability is central to interpretation of Sgr A*: the small black hole size means that observations considered here are taken over intervals when the source is expected to vary significantly.  This distinguishes Sgr A* from M87*, where the source is expected to vary only over timescales that are long compared to a single track.\footnote{Note, however, this does not suggest that M87* is less variable than \sgra.  Given the EHT only observed M87* at a few nearby snapshots, we cannot make any conclusive statement on M87* variability using EHT data alone.  To obtain the variability information we present here for M87*, it will require multi-year observations of M87*.}
+Variability is central to interpretation of Sgr A*: the small black hole size means that observations considered here are taken over intervals when the source is expected to vary significantly.  This distinguishes Sgr A* from M87*, where the source is expected to vary only over timescales that are long compared to a single track.\footnote{This does not mean that M87* is less variable than \sgra.  In 2017 EHT observed M87* over only $\sim 15\tg$, so it is not possible to characterize M87* variability using EHT data alone.  To obtain variability information for M87* similar to what we present here for \sgra would require multi-year observations.}
 
-Variability is a strong constraint on the models.  Although models differ in their degree of variability, both in an integrated sense and on 4 $G\lambda$ baselines, only a very small fraction of models are as quiet as the data.  For the light curve variability, this remains true whether we use data from 2017 April 7, all days from the 2017 observing campaign, or from historical monitoring of Sgr A*.   In general, SANE models are quieter than MAD models, and (less strongly) face-on models are quieter than edge-on models.
+Variability is a strong constraint on the models.  Although models differ in their degree of variability, both in an integrated sense and on 4 $G\lambda$ baselines, only a small fraction of models are as quiet as the data.  For the light curve variability, this remains true whether we use data from 2017 April 7, all days from the 2017 observing campaign, or from historical monitoring of Sgr A*.   In general, SANE models are quieter than MAD models, and (less strongly) face-on models are quieter than edge-on models.
 
 If we were to apply the variability constraints directly to the models, there would be 12/200 successful models left using 1\% cuts (65/200 for the ALMA constraint and 12/200 for the visibility amplitude constraint, with all models that pass the latter also passing the former)\dl{numbers and overlap between constraints subject to change}.  One interpretation of this result is that the surviving models are the correct description of the source (although we would expect some misclassification of models as consistent or inconsistent when using 1\% cuts on such a large model set).  Another interpretation is that there is a missing physical ingredient in the models, see Section \ref{sec:discussions} for a discussion.
 
@@ -245,7 +242,9 @@ If we instead compare the models to the full historical distribution (40 3h MIs 
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{./figures/mi_dist.pdf}
-  \caption{Distributions of MI for Illinois thermal models (black), compared to distributions from historical observations (gray) and the values from the 2017 ALMA light curve. The latter are shown as vertical lines. The distributions for models with the lowest (blue) and highest (red) average MI for SANEs and MADs are also shown. }
+  \caption{Distributions of MI for Illinois thermal models (black), compared to distributions from historical observations (gray) and the values from the 2017 ALMA light curve. The latter are shown as vertical lines. The distributions for models with the lowest (blue) and highest (red) average MI for SANEs and MADs are also shown. 
+  \aeb{This plot is inscrutable.  First, that the thin black line is a measurement instead of a simulation value is only evident after reading the caption (something few will do!).  Second, sudden ending of many lines is hard to understand --- what does this mean for the computation?  For the interpretation?  Surely we can clarify this.  Finally, I don't understand at all the vertical lines.  Why are there {\bf three} Apr 7 curves?  Why aren't there multiple curves on other days?  This is noted in the text, but it is not clear in the figure (in the figure, it looks like a typo!).}
+  }
   \label{fig:cmp_ALMA_var}
 \end{figure}
 
@@ -262,7 +261,9 @@ With this approach only 6\% of the models pass, and all SANE. While the quietest
   \centering
     \includegraphics[width=\columnwidth]{./figures/va_dist.pdf}
   \caption{Distributions of $PSD(4G\lambda)$ for thermal models, compared to the observed distribution from the 2017 EHT campaign.
-  \dl{HAMR distribution will be updated later. }}
+  \dl{HAMR distribution will be updated later. }
+  \aeb{The quantity on the horizontal axis has been called $a_4$ in \citetalias{PaperIV}.  I have a similar concern regarding the abrupt end of the curves in this plot as well.  What do they mean?  How should these be interpreted?  There are the standard presentation issues (see \autoref{fig:cmp_VA}). }
+  }
   \label{fig:cmp_VLBI_var}
 \end{figure}
 
@@ -298,12 +299,12 @@ Variablity, were it included in the constraint map, would eliminate all thermal 
 \cmf{First version}
 As can be seen in Table \ref{tab:GRMHDmodels} the thermal models have been calculated for an identical parameter space from two different codes, namely iHARM and BHAC for the GRMHD simulations and iPOLE and BHOSS for the GRRT calculations. This allows us for the first time to perform an in depth comparison between the different numerical methods used in this work in addition to the EHTC code comparison projects \citep{2019ApJS..243...26P,2020ApJ...897..148G}.
 
-\begin{figure}
+\begin{figure*}
   \centering
-  \includegraphics[width=\columnwidth]{./figures/BHAC_iharm_correlation}
+  \includegraphics[width=0.8\textwidth]{./figures/BHAC_iharm_correlation}
   \caption{Correlation between BHAC and iHARM models based on model constraints}
   \label{fig:modelcorrelation}
-\end{figure}
+\end{figure*}
 
 In Figure \ref{fig:modelcorrelation} we show the correlation between the thermal iHARM and BHAC models for various constraints.
 \newline The top row shows from left to right the 230\,GHz flux density, the 230\,GHz modulation index, MI, computed for a time window of 3 hours, and the 230\,GHz image size obtained from image moments. Since we normalise the 230\,GHz images to an average flux of 2.4\,Jy within a time window of 5000\,M (corresponds to 28.5 h for SgrA a mass of $4.14\times 10^6\,\msun$), the scatter around this values is small. The deviation from an ideal correlation reflects the precision and number of GRMHD snapshots included during normalisation procedure.
@@ -397,12 +398,12 @@ The behaviour of the 86\,GHz image size is very similar to the above described 2
 \subsubsubsection{NIR constraints}
 As expected, the addition of non-thermal particles via the kappa electron distribution function with variable efficiency has a large influence on the NIR flux for all models independent of the accretion model and the $\Rh$ value. In Fig.~\ref{fig:NIR_kappaepsilon} we compare the distribution of the NIR fluxes for thermal and kappa eDF for a SANE accretion model.
 
-\begin{figure}
+\begin{figure*}
   \centering
-  \includegraphics[width=\columnwidth]{./figures/SANE_NIR_standard.pdf}
+  \includegraphics[width=0.8\textwidth]{./figures/SANE_NIR_standard.pdf}
   \caption{NIR constraints for SANE accretion models for thermal and non-thermal electron distribution function with $\kappa=3.4$ fixed and $\epsilon\left(\sigma,\beta,\varepsilon\right)$. The red violin plots correspond to a thermal eDF, blue, orange and green indicate kappa eDF with $\varepsilon=$0.05,0.1 and 0.2.}
   \label{fig:NIR_kappaepsilon}
-\end{figure}
+\end{figure*}
 
 As can be seen in the figure, including non-thermal particles changes the distribution of the NIR fluxes significantly. Except for the $\Rh=1$ models the addition of non-thermal particles even with the lowest base efficiency used in this analysis $\left( \varepsilon=0.05\right)$ leads to a over-production of NIR fluxes. In the case of the MAD models all models over-produce the NIR flux for $\varepsilon=0.05$.
 
