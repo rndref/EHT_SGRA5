@@ -6,24 +6,25 @@
 We have carried out and presented the most extensive comparison
 between numerical models and observations of \sgra to date.
 By using multiple simulation pipelines (cite PATOKA, BHAC+BOSS, ...),
-we have demostrated that, given a set of boundary conditions,
-numerical simulations are remarkablely predictive in averaged image
-properties.
-This ability allows us to significantly reduce the uncertainty in the
-plasma properties and infer the spacetime properties of \sgra.
+we have demostrated that, given a set of initial and boundary
+conditions, numerical simulations are remarkablely predictive in the
+averaged image properties.
+This ability significantly narrows down the range of possible model
+parameter and allows us to infer the spacetime properties of \sgra.
 
 EHT's VLBI data is most constraining on the ring size and width.
 However, its surprisingly low-level of asymmetry makes the position
 angle non-constraining.
 Overview, the EHT constraints roughly reduce the dimension of the
 parameter space by two, carving out a region of the parameter space
-that prefers edge-on retrogade or low spin SANE models, or face-on
-prograde models.
-Together with multi-wavelength observations, we conclude that \sgra is
-most likely a low spin prograde $\abh \sim 0.5$ MAD with mid
-inclination $20\degree \lesssim i \lesssim 60\degree$.
-For thermal models, \sgra is likely to have low electron temperate
-with $\Rh \gtrsim 40$.
+that prefers edge-on retrogade or low spin prograde SANE models, or
+face-on prograde models.
+Together with non-EHT observations in other wavelengths, we conclude
+that \sgra is most likely a low spin prograde $\abh \sim 0.5$ MAD with
+intermediate inclination $20\degree \lesssim i \lesssim 60\degree$.
+Using a thermal models, the accretion flow around \sgra is two
+temperature, and likely to have ion-electron temperate $\Rh \gtrsim
+40$.
 \ckc{I think it will be useful to translate $\Rh$ to actual electron
   temperature.
   I think someone good at handling GRMHD needs to do it, maybe George?
@@ -32,23 +33,37 @@ For the $\kappa$ model, ...
 \ckc{Fill in what the likely parameters for the nonthermal models.}
 
 % Future: polarization
+% Predictions: what would ngEHT see?
 While there are also isolated pockets in the parameter space that pass
 all constraints, however, even with this extensive study, it is
-difficult to draw strong conclusion about these regions.
+difficult to draw strong conclusion about these isolated regions.
 Do these models pass all constraint by ``luck'' and are simply noise?
-Or do we don't have a fine enough sampling in the parameter space to
-carve out the narrow region of the parameter space?
-While further expanding the simulation library would help addressing
-these questions, we expect use the EHT's future results, especially
-polarimetry information and observations with larger arrays and better
-$u$-$v$ coverage, will resolve these ambiguity and pin point \sgra's
-actual parameter space.
+Or do we not have fine enough samples in the parameter space to
+identify the narrow region of the parameter space?
+While further expanding the simulation library would reduce model
+uncertainty and help addressing these questions, we expect use the
+EHT's future results, especially polarimetry information and
+observations with larger arrays and better $u$-$v$ coverage, will
+reduce observation uncertainty and resolve these ambiguity.
 
-Although we are successful in predicting \sgra's average image
-properties, the variability is a lot more challenging.
-...
-\ckc{chaotic nature, not controlled by conservation laws, missing
-  plasma physics... etc} \br{maybe also mention order(s) of magnitude
-  higher resolutions might be needed to capture ``variability''.}
+Although we are successful in predicting average image properties, the
+variability is more challenging.
+Since \sgra is radiative inefficient, the radiation energy budget is
+insignificant to the total energy budget, making radiation sensitive
+to the small details in the chaotic turbulence flow.
+We also provide a few possible physical origins in
+section~\ref{sec:variability} including resolutions and non-ideal
+physics such as viscosity.
+However, thes hypotheses can only be tested once models that
+accurately predicted variability are available.
+\br{maybe also mention order(s) of magnitude higher resolutions might
+  be needed to capture ``variability''.}
 
-Predictions: what would ngEHT see?
+The EHT observations, combined with multiwavelength information, are
+now able to provide quantitative measurements to challenging numerical
+models.
+\emph{We have arrived a new era of precision black hole astrophysics.}
+On the theory side, clearly one of the next major breakthroughs will
+come from accurate modeling of the non-ideal MHD effects, as it will
+provide the electron distribution functions from first principle, and
+possible to improve our predictability of the variability.
