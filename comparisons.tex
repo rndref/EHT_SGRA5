@@ -3,7 +3,7 @@
 We now apply the observational constraints from Section \ref{sec:observations} to the models described in Section \ref{sec:constraints}.
 
 %==============================================================================
-\subsection{Thermal, Aligned Models}
+\subsection{Thermal, Aligned Models}\label{subsec:thermal}
 
 We begin with a set of ``standard'' models with aligned (prograde or retrograde) GRMHD simulations, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.  This includes the Illinois, Frankfurt, and HAMR model sets (see Table \ref{tab:radiativemodels}).
 
@@ -292,7 +292,9 @@ Variablity, were it included in the constraint map, would eliminate all thermal 
 %------------------------------------------------------------------------------
 \subsubsection{Inter-Model Comparison: $\Rh$ Thermal Models}
 
-\subsubsubsection{Frankfurt Models}
+% note: passfail tables are consistently, e.g., tab:illinoisPF or tab:VKhamrPF
+
+\subsubsubsection{Frankfurt Thermal $\Rh$ Models}
 
 As can be seen in Table \ref{tab:GRMHDmodels} the thermal models have been calculated for an identical parameter space from two different codes, namely KHARMA and BHAC for the GRMHD simulations and iPOLE and BHOSS for the GRRT calculations. This allows us for the first time to perform an in depth comparison between the different numerical methods used in this work in addition to the EHTC code comparison projects \citep{2019ApJS..243...26P,2020ApJ...897..148G}.
 
@@ -322,13 +324,17 @@ The smaller correlation of the m-ring parameters as compared to the other parame
 
 We find ourselves somewhat surprised by the strength of the correlations seen in Figure \ref{fig:modelcorrelation}.  The range of each constraint is significantly larger than the width of the correlation, so the variations between models are real, detectable, and reproducible with independent codes.  The question of the origin of the systematic offsets between models for some constraints (for example, in the NIR) is interesting but beyond the scope of this paper.   
 
-\subsubsubsection{HAMR Models}
+\subsubsubsection{\hamr Models}
 
 \note{Doosoo, Koushik to write here about HAMR thermal models.}
 
-\subsubsubsection{KORAL Long Models}
+\subsubsubsection{\koral Long Models}
 
-We have also considered a set of thermal, $\Rh$, MAD models run with the \koral code out to $\sim 100,000\tg$.  These models help control for the effect of finite 
+We have also considered a set of thermal, $\Rh$, MAD models run with the \koral code out to $\sim 100,000\tg$.  These models permit us to assess the importance of integration time for application of the constraints.  They permit us to obtain more accurate distributions for the constraint quantites, and to assess whether the constraints evolve from the beginning to end of the integrations. 
+
+In brief, we do not see evidence for evolution in this particular model set.  We find that the \koral pass/fail results are similar to those for comparable models in the Illinois thermal model set.  
+
+The \koral model constraint results are similar to those for the Illinois thermal model set.  The key question is whether the models evolve in any of the tests over the integration time.  We find little evidence for    
 
 %------------------------------------------------------------------------------
 \subsubsection{Inter-Model Comparison: Critical Beta Model}
@@ -350,9 +356,6 @@ We have applied a subset of tests to the critical beta models (all except X-ray;
 
 \subsubsubsection{Constant power-law models $p=4.0$}
 
-
-
-
 \note{Razi to write here about variable kappa models.  Define a subsection, describe the results and how they differ from the thermal results.}
 
 \note{Christian to write here about constant kappa models.  Define a subsection, describe the results and how they differ from the thermal results.}\cmf{done}
@@ -360,41 +363,51 @@ We have applied a subset of tests to the critical beta models (all except X-ray;
 %------------------------------------------------------------------------------
 \subsubsection{Constant kappa models $\kappa=3.5$ with variable efficiency, $\varepsilon(\sigma,\beta)$}
 
-In order to investigate the fraction on thermal to non-thermal particles we combine a thermal electron distribution function with a kappa electron distribution with $\kappa=3.5$. The value of $\kappa=3.5$ is motivated from the spectral slope in the NIR during a quiescent state \cmf{add reference here}. In addition to the fixed kappa value we assume that the fraction between thermal and non-thermal particles depends on the local plasma properties, e.g, the magnetisation, $\sigma$, and the plasma beta parameter, $\beta_{\rm p}$. Given this assumption we can write the total emissivity as:
+In order to investigate the effect of mixed thermal/nonthermal distribution functions, we combine a thermal electron distribution function with a kappa electron distribution with $\kappa=3.5$. The value of $\kappa=3.5$ is motivated from the spectral slope in the NIR during a quiescent state \cmf{add reference here}.  In addition to the fixed kappa value we assume that the fraction between thermal and non-thermal particles depends on the local plasma properties, e.g, the magnetisation, $\sigma$, and the plasma beta parameter, $\beta_{\rm p}$. Given this assumption we can write the total emissivity as:
 \begin{equation}
-j_{\nu,\rm{tot}}=\left[1-\epsilon(\varepsilon,\beta, \sigma)\right] j_{\nu,\rm{thermal}} + \epsilon(\varepsilon,\beta, \sigma) j_{\nu, \kappa},
+j_{\nu,\rm{tot}}=(1-\epsilon) j_{\nu,\rm{thermal}} + \epsilon j_{\nu, \kappa},
 \label{eq:kappaeff}
 \end{equation}
-where the efficiency, $\epsilon(\varepsilon,\beta,\sigma)$, is given by:
+where the nonthermal efficiency $\epsilon( \varepsilon, \beta, \sigma)$ is 
 \begin{equation}
-    \epsilon(\varepsilon,\beta,\sigma)=\varepsilon\bigg[1 - \exp\left(-\beta_{\rm p}^{-2}\right)\bigg]
-    \left[1-\exp\left(\frac{-\sigma^2}{\sigma_{\rm min}^2}\right)\right].
+    \epsilon(\varepsilon,\beta,\sigma)=\varepsilon\,
+    \left[1 - e^{-\beta_{\rm p}^{-2}}\right]
+    \left[1-e^{-(\sigma/\sigma_{\rm min})^2}\right].
     \label{eq:efficiencybetasigma}
 \end{equation}
-Throughout this work we fix $\sigma_{\rm min}=0.01$ and vary the base efficiency, $\varepsilon$, between 0.05, 0.1 and 0.2. For each base efficiency we generate a set of models spanning the same parameter space as the thermal models (see Table \ref{tab:radiativemodels} for details). For each model we iterate the mass accretion rate to obtain an average flux of 2.4\,Jy at 230\,GHz across a time interval of 5000\,M. In order to explore a several values of $\varepsilon$ we increased the cadence of the radiative transfer to 50\,M. This allows us to keep the numerical costs for this parameter sweep low while still being within the correlation time of the GRMHD simulations ($t_{\rm corr}\approx 50-100\,M$) \cmf{ do we have reference for this? So far this result is not published, maybe Boris paper?}. An example for the distribution of the efficiency can be seen in the right half of  Fig. \ref{fig:varepsilon}. The efficiency quickly approaches $\epsilon=0$ within the disk region while within the jet the efficiency reaches the defined base-efficiency. Thus, togehter with the used cut of in sigma, $\sigma_{\rm cut}=1$ the non-thermal particles are mainly located in jet sheath.
+Evidently the nonthermal emissivity is non-negligible only when $\beta_p \lesssim 1$ and $\sigma \gtrsim \sigma_{\rm min}$.  We fix $\sigma_{\rm min}=0.01$ and vary the base efficiency, $\varepsilon$, between 0.05, 0.1 and 0.2. For each base efficiency we generate a set of models spanning the same parameter space as the thermal models (see Table \ref{tab:radiativemodels} for details). For each model we iterate the mass accretion rate to obtain an average flux of 2.4\,Jy at 230\,GHz across a time interval of 5000\,M. In order to explore several values of $\varepsilon$ efficiently we increased the model snapshot cadence to 50\,M. This allows us to keep the numerical costs for this parameter sweep low while still being within the correlation time of the GRMHD simulations. 
+%($t_{\rm corr}\approx 50-100\,M$) \cmf{ do we have reference for this? So far this result is not published, maybe Boris paper?}. 
+% CFG: this is mentioned earlier in the paper and also implicit, but not actually calculated, in Boris's paper.  Let us not specify a correlation time here, so that we don't set the correlation time in multiple places.
+
+An example of the distribution of the efficiency can be seen in the right half of  Fig. \ref{fig:varepsilon}. The efficiency quickly $\epsilon=0$ within the disk region while within the jet the efficiency reaches the defined base-efficiency. Thus (and as usual removing emission at $\sigma > \sigma_{\rm cut}=1$) the non-thermal particles are mainly located in jet sheath.
 
 \begin{figure}
   \centering
     \includegraphics[width=\columnwidth]{./figures/GRMHDphiavera0.94sigmaeta.pdf}
-  \caption{Time and azimuthal averaged distribution of the magnetization, $\sigma$ (left half) and the efficiency, $\epsilon(\varepsilon,\beta,\sigma)$ using $\varepsilon=0.2 $ for a BHAC MAD GRMHD simulation with spin $a_{\star}=0.94$. The solid gray line corresponds to $\sigma=1$ and the dashed line indicates out-flowing plasma via the Bernoulli parameter ($-h u_{t}>1.02$).}
+  \caption{Time and azimuthal averaged distribution of the magnetization, $\sigma$ (left half) and the efficiency, $\epsilon(\varepsilon,\beta,\sigma)$ using $\varepsilon=0.2 $ for a BHAC MAD GRMHD simulation with $\abh=0.94$. The solid gray line corresponds to $\sigma=1$ and the dashed line indicates out-flowing plasma via the Bernoulli parameter ($-h u_{t}>1.02$).}
   \label{fig:varepsilon}
 \end{figure}
 
-In the following we will elaborate the impact of adding non-thermal particles via the kappa electron distribution with fixed kappa value ($\kappa=3.5$) and there different base efficiencies $\varepsilon=$0.05, 0.1 and 0.2 on the observational constraints listed in Sect. \ref{}.
+In the following we will elaborate on the impact of adding non-thermal particles via the kappa electron distribution with fixed kappa value ($\kappa=3.5$) and three different base efficiencies $\varepsilon=$0.05, 0.1 and 0.2 on the observational constraints listed in Sect. \ref{subsec:thermal}.
 
 %..............................................................................
 \subsubsubsection{230\,GHz VLBI pre-image size}
 
-The addition of non-thermal particles alters the 230\,GHz VLBI pre-image sizes hardly for the MAD models and shows a minor effect on the SANE models. In the SANE case only models with $\Rh>40$ exhibit a minor increase in the source size where we see a monotonic increase of the source size with inclination. This effect can be understood if we consider that the bulk of the emission in all cases consider here is still produce by the thermal electron distribution, their temperature is given by Eq. \ref{} and an increase in $\Rh$ suppresses the emission from particles in the disk (by decreasing the electron temperature) and thus enhances the emission from jet.
-Given that most the non-thermal particles are located in the sheath of the jet their impact on the source size is largest if bulk of the thermal emission is also produced there. In addition the emissivity of thermal synchrotron radiation decreases as $j_{\nu}\propto \exp{\left(-\nu^{1/3}
-\right)}$ while for the kappa distribution as $j_{\nu}\propto \nu^{-(\kappa -2)/2}$. This implies that for the same electron temperature the non-thermal flux is compared to a thermal one higher and thus leads to a more extended jet structure for the models including non-thermal particles.
-\newline In the MAD case, independent of the choice of $\Rh$ the emission is mostly produced in the disk region (see EHT paper V and Fig 8 in Wong et al. 2021 for 3D rendering). Increasing $\Rh$ will not push the emission region into the jet where the non-thermal particles are located and thus their contribution to the total emission structure is negligible.
+The addition of non-thermal particles produces almost undetectable changes in the 230\,GHz VLBI pre-image sizes for the MAD models and a minor effect for the SANE models. 
+
+In the SANE case only models with $\Rh>40$ exhibit a minor increase in the source size where we see a monotonic increase of the source size with inclination. This effect can be understood if we consider that the bulk of the emission in all cases considered here is still produced by the thermal electron distribution, with temperature set by the $\Rh$ prescription.  An increase in $\Rh$ suppresses the emission from particles in the disk (by decreasing the electron temperature) and thus enhances emission from jet.  Since most the non-thermal particles are located in the sheath of the jet their impact on the source size is largest if the bulk of the thermal emission is also produced there. 
+
+% CFG: this is confusing.  is it needed?
+%In addition the thermal synchrotron emissivity decreases at high frequency as $j_{\nu}\propto \exp{\left(-(\nu/\nu_c)^{1/3} \right)}$ while for the kappa distribution as $j_{\nu}\propto \nu^{-(\kappa -2)/2}$. This implies that for the same electron temperature the non-thermal flux is compared to a thermal one higher and thus leads to a more extended jet structure for the models including non-thermal particles.
+
+In the MAD case, independent of the choice of $\Rh$ the emission is mostly produced in the disk region (see EHT paper V and Fig 8 in \citet{Wong_2022} for a 3D rendering). Increasing $\Rh$ will not push the emission region into the jet where the non-thermal particles are located and thus their contribution to the total emission structure is negligible.
 
 %..............................................................................
 \subsubsubsection{86\,GHz flux}
 
-Since the GMVA+ALMA observations at 86\,GHz \cmf{ref to Issaoun paper} probe a larger field of view as the 230\,GHz EHT observations, we increased the field of view for the 86\,GHz to 800\,$\rm{\mu as}$ during the radiative transfer calculations. As mentioned earlier the non-thermal particles are mainly located in the jet sheath and thus the increased field of view ensures that no extend flux is missing during the comparison with the 86\,GHz observations.
-\newline The 86\,GHz for both SANE and MAD models flux is not affected by the addition of non-thermal particles. In case of the SANE models the edges of the 86\,GHz flux distribution are slightly shifted in the case of $\Rh>40$. However, including non-thermal particles even with the highest base efficiency $\varepsilon=0.2$ does not change the scoring of a model, i.e., a thermal-only model which full-fills the 86\,GHz constrain is still accepted if non-thermal particles are included. This behaviour can be explained by the fact that the bulk of the emission in both accretion models is generated in with a few gravitational radii. Since the non-thermal particles are mainly located in the jet sheath and thei ratio between non-thermal to thermal particles is at most 20\% the contribution of the non-thermal particles to the 86\,GHz flux can be neglected.
+The GMVA+ALMA observations at 86\,GHz \cite{2021ApJ...915...99I} probe a larger field of view than the 230\,GHz EHT observations, so we increased the field of view for the 86\,GHz to 800\,$\rm{\mu as}$ during the radiative transfer calculations. Again the non-thermal particles are mainly located in the jet sheath and thus the increased field of view ensures that no extended flux is missing during the comparison with the 86\,GHz observations.
+
+The 86\,GHz for both SANE and MAD models flux is not affected by the addition of non-thermal particles. In case of the SANE models the edges of the 86\,GHz flux distribution are slightly shifted in the case of $\Rh>40$. However, including non-thermal particles even with the highest base efficiency $\varepsilon=0.2$ does not change the scoring of a model, i.e., a thermal-only model which full-fills the 86\,GHz constrain is still accepted if non-thermal particles are included. This behaviour can be explained by the fact that the bulk of the emission in both accretion models is generated in with a few gravitational radii. Since the non-thermal particles are mainly located in the jet sheath and thei ratio between non-thermal to thermal particles is at most 20\% the contribution of the non-thermal particles to the 86\,GHz flux can be neglected.
 
 %..............................................................................
 \subsubsubsection{86\,GHz image size}
