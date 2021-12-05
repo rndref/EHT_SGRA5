@@ -48,13 +48,29 @@ Still quite weak constraints on black hole spin.
 
 \note{Vedant to provide first draft of thermal section.}
 
-We compute the outflow power in a fashion similar to that in \citet{M87PaperV},
+Linear polarization and Faraday rotation measurements of \sgra at millimeter and submillimeter wavelengths (\citealt{2000ApJ...538L.121A, 2000ApJ...545..842Q, Bower_2003, Marrone_2006, 2006JPhCS..54..354M, 2006ApJ...646L.111M}) and X-ray emission  (\citealt{2003ApJ...591..891B, doi:10.1126/science.1240755}), in conjunction with semi-analytic models estimate the accretion rate $\dot{M}$ as $10^{-9}$ to $10^{-7} M_{\odot}$yr$^{-1}$. The broad range of values is due to the differences in regions of radio emission in the theoretical models that are considered (ADAFs: \citealt{1998ApJ...492..554N, Yuan_2003}; Jet models: \citealt{1993A&A...278L...1F, 2000A&A...362..113F}).
+
+We compute the time-averaged accretion rate,
 
 \begin{equation}
-    P_{out} = \int_{funnel}d\theta\frac{1}{\Delta t}\int dtd\phi\sqrt{-g}\big(-T^{r}_{t}-\rho u^{r}\big),
+    \dot{M} = \frac{1}{\Delta t}\int dt\int d\theta d\phi\hspace{0.1cm}\sqrt{-g}\big(-\rho u^{r}\big),
 \end{equation}
 
-evaluated at $r=100GM/c^{2}$, where $funnel\Rightarrow(\theta<1)\cup(\theta>\pi-1)$. We average the quantity in time $\Delta t$, where $\Delta t$ is the time interval we have considered for our analysis. We also consider only those regions where there is steady outflow, ie. the quantity in the parentheses is positive.
+at the event horizon; the quantity in the parenthesis is the rest-mass energy flux. \ref{fig:accretion_illinois_thermal} shows $\dot{M}$ (in units of solar masses per year) for the Illinois models parameterized by $R_{high}$. Since $\mathcal{M}$ is a weak function of the inclination $i$, we plot $\dot{M}$ at a single inclination $i=50^{\circ}$.
+
+Our findings: (1) The MAD models accrete, on average, at $10^{-9}-10^{-8} M_{\odot}$yr$^{-1}$ while the SANE models have a broader range, $10^{-9}-10^{-6} M_{\odot}$yr$^{-1}$. (2) $\dot{M}$ increases with increasing $R_{high}$. Since the electron temperature is an inverse function of $R_{high}$, a greater $R_{high}$ implies cooler electrons. To maintain an average flux density of 2.4Jy at 1.3 mm, the corresponding $\mathcal{M}$ increases. (3) $\dot{M}$ decreases with increasing the black hole spin. Retrograde disks have lower number densities close to the black hole in comparison to equivalent prograde disks. Therefore, a larger $\mathcal{M}$ is necessary to ensure the observed average flux density at 1.3 mm. (4) The retrograde, SANE, $R_{high}=40$ and $160$ models produce the largest accretion rates, $\dot{M}\sim 10^{-6}M_{\odot}$yr$^{-1}$. However, these models are ruled out due to overproduction of x-ray emission. (5) The Illinois models with the critical-$\beta$ electron temperature assignment scheme predicts accretion rates that lie between the $R_{high}=10$ and 40 values for the following set of parameters: $f=0.5, \beta_{crit}=1$.
+
+There have been several studies at radio, x-ray and $\gamma$-ray that have suggested the presence of a mildly relativistic outflow  based on morphological structures observed in the \sgra complex (\citealt{2012AAS...22051303S,Li_2013,2019ApJ...875...44Z} and references therein). However, the low luminosity and high variability of \sgra, and the presence of a dominant, interstellar scattering screen (\textcolor{magenta}{refs?}) have precluded direct detection of a jet in the galactic center. Here we present the outflow power (defined below) in our numerical models and discuss the likelihood of such a jet.
+
+How does one define the jet? \citet{refId0}, \citet{2014A&A...570A...7M} use a Bernoulli parameter $Be$, while \citealt{10.1111/j.1365-2966.2012.22002.x} consider the ratio of energy flux to rest mass flux $\mu$, and \citet{M87PaperV} apply a $\beta\gamma$ cut to define $P_{jet}$. Due to lack of an observational estimate of \sgra's jet power, we instead evaluate total, mechanical, outflow power near the poles (\cite{M87PaperV}),
+
+\begin{equation}
+    P_{out} = \int_{poles}d\theta\frac{1}{\Delta t}\int dtd\phi\sqrt{-g}\big(-T^{r}_{t}-\rho u^{r}\big),
+\end{equation}
+
+where $poles$ implies $\theta<1$ or $\theta>\pi-1$. The integral is calculated at $r=100GM/c^{2}$ and we consider only those zone where there is outflow, ie. the quantity in the parentheses is positive. $P_{out}$ is a broad definition for energy outflow at the polar caps that includes the narrow, relativistic jet and the nonrelativistic winds close to the jet-disk boundary.
+
+The time-averaged outflow power in the Illinois-$R_{high}$ models (at $i=50^{\circ}$) are plotted in \ref{fig:outflow_illinois_thermal}. $P_{out}$ is an increasing function of $|a_{*}|$; some of the high spin models attaining $P_{out}\sim 10^{38}$ ergs s$^{-1}$. Is is possible to hide such outflows in the galactic center? \textcolor{magenta}{\citet{2007MNRAS.379.1519M}? However, their analysis prefers edge-on models, which are disfavored in the present work.}
 
 \begin{figure*}
 \centering
@@ -93,7 +109,8 @@ Dependence on distribution function.
 
 \ckc{Review panel suggested not to include RIAF model.  Please repurpose this section to discuss positrons.  Avoid figures when possible.}
 
-\cite{2006MNRAS.367..905B} devised a canonical model of Sgr A* as a  radiatively inefficient accretion flow (RIAF). Semi-analytic RIAF models implementing  this using the general relativistic ray tracer GRTRANS \citep{2016MNRAS.462..115D} can be found in  \cite{2021arXiv210105327E}, where  positrons are included using emission modeling motivated in  \cite{2020ApJ...896...30A}. The Fig. \ref{fig:EmamiRIAF} model from \cite{2021arXiv210105327E}  shows Stokes maps and polarized spectra of a \cite{2006MNRAS.367..905B} RIAF with plasma $\beta=10$ and 1$\%$ of the emitting particles nonthermal electrons. The near-extremal ($a/M=0.998$) model shown exhibits Doppler boosting asymmetry in a crescent-shaped intensity pattern with a spiral global electric vector polarization angle (EVPA) pattern and polarization preferentially distributed within this region.
+\cite{2006MNRAS.367..905B} devised a canonical model of Sgr A* as a  radiatively inefficient accretion flow (RIAF). Semi-analytic RIAF models implementing  this using the general relativistic ray tracer GRTRANS \citep{2016MNRAS.462..115D} can be found in  \cite{2021arXiv210105327E}, where  positrons are included using emission modeling motivated in  \cite{2020ApJ...896...30A}. The Figs. 1-3 %\ref{fig:EmamiRIAF}
+modes from \cite{2021arXiv210105327E}  shows Stokes maps and polarized spectra of a \cite{2006MNRAS.367..905B} RIAF with plasma $\beta=10$ and 1$\%$ of the emitting particles nonthermal electrons. The near-extremal ($a/M=0.998$) model shown exhibits Doppler boosting asymmetry in a crescent-shaped intensity pattern with a spiral global electric vector polarization angle (EVPA) pattern and polarization preferentially distributed within this region.
 
 The addition of small non-thermal populations of positrons \citep{2020ApJ...896...30A,2021arXiv210105327E} tends to: increase overall intensity in jet regions for fixed electron number density; modify the low-frequency spectral slope; cancel the observed intrinsic circular polarization and enhance circular polarization due to Faraday conversion. The last of these positron effects is particularly apparent when comparing declining tails of x-ray spectra of positron-rich versus positron-poor sources, as seen in \cite{2021arXiv210105327E}.%Fig. \ref{fig:EmamiRIAFSpectra}.
 
