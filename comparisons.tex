@@ -447,15 +447,15 @@ The m-ring fitting is applied to the 230\,GHz images. As mentioned earlier the f
 %------------------------------------------------------------------------------
 \subsubsection{Variable kappa model $\kappa(\sigma,\beta)$}
 
-The non-thermal electron distribution function given in Equation \eqref{eq:nonthermaleDF} can be written in a general and self-consistent way by using a power-law slope dependent of the magnetisation $\sigma $ and plasma-$\beta$ from GRMHD simulations, $\kappa(\sigma, \beta)$, assuming that non-thermal particle acceleration due to magnetic reconnection following particle-in-cell small scale simulation from \citep{2018ApJ...862...80B}
+\cfg{could we avod the equation and simply provide a reference and enough detail that someone could reproduce it?}
 
+An alternative procedure for assigning a nonthermal eDF uses the  kappa model \eqref{eq:nonthermaleDF}, and assigns the parameter $w$  and $\kappa$ parameters according to \cite{2018ApJ...862...80B}, who model the effects of particle acceleration in magnetic reconnection based on particle-in-cell simulations: 
 \begin{align}
 \kappa=2.8 +0.7\sigma^{-1/2} + 3.7\sigma^{-0.19}\tanh{(23.4\sigma^{0.26} \beta)}\label{eq:kappa} \\
-w= \frac{ \kappa -3 }{\kappa} \Theta_{\rm e} + \frac{\varepsilon}{2}\left[1+\tanh(r-r_{\rm inj})\right]\, \frac{ \kappa -3 }{6 \kappa} \frac{m_{\rm p}}{m_{\rm e}} \sigma \label{eq:w}, 
+w= \frac{ \kappa -3 }{\kappa} \Theta_{\rm e} + \frac{\varepsilon}{2}\left[1+\tanh(r-r_{\rm inj})\right]\, \frac{ \kappa -3 }{6 \kappa} \frac{m_{\rm p}}{m_{\rm e}} \sigma \label{eq:w}.
 \end{align}
+Here $\sigma \equiv B^2/(8\pi\rho c^2)$, $\beta \equiv p_{gas} 8 \pi/B^2$, and $w$ contains a thermal and nonthermal contribution, with the nonthermal contribution defined by the magnetization and nonthermal particle acceleration efficiency $\varepsilon$  \citep{2019A&A...632A...2D, 2021NatAs.tmp..218C}. We set  $\varepsilon=0$ and injection radius $r_{\rm inj}=10r_{g}$ following previous studies.  Nonzero $\varepsilon$ increases the averaged NIR flux by two orders of magnitude as $\varepsilon$ goes from 0 to 1, causing all models to overshoot NIR constraint.  Setting $\varepsilon \ne 0$ also causes the 86GHz flux density to increase around two times as well as the image size \citep{2021arXiv211102518F}. We use the emissivity and absorptivity, computed numerically for the interval $3 < \kappa \le 8$, from  \cite{2016ApJ...822...34P}. For $\kappa > 8$ we substitute a thermal eDF.  We also turn off emission in the jet spin where $\sigma > 1$.  (see Figure \ref{fig:varepsilon}). 
 
-where the width function contain thermal temperature and non-thermal contributions, second part defined by the magnetization and non-thermal particle acceleration efficiency \citep{2019A&A...632A...2D,2021NatAs.tmp..218C}. Although efficiency can be computed from first principles in PIC simulations
-for convenience we only considered $\varepsilon=0$ and injection radius $r_{\rm inj}=10r_{g}$ following previous studies. Large heating efficiency $\varepsilon>0$ has large impact on NIR emission, the averaged flux increase two orders of magnitude when efficiency goes from 0 to 1, this implies that all passing models will overshoot NIR constraint, on the other hand, at 86GHz the flux increase around two times as well as the image size \citep{2021arXiv211102518F}. The emission, $j_{\nu}$, and absorption coefficients, $\alpha_{\nu}$, computed numerically can be found for the  interval $3< \kappa\leq 8$ in  \cite{2016ApJ...822...34P}. In order to compute the emission from regions where $\kappa$ is out of the validity range we use the thermal model, and neglect the emission in the jet spine, $\sigma > 1$ (see Figure \ref{fig:varepsilon}). 
 \aco{Starting first draft}
 
 %..............................................................................
@@ -473,10 +473,10 @@ for convenience we only considered $\varepsilon=0$ and injection radius $r_{\rm 
 %------------------------------------------------------------------------------
 \subsubsection{Summary}
 
-The effect of adding non-thermal particles via a kappa electron distribution function with fixed $\kappa=3.4$ values and variable efficiency via Eq.~\ref{eq:efficiencybetasigma} can be summarised in the following way:
+The effect of adding non-thermal electrons in a kappa eDF with  $\kappa=3.4$ and variable efficiency via Eq.~\ref{eq:efficiencybetasigma} can be summarised as follows:
 \begin{itemize}
     \item The 86\,GHz and 230\,GHz constraints are hardly effected by the addition of non-thermal particles.
-    \item Even the lowest a base efficiency considered, $\varepsilon=0.05$, leads to an over-production of NIR flux. \cmf{indication that we need very localised regions of non-thermal particle productions and no "global" approach?}
+    \item Even the lowest base efficiency considered, $\varepsilon=0.05$, leads to an over-production of NIR flux. \cmf{indication that we need very localised regions of non-thermal particle productions and no "global" approach?}
 \end{itemize}
 
 \note{Alejandro to write here about Frankfurt nonthermal models.  Define a subsection, describe the results and how they differ from the thermal results.}
@@ -494,6 +494,7 @@ The effect of adding non-thermal particles via a kappa electron distribution fun
 %==============================================================================
 \subsection{Stellar Wind Fed Models}
 
+The stellar wind fed models of \cite{
 \note{Angelo and George to write here.  Describe the results and how they differ from aligned thermal results.}
 \ckc{Write subsections only if they are different from the thermal models.}
 

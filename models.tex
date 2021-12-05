@@ -178,12 +178,12 @@ The simulation density scale $\Munit$ is a free parameter.  It is fixed through 
 Given an eDF, density scale $\Munit$, and radiative transfer coefficients, the emergent radiation is obtained by solution of the radiative transfer equation.  For this we use two classes of numerical methods: ray tracing to generate synthetic images, and a Monte Carlo scheme to generate spectral energy distributions (SEDs).  Further detail on numerical methods is given Appendix \ref{app:radtrans}.  Comparisons of numerical methods \citep[][Prather et al. 2021]{2020ApJ...897..148G} shows that differences between numerical schemes do not contribute significantly to the error budget.  
 
 The models are imaged at $86$GHz, $230$~GHz~\footnote{The mean frequency for  EHT observations is more nearly $228$~GHz.} and $2.2\mu$m.  Direct imaging includes synchrotron emission and absorption and bremsstrahlung (both ion-electron and electron-electron; see \citet{2020ApJ...898...50Y} for a recent review).  The SED is averaged over a narrow range in inclination and over all position angles. The SED includes synchrotron, bremsstrahlung, {\em and} Compton scattering.  NIR emission is usually dominated by synchrotron, but we find that occasionally NIR synchrotron is so weak that Compton scattering dominates.  The X-ray is dominated by bremsstrahlung or Compton scattering. 
+In Figure~\ref{fig:fiducial_imgs} we present a few examples of time-averaged model images and multiwavelenght SEDs of selected standard \sgra models.
 
 %==============================================================================
 \subsection{Summary of Sgr~A* model library}
 
-In Figure~\ref{fig:fiducial_imgs} we present a few examples of time-averaged model images and multiwavelenght SEDs of selected standard \sgra models. A summary of all radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
-
+A summary of all radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
 Entire image library contains $MMM$ model sets, $NNN$ models, and $PPP$ images, and occupies $GGG$ gigabytes.
 
 \begin{figure*}
@@ -221,21 +221,21 @@ Entire image library contains $MMM$ model sets, $NNN$ models, and $PPP$ images, 
   \colhead{$\nu$}             &%
   \colhead{SED}                    &%
   \colhead{$\Delta t$}    &%
-  \colhead{\#images}       \\
+  \colhead{\#230Ghzimages/GB}       \\
  &  & & & & & & & \colhead{[GHz]} & & \colhead{[1000 M]} &
     }
 \startdata
-\multicolumn{12}{c}{Thermal models}\\
+\multicolumn{12}{c}{\bf Thermal models}\\
 KHARMA & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [15,20) & x \\
 KHARMA & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [20-25) & x \\
 KHARMA & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,170] & [86,230] & yes & [25-30) & x \\
 BHAC & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,90]  & [86,230] & yes & [10-15) & x \\
 BHAC & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,90]  & [86,230] & yes & [20-25) & x \\
 BHAC & 1 & [1,10,40,160] & 1 & - & - & - & [10,30,...,90]  & [86,230] & yes & [25-30) & x \\
-KORAL& 1 & [?]    & 1 & - & - & - & [10,30,...,90]      & [230,86]  & ?   & ?       & x \\
-Wind Accretion& 1 & [?]    & 1 & - & - & - & [10,30,...,90]      & [230,86]  & ?   & ?       & x \\
+KORAL& 1 & [?]    & 1 & - & - & - & [10,30,...,90]      & [86,230]  & ?   & ?       & x \\
+Wind Accretion& 1 & [?]    & 1 & - & - & - & [10,30,...,90]      & [86,230]  & ?   & ?       & x \\
 \hline
-\multicolumn{12}{c}{Non-thermal $\kappa$ models}\\
+\multicolumn{12}{c}{\bf Non-thermal $\kappa$ models}\\
 - & - & - & -  & - & 5 & & & & & \\
 BHAC & 1 & [1,10,40,160]  & 1 & -  & - & 3.5 ($\epsilon_0=0.05$) & [10,30,...,90]  & [86,230] & no & [25-30) & x  \\
 BHAC & 1 & [1,10,40,160]  & 1 & -  & - & 3.5 ($\epsilon_0=0.10$) & [10,30,...,90]  & [86,230] & no & [25-30) & x  \\
@@ -243,7 +243,7 @@ BHAC & 1 & [1,10,40,160]  & 1 & -  & - & 3.5 ($\epsilon_0=0.20$) & [10,30,...,90
 BHAC & 1 & [1,10,40,160]  & 1 & -  & - & variable $\kappa=\kappa(\beta,\sigma)$  & [10,30,...,90]  & [86,230] & no & [25-30) & x \\
 HAMR & 1 & [1,10,40,160] & 1 & - & - & variable $\kappa=\kappa(\beta,\sigma)$ & [10,30,...,90]  & [86,230] & yes & [25-30) & x \\
 \hline
-\multicolumn{12}{c}{Non-thermal power-law models}\\
+\multicolumn{12}{c}{\bf Non-thermal power-law models}\\
 & - & - & - & ?  & ? & - & & & &  \\
 \enddata
 \caption{Summary of emission simulations in \sgra EHT model library.}~\label{tab:radiativemodels}
