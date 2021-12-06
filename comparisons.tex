@@ -218,11 +218,11 @@ The surviving models include a set of SANE models at intermediate $\Rh$ and mode
 %------------------------------------------------------------------------------
 \subsubsection{Variability}
 
-Variability is central to interpretation of Sgr A*: the small black hole size means that observations considered here are taken over intervals when the source is expected to vary significantly.  This distinguishes Sgr A* from M87*, where the source is expected to vary only over timescales that are long compared to a single track.\footnote{This does not mean that M87* is less variable than \sgra.  In 2017 EHT observed M87* over only $\sim 15\tg$, so it is not possible to characterize M87* variability using EHT data alone.  To obtain variability information for M87* similar to what we present here for \sgra would require multi-year observations.}
+Variability is central to interpretation of \sgra: the small black hole size means that observations considered here are taken over intervals when the source is expected to vary significantly.  This distinguishes \sgra from \m87, where the source is expected to vary only over timescales that are long compared to a single track.\footnote{This does not mean that \m87 is less variable than \sgra.  In 2017 EHT observed \m87 over only $\sim 15\tg$, so it is not possible to characterize \m87 variability using EHT data alone.  To obtain variability information for \m87 similar to what we present here for \sgra would require multi-year observations.}
 
-Variability is a strong constraint on the models.  Although models differ in their degree of variability, both in an integrated sense and on 4 $G\lambda$ baselines, only a small fraction of models are as quiet as the data.  For the light curve variability, this remains true whether we use data from 2017 April 7, all days from the 2017 observing campaign, or from historical monitoring of Sgr A*.   In general, we find that SANE models are quieter than MAD models, and (less strongly) face-on models are quieter than edge-on models.
+Variability is a strong constraint on the models.  Although models differ in their degree of variability, both in an integrated sense and on 4 $G\lambda$ baselines, only a small fraction of models are as quiet as the data.  For the light curve variability, this remains true whether we use data from 2017 April 7, all days from the 2017 observing campaign, or from historical monitoring of \sgra.   In general, we find that SANE models are quieter than MAD models, and (less strongly) face-on models are quieter than edge-on models.
 
-If we were to apply the variability constraints directly to the models, there would be 12/200 successful models left using 1\% cuts (65/200 for the ALMA constraint and 12/200 for the visibility amplitude constraint, with all models that pass the latter also passing the former)\dl{numbers and overlap between constraints subject to change}.  One interpretation of this result is that the surviving models are the correct description of the source (although we would expect some misclassification of models as consistent or inconsistent when using 1\% cuts on such a large model set).  Another interpretation is that there is a missing physical ingredient in the models, see Section \ref{sec:discussions} for a discussion.
+If we were to apply the variability constraints directly to the models, there would be N/200 successful models left using 1\% cuts (65/200 for the ALMA constraint and M/200 for the visibility amplitude constraint)\dl{numbers and overlap between constraints subject to change}.  One interpretation of this result is that the surviving models are the correct description of the source (although we would expect some misclassification of models as consistent or inconsistent when using 1\% cuts on such a large model set).  Another interpretation is that there is a missing physical ingredient in the models, see Section \ref{sec:discussions} for a discussion.
 
 %..............................................................................
 \subsubsubsection{ALMA Light Curve}
@@ -238,7 +238,7 @@ If we instead compare the models to the full historical distribution (40 measure
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{./figures/mi_dist.pdf}
-  \caption{Distributions of $\mi{3}$ for KHARMA models (black), compared to distributions from historical observations (gray) and the values from the 2017 ALMA light curve. The latter are shown as vertical lines. The distributions for models with the lowest (blue) and highest (red) average $\mi{3}$ for SANEs and MADs are also shown. 
+  \caption{Distributions of $\mi{3}$ for KHARMA models (black), compared to distributions from historical observations (gray) and measurements of $\mi{3}$ on independent segments from the 2017 ALMA light curve. The latter are shown as vertical lines. The distributions for models with the lowest (blue) and highest (red) average $\mi{3}$ for SANEs and MADs are also shown. 
   \aeb{This plot is inscrutable.  First, that the thin black line is a measurement instead of a simulation value is only evident after reading the caption (something few will do!).  Second, sudden ending of many lines is hard to understand --- what does this mean for the computation?  For the interpretation?  Surely we can clarify this.  Finally, I don't understand at all the vertical lines.  Why are there {\bf three} Apr 7 curves?  Why aren't there multiple curves on other days?  This is noted in the text, but it is not clear in the figure (in the figure, it looks like a typo!).}
   }
   \label{fig:cmp_ALMA_var}
@@ -247,23 +247,34 @@ If we instead compare the models to the full historical distribution (40 measure
 %..............................................................................
 \subsubsubsection{4 $G\lambda$ Visibility Amplitude Variability}
 
-The distribution of model $4G\lambda$ lightcurve-normalized PSDs are shown in Figure \ref{fig:cmp_VLBI_var}.  The best fit PSD from the 2017 EHT campaign (excluding April 11) is shown as a solid vertical line, with the other vertical lines showing percentiles in the posterior.  Evidently the observations are quieter than both SANEs and MADs as a group.
+The distribution of slopes $b$ of the variance $\sigma_\text{var}^2 (|u|)$ at $4~{\rm G}\lambda$ for the GRMHD models is in rough agreement with the measured slope from the 2017 EHT campaign (excluding April 11). \dl{need brief description of $b$ measurement in section 3.3.2} The amplitude of $\sigma_\text{var}^2 (4~{\rm G}\lambda)$, however, varies depending on the model and the code. 
 
-The PSD estimates for the models are broken up into $5000\tg$ windows for each model. To compare the models to the observation, we take the mean value across all windows and assume the width of the distribution is of $\log_{10} a_{4G\lambda} \pm 0.1$. A model is considered passing if this estimated distribution overlaps with the median observed value. \note{refer GRMHD variability paper appendix} \dl{passing criterion subject to change}
+Figure \ref{fig:cmp_VLBI_var} shows the distribution of $(\sigma_\text{var}^2, b)$ from the EHT observation, along with the distribution across all \kharma models. The GRMHD models are shown as an aggregate whole, but each model consists of only three measurements of $\sigma_\text{var}^2$, one on each window. This makes a direct comparison with the measured value difficult, as the 
 
-With this approach only 6\% of the models pass, and all SANE. While the quietest models tend to be SANEs, the general distribution across all MADs is not as offset from the SANEs as in the MI distributions. 
+% The distribution of model $4G\lambda$ lightcurve-normalized PSDs are shown in Figure \ref{fig:cmp_VLBI_var}.  The best fit PSD from the 2017 EHT campaign (excluding April 11) is shown as a solid vertical line, with the other vertical lines showing percentiles in the posterior.  Evidently the observations are quieter than both SANEs and MADs as a group.
+
+% The PSD estimates for the models are broken up into $5000\tg$ windows for each model. To compare the models to the observation, we take the mean value across all windows and assume the width of the distribution is of $\log_{10} a_{4G\lambda} \pm 0.1$. A model is considered passing if this estimated distribution overlaps with the median observed value. \note{refer GRMHD variability paper appendix} \dl{passing criterion subject to change}
+
+% With this approach only 6\% of the models pass, and all SANE. While the quietest models tend to be SANEs, the general distribution across all MADs is not as offset from the SANEs as in the MI distributions. 
+
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=\columnwidth]{./figures/va_hist.pdf}
+%   \caption{Distributions of $PSD(4\,\mathrm{G}\lambda)$ for thermal models, compared to the observed distribution from the 2017 EHT campaign.
+%   \dl{HAMR distribution will be updated later.}
+%   \aeb{The quantity on the horizontal axis has been called $a_4$ in \citetalias{PaperIV}.  I have a similar concern regarding the abrupt end of the curves in this plot as well.  What do they mean?  How should these be interpreted?  There are the standard presentation issues (see \autoref{fig:cmp_VA}).}
+%   \ckc{Nice new plot!  Are you using matplotlib fill\_between?  I suggest setting edgecolor to None and only set facecolor.  (Or setting linewidth=0 should also remove the lines in the orange shade.)}}
+%   \label{fig:cmp_VLBI_var}
+% \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{./figures/va_hist.pdf}
-  \caption{Distributions of $PSD(4\,\mathrm{G}\lambda)$ for thermal models, compared to the observed distribution from the 2017 EHT campaign.
-  \dl{HAMR distribution will be updated later.}
-  \aeb{The quantity on the horizontal axis has been called $a_4$ in \citetalias{PaperIV}.  I have a similar concern regarding the abrupt end of the curves in this plot as well.  What do they mean?  How should these be interpreted?  There are the standard presentation issues (see \autoref{fig:cmp_VA}).}
-  \ckc{Nice new plot!  Are you using matplotlib fill\_between?  I suggest setting edgecolor to None and only set facecolor.  (Or setting linewidth=0 should also remove the lines in the orange shade.)}}
+  \includegraphics[width=\columnwidth]{./figures/grmhd_fit.png}
+  \caption{\dl{placeholder figure}}
   \label{fig:cmp_VLBI_var}
 \end{figure}
 
-At a 1\% cut, the models that pass the PSD constraint also all pass the MI constraint. It should be noted that this is partially because these constraints are weakly correlated \dl{also partially because we're imposing constraints differently between VLBI and light curve, and the light curve constraint is more lenient} None of the 12 models with acceptable variability pass the other tests.
+% At a 1\% cut, the models that pass the PSD constraint also all pass the MI constraint. It should be noted that this is partially because these constraints are weakly correlated \dl{also partially because we're imposing constraints differently between VLBI and light curve, and the light curve constraint is more lenient} None of the 12 models with acceptable variability pass the other tests.
 
 %------------------------------------------------------------------------------
 \subsubsection{Summary of Constraints}
@@ -324,7 +335,13 @@ We find ourselves somewhat surprised by the strength of the correlations seen in
 
 \subsubsubsection{\hamr Models}
 
-\note{Doosoo, Koushik to write here about HAMR thermal models.}
+%\note{Doosoo, Koushik to write here about HAMR thermal models.}
+Along the KHARMA/iPOLE and BHAC/BHOSS models, we produced a set of thermal models out to $35,000\tg$ using the GRMHD code H-AMR and the GRRT code BHOSS (see Table~\ref{tab:GRMHDmodels}). These models consider a gas adiabatic index of $\Gamma_{\rm ad}=5/3$ for the SANE models and $\Gamma_{\rm ad}=13/9$ for the MAD models (Table~\ref{tab:radiativemodels}), allowing us to understand how sensitive the images are to the GRMHD fluid properties, in addition to code numerics. 
+
+We are glad to note that overall, the H-AMR/BHOSS thermal eDF images perform similarly to the KHARMA/iPOLE and BHAC/BHOSS models. \kc{needs verification from Michi}
+
+\kc{is the plan to do H-AMR and KHARMA correlations similar to figure 18?}
+
 
 \subsubsubsection{\koral Long Models}
 
@@ -357,9 +374,12 @@ We have applied a subset of tests to the critical beta models (all except X-ray;
 
 \note{Koushik to write here about powerlaw nonthermal HAMR models.  Define a subsection, describe the results and how they differ from the thermal results.][Maybe add Tomohisa's models here as well.] [by including power-law, we see this and that change (only include significant changes from the thermal models)}
 
-\subsubsection{Constant power-law models $p=4.0$}
+So far we have considered a Maxwell-J\''uttner distribution function that describes a thermal population of electrons. Next we describe our results from 
 
-\note{Razi to write here about variable kappa models.  Define a subsection, describe the results and how they differ from the thermal results.}
+\subsubsection{Constant power-law models $p=4.0$}
+So far we have co
+
+\note{Razi to write here about variable kappa models.  Define a subsection, describe the results and how they differ from the thermal results.}\kc{might be better to move this to 4.2.3 along with bhac/bhoss results}
 
 \note{Christian to write here about constant kappa models.  Define a subsection, describe the results and how they differ from the thermal results.}\cmf{done}
 
@@ -445,26 +465,53 @@ The m-ring fitting is applied to the 230\,GHz images. As mentioned earlier the f
 %------------------------------------------------------------------------------
 \subsubsection{Variable kappa model $\kappa(\sigma,\beta)$}
 
-\cfg{could we avod the equation and simply provide a reference and enough detail that someone could reproduce it?}
+\cfg{could we avod the equation and simply provide a reference and enough detail that someone could reproduce it?}\aco{What about inline equations?}
 
-An alternative procedure for assigning a nonthermal eDF uses the  kappa model \eqref{eq:nonthermaleDF}, and assigns the parameter $w$  and $\kappa$ parameters according to \cite{2018ApJ...862...80B}, who model the effects of particle acceleration in magnetic reconnection based on particle-in-cell simulations: 
-\begin{align}
-\kappa=2.8 +0.7\sigma^{-1/2} + 3.7\sigma^{-0.19}\tanh{(23.4\sigma^{0.26} \beta)}\label{eq:kappa} \\
-w= \frac{ \kappa -3 }{\kappa} \Theta_{\rm e} + \frac{\varepsilon}{2}\left[1+\tanh(r-r_{\rm inj})\right]\, \frac{ \kappa -3 }{6 \kappa} \frac{m_{\rm p}}{m_{\rm e}} \sigma \label{eq:w}.
-\end{align}
+An alternative procedure for assigning a nonthermal eDF uses the  kappa model \eqref{eq:nonthermaleDF}, and assigns the parameter $w$  and $\kappa$ parameters according to \cite{2018ApJ...862...80B}, who model the effects of particle acceleration in magnetic reconnection based on particle-in-cell simulations: $ \kappa=2.8 +0.7\sigma^{-1/2} + 3.7\sigma^{-0.19}\tanh{(23.4\sigma^{0.26} \beta)}\label{eq:kappa}$
+and $w= \frac{ \kappa -3 }{\kappa} \Theta_{\rm e} + \frac{\varepsilon}{2}\left[1+\tanh(r-r_{\rm inj})\right]\, \frac{ \kappa -3 }{6 \kappa} \frac{m_{\rm p}}{m_{\rm e}} \sigma$.
+%\begin{align}
+%\kappa=2.8 +0.7\sigma^{-1/2} + 3.7\sigma^{-0.19}\tanh{(23.4\sigma^{0.26} \beta)}\label{eq:kappa} \\
+%w= \frac{ \kappa -3 }{\kappa} \Theta_{\rm e} + \frac{\varepsilon}{2}\left[1+\tanh(r-r_{\rm inj})\right]\, \frac{ \kappa -3 }{6 \kappa} \frac{m_{\rm p}}{m_{\rm e}} \sigma \label{eq:w}.
+%\end{align}
 Here $\sigma \equiv B^2/(8\pi\rho c^2)$, $\beta \equiv p_{gas} 8 \pi/B^2$, and $w$ contains a thermal and nonthermal contribution, with the nonthermal contribution defined by the magnetization and nonthermal particle acceleration efficiency $\varepsilon$  \citep{2019A&A...632A...2D, 2021NatAs.tmp..218C}. We set  $\varepsilon=0$ and injection radius $r_{\rm inj}=10r_{g}$ following previous studies.  Nonzero $\varepsilon$ increases the averaged NIR flux by two orders of magnitude as $\varepsilon$ goes from 0 to 1, causing all models to overshoot NIR constraint.  Setting $\varepsilon \ne 0$ also causes the 86GHz flux density to increase around two times as well as the image size \citep{2021arXiv211102518F}. We use the emissivity and absorptivity, computed numerically for the interval $3 < \kappa \le 8$, from  \cite{2016ApJ...822...34P}. For $\kappa > 8$ we substitute a thermal eDF.  We also turn off emission in the jet spine where $\sigma > 1$.  (see Figure \ref{fig:varepsilon}). 
 
-\aco{Starting first draft}
 
+
+%..............................................................................
+%\subsubsubsection{86\,GHz flux}
+\subsubsubsection{86\,GHz image size}
+
+The total flux and image size was computed using an extended field of view, $800 \mu as$ motivated in the 86GHz observations from \cite{2021ApJ...915...99I}. We found that the image size is closely similar to the thermal and variable efficiency models, only different for non-spinning black holes, where we have low magnetized and small jet. As a consequence eDF with variable kappa power-law reduces to thermal distribution and the size of the image is a bit smaller than in thermal case. For $a_{\star}=0$ almost all SANE models pass the size constraint, $R_{\rm high}=1$ we have a bit larger image. For MAD $R_{\rm high}=40$ and $a_{\star}=0.94$, and cases for $R_{\rm high}=160$ and $a_{\star}=0.50$ we have a bit smaller size image than thermal case passing the constraint.
+
+
+\aco{Starting first draft}
+...
 %..............................................................................
 \subsubsubsection{86\,GHz flux}
 
-...
+The total flux for SANE models with R$_{\rm high}=1$ slightly increases, all them fail. While for $R_{\rm high}=10,40,80$ and $R_{\rm high}=160$ the flux decreases bellow $1.8 \rm {Jy}$.
+
 %..............................................................................
-\subsubsubsection{86\,GHz image size}
+\subsubsubsection{NIR constraints}
 
-...
+MAD:
+$R_{\rm high}=1$ only $a_{\star}=0$ and $i=10^{\circ}$ pass in contrast with thermal models.
 
+All models with electron  temperature with R$_{\rm high}=10,40$ fail, again in thermal model this not happening ...
+
+$R_{\rm high}=10,40$ only $i=10^{\circ}, 30^{\circ}$ pass,
+$R_{\rm high}=80$ for spin zero pass pass and for $a\neq 0$ only inclinations $30^{\circ} \leq i$.
+$R_{\rm high}=160$ only $i>50^{\circ}$ fail.
+
+SANE:
+
+All $R_{\rm high}=10$ and $a_{\star}=-0.94, -0.5$ fail
+All $R_{\rm high}=40$ and $a_{\star}=-0.94, -0.5,0.0$ fail, similar trend for $R_{\rm high}=80$.
+$R_{\rm high}=160$ we have a bit higher emission but pass the constraint as in thermal case ...
+
+
+
+\newline
 \note{Razi, Angelo, Richard?}
 \ckc{Write subsections only if they are different from the thermal models.}
 
