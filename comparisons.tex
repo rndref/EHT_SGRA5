@@ -258,7 +258,8 @@ With this approach only 6\% of the models pass, and all SANE. While the quietest
     \includegraphics[width=\columnwidth]{./figures/va_hist.pdf}
   \caption{Distributions of $PSD(4G\lambda)$ for thermal models, compared to the observed distribution from the 2017 EHT campaign.
   \dl{HAMR distribution will be updated later. }
-  \aeb{The quantity on the horizontal axis has been called $a_4$ in \citetalias{PaperIV}.  I have a similar concern regarding the abrupt end of the curves in this plot as well.  What do they mean?  How should these be interpreted?  There are the standard presentation issues (see \autoref{fig:cmp_VA}). }
+  \aeb{The quantity on the horizontal axis has been called $a_4$ in \citetalias{PaperIV}.  I have a similar concern regarding the abrupt end of the curves in this plot as well.  What do they mean?  How should these be interpreted?  There are the standard presentation issues (see \autoref{fig:cmp_VA}).}
+  \ckc{Nice new plot!  Are you using matplotlib fill\_between?  I suggest setting edgecolor to None and only set facecolor.  (Or setting linewidth=0 should also remove the lines in the orange shade.)}
   }
   \label{fig:cmp_VLBI_var}
 \end{figure}
