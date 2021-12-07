@@ -6,6 +6,7 @@ The discussion section lists several possible causes for the apparently high var
 
 Here we discuss and dismiss some of these possibilities.
 
+\bp{Seems like (1) and (2) here are (or will be) discussed more thoroughly in the Numerical Methods appendix.  Given both seem to conclude that all models are consistent, and thus that changing these parameters would not reduce variability, maybe we can refer there instead of re-writing?}
 %==============================================================================
 1. GRMHD resolution.
 
@@ -33,6 +34,18 @@ Comparison of Monika model initial conditions
 
 %==============================================================================
 6. Cooling filters the light curve. [Ben]
+
+A final possible source of excess variability in the static imaging method comes from an overestimate of electron temperatures in areas where cooling of the electrons may be important.  We can estimate the possible effects of this change by imposing a limit on electron temperatures based on the local dynamical time, reflecting the assumption that higher-temperature electrons would cool before crossing the event horizon.
+
+This limit comes from comparing two timescales: first, the synchrotron cooling rate at high temperature,
+
+\begin{align}
+    \tau_\mathrm{cool} \rightarrow u_e \frac{3 c^3 m_e^2}{16 B^2 e^4 n_e \Theta_e^2}
+\end{align}
+
+with $u_e$ the electron internal energy density, $n_e$ the electron number density, $\Theta_e$ the electron temperature, and $m_e$, $e$ the electron mass and (absolute) charge respectively.
+
+And the 
 
 Discussion of model with $\Theta_{e,max}(r, \tau_{cool})$
 
