@@ -40,14 +40,25 @@ A final possible source of excess variability in the static imaging method comes
 This limit comes from comparing two timescales: first, the synchrotron cooling rate at high temperature,
 
 \begin{align}
-    \tau_\mathrm{cool} \rightarrow u_e \frac{3 c^3 m_e^2}{16 B^2 e^4 n_e \Theta_e^2}
+    \tau_\mathrm{cool} \approx \frac{3 m_e^3 c^5}{16 B^2 e^4 \Theta_e}
 \end{align}
 
-with $u_e$ the electron internal energy density, $n_e$ the electron number density, $\Theta_e$ the electron temperature, and $m_e$, $e$ the electron mass and (absolute) charge respectively.
+dependent on the electron temperature $\Theta_e$, expressed in units of the rest mass energy, and the local field strength $B$ in gauss.  This is compared to the dynamical time
 
-And the 
+\begin{align}
+    \tau_\mathrm{dyn} \approx \left( r \sin{\theta} \right) ^{3/2} \frac{G M_\mathrm{BH}}{c^3}
+\end{align}
 
-Discussion of model with $\Theta_{e,max}(r, \tau_{cool})$
+
+
+A set of images was produced which put a ceiling on the electron temperature $\Theta_e$, by requiring that the $\tau_\mathrm{cool} > N \cdot \tau_\mathrm{dyn}$ -- that is, assuming that electrons likely to cool on timescales shorter than $N$ dynamical times will do so.
+
+% \begin{figure}
+%     \centering
+%     \includegraphics{}
+%     \caption{Caption}
+%     \label{fig:my_label}
+% \end{figure}
 
 %==============================================================================
 %7. Electron distribution function model is inadequate.
