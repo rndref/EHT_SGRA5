@@ -231,17 +231,17 @@ A summary of all radiative transfer calculations is given in Table~\ref{tab:radi
   \colhead{$\nu$}             &%
   \colhead{SED}                    &%
   \colhead{$\Delta t$}    &%
-  \colhead{\#Images_{230}/GB}       \\
+  \colhead{\#Images_{230}}       \\
  &  & & & & & & \colhead{[GHz]} & & \colhead{[1000 M]} &
     }
 \startdata
 \multicolumn{11}{c}{\bf Thermal models}\\
-KHARMA & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,170] & [86,230] & Yes & [15,20) & x \\
-KHARMA & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,170] & [86,230] & Yes & [20-25) & x \\
-KHARMA & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,170] & [86,230] & Yes & [25-30) & x \\
-BHAC & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,90]  & [86,230] & Yes & [10-15) & x \\
-BHAC & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,90]  & [86,230] & Yes & [20-25) & x \\
-BHAC & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,90]  & [86,230] & Yes & [25-30) & x \\
+KHARMA & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,170] & [86,230] & Yes & [15,20) &  $1,800,000$ \\
+KHARMA & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,170] & [86,230] & Yes & [20-25) & $1,800,000$ \\
+KHARMA & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,170] & [86,230] & Yes & [25-30) & $1,800,000$\\
+BHAC & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,90]  & [86,230] & Yes & [10-15) & $1,000,000$ \\
+BHAC & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,90]  & [86,230] & Yes & [20-25) & $1,000,000$ \\
+BHAC & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,90]  & [86,230] & Yes & [25-30) & $1,000,000$ \\
 HAMR & 1 & [1,40,160] & 1 & - & - &  [10,50,90]  & [86,230] & Yes & [30-35) & x \\
 KORAL& 1 & [?]    & 1 & - & - &  [10,30,...,90]      & [86,230]  & ?   & ?       & x \\
 Wind Accretion& 1 & [?]    & 1 & - & - &  [10,30,...,90]      & [86,230]  & ?   & ?       & x \\
@@ -251,12 +251,11 @@ HAMR Tilted & 1 & [1,40,160] & 1 & - & - &  [10,50,90]  & [86,230] & Yes & [100-
 HAMR & 1 & [1,40,160] & 1 & 4 & - &  [10,50,90]  & [86,230] & No & [30-35) & x \\
 \hline
 \multicolumn{11}{c}{\bf Thermal + non-thermal $\kappa$ models}\\
-- & - & - & -  & - &  5 & & & & \\
 BHAC & 1 & [1,10,40,160]  & 1 & -  &  3.5 ($\epsilon_0=0.05$) & [10,30,...,90]  & [86,230] & No & [25-30) & x  \\
 BHAC & 1 & [1,10,40,160]  & 1 & -  &  3.5 ($\epsilon_0=0.10$) & [10,30,...,90]  & [86,230] & No & [25-30) & x  \\
 BHAC & 1 & [1,10,40,160]  & 1 & -  &  3.5 ($\epsilon_0=0.20$) & [10,30,...,90]  & [86,230] & No & [25-30) & x \\
 BHAC & 1 & [1,10,40,160]  & 1 & -  &  variable $\kappa=\kappa(\beta,\sigma)$  & [10,30,...,90]  & [86,230] & No & [25-30) & x \\
-HAMR & 1 & [1,10,40,160] & 1 & - &  variable $\kappa=\kappa(\beta,\sigma)$ & [10,30,...,90]  & [86,230] & Yes & [25-30) & $10^5$ \\
+HAMR & 1 & [1,10,40,160] & 1 & - &  variable $\kappa=\kappa(\beta,\sigma)$ & [10,30,...,90]  & [86,230] & Yes & [25-30) & $100,000$ \\
 \enddata
 \caption{Summary of emission simulations in \sgra EHT model library.\kc{flipped PL and kappa, and propose to remove $\gamma_{\rm min/max}$ from the table as it is a local quantity in hamr models}}~\label{tab:radiativemodels}
 \end{deluxetable*}
