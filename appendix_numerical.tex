@@ -1,20 +1,13 @@
 \section{Numerical Methods}\label{app:numerical}
 
-%==============================================================================
-\subsection{GRMHD Consistency and Convergence}\label{app:resolution_study}
 
-\note{Hector to provide first draft.}
-
-\op{I can put this in}
-\note{Brief general discussion of Porth et al. and Olivares et al.}
-
-\note{Comparison of GRMHD output from Illinois/Frankfurt/HAMR}
-
-\note{Comparison of GRMHD output from Illinois at multiple resolutions}
+%code comparison and radiative consistency  moved here as discussed among coordinators on Thursday Dec 9th 2021 meeting
 
 %==============================================================================
 \subsection{Radiative Transfer Consistency and Convergence}
 \label{app:radtrans}
+
+\subsubsection{Images}
 
 \bp{Figures here will need to be touched up}
 
@@ -46,10 +39,7 @@ The image field of view is another potential concern in evaluating models -- the
   \label{fig:radtrans_fov_study}
 \end{figure}
 
-% Resolution is a much easier sell, we're well converged. Could cite e.g. Gelles+ though that's M87
-
-%==============================================================================
-\subsection{Spectral Energy Distribution Consistency and Convergence}
+\subsubsection{Spectral Energy Distribution}
 
 \ckc{CK will do first pass}
 
@@ -60,6 +50,65 @@ The image field of view is another potential concern in evaluating models -- the
     \caption{Comparing GRRT flux from Monte Carlo calculations.  The three columns are 86GHz, 230GHz, and NIR, respectively.  GRRT is only used to spot check x-ray and does not have a corresponding scatter plot.}
     \label{fig:sed_vv}
 \end{figure*}
+
+
+%==============================================================================
+\subsection{GRMHD Models Consistency and Convergence}\label{app:resolution_study}
+
+
+% note: passfail tables are consistently, e.g., tab:illinoisPF or tab:VKhamrPF
+
+\subsubsection{Comparison of \kharma and \bhac thermal models}
+
+As can be seen in Table \ref{tab:GRMHDmodels} the thermal models have been calculated for an identical parameter space from two different codes, namely KHARMA and BHAC for the GRMHD simulations and iPOLE and BHOSS for the GRRT calculations. This allows us for the first time to perform an in depth comparison between the different numerical methods used in this work in addition to the EHTC code comparison projects \citep{2019ApJS..243...26P,2020ApJ...897..148G}.
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=0.8\textwidth]{./figures/BHAC_iharm_correlation}
+  \caption{Correlation between BHAC and KHARMA models for 9 model constraints.  The horizontal axis is the constraint value from \bhac/\bhoss, and the vertical axis shows the constraint value from \kharma/\ipole.  Each point corresponds to a single model, with the width of the distribution shown by the error bars.  See text for details.\monika{this figure needs to have code labels updated}}
+  \label{fig:modelcorrelation}
+\end{figure*}
+
+In Figure \ref{fig:modelcorrelation} we show the correlation between the thermal KHARMA and BHAC models for constraints where we have predictions from both models.
+
+The top row shows from left to right the 230\,GHz flux density, the 230\,GHz modulation index, MI, computed for a time window of 3 hours, and the 230\,GHz image size obtained from image moments. Since we normalise the 230\,GHz images to an average flux of 2.4\,Jy within a time window of 5000\,M (corresponds to 28.5 h for SgrA a mass of $4.14\times 10^6\,\msun$), the scatter around this values is small. The deviation from an ideal correlation reflects the precision and number of GRMHD snapshots included during normalization procedure.
+
+The correlation in the 3\,hour modulation index spreads over $\Delta \mi{3}=0.75$ which serves as a measure of intra-code ( e.g., MAD vs. SANE accretion) and inter-code (BHAC vs. KHARMA) differences. Despite these differences the models show a strong correlation throughout the investigated models and parameter space.
+
+We found a strong correlation between models and codes for the image size computed from image moments, i.e. second moments analysis.
+
+\cfg{This may change if we recompute the major axis, etc., for the IL 86 GHz large fov images}
+The middle row presents the correlation plots for the 86\,GHz flux density (left), the 86\,GHz image size using second moments (middle) and the NIR flux (right). The 86\,GHz flux and 86\,GHz image size exhibit a shift toward larger values for the BHAC models. This difference can be explained by the larger field of view used for the BHAC models at 86\,GHz during the radiative transfer calculations. Thus, more extended structure and therefore a larger total flux is included in the BHAC models. This affects mainly models with large inclinations $i\geq70^\circ$ and jet dominated emission models ($\rm{R}_{\rm high}\geq 40$).
+
+The NIR fluxes show a tight correlation over four orders of magnitude and systematically larger flux for the BHAC models for low NIR fluxes ($\log_{10}(NIR)<-7$). These fluxes are far below the NIR constraints of $\sim 1mJy$, and therefore they do not affect the passing or failing of the models. In the thermal models the NIR flux is generated from the tail of the electron distribution function and is thus very sensitive to the electron temperature. Small differences in the distribution and value of the electron temperature between the two codes explain the observed de-correlation at very low NIR flux. 
+
+The correlation between models for the m-ring parameters is presented in the third row of Fig.~\ref{fig:modelcorrelation}. The correlation of the diameter of the m-ring is plotted in the left panel. The spread covers nearly the same extent as the 230\,GHz image size (top row, right panel) however the scatter in the correlation is larger.  The same is true for the width of the m-ring (middle panel in the last row of Fig.~\ref{fig:modelcorrelation}). Compared to the diameter and width of the m-ring, the asymmetry of the m-ring is less correlated (right panel). Notice that horizontal and vertical limits in the asymmetries occur since the parameter hits the boundary of the allowed range.
+
+The smaller correlation of the m-ring parameters as compared to the other parameters presented in Fig.~\ref{fig:modelcorrelation} is a consequence of the noisy nature of the m-ring fits.  Still, the distributions are quite symmetric under reflection across the diagonal, so the models are at least not biased with respect to each other.  Notice also that these plots do not capture all the information that is contained in the distribution of m-ring parameters, just the central value.   
+
+We find ourselves somewhat surprised by the strength of the correlations seen in Figure \ref{fig:modelcorrelation}.  The range of each constraint is significantly larger than the width of the correlation, so the variations between models are real, detectable, and reproducible with independent codes.  The question of the origin of the systematic offsets between models for some constraints (for example, in the NIR) is interesting but beyond the scope of this paper.   
+
+\subsubsection{Comparison of \kharma and \koral thermal models}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{./figures/Koral_vs_IL_MI.png}
+  \caption{Distribution of \mi{3} from the full \koral model set, from the first half, from the second half, and from the comparable Illinois thermal models.}
+  \label{fig:koral_MI}
+\end{figure}  
+% Resolution is a much easier sell, we're well converged. Could cite e.g. Gelles+ though that's M87
+
+\subsubsection{Comparison of \kharma and \hamr thermal models}
+
+%\note{Doosoo, Koushik to write here about HAMR thermal models.}
+Along the KHARMA/iPOLE and BHAC/BHOSS models, we produced a set of thermal models out to $35,000\tg$ using the GRMHD code H-AMR and the GRRT code BHOSS (see Table~\ref{tab:GRMHDmodels}). These models consider a gas adiabatic index of $\Gamma_{\rm ad}=5/3$ for the SANE models and $\Gamma_{\rm ad}=13/9$ for the MAD models (Table~\ref{tab:radiativemodels}), allowing us to understand how sensitive the images are to the GRMHD fluid properties, in addition to code numerics. 
+
+We are glad to note that overall, the H-AMR/BHOSS thermal eDF images perform similarly to the KHARMA/iPOLE and BHAC/BHOSS models. \kc{needs verification from Michi}
+
+\kc{is the plan to do H-AMR and KHARMA correlations similar to figure 18?}
+
+
+%==============================================================================
 
 %==============================================================================
 \subsection{Cross-Validations}
