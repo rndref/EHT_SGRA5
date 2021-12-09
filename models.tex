@@ -70,7 +70,7 @@ The one-zone model is too simple for comparison with the rich set of observation
 for extensive plasma parameter surveys (see Section~\ref{sec:future}).
 In this work, however, we apply more complicated, dynamical model generated using numerical simulations to include turbulent fluctuations and related dynamical features.
 
-We simulate the plasma flow with an ideal GRMHD\footnote{Notice that ideal GRMHD models do not capture collisionless aspect of the accretion flow and jets; we discuss the model limitations in  Section~\ref{sec:limits}} model, assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
+We simulate the plasma flow with an ideal GRMHD\footnote{Notice that ideal GRMHD models do not capture collisionless aspects of the accretion flow and jets; we discuss the model limitations in  Section~\ref{sec:limits}} model, assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
 
 \begin{deluxetable*}{cccccccc}
 \tabletypesize{\footnotesize}
@@ -87,12 +87,12 @@ We simulate the plasma flow with an ideal GRMHD\footnote{Notice that ideal GRMHD
 KHARMA & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 1000 & [288x128x128] & This work, Wong+2021 \\
 BHAC  & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 3333& [512x192x192] & This work \\
 HAMR & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $13/9,5/3$ & 35,000 & 1000,200 & [348/240×192×192] &This work \\
-KORAL &0,0.3,0.7,0.9 & MAD & $13/9$ & 100,000 & ? & ?&?\\
-HAMR-Tilt\tablenotemark{$*$} & $15/16$ & IN-SANE & $5/3$ & 100,000 & 100,000 & [448x144x240] & Chatterjee+20, Liska+18 \\
-Wind Accretion\tablenotemark{$*$} & 0 & MAD & 5/3 & 20,000 & 2,400 & [356x128x128] & \citet{2020ApJ...896L...6R}
+KORAL &-0.5,0,0.3,0.5,0.7,0.9 & MAD & $13/9$ & 101,000 & ? & ?& \cite{2021arXiv210812380N} \\
+HAMR-Tilt\tablenotemark{$*$} & $15/16$ & IN-SANE & $5/3$ & 100,000 & 100,000 & [448x144x240] & \citet{Liska2018}, \citet{Chatterjee2020} \\
+Wind Accretion\tablenotemark{$*$} & 0 & MAD$\times2$ & 5/3 & 20,000 & 2,400 & [356x128x128] & \citet{2020ApJ...896L...6R}
 \enddata
 \tablenotetext{$*$}{Non-standard model.}
-\caption{Summary of GRMHD simulations in \sgra EHT GRMHD model library. The first four entries are standard \sgra simulations.}\label{tab:GRMHDmodels}
+\caption{Summary of GRMHD simulations in \sgra EHT GRMHD model library. The first four entries are standard \sgra simulations. there are two realizations of the Wind Accretion models which differ in stellar wind magnetization.}\label{tab:GRMHDmodels}
 \end{deluxetable*}
 
 %------------------------------------------------------------------------------
@@ -119,7 +119,7 @@ The \emph{standard} initial conditions for the GRMHD integrations are a hydrodyn
 \aco{\citep[see also][]{2002MNRAS.334..383F}}
 \monika{why do we need to have this second citation? is that essential?}
 \br{I thought Font shows another hydro torus equilibrium in this paper? We don't use that one, so I would not cite that paper}
-\ckc{all models: do any of you use the Font initial condition?  If not I will comment out this reference.}
+\ckc{all modelers: do any of you use the Font initial condition?  If not I will comment out this reference.}
 in a prograde ($\abh > 0$) or retrograde ($\abh < 0$) orbit.  In all models except the HAMR-Tilted models the torus orbital angular momentum is either parallel or antiparallel to the black hole spin. The torus is parametrized by an inner radius $R_{\rm in}$, typically $12\rg$, and the pressure maximum radius $R_{\rm max}$, typically $24\rg$.
 The torus is seeded with a weak, poloidal magnetic field %\aco{ with magnetization $\beta \equiv p_{\rm gas}/p_{\rm mag} =100$}.
 % we dont want to elaborate on details like that here
@@ -127,7 +127,7 @@ The torus is seeded with a weak, poloidal magnetic field %\aco{ with magnetizati
 All simulations are run in horizon penetrating Kerr-Schild coordinates, which are regular on the horizon.  Most are run in a variant of spherical polar coordinates.  The {\em standard} boundary conditions are outflow at the inner boundary, located inside the event horizon, outflow at the outer boundary, located at $r \gtrsim 1000 \rg$, and reflecting boundary conditions at the poles.  Standard  simulations are evolved to $t_f=30,000 \tg$.
 
 Once the evolution has started, a combination of instabilities including the magnetorotational instability (MRI, \citealt{1992ApJ...400..610B}) drives the torus to a turbulent, fluctuating state. The standard accretion flow models can be divided by  latitude into three zones: equatorial inflow, a mid-latitude disk wind (``corona''; $\beta \equiv p_\mathrm{gas}/[B^2/(8\pi)] \sim 1$) and a polar relativistic jet (``funnel''; $\sigma \equiv B^2/(8\pi \rho c^2) \gtrsim 1$).
-\ckc{How about capital $P$ for pressure and $p$ for power law index?}
+\ckc{How about capital $P$ for pressure and $p$ for power law index?}\monika{p is also probability}
 
 It is well established (see e.g., \citetalias{M87PaperV}, \citetalias{M87PaperVIII} and references therein) that the magnetic flux through the event horizon divides the outcomes into two categories: the Magnetically Arrested Disk (MAD) state \citep[e.g.,][]{1974Ap&SS..28...45B, Igumenschchev:2003, 2003PASJ...55L..69N} in which the magnetic flux near the horizon saturates and significantly affects the dynamics of the flow, and the Standard and Normal Evolution (SANE) state \citep[e.g.,][]{2003ApJ...589..444G, 2003ApJ...599.1238D, 2012MNRAS.426.3241N}.  The relative importance of magnetic flux can be described by $\phi \equiv \Phi_{\mathrm{BH}} (\dot{M} r_g^2 c)^{-1/2}$, where $\Phi_{\rm BH}$ is the magnetic flux interior to the black hole equator and $\dot{M}$ is the mass accretion rate through the horizon. MAD models have $\phi \sim \phi_{crit} \sim 60$. \footnote{In the Lorentz-Heaviside units commonly used in GRMHD simulations $\phi_\mathrm{crit}$ is smaller by a factor of $(4\pi)^{1/2} \simeq 3.545$.}
 %\aco{Should we cite the work-in-progress by Narayan about spinup-spindown for MAD models where magnetic flux it can be written as a function of BH spin? I've verified the same tendency for BHAC.}
@@ -244,7 +244,7 @@ A summary of all radiative transfer calculations is given in Table~\ref{tab:radi
   \colhead{$\kappa$}               &%
   \colhead{$i^\circ$}              &%
   \colhead{$\nu$}             &%
-  \colhead{SED}                    &%
+  \colhead{MWL SED}                    &%
   \colhead{$\Delta t$}    &%
   \colhead{\#frames_{230}}       \\
  &  & & & & & & \colhead{[GHz]} & & \colhead{[1000 M]} &
@@ -258,8 +258,8 @@ BHAC & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,90]  & [86,230] & Yes & [10-1
 BHAC & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,90]  & [86,230] & Yes & [20-25) & $100,000$ \\
 BHAC & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,90]  & [86,230] & Yes & [25-30) & $100,000$ \\
 HAMR & 1 & [1,40,160] & 1 & - & - &  [10,50,90]  & [86,230] & Yes & [30-35) & x \\
-KORAL& 1 & [?]    & 1 & - & - &  [10,30,...,90]      & [86,230]  & ?   & ?       & x \\
-Wind Accretion& 1 & [?]    & 1 & - & - &  [10,30,...,90]      & [86,230]  & ?   & ?       & x \\
+KORAL& 1 & [20]    & 1 & - & - &  [10,30,...,90]      & [86,230]  &  No   & [0-100)  & x \\
+Wind Accretion& 1 & [13,28]    & 1 & - & - &  [10,30,...,90]      & [86,230]  & No   & ?       & x \\
 HAMR Tilted & 1 & [1,40,160] & 1 & - & - &  [10,50,90]  & [86,230] & Yes & [100-103) & x \\
 \hline
 \multicolumn{11}{c}{\bf Thermal + non-thermal power-law models}\\
@@ -273,7 +273,7 @@ BHAC & 1 & [1,10,40,80,160]  & 1 & -  &  variable $\kappa=\kappa(\beta,\sigma)$ 
 HAMR & 1 & [1,10,40,160] & 1 & - &  variable $\kappa=\kappa(\beta,\sigma)$ & [10,30,...,90]  & [86,230] & Yes & [25-30) & $100,000$ \\
 \enddata
 \caption{Summary of emission simulations in \sgra EHT model library.\kc{flipped PL and kappa, and propose to remove $\gamma_{\rm min/max}$ from the table as it is a local quantity in hamr models} The cadence of KHARMA=5M, BHAC=10M for thermal and nonthermal variable kappa, 50M for nonthermal variable efficiency models. variable kappa HAMR cadence is 10M.
-\gw{Rhigh for the wind accretion models is either 28 or 13, but these are for two separate simulations (so it's not like there's one simulation where Rhigh has been varied); no SED from grmonty-like codes, but there is ``SED''-like information from imaging at different frequencies}
+\gw{Rhigh for the wind accretion models is either 28 or 13, but these are for two separate simulations (so it's not like there's one simulation where Rhigh has been varied); no SED from grmonty-like codes, but there is ``SED''-like information from imaging at different frequencies}\monika{how many 230 ghz frames we have for these two wind models and within what times??}
 }~\label{tab:radiativemodels}
 \end{deluxetable*}
 %\end{rotatetable}
