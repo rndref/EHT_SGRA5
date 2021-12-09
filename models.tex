@@ -60,7 +60,7 @@ The one-zone model implies that the accretion flow is at high temperature and lo
 This motivates consideration of
 \emph{i})~a two-temperature model for the plasma where electrons are cooler than the ions \citep{1976ApJ...204..187S,1977ApJ...214..840I, 1982Natur.295...17R} and
 \emph{ii})~nonthermal electron distribution functions.
-As demonstrated in \citet{2000ApJ...541..234O}, \citep{2009ApJ...701..521C}, and \citep{2014A&A...570A...7M} \citep[see also more recent work by][and references therein]{2018A&A...612A..34D, 2021A&A...650A.163C, 2021arXiv211102518F, 2021arXiv211203933E} and references therein), both effects may change the predicted properties of \sgra.
+As demonstrated in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \citet{2014A&A...570A...7M} \citep[see also more recent work by][and references therein]{2018A&A...612A..34D, 2021A&A...650A.163C, 2021arXiv211102518F, 2021arXiv211203933E}, both effects may change the predicted properties of \sgra.
 %\br{my only remaining comment is that I think that the sentence ``As demonstrated in \citet{2000ApJ...541..234O} and \citet{2014A&A...570A...7M} (see also more recent work by \citealt{2018A&A...612A..34D} and references therein) both effects may change the predicted properties of \sgra.'' should be cut, or extended with non-EHT refs on how other groups actually probe those collisionless effects dynamically}
 
 %==============================================================================
@@ -70,7 +70,7 @@ The one-zone model is too simple for comparison with the rich set of observation
 for extensive plasma parameter surveys (see Section~\ref{sec:future}).
 In this work, however, we apply more complicated, dynamical model generated using numerical simulations to include turbulent fluctuations and related dynamical features.
 
-We simulate the plasma flow with an ideal GRMHD\footnote{Notice that ideal GRMHD models do not fully capture collisionless aspect of the the accretion flow and jets; we discuss the model limitations in  Section~\ref{sec:limits}} model, assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
+We simulate the plasma flow with an ideal GRMHD\footnote{Notice that ideal GRMHD models do not capture collisionless aspect of the accretion flow and jets; we discuss the model limitations in  Section~\ref{sec:limits}} model, assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
 
 \begin{deluxetable*}{cccccccc}
 \tabletypesize{\footnotesize}
@@ -115,7 +115,7 @@ We model the plasma flow around \sgra using ideal, non-radiative GRMHD.  The gra
 
 We integrate the GRMHD equations in three spatial dimensions using multiple methods: {KHARMA} \citep{2021JOSS....6.3336P}, BHAC \citep{2017ComAC...4....1P}, HAMR \citep{2018MNRAS.474L..81L}, Koral \citep{2013MNRAS.429.3533S} and Athena++ \citep{2016ApJS..225...22W}; see \citealt{2019ApJS..243...26P} and \citet[in prep]{Olivares_et_al} for a comparison of GRMHD codes.  All simulations assume a constant adiabatic index $\Gamma_{\rm ad}$.
 
-The \emph{standard} initial conditions for the GRMHD integrations are a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F}\aco{\citep[see also][]{2002MNRAS.334..383F}}\monika{why do we need to have this second citation? is that essential?} in a prograde ($\abh > 0$) or retrograde ($\abh < 0$) orbit.  In all models except the HAMR-Tilted models the torus orbital angular momentum is either parallel or antiparallel to the black hole spin. The torus is parametrized by an inner radius $R_{\rm in}$, typically $12\rg$, and the pressure maximum radius $R_{\rm max}$, typically $24\rg$.
+The \emph{standard} initial conditions for the GRMHD integrations are a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F}\aco{\citep[see also][]{2002MNRAS.334..383F}}\monika{why do we need to have this second citation? is that essential?}\br{I thought Font shows another hydro torus equilibrium in this paper? We don't use that one, so I would not cite that paper} in a prograde ($\abh > 0$) or retrograde ($\abh < 0$) orbit.  In all models except the HAMR-Tilted models the torus orbital angular momentum is either parallel or antiparallel to the black hole spin. The torus is parametrized by an inner radius $R_{\rm in}$, typically $12\rg$, and the pressure maximum radius $R_{\rm max}$, typically $24\rg$.
 The torus is seeded with a weak, poloidal magnetic field %\aco{ with magnetization $\beta \equiv p_{\rm gas}/p_{\rm mag} =100$}.
 % we dont want to elaborate on details like that here
 
@@ -125,8 +125,8 @@ Once the evolution has started, a combination of instabilities including the mag
 
 It is well established (see e.g., \citetalias{M87PaperV}, \citetalias{M87PaperVIII} and references therein) that the magnetic flux through the event horizon divides the outcomes into two categories: the Magnetically Arrested Disk (MAD) state \citep[e.g.,][]{1974Ap&SS..28...45B, Igumenschchev:2003, 2003PASJ...55L..69N} in which the magnetic flux near the horizon saturates and significantly affects the dynamics of the flow, and the Standard and Normal Evolution (SANE) state \citep[e.g.,][]{2003ApJ...589..444G, devilliers:2003, Narayan:2012}.  The relative importance of magnetic flux can be described by $\phi \equiv \Phi_{\mathrm{BH}} (\dot{M} r_g^2 c)^{-1/2}$, where $\Phi_{\rm BH}$ is the magnetic flux interior to the black hole equator and $\dot{M}$ is the mass accretion rate through the horizon. MAD models have $\phi \sim \phi_{crit} \sim 60$. \footnote{In the Lorentz-Heaviside units commonly used in GRMHD simulations $\phi_\mathrm{crit}$ is smaller by a factor of $(4\pi)^{1/2} \simeq 3.545$.} \aco{Should we cite the work-in-progress by Narayan about spinup-spindown for MAD models where magnetic flux it can be written as a function of BH spin? I've verified the same tendency for BHAC.}\monika{not necessary, this is not established and should be first published we want to limit in prep as much as possible} In MAD models magnetic flux accretes onto the hole until $\phi \gtrsim \phi_{crit}$, then magnetic flux is expelled from the hole and escapes through the inflowing plasma.  SANE models have $\phi < \phi_c$, and in most of our standard models have $\phi \sim 1$.
 
-We also consider two \emph{non-standard} GRMHD simulations: strongly magnetized non-MAD tilted torus simulations \citep{ref} and a model in which \sgra is fed directly by winds from stars in its vicinity \citep{2020ApJ...896L...6R}. The self-consistent wind feeding simulations result in a mode of accretion that is somewhat similar to MAD but typically has lower mean angular momentum and is less well organized.
-These models have $\abh = 0$.
+We also consider two \emph{non-standard} GRMHD simulations: strongly magnetized non-MAD tilted torus simulations \citep{Liska2018, Chatterjee2020} and a model in which \sgra is fed directly by winds from stars in its vicinity \citep{2020ApJ...896L...6R}. The self-consistent wind feeding simulations result in a mode of accretion that is somewhat similar to MAD but typically has lower mean angular momentum and is less well organized.
+These wind-fed models have $\abh = 0$.
 
 The GRMHD model library is summarized in Table~\ref{tab:GRMHDmodels}. In Figure~\ref{fig:GRMHD} we show a few examples of standard and non-standard GRMHD runs. The models vary in numerical method and in numerical resolution. We present more information on the numerical methods and models in Appendix~\ref{app:numerical} and in  Appendix~\ref{app:variability}.
 
@@ -169,7 +169,7 @@ collisionless plasma simulations (e.g., Kunz et al. 2015 and references therein)
 which has width parameter $w$ and power-law index parameter $\kappa$, or with a power-law distribution function:
 \begin{align}
   \frac{d n_e}{d\gamma} =
-  n_e \frac{ (p-1)}{(\gamma^{1-p_{pl}}_\mathrm{min} - \gamma^{1-p}_\mathrm{max})} \gamma^{-p_{pl}}
+  n_e \frac{ (p-1)}{({\gamma^{1-p_\mathrm{pl}}_\mathrm{min}} - {\gamma^{1-p}_\mathrm{max}})} \gamma^{-p_\mathrm{pl}}
   \label{eq:nonthermaleDF}
 \end{align}
 which has power-law index $p_{pl}$ and upper and lower limits  $\gamma_{\min}$ and $\gamma_{\max}$.
