@@ -18,15 +18,13 @@ Throughout the paper we also assume that \sgra is a black hole so that the space
 Using the above mass and distance, the implied characteristic length ${\mathcal L} \equiv G M/c^2 = 6.1 \times 10^{11}\cm$, characteristic time ${\mathcal T} \equiv G M/c^3 = 20.5 \sec$, and angular scale ${\mathcal \theta_g} \equiv G\mbh/(c^2 D) = 5.03\uas$.  The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D) = (52.2 \pm 2.08) \uas $, where errorbars enclose uncertainty in the black hole spin and viewing angle (see e.g., \citealt{2020ApJ...896....7M}).
 
 If the emitting plasma is ionized hydrogen (electron-proton plasma) then the Eddington luminosity is
-$ L_\mathrm{Edd}
-= 4\pi G\mbh c m_p/\sigma_{T}
-= 5.2 \times 10^{44}\allowbreak \ergsps$.
-The corresponding Eddington accretion rate is $ \dot\mbh_\mathrm{Edd} \equiv L_\mathrm{Edd}/(0.1 c^2)
-= 5.8 \times 10^{24} \gm \sec^{-1}
-= 0.09 \msun \yr^{-1}$ where nominal efficiency is 10\%
-and the Eddington ratio:
-$ L_\mathrm{bol}/L_\mathrm{Edd}
-= 1.9 \times 10^{-10} (L_\mathrm{bol} /10^{35}) $ where $L_\mathrm{bol}$ is in $\erg\sec^{-1}$. In a quiescent, non-flaring state the bolometric luminosity of \sgra is $L_\mathrm{bol} \sim 10^{35}\erg\sec^{-1}$ resulting in an extremely small Eddington ratio. In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected and that model emission can be calculated in a post-processing step.
+$L_\mathrm{Edd} = 4\pi G\mbh c m_p/\sigma_{T} = 5.2 \times 10^{44}\allowbreak \ergsps$.
+The corresponding Eddington accretion rate is
+$\dot\mbh_\mathrm{Edd} \equiv L_\mathrm{Edd}/(0.1 c^2) = 5.8 \times 10^{24} \gm \sec^{-1} = 0.09 \msun \yr^{-1}$
+where nominal efficiency is 10\% and the Eddington ratio:
+$ L_\mathrm{bol}/L_\mathrm{Edd} = 1.9 \times 10^{-10} (L_\mathrm{bol} /10^{35})$
+where $L_\mathrm{bol}$ is in $\erg\sec^{-1}$.
+In a quiescent, non-flaring state the bolometric luminosity of \sgra is $L_\mathrm{bol} \sim 10^{35}\erg\sec^{-1}$ resulting in an extremely small Eddington ratio. In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected and that model emission can be calculated in a post-processing step.
 
 % below probably not necessary:
 % \footnote{Translation of the source flux to luminosity is given by: $ \nu L_\nu
@@ -37,16 +35,18 @@ $ L_\mathrm{bol}/L_\mathrm{Edd}
 %==============================================================================
 \subsection{Estimate from One-Zone Model}
 
-The development of complex models is guided by simple estimates. Following \citetalias{M87PaperV} we consider a one-zone model for \sgra. These results follow one-zone models developed in the literature over many decades (refs).
+The development of complex models is guided by simple estimates.
+Following \citetalias{M87PaperV} we consider a one-zone model for \sgra.
+These results follow one-zone models developed in the literature over many decades (refs).
 
 Our one-zone model is a uniform plasma sphere of radius $r = 5 \rg$ with uniform magnetic field oriented at $\pi/3$ to the line-of-sight. The magnetic pressure is given by $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $T_i \equiv$ ion temperature, $T_e \equiv$ electron temperature, $\beta=1$, and $T_i = 3 T_e$.  We assume $\Theta_e \equiv  k T_e / m_e c^2 = 10$.
 
 Using the thermal emissivity for synchrotron radiation $j_{\nu}$ (e.g., \citealt{2011ApJ...737...21L}) and assuming optically thin emission, the flux density in Jy is $F_\nu = (4/3)\pi r^3 j_\nu D^{-2} 10^{23}$.  Setting $F_\nu = 2.4$Jy (the average measured by ALMA during the 2017 campaign) yields a nonlinear equation for $n_e$ with solution
-\begin{eqnarray}
-\label{eq:onezone}
-    n_e &\simeq& 1.1\times 10^6 \,\rm cm^{-3},\\
-    B &\simeq& 30 \rm\, G.
-\end{eqnarray}
+\begin{align}
+  n_e &\simeq 1.1\times 10^6 \,\rm cm^{-3},\\
+  B   &\simeq 30 \rm\, G.
+  \label{eq:onezone}
+\end{align}
 (the synchrotron optical depth $\tau_S = r j_\nu/B_\nu \simeq 0.4$, so the optically thin approximation is marginal).
 These values are consistent with $n_e$ and $B$ of a similar one-zone model fitted to archival Sgr~A* millimeter spectrum as reported in \citet{2019ApJ...881L...2B}.
 %MM: fit of similar one zone model to Terahertz spectrum from ALMA infers ne=2-5x10^6 cm^-3, B=10-50 Gauss, T_e=1-3x10^11 K => Thetae=16-50
@@ -84,10 +84,10 @@ We simulate the plasma flow with an ideal GRMHD\footnote{Notice that ideal GRMHD
   \colhead{Reference}
 }
 \startdata
-KHARMA & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 1000 & [288x128x128] & This work, Wong+2021, \vd{Dhruv+2022?} \\
-BHAC  & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 3333& [512x192x192] & This work \\
-HAMR & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $13/9,5/3$ & 35,000 & 1000/200 & [348/240×192×192] &This work \\
-KORAL &0,\pm 0.3,\pm 0.5,\pm 0.7,\pm 0.9 & MAD & $13/9$ & 101,000 & 100,000 & [288x192x144] & \cite{2021arXiv210812380N} \\
+KHARMA & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $4/3$ & 30,000 & 1000 & [288x128x128] & This work, Wong+2021, \vd{Dhruv+2022?} \\
+BHAC   & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $4/3$ & 30,000 & 3333 & [512x192x192] & This work \\
+HAMR   & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $13/9,5/3$ & 35,000 & 1000/200 & [348/240×192×192] &This work \\
+KORAL  & 0,$\pm0.3$,$\pm0.5$,$\pm0.7$,$\pm0.9$ & MAD & $13/9$ & 101,000 & 100,000 & [288x192x144] & \cite{2021arXiv210812380N} \\
 HAMR-Tilt\tablenotemark{$*$} & $15/16$ & IN-SANE & $5/3$ & 105,000 & 100,000 & [448x144x240] & \citet{Chatterjee2020} \\
 Wind Accretion\tablenotemark{$*$} & 0 & MAD$\times2$ & 5/3 & 20,000 & 2,400 & [356x128x128] & \citet{2020ApJ...896L...6R}
 \enddata
@@ -169,7 +169,7 @@ Here $b \equiv \beta/\beta_\mathrm{crit}$. This model has three free parameters:
 
 In {\it non-thermal} models the eDF includes a power-law tail extending to high energy.
 %\jd{this needs some references to kappa-jet work. e.g. Davelaar+2018\&2019} % already cited earlier in text
-This is implemented in two ways: 
+This is implemented in two ways:
 with a power-law distribution function:
 \begin{align}
   \frac{1}{n_e} \frac{d n_e}{d\gamma} =
@@ -242,42 +242,41 @@ A summary of all radiative transfer calculations is given in Table~\ref{tab:radi
 \tabletypesize{\footnotesize}
 \renewcommand{\arraystretch}{1.1}
 \tablehead{
-  \colhead{Model} &%
-  \colhead{$\Rl$}                  &%
-  \colhead{$\Rh$}                  &%
-  \colhead{$\beta_{\rm crit}$}     &%
-  \colhead{$p_{pl}$}                    &%
- %% \colhead{$\gamma_{\rm min/max}$} &%
-  \colhead{$\kappa$}               &%
-  \colhead{$i^\circ$}              &%
-  \colhead{$\nu$}             &%
-  \colhead{MWL SED}                    &%
-  \colhead{$\Delta t$}    &%
-  \colhead{\#frames_{230}}       \\
- &  & & & & & & \colhead{[GHz]} & & \colhead{[1000 M]} &
-    }
+  \colhead{Model}              &%
+  \colhead{$\Rl$}              &%
+  \colhead{$\Rh$}              &%
+  \colhead{$\beta_{\rm crit}$} &%
+  \colhead{$p_{pl}$}           &%
+% \colhead{$\gamma_{\rm min/max}$} &%
+  \colhead{$\kappa$}           &%
+  \colhead{$i^\circ$}          &%
+  \colhead{$\nu$}              &%
+  \colhead{MWL SED}            &%
+  \colhead{$\Delta t$}         &%
+  \colhead{$\#frames_{230}$}     \\
+  & & & & & & & \colhead{[GHz]} & & \colhead{[1000 M]} &}
 \startdata
 \multicolumn{11}{c}{\bf Thermal models}\\
-KHARMA & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,170] & [86,230] & Yes & [15,20) &  $360,000$ \\
-KHARMA & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,170] & [86,230] & Yes & [20-25) & $360,000$ \\
-KHARMA & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,170] & [86,230] & Yes & [25-30) & $360,000$\\
-BHAC & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,90]  & [86,230] & Yes & [10-15) & $100,000$ \\
-BHAC & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,90]  & [86,230] & Yes & [20-25) & $100,000$ \\
-BHAC & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,90]  & [86,230] & Yes & [25-30) & $100,000$ \\
-HAMR & 1 & [1,40,160] & 1 & - & - &  [10,50,90]  & [86,230] & Yes & [30-35) & 45,000 \\
-KORAL& 1 & [20]    & 1 & - & - &  [10,30,...,170]      & [86,230]  &  No   & [5-100)  & 107,507 \\
-Wind Accretion& 1 & [13,28]    & 1 & - & - &  N/A      & [86,230]  & No   & 10       & 1802 \\
-HAMR Tilted & 1 & [1,40,160] & 1 & - & - &  [10,50,90]  & [86,230] & Yes & [100-103) & 8,100 \\
+KHARMA & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,170] & [86,230] & Yes & [15,20) & 360,000 \\
+KHARMA & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,170] & [86,230] & Yes & [20-25) & 360,000 \\
+KHARMA & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,170] & [86,230] & Yes & [25-30) & 360,000 \\
+BHAC   & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,90]  & [86,230] & Yes & [10-15) & 100,000 \\
+BHAC   & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,90]  & [86,230] & Yes & [20-25) & 100,000 \\
+BHAC   & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,90]  & [86,230] & Yes & [25-30) & 100,000 \\
+HAMR   & 1 & [1,40,160]    & 1 & - & - & [10,50,90]      & [86,230] & Yes & [30-35) & 45,000 \\
+KORAL  & 1 & [20]          & 1 & - & - & [10,30,...,170] & [86,230] & No  & [5-100)   & 107,507 \\
+Wind Accretion & 1 & [13,28]    & 1 & - & - & N/A        & [86,230] & No  & 10        & 1802 \\
+HAMR Tilted    & 1 & [1,40,160] & 1 & - & - & [10,50,90] & [86,230] & Yes & [100-103) & 8,100 \\
 \hline
-\multicolumn{11}{c}{\bf Thermal + non-thermal power-law models}\\
-HAMR & 1 & [1,40,160] & 1 & 4 & - &  [10,50,90]  & [86,230] & No & [30-35) & 45,000 \\
+\multicolumn{11}{c}{\bf Thermal + non-thermal power-law models} \\
+HAMR & 1 & [1,40,160] & 1 & 4 & - & [10,50,90] & [86,230] & No & [30-35) & 45,000 \\
 \hline
-\multicolumn{11}{c}{\bf Thermal + non-thermal $\kappa$ models}\\
-BHAC & 1 & [1,10,40,160]  & 1 & -  &  3.5 ($\epsilon_0=0.05$) & [10,30,...,90]  & [86,230] & No & [25-30) & 20,000  \\
-BHAC & 1 & [1,10,40,160]  & 1 & -  &  3.5 ($\epsilon_0=0.10$) & [10,30,...,90]  & [86,230] & No & [25-30) & 20,000  \\
-BHAC & 1 & [1,10,40,160]  & 1 & -  &  3.5 ($\epsilon_0=0.20$) & [10,30,...,90]  & [86,230] & No & [25-30) & 20,000 \\
-BHAC & 1 & [1,10,40,80,160]  & 1 & -  &  variable $\kappa=\kappa(\beta,\sigma)$  & [10,30,...,90]  & [86,230] & No & [25-30) & $125,000$ \\
-HAMR & 1 & [1,10,40,160] & 1 & - &  variable $\kappa=\kappa(\beta,\sigma)$ & [10,30,...,90]  & [86,230] & Yes & [25-30) & $100,000$ \\
+\multicolumn{11}{c}{\bf Thermal + non-thermal $\kappa$ models} \\
+BHAC & 1 & [1,10,40,160]    & 1 & - & 3.5 ($\epsilon_0=0.05$) & [10,30,...,90]  & [86,230] & No & [25-30) & 20,000 \\
+BHAC & 1 & [1,10,40,160]    & 1 & - & 3.5 ($\epsilon_0=0.10$) & [10,30,...,90]  & [86,230] & No & [25-30) & 20,000 \\
+BHAC & 1 & [1,10,40,160]    & 1 & - & 3.5 ($\epsilon_0=0.20$) & [10,30,...,90]  & [86,230] & No & [25-30) & 20,000 \\
+BHAC & 1 & [1,10,40,80,160] & 1 & - & variable $\kappa=\kappa(\beta,\sigma)$ & [10,30,...,90] & [86,230] & No  & [25-30) & 125,000 \\
+HAMR & 1 & [1,10,40,160]    & 1 & - & variable $\kappa=\kappa(\beta,\sigma)$ & [10,30,...,90] & [86,230] & Yes & [25-30) & 100,000 \\
 \enddata
 \caption{Summary of emission simulations in \sgra EHT model library.\kc{flipped PL and kappa, and propose to remove $\gamma_{\rm min/max}$ from the table as it is a local quantity in hamr models} The cadence of KHARMA=5M, BHAC=10M for thermal and nonthermal variable kappa, 50M for nonthermal variable efficiency models, and HAMR=10M for thermal, nonthermal powerlaw and variable kappa.
 \gw{Rhigh for the wind accretion models is either 28 or 13, but these are for two separate simulations (so it's not like there's one simulation where Rhigh has been varied); no SED from grmonty-like codes, but there is ``SED''-like information from imaging at different frequencies}\monika{how many 230 ghz frames we have for these two wind models and within what times??}
