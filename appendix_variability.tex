@@ -1,5 +1,17 @@
 \section{Variability Checks}\label{app:variability}
 
+
+\monika{could we incorporate this awasome plot (Fig with M3 for kharma and koral) below into variability check #3?  This change was suggested by coordinators of the paper}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{./figures/Koral_vs_IL_MI.png}
+  \caption{Distribution of \mi{3} from the full \koral model set, from the first half, from the second half, and from the comparable \kharma thermal models.}
+  \label{fig:koral_MI}
+\end{figure}  
+% Resolution is a much easier sell, we're well converged. Could cite e.g. Gelles+ though that's M87
+
+
 \note{David, Vedant to provide first draft}
 
 The discussion section lists several possible causes for the apparently high variability of the models in comparison to the data.
@@ -17,7 +29,7 @@ Discussion of high resolution HAMR model.
 mapping between 230 GHz variability and accretion rate variability
 
 %==============================================================================
-2. Image resolution.
+2. Image resolution. 
 
 %==============================================================================
 3. Model duration is not sufficiently long.
@@ -116,4 +128,4 @@ We expect the ions and electrons in in hot accretion flows to be thermally decou
 
 The adiabatic index of the fluid assumes a value between $\Gamma_{e}$ and $\Gamma_{i}$ dictated by the thermodynamics of the ions and electrons (cf. Figure 4 in \citealt{10.1093/mnras/stw3116}). Since we do not model electron thermodynamics and ignore radiative effects during our fluid simulations, we consider a constant value $\Gamma_{ad}$, and set it to 4/3 for the \textit{standard} set of simulations, ie. $\Gamma_{ad}=\Gamma_{e}$. While this may be the case in the funnel, where the electrons are the hottest and highly relativistic; the fluid adiabatic index value away from the poles can be higher than the relativistic value.
 
-We look at the interplay between fluid adiabatic index and lightcurve variability by evaluating $M_{3}$ for thermal, GRMHD models with a higher fluid adiabatic index. This includes MAD models with $\Gamma_{ad}=13/9$ (\textcolor{magenta}{ref. section on KORAL models}; \citealt{2021arXiv210812380N}) and SANE models with $\Gamma_{ad}=5/3$. The models exhibit lightcurve variability similar to the \textit{standard} library and have an average $M_{3}$ that is greater than the value obtained from the ALMA lightcurve. \kc{maybe discuss hamr models here too}
+We look at the interplay between fluid adiabatic index and lightcurve variability by evaluating $M_{3}$ for thermal, GRMHD models with a higher fluid adiabatic index. This includes MAD models with $\Gamma_{ad}=13/9$ (\textcolor{magenta}{ref. section on KORAL models}; \citealt{2021arXiv210812380N}) and SANE models with $\Gamma_{ad}=5/3$. The models exhibit lightcurve variability similar to the \textit{standard} library and have an average $M_{3}$ that is greater than the value obtained from the ALMA lightcurve. \kc{maybe discuss hamr thermal models here too}

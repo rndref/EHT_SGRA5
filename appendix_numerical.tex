@@ -1,13 +1,15 @@
 \section{Numerical Methods}\label{app:numerical}
 
-
-%code comparison and radiative consistency  moved here as discussed among coordinators on Thursday Dec 9th 2021 meeting
+In the following subsections we demonstrate that 
+...
 
 %==============================================================================
-\subsection{Radiative Transfer Consistency and Convergence}
+%code comparison and radiative consistency  moved here as discussed among coordinators on Thursday Dec 9th 2021 meeting
+
+\subsection{Radiative Transfer Models}
 \label{app:radtrans}
 
-\subsubsection{Images}
+\subsubsection{Consistency and Convergence of Images}
 
 \bp{Figures here will need to be touched up}
 
@@ -19,17 +21,17 @@ As a  authors and maintainers of several EHT radiative transfer codes participat
     \mathrm{MSE}(A, B) &= \frac{\sum_j|A_j-B_j|^2}{\sum_j|A_j|^2}
 \end{align}
 
-summed over each image pixel $j$. All images agree to 0.04 Jy (8\%) in flux, and to a mean squared error of 0.0211, recorded by convention as a percentage 2.11\%.  This level of agreement far exceeds the detector uncertainties in the EHT measurements of SgrA* or M87*, rendering the choice of GRRT code irrelevant in producing images for analyses in this paper.
+summed over each image pixel $j$. All images agree to 0.04~Jy (8\%) in flux, and to a mean squared error of 0.0211, recorded by convention as a percentage 2.11\%.  This level of agreement far exceeds the detector uncertainties in the EHT measurements of \sgra or \m87, rendering the choice of GRRT code irrelevant in producing images for analyses in this paper.
 
 \begin{figure*}
   \centering
   %\note{altex}
   \includegraphics[width=0.9\textwidth]{figures/grmhd_hi_IntegratedUnpolarizeds_plot.pdf}
-  \caption{Tables comparing the outputs from several radiative transfer codes used within the EHT for generating images of GRMHD models.  The left table compares total flux between all images (all fluxes were about 0.5 Jy). The right table compares the Mean Squared Error, described in Section \ref{app:radtrans}, which compares image contents.}
+  \caption{Tables comparing the outputs from several radiative transfer codes used within the EHT for generating images of GRMHD models.  The left table compares total flux between all images (all fluxes were about 0.5~Jy). The right table compares the Mean Squared Error, described in Section \ref{app:radtrans}, which compares image contents.}
   \label{fig:radtrans_grmhd_comp}
 \end{figure*}
 
-The image field of view is another potential concern in evaluating models -- the need for efficiency in generating the millions of images used in this analysis was weighed against any emission which might be missed in images with small FOV.  For models which pass size \& other constraints, the FOV is large enough to capture relevant emission, as shown in Figure \ref{fig:radtrans_fov_study}.
+The image field of view (FOV) is another potential concern in evaluating models -- the need for efficiency in generating the millions of images used in this analysis was weighed against any emission which might be missed in images with small FOV. For models which pass size \& other constraints, the FOV is large enough to capture relevant emission, as shown in Figure \ref{fig:radtrans_fov_study}.
 
 \begin{figure}
   \centering
@@ -39,7 +41,7 @@ The image field of view is another potential concern in evaluating models -- the
   \label{fig:radtrans_fov_study}
 \end{figure}
 
-\subsubsection{Spectral Energy Distribution}
+\subsubsection{Consistency and Convergence of Spectral Energy Distributions}
 
 \ckc{CK will do first pass}
 
@@ -51,11 +53,9 @@ The image field of view is another potential concern in evaluating models -- the
     \label{fig:sed_vv}
 \end{figure*}
 
-
 %==============================================================================
 \subsection{GRMHD Models Consistency and Convergence}\label{app:resolution_study}
-
-
+\monika{can we also change title of this section into eg "consistency of pipelines?" or something like that}
 % note: passfail tables are consistently, e.g., tab:illinoisPF or tab:VKhamrPF
 
 \subsubsection{Comparison of \kharma and \bhac thermal models}
@@ -65,7 +65,7 @@ As can be seen in Table \ref{tab:GRMHDmodels} the thermal models have been calcu
 \begin{figure*}
   \centering
   \includegraphics[width=0.8\textwidth]{./figures/BHAC_iharm_correlation}
-  \caption{Correlation between BHAC and KHARMA models for 9 model constraints.  The horizontal axis is the constraint value from \bhac/\bhoss, and the vertical axis shows the constraint value from \kharma/\ipole.  Each point corresponds to a single model, with the width of the distribution shown by the error bars.  See text for details.\monika{this figure needs to have code labels updated}}
+  \caption{Correlation between BHAC and KHARMA models for 9 model constraints.  The horizontal axis is the constraint value from \bhac/\bhoss, and the vertical axis shows the constraint value from \kharma/\ipole.  Each point corresponds to a single model, with the width of the distribution shown by the error bars.  See text for details.}
   \label{fig:modelcorrelation}
 \end{figure*}
 
@@ -88,17 +88,8 @@ The smaller correlation of the m-ring parameters as compared to the other parame
 
 We find ourselves somewhat surprised by the strength of the correlations seen in Figure \ref{fig:modelcorrelation}.  The range of each constraint is significantly larger than the width of the correlation, so the variations between models are real, detectable, and reproducible with independent codes.  The question of the origin of the systematic offsets between models for some constraints (for example, in the NIR) is interesting but beyond the scope of this paper.   
 
-\subsubsection{Comparison of \kharma and \koral thermal models}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\columnwidth]{./figures/Koral_vs_IL_MI.png}
-  \caption{Distribution of \mi{3} from the full \koral model set, from the first half, from the second half, and from the comparable Illinois thermal models.}
-  \label{fig:koral_MI}
-\end{figure}  
-% Resolution is a much easier sell, we're well converged. Could cite e.g. Gelles+ though that's M87
-
-\subsubsection{Comparison of \kharma and \hamr thermal models}
+\subsubsection{Comparison of \hamr and \kharma thermal models}
 
 %\note{Doosoo, Koushik to write here about HAMR thermal models.}
 Along the KHARMA/iPOLE and BHAC/BHOSS models, we produced a set of thermal models out to $35,000\tg$ using the GRMHD code H-AMR and the GRRT code BHOSS (see Table~\ref{tab:GRMHDmodels}). These models consider a gas adiabatic index of $\Gamma_{\rm ad}=5/3$ for the SANE models and $\Gamma_{\rm ad}=13/9$ for the MAD models (Table~\ref{tab:radiativemodels}), allowing us to understand how sensitive the images are to the GRMHD fluid properties, in addition to code numerics. 
@@ -106,19 +97,3 @@ Along the KHARMA/iPOLE and BHAC/BHOSS models, we produced a set of thermal model
 We are glad to note that overall, the H-AMR/BHOSS thermal eDF images perform similarly to the KHARMA/iPOLE and BHAC/BHOSS models. \kc{needs verification from Michi}
 
 \kc{is the plan to do H-AMR and KHARMA correlations similar to figure 18?}
-
-
-%==============================================================================
-
-%==============================================================================
-\subsection{Cross-Validations}
-
-\ckc{Christian to provide figure}
-
-\begin{figure*}
-    \centering
-    %\includegraphics{}
-    \note{altex: scatter plot between, e.g., Illinois and Frankfurt models for the different measurable.}
-    \caption{Comparing model predictions from different modeling pipelines.  ...}
-    \label{fig:xv}
-\end{figure*}

@@ -86,9 +86,9 @@ We simulate the plasma flow with an ideal GRMHD\footnote{Notice that ideal GRMHD
 \startdata
 KHARMA & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 1000 & [288x128x128] & This work, Wong+2021 \\
 BHAC  & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 3333& [512x192x192] & This work \\
-HAMR & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $13/9,5/3$ & 35,000 & 1000,200 & [348/240×192×192] &This work \\
-KORAL &-0.5,0,0.3,0.5,0.7,0.9 & MAD & $13/9$ & 101,000 & ? & ?& \cite{2021arXiv210812380N} \\
-HAMR-Tilt\tablenotemark{$*$} & $15/16$ & IN-SANE & $5/3$ & 100,000 & 100,000 & [448x144x240] & \citet{Liska2018}, \citet{Chatterjee2020} \\
+HAMR & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $13/9,5/3$ & 35,000 & 1000/200 & [348/240×192×192] &This work \\
+KORAL &0,\pm 0.3,\pm 0.5,\pm 0.7,\pm 0.9 & MAD & $13/9$ & 101,000 & 100,000 & [288x192x144] & \cite{2021arXiv210812380N} \\
+HAMR-Tilt\tablenotemark{$*$} & $15/16$ & IN-SANE & $5/3$ & 105,000 & 100,000 & [448x144x240] & \citet{Chatterjee2020} \\
 Wind Accretion\tablenotemark{$*$} & 0 & MAD$\times2$ & 5/3 & 20,000 & 2,400 & [356x128x128] & \citet{2020ApJ...896L...6R}
 \enddata
 \tablenotetext{$*$}{Non-standard model.}
@@ -113,7 +113,7 @@ Wind Accretion\tablenotemark{$*$} & 0 & MAD$\times2$ & 5/3 & 20,000 & 2,400 & [3
 % \paragraph{Methods, initial and boundary conditions:}
 We model the plasma flow around \sgra using ideal, non-radiative GRMHD.  The gravitational field is given by the Kerr metric, with mass given by Equation (\ref{eq:mass}) and with black hole spin $\abh$ as free parameter \citep[see e.g.,][]{2003ApJ...589..444G, 2005ApJ...635..723A, 2007A&A...473...11D}.
 
-We integrate the GRMHD equations in three spatial dimensions using multiple methods: {KHARMA} \citep{2021JOSS....6.3336P}, BHAC \citep{2017ComAC...4....1P}, HAMR \citep{2018MNRAS.474L..81L}, Koral \citep{2013MNRAS.429.3533S} and Athena++ \citep{2016ApJS..225...22W}; see \citealt{2019ApJS..243...26P} and \citet[in prep]{Olivares_et_al} for a comparison of GRMHD codes.  All simulations assume a constant adiabatic index $\Gamma_{\rm ad}$.
+We integrate the GRMHD equations in three spatial dimensions using multiple methods: {KHARMA} \citep{2021JOSS....6.3336P}, BHAC \citep{2017ComAC...4....1P}, HAMR \citep{Liska2018}, Koral \citep{2013MNRAS.429.3533S} and Athena++ \citep{2016ApJS..225...22W}; see \citealt{2019ApJS..243...26P} and \citet[in prep]{Olivares_et_al} for a comparison of GRMHD codes.  All simulations assume a constant adiabatic index $\Gamma_{\rm ad}$.
 
 The \emph{standard} initial conditions for the GRMHD integrations are a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F}
 \aco{\citep[see also][]{2002MNRAS.334..383F}}
@@ -168,20 +168,25 @@ Here $b \equiv \beta/\beta_\mathrm{crit}$. This model has three free parameters:
 
 In {\it non-thermal} models the eDF includes a power-law tail extending to high energy.
 %\jd{this needs some references to kappa-jet work. e.g. Davelaar+2018\&2019} % already cited earlier in text
-This is implemented in two ways: with a so-called $\kappa$ distribution function, inspired by observations of the solar wind and by results of
+This is implemented in two ways: 
+with a power-law distribution function:
+\begin{align}
+  \frac{1}{n_e} \frac{d n_e}{d\gamma} =
+  \frac{ (p_\mathrm{pl}-1)}{({\gamma^{1-p_\mathrm{pl}}_\mathrm{min}} - {\gamma^{1-p_\mathrm{pl}}_\mathrm{max}})} \gamma^{-p_\mathrm{pl}}
+  \label{eq:nonthermaleDF}
+\end{align}
+which has power-law index $p_{pl}$ and upper and lower limits  $\gamma_{\min}$ and $\gamma_{\max}$,
+or
+with a so-called $\kappa$ distribution function, inspired by observations of the solar wind and by results of
 collisionless plasma simulations (e.g., Kunz et al. 2015 and references therein):
 %\jd{only solar wind? this looks not complete yet, Kunz+2015, and two papers on kappa-jet models that show that kappa-df models get the SED of SgrA*/M87 right...}
 %Davelaar wonderful papers are already cited earlier
 \begin{align}
   \frac{1}{n_e} \frac{d n_e}{d\gamma}= \gamma \sqrt{\gamma^2-1} \left(1+\frac{\gamma+1}{\kappa w}\right)^{-(\kappa+1)}
 \end{align}
-which has width parameter $w$ and power-law index parameter $\kappa$, or with a power-law distribution function:
-\begin{align}
-  \frac{d n_e}{d\gamma} =
-  n_e \frac{ (p-1)}{({\gamma^{1-p_\mathrm{pl}}_\mathrm{min}} - {\gamma^{1-p}_\mathrm{max}})} \gamma^{-p_\mathrm{pl}}
-  \label{eq:nonthermaleDF}
-\end{align}
-which has power-law index $p_{pl}$ and upper and lower limits  $\gamma_{\min}$ and $\gamma_{\max}$.
+which has width parameter $w$ and power-law index parameter $\kappa$.
+
+
 
 Evidently any eDF assignment schemes is an approximation in the sense that the eDF will in general depend on both local conditions and particle histories.  The eDF is assumed isotropic, and electron-positron pairs are neglected (refs!).
 
@@ -258,13 +263,13 @@ KHARMA & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,170] & [86,230] & Yes & [25
 BHAC & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,90]  & [86,230] & Yes & [10-15) & $100,000$ \\
 BHAC & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,90]  & [86,230] & Yes & [20-25) & $100,000$ \\
 BHAC & 1 & [1,10,40,160] & 1 & - &  - & [10,30,...,90]  & [86,230] & Yes & [25-30) & $100,000$ \\
-HAMR & 1 & [1,40,160] & 1 & - & - &  [10,50,90]  & [86,230] & Yes & [30-35) & x \\
-KORAL& 1 & [20]    & 1 & - & - &  [10,30,...,90]      & [86,230]  &  No   & [0-100)  & x \\
-Wind Accretion& 1 & [13,28]    & 1 & - & - &  [10,30,...,90]      & [86,230]  & No   & ?       & x \\
-HAMR Tilted & 1 & [1,40,160] & 1 & - & - &  [10,50,90]  & [86,230] & Yes & [100-103) & x \\
+HAMR & 1 & [1,40,160] & 1 & - & - &  [10,50,90]  & [86,230] & Yes & [30-35) & 45,000 \\
+KORAL& 1 & [20]    & 1 & - & - &  [10,30,...,170]      & [86,230]  &  No   & [5-100)  & 107,507 \\
+Wind Accretion& 1 & [13,28]    & 1 & - & - &  N/A      & [86,230]  & No   & 10       & 1802 \\
+HAMR Tilted & 1 & [1,40,160] & 1 & - & - &  [10,50,90]  & [86,230] & Yes & [100-103) & 8,100 \\
 \hline
 \multicolumn{11}{c}{\bf Thermal + non-thermal power-law models}\\
-HAMR & 1 & [1,40,160] & 1 & 4 & - &  [10,50,90]  & [86,230] & No & [30-35) & x \\
+HAMR & 1 & [1,40,160] & 1 & 4 & - &  [10,50,90]  & [86,230] & No & [30-35) & 45,000 \\
 \hline
 \multicolumn{11}{c}{\bf Thermal + non-thermal $\kappa$ models}\\
 BHAC & 1 & [1,10,40,160]  & 1 & -  &  3.5 ($\epsilon_0=0.05$) & [10,30,...,90]  & [86,230] & No & [25-30) & 20,000  \\
@@ -273,7 +278,7 @@ BHAC & 1 & [1,10,40,160]  & 1 & -  &  3.5 ($\epsilon_0=0.20$) & [10,30,...,90]  
 BHAC & 1 & [1,10,40,80,160]  & 1 & -  &  variable $\kappa=\kappa(\beta,\sigma)$  & [10,30,...,90]  & [86,230] & No & [25-30) & $125,000$ \\
 HAMR & 1 & [1,10,40,160] & 1 & - &  variable $\kappa=\kappa(\beta,\sigma)$ & [10,30,...,90]  & [86,230] & Yes & [25-30) & $100,000$ \\
 \enddata
-\caption{Summary of emission simulations in \sgra EHT model library.\kc{flipped PL and kappa, and propose to remove $\gamma_{\rm min/max}$ from the table as it is a local quantity in hamr models} The cadence of KHARMA=5M, BHAC=10M for thermal and nonthermal variable kappa, 50M for nonthermal variable efficiency models. variable kappa HAMR cadence is 10M.
+\caption{Summary of emission simulations in \sgra EHT model library.\kc{flipped PL and kappa, and propose to remove $\gamma_{\rm min/max}$ from the table as it is a local quantity in hamr models} The cadence of KHARMA=5M, BHAC=10M for thermal and nonthermal variable kappa, 50M for nonthermal variable efficiency models, and HAMR=10M for thermal, nonthermal powerlaw and variable kappa.
 \gw{Rhigh for the wind accretion models is either 28 or 13, but these are for two separate simulations (so it's not like there's one simulation where Rhigh has been varied); no SED from grmonty-like codes, but there is ``SED''-like information from imaging at different frequencies}\monika{how many 230 ghz frames we have for these two wind models and within what times??}
 }~\label{tab:radiativemodels}
 \end{deluxetable*}

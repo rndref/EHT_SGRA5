@@ -1,11 +1,11 @@
 \section{Model Comparison}\label{sec:comparisons}
 
-We now apply the observational constraints from Section \ref{sec:observations} to the models described in Section \ref{sec:constraints}.
+We now apply the observational constraints from Section~\ref{sec:observations} to the models described in Section~\ref{sec:models}.
 
 %==============================================================================
 \subsection{Thermal, Aligned Models}\label{subsec:thermal}
 
-We begin with a set of ``standard'' models with aligned (prograde or retrograde) GRMHD simulations, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.  This includes the Illinois, Frankfurt, and HAMR model sets (see Table \ref{tab:radiativemodels}).
+We begin with a set of ``standard'' models with aligned (prograde or retrograde) GRMHD simulations, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.  This includes the \kharma, \bhac, and \hamr model sets listed in Table~\ref{tab:radiativemodels}.
 
 %------------------------------------------------------------------------------
 \subsubsection{EHT Constraints}
@@ -173,7 +173,7 @@ Many MAD models that fail have large absolute spin and low $\Rh$.  These models 
 
 In a naive picture \sgra's millimeter flux is produced at a photosphere that decreases in size as frequency increases.  Because of the marginal optical depth at $1.3$mm ($\sim 0.3$ in the one-zone model) and the complicated source structure (the optical depth varies across the image; the $\tau = 2/3$ surface is non-spherical, folded, not even simply connected) this picture does not hold exactly.  Nevertheless 86GHz photons are on average produced at larger radius than 230GHz photons, and the 86GHz source size is therefore larger than the 230GHz source size; see Ricarte et al. 2022 for a discussion.
 
-The 86GHz/230GHz color therefore probes the radial structure of the source plasma.  Figure \ref{fig:cmp_86ghz_flux} shows the result of requiring that the 86GHz flux match the observed flux 3 days before the beginning of the EHT 2017 campaign.
+The 86GHz/230GHz color therefore probes the radial structure of the source plasma.  Figure~\ref{fig:cmp_86ghz_flux} shows the result of requiring that the 86GHz flux match the observed flux 3 days before the beginning of the EHT 2017 campaign.
 
 Many $\Rh = 1$ models, both MAD and SANE, fail the $86$GHz flux density test: 23/25 SANE and 9/25 MAD.  These models overproduce $86$GHz emission.
 There is also a substantial set of SANE models, 19/100 in all, that underproduce $86$GHz emission.  These models have larger $\Rh$.  
@@ -204,9 +204,9 @@ The physical picture for 86GHz source size is complicated, as is the extraction 
 %..............................................................................
 \subsubsubsection{Summary of Non-EHT constraints}
 
-Applying only non-EHT constraints, we are left with the 9/100 SANE models and 25/100 MAD models shown in Figure \ref{fig:non_eht_cuts}.
+Applying only non-EHT constraints, we are left with the 9/100 SANE models and 25/100 MAD models shown in Figure~\ref{fig:non_eht_cuts}.
 
-The surviving models include a set of SANE models at intermediate $\Rh$ and modest inclination, as well as MAD models at large $\Rh \ge 40$.  No $\Rh = 1$ models survive the non-EHT cuts.
+The surviving models include a set of SANE models at intermediate $\Rh$ and modest inclination, as well as MAD models at large $\Rh \ge 40$. No $\Rh = 1$ models survive the non-EHT cuts.
 
 \begin{figure}
   \centering
@@ -218,7 +218,7 @@ The surviving models include a set of SANE models at intermediate $\Rh$ and mode
 %------------------------------------------------------------------------------
 \subsubsection{Variability}
 
-Variability is central to interpretation of \sgra: the small black hole size means that observations considered here are taken over intervals when the source is expected to vary significantly.  This distinguishes \sgra from \m87, where the source is expected to vary only over timescales that are long compared to a single track.\footnote{This does not mean that \m87 is less variable than \sgra.  In 2017 EHT observed \m87 over only $\sim 15\tg$, so it is not possible to characterize \m87 variability using EHT data alone.  To obtain variability information for \m87 similar to what we present here for \sgra would require multi-year observations.}
+Variability is central to interpretation of \sgra: the small black hole size means that observations considered here are taken over intervals when the source is expected to vary significantly.  This distinguishes \sgra from \m87, where the source is expected to vary only over timescales that are long compared to a single track.\footnote{This does not mean that \m87 is less variable than \sgra.  In 2017 EHT observed \m87 over only $\sim 15\tg$\monika{1 week is 168h and \tg for m87 is 8.5h, this gies 19 \tg not 15...}, so it is not possible to characterize \m87 variability using EHT data alone.  To obtain variability information for \m87 similar to what we present here for \sgra would require multi-year observations.}
 
 Variability is a strong constraint on the models.  Although models differ in their degree of variability, both in an integrated sense and on 4 $G\lambda$ baselines, only a small fraction of models are as quiet as the data.  For the light curve variability, this remains true whether we use data from 2017 April 7, all days from the 2017 observing campaign, or from historical monitoring of \sgra.   In general, we find that SANE models are quieter than MAD models, and (less strongly) face-on models are quieter than edge-on models.
 
@@ -237,9 +237,8 @@ If we instead compare the models to the full historical distribution (40 measure
 
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{./figures/mi_dist.pdf}
-  \caption{Distributions of $\mi{3}$ for KHARMA models (black), compared to distributions from historical observations (gray) and measurements of $\mi{3}$ on independent segments from the 2017 ALMA light curve. The latter are shown as vertical lines. The distributions for models with the lowest (blue) and highest (red) average $\mi{3}$ for SANEs and MADs are also shown. 
-  \aeb{This plot is inscrutable.  First, that the thin black line is a measurement instead of a simulation value is only evident after reading the caption (something few will do!).  Second, sudden ending of many lines is hard to understand --- what does this mean for the computation?  For the interpretation?  Surely we can clarify this.  Finally, I don't understand at all the vertical lines.  Why are there {\bf three} Apr 7 curves?  Why aren't there multiple curves on other days?  This is noted in the text, but it is not clear in the figure (in the figure, it looks like a typo!).}
+  \includegraphics[width=\columnwidth]{./figures/mi_hist.pdf}
+  \caption{Distributions of $\mi{3}$ for KHARMA models (black), compared to distributions from historical observations (gray). The distributions for models with the lowest (blue) and highest (red) average $\mi{3}$ for SANEs and MADs are also shown. The heights of these distributions have been scaled down for visual clarity. 
   }
   \label{fig:cmp_ALMA_var}
 \end{figure}
@@ -249,9 +248,9 @@ If we instead compare the models to the full historical distribution (40 measure
 
 The distribution of slopes $b$ of the variance $\sigma_\text{var}^2 (|u|)$ at $4~{\rm G}\lambda$ for the GRMHD models is in rough agreement with the measured slope from the 2017 EHT campaign (excluding April 11). \dl{need brief description of $b$ measurement in section 3.3.2} The amplitude of $\sigma_\text{var}^2 (4~{\rm G}\lambda)$, however, varies depending on the model and the code. 
 
-Figure \ref{fig:cmp_VLBI_var} shows the distribution of $(\sigma_\text{var}^2, b)$ from the EHT observation, along with the distribution across all \kharma models. The GRMHD models are shown as an aggregate whole, but each model consists of only three measurements of $\sigma_\text{var}^2$, one on each window. This makes a direct comparison with the measured value difficult, as the distribution for a given model is poorly constrained. 
+Figure~\ref{fig:cmp_VLBI_var} shows the distribution of $(\sigma_\text{var}^2, b)$ from the EHT observation, along with the distribution across all \kharma models. The GRMHD models are shown as an aggregate whole, but each model consists of only three measurements of $\sigma_\text{var}^2$, one on each window. This makes a direct comparison with the measured value difficult, as the distribution for a given model is poorly constrained. 
 
-\citet{Georgiev_2022} gives an estimate for the width of the distribution as $\log_{10}(\sigma_\text{var}^2) \pm 0.1$. We can get a rough estimate for how the GRMHD models fare compared to the measurement by taking the mean across windows and the estimate for the width, and comparing this with the measurement distribution. Under this, 83/200 models (46 SANE and 37 MAD) are within 1\% of the measurement, although we caution against interpreting this number as the number of passing or failing models, since the uncertainties in the model distribution are so large. 
+\citet{Georgiev_2022} gives an estimate for the width of the distribution as $\log_{10}(\sigma_\text{var}^2) \pm 0.1$. We can get a rough estimate for how the GRMHD models fare compared to the measurement by taking the mean across windows and the estimate for the width, and comparing this with the measurement distribution under the assumption that both are distributed normally. Under this, 83/200 models (46 SANE and 37 MAD) agree with the data within 1\%, although we caution against interpreting this number as the number of passing or failing models, since the uncertainties in the model distribution are so large. 
 
 Overall, the GRMHD models tend to be slightly more variable than the measured value, with face-on models performing better than edge-on models. For SANE models, $\Rh = 10$ tend to be more variable than others. For MAD models, there is a slight preferance for lower $\Rh$. 
 
@@ -281,7 +280,7 @@ Overall, the GRMHD models tend to be slightly more variable than the measured va
 % At a 1\% cut, the models that pass the PSD constraint also all pass the MI constraint. It should be noted that this is partially because these constraints are weakly correlated \dl{also partially because we're imposing constraints differently between VLBI and light curve, and the light curve constraint is more lenient} None of the 12 models with acceptable variability pass the other tests.
 
 %------------------------------------------------------------------------------
-\subsubsection{Summary of Constraints}
+\subsubsection{Summary of Constraints on Thermal Models}
 
 If we set aside variability but use all the remaining constraints we are left with the models shown in Figure \ref{fig:all_cuts}.  Only 1/100 SANE models and 8/100 MAD models survive. The passing models cluster at low inclination ($i \le 50$deg) MAD models with $\Rh > 10$.  A full set of pass/fail values is provided in Appendix \ref{app:tables}.
 
@@ -296,7 +295,7 @@ For thermal model sets both EHT and non-EHT constraints individually eliminate m
 \begin{figure*}
   \centering
   \includegraphics[width=1.\textwidth]{./figures/All_Constraints.png}
-  \caption{Combined EHT and non-EHT constraints\monika{if this plot is shown like this we need a slightly larger font for $a_*$ and bottom legend.}}
+  \caption{Combined EHT and non-EHT constraints.}
   \label{fig:all_cuts}
 \end{figure*}
 
@@ -347,35 +346,29 @@ Variability, when included in the constraint map, would eliminate all thermal mo
 
 % \kc{is the plan to do H-AMR and KHARMA correlations similar to figure 18?}
 
-
-\subsubsubsection{\koral Long Models}
-
-We have also considered a set of thermal, $\Rh$, MAD models run with the \koral code out to $\sim 100,000\tg$.  These models permit us to assess the importance of integration time for application of the constraints.  They permit us to obtain more accurate distributions for the constraint quantites, and to assess whether the constraints evolve from the beginning to end of the integrations. 
-
-In brief: we do not see evidence for evolution in the \koral  model set (a full pass/fail table is given in Appendix \ref{app:tables}, Table \ref{tab:koralPF}). The \koral pass/fail results are similar to those for comparable models in the Illinois thermal model set.  Moreover the constraints measured at the beginning of the evolution are similar to those measured at the end. 
-
+%\subsubsubsection{\koral Long Models}
+We have also considered a set of thermal, $\Rh$, MAD models run with the \koral code out to $\sim 100,000\tg$.  These models permit us to assess the importance of integration time for application of the constraints.  They permit us to obtain more accurate distributions for the constraint quantites, and to assess whether the constraints evolve from the beginning to end of the integrations. We do not see evidence for evolution in the \koral  model set (a full pass/fail table is given in Appendix \ref{app:tables}, Table~\ref{tab:koralPF}). The \koral pass/fail results are similar to those for comparable models in the \kharma thermal model set. Moreover the constraints measured at the beginning of the evolution are similar to those measured at the end. 
 
 %------------------------------------------------------------------------------
-\subsubsection{Critical Beta Model}
+%\subsubsection{Critical Beta Model}
 
-The $\Rh$ eDF model has been the default parameterization used to span the uncertainties in emitting particle thermodynamics in EHT analyses. The $\Rh$ models  are compatible with the well-motivated turbulent plasma heating ADAF models of \cite{1999ApJ...520..248Q} in asymptotic behavior of electron-to-total heating ratio as a function of plasma $\beta$. There is, however, a vast function space of possible alternative parameterizations.
+Finally, the $\Rh$ eDF model has been the default parameterization used to span the uncertainties in emitting particle thermodynamics in EHT analyses. The $\Rh$ models  are compatible with the well-motivated turbulent plasma heating ADAF models of \cite{1999ApJ...520..248Q} in asymptotic behavior of electron-to-total heating ratio as a function of plasma $\beta$. There is, however, a vast function space of possible alternative parameterizations. Here we have also considered the Critical Beta model \cite{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  The model is motivated by the observation that when the transition between electron heating domination and proton heating domination is smoothed (controlled by increasing exponent parameter $\beta_c$), the 230 GHz emitting region profile tends to be less coronally dominated and more compact and asymmetric. This is a consequence, when fixing synthetic image flux, of higher critical beta values shifting the locus of electrons dominating the emission profile towards the colder, higher density equatorial inflow.  We consider only a single point in the critical beta parameter space, with $f = \beta_c = 1$.  
 
-Here we consider the Critical Beta model \cite{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  The model is motivated by the observation that when the transition between electron heating domination and proton heating domination is smoothed (controlled by increasing exponent parameter $\beta_c$), the 230 GHz emitting region profile tends to be less coronally dominated and more compact and asymmetric. This is a consequence, when fixing synthetic image flux, of higher critical beta values shifting the locus of electrons dominating the emission profile towards the colder, higher density equatorial inflow.  We consider only a single point in the critical beta parameter space, with $f = \beta_c = 1$.  
-
-We have applied a subset of tests to the critical beta models (all except X-ray; NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix \ref{app:tables}, Table \ref{tab:betacrit}.  To summarize...
+We have applied a subset of tests to the critical beta models (all except X-ray; NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}.  To summarize...
 
 % CFG: we shouldn't report preliminary indications here
 %A second motivation is that there are preliminary indications that the exponential electron cooling in the Critical Beta Model suppressed the SANE bremsstrahlung spectral component allowing more to pass the X-ray constraint.
 
 %==============================================================================
 
-\subsection{Nonthermal Aligned Models}
+\subsection{Nonthermal, Aligned Models}
 
 \note{Koushik to write here about powerlaw nonthermal HAMR models.  Define a subsection, describe the results and how they differ from the thermal results.][Maybe add Tomohisa's models here as well.] [by including power-law, we see this and that change (only include significant changes from the thermal models)}
 
-So far we have assumed a Maxwell-J\''uttner distribution function that describes a thermal population of electrons. Next we consider a non-thermal population of electrons using either a mixed thermal-powerlaw eDF or a pure/mixed kappa eDF.
+So far we have assumed a Maxwell-J{\"u}ttner distribution function that describes a thermal population of electrons. Next we consider a non-thermal population of electrons using either a mixed thermal-powerlaw eDF or a pure/mixed kappa eDF.
 
 \subsubsection{Constant power-law models $p=4.0$}
+\monika{koushik - these models are actually hybrid: thermal + power-law, right? it says so below so maybe we should change the "class" of this models to "hybrid" models. }
 
 In this section, we employ a hybrid thermal/power-law tail distribution using H-AMR/BHOSS, and assume a power-law index of $p=4$ with a non-thermal acceleration efficiency $\epsilon=n_{\rm power-law}/n_{\rm thermal}=0.1$. The power-law is stitched to the thermal core by choosing the minimum Lorentz factor limit of the power-law $\gamma_{\rm min}$ to be at the peak of the Maxwellian. The maximum limit of the power-law is taken to $10^5 \gamma_{\rm min}$. Further details about the setup is given in Chatterjee et al. 2021. Similarly to the thermal models, we normalize the density scale such that the mean 230 GHz flux is 2.4 Jy over 30-35kM. We note that the normalization value is smaller than that of the corresponding H-AMR/BHOSS thermal models, suggesting that the power-law emission contributes to the 230GHz total intensity.
 
@@ -394,8 +387,8 @@ The addition of the power-law tail primarily increases the flux in the NIR and t
 
 %------------------------------------------------------------------------------
 \subsubsection{Constant kappa models $\kappa=3.5$ with variable efficiency, $\varepsilon(\sigma,\beta)$}
-
-In order to investigate the effect of mixed thermal/nonthermal distribution functions, we combine a thermal electron distribution function with a kappa electron distribution with $\kappa=3.5$. The value of $\kappa=3.5$ is motivated from the spectral slope in the NIR during a quiescent state \cmf{add reference here}.  In addition to the fixed kappa value we assume that the fraction between thermal and non-thermal particles depends on the local plasma properties, e.g, the magnetisation, $\sigma$, and the plasma beta parameter, $\beta_{\rm p}$. Given this assumption we can write the total emissivity as:
+\monika{let's not use 'in order to' in papers ;)}
+To investigate the effect of mixed thermal/nonthermal distribution functions, we combine a thermal electron distribution function with a kappa electron distribution with $\kappa=3.5$. The value of $\kappa=3.5$ is motivated from the spectral slope in the NIR during a quiescent state \cmf{add reference here} \kc{suggest to say that the slope is a limit as $\alpha=0.6$ where $F_{\nu}\propto \nu^{\alpha}$ is seen in the flaring state, e.g., Hornstein+2006}.  In addition to the fixed kappa value we assume that the fraction between thermal and non-thermal particles depends on the local plasma properties, e.g, the magnetisation, $\sigma$, and the plasma beta parameter, $\beta_{\rm p}$. Given this assumption we can write the total emissivity as:
 \begin{equation}
 j_{\nu,\rm{tot}}=(1-\epsilon) j_{\nu,\rm{thermal}} + \epsilon j_{\nu, \kappa},
 \label{eq:kappaeff}
@@ -432,12 +425,12 @@ In the SANE case only models with $\Rh>40$ exhibit a minor increase in the sourc
 % CFG: this is confusing.  is it needed?
 %In addition the thermal synchrotron emissivity decreases at high frequency as $j_{\nu}\propto \exp{\left(-(\nu/\nu_c)^{1/3} \right)}$ while for the kappa distribution as $j_{\nu}\propto \nu^{-(\kappa -2)/2}$. This implies that for the same electron temperature the non-thermal flux is compared to a thermal one higher and thus leads to a more extended jet structure for the models including non-thermal particles.
 
-In the MAD case, independent of the choice of $\Rh$ the emission is mostly produced in the disk region (see EHT paper V and Fig 8 in \citet{Wong_2022} for a 3D rendering). Increasing $\Rh$ will not push the emission region into the jet where the non-thermal particles are located and thus their contribution to the total emission structure is negligible.
+In the MAD case, independent of the choice of $\Rh$ the emission is mostly produced in the disk region (see \citetalias{M87PaperV} and Fig.~8 in \citet{Wong_2022} for a 3-D rendering). Increasing $\Rh$ will not push the emission region into the jet where the non-thermal particles are located and thus their contribution to the total emission structure is negligible.
 
 %..............................................................................
 \subsubsubsection{86\,GHz flux}
 
-The GMVA+ALMA observations at 86\,GHz \cite{2021ApJ...915...99I} probe a larger field of view than the 230\,GHz EHT observations, so we increased the field of view for the 86\,GHz to 800\,$\rm{\mu as}$ during the radiative transfer calculations. Again the non-thermal particles are mainly located in the jet sheath and thus the increased field of view ensures that no extended flux is missing during the comparison with the 86\,GHz observations.
+The GMVA+ALMA observations at 86\,GHz \cite{2021ApJ...915...99I} \monika{we can skip reference here, there is only one 86 GHz we talk about in this paper} probe a larger field of view than the 230\,GHz EHT observations, so we increased the field of view for the 86\,GHz to 800\,$\rm{\mu as}$ during the radiative transfer calculations. Again the non-thermal particles are mainly located in the jet sheath and thus the increased field of view ensures that no extended flux is missing during the comparison with the 86\,GHz observations.
 
 The 86\,GHz for both SANE and MAD models flux is not affected by the addition of non-thermal particles. In case of the SANE models the edges of the 86\,GHz flux distribution are slightly shifted in the case of $\Rh>40$. However, including non-thermal particles even with the highest base efficiency $\varepsilon=0.2$ does not change the scoring of a model, i.e., a thermal-only model which full-fills the 86\,GHz constrain is still accepted if non-thermal particles are included. This behaviour can be explained by the fact that the bulk of the emission in both accretion models is generated in with a few gravitational radii. Since the non-thermal particles are mainly located in the jet sheath and thei ratio between non-thermal to thermal particles is at most 20\% the contribution of the non-thermal particles to the 86\,GHz flux can be neglected.
 
@@ -453,7 +446,7 @@ As expected, the addition of non-thermal particles via the kappa electron distri
 \begin{figure*}
   \centering
   \includegraphics[width=0.8\textwidth]{./figures/SANE_NIR_standard.pdf}
-  \caption{NIR constraints for SANE accretion models for thermal and non-thermal electron distribution function with $\kappa=3.4$ fixed and $\epsilon\left(\sigma,\beta,\varepsilon\right)$. The red violin plots correspond to a thermal eDF, blue, orange and green indicate kappa eDF with $\varepsilon=$0.05,0.1 and 0.2.}
+  \caption{\monika{Impact of non-thermal electrons on NIR flux constraint.} NIR \sout{constraints}  \monika{fluxes are shown} for SANE accretion models \sout{for}\monika{with} thermal and non-thermal \sout{electron distribution function}\monika{eDF} with $\kappa=3.4$ \sout{fixed} and $\epsilon\left(\sigma,\beta,\varepsilon\right)$. The red violin plots correspond to a thermal eDF, blue, orange and green indicate kappa eDF with $\varepsilon=$0.05,0.1 and 0.2.\monika{add what is the horizontal dashed line? is that measurement?}}
   \label{fig:NIR_kappaepsilon}
 \end{figure*}
 
@@ -478,14 +471,14 @@ The m-ring fitting is applied to the 230\,GHz images. As mentioned earlier the f
 
 An alternative procedure for assigning a nonthermal eDF uses the  kappa model \eqref{eq:nonthermaleDF}, and assigns the parameter $w$  and $\kappa$ parameters according to \cite{2018ApJ...862...80B}, who model the effects of particle acceleration in magnetic reconnection based on particle-in-cell simulations: $ \kappa=2.8 +0.7\sigma^{-1/2} + 3.7\sigma^{-0.19}\tanh{(23.4\sigma^{0.26} \beta)}\label{eq:kappa}$
 and $w= \frac{ \kappa -3 }{\kappa} \Theta_{\rm e} + \frac{\varepsilon}{2}\left[1+\tanh(r-r_{\rm inj})\right]\, \frac{ \kappa -3 }{6 \kappa} \frac{m_{\rm p}}{m_{\rm e}} \sigma$.
-Here $\sigma \equiv B^2/(8\pi\rho c^2)$, $\beta \equiv p_{gas} 8 \pi/B^2$, and $w$ contains a thermal and nonthermal contribution, with the nonthermal contribution defined by the magnetization and nonthermal particle acceleration efficiency $\varepsilon$  \citep{2019A&A...632A...2D, 2021NatAs.tmp..218C}. We set  $\varepsilon=0$ and injection radius $r_{\rm inj}=10r_{g}$ following previous studies.  Nonzero $\varepsilon$ increases the averaged NIR flux by two orders of magnitude as $\varepsilon$ goes from 0 to 1, causing all models to overshoot NIR constraint.  Setting $\varepsilon \ne 0$ also causes the 86GHz flux density to increase around two times as well as the image size \citep{2021arXiv211102518F}. We use the emissivity and absorptivity, computed numerically for the interval $3 < \kappa \le 8$, from  \cite{2016ApJ...822...34P}. For $\kappa > 8$ we substitute a thermal eDF.  We also turn off emission in the jet spine where $\sigma > 1$.  (see Figure \ref{fig:varepsilon}). 
+Here $\sigma \equiv B^2/(8\pi\rho c^2)$, $\beta \equiv p_{gas} 8 \pi/B^2$, and $w$ contains a thermal and nonthermal contribution, with the nonthermal contribution defined by the magnetization and nonthermal particle acceleration efficiency $\varepsilon$  \citep{2019A&A...632A...2D, 2021NatAs.tmp..218C}. We set  $\varepsilon=0$ and injection radius $r_{\rm inj}=10r_{g}$ following previous studies.  Nonzero $\varepsilon$ increases the averaged NIR flux by two orders of magnitude as $\varepsilon$ goes from 0 to 1, causing all models to overshoot NIR constraint.  Setting $\varepsilon \ne 0$ also causes the 86GHz flux density to increase around two times as well as the image size \citep{2021arXiv211102518F}. We use the emissivity and absorptivity, computed numerically for the interval $3 < \kappa \le 8$, from  \cite{2016ApJ...822...34P}. For $\kappa > 8$ we substitute a thermal eDF.  We also turn off emission in the jet spine where $\sigma > 1$ (see Figure~\ref{fig:varepsilon}). 
 
 
 
 %..............................................................................
 \subsubsubsection{86\,GHz image size}
 
-The total flux and image size was computed using an extended field of view, $800 \mu as$ motivated in the 86GHz observations from \cite{2021ApJ...915...99I}. We found that the image size is closely similar to the thermal and variable efficiency models, only different for non-spinning black holes, where we have low magnetized and small jet. As a consequence eDF with variable kappa power-law reduces to thermal distribution and the size of the image is a bit smaller than in thermal case. For $a_{\star}=0$ almost all SANE models pass the size constraint, $R_{\rm high}=1$ we have a bit larger image. For MAD $R_{\rm high}=40$ and $a_{\star}=0.94$, and cases for $R_{\rm high}=160$ and $a_{\star}=0.50$ we have a bit smaller size image than thermal case passing the constraint.
+The total flux and image size was computed using an extended field of view, $800 \mu as$ motivated in the 86GHz observations from \cite{2021ApJ...915...99I}\monika{again, skip reference here this is the same set}. We found that the image size is closely similar to the thermal and variable efficiency models, only different for non-spinning black holes, where we have low magnetized and small jet. As a consequence eDF with variable kappa power-law reduces to thermal distribution and the size of the image is a bit smaller than in thermal case. For $a_{\star}=0$ almost all SANE models pass the size constraint, $R_{\rm high}=1$ we have a bit larger image. For MAD $R_{\rm high}=40$ and $a_{\star}=0.94$, and cases for $R_{\rm high}=160$ and $a_{\star}=0.50$ we have a bit smaller size image than thermal case passing the constraint.
 
 %..............................................................................
 \subsubsubsection{86\,GHz flux}
@@ -501,7 +494,7 @@ Larger emission than thermal models excludes SANE models for $R_{\rm high}=10$ a
 %..............................................................................
 \subsubsubsection{ALMA Light curves}
 
-We compute the the modulation index  of the light curves of variable kappa models by discretizing the entire window of GRMHD simulations, $\rm 5000\,GM/c^3$ ($\rm 28\,hours$) every $\rm 3\,hour$ (see Table \ref{tab:GRMHDmodels}). Similar to variable efficiency models, the non-thermal particles with variable kappa has not big impact on the flux at 230GHz. The behavior of modulation index and total flux for MAD accretion models are same as thermal, and variable efficiency eDFs. We found sightly high modulation index for $R_{\rm high}=1$ and $30^{\circ} \leq i$ for SANE accretion models, the models for $R_{\rm high}=80$ has same trend as $R_{\rm high}=40$.
+We compute the the modulation index  of the light curves of variable kappa models by discretizing the entire window of GRMHD simulations, $\rm 5000\,\tg$ ($\rm 28\,hours$) every $\rm 3\,hour$ (see Table \ref{tab:GRMHDmodels}). Similar to variable efficiency models, the non-thermal particles with variable kappa has not big impact on the flux at 230GHz. The behavior of modulation index and total flux for MAD accretion models are same as thermal, and variable efficiency eDFs. We found sightly high modulation index for $R_{\rm high}=1$ and $30^{\circ} \leq i$ for SANE accretion models, the models for $R_{\rm high}=80$ has same trend as $R_{\rm high}=40$.
 
 
 %..............................................................................
@@ -518,7 +511,7 @@ We compute the the modulation index  of the light curves of variable kappa model
 \ckc{Write subsections only if they are different from the thermal models.}
 
 %------------------------------------------------------------------------------
-\subsubsection{Summary}
+\subsubsection{Summary of Constraints on Non-thermal Models}
 
 The effect of adding non-thermal electrons in a kappa eDF with  $\kappa=3.4$ and variable efficiency via Eq.~\ref{eq:efficiencybetasigma} can be summarised as follows:
 \begin{itemize}
@@ -536,7 +529,7 @@ The effect of adding non-thermal electrons in a kappa eDF with  $\kappa=3.4$ and
 \note{Koushik to write here.  Describe the results and how they differ from aligned thermal results.}
 \ckc{Write subsections only if they are different from the thermal models.}
 
-In addition to the aligned models, we also consider misaligned geometrically thick disks around black holes with a spin of $a_*=15/16$ taken from \citet{Liska2018} and \citet{Chatterjee2020}. Further, while the models in the SgrA* GRMHD simulation library exhibit either a SANE or MAD accretion flow, the tilted disk models assume a strongly magnetized non-MAD disk, otherwise known as an InSANE disk. Overall, we incorporate three GRMHD models of differing misalignment angles - $0^{\circ}$, $30^{\circ}$ and $60^{\circ}$. The models show a strongly warped disk and jets due to the Lense-Thirring torque imposed by the black hole frame dragging effect, and thus the disk/jet morphology is non-axisymmetric. Since the inner and the outer disk possess different orientations, it is necessary to specify the coordinate axis of the observer. We chose to align our observer to the outer disk such that at an inclination and azimuth of $90^{\circ}$ and $0^{\circ}$ respectively, we are observing the outer disk edge-on \citep[for more details, see][]{Chatterjee2020}. Note that the jet is always approximately perpendicular in orientation to the disk in these models. 
+In addition to the aligned models, we also consider misaligned geometrically thick disks around black holes with a spin of $a_*=15/16$ taken from \citet{Liska2018} and \citet{Chatterjee2020}. Further, while all other models in the current paper exhibit either a SANE or MAD accretion flow, the tilted disk models assume a strongly magnetized non-MAD disk, otherwise known as an InSANE disk. Overall, we incorporate three GRMHD models of differing misalignment angles - $0^{\circ}$, $30^{\circ}$ and $60^{\circ}$. The models show a strongly warped disk and jets due to the Lense-Thirring torque imposed by the black hole frame dragging effect, and thus the disk/jet morphology is non-axisymmetric. Since the inner and the outer disk possess different orientations, it is necessary to specify the coordinate axis of the observer. We chose to align our observer to the outer disk such that at an inclination and azimuth of $90^{\circ}$ and $0^{\circ}$ respectively, we are observing the outer disk edge-on \citep[for more details, see][]{Chatterjee2020}. Note that the jets are always approximately perpendicular in orientation to the disk in these models. 
 
 In brief, highly misaligned models are more variable that their aligned counterparts.
 
