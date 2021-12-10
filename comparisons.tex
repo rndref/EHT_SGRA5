@@ -240,7 +240,7 @@ If we instead compare the models to the full historical distribution (40 measure
 %..............................................................................
 \subsubsubsection{4 $G\lambda$ Visibility Amplitude Variability}
 
-The distribution of power-law index $b$ of the variance $\sigma_\text{var}^2 (|u|)$ at $4~{\rm G}\lambda$ for the GRMHD models is generally in \aeb{\sout{rough} good} agreement with the measured slope from the 2017 EHT campaign (excluding April 11). The amplitude $\afour^2$, however, varies depending on the model and the code.
+The power-law indexes of the variance $\sigma_\text{var}^2 (|u|)$ at $4~{\rm G}\lambda$ of the GRMHD models is generally in good agreement with the measured value of $b$ from the 2017 EHT campaign (excluding April 11). The amplitude $\afour^2$, however, varies depending on the model and the code.
 
 Figure~\ref{fig:cmp_VLBI_var} shows the distribution of $(\afour^2, b)$ from the EHT observation, along with the distribution across all \kharma models. The GRMHD models are shown as an aggregate whole, but each model consists of only three measurements of $\afour^2$, one on each window. This makes a direct comparison with the measured value difficult, as the distribution for a given model is poorly constrained.
 
@@ -359,20 +359,30 @@ Finally, the $\Rh$ eDF model has been the default parameterization used to span 
 
 \subsection{Nonthermal, Aligned Models}
 
-\note{Koushik to write here about powerlaw nonthermal HAMR models.  Define a subsection, describe the results and how they differ from the thermal results.][Maybe add Tomohisa's models here as well.] [by including power-law, we see this and that change (only include significant changes from the thermal models)}
+%\note{Koushik to write here about powerlaw nonthermal HAMR models.  Define a subsection, describe the results and how they differ from the thermal results.][Maybe add Tomohisa's models here as well.] [by including power-law, we see this and that change (only include significant changes from the thermal models)}
 
-So far we have assumed a Maxwell-J{\"u}ttner distribution function that describes a thermal population of electrons. Next we consider a non-thermal population of electrons using either a mixed thermal-powerlaw eDF or a pure/mixed kappa eDF.
+So far we have assumed a Maxwell-J{\"u}ttner distribution function that describes a thermal population of electrons. Next we assume that these electrons are accelerated to a non-thermal tail. We model such the energy distribution of such a population of electrons using either a mixed thermal-powerlaw eDF or a pure/mixed kappa eDF. Similar to the thermal models, the accretion rates of all model sets in this section are normalized such that the time-averaged 230\,GHz compact flux is 2.4 Jy over 5,000M. 
 
 \subsubsection{Thermal Plus Constant power-law models with $p_\mathrm{pl} = 4$}
 
-In this section, we employ a hybrid thermal/power-law tail distribution using \hamr/\bhoss, and assume a power-law index of $p=4$ with a non-thermal acceleration efficiency $\epsilon=n_{\rm power-law}/n_{\rm thermal}=0.1$. The power-law is stitched to the thermal core by choosing the minimum Lorentz factor limit of the power-law $\gamma_{\rm min}$ to be at the peak of the Maxwellian. The maximum limit of the power-law is taken to $10^5 \gamma_{\rm min}$. Further details about the setup is given in Chatterjee et al. 2021. Similarly to the thermal models, we normalize the density scale such that the mean 230 GHz flux is 2.4 Jy over 30-35kM. We note that the normalization value is smaller than that of the corresponding \hamr/\bhoss thermal models, suggesting that the power-law emission contributes to the 230GHz total intensity.
-
-The addition of the power-law tail primarily increases the flux in the NIR and thus, the NIR GRAVITY flux of 1.0 mJy could provide a constraint on the power-law index and the acceleration efficiency. In brief, $R_{\rm high}=1$ MAD models are ruled out by the NIR constraint.
+In this section, we employ a hybrid thermal/power-law tail distribution using \hamr/\bhoss, and assume a power-law index of $p=4$ with a constant non-thermal acceleration efficiency $\epsilon=n_{\rm e, power-law}/n_{\rm e, thermal}=0.1$. Following the method given in \citet{Chatterjee2021}, the power-law tail is stitched to the thermal core by choosing the minimum Lorentz factor limit of the power-law $\gamma_{\rm min}$ to be at the peak of the Maxwellian component. The maximum limit of the power-law is taken to $10^5 \gamma_{\rm min}$. Further, we note that the normalization value for the accretion rate is slightly smaller than that of the corresponding \hamr/\bhoss thermal models, suggesting that the power-law emission contributes to the 230\,GHz total intensity.
 
 \subsubsubsection{230\,GHz VLBI pre-image size}
-\subsubsubsection{86\,GHz flux}
-\subsubsubsection{86\,GHz image size}
+
+Hybrid thermal/power-law models have similar 230\,GHz VLBI pre-image sizes to their purely thermal counterparts. This is because the power-law index is large enough 
+
+\subsubsubsection{86\,GHz flux} 
+
+In general, the $R_{\rm high}=1$ models produce too much 86\,GHz flux. Since the lower limit of the power-law $\gamma_{\rm min}$ is directly affected by the local electron temperature, the highest energy electrons are located in the jet sheath where the ion and electron temperatures are similar, i.e. $T_i\approx T_e$. Indeed this is why SANE models produce more 86\,GHz flux when non-thermal electrons are introduced, especially at larger $R_{\rm high}$ values. On the other hand, MAD pure thermal and mixed thermal/non-thermal models behave similarly as the bulk of the emission is produced in the inner disk.
+
+\subsubsubsection{86\,GHz image size} 
+
+
+
 \subsubsubsection{NIR constraints}
+
+The addition of the power-law tail primarily increases the flux in the NIR and thus, the NIR GRAVITY flux of 1.0 mJy could provide a constraint on the power-law index and the acceleration efficiency. In brief, $R_{\rm high}=1$ and $40$ MAD models are ruled out by the NIR constraint.
+
 \subsubsubsection{ALMA Light curves}
 \subsubsubsection{m-ring}
 
@@ -511,7 +521,7 @@ We compute the the modulation index  of the light curves of variable kappa model
 
 The effect of adding non-thermal electrons in a kappa eDF with  $\kappa=3.4$ and variable efficiency via Eq.~\ref{eq:efficiencybetasigma} can be summarised as follows:
 \begin{itemize}
-    \item The 86\,GHz and 230\,GHz constraints are hardly effected by the addition of non-thermal particles.
+    \item The 86\,GHz and 230\,GHz constraints are hardly affected by the addition of non-thermal particles.
     \item Even the lowest base efficiency considered, $\varepsilon=0.05$, leads to an over-production of NIR flux. \cmf{indication that we need very localised regions of non-thermal particle productions and no "global" approach?}
 \end{itemize}
 
@@ -525,20 +535,22 @@ The effect of adding non-thermal electrons in a kappa eDF with  $\kappa=3.4$ and
 \note{Koushik to write here.  Describe the results and how they differ from aligned thermal results.}
 \ckc{Write subsections only if they are different from the thermal models.}
 
-In addition to the aligned models, we also consider misaligned geometrically thick disks around black holes with a spin of $a_*=15/16$ taken from \citet{Liska2018} and \citet{Chatterjee2020}. Further, while all other models in the current paper exhibit either a SANE or MAD accretion flow, the tilted disk models assume a strongly magnetized non-MAD disk, otherwise known as an InSANE disk. Overall, we incorporate three GRMHD models of differing misalignment angles - $0^{\circ}$, $30^{\circ}$ and $60^{\circ}$. The models show a strongly warped disk and jets due to the Lense-Thirring torque imposed by the black hole frame dragging effect, and thus the disk/jet morphology is non-axisymmetric. Since the inner and the outer disk possess different orientations, it is necessary to specify the coordinate axis of the observer. We chose to align our observer to the outer disk such that at an inclination and azimuth of $90^{\circ}$ and $0^{\circ}$ respectively, we are observing the outer disk edge-on \citep[for more details, see][]{Chatterjee2020}. Note that the jets are always approximately perpendicular in orientation to the disk in these models.
+In addition to the aligned models, we also consider misaligned, geometrically thick disks around black holes with a spin of $a_*=15/16$ from \citet{Liska2018} and \citet{Chatterjee2020}. While the other models in this paper produce either a SANE or MAD accretion flow, the tilted disk models assume a strongly magnetized non-MAD disk, otherwise known as an INSANE disk. Overall, we incorporate three GRMHD models of differing misalignment angles - $0^{\circ}$, $30^{\circ}$ and $60^{\circ}$. The models show a strongly warped disk and jets due to the Lense-Thirring torque imposed by the black hole frame dragging effect, and thus the disk/jet morphology is non-axisymmetric. Since the inner and the outer disk possess different orientations, it is necessary to specify the coordinate axis of the observer. We chose to align our observer to the outer disk such that at an inclination and azimuth of $90^{\circ}$ and $0^{\circ}$ respectively, we are observing the outer disk edge-on \citep[for more details, see][]{Chatterjee2020}. Note that the jets are always approximately perpendicular in orientation to the disk in these models.
 
-In brief, highly misaligned models are more variable that their aligned counterparts.
+The 230\,GHz pre-image size of edge-on large $R_{\rm high}$ images slightly increases for the tilt-$60^{\circ}$ as compared to the aligned case. This apparent increase in size occurs as the inner jet is warped and creates an extended image. This effect is also seen in the case of the 86\,GHz image size. On the other hand, the 86\,GHz flux constraint results are quite similar between the three tilt models despite the presence of a boosted jet component at large tilt angles. This suggests that, on average, most of the total flux at 230 and 86\,GHz comes from a few gravitational radii from the black hole where the relativistic Doppler boost have comparable values between the in-going accretion flow and the out-flowing jet. However, highly misaligned models are more variable that their aligned counterparts. In tilted disks, accretion occurs via thin plunging streams \citep[e.g.,][]{Fragile2007} where electrons in the shocked flow can be heated to relativistic temperatures \citep[e.g.][]{Dexter2013}, forming local hotspots more easily than in aligned disks, thereby increasing flux variability \citep{Chatterjee2020}.
+
+The nIR flux exceeds the 1.0 mJy limit for all 3 models (except for a few cases, e.g. $R_{\rm high}=160$ models at $10^{\circ}$ inclination), which makes it difficult to favor the aligned case over the tilted one. Further, the presence of misalignment destroys the axisymmetric nature of the accretion flow. The current model set covers a small parameter space in inclination and $R_{\rm high}$ and a thorough exploration of the source azimuthal angle with respect to the observer is left to future studies. 
 
 %==============================================================================
 \subsection{Stellar Wind Fed Models}
 
-The accretion models of \cite{2020ApJ...896L...6R, 2020MNRAS.492.3272R, 2018MNRAS.478.3544R}, which track plasma from  magnetized stellar winds down to the event horizon, provide a self-consistent picture of the origin of both gas and magnetic fields for the accreting plasma in \sgra.  The resulting inflow does not fully circularize and so the models also provide a distinct alternative to the standard models, which {\em assume} that the rather artificial SANE or MAD initial conditions relax to an astrophysically realizable state for the inner accretion flow.
+The accretion models of \cite{2020ApJ...896L...6R, 2020MNRAS.492.3272R, 2018MNRAS.478.3544R} track plasma from  magnetized stellar winds down to the event horizon and provide a self-consistent picture of the origin of both gas and magnetic fields for the accreting plasma in \sgra.  The resulting inflow does not fully circularize, so the models also provide a distinct alternative to the standard models, which {\em assume} that the artificial SANE or MAD initial conditions relax to a astrophysically realizable state for the inner accretion flow.
 
-We consider two versions of the model: one in which the stellar wind magnetization is low ($\beta = 10^6$ and another and a second in which the magnetization is higher ($\beta = 10^2$). The $230$~GHz flux from each model is fixed by adjusting $\rhigh$ until the correct mean flux is obtained. The resulting $\Rh = 13$ ($\beta = 10^6$) and $\Rh = 28$ ($\beta = 10^2$).
+We consider two versions of the model: one in which the stellar wind magnetization is low ($\beta = 10^6$) and another and a second in which the magnetization is higher ($\beta = 10^2$). $\Rh$ is adjusted until each model has the observed mean flux, with $\Rh = 13$ ($\beta = 10^6$) and $\Rh = 28$ ($\beta = 10^2$).
 
-Full results are given in Appendix~\ref{app:tables}, Table \ref{tab:resslerPF}.  In brief, while both models pass many of the tests, they both fail the ring width test, producing a width that is too small.  In addition both fail the 86GHz flux test: the 86GHz flux is too large.
+While both models pass many of the tests, they both fail the m-ring width test, producing a width that is too small.  In addition both fail the 86GHz flux test: the 86GHz flux is too large. Full results are given in Appendix~\ref{app:tables}, Table \ref{tab:resslerPF}.
 
-Interestingly both non-EHT and EHT constraints have the power to test the wind-fed model.  We cannot draw a broad conclusion about the viability of wind-fed models, however: these two models include only a single spin and a single model for the eDF.
+Interestingly both non-EHT and EHT constraints have the power to test the wind-fed model.  We cannot draw a broad conclusion about the viability of wind-fed models, however, as the two models only consider a single spin and a single eDF model.
 
 %==============================================================================
 \subsection{Best Bet Models}
@@ -546,7 +558,7 @@ Interestingly both non-EHT and EHT constraints have the power to test the wind-f
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/bestbet.pdf}
-  \caption{Best bet models.  Each column corresponds to one best bet model; top row shows 86~GHz image, middle row 230~GHz and the bottom row shows the corresponding multiwavelength broadband SED.} \label{fig:bestbet}
+  \caption{Best bet models.  Each column corresponds to one best bet model; top row shows 86~GHz image, middle row 230~GHz and the bottom row shows the corresponding multiwavelength broadband SED.\monika{can we have here the golden SANE model with high spin?}} \label{fig:bestbet}
 \end{figure*}
 
 We now consider combined constraints, excluding variability, under the hypothesis that (1) there is a missing physical ingredient in the models that would lower variability, but (2) that missing ingredient would not vitiate the model comparison process entirely.  Models are eliminated if they fail any one constraint.

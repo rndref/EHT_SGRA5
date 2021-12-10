@@ -4,27 +4,34 @@
 %==============================================================================
 \subsection{Basic Assumptions}\label{sec:basic}
 
-We will assume that the mass and distance to \sgra is
-\begin{eqnarray}
+In this paper, we assume the mass of and distance to \sgra are
+\begin{align}
 \label{eq:mass}
-  \mbh &= (4.14 \pm 0.014) \times 10^6 \msun,\\
-  D    &= (8.127 \pm 0.023) \kpc
-\end{eqnarray}
-which is approximately the mean of values reported by \citet{2019Sci...365..664D} and
-\citet{2019A&A...625L..10G}.
+  \mbh &= (4.14  \pm 0.014) \times 10^6 \msun,\\
+  D    &= (8.127 \pm 0.023) \kpc,
+\end{align}
+which are approximately the mean of values reported by \citet{2019Sci...365..664D} and \citet{2019A&A...625L..10G}.
 
-Throughout the paper we also assume that \sgra is a black hole so that the spacetime around it is described by the Kerr metric. The black hole dimensionless spin, $\abh$, is a free parameter with $-1 < \abh < 1$, where $\abh \equiv Jc/G\mbh^2$, where $J$, $G$, and $c$ are the black hole angular momentum, gravitational constant, and speed of light, respectively.  Following \citetalias{M87PaperV}, $\abh < 0$ indicates the angular momentum of the accretion flow and black hole are antiparallel (the accretion flow is ``retrograde'').
+Throughout the paper we also assume that \sgra is a black hole so that the spacetime around it is described by a Kerr spacetime.
+The black hole dimensionless spin, $\abh \equiv Jc/G\mbh^2$, is a free parameter with $-1 < \abh < 1$ and $J$, $G$, and $c$ are the black hole angular momentum, gravitational constant, and speed of light, respectively.
+Following \citetalias{M87PaperV}, $\abh > $ indicates the angular momentum of the accretion flow and black hole are parallel (the accretion flow is ``prograde'') and $\abh < 0$ indicates the angular momentum of the accretion flow and black hole are antiparallel (``retrograde'').
 
-Using the above mass and distance, the implied characteristic length ${\mathcal L} \equiv G M/c^2 = 6.1 \times 10^{11}\cm$, characteristic time ${\mathcal T} \equiv G M/c^3 = 20.5 \sec$, and angular scale ${\mathcal \theta_g} \equiv G\mbh/(c^2 D) = 5.03\uas$.  The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D) = (52.2 \pm 2.08) \uas $, where errorbars enclose uncertainty in the black hole spin and viewing angle (see e.g., \citealt{2020ApJ...896....7M}).
+Using the above mass and distance, the implied
+characteristic length ${\mathcal L} \equiv G M/c^2 = 6.1 \times 10^{11}\cm$,
+characteristic time   ${\mathcal T} \equiv G M/c^3 = 20.5 \sec$, and
+angular scale ${\mathcal \theta_g} \equiv G\mbh/(c^2 D) = 5.03\uas$.
+The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D) = (52.2 \pm 2.08) \uas $,
+where errorbars enclose uncertainty in the black hole spin and viewing angle (see e.g., \citealt{2013ApJ...777...13C, 2020ApJ...896....7M}).
 
 If the emitting plasma is ionized hydrogen (electron-proton plasma) then the Eddington luminosity is
-$L_\mathrm{Edd} = 4\pi G\mbh c m_p/\sigma_{T} = 5.2 \times 10^{44}\allowbreak \ergsps$.
+$L_\mathrm{Edd} = 4\pi G\mbh c m_p/\sigma_{T} = 5.2 \times 10^{44}\ergsps$.
 The corresponding Eddington accretion rate is
 $\dot\mbh_\mathrm{Edd} \equiv L_\mathrm{Edd}/(0.1 c^2) = 5.8 \times 10^{24} \gm \sec^{-1} = 0.09 \msun \yr^{-1}$
 where nominal efficiency is 10\% and the Eddington ratio:
-$ L_\mathrm{bol}/L_\mathrm{Edd} = 1.9 \times 10^{-10} (L_\mathrm{bol} /10^{35})$
-where $L_\mathrm{bol}$ is in $\erg\sec^{-1}$.
-In a quiescent, non-flaring state the bolometric luminosity of \sgra is $L_\mathrm{bol} \sim 10^{35}\erg\sec^{-1}$ resulting in an extremely small Eddington ratio. In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected and that model emission can be calculated in a post-processing step.
+$L_\mathrm{bol}/L_\mathrm{Edd} = 1.9 \times 10^{-10} (L_\mathrm{bol} /10^{35})$
+where $L_\mathrm{bol}$ is in $\ergsps$.
+In a quiescent, non-flaring state the bolometric luminosity of \sgra is $L_\mathrm{bol} \sim 10^{35}\erg\sec^{-1}$ resulting in an extremely small Eddington ratio.
+In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected and that model emission can be calculated as post-processing.
 
 % below probably not necessary:
 % \footnote{Translation of the source flux to luminosity is given by: $ \nu L_\nu
@@ -60,9 +67,8 @@ The one-zone model implies that the accretion flow is at high temperature and lo
 This motivates consideration of
 \emph{i})~a two-temperature model for the plasma where electrons are cooler than the ions \citep{1976ApJ...204..187S,1977ApJ...214..840I, 1982Natur.295...17R} and
 \emph{ii})~nonthermal electron distribution functions.
-As demonstrated in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \citet{2014A&A...570A...7M} \citep[see also more recent work by][and references therein]{2018A&A...612A..34D, 2021A&A...650A.163C, 2021arXiv211102518F, 2021arXiv211203933E}, both effects may change the predicted properties of \sgra.
+As demonstrated in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \citet{2014A&A...570A...7M} \citep[see also more recent work by][and references therein]{2018A&A...612A..34D, 2021A&A...650A.163C, 2021arXiv211102518F,2021NatAs.tmp..218C, 2021arXiv211203933E}, both effects may change the predicted properties of \sgra.
 %\br{my only remaining comment is that I think that the sentence ``As demonstrated in \citet{2000ApJ...541..234O} and \citet{2014A&A...570A...7M} (see also more recent work by \citealt{2018A&A...612A..34D} and references therein) both effects may change the predicted properties of \sgra.'' should be cut, or extended with non-EHT refs on how other groups actually probe those collisionless effects dynamically}
-
 %==============================================================================
 \subsection{Numerical Models of the Inner Accretion Flows}
 
@@ -116,10 +122,7 @@ We model the plasma flow around \sgra using ideal, non-radiative GRMHD.  The gra
 We integrate the GRMHD equations in three spatial dimensions using multiple methods: {\kharma} \citep{2021JOSS....6.3336P}, \bhac \citep{2017ComAC...4....1P}, \hamr \citep{Liska2018}, \koral \citep{2013MNRAS.429.3533S} and \athenapp \citep{2016ApJS..225...22W}; see \citealt{2019ApJS..243...26P} and \citet[in prep]{Olivares_et_al} for a comparison of GRMHD codes.  All simulations assume a constant adiabatic index $\Gamma_{\rm ad}$.
 
 The \emph{standard} initial conditions for the GRMHD integrations are a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F}
-\aco{\citep[see also][]{2002MNRAS.334..383F}}
-\monika{why do we need to have this second citation? is that essential?}
-\br{I thought Font shows another hydro torus equilibrium in this paper? We don't use that one, so I would not cite that paper}
-\ckc{all modelers: do any of you use the Font initial condition?  If not I will comment out this reference.}\aco{There are two independent hydro solutions, we have both of them. With same initial condition for magnetic field on top of hydro-solution}\br{is there a reason for using different initial conditions? I tried both FD and FM torus myself and the FD torus evolution is somewhat different. It would be better to start from the same IC to compare late states of the models to images. Which models exactly do use the (different) initial conditions of the Font-Daigne torus? I thought in paper V for M87 we used only the FM torus. Then the first sentence in this paragraph above is also wrong, because we are not using the FM torus exclusively.}\monika{exactly which model in the library starts from FD torus?}
+%\aco{\citep[see also][]{2002MNRAS.334..383F}} \monika{why do we need to have this second citation? is that essential?} \br{I thought Font shows another hydro torus equilibrium in this paper? We don't use that one, so I would not cite that paper} \ckc{all modelers: do any of you use the Font initial condition?  If not I will comment out this reference.}\aco{There are two independent hydro solutions, we have both of them. With same initial condition for magnetic field on top of hydro-solution}\br{is there a reason for using different initial conditions? I tried both FD and FM torus myself and the FD torus evolution is somewhat different. It would be better to start from the same IC to compare late states of the models to images. Which models exactly do use the (different) initial conditions of the Font-Daigne torus? I thought in paper V for M87 we used only the FM torus. Then the first sentence in this paragraph above is also wrong, because we are not using the FM torus exclusively.}\monika{exactly which model in the library starts from FD torus? please answer before midnight.} % \aco{Yes, I think is essential to cite, is true that we not using FD but we also have it in BHAC. Please be free to remove it. But definitively don't have same initial condition in all GRMHD codes.}\monika{I dont think that we have to go into details of exact setup in this paper, that is why we give e.g. only some approximate ranges for torus size etc}
 in a prograde ($\abh > 0$) or retrograde ($\abh < 0$) orbit.  In all models except the \hamr-Tilted models the torus orbital angular momentum is either parallel or antiparallel to the black hole spin. The torus is parametrized by an inner radius $R_{\rm in}$, typically $12\rg$, and the pressure maximum radius $R_{\rm max}$, typically $24\rg$. \aco{We should specify the torus size? or should we refer to the reader to SANE and MAD code comparison. We have different initial data between codes, not only in the size but also in adiabatic index in the equation of state.}
 The torus is seeded with a weak, poloidal magnetic field %\aco{ with magnetization $\beta \equiv p_{\rm gas}/p_{\rm mag} =100$}.
 % we dont want to elaborate on details like that here
@@ -164,12 +167,14 @@ T_e=\frac{2 m_p u}{3 k_B \rho (2+R)}.
 \end{align}
 Here $u$ and $\rho$ are the internal energy density and rest-mass density from the GRMHD simulation.  Thermal models are motivated by the idea that wave-particle scattering drives partial relaxation of the eDF, even though Coulomb scattering is ineffective.
 
-In \citetalias{M87PaperV} and \citetalias{M87PaperVIII}, $R$ is assigned using a prescription, adopted from \cite{2016A&A...586A..38M}, that assumes (1) the temperature ratio is a function only of local conditions (2) the ratio varies from one value at low plasma $\beta \equiv P_\mathrm{gas}/P_\mathrm{mag}$ to a second value at high $\beta$:
+Motivated by plasma heating models that energy dissipation to ions and electrons depends on the local magnetic properties \citep[e.g.,][]{2010MNRAS.409L.104H, Kawazura771},
+we use a prescription with two assumptions the temperature ratio is a local function of the plasma $\beta \equiv P_\mathrm{gas}/P_\mathrm{mag}$ \citep{2015ApJ...799....1C}.
+Specifically, we use the same model as in \citetalias{M87PaperV} and \citetalias{M87PaperVIII}, where $R$ is a smooth function adopted from \cite{2016A&A...586A..38M}.
 \begin{equation}
 R = \frac{T_i}{T_e} = \Rh \frac{b^2}{b^2+1} + \Rl \frac{1}{b^2+1}.
 \label{eq:rhigh_prescription}
 \end{equation}
-Here $b \equiv \beta/\beta_\mathrm{crit}$. This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.  In the standard models $\Rl = 1$, $\beta_\mathrm{crit} = 1$, and only $\Rh$ is allowed to vary from $1$ to $160$.  The $\Rh$ model is motivated by plasma heating models in which the branching ratio for dissipation into ions and electrons approaches $1$ at low $\beta$ \citep[e.g.,][]{2010MNRAS.409L.104H, 2015ApJ...799....1C, Kawazura771}.
+Here $b \equiv \beta/\beta_\mathrm{crit}$. This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.  In the standard models $\Rl = 1$, $\beta_\mathrm{crit} = 1$, and only $\Rh$ is allowed to vary from $1$ to $160$.  
 
 In {\it non-thermal} models the eDF includes a power-law tail extending to high energy.
 %\jd{this needs some references to kappa-jet work. e.g. Davelaar+2018\&2019} % already cited earlier in text
@@ -177,7 +182,7 @@ This is implemented in two ways:
 with a power-law distribution function:
 \begin{align}
   \frac{1}{n_e} \frac{d n_e}{d\gamma} =
-  \frac{ (p_-1)}{({\gamma^{1-p}_\mathrm{min}} - {\gamma^{1-p}_\mathrm{max}})} \gamma^{-p}
+  \frac{ (p-1)}{({\gamma^{1-p}_\mathrm{min}} - {\gamma^{1-p}_\mathrm{max}})} \gamma^{-p}
   \label{eq:nonthermaleDF}
 \end{align}
 which has power-law index $p$ and upper and lower limits  $\gamma_{\min}$ and $\gamma_{\max}$,
@@ -226,7 +231,7 @@ Entire image library contains $6$ model sets; $364$ models (with different spins
     \emph{i})~a thermal SANE example,
     \emph{ii})~a thermal MAD example, and
     \emph{iii})~a non-thermal variable $\kappa$ MAD.
-    \ckc{will do.  86GHz currently uses lower resolution.  We can either interpolate, or increase the resolution for these fudicial models.}}
+    \ckc{will do.  86GHz currently uses lower resolution.  We can either interpolate, or increase the resolution for these fudicial models.}\monika{CK can you check label in the middle panel? is middle really mad?}\aco{Which  quantity we are plotting and in which range (in the colormap)?}}
   \label{fig:fiducial_imgs}
 \end{figure*}
 
