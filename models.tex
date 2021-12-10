@@ -84,11 +84,11 @@ We simulate the plasma flow with an ideal GRMHD\footnote{Notice that ideal GRMHD
   \colhead{Reference}
 }
 \startdata
-KHARMA & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $4/3$ & 30,000 & 1000 & [288x128x128] & This work, Wong+2021, \vd{Dhruv+2022?} \\
-BHAC   & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $4/3$ & 30,000 & 3333 & [512x192x192] & This work \\
-HAMR   & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $13/9,5/3$ & 35,000 & 1000/200 & [348/240×192×192] &This work \\
-KORAL  & 0,$\pm0.3$,$\pm0.5$,$\pm0.7$,$\pm0.9$ & MAD & $13/9$ & 101,000 & 100,000 & [288x192x144] & \cite{2021arXiv210812380N} \\
-HAMR-Tilt\tablenotemark{$*$} & $15/16$ & IN-SANE & $5/3$ & 105,000 & 100,000 & [448x144x240] & \citet{Chatterjee2020} \\
+\kharma & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $4/3$ & 30,000 & 1000 & [288x128x128] & This work, Wong+2021, \vd{Dhruv+2022?} \\
+\bhac   & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $4/3$ & 30,000 & 3333 & [512x192x192] & This work \\
+\hamr   & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $13/9,5/3$ & 35,000 & 1000/200 & [348/240×192×192] &This work \\
+\koral  & 0,$\pm0.3$,$\pm0.5$,$\pm0.7$,$\pm0.9$ & MAD & $13/9$ & 101,000 & 100,000 & [288x192x144] & \cite{2021arXiv210812380N} \\
+\hamr-Tilt\tablenotemark{$*$} & $15/16$ & IN-SANE & $5/3$ & 105,000 & 100,000 & [448x144x240] & \citet{Chatterjee2020} \\
 Wind Accretion\tablenotemark{$*$} & 0 & MAD$\times2$ & 5/3 & 20,000 & 2,400 & [356x128x128] & \citet{2020ApJ...896L...6R}
 \enddata
 \tablenotetext{$*$}{Non-standard model.}
@@ -113,14 +113,14 @@ Wind Accretion\tablenotemark{$*$} & 0 & MAD$\times2$ & 5/3 & 20,000 & 2,400 & [3
 % \paragraph{Methods, initial and boundary conditions:}
 We model the plasma flow around \sgra using ideal, non-radiative GRMHD.  The gravitational field is given by the Kerr metric, with mass given by Equation (\ref{eq:mass}) and with black hole spin $\abh$ as free parameter \citep[see e.g.,][]{2003ApJ...589..444G, 2005ApJ...635..723A, 2007A&A...473...11D}.
 
-We integrate the GRMHD equations in three spatial dimensions using multiple methods: {KHARMA} \citep{2021JOSS....6.3336P}, BHAC \citep{2017ComAC...4....1P}, HAMR \citep{Liska2018}, Koral \citep{2013MNRAS.429.3533S} and Athena++ \citep{2016ApJS..225...22W}; see \citealt{2019ApJS..243...26P} and \citet[in prep]{Olivares_et_al} for a comparison of GRMHD codes.  All simulations assume a constant adiabatic index $\Gamma_{\rm ad}$.
+We integrate the GRMHD equations in three spatial dimensions using multiple methods: {\kharma} \citep{2021JOSS....6.3336P}, \bhac \citep{2017ComAC...4....1P}, \hamr \citep{Liska2018}, \koral \citep{2013MNRAS.429.3533S} and \athenapp \citep{2016ApJS..225...22W}; see \citealt{2019ApJS..243...26P} and \citet[in prep]{Olivares_et_al} for a comparison of GRMHD codes.  All simulations assume a constant adiabatic index $\Gamma_{\rm ad}$.
 
 The \emph{standard} initial conditions for the GRMHD integrations are a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F}
 \aco{\citep[see also][]{2002MNRAS.334..383F}}
 \monika{why do we need to have this second citation? is that essential?}
 \br{I thought Font shows another hydro torus equilibrium in this paper? We don't use that one, so I would not cite that paper}
-\ckc{all modelers: do any of you use the Font initial condition?  If not I will comment out this reference.}
-in a prograde ($\abh > 0$) or retrograde ($\abh < 0$) orbit.  In all models except the HAMR-Tilted models the torus orbital angular momentum is either parallel or antiparallel to the black hole spin. The torus is parametrized by an inner radius $R_{\rm in}$, typically $12\rg$, and the pressure maximum radius $R_{\rm max}$, typically $24\rg$.
+\ckc{all modelers: do any of you use the Font initial condition?  If not I will comment out this reference.}\aco{There are two independent hydro solutions, we have both of them. With same initial condition for magnetic field on top of hydro-solution}\br{is there a reason for using different initial conditions? I tried both FD and FM torus myself and the FD torus evolution is somewhat different. It would be better to start from the same IC to compare late states of the models to images. Which models exactly do use the (different) initial conditions of the Font-Daigne torus? I thought in paper V for M87 we used only the FM torus. Then the first sentence in this paragraph above is also wrong, because we are not using the FM torus exclusively.}\monika{exactly which model in the library starts from FD torus?}
+in a prograde ($\abh > 0$) or retrograde ($\abh < 0$) orbit.  In all models except the HAMR-Tilted models the torus orbital angular momentum is either parallel or antiparallel to the black hole spin. The torus is parametrized by an inner radius $R_{\rm in}$, typically $12\rg$, and the pressure maximum radius $R_{\rm max}$, typically $24\rg$. \aco{We should specify the torus size? or should we refer to the reader to SANE and MAD code comparison. We have different initial data between codes, not only in the size but also in adiabatic index in the equation of state.}
 The torus is seeded with a weak, poloidal magnetic field %\aco{ with magnetization $\beta \equiv p_{\rm gas}/p_{\rm mag} =100$}.
 % we dont want to elaborate on details like that here
 
@@ -172,10 +172,10 @@ This is implemented in two ways:
 with a power-law distribution function:
 \begin{align}
   \frac{1}{n_e} \frac{d n_e}{d\gamma} =
-  \frac{ (p_\mathrm{pl}-1)}{({\gamma^{1-p_\mathrm{pl}}_\mathrm{min}} - {\gamma^{1-p_\mathrm{pl}}_\mathrm{max}})} \gamma^{-p_\mathrm{pl}}
+  \frac{ (p_-1)}{({\gamma^{1-p}_\mathrm{min}} - {\gamma^{1-p}_\mathrm{max}})} \gamma^{-p}
   \label{eq:nonthermaleDF}
 \end{align}
-which has power-law index $p_\mathrm{pl}$ and upper and lower limits  $\gamma_{\min}$ and $\gamma_{\max}$,
+which has power-law index $p$ and upper and lower limits  $\gamma_{\min}$ and $\gamma_{\max}$,
 or
 with a so-called $\kappa$ distribution function, inspired by observations of the solar wind and by results of
 collisionless plasma simulations (e.g., Kunz et al. 2015 and references therein):
@@ -185,8 +185,6 @@ collisionless plasma simulations (e.g., Kunz et al. 2015 and references therein)
   \frac{1}{n_e} \frac{d n_e}{d\gamma}= \gamma \sqrt{\gamma^2-1} \left(1+\frac{\gamma+1}{\kappa w}\right)^{-(\kappa+1)}
 \end{align}
 which has width parameter $w$ and power-law index parameter $\kappa$.
-
-
 
 Evidently any eDF assignment schemes is an approximation in the sense that the eDF will in general depend on both local conditions and particle histories.  The eDF is assumed isotropic, and electron-positron pairs are neglected (refs!).
 
@@ -214,7 +212,7 @@ In Figure~\ref{fig:fiducial_imgs} we present a few examples of time-averaged mod
 \subsection{Summary of Sgr~A* model library}
 
 A summary of all radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
-\note{Entire image library contains $MMM$ model sets, $NNN$ models, $PPP$ images, and $QQQ$ SEDs and occupies $GGG$ gigabytes.}
+Entire image library contains $6$ model sets; $364$ models (with different spins and electron prescriptions); $3,744,818$ 230/86~GHz images; $1,533,100$ SEDs and occupies about $GGG$ gigabytes.
 
 \begin{figure*}
   \centering
@@ -223,9 +221,7 @@ A summary of all radiative transfer calculations is given in Table~\ref{tab:radi
     \emph{i})~a thermal SANE example,
     \emph{ii})~a thermal MAD example, and
     \emph{iii})~a non-thermal variable $\kappa$ MAD.
-    \monika{labels have to be made larger}
-    \ckc{will do.  86GHz currently uses lower resolution.  We can either interpolate, or increase the resolution for these fudicial models.}
-    \monika{I suggest to make big white labels on images with frequency and viewing angle and model type, window time we can give in figure caption. SEDs could have small arrows pointing at which frequency in the SED the images are made demonstrating that we see only synchrotron emission at 86 and 230 GHz (and no e.g. bremsstrahlung), spins could be also mentioned in figure caption.}}
+    \ckc{will do.  86GHz currently uses lower resolution.  We can either interpolate, or increase the resolution for these fudicial models.}}
   \label{fig:fiducial_imgs}
 \end{figure*}
 
@@ -241,7 +237,7 @@ A summary of all radiative transfer calculations is given in Table~\ref{tab:radi
   \colhead{$\Rl$}              &%
   \colhead{$\Rh$}              &%
   \colhead{$\beta_{\rm crit}$} &%
-  \colhead{$p_{pl}$}           &%
+  \colhead{$p$}           &%
 % \colhead{$\gamma_{\rm min/max}$} &%
   \colhead{$\kappa$}           &%
   \colhead{$i^\circ$}          &%
@@ -252,29 +248,31 @@ A summary of all radiative transfer calculations is given in Table~\ref{tab:radi
   & & & & & & & \colhead{[GHz]} & & \colhead{[1000 M]} &}
 \startdata
 \multicolumn{11}{c}{\bf Thermal models}\\
-KHARMA & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,170] & [86,230] & Yes & [15,20) & 360,000 \\
-KHARMA & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,170] & [86,230] & Yes & [20-25) & 360,000 \\
-KHARMA & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,170] & [86,230] & Yes & [25-30) & 360,000 \\
-BHAC   & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,90]  & [86,230] & Yes & [10-15) & 100,000 \\
-BHAC   & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,90]  & [86,230] & Yes & [20-25) & 100,000 \\
-BHAC   & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,90]  & [86,230] & Yes & [25-30) & 100,000 \\
-HAMR   & 1 & [1,40,160]    & 1 & - & - & [10,50,90]      & [86,230] & Yes & [30-35) & 45,000 \\
-KORAL  & 1 & [20]          & 1 & - & - & [10,30,...,170] & [86,230] & No  & [5-100)   & 107,507 \\
+\kharma & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,170] & [86,230] & Yes & [15,20) & 360,000 \\
+\kharma & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,170] & [86,230] & Yes & [20-25) & 360,000 \\
+\kharma & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,170] & [86,230] & Yes & [25-30) & 360,000 \\
+\bhac   & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,90]  & [86,230] & Yes & [10-15) & 100,000 \\
+\bhac   & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,90]  & [86,230] & Yes & [20-25) & 100,000 \\
+\bhac   & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,90]  & [86,230] & Yes & [25-30) & 100,000 \\
+\hamr   & 1 & [1,40,160]    & 1 & - & - & [10,50,90]      & [86,230] & Yes & [30-35) & 45,000 \\
+\koral  & 1 & [20]          & 1 & - & - & [10,30,...,170] & [86,230] & No  & [5-100)   & 107,507 \\
 Wind Accretion & 1 & [13,28]    & 1 & - & - & N/A        & [86,230] & No  & 10        & 1802 \\
-HAMR Tilted    & 1 & [1,40,160] & 1 & - & - & [10,50,90] & [86,230] & Yes & [100-103) & 8,100 \\
+\hamr Tilted    & 1 & [1,40,160] & 1 & - & - & [10,50,90] & [86,230] & Yes & [100-103) & 8,100 \\
 \hline
 \multicolumn{11}{c}{\bf Thermal + non-thermal power-law models} \\
-HAMR & 1 & [1,40,160] & 1 & 4 & - & [10,50,90] & [86,230] & No & [30-35) & 45,000 \\
+\hamr & 1 & [1,40,160] & 1 & 4 & - & [10,50,90] & [86,230] & No & [30-35) & 45,000 \\
 \hline
 \multicolumn{11}{c}{\bf Thermal + non-thermal $\kappa$ models} \\
-BHAC & 1 & [1,10,40,160]    & 1 & - & 3.5 ($\epsilon_0=0.05$) & [10,30,...,90]  & [86,230] & No & [25-30) & 20,000 \\
-BHAC & 1 & [1,10,40,160]    & 1 & - & 3.5 ($\epsilon_0=0.10$) & [10,30,...,90]  & [86,230] & No & [25-30) & 20,000 \\
-BHAC & 1 & [1,10,40,160]    & 1 & - & 3.5 ($\epsilon_0=0.20$) & [10,30,...,90]  & [86,230] & No & [25-30) & 20,000 \\
-BHAC & 1 & [1,10,40,80,160] & 1 & - & variable $\kappa=\kappa(\beta,\sigma)$ & [10,30,...,90] & [86,230] & No  & [25-30) & 125,000 \\
-HAMR & 1 & [1,10,40,160]    & 1 & - & variable $\kappa=\kappa(\beta,\sigma)$ & [10,30,...,90] & [86,230] & Yes & [25-30) & 100,000 \\
+\bhac & 1 & [1,10,40,160]    & 1 & - & 3.5 ($\epsilon_0=0.05$) & [10,30,...,90]  & [86,230] & No & [25-30) & 20,000 \\
+\bhac & 1 & [1,10,40,160]    & 1 & - & 3.5 ($\epsilon_0=0.10$) & [10,30,...,90]  & [86,230] & No & [25-30) & 20,000 \\
+\bhac & 1 & [1,10,40,160]    & 1 & - & 3.5 ($\epsilon_0=0.20$) & [10,30,...,90]  & [86,230] & No & [25-30) & 20,000 \\
+\bhac & 1 & [1,10,40,80,160] & 1 & - & variable $\kappa=\kappa(\beta,\sigma)$ & [10,30,...,90] & [86,230] & No  & [25-30) & 125,000 \\
+\hamr & 1 & [1,10,40,160]    & 1 & - & variable $\kappa=\kappa(\beta,\sigma)$ & [10,30,...,90] & [86,230] & Yes & [30-35) & 100,000 \\
 \enddata
-\caption{Summary of emission simulations in \sgra EHT model library.\kc{flipped PL and kappa, and propose to remove $\gamma_{\rm min/max}$ from the table as it is a local quantity in hamr models} The cadence of KHARMA=5M, BHAC=10M for thermal and nonthermal variable kappa, 50M for nonthermal variable efficiency models, and HAMR=10M for thermal, nonthermal powerlaw and variable kappa.
-\gw{Rhigh for the wind accretion models is either 28 or 13, but these are for two separate simulations (so it's not like there's one simulation where Rhigh has been varied); no SED from grmonty-like codes, but there is ``SED''-like information from imaging at different frequencies}\monika{how many 230 ghz frames we have for these two wind models and within what times??}
+\caption{Summary of emission simulations in \sgra EHT model library.\monika{why is wind model inclination N/A? can anyone explain?}
+\gw{I didn't write N/A, but as I recall from Sean, the wind models *have* an absolute orientation with respect to Earth because of how their boundary condition is set up, so it wouldn't make sense to vary inclination. Also their bhspin = 0.}\monika{Ah, ok , so there is an inclination but we dont know it. can you find out ? maybe I can also change the Fig 1 accordingly (although that would require some thinking)!}\gw{sorry not sure what you mean by ``there is an inclination''. there is an inclination that we plug into ipole, but that inclination is with respect to the coordinate system, not anything particularly ``physical'' (because the black hole has zero spin). the coordinate system is oriented such that images are computed at inc->180 (inc as defined in the ipole sense)}
+%The cadence of KHARMA=5M, BHAC=10M for thermal and nonthermal variable kappa, 50M for nonthermal variable efficiency models, and HAMR=10M for thermal, nonthermal powerlaw and variable kappa.
+%\gw{Rhigh for the wind accretion models is either 28 or 13, but these are for two separate simulations (so it's not like there's one simulation where Rhigh has been varied); no SED from grmonty-like codes, but there is ``SED''-like information from imaging at different frequencies}\monika{how many 230 ghz frames we have for these two wind models and within what times??}
 }~\label{tab:radiativemodels}
 \end{deluxetable*}
 %\end{rotatetable}

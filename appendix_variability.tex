@@ -1,7 +1,6 @@
 \section{Variability Checks}\label{app:variability}
 
 
-\monika{could we incorporate this awasome plot (Fig with M3 for kharma and koral) below into variability check \#3?  This change was suggested by coordinators of the paper}
 
 \begin{figure}
   \centering
@@ -79,15 +78,10 @@ A set of images was produced which put a ceiling on the electron temperature $\T
 
 %b. Discussion of models with $\Rl = 10$. [Vedant]
 
-\subsection{Effects of self-consistent electron heating models}
+\subsection{Simulations Duration}\label{app:narayan}
 
-The thermal models considered in \vd{ref. models section} assign a local electron temperature as a post-processing step based on local magnetic field strength, parameterized by plasma $\beta$ (Equation \ref{eq:rhigh_prescription} and Equation \vd{ref. critical-$\beta$ equation}).
+insert short description of David plot with m3 for \koral vs\kharma
 
-\citealt{10.1093/mnras/stv2084} provided a formulation to model electron thermodynamics during the fluid evolution. Numerical dissipation at grid scale sources entropy generation and is used to heat the electrons based on a microphysical, sub-grid heating prescription. Local fluid and electromagnetic variables are used to compute the electron entropy which along with the ideal gas equation of state, can be converted into a temperature ($\Theta_{e}$). This approach allows computing the electron temperature at each timestep of the simulation, and not during post-processing, as it is done in the $\Rh$ and Critical-$\beta$ prescriptions.
-
-We consider three sub-grid heating models that prescribe the partition of dissipated energy into electrons and ions. \citealt{2010MNRAS.409L.104H} computed the ratio of ion-to-electron heating due to dissipation of Alfv\'enic turbulent cascade, while \citealt{10.1093/mnras/stx2530} and \citealt{Rowan_2017} considered magnetic reconnection as the source of energy dissipation at sub-grid scales. These studies provide an approximate fitting formula for the ion-to-electron heating rate ($Q_{i}/Q_{e}$) based on local ion-to-electron temperature ratio ($T_{i}/T_{e}$) and local magnetic field strength -- parameterized by $\sigma$ or plasma $\beta$.
-
-The GRMHD simulations considered here are a subset of the simulations analyzed in \citealt{2020MNRAS.494.4168D}. These include MAD and SANE accretion flows at spins, $a_{*}=0,+1/2,+15/16$. We compute the 3 hour modulation index $M_{3}$, over the time interval (5k-10k)$GM/c^{3}$. The average $M_{3}$ values are comparable to similar $\Rh$ models, with SANE reconnection models exhibiting a reduced variability as compared to the corresponding turbulent heating models. However, the average $M_{3}$ for all the models is greater than the $M_{3}$ measured from the ALMA lightcurve on three days.
 
 %==============================================================================
 \subsection{Effect of $\Rl$}
@@ -119,8 +113,21 @@ Although the minimum value of the distribution decreases when $\Rl$ is increased
 
 brief discussion, forward reference to Wong+.
 
+
+
+
 %==============================================================================
 %9. $\gamma = 5/3$ rather than $4/3$.   [Vedant]  When $\gamma = 4/3$ the compression ratio across the shock is larger.
+
+\subsection{Effects of self-consistent electron heating models}
+
+The thermal models considered in Section~\ref{sec:models} assign a local electron temperature as a post-processing step based on local magnetic field strength, parameterized by plasma $\beta$ (Equation \ref{eq:rhigh_prescription} and Equation \vd{ref. critical-$\beta$ equation}).
+
+\citealt{10.1093/mnras/stv2084} provided a formulation to model electron thermodynamics during the fluid evolution. Numerical dissipation at grid scale sources entropy generation and is used to heat the electrons based on a microphysical, sub-grid heating prescription. Local fluid and electromagnetic variables are used to compute the electron entropy which along with the ideal gas equation of state, can be converted into a temperature ($\Theta_{e}$). This approach allows computing the electron temperature at each timestep of the simulation, and not during post-processing, as it is done in the $\Rh$ and Critical-$\beta$ prescriptions.
+
+We consider three sub-grid heating models that prescribe the partition of dissipated energy into electrons and ions. \citealt{2010MNRAS.409L.104H} computed the ratio of ion-to-electron heating due to dissipation of Alfv\'enic turbulent cascade, while \citealt{10.1093/mnras/stx2530} and \citealt{Rowan_2017} considered magnetic reconnection as the source of energy dissipation at sub-grid scales. These studies provide an approximate fitting formula for the ion-to-electron heating rate ($Q_{i}/Q_{e}$) based on local ion-to-electron temperature ratio ($T_{i}/T_{e}$) and local magnetic field strength -- parameterized by $\sigma$ or plasma $\beta$.
+
+The GRMHD simulations considered here are a subset of the simulations analyzed in \citealt{2020MNRAS.494.4168D}. These include MAD and SANE accretion flows at spins, $a_{*}=0,+1/2,+15/16$. We compute the 3 hour modulation index $M_{3}$, over the time interval (5k-10k)$GM/c^{3}$. The average $M_{3}$ values are comparable to similar $\Rh$ models, with SANE reconnection models exhibiting a reduced variability as compared to the corresponding turbulent heating models. However, the average $M_{3}$ for all the models is greater than the $M_{3}$ measured from the ALMA lightcurve on three days.
 
 \subsection{Effect of fluid adiabatic index, $\Gamma_{\lowercase{ad}}$}
 
@@ -128,4 +135,4 @@ We expect the ions and electrons in in hot accretion flows to be thermally decou
 
 The adiabatic index of the fluid assumes a value between $\Gamma_{e}$ and $\Gamma_{i}$ dictated by the thermodynamics of the ions and electrons (cf. Figure 4 in \citealt{10.1093/mnras/stw3116}). Since we do not model electron thermodynamics and ignore radiative effects during our fluid simulations, we consider a constant value $\Gamma_{ad}$, and set it to 4/3 for the \textit{standard} set of simulations, ie. $\Gamma_{ad}=\Gamma_{e}$. While this may be the case in the funnel, where the electrons are the hottest and highly relativistic; the fluid adiabatic index value away from the poles can be higher than the relativistic value.
 
-We look at the interplay between fluid adiabatic index and lightcurve variability by evaluating $M_{3}$ for thermal, GRMHD models with a higher fluid adiabatic index. This includes MAD models with $\Gamma_{ad}=13/9$ (\vd{ref. section on KORAL models}; \citealt{2021arXiv210812380N}) and SANE models with $\Gamma_{ad}=5/3$. The models exhibit lightcurve variability similar to the \textit{standard} library and have an average $M_{3}$ that is greater than the value obtained from the ALMA lightcurve. \kc{maybe discuss hamr thermal models here too}
+We look at the interplay between fluid adiabatic index and lightcurve variability by evaluating $M_{3}$ for thermal, GRMHD models with a higher fluid adiabatic index. This includes MAD models with $\Gamma_{ad}=13/9$ (see Section~\ref{app:narayan} and  \citealt{2021arXiv210812380N}) and SANE models with $\Gamma_{ad}=5/3$. The models exhibit lightcurve variability similar to the \textit{standard} library and have an average $M_{3}$ that is greater than the value obtained from the ALMA lightcurve. \kc{maybe discuss hamr thermal models here too}
