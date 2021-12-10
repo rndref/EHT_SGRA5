@@ -53,24 +53,24 @@ How do the models fare when compared to the EHT data alone, using the null locat
 %  \label{fig:cmp_null}
 %\end{figure}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\columnwidth]{./figures/Null_loc_Constraints.png}
-  \caption{Null Location Constraint\ckc{Texts/labels in pizza plots too small to read.}}
-  \label{fig:cmp_ozel}
-\end{figure}
+%\begin{figure}
+%  \centering
+%  \includegraphics[width=\columnwidth]{./figures/Null_loc_Constraints.png}
+%  \caption{Null Location Constraint\ckc{Texts/labels in pizza plots too %small to read.}}
+%  \label{fig:cmp_ozel}
+%\end{figure}
 
 The null location constraint rules out edge-on MAD models at positive spin and a few large $\Rh$ SANE models.  The null location constraint passes 77\% of models.
 
 %..............................................................................
 \subsubsubsection{Second Moment}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\columnwidth]{./figures/230GHz_size_Constraints.png}
-  \caption{2nd moment plots}
-  \label{fig:cmp_2nd_moment}
-\end{figure}
+%\begin{figure}
+%  \centering
+%  \includegraphics[width=\columnwidth]{./figures/230GHz_size_Constraints.png}
+%  \caption{2nd moment plots}
+%  \label{fig:cmp_2nd_moment}
+%\end{figure}
 
 The second moment constraint passes 99\% of models, that is, the models are all crudely the right size.  The models that fail are retrograde, face-on, SANE models with $\Rh = 1$. These models have extended rings of emission with angular extent that is large compared to the critical impact parameter.
 
@@ -82,45 +82,45 @@ The m-ring fits pass 94\%, 65\%, and 36\% of models for the ring asymmetry, diam
 
 The asymmetry parameter is typically not very well constrained.  The models that fail are almost all high inclination models with positive spin.  The failing models have asymmetries that are large and detectable because Doppler boosting concentrates emission in an equatorial spot on the approaching side of the disk.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\columnwidth]{./figures/Mring_f1_Constraints.png}
-  \caption{m-ring asymmetry}
-  \label{fig:cmp_m-ring_asymm}
-\end{figure}
+%\begin{figure*}
+%  \centering
+ % \includegraphics[width=\columnwidth]{./figures/Mring_f1_Constraints.png}
+%  \caption{m-ring asymmetry}
+%  \label{fig:cmp_m-ring_asymm}
+%\end{figure*}
 
 The ring diameter is better constrained than the asymmetry parameter.  It also varies systematically from model to model.  A much larger fraction of models therefore fails the ring diameter test.
 
 Most of the models that fail are low inclination models with ring diameters that are too large (only one model fails because the ring diameter is too small).  For example, the face-on, $\Rh = 10$ SANE models fail for all spins except $\abh = 0.94$ because the ring is too large.  The same is true for all face-on MAD models with $\Rh = 1$.
 
-\begin{figure}
+\begin{figure*}
   \centering
-  \includegraphics[width=\columnwidth]{./figures/Mring_d_Constraints.png}
+  \includegraphics[width=\textwidth]{./figures/Mring_d_Constraints.png}
   \caption{M-Ring diameter.}
   \label{fig:cmp_m-ring_diam}
-\end{figure}
+\end{figure*}
 
 The m-ring width is best constrained and therefore most constraining.  Although the closure phases constrain the m-ring width as well, it is easy to see how the visibility amplitudes are affected by m-ring width: the width controls long-baseline amplitudes. Smaller width for a simple, symmetric ring corresponds to larger visibility amplitudes on long baselines.  
 
 All models that fail have m-ring widths that are too small.  This includes all but 3 MAD models at $\abh \le 0$ and all MAD models at $i = 90\degree$.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\columnwidth]{./figures/Mring_w_Constraints.png}
+\begin{figure*}
+ \centering
+ \includegraphics[width=\textwidth]{./figures/Mring_w_Constraints.png}
   \caption{m-ring widths}
-  \label{fig:cmp_m-ring_width}
-\end{figure}
+% \label{fig:cmp_m-ring_width}
+\end{figure*}
 
 \subsubsubsection{EHT Constraint Summary}
 
 Constraints based on EHT data are summarized in Figure \ref{fig:all_EHT_constraints}.  The cuts favor $\abh > 0$ models.  We are left with $31/100$ SANE models and $20/100$ MAD models.
 
-\begin{figure}
+\begin{figure*}
   \centering
-    \includegraphics[width=\columnwidth]{./figures/Interferometric_Constraints.png}
+    \includegraphics[width=\textwidth]{./figures/Interferometric_Constraints.png}
   \caption{Combined EHT constraints (logical {\em and}) including the second moment, null location, and m-ring fit constraints.}
   \label{fig:all_EHT_constraints}
-\end{figure}
+\end{figure*}
 
 \subsubsection{Non-EHT Constraints}
 
@@ -128,8 +128,6 @@ Now consider constraints from 86GHz, NIR, and X-ray observations.  Most or all o
 
 %..............................................................................
 \subsubsubsection{NIR Median Flux}
-
-\note{Michi}
 
 NIR photons are produced by synchrotron process from photons at the high energy end of the distribution function.  For a one-zone model with $B = 30$G, the  critical frequency $\nu_{crit} \simeq \gamma^2 e B/(m_e c) \simeq 80$GHz and emission at $2.2\mu$m is therefore produced by electrons with $\gamma \simeq 10^3$, compared to a mean Lorentz factor of $30$ for plasma with $\Theta_e = 10$.  NIR flux density will therefore be sensitive to $\Theta_e$ and therefore to $\Rh$.
 
@@ -139,17 +137,15 @@ Models that pass the NIR flux limit are shown in Figure \ref{fig:cmp_2um_flux}.
 
 All but $6\%$ of the SANE models pass; the exceptions are high spin, high inclination models where Doppler boosting increases the NIR flux from the bright spot on the approaching side of the disk.  Considering MAD models alone, $68\%$ fail the NIR test, including all but 1 model at $\Rh = 1$ and $10$.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\columnwidth]{./figures/2um_flux_Constraints.png}
-  \caption{NIR flux limit}
-  \label{fig:cmp_2um_flux}
-\end{figure}
+%\begin{figure}
+%  \centering
+%  \includegraphics[width=\columnwidth]{./figures/2um_flux_Constraints.png}
+%  \caption{NIR flux limit}
+%  \label{fig:cmp_2um_flux}
+%\end{figure}
 
 %..............................................................................
 \subsubsubsection{X-ray Luminosity}
-
-\note{Michi}
 
 Most thermal models produce X-ray emission through Compton upscattering of thermal synchroton photons.  Typically the X-ray band lies in the first Compton bump, although that is sensitive to the temperature of the electrons doing the upscattering.  In the first Compton bump $\nu L_\nu$ is proportional to the y-parameter $y \sim 16 \Theta_e^2 \tau_e$ where $\tau_e$ is a characteristic electron-scattering optical depth and $\Theta_e$ is a typical electron temperature.
 
@@ -161,12 +157,12 @@ Many large $\Rh$ SANE models fail the X-ray test: all but 3/25 at $\Rh = 160$ an
 
 Many MAD models that fail have large absolute spin and low $\Rh$.  These models are Compton-dominated.  The midplane temperature is highest at low $\Rh$.  Since the midplane contributes most of the electron scattering optical depth, low $\Rh$ models have the largest $y$ parameter and are most at risk of overproducing X-rays.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\columnwidth]{./figures/Xray_flux_Constraints.png}
-  \caption{X-ray flux limits}
-  \label{fig:cmp_xray_flux}
-\end{figure}
+%\begin{figure}
+%  \centering
+%  \includegraphics[width=\columnwidth]{./figures/Xray_flux_Constraints.png}
+%  \caption{X-ray flux limits}
+%  \label{fig:cmp_xray_flux}
+%\end{figure}
 
 %..............................................................................
 \subsubsubsection{86 GHz Median Flux}
@@ -178,12 +174,12 @@ The 86GHz/230GHz color therefore probes the radial structure of the source plasm
 Many $\Rh = 1$ models, both MAD and SANE, fail the $86$GHz flux density test: 23/25 SANE and 9/25 MAD.  These models overproduce $86$GHz emission.
 There is also a substantial set of SANE models, 19/100 in all, that underproduce $86$GHz emission.  These models have larger $\Rh$.  
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\columnwidth]{./figures/86GHz_flux_Constraints.png}
-  \caption{86GHz flux limits}
-  \label{fig:cmp_86ghz_flux}
-\end{figure}
+%\begin{figure}
+%  \centering
+%  \includegraphics[width=\columnwidth]{./figures/86GHz_flux_Constraints.png}
+%  \caption{86GHz flux limits}
+%  \label{fig:cmp_86ghz_flux}
+%\end{figure}
 
 %..............................................................................
 \subsubsubsection{86 GHz Major Axis}
@@ -194,12 +190,12 @@ Many face-on models fail because they are too small (purple in the figure), whil
 
 The physical picture for 86GHz source size is complicated, as is the extraction of the constraint itself from observations.  Notice that (1) two different values for the 86GHz intrinsic source size have been reported in the literature; (2) scattering is $7$ times stronger at $86$GHz than at $230$GHz; (3) scattering must be subtracted accurately to obtain the intrinsic source size; (4) the error bars for the 86GHz source size are narrow and this determines the strength of the constraint.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\columnwidth]{./figures/86GHz_size_Constraints.png}
-  \caption{86GHz size}
-  \label{fig:cmp_86ghz_size}
-\end{figure}
+%\begin{figure}
+%  \centering
+%  \includegraphics[width=\columnwidth]{./figures/86GHz_size_Constraints.png}
+%  \caption{86GHz size}
+%  \label{fig:cmp_86ghz_size}
+%\end{figure}
 
 %..............................................................................
 \subsubsubsection{Summary of Non-EHT constraints}
@@ -208,12 +204,12 @@ Applying only non-EHT constraints, we are left with the 9/100 SANE models and 25
 
 The surviving models include a set of SANE models at intermediate $\Rh$ and modest inclination, as well as MAD models at large $\Rh \ge 40$. No $\Rh = 1$ models survive the non-EHT cuts.
 
-\begin{figure}
+\begin{figure*}
   \centering
-  \includegraphics[width=\columnwidth]{./figures/Non_Interferometric_Constraints.png}
+  \includegraphics[width=\textwidth]{./figures/Non_Interferometric_Constraints.png}
   \caption{Combined non-EHT constraints}
   \label{fig:non_eht_cuts}
-\end{figure}
+\end{figure*}
 
 %------------------------------------------------------------------------------
 \subsubsection{Variability}
@@ -294,7 +290,7 @@ For thermal model sets both EHT and non-EHT constraints individually eliminate m
 
 \begin{figure*}
   \centering
-  \includegraphics[width=1.\textwidth]{./figures/All_Constraints.png}
+  \includegraphics[width=\textwidth]{./figures/All_Constraints.png}
   \caption{Combined EHT and non-EHT constraints.}
   \label{fig:all_cuts}
 \end{figure*}
