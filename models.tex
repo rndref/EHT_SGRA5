@@ -84,7 +84,7 @@ We simulate the plasma flow with an ideal GRMHD\footnote{Notice that ideal GRMHD
   \colhead{Reference}
 }
 \startdata
-KHARMA & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 1000 & [288x128x128] & This work, Wong+2021 \\
+KHARMA & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 1000 & [288x128x128] & This work, Wong+2021, \vd{Dhruv+2022?} \\
 BHAC  & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $4/3$ & 30,000 & 3333& [512x192x192] & This work \\
 HAMR & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE  & $13/9,5/3$ & 35,000 & 1000/200 & [348/240×192×192] &This work \\
 KORAL &0,\pm 0.3,\pm 0.5,\pm 0.7,\pm 0.9 & MAD & $13/9$ & 101,000 & 100,000 & [288x192x144] & \cite{2021arXiv210812380N} \\
@@ -163,6 +163,7 @@ Here $u$ and $\rho$ are the internal energy density and rest-mass density from t
 In \citetalias{M87PaperV} and \citetalias{M87PaperVIII}, $R$ is assigned using a prescription, adopted from \cite{2016A&A...586A..38M}, that assumes (1) the temperature ratio is a function only of local conditions (2) the ratio varies from one value at low plasma $\beta \equiv P_\mathrm{gas}/P_\mathrm{mag}$ to a second value at high $\beta$:
 \begin{equation}
 R = \frac{T_i}{T_e} = \Rh \frac{b^2}{b^2+1} + \Rl \frac{1}{b^2+1}.
+\label{eq:rhigh_prescription}
 \end{equation}
 Here $b \equiv \beta/\beta_\mathrm{crit}$. This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.  In the standard models $\Rl = 1$, $\beta_\mathrm{crit} = 1$, and only $\Rh$ is allowed to vary from $1$ to $160$.  The $\Rh$ model is motivated by plasma heating models in which the branching ratio for dissipation into ions and electrons approaches $1$ at low $\beta$ \citep[e.g.,][]{2010MNRAS.409L.104H,Kawazura771}.
 
