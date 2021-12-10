@@ -1,10 +1,7 @@
 \section{Discussion}\label{sec:discussions}
 
 We have carried out first comprehensive analysis of \sgra including both resolved VLBI data and multiwavelength data.
-
 Discussion organized according to physical parameters of the model.
-
-\note{Avoid figures where possible.}
 
 %==============================================================================
 \subsection{MAD, SANE, and Self-Consistent Wind Feeding}
@@ -31,22 +28,62 @@ Strong constraint on $T_i/T_e$: models with ion temperature equal to electron te
 
 \note{Michi to provide first draft}
 \note{Strong constraints on inclination from m-ring fitting.}
+\ckc{ck's first pass}
 
-The simulated black hole image size depends strong on its inclination.  The visibility data contains clear signatures on these information \citep{PaperIV}.  The m-ring fit can therefore use these information to constraint inclinations.
+When the accretion flow around a black hole has enough angular
+momentum, the corresponding black hole image is sensitive to its
+inclination---in an edge-on case, the image is more asymmetric, with
+one side lighted up because of Doppler boosting; for a face-on case,
+the image is a more symmetric ring.
+However, this dependency is weak in a low-angular moment accretion
+flow, or when frame dragging cancels out the Doppler effect.
+These situations include the MAD state, where the accretion flow is
+magnetically supported, and retrograde accretion flows
+\citep{2021arXiv210503424M}.
+
+The above conditional dependency of the asymmetry of the ring and
+inclination makes it non-trivial to measure inclination from the
+observation.
+In addition, it is important to note that the asymmetry described
+above does not directly corresponds to the m-ring asymmetry.
+Consider a situation that the Doppler boosting is so extreme that only
+the bright side of the photon ring is visible, while the dim side is
+hidden under the noise.
+In such a situation, the m-ring (or the gm-ring in \citealt{PaperIV})
+may misidentify the boosted side as the full image, and return a low
+asymmetry, small image size, and wide image width.
+This is the reason that it is difficult to directly link one m-ring
+measurement to the inclination.
+Nevertheless, given that the EHT observation is surprisingly
+symmetric, the m-ring asymmetry measure is not constraining.
+In stead, the m-ring size disfavors the face-on images.
 
 %==============================================================================
 \subsection{Position Angle}
 
 \note{Virtually no constraint on position angle [check m-ring fits]}
 
-The reconstructed black hole image is surprisingly symmetric.  The asymmetry is dominated by noise and is not constrianing.
+According to the data, the image of \sgra is surprisingly symmetric.
+The position angle measurement is dominated by noise.
+Our visibility domain constraining is therefore not constrianing on
+the position angle.
 
 %==============================================================================
 \subsection{Black Hole Spin}
 
 \note{Still quite weak constraints on black hole spin.}
 
-Given that the size and the shape of the black hole shadow is insensitive to black hole spin, it remains a difficult parameter to constraint.  Nevertheless, the plasma physics does capture ...   In this sense, the astrophysics may be the best hope to help us measure the spin, assuming that we can narrow down other uncertainties such as in the eDF.
+Given that the size and the shape of the black hole shadow is
+insensitive to its spin, the black hole spin remains one of the most
+difficult black hole parameters to constraint.
+
+However, as we discussed earlier, the asymmetry of the image does
+depend on the black hole spin, assuming that there is significant
+angular momentum in the accretion flow, In this sense, the
+astrophysics can help us narrow down the spin.
+Specifically, the m-ring diameter disfavors low spin models.
+However, with the current u uncertainties in, e.g., the eDF, we are
+not be able to report an acutal spin measurement.
 
 %==============================================================================
 \subsection{Accretion Rate and Outflow Power}
@@ -63,8 +100,8 @@ We compute the time-averaged accretion rate,
 
 at the event horizon; the quantity in the parenthesis is the rest-mass energy flux. Figure \ref{fig:accretion_illinois_thermal} shows $\dot{M}$ (in units of solar masses per year) for the Illinois models parameterized by $R_\mathrm{high}$. Since $\mathcal{M}$ is a weak function of the inclination $i$, we plot $\dot{M}$ at a single inclination $i=50^{\circ}$.
 
-Our findings: (1) The MAD models accrete, on average, at $10^{-9}-10^{-8} M_{\odot}$yr$^{-1}$ while the SANE models have a broader range, $10^{-9}-10^{-6} M_{\odot}$yr$^{-1}$. (2) $\dot{M}$ increases with increasing $R_{high}$. Since the electron temperature is an inverse function of $R_{high}$, a greater $R_{high}$ implies cooler electrons. To maintain an average flux density of 2.4Jy at 1.3 mm, the corresponding $\mathcal{M}$ increases. 
-%(3) $\dot{M}$ decreases with increasing the black hole spin. Retrograde disks have lower number densities close to the black hole in comparison to equivalent prograde disks. Therefore, a larger $\mathcal{M}$ is necessary to ensure the observed average flux density at 1.3 mm. 
+Our findings: (1) The MAD models accrete, on average, at $10^{-9}-10^{-8} M_{\odot}$yr$^{-1}$ while the SANE models have a broader range, $10^{-9}-10^{-6} M_{\odot}$yr$^{-1}$. (2) $\dot{M}$ increases with increasing $R_{high}$. Since the electron temperature is an inverse function of $R_{high}$, a greater $R_{high}$ implies cooler electrons. To maintain an average flux density of 2.4Jy at 1.3 mm, the corresponding $\mathcal{M}$ increases.
+%(3) $\dot{M}$ decreases with increasing the black hole spin. Retrograde disks have lower number densities close to the black hole in comparison to equivalent prograde disks. Therefore, a larger $\mathcal{M}$ is necessary to ensure the observed average flux density at 1.3 mm.
 (3) The retrograde, SANE, $R_{high}=40$ and $160$ models produce the largest accretion rates, $\dot{M}\sim 10^{-6}M_{\odot}$yr$^{-1}$. However, these models are ruled out due to overproduction of x-ray emission. (4) The Illinois models with the critical-$\beta$ electron temperature assignment scheme predicts accretion rates that lie between the $R_{high}=10$ and 40 values for the following set of parameters: $f=0.5$, $\beta_{crit}=1$.
 
 There have been several studies at radio, x-ray and $\gamma$-ray that have suggested the presence of a mildly relativistic outflow  based on morphological structures observed in the \sgra complex (\citealt{2012AAS...22051303S,Li_2013,2019ApJ...875...44Z} and references therein \monika{cite one of the classical Zadeh paper who claimed to see a jet on larger scales in radio?}\vd{Okay, will do that.}). However, the low luminosity and high variability of \sgra, and the presence of a dominant, interstellar scattering screen \vd{refs...} have precluded direct detection of a jet in the galactic center. Here we present the outflow power (defined below) in our numerical models and discuss the likelihood of such a jet.
@@ -97,7 +134,7 @@ Figure showing accretion rate.
 
 Accretion rate is consistent with earlier analyses.
 
-Models at the highest accretion rate are ruled out by overproduction of x-ray emission.  If our models were in equilibrium over a larger range in radius, bremss from larger radius might increase the x-ray flux and rule out more models.
+Models at the highest accretion rate are ruled out by overproduction of x-ray emission.  If our models were in equilibrium over a larger range in radius, bremss from larger radius might increase the x-ray flux and disfavor more models.
 
 Figure showing outflow power.
 
