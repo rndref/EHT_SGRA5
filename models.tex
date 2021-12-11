@@ -101,7 +101,7 @@ As discussed in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \c
     \colhead{Reference}
   }
   \startdata
-  \begin{tabular}{@{}c@{}} standard / \\ \kharma \end{tabular} & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $4/3$      & 30,000  & 1000     & [288x128x128]     & \!\!\!\!\!\!\!\!\! 
+  \begin{tabular}{@{}c@{}} standard / \\ \kharma \end{tabular} & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $4/3$      & 30,000  & 1000     & [288x128x128]     & \!\!\!\!\!\!\!\!\!
    \begin{tabular}{@{}c@{}c@{}} This work\\\citet{Wong_2022} \\ \citet{Dhruv_2022}\end{tabular}\\
 %  \citet{Wong_2022, Dhruv_2022} \\
   \begin{tabular}{@{}c@{}} standard / \\ \bhac \end{tabular}   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $4/3$      & 30,000  & 3333     & [512x192x192]     & This work \\
@@ -117,10 +117,10 @@ As discussed in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \c
   \label{tab:GRMHDmodels}
 \end{deluxetable*}
 
-The one-zone model is too simple for comparison with the rich set of observations available for \sgra.  Going beyond the one zone model, analytic spherical accretion models \citep[e.g.][]{2019ApJ...885L..33N, 2021arXiv211102178B} incorporate relativistic  gravity. 
-Analytic disk-like (RIAF) accretion models in the Kerr metric incorporate rotation and departures from spherical symmetry \citep[e.g.][]{2009ApJ...697...45B, 2009ApJ...706..960H,2018ApJ...863..148P}
-and can be used for parameter surveys (see Section~\ref{sec:future}).
-They do not, however, self-consistently capture fluctuations in the flow - that requires either a statistical model \citep{2021ApJ...906...39L} or a time-dependent numerical integration.  Here we use numerical simulation and adopt an ideal GRMHD model for the flow \footnote{Limitations of the ideal GRMHD model are discussed in Section~\ref{sec:limits}.}, use simple paramterized models to assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
+The one-zone model is too simple for comparison with the rich set of observations available for \sgra.
+Going beyond the one zone model, analytic spherical accretion models \citep[e.g.][]{2019ApJ...885L..33N, 2021arXiv211102178B} incorporate relativistic  gravity and analytic disk-like (RIAF) accretion models in the Kerr metric incorporate rotation and departures from spherical symmetry \citep[e.g.][]{2009ApJ...697...45B, 2009ApJ...706..960H,2018ApJ...863..148P} and can be used for parameter surveys (see Section~\ref{sec:future}).
+They do not, however, self-consistently capture fluctuations in the flow---that requires either a statistical model \citep{2021ApJ...906...39L} or a time-dependent numerical integration.
+Here we use numerical simulation and adopt an ideal GRMHD model for the flow \footnote{Limitations of the ideal GRMHD model are discussed in Section~\ref{sec:limits}.}, use simple paramterized models to assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
 
 %------------------------------------------------------------------------------
 \subsubsection{Plasma Flow Model}
@@ -145,9 +145,9 @@ In all models except the \hamr-Tilted models the torus orbital angular momentum 
 %\aco{We should specify the torus size? or should we refer to the reader to SANE and MAD code comparison. We have different initial data between codes, not only in the size but also in adiabatic index in the equation of state.}
 %\aco{ with magnetization $\beta \equiv p_{\rm gas}/p_{\rm mag} =100$}
 %\monika{11dec: we dont want to elaborate on details like that here, this section is intended to describe only common features of all simulations, other details can be described in section 4, incase there are differences in the results that may be due to initial conditions.}
-The torus is seeded with a weak, poloidal magnetic field.  
+The torus is seeded with a weak, poloidal magnetic field.
 
-The torus initial conditions are motivated by the notion that the near-horizon flow, where most of the emission is generated \citep{M87PaperV} relaxes to a statistically steady state that is nearly independent of the flow at larger radius.  This notion is challenged in the stellar wind-fed models of \cite{2020ApJ...896L...6R}, which are included in our study.  
+The torus initial conditions are motivated by the notion that the near-horizon flow, where most of the emission is generated \citep{M87PaperV} relaxes to a statistically steady state that is nearly independent of the flow at larger radius.  This notion is challenged in the stellar wind-fed models of \cite{2020ApJ...896L...6R}, which are included in our study.
 
 All simulations are run in horizon penetrating Kerr-Schild coordinates, which are regular on the horizon.
 Most are run in a variant of spherical polar coordinates.
@@ -288,6 +288,7 @@ Given an eDF, density scale $\Munit$, and radiative transfer coefficients, the e
 We use two classes of numerical methods: ray tracing to generate synthetic images, and a Monte Carlo scheme to generate spectral energy distributions (SEDs).
 Further detail on numerical methods is given Appendix~\ref{app:radtrans}.
 Comparisons of numerical methods \citep{2020ApJ...897..148G, Prather_et_al_2022} show that differences between numerical schemes do not contribute significantly to the error budget.
+\ckc{Ben, please fill in paper title etc for the polarized radiative transfer comparison paper.}
 
 The models are imaged at 86\GHz, 230\GHz\footnote{The mean frequency for  EHT observations is more close to 228\GHz.} and 2.2\um (near infrared, NIR hereafter).
 Direct imaging includes synchrotron and bremsstrahlung \citep[both ion-electron and electron-electron; see][for a recent review]{2020ApJ...898...50Y}.
