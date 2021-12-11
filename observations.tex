@@ -46,8 +46,8 @@ Most observables are correlated over $\tau\sim$ few $\times 100 \tg$.  To obtain
 %The EHT observed \sgra at 1.3 mm during the 2017 April 5--11 observing campaign and obtained horizon scale complex visibilities.  Figure~\ref{fig:visibility} shows the visibility amplitudes on April 6 and 7 from  the HOPS pipeline, overplotted with visibility amplitudes derived from a model.  Evidently there are nulls near $\sim 5\,\mathrm{G}\lambda$ and $7\,\mathrm{G}\lambda$, suggesting a ringlike structure.
 
 We test the models against EHT interferometric data in three ways.
-First, we check the location of the first minimum in the visibility amplitudes and the value of the visibility amplitudes on long baselines (``null constraint'').
-Second, we compare an estimate of the source size (``second moment constraint'') to an estimate from short baselines.
+First, we compare an estimate of the source size (``second moment constraint'') to an estimate from short baselines.
+Second, we check the location of the first minimum in the visibility amplitudes and the value of the visibility amplitudes on long baselines (``null constraint'').
 Finally, using a variant of a procedure from \citetalias{PaperIV}, we compare fits for the diameter, width, and asymmetry of an m-ring (a parameterized image-plane model) to the GRMHD models.
 
 %------------------------------------------------------------------------------
@@ -56,29 +56,47 @@ Finally, using a variant of a procedure from \citetalias{PaperIV}, we compare fi
 %\ckc{ck's first pass}
 %\cfg{edited on 2 dec}
 
-The source size can be characterized using the second moments of the source image on the sky.  The second moments in the image domain map to second derivatives of the visibilities near zero baseline in the $uv$ domain, so short baseline visibility amplitudes can be used to directly estimate the source size.
+\ckc{I suggest we move the 2nd moment first, then null location, then
+  m-ring.
+  The reason is that the wide (unconstraining) 2nd moment is caused by
+  allowing it to be just a Guassian (i.e., ignore the minima).
+  We then tighten the constraint by regonizing there's a minima using
+  the null analysis.
+  And then do the fit.}
 
-%The second moment of an EHT source corresponds, in the $(u,v)$ domain, to
-%the second derivative of the visibility amplitude near zero baseline length.
-%That is, the 2nd moment tensor
-%\begin{equation}
-%    \sigma_{ij} \equiv \int \, d^2x\, x_i x_j I/\int \, d^2x \, I = (2\pi)^2 %\left(\partial_i \partial_j \tilde{I}\right)/\tilde{I}
-%\end{equation}
-%where $I$ is the intensity, $\tilde{I}$ its Fourier transform, $i =
-%x,y$ on the left and $i = u,v$ on the right, and the terms on the
-%right are evaluated at $u = v = 0$.
-%Depending on the structure of the visilbiity amplitudes, a pair of visibility amplitudes ($|\tilde{I}|$) on short baselines or
-%the zero baseline flux can therefore be used to estimate the second moments of the image.
+The source size can be characterized using the second moments of the
+source image on the sky.
+The second moments in the image domain map to second derivatives of
+the visibilities near zero baseline in the $uv$ domain, so short
+baseline visibility amplitudes can be used to directly estimate the
+source size.
+
+This procedure is used in \citetalias{PaperII} to set an upper limit
+of 95\uas FWHM on the second moment and lower limit of 38\uas FWHM on
+the second moment along a particular directions through the source,
+with the direction determined by the orientation of the short
+baselines.
+This is done without any assumption about the structure of the source;
+if we used a ring prior the constraint would be narrower.
 
 \cfg{is this scattered or unscattered?}
+\ckc{add descattered values}
+The scattering kernel is estimated to have a 16.2\uas FWHM along the
+relevant EHT baselines.
+To descatter the sky image size, we subtract this value in quadrature
+from the size.
+This results an upper limit of 93.6\uas FWHM and lower limit of
+34.4\uas FWHM.
 
-\ckc{I suggest we move the 2nd moment first, then null location, then m-ring.
-  The reason is that the wide (unconstraining) 2nd moment is caused by allowing it to be just a Guassian (i.e., ignore the minima).
-  We then tighten the constraint by regonizing there's a minima using the null analysis.  And then do the fit.}
-
-This procedure is used in EHT3 \citetalias{PaperIII} to set an upper limit of 95\uas FWHM on the second moment and lower limit of 38\uas on the second moment along a particular directions through the source, with the direction determined by the orientation of the short baselines.  This is done without any assumption about the structure of the source; if we used a ring prior the constraint would be narrower.
-
-To assess a model we evaluate, for each synthetic 230\GHz image, the second moment tensor and find its eigenvalues $\lambda_\mathrm{maj}^2/(8\log 2)$ and $\lambda_\mathrm{min}^2/(8\log 2)$, where $\lambda_\mathrm{maj}$ and $\lambda_\mathrm{min}$ are the FWHM of the major and minor axis.  The image is deemed compliant if it is consistent with the data for any orientation, that is, if $\lambda_\mathrm{maj} > 38\uas$ \emph{or} $\lambda_\mathrm{min} < 95\uas$.  We reject models with a compliance fraction $< 0.01$.
+To assess a model, we evaluate for each synthetic 230\GHz image the
+second moment tensor and find its eigenvalues
+$\lambda_\mathrm{maj}^2/(8\log 2)$ and $\lambda_\mathrm{min}^2/(8\log
+2)$, where $\lambda_\mathrm{maj}$ and $\lambda_\mathrm{min}$ are the
+FWHM of the major and minor axis.
+The image is deemed compliant if it is consistent with the data for
+any orientation, that is, if $\lambda_\mathrm{maj} > 34.4\uas$ \emph{or}
+$\lambda_\mathrm{min} < 93.6\uas$.
+We reject models with a compliance fraction $< 0.01$.
 
 %------------------------------------------------------------------------------
 \subsubsection{230\GHz VLBI Null Location}
