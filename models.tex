@@ -1,38 +1,40 @@
-\section{Astrophysical Models}\label{sec:models}
-
+\section{Astrophysical Models}
+\label{sec:models}
 
 %==============================================================================
-\subsection{Basic Assumptions}\label{sec:basic}
+\subsection{Basic Assumptions}
+\label{sec:basic}
 
 In this paper, we assume the mass of and distance to \sgra are
 \begin{align}
-\label{eq:mass}
-  \mbh &= (4.14  \pm 0.014) \times 10^6 \msun,\\
-  D    &= (8.127 \pm 0.023) \kpc,
+  \mbh &= (4.14  \pm 0.014) \times 10^6 \msun, \label{eq:mass} \\
+  D    &= (8.127 \pm 0.023) \kpc,              \label{eq:dist}
 \end{align}
 which are approximately the mean of values reported by \citet{2019Sci...365..664D} and \citet{2019A&A...625L..10G}.
 
-Throughout the paper we also assume that \sgra is a black hole so that the spacetime around it is described by a Kerr spacetime.
-The black hole dimensionless spin, $\abh \equiv Jc/G\mbh^2$, is a free parameter with $-1 < \abh < 1$ and $J$, $G$, and $c$ are the black hole angular momentum, gravitational constant, and speed of light, respectively.
-Following \citetalias{M87PaperV}, $\abh > $ indicates the angular momentum of the accretion flow and black hole are parallel (the accretion flow is ``prograde'') and $\abh < 0$ indicates the angular momentum of the accretion flow and black hole are antiparallel (``retrograde'').
+Throughout the paper we also assume that \sgra is a black hole and described by a Kerr spacetime.
+The black hole dimensionless spin, $\abh \equiv Jc/G\mbh^2$, is a free parameter with $-1 < \abh < 1$.
+Here, $J$, $G$, and $c$ are the black hole angular momentum, gravitational constant, and speed of light, respectively.
+Following \citetalias{M87PaperV},
+$\abh > 0$ indicates the angular momentum of the accretion flow and black hole are parallel (the accretion flow is ``prograde'') and
+$\abh < 0$ indicates the angular momentum of the accretion flow and black hole are antiparallel (``retrograde'').
 
 Using the above mass and distance, the implied
-characteristic length ${\mathcal L} \equiv G M/c^2 = 6.1 \times 10^{11}\cm$,
-characteristic time   ${\mathcal T} \equiv G M/c^3 = 20.5 \sec$, and
-angular scale ${\mathcal \theta_g} \equiv G\mbh/(c^2 D) = 5.03\uas$.
-The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D) = (52.2 \pm 2.08) \uas $,
-where errorbars enclose uncertainty in the black hole spin and viewing angle (see e.g., \citealt{2013ApJ...777...13C, 2020ApJ...896....7M}).
+characteristic length ${\mathcal L}  \equiv G M/c^2        \approx 6.1\times10^{11}\cm$,
+characteristic time   ${\mathcal T}  \equiv G M/c^3        \approx 20.5\sec$, and
+angular scale         ${\vartheta_g} \equiv G \mbh/(c^2 D) \approx 5.03\uas$.
+The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D) = (52.2 \pm 2.08)\uas$,
+where errorbars enclose uncertainty in the black hole spin and viewing angle \citep[see, e.g.,][]{2013ApJ...777...13C, 2020ApJ...896....7M}.
 
-If the emitting plasma is ionized hydrogen (electron-proton plasma) then the Eddington luminosity is
+If the emitting plasma is ionized hydrogen (electron-proton plasma), then the Eddington luminosity is
 $L_\mathrm{Edd} = 4\pi G\mbh c m_p/\sigma_{T} = 5.2 \times 10^{44}\ergsps$.
 The corresponding Eddington accretion rate is
-$\dot\mbh_\mathrm{Edd} \equiv L_\mathrm{Edd}/(0.1 c^2) = 5.8 \times 10^{24} \gm \sec^{-1} = 0.09 \msun \yr^{-1}$
+$\dot\mbh_\mathrm{Edd} \equiv L_\mathrm{Edd}/(0.1 c^2) = 5.8 \times 10^{24} \gm \sec^{-1} = 0.09 \msun \yr^{-1}$,
 where nominal efficiency is 10\% and the Eddington ratio:
-$L_\mathrm{bol}/L_\mathrm{Edd} = 1.9 \times 10^{-10} (L_\mathrm{bol} /10^{35})$
-where $L_\mathrm{bol}$ is in $\ergsps$.
-In a quiescent, non-flaring state the bolometric luminosity of \sgra is $L_\mathrm{bol} \sim 10^{35}\erg\sec^{-1}$ resulting in an extremely small Eddington ratio.
+$L_\mathrm{bol}/L_\mathrm{Edd} = 1.9 \times 10^{-10} (L_\mathrm{bol} /10^{35})$,
+where $L_\mathrm{bol}$ is in unit of $\ergsps$.
+In a quiescent, non-flaring state, the bolometric luminosity of \sgra is $L_\mathrm{bol} \sim 10^{35}\erg\sec^{-1}$, resulting in an extremely small Eddington ratio.
 In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected and that model emission can be calculated as post-processing.
-
 % below probably not necessary:
 % \footnote{Translation of the source flux to luminosity is given by: $ \nu L_\nu
 % = 4 \pi D^2 \nu F_\nu
@@ -55,7 +57,7 @@ Using the thermal emissivity for synchrotron radiation $j_{\nu}$ (e.g., \citealt
   \label{eq:onezone}
 \end{align}
 (the synchrotron optical depth $\tau_S = r j_\nu/B_\nu \simeq 0.4$, so the optically thin approximation is marginal).
-These values are consistent with $n_e$ and $B$ of a similar one-zone model fitted to archival Sgr~A* millimeter spectrum as reported in \citet{2019ApJ...881L...2B}.
+These values are consistent with $n_e$ and $B$ of a similar one-zone model fitted to archival \sgra millimeter spectrum as reported in \citet{2019ApJ...881L...2B}.
 %MM: fit of similar one zone model to Terahertz spectrum from ALMA infers ne=2-5x10^6 cm^-3, B=10-50 Gauss, T_e=1-3x10^11 K => Thetae=16-50
 % CFG: I've placed a mathematica script implementing the one zone model in eht.astro.illinois.edu://bd4/eht/paperV/OneZoneThin.ma
 
@@ -112,9 +114,9 @@ Wind Accretion\tablenotemark{$*$} & 0 & MAD$\times2$ & 5/3 & 20,000 & 2,400 & [3
   \includegraphics[width=0.45\textwidth]{figures/mad_3D_new.png}\\
   \includegraphics[width=0.45\textwidth]{figures/tilted_3D.png}\hspace{1.5pt}%
   \includegraphics[width=0.45\textwidth]{figures/ressler_3D_new.png}
-  \caption{3-D overview of selected GRMHD simulations of \sgra in our library. The color marks constant dimensionless density surfaces and lines follow magnetic field lines. Two top panels show standard accretion models: SANE (left panel, $a_*=+15/16$) and MAD (right panel, $a_*=0.5$). Two bottom panels show non-standard accretion models: tilted disk (left panel, $a_*=+15/16$ and titlt angle of 60 deg) and Wind Accretion (right panel, $a_*=0$). In case of spinning black holes, the spin is aligned with z-axis. \monika{plots are not final, more detailed quantitative plots of models are expected to be in the appendix.}
+  \caption{3-D overview of selected GRMHD simulations of \sgra in our library. The color marks constant dimensionless density surfaces and lines follow magnetic field lines. Two top panels show standard accretion models: SANE (left panel, $a_*=+15/16$) and MAD (right panel, $a_*=0.5$). Two bottom panels show non-standard accretion models: tilted disk (left panel, $a_*=+15/16$ and tilt angle of 60 deg) and Wind Accretion (right panel, $a_*=0$). In case of spinning black holes, the spin is aligned with z-axis. \monika{plots are not final, more detailed quantitative plots of models are expected to be in the appendix.}
   \aeb{This looks great!}
-  \gw{Presumably the MAD simulation ``only'' has field lines that thread the near-horizon region because the footpoints are distributed relative to field strength? Might be worthwhile to mention if so.}\monika{that is not the case. these images may change a bit in the near future}\gw{In that case, I definitely think we should explain how the magnetic field lines are chosen.} \aco{Monika, 3D rendering looks very nice. There are some way to choose same BH spin, view angle, limits on density and magnetic fields to see only differences in accretion models? } \ckc{If these are in normal spherical polar or cartesian, I suggest we also ask Matt Turk to try visualizing them with yt.}\monika{thanks for all the suggestions, will incorporate before submission.}}
+  \gw{Presumably the MAD simulation ``only'' has field lines that thread the near-horizon region because the footpoints are distributed relative to field strength? Might be worthwhile to mention if so.}\monika{that is not the case. these images may change a bit in the near future}\gw{In that case, I definitely think we should explain how the magnetic field lines are chosen.} \aco{Monika, 3D rendering looks very nice. There are some way to choose same BH spin, view angle, limits on density and magnetic fields to see only differences in accretion models? } \ckc{If these are in normal spherical polar or Cartesian, I suggest we also ask Matt Turk to try visualizing them with yt.}\monika{thanks for all the suggestions, will incorporate before submission.}}
   \label{fig:GRMHD}
 \end{figure*}
 
@@ -126,14 +128,14 @@ All simulations assume a constant adiabatic index $\Gamma_{\rm ad}$.
 
 The \emph{standard} initial conditions for the GRMHD integrations are a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F}
 %\aco{\citep[see also][]{2002MNRAS.334..383F}} \monika{why do we need to have this second citation? is that essential?} \br{I thought Font shows another hydro torus equilibrium in this paper? We don't use that one, so I would not cite that paper} \ckc{all modelers: do any of you use the Font initial condition?  If not I will comment out this reference.}\aco{There are two independent hydro solutions, we have both of them. With same initial condition for magnetic field on top of hydro-solution}\br{is there a reason for using different initial conditions? I tried both FD and FM torus myself and the FD torus evolution is somewhat different. It would be better to start from the same IC to compare late states of the models to images. Which models exactly do use the (different) initial conditions of the Font-Daigne torus? I thought in paper V for M87 we used only the FM torus. Then the first sentence in this paragraph above is also wrong, because we are not using the FM torus exclusively.}\monika{exactly which model in the library starts from FD torus? please answer before midnight.} % \aco{Yes, I think is essential to cite, is true that we not using FD but we also have it in BHAC. Please be free to remove it. But definitively don't have same initial condition in all GRMHD codes.}\monika{I dont think that we have to go into details of exact setup in this paper, that is why we give e.g. only some approximate ranges for torus size etc}
-in a prograde ($\abh > 0$) or retrograde ($\abh < 0$) orbit.  In all models except the \hamr-Tilted models the torus orbital angular momentum is either parallel or antiparallel to the black hole spin. The torus is parametrized by an inner radius $R_{\rm in}$, typically $12\rg$, and the pressure maximum radius $R_{\rm max}$, typically $24\rg$. \aco{We should specify the torus size? or should we refer to the reader to SANE and MAD code comparison. We have different initial data between codes, not only in the size but also in adiabatic index in the equation of state.}
+in a prograde ($\abh > 0$) or retrograde ($\abh < 0$) orbit.  In all models except the \hamr-Tilted models the torus orbital angular momentum is either parallel or antiparallel to the black hole spin. The torus is parameterized by an inner radius $R_{\rm in}$, typically $12\rg$, and the pressure maximum radius $R_{\rm max}$, typically $24\rg$. \aco{We should specify the torus size? or should we refer to the reader to SANE and MAD code comparison. We have different initial data between codes, not only in the size but also in adiabatic index in the equation of state.}
 The torus is seeded with a weak, poloidal magnetic field %\aco{ with magnetization $\beta \equiv p_{\rm gas}/p_{\rm mag} =100$}.
 % we dont want to elaborate on details like that here
 
 All simulations are run in horizon penetrating Kerr-Schild coordinates, which are regular on the horizon.  Most are run in a variant of spherical polar coordinates.  The {\em standard} boundary conditions are outflow at the inner boundary, located inside the event horizon, outflow at the outer boundary, located at $r \gtrsim 1000 \rg$, and reflecting boundary conditions at the poles.  Standard  simulations are evolved to $t_f=30,000 \tg$.
 
 Once the evolution has started, a combination of instabilities including the magnetorotational instability (MRI, \citealt{1992ApJ...400..610B}) drives the torus to a turbulent, fluctuating state.
-Let $P_\mathrm{gas}$ be the gas pressure and $P_\mathrm{mag} \equiv B^2 / (8\pi)$ be the magnetic pressure, 
+Let $P_\mathrm{gas}$ be the gas pressure and $P_\mathrm{mag} \equiv B^2 / (8\pi)$ be the magnetic pressure,
 the standard accretion flow models can be divided by latitude into three zones:
 \emph{i})   equatorial inflow,
 \emph{ii})  a mid-latitude disk wind/corona with $\beta  \equiv P_\mathrm{gas} / P_\mathrm{mag} \sim 1$, and
@@ -177,7 +179,7 @@ Specifically, we use the same model as in \citetalias{M87PaperV} and \citetalias
 R = \frac{T_i}{T_e} = \Rh \frac{b^2}{b^2+1} + \Rl \frac{1}{b^2+1}.
 \label{eq:rhigh_prescription}
 \end{equation}
-Here $b \equiv \beta/\beta_\mathrm{crit}$. This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.  In the standard models $\Rl = 1$, $\beta_\mathrm{crit} = 1$, and only $\Rh$ is allowed to vary from $1$ to $160$.  
+Here $b \equiv \beta/\beta_\mathrm{crit}$. This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.  In the standard models $\Rl = 1$, $\beta_\mathrm{crit} = 1$, and only $\Rh$ is allowed to vary from $1$ to $160$.
 
 In {\it non-thermal} models the eDF includes a power-law tail extending to high energy.
 %\jd{this needs some references to kappa-jet work. e.g. Davelaar+2018\&2019} % already cited earlier in text
@@ -222,7 +224,7 @@ The models are imaged at 86\GHz, 230\GHz\footnote{The mean frequency for  EHT ob
 In Figure~\ref{fig:fiducial_imgs} we present a few examples of time-averaged model images and multiwavelength SEDs of selected standard \sgra models.
 
 %==============================================================================
-\subsection{Summary of Sgr~A* model library}
+\subsection{Summary of \sgra model library}
 
 A summary of all radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
 Entire image library contains $6$ model sets; $364$ models (with different spins and electron prescriptions); $3,744,818$ 230/86~GHz images; $1,533,100$ SEDs and occupies about $GGG$ gigabytes.
