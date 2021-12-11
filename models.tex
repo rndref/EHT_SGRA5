@@ -326,8 +326,17 @@ All radiative transfer models used here set the emissivity to $0$ at $\sigma \eq
 %==============================================================================
 \subsection{Summary of \sgra Model Library}
 
-A summary of all radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
-Entire image library contains $6$ model sets; $364$ models (with different spins and electron prescriptions); $3,744,818$ 230/86~GHz images; $1,533,100$ SEDs and occupies about $GGG$ gigabytes.
+%You can check which data is available here: 
+%https://docs.google.com/spreadsheets/d/1gw9ichvvYGHLFsZl2wlxqu-O03qEULrwcw3Wixd8BhQ/edit#gid=930351969
+%not sure that gives complete answer, but it will help.
+
+A summary of all radiative transfer calculations is given in Table~\ref{tab:radiativemodels}. The entire image library 
+contains $6$ model sets; thousands of points in model parameter space and 
+%$364$ models (with different spins and electron prescriptions); 
+%$1,872,409 @230GHz$ 
+%%
+$x$M images in each of 86~GHz, 230~GHz, and $2.2\mu$m; %$1,233,100 SEDs$ 
+$1.2$M SEDs and occupies about $GGG$ gigabytes.
 
 %\clearpage
 %\pagebreak
@@ -355,9 +364,9 @@ Entire image library contains $6$ model sets; $364$ models (with different spins
 \kharma & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,170] & [86,230] & Yes & [15,20) & 360,000 \\
 \kharma & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,170] & [86,230] & Yes & [20-25) & 360,000 \\
 \kharma & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,170] & [86,230] & Yes & [25-30) & 360,000 \\
-\bhac   & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,90]  & [86,230] & Yes & [10-15) & 100,000 \\
-\bhac   & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,90]  & [86,230] & Yes & [20-25) & 100,000 \\
-\bhac   & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,90]  & [86,230] & Yes & [25-30) & 100,000 \\
+\bhac   & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,90]  & [86,230] & No & [10-15) & 100,000 \\
+\bhac   & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,90]  & [86,230] & No & [20-25) & 100,000 \\
+\bhac   & 1 & [1,10,40,160] & 1 & - & - & [10,30,...,90]  & [86,230] & No & [25-30) & 100,000 \\
 \hamr   & 1 & [1,40,160]    & 1 & - & - & [10,50,90]      & [86,230] & Yes & [30-35) & 45,000 \\
 \koral  & 1 & [20]          & 1 & - & - & [10,30,...,170] & [86,230] & No  & [5-100)   & 107,507 \\
 Wind Accretion & 1 & [13,28]    & 1 & - & - & N/A        & [86,230] & No  & 10        & 1802 \\

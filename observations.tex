@@ -4,7 +4,7 @@
 
 Variability complicates the comparison of Sgr A* models to the data. Even an ideal evolution of a successful model will never match the data point for point because the space of possible realizations of the model is large; the dataset is high dimensional.  We expect the {\em distribution} of  observables derived from a successful model to match the data, however, if the model is run long enough to sample the distribution.  For example, the distribution of the $86$GHz flux density $F_{86}$ for a model ought to contain the observed $F_{86}$.
 
-Most observables are correlated over $\tau\sim$ few $\times 100 \tg$.  To obtain the mean and variance of the model distribution to accuracy $f$ from a GRMHD model, then, requires running it for $\sim \tau/f^2 \sim 30,000 (\tau/300) (f/0.1)^{-2}$, assuming the model decorrelates completely at intervals $\gg \tau$.  A GRMHD model of duration $30,000 \tg$  between $10^3-10^4$ node-hours, depending on resolution, code, and hardware.  This is expensive since $\sim 10$ runs are used for each model set, and runs need to be repeated for multiple values of numerical parameters (e.g. resolution).  Most of our models are run for $30,000 \tg$; a few are run to $100,000 \tg$.  The model distributions therefore contain sampling noise, and this must be accounted for in model selection.  For some  constraints (e.g. m-ring fits; see below) this can be done by sampling the model at a cadence similar to the correlation time and then using a 2-sample KS test to compare the observed and model distributions.
+Most observables are correlated over $\tau\sim$ few $\times 100 \tg$.  To obtain the mean and variance of the model distribution to accuracy $f$ from a GRMHD model, then, requires running it for $\sim \tau/f^2 \sim 30,000 (\tau/300) (f/0.1)^{-2}$, assuming the model decorrelates completely at intervals $\gg \tau$.  A GRMHD model of duration $30,000 \tg$  costs $10^3-10^4$ node-hours, depending on resolution, code, and hardware.  This is expensive since $\sim 10$ runs are used for each model set, and runs need to be repeated for multiple values of numerical parameters (e.g. resolution).  Most of our models are run for $30,000 \tg$; a few are run to $100,000 \tg$.  The model distributions therefore contain sampling noise, and this must be accounted for in model selection.  For some  constraints (e.g. m-ring fits; see below) this can be done by sampling the model at a cadence similar to the correlation time and then using a 2-sample KS test to compare the observed and model distributions.
 
 %==============================================================================
 % \subsection{Scattering Models}
@@ -50,7 +50,7 @@ We test the models against EHT interferometric data in three ways.  First, we  c
 Our first constraint provides a simple morphological check on the visibility amplitudes.
 We ask two questions of each model snapshot: is the first minimum in the visibilities in about the right place,
 and are the long-baseline visibility amplitudes comparable to the data?
-For comparison, we use data from \aprilvii, which has the best $u$-$v$ coverage near the minima in the visibility amplitudes.
+For comparison, we use data from \aprilvii, which has the best $u$-$v$ coverage near minima in the visibility amplitudes.
 
 The minima locations and long-baseline amplitudes are sensitive to the source structure.
 For example if the source is a simple, circularly symmetric ring of finite width then the location of the first minimum depends only on the ring diameter, while the visibility amplitude on long baselines depends mainly on ring width.
@@ -60,17 +60,17 @@ The minima locations and depths, and long-baseline amplitudes, are expected to f
 For the ``null location'', the first visibility minimum in both the N-S and E-W directions occurs between 2.5--3.5\,G$\lambda$ in the data.
 We do not consider the depth of the null in this simple check.
 
+\cfg{best references for scattering?}
 For the ``long baseline'' interval between 6--8\,G$\lambda$, the visibility amplitude has $\lesssim 6\%$ of the zero-baseline flux, always.
 One complication when comparing models to data on long baselines is the effect of interstellar scattering.
 Diffractive scattering effectively convolves the image with a smooth kernel and can reduce the amplitudes to about $\sim 70\%$ of their unscattered values in the 6--8\,G$\lambda$ range (ref!!).
-Refractive scattering, on the other hand, introduces noise at all baselines of order 0.5--3\%, depending on the particular characteristics of the scattering screen (ref).  To account for these effects, we classify a model snapshot with $|V|$ in this range that is $\sim 5\%$ of the zero baseline flux as compliant.
+Refractive scattering, on the other hand, introduces noise at all baselines of order 0.5--3\%, depending on the particular characteristics of the scattering screen (ref).  To account for these effects, we classify a model snapshot with $|V|$ in this range that is $< 5\%$ of the zero baseline flux as compliant.
 
-To apply this constraint, we compute the visibility amplitudes $V$ of each model snapshot along position angles $0^\degree$, $45^\degree$, $90^\degree$, $135^\degree$, ...  We find the first minimum numerically and compute the median visibility amplitude between 6 and 8\,G$\lambda$.
-We classify a snapshot as compliant if \emph{i}) for at least one position angle the first minimum falls between 2.5 and 3.5\,G$\lambda$ and \emph{ii}) at no position angle grdoes the median visibility amplitude
-exceed $(0.04 / 0.5) V_0$.
+To apply this constraint, we compute the visibility amplitudes $V$ of each model snapshot along position angles $0^\degree$, $45^\degree$, $90^\degree$, $135^\degree$.  We find the first minimum numerically and compute the median visibility amplitude between 6 and 8\,G$\lambda$.
+We classify a snapshot as compliant if \emph{i}) for at least one position angle the first minimum falls between 2.5 and 3.5\,G$\lambda$ and \emph{ii}) at no position angle does the median visibility amplitude exceed $(0.04 / 0.5) V_0$.
 
-To assess each model we evaluate what fraction of snapshots from the model are compliant using the criteria described above.
-If the compliance fraction is $< 1\%$ the model is failed.
+We evaluate the fraction of snapshots from each model that are compliant using the criteria described above.
+If the compliance fraction is $< 1\%$ the model is categorized as failed.
 
 
 %------------------------------------------------------------------------------
@@ -79,7 +79,7 @@ If the compliance fraction is $< 1\%$ the model is failed.
 %\ckc{ck's first pass}
 %\cfg{edited on 2 dec}
 
-The source size can be defined through the second moments of the source image on the sky.  The second moments in the image domain map, in the $uv$ domain, to the second derivatives of the visibility near zero baseline.  The visibility amplitudes on short baselines can therefore be used to estimate the second moments.
+The source size can be characterized using the second moments of the source image on the sky.  The second moments in the image domain map, in the $uv$ domain, to the second derivatives of the visibility near zero baseline.  The visibility amplitudes on short baselines can therefore be used to estimate the second moments.
 
 %The second moment of an EHT source corresponds, in the $(u,v)$ domain, to
 %the second derivative of the visibility amplitude near zero baseline length.
