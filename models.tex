@@ -44,8 +44,8 @@ Following \citetalias{M87PaperV}, we first consider an one-zone model for \sgra.
 These results follow one-zone models developed in the literature over many decades (refs).
 
 Our one-zone model is a uniform plasma sphere of radius $r = 5\rg$ with uniform magnetic field oriented at $\pi/3$ to the line-of-sight.
-The magnetic field is given by $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $T_i \equiv$ ion temperature, $T_e \equiv$ electron temperature, $\beta=1$, and $T_i = 3 T_e$.
-We assume $\Theta_e \equiv  k T_e / m_e c^2 = 10$.
+The magnetic field is given by $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $T_i$ denots ion temperature, $T_e$ denotes electron temperature, $\beta=1$, and $T_i = 3 T_e$.
+We also assume $\Theta_e \equiv  k T_e / m_e c^2 = 10$.
 
 Using the thermal emissivity for synchrotron radiation $j_\nu$ \citep[e.g.,][]{2011ApJ...737...21L} and assuming optically thin emission, the flux density is given by $F_\nu = (4/3)\pi r^3 j_\nu D^{-2} 10^{23}\,\mathrm{Jy}$.  Setting $F_\nu = 2.4\,\mathrm{Jy}$ (the average measured by ALMA during the 2017 campaign) yields a nonlinear equation for $n_e$ with solution
 \begin{align}
@@ -78,33 +78,43 @@ As demonstrated in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and
 %==============================================================================
 \subsection{Numerical Models of the Inner Accretion Flows}
 
-The one-zone model is too simple for comparison with the rich set of observational constraints that is now available for \sgra.  Analytic spherical accretion models \citep[e.g.][]{2019ApJ...885L..33N, 2021arXiv211102178B} incorporate the black hole gravitational field, and analytic disk-like (RIAF) accretion models in the Kerr metric \citep[e.g.][]{2009ApJ...697...45B, 2009ApJ...706..960H,2018ApJ...863..148P} also incorporate angular momentum and they can be used
-for extensive plasma parameter surveys (see Section~\ref{sec:future}).
-In this work, however, we apply more complicated, dynamical model generated using numerical simulations to include turbulent fluctuations and related dynamical features.
-
-We simulate the plasma flow with an ideal GRMHD\footnote{Notice that ideal GRMHD models do not capture collisionless aspects of the accretion flow and jets; we discuss the model limitations in  Section~\ref{sec:limits}} model, assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
+The one-zone model is too simple for comparison with the rich set of observational constraints available for \sgra.
+Analytic spherical accretion models \citep[e.g.][]{2019ApJ...885L..33N, 2021arXiv211102178B} incorporate black hole gravity, and
+analytic disk-like (RIAF) accretion models in the Kerr metric \citep[e.g.][]{2009ApJ...697...45B, 2009ApJ...706..960H,2018ApJ...863..148P}
+can in principle be used for extensive plasma parameter surveys (see Section~\ref{sec:future}).
+However, they do not self-consistently capture important physics such as turbulent transport.
+Therefore, we simulate the plasma flow with an ideal GRMHD\footnote{Notice that ideal GRMHD models do not capture collisionless aspects of the accretion flow and jets; we discuss the model limitations in Section~\ref{sec:limits}} model, assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
 
 \begin{deluxetable*}{cccccccc}
-\tabletypesize{\footnotesize}
-\renewcommand{\arraystretch}{1.1}
-\tablehead{
-  & \colhead{Spacetime} & \multicolumn{2}{c}{Fluid} & \multicolumn{3}{c}{Numerical} &  \colhead{Note} \\
-  \colhead{Name/Code} &
-  \colhead{$\abh$} &
-  \colhead{Mode} & \colhead{$\Gamma_{\rm ad}$} & \colhead{$t_\mathrm{final}$ [$\rg$]}
-  & \colhead{Size [$\rg$]} & \colhead{Resolution} &
-  \colhead{Reference}
-}
-\startdata
-\kharma & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $4/3$ & 30,000 & 1000 & [288x128x128] & This work, Wong+2021, \vd{Dhruv+2022?} \\
-\bhac   & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $4/3$ & 30,000 & 3333 & [512x192x192] & This work \\
-\hamr   & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $13/9,5/3$ & 35,000 & 1000/200 & [348/240×192×192] &This work \\
-\koral  & 0,$\pm0.3$,$\pm0.5$,$\pm0.7$,$\pm0.9$ & MAD & $13/9$ & 101,000 & 100,000 & [288x192x144] & \cite{2021arXiv210812380N} \\
-\hamr-Tilt\tablenotemark{$*$} & $15/16$ & IN-SANE & $5/3$ & 105,000 & 100,000 & [448x144x240] & \citet{Chatterjee2020} \\
-Wind Accretion\tablenotemark{$*$} & 0 & MAD$\times2$ & 5/3 & 20,000 & 2,400 & [356x128x128] & \citet{2020ApJ...896L...6R}
-\enddata
-\tablenotetext{$*$}{Non-standard model.}
-\caption{Summary of GRMHD simulations in \sgra EHT GRMHD model library. The first four entries are standard \sgra simulations. there are two realizations of the Wind Accretion models which differ in stellar wind magnetization.}\label{tab:GRMHDmodels}
+  \tabletypesize{\footnotesize}
+  \renewcommand{\arraystretch}{1.1}
+  \tablehead{                     &
+    \colhead{Spacetime}           &
+    \multicolumn{2}{c}{Fluid}     &
+    \multicolumn{3}{c}{Numerical} &
+    \colhead{Note} \\
+    \colhead{Name/Code}                  &
+    \colhead{$\abh$}                     &
+    \colhead{Mode}                       &
+    \colhead{$\Gamma_\mathrm{ad}$}       &
+    \colhead{$t_\mathrm{final}$ [$\rg$]} &
+    \colhead{Size [$\rg$]}               &
+    \colhead{Resolution}                 &
+    \colhead{Reference}
+  }
+  \startdata
+  \kharma & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $4/3$ & 30,000 & 1000 & [288x128x128] & This work, Wong+2021, \vd{Dhruv+2022?} \\
+  \bhac   & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $4/3$ & 30,000 & 3333 & [512x192x192] & This work \\
+  \hamr   & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $13/9,5/3$ & 35,000 & 1000/200 & [348/240×192×192] &This work \\
+  \koral  & 0,$\pm0.3$,$\pm0.5$,$\pm0.7$,$\pm0.9$ & MAD & $13/9$ & 101,000 & 100,000 & [288x192x144] & \cite{2021arXiv210812380N} \\
+  \hamr-Tilt\tablenotemark{$*$} & $15/16$ & IN-SANE & $5/3$ & 105,000 & 100,000 & [448x144x240] & \citet{Chatterjee2020} \\
+  Wind Accretion\tablenotemark{$*$} & 0 & MAD$\times2$ & 5/3 & 20,000 & 2,400 & [356x128x128] & \citet{2020ApJ...896L...6R}
+  \enddata
+  \tablenotetext{$*$}{Non-standard model.}
+  \caption{Summary of GRMHD simulations in the EHT \sgra GRMHD model library.
+    The first four entries are standard \sgra simulations.
+    There are also two realizations of the Wind Accretion models which differ in stellar wind magnetization.}
+  \label{tab:GRMHDmodels}
 \end{deluxetable*}
 
 %------------------------------------------------------------------------------
