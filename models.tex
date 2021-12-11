@@ -230,11 +230,11 @@ We explore two implmentations in this paper:
 \emph{i}) with a power-law distribution function
 \begin{align}
   \frac{1}{n_e} \frac{d n_e}{d\gamma} &=
-  \frac{p-1}{\gamma_{\min}^{1-p} - \gamma_{\max}^{1-p}}
+  \frac{p-1}{\gamma_{\min}^{1-p} - \gamma_{\vphantom{i}\max}^{1-p}}
   \gamma^{-p}
   \label{eq:nonthermaleDF}
 \end{align}
-which has power-law index $p$ and upper and lower limits $\gamma_{\min}$ and $\gamma_{\max}$; and
+which has power-law index $p$ and upper and lower limits $\gamma_{\min}$ and $\gamma_{\vphantom{i}\max}$; and
 \emph{ii}) with a so-called $\kappa$ distribution function, inspired by observations of the solar wind and by results of collisionless plasma simulations \citep[e.g.,][and references therein]{2015JPlPh..81e3201K}
 \begin{align}
   \frac{1}{n_e} \frac{d n_e}{d\gamma} =
@@ -278,24 +278,18 @@ This makes the interpretations of the model trends less obvious.
 %..............................................................................
 \subsubsubsection{Radiative Transfer Calculation}
 
-Given an eDF, density scale $\Munit$, and radiative transfer coefficients, the emergent radiation is obtained by solution of the radiative transfer equation.
-For this we use two classes of numerical methods: ray tracing to generate synthetic images, and a Monte Carlo scheme to generate spectral energy distributions (SEDs).
+Given an eDF, density scale $\Munit$, and radiative transfer coefficients, the emergent radiation is obtained by integrating the radiative transfer equation.
+We use two classes of numerical methods: ray tracing to generate synthetic images, and a Monte Carlo scheme to generate spectral energy distributions (SEDs).
 Further detail on numerical methods is given Appendix~\ref{app:radtrans}.
-Comparisons of numerical methods \citep[][]{Prather_et_al_2021, 2020ApJ...897..148G} shows that differences between numerical schemes do not contribute significantly to the error budget.
+Comparisons of numerical methods \citep{2020ApJ...897..148G, Prather_et_al_2021} show that differences between numerical schemes do not contribute significantly to the error budget.
 
-The models are imaged at 86\GHz, 230\GHz\footnote{The mean frequency for  EHT observations is more nearly 228\GHz.} and 2.2\um.
-Direct imaging includes synchrotron emission and absorption and bremsstrahlung (both ion-electron and electron-electron; see \citet{2020ApJ...898...50Y} for a recent review).
-The SED is averaged over a narrow range in inclination and over all position angles.
+The models are imaged at 86\GHz, 230\GHz\footnote{The mean frequency for  EHT observations is more nearly 228\GHz.} and 2.2\um (near infrared, NIR hereafter).
+Direct imaging includes synchrotron and bremsstrahlung \citep[both ion-electron and electron-electron; see][for a recent review]{2020ApJ...898...50Y}.
+The SED is averaged over a narrow range in inclination and over all azimuthal angles.
 The SED includes synchrotron, bremsstrahlung, \emph{and} Compton scattering.
-NIR emission is usually dominated by synchrotron, but we find that occasionally NIR synchrotron is so weak that Compton scattering dominates.
-The X-ray is dominated by bremsstrahlung or Compton scattering.
-In Figure~\ref{fig:fiducial_imgs} we present a few examples of time-averaged model images and multiwavelength SEDs of selected standard \sgra models.
-
-%==============================================================================
-\subsection{Summary of \sgra model library}
-
-A summary of all radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
-Entire image library contains $6$ model sets; $364$ models (with different spins and electron prescriptions); $3,744,818$ 230/86~GHz images; $1,533,100$ SEDs and occupies about $GGG$ gigabytes.
+NIR emission is usually dominated by synchrotron, but we find that occasionally NIR synchrotron is so weak that Compton scattering overtakes.
+The x-ray can be dominated by bremsstrahlung or Compton scattering, mainly depending on the electron temperature.
+In Figures~\ref{fig:fiducial_86GHz}, \ref{fig:fiducial_230GHz}, and \ref{fig:fiducial_SEDs}, we present a representative set of model images and multiwavelength SEDs from our library.
 
 \begin{figure*}
   \centering
@@ -304,9 +298,16 @@ Entire image library contains $6$ model sets; $364$ models (with different spins
     \emph{i})~a thermal SANE example,
     \emph{ii})~a thermal MAD example, and
     \emph{iii})~a non-thermal variable $\kappa$ MAD.
-    \ckc{will do.  86GHz currently uses lower resolution.  We can either interpolate, or increase the resolution for these fudicial models.}\monika{CK can you check label in the middle panel? is middle really mad?}\aco{Which  quantity we are plotting and in which range (in the colormap)?}}
+    \ckc{will do.  86GHz currently uses lower resolution.  We can either interpolate, or increase the resolution for these fudicial models.}\monika{CK can you check label in the middle panel? is middle really mad?}\aco{Which  quantity we are plotting and in which range (in the colormap)?}
+    \ckc{will break this into 3 figures so we can freely pick re representative sets of examples.}}
   \label{fig:fiducial_imgs}
 \end{figure*}
+
+%==============================================================================
+\subsection{Summary of \sgra model library}
+
+A summary of all radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
+Entire image library contains $6$ model sets; $364$ models (with different spins and electron prescriptions); $3,744,818$ 230/86~GHz images; $1,533,100$ SEDs and occupies about $GGG$ gigabytes.
 
 %\clearpage
 %\pagebreak
