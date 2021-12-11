@@ -67,8 +67,10 @@ The one-zone model implies that the accretion flow is at high temperature and lo
 This motivates consideration of
 \emph{i})~a two-temperature model for the plasma where electrons are cooler than the ions \citep{1976ApJ...204..187S,1977ApJ...214..840I, 1982Natur.295...17R} and
 \emph{ii})~nonthermal electron distribution functions.
-As demonstrated in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \citet{2014A&A...570A...7M} \citep[see also more recent work by][and references therein]{2018A&A...612A..34D, 2021A&A...650A.163C, 2021arXiv211102518F,2021NatAs.tmp..218C, 2021arXiv211203933E}, both effects may change the predicted properties of \sgra.
+As demonstrated in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \citet{2014A&A...570A...7M} \citep[see also more recent work by][]{2018A&A...612A..34D, 2021A&A...650A.163C, 2021arXiv211102518F, 2021NatAs.tmp..218C, 2021arXiv211203933E}, both effects may change the predicted properties of \sgra.
 %\br{my only remaining comment is that I think that the sentence ``As demonstrated in \citet{2000ApJ...541..234O} and \citet{2014A&A...570A...7M} (see also more recent work by \citealt{2018A&A...612A..34D} and references therein) both effects may change the predicted properties of \sgra.'' should be cut, or extended with non-EHT refs on how other groups actually probe those collisionless effects dynamically}
+\ckc{In principle, we could check all of the assumptions in the one zone model for consistency.  Probably leave until after PC submission.}
+
 %==============================================================================
 \subsection{Numerical Models of the Inner Accretion Flows}
 
@@ -133,8 +135,8 @@ All simulations are run in horizon penetrating Kerr-Schild coordinates, which ar
 Once the evolution has started, a combination of instabilities including the magnetorotational instability (MRI, \citealt{1992ApJ...400..610B}) drives the torus to a turbulent, fluctuating state.
 Let $P_\mathrm{gas}$ be the gas pressure and $P_\mathrm{mag} \equiv B^2 / (8\pi)$ be the magnetic pressure, 
 the standard accretion flow models can be divided by latitude into three zones:
-\emph{i}) equatorial inflow,
-\emph{ii}) a mid-latitude disk wind/corona with $\beta \equiv P_\mathrm{gas} / P_\mathrm{mag} \sim 1$), and
+\emph{i})   equatorial inflow,
+\emph{ii})  a mid-latitude disk wind/corona with $\beta  \equiv P_\mathrm{gas} / P_\mathrm{mag} \sim 1$, and
 \emph{iii}) a polar funnel/relativistic jet with $\sigma \equiv P_\mathrm{mag} / (\rho c^2) \gtrsim 1$.
 
 It is well established (see e.g., \citetalias{M87PaperV}, \citetalias{M87PaperVIII} and references therein) that the magnetic flux through the event horizon divides the outcomes into two categories: the Magnetically Arrested Disk (MAD) state \citep[e.g.,][]{1974Ap&SS..28...45B, Igumenschchev:2003, 2003PASJ...55L..69N} in which the magnetic flux near the horizon saturates and significantly affects the dynamics of the flow, and the Standard and Normal Evolution (SANE) state \citep[e.g.,][]{2003ApJ...589..444G, 2003ApJ...599.1238D, 2012MNRAS.426.3241N}.  The relative importance of magnetic flux can be described by $\phi \equiv \Phi_{\mathrm{BH}} (\dot{M} r_g^2 c)^{-1/2}$, where $\Phi_{\rm BH}$ is the magnetic flux interior to the black hole equator and $\dot{M}$ is the mass accretion rate through the horizon. MAD models have $\phi \sim \phi_{\rm crit} \sim 60$. \footnote{In the Lorentz-Heaviside units commonly used in GRMHD simulations $\phi_\mathrm{crit}$ is smaller by a factor of $(4\pi)^{1/2} \simeq 3.545$.}
