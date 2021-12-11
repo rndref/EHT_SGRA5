@@ -66,7 +66,7 @@ Synchrotron cooling therefore dominates Compton cooling.
 
 The synchrotron cooling timescale is $t_\mathrm{cool} \equiv u/\Lambda$ where $u_e = 3 n_e k T_e$ is the electron internal energy and $\Lambda \simeq 5.4 B^2 e^4 n_e \Theta_e^2 /(c^3 m_e^2)$ is the synchrotron cooling rate from thermal population of electrons with $\Theta_e \gtrsim 1$ (for details see Appendix~A in \citealt{2011ApJ...735....9M}; finite optical depth reduces $\Lambda$).
 The cooling time in the one-zone model is therefore $t_\mathrm{cool}=2.3 \times 10^4\sec \simeq 1.1 \times 10^3 \tg$ which is longer than the characteristic inflow time.
-Cooling can therefore be neglected in the numerical models \citep[e.g.,][]{2012MNRAS.426.1928D}.\footnote{Notice that if \sgra is fed by stellar winds then the inflowing plasma may be mainly helium \citep{2019MNRAS.482L.123R}; this changes the one-zone model only slightly.  Helium accretion is discussed at length in Appendix~\ref{app:variability}.}
+Cooling can therefore be neglected in the numerical models \citep[e.g.,][]{2012MNRAS.426.1928D}.\footnote{Notice that if \sgra is fed by stellar winds then the inflowing plasma may be mainly helium \citep{2019MNRAS.482L.123R}; this changes the one-zone model only slightly.  Helium accretion is discussed  in Appendix~\ref{app:variability}.}
 
 The one-zone model implies that the accretion flow is at high temperature and low density and is therefore collisionless, in the sense that the mean free path to Coulomb scattering is large compared to $\rg$.
 At $\Theta_e \sim 1$, for example, the Coulomb scattering cross section is comparable to the Thomson cross section, and the mean free path therefore $\sim \tau_e^{-1} \rg$.
@@ -78,6 +78,8 @@ As discussed in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \c
 %\br{my only remaining comment is that I think that the sentence ``As demonstrated in \citet{2000ApJ...541..234O} and \citet{2014A&A...570A...7M} (see also more recent work by \citealt{2018A&A...612A..34D} and references therein) both effects may change the predicted properties of \sgra.'' should be cut, or extended with non-EHT refs on how other groups actually probe those collisionless effects dynamically}
 \ckc{In principle, we could numerically check all of the assumptions in the one zone model for consistency.  Probably leave until after PC submission.}
 \monika{i think that the purpose of this section is to make a rough estimates on the back of the envelope so that everyone can repeat them, numerical work is always more difficult to repeat}
+\ckc{Yes but these also usually physical interesting quantities.  At least we should compute the values that paper~I wants.}
+
 %==============================================================================
 \subsection{Numerical Models of the Inner Accretion Flows}
 
@@ -211,15 +213,15 @@ In \emph{thermal} models electron energies are distributed into the Maxwell-J{\"
 \begin{align}
   \frac{1}{n_e}\frac{dn_e}{d\gamma} = \frac{\gamma^2 \sqrt{1-1/\gamma^2}} {\Theta_e K_2(1/\Theta_e)} \exp\left(-\frac{\gamma}{\Theta_e}\right);
 \end{align}
-recall $\Theta_e = k_b T_e/m_e c^2$, which is determined by the ion-electron temperature ratio $R \equiv T_i/T_e$:
+recall $\Theta_e = k_b T_e/(m_e c^2)$, which is determined by the ion-electron temperature ratio $R \equiv T_i/T_e$:
 \begin{align}
   T_e=\frac{2 m_p u}{3 k_B \rho (2+R)}.
 \end{align}
 Here $u$ and $\rho$ are the internal energy density and rest-mass density from the GRMHD simulation.
 Thermal models are motivated by the idea that wave-particle scattering drives partial relaxation of the eDF, even though Coulomb scattering is ineffective.
 
-Motivated by plasma heating models that energy dissipation to ions and electrons depends on the local magnetic properties \citep[e.g.,][]{2010MNRAS.409L.104H, Kawazura771},
-we use a prescription with the assumption that the temperature ratio is a local function of the plasma $\beta \equiv P_\mathrm{gas}/P_\mathrm{mag}$ \citep{2015ApJ...799....1C}.
+Plasma heating models suggest that energy dissipation to ions and electrons depends on the local magnetic properties \citep[e.g.,][]{2010MNRAS.409L.104H, Kawazura771}.
+We therefore use a prescription in which the temperature ratio is a function of the plasma $\beta \equiv P_\mathrm{gas}/P_\mathrm{mag}$ \citep{2015ApJ...799....1C}.
 Specifically, we use the same model as in \citetalias{M87PaperV} and \citetalias{M87PaperVIII}, where $R$ is a smooth function adopted from \cite{2016A&A...586A..38M}:
 \begin{equation}
   R = \frac{T_i}{T_e} = \Rh \frac{b^2}{b^2+1} + \Rl \frac{1}{b^2+1}
@@ -227,10 +229,10 @@ Specifically, we use the same model as in \citetalias{M87PaperV} and \citetalias
 \end{equation}
 where $b \equiv \beta/\beta_\mathrm{crit}$.
 This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.
-In the standard models we will present in this paper, we fix $\Rl = 1$ and $\beta_\mathrm{crit} = 1$, and only allow $\Rh$ to vary from 1 to 160.
+In the standard models presented in this paper $\Rl = 1$ and $\beta_\mathrm{crit} = 1$, and $\Rh$ varies from 1 to 160.
 
 In \emph{non-thermal} models, the eDF has a power-law tail extending to high energy.
-We explore two implmentations in this paper:
+We explore two implementations in this paper:
 \emph{i}) with a power-law distribution function
 \begin{align}
   \frac{1}{n_e} \frac{d n_e}{d\gamma} &=
@@ -246,7 +248,7 @@ which has power-law index $p$ and upper and lower limits $\gamma_{\min}$ and $\g
 \end{align}
 which has width parameter $w$ and power-law index parameter $\kappa$.
 
-Evidently, any eDF assignment schemes is an approximation in the sense that the eDF will in general depend on both local conditions and particle histories.
+Evidently, any eDF assignment scheme is an approximation in the sense that the eDF will in general depend on both local conditions and particle histories.
 The eDF is assumed isotropic, and electron-positron pairs are neglected in this work.
 Nevertheless, see Section~\ref{sec:pair} for a discussion of potential impact of pair plasma for \sgra.
 
@@ -285,7 +287,7 @@ This makes the interpretations of the model trends in Section~\ref{sec:trends} l
 Given an eDF, density scale $\Munit$, and radiative transfer coefficients, the emergent radiation is obtained by integrating the radiative transfer equation.
 We use two classes of numerical methods: ray tracing to generate synthetic images, and a Monte Carlo scheme to generate spectral energy distributions (SEDs).
 Further detail on numerical methods is given Appendix~\ref{app:radtrans}.
-Comparisons of numerical methods \citep{2020ApJ...897..148G, Prather_et_al_2021} show that differences between numerical schemes do not contribute significantly to the error budget.
+Comparisons of numerical methods \citep{2020ApJ...897..148G, Prather_et_al_2022} show that differences between numerical schemes do not contribute significantly to the error budget.
 
 The models are imaged at 86\GHz, 230\GHz\footnote{The mean frequency for  EHT observations is more close to 228\GHz.} and 2.2\um (near infrared, NIR hereafter).
 Direct imaging includes synchrotron and bremsstrahlung \citep[both ion-electron and electron-electron; see][for a recent review]{2020ApJ...898...50Y}.
