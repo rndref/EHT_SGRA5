@@ -78,13 +78,6 @@ As demonstrated in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and
 %==============================================================================
 \subsection{Numerical Models of the Inner Accretion Flows}
 
-The one-zone model is too simple for comparison with the rich set of observational constraints available for \sgra.
-Analytic spherical accretion models \citep[e.g.][]{2019ApJ...885L..33N, 2021arXiv211102178B} incorporate black hole gravity, and
-analytic disk-like (RIAF) accretion models in the Kerr metric \citep[e.g.][]{2009ApJ...697...45B, 2009ApJ...706..960H,2018ApJ...863..148P}
-can in principle be used for extensive plasma parameter surveys (see Section~\ref{sec:future}).
-However, they do not self-consistently capture important physics such as turbulent transport.
-Therefore, we simulate the plasma flow with an ideal GRMHD\footnote{Notice that ideal GRMHD models do not capture collisionless aspects of the accretion flow and jets; we discuss the model limitations in Section~\ref{sec:limits}} model, assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
-
 \begin{deluxetable*}{cccccccc}
   \tabletypesize{\footnotesize}
   \renewcommand{\arraystretch}{1.1}
@@ -97,40 +90,35 @@ Therefore, we simulate the plasma flow with an ideal GRMHD\footnote{Notice that 
     \colhead{$\abh$}                     &
     \colhead{Mode}                       &
     \colhead{$\Gamma_\mathrm{ad}$}       &
-    \colhead{$t_\mathrm{final}$ [$\rg$]} &
-    \colhead{Size [$\rg$]}               &
+    \colhead{\!\!\!\!\!\!$t_\mathrm{final}$ [$\rg$]} &
+    \colhead{Size [$\rg$]\!\!\!\!\!\!}               &
     \colhead{Resolution}                 &
     \colhead{Reference}
   }
   \startdata
-  \kharma & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $4/3$ & 30,000 & 1000 & [288x128x128] & This work, Wong+2021, \vd{Dhruv+2022?} \\
-  \bhac   & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $4/3$ & 30,000 & 3333 & [512x192x192] & This work \\
-  \hamr   & 0,$\pm1/2$,$\pm15/16$ & MAD/SANE & $13/9,5/3$ & 35,000 & 1000/200 & [348/240×192×192] &This work \\
-  \koral  & 0,$\pm0.3$,$\pm0.5$,$\pm0.7$,$\pm0.9$ & MAD & $13/9$ & 101,000 & 100,000 & [288x192x144] & \cite{2021arXiv210812380N} \\
-  \hamr-Tilt\tablenotemark{$*$} & $15/16$ & IN-SANE & $5/3$ & 105,000 & 100,000 & [448x144x240] & \citet{Chatterjee2020} \\
-  Wind Accretion\tablenotemark{$*$} & 0 & MAD$\times2$ & 5/3 & 20,000 & 2,400 & [356x128x128] & \citet{2020ApJ...896L...6R}
+  \kharma & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $4/3$      & 30,000  & 1000     & [288x128x128]     & \!\!\!\!\!\!\!\!\!This work, \citet{Wong_2022, Dhruv_2022} \\
+  \bhac   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $4/3$      & 30,000  & 3333     & [512x192x192]     & This work \\
+  \hamr   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $13/9,5/3$ & 35,000  & 1000/200 & [348/240×192×192] & This work \\
+  \koral  & \!\!\!\!\!\!\!\!\!0,$\pm0.3$,$\pm0.5$,$\pm0.7$,$\pm0.9$\!\!\!\!\!\!\!\!\! & MAD          & $13/9$     & 101,000 & 100,000  & [288x192x144]     & \citet{2021arXiv210812380N} \\
+  \hamr-Tilt\tablenotemark{$*$}     & $15/16$     & IN-SANE      & 5/3        & 105,000 & 100,000  & [448x144x240]     & \citet{Chatterjee2020} \\
+  Wind Accretion\tablenotemark{$*$} & 0           & MAD$\times2$ & 5/3        & 20,000  & 2,400    & [356x128x128]     & \citet{2020ApJ...896L...6R}
   \enddata
   \tablenotetext{$*$}{Non-standard model.}
   \caption{Summary of GRMHD simulations in the EHT \sgra GRMHD model library.
     The first four entries are standard \sgra simulations.
-    There are also two realizations of the Wind Accretion models which differ in stellar wind magnetization.}
+    There are also tilted accretion models and two realizations of the Wind Accretion models which differ in stellar wind magnetization.}
   \label{tab:GRMHDmodels}
 \end{deluxetable*}
 
+The one-zone model is too simple for comparison with the rich set of observational constraints available for \sgra.
+Analytic spherical accretion models \citep[e.g.][]{2019ApJ...885L..33N, 2021arXiv211102178B} incorporate black hole gravity, and
+analytic disk-like (RIAF) accretion models in the Kerr metric \citep[e.g.][]{2009ApJ...697...45B, 2009ApJ...706..960H,2018ApJ...863..148P}
+can in principle be used for extensive plasma parameter surveys (see Section~\ref{sec:future}).
+However, they do not self-consistently capture important physics such as turbulent transport.
+Therefore, we simulate the plasma flow with an ideal GRMHD\footnote{Notice that ideal GRMHD models do not capture collisionless aspects of the accretion flow and jets; we discuss the model limitations in Section~\ref{sec:limits}} model, assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
+
 %------------------------------------------------------------------------------
 \subsubsection{Plasma Flow Model}
-
-\begin{figure*}
-  \centering
-  \includegraphics[width=0.45\textwidth]{figures/sane_3D.png}\hspace{1.5pt}%
-  \includegraphics[width=0.45\textwidth]{figures/mad_3D_new.png}\\
-  \includegraphics[width=0.45\textwidth]{figures/tilted_3D.png}\hspace{1.5pt}%
-  \includegraphics[width=0.45\textwidth]{figures/ressler_3D_new.png}
-  \caption{3-D overview of selected GRMHD simulations of \sgra in our library. The color marks constant dimensionless density surfaces and lines follow magnetic field lines. Two top panels show standard accretion models: SANE (left panel, $a_*=+15/16$) and MAD (right panel, $a_*=0.5$). Two bottom panels show non-standard accretion models: tilted disk (left panel, $a_*=+15/16$ and tilt angle of 60 deg) and Wind Accretion (right panel, $a_*=0$). In case of spinning black holes, the spin is aligned with z-axis. \monika{plots are not final, more detailed quantitative plots of models are expected to be in the appendix.}
-  \aeb{This looks great!}
-  \gw{Presumably the MAD simulation ``only'' has field lines that thread the near-horizon region because the footpoints are distributed relative to field strength? Might be worthwhile to mention if so.}\monika{that is not the case. these images may change a bit in the near future}\gw{In that case, I definitely think we should explain how the magnetic field lines are chosen.} \aco{Monika, 3D rendering looks very nice. There are some way to choose same BH spin, view angle, limits on density and magnetic fields to see only differences in accretion models? } \ckc{If these are in normal spherical polar or Cartesian, I suggest we also ask Matt Turk to try visualizing them with yt.}\monika{thanks for all the suggestions, will incorporate before submission.}}
-  \label{fig:GRMHD}
-\end{figure*}
 
 % \paragraph{Methods, initial and boundary conditions:}
 We model the plasma flow around \sgra using ideal, non-radiative GRMHD.  The gravitational field is given by the Kerr metric, with mass given by Equation (\ref{eq:mass}) and with black hole spin $\abh$ as free parameter \citep[see e.g.,][]{2003ApJ...589..444G, 2005ApJ...635..723A, 2007A&A...473...11D}.
@@ -144,7 +132,7 @@ in a prograde ($\abh > 0$) or retrograde ($\abh < 0$) orbit.  In all models exce
 The torus is seeded with a weak, poloidal magnetic field %\aco{ with magnetization $\beta \equiv p_{\rm gas}/p_{\rm mag} =100$}.
 % we dont want to elaborate on details like that here
 
-All simulations are run in horizon penetrating Kerr-Schild coordinates, which are regular on the horizon.  Most are run in a variant of spherical polar coordinates.  The {\em standard} boundary conditions are outflow at the inner boundary, located inside the event horizon, outflow at the outer boundary, located at $r \gtrsim 1000 \rg$, and reflecting boundary conditions at the poles.  Standard  simulations are evolved to $t_f=30,000 \tg$.
+All simulations are run in horizon penetrating Kerr-Schild coordinates, which are regular on the horizon.  Most are run in a variant of spherical polar coordinates.  The {\em standard} boundary conditions are outflow at the inner boundary, located inside the event horizon, outflow at the outer boundary, located at $r \gtrsim 1000 \rg$, and reflecting boundary conditions at the poles.  Standard  simulations are evolved to $t_\mathrm{final} = 30,000 \tg$.
 
 Once the evolution has started, a combination of instabilities including the magnetorotational instability (MRI, \citealt{1992ApJ...400..610B}) drives the torus to a turbulent, fluctuating state.
 Let $P_\mathrm{gas}$ be the gas pressure and $P_\mathrm{mag} \equiv B^2 / (8\pi)$ be the magnetic pressure,
@@ -162,6 +150,18 @@ We also consider two \emph{non-standard} GRMHD simulations: strongly magnetized 
 These wind-fed models have $\abh = 0$.
 
 The GRMHD model library is summarized in Table~\ref{tab:GRMHDmodels}. In Figure~\ref{fig:GRMHD} we show a few examples of standard and non-standard GRMHD runs. The models vary in numerical method and in numerical resolution. We present more information on the numerical methods and models in Appendix~\ref{app:numerical} and in  Appendix~\ref{app:variability}.
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=0.45\textwidth]{figures/sane_3D.png}\hspace{1.5pt}%
+  \includegraphics[width=0.45\textwidth]{figures/mad_3D_new.png}\\
+  \includegraphics[width=0.45\textwidth]{figures/tilted_3D.png}\hspace{1.5pt}%
+  \includegraphics[width=0.45\textwidth]{figures/ressler_3D_new.png}
+  \caption{3-D overview of selected GRMHD simulations of \sgra in our library. The color marks constant dimensionless density surfaces and lines follow magnetic field lines. Two top panels show standard accretion models: SANE (left panel, $a_*=+15/16$) and MAD (right panel, $a_*=0.5$). Two bottom panels show non-standard accretion models: tilted disk (left panel, $a_*=+15/16$ and tilt angle of 60 deg) and Wind Accretion (right panel, $a_*=0$). In case of spinning black holes, the spin is aligned with z-axis. \monika{plots are not final, more detailed quantitative plots of models are expected to be in the appendix.}
+  \aeb{This looks great!}
+  \gw{Presumably the MAD simulation ``only'' has field lines that thread the near-horizon region because the footpoints are distributed relative to field strength? Might be worthwhile to mention if so.}\monika{that is not the case. these images may change a bit in the near future}\gw{In that case, I definitely think we should explain how the magnetic field lines are chosen.} \aco{Monika, 3D rendering looks very nice. There are some way to choose same BH spin, view angle, limits on density and magnetic fields to see only differences in accretion models? } \ckc{If these are in normal spherical polar or Cartesian, I suggest we also ask Matt Turk to try visualizing them with yt.}\monika{thanks for all the suggestions, will incorporate before submission.}}
+  \label{fig:GRMHD}
+\end{figure*}
 
 %------------------------------------------------------------------------------
 \subsubsection{Radiative Transfer Model}
