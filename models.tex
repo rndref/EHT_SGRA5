@@ -270,10 +270,10 @@ Similarly, the energy density and magnetic fields in cgs units are set by:
 the factor of $(4\pi)^{1/2}$ comes from converting Heaviside-Lorentz units (used in GRMHD simulations for efficiency) to cgs.
 \ckc{I found this notation confusion.  For example, $c$ is dimensional, although it's not necessary in cgs.  So I'm not sure what $c_\mathrm{cgs}$ really means here.  Is the dimensionless value of $c$ in cgs?  I'm probably too picky...}
 
-The plamas mass scale $\Munit$ is a free parameter and control the opacity depth and hence the images and SEDs.
-In order to reduce the parameter space, we employ an iterative process to solve for $\Munit$ so that the mean 230\GHz flux densities of the models match the $\simeq 2.4\,\mathrm{Jy}$ observed mean from the 2017 campaign (see next section).
-Note that the flux is a nonlinear function of $\Munit$ because the accretoin flow transits between the optical thick and thin regimes around 230\GHz.
-This makes the interpretations of the model trends less obvious.
+The plasma mass scale $\Munit$ is a free parameter and control the opacity depth and hence the images and SEDs.
+In order to reduce the parameter space, we employ an iterative process to solve for $\Munit$ so that the mean 230\GHz flux densities of the models match roughly the $2.4\,\mathrm{Jy}$ observed mean from the 2017 campaign (see next section).
+Note that the flux is a nonlinear function of $\Munit$ because the accretion flow transits between the optical thick and thin regimes around 230\GHz.
+This makes the interpretations of the model trends in Section~\ref{sec:trends} less obvious.
 
 %..............................................................................
 \subsubsubsection{Radiative Transfer Calculation}
@@ -283,7 +283,7 @@ We use two classes of numerical methods: ray tracing to generate synthetic image
 Further detail on numerical methods is given Appendix~\ref{app:radtrans}.
 Comparisons of numerical methods \citep{2020ApJ...897..148G, Prather_et_al_2021} show that differences between numerical schemes do not contribute significantly to the error budget.
 
-The models are imaged at 86\GHz, 230\GHz\footnote{The mean frequency for  EHT observations is more nearly 228\GHz.} and 2.2\um (near infrared, NIR hereafter).
+The models are imaged at 86\GHz, 230\GHz\footnote{The mean frequency for  EHT observations is more close to 228\GHz.} and 2.2\um (near infrared, NIR hereafter).
 Direct imaging includes synchrotron and bremsstrahlung \citep[both ion-electron and electron-electron; see][for a recent review]{2020ApJ...898...50Y}.
 The SED is averaged over a narrow range in inclination and over all azimuthal angles.
 The SED includes synchrotron, bremsstrahlung, \emph{and} Compton scattering.
