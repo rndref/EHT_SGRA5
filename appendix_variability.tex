@@ -2,6 +2,53 @@
 
 
 
+Majority of the simulations considered in this work fails to recover the \sgra observed variability in total flux.
+In this Appendix we discuss and dismiss several possible causes for mismatch of $\mi{3}$ metric in models and data.
+
+% \bp{Seems like (1) and (2) here are (or will be) discussed more thoroughly in the Numerical Methods appendix.  Given both seem to conclude that all models are consistent, and thus that changing these parameters would not reduce variability, maybe we can refer there instead of re-writing?}
+%\monika{11Dec:addressed below}
+%==============================================================================
+% 1. GRMHD resolution.
+
+% discussion of varying resolution [Ben to spelunk to find a 448 down set of images]
+
+% Discussion of high resolution HAMR model.
+
+% mapping between 230 GHz variability and accretion rate variability
+
+%\monika{11Dec:addressed in B1}
+
+%==============================================================================
+%2. Image resolution. 
+
+%\moinka{11Dec:addressed in B1}
+
+%==============================================================================
+%3. Model duration is not sufficiently long.
+
+%KORAL model analysis.
+
+%==============================================================================
+\monika{are we planing to leave this out? 4. $\sigma_{cut}$ is overproducing variability.}
+
+%==============================================================================
+\monika{this one is also missing: 5. Initial conditions are not a good model.
+Comparison of Monika model initial conditions}
+
+%==============================================================================
+% 6. Cooling filters the light curve. [Ben]
+% \monika{11Dec:moved at the end: current subsection C.5}
+%==============================================================================
+%7. Electron distribution function model is inadequate.
+
+%a.  Discussion of models with varying electron heating models.  Discussion of Jason's eheating models.   Forward reference to Diaz et al.  [Vedant]
+
+%b. Discussion of models with $\Rl = 10$. [Vedant]
+% \monika{11Dec:in C2}
+
+
+\subsection{Simulations Duration}\label{app:narayan}
+
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{./figures/Koral_vs_IL_MI.png}
@@ -10,80 +57,6 @@
 \end{figure}  
 % Resolution is a much easier sell, we're well converged. Could cite e.g. Gelles+ though that's M87
 
-
-\note{David, Vedant to provide first draft}
-
-The discussion section lists several possible causes for the apparently high variability of the models in comparison to the data.
-
-Here we discuss and dismiss some of these possibilities.
-
-\bp{Seems like (1) and (2) here are (or will be) discussed more thoroughly in the Numerical Methods appendix.  Given both seem to conclude that all models are consistent, and thus that changing these parameters would not reduce variability, maybe we can refer there instead of re-writing?}
-%==============================================================================
-1. GRMHD resolution.
-
-discussion of varying resolution [Ben to spelunk to find a 448 down set of images]
-
-Discussion of high resolution HAMR model.
-
-mapping between 230 GHz variability and accretion rate variability
-
-%==============================================================================
-2. Image resolution. 
-
-%==============================================================================
-3. Model duration is not sufficiently long.
-
-KORAL model analysis.
-
-%==============================================================================
-4. $\sigma_{cut}$ is overproducing variability.
-
-%==============================================================================
-5. Initial conditions are not a good model.
-
-Comparison of Monika model initial conditions
-
-%==============================================================================
-6. Cooling filters the light curve. [Ben]
-
-A final possible source of excess variability in the static imaging method comes from an overestimate of electron temperatures in areas where cooling of the electrons may be important.  We can estimate the possible effects of this change by imposing a limit on electron temperatures based on the local dynamical time, reflecting the assumption that higher-temperature electrons would cool before crossing the event horizon.
-
-This limit comes from comparing two timescales: first, the synchrotron cooling rate at high temperature,
-
-\begin{align}
-    \tau_\mathrm{cool} \approx \frac{3 m_e^3 c^5}{16 B^2 e^4 \Theta_e}
-\end{align}
-
-dependent on the electron temperature $\Theta_e$, expressed in units of the rest mass energy, and the local field strength $B$ in gauss.  This is compared to the dynamical time
-
-\begin{align}
-    \tau_\mathrm{dyn} \approx \left( r \sin{\theta} \right) ^{3/2} \frac{G M_\mathrm{BH}}{c^3}
-\end{align}
-
-A set of images was produced which put a ceiling on the electron temperature $\Theta_e$, by requiring that the $\tau_\mathrm{cool} > N \cdot \tau_\mathrm{dyn}$ -- that is, assuming that electrons likely to cool on timescales shorter than $N$ dynamical times will do so.  Lightcurves made using different values of this ceiling are shown in figure
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.45\textwidth]{figures/ctcut_lightcurves.pdf}
-    \caption{Lightcurves when applying a ceiling on electron heating based on an estimate of the local electron cooling time, compared against the local dynamical time.  Different values represent ceilings at different numbers of dynamical times.}
-    \label{fig:my_label}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.45\textwidth]{figures/ctcut_effects.pdf}
-    \caption{Effects of the electron temperature ceiling on lightcurve and variability in sample models.}
-    \label{fig:my_label}
-\end{figure}
-
-%==============================================================================
-%7. Electron distribution function model is inadequate.
-
-%a.  Discussion of models with varying electron heating models.  Discussion of Jason's eheating models.   Forward reference to Diaz et al.  [Vedant]
-
-%b. Discussion of models with $\Rl = 10$. [Vedant]
-
-\subsection{Simulations Duration}\label{app:narayan}
 
 insert short description of David plot with m3 for \koral vs \kharma
 
@@ -102,7 +75,7 @@ Paticle-in-cell (PIC) simulations modelling turbulent dissipation or dissipation
 \label{fig:rlow_comparison}
 \end{figure*}
 
-For systems with sub-Eddington accretion rates, $\Dot{M}\ll\Dot{M}_{Edd}$, such as SgrA$^{*}$ (\vd{ref. to section on accretion rates}), radiative processes can be neglected during fluid evolution (\citealt{2012MNRAS.426.1928D, 10.1093/mnras/stw3116, Ryan_2017}) and the plasma can be considered Coulomb collisionless (\citealt{Mahadevan_1997, 10.1093/mnras/stw3116, Ryan_2017}). However, the uncertainties with electron heating and advection, and a limited understanding of the funnel warrant a discussion of cooler electrons in regions of high magnetization, and in particular, its effect on the $230GHz$ lightcurve variability. We vary $\Rl$ for a select set of the best bet Illinois/Thermal models and plot the distribution of the 3 hour modulation index $M_{3}$ in Figure \ref{fig:mi_rlow}.
+For systems with sub-Eddington accretion rates, $\Dot{M}\ll\Dot{M}_{Edd}$, such as SgrA$^{*}$, radiative processes can be neglected during fluid evolution (\citealt{2012MNRAS.426.1928D, 10.1093/mnras/stw3116, Ryan_2017}) and the plasma can be considered Coulomb collisionless (\citealt{Mahadevan_1997, 10.1093/mnras/stw3116, Ryan_2017}). However, the uncertainties with electron heating and advection, and a limited understanding of the funnel warrant a discussion of cooler electrons in regions of high magnetization, and in particular, its effect on the $230GHz$ lightcurve variability. We vary $\Rl$ for a select set of the best bet Illinois/Thermal models and plot the distribution of the 3 hour modulation index $M_{3}$ in Figure \ref{fig:mi_rlow}.
 
 \begin{figure*}
 \centering
@@ -114,10 +87,11 @@ For systems with sub-Eddington accretion rates, $\Dot{M}\ll\Dot{M}_{Edd}$, such 
 Although the minimum value of the distribution decreases when $\Rl$ is increased, there is no clear trend for the mean of the distribution. In addition, the average $M_{3}$ still does not match observational values.
 
 %==============================================================================
-8. The flow is actually made of helium. [George]
+%8. The flow is actually made of helium. [George]
 
-brief discussion, forward reference to Wong+.
+%brief discussion, forward reference to Wong+.
 
+% now C4
 
 
 
@@ -126,7 +100,7 @@ brief discussion, forward reference to Wong+.
 
 \subsection{Effects of self-consistent electron heating models}
 
-The thermal models considered in Section~\ref{sec:models} assign a local electron temperature as a post-processing step based on local magnetic field strength, parameterized by plasma $\beta$ (Equation \ref{eq:rhigh_prescription} and Equation \vd{ref. critical-$\beta$ equation}).
+The thermal models considered in Section~\ref{sec:models} assign a local electron temperature as a post-processing step based on local magnetic field strength, parameterized by plasma $\beta$ (Equation \ref{eq:rhigh_prescription}).
 
 \citealt{10.1093/mnras/stv2084} provided a formulation to model electron thermodynamics during the fluid evolution. Numerical dissipation at grid scale sources entropy generation and is used to heat the electrons based on a microphysical, sub-grid heating prescription. Local fluid and electromagnetic variables are used to compute the electron entropy which along with the ideal gas equation of state, can be converted into a temperature ($\Theta_{e}$). This approach allows computing the electron temperature at each timestep of the simulation, and not during post-processing, as it is done in the $\Rh$ and Critical-$\beta$ prescriptions.
 
@@ -141,3 +115,36 @@ We expect the ions and electrons in in hot accretion flows to be thermally decou
 The adiabatic index of the fluid assumes a value between $\Gamma_{e}$ and $\Gamma_{i}$ dictated by the thermodynamics of the ions and electrons (cf. Figure 4 in \citealt{10.1093/mnras/stw3116}). Since we do not model electron thermodynamics and ignore radiative effects during our fluid simulations, we consider a constant value $\Gamma_{ad}$, and set it to 4/3 for the \textit{standard} set of simulations, ie. $\Gamma_{ad}=\Gamma_{e}$. While this may be the case in the funnel, where the electrons are the hottest and highly relativistic; the fluid adiabatic index value away from the poles can be higher than the relativistic value.
 
 We look at the interplay between fluid adiabatic index and lightcurve variability by evaluating $M_{3}$ for thermal, GRMHD models with a higher fluid adiabatic index. This includes MAD models with $\Gamma_{ad}=13/9$ (see Section~\ref{app:narayan} and  \citealt{2021arXiv210812380N}) and SANE models with $\Gamma_{ad}=5/3$. The models exhibit lightcurve variability similar to the \textit{standard} library and have an average $M_{3}$ that is greater than the value obtained from the ALMA lightcurve. \kc{maybe discuss hamr thermal models here too}
+
+\subsection{Accretion of helium plasma}\label{app:helium}
+
+\monika{one sentence and short reference to forcoming paper}
+
+\subsection{Radiative cooling}\label{app:cooling}
+
+A final possible source of excess variability comes from an overestimate of electron temperatures in areas where radiative cooling of the electrons may become important. We can estimate the possible effects of this change by imposing a limit on electron temperatures based on the local dynamical time, reflecting the assumption that higher-temperature electrons would cool before crossing the event horizon.
+
+This limit comes from comparing two timescales: first, the synchrotron cooling rate at high temperature,
+\begin{align}
+    \tau_\mathrm{cool} \approx \frac{3 m_e^3 c^5}{16 B^2 e^4 \Theta_e}
+\end{align}
+dependent on the electron temperature $\Theta_e$, expressed in units of the rest mass energy, and the local field strength $B$ in Gauss.  This is compared to the dynamical time
+\begin{align}
+    \tau_\mathrm{dyn} \approx \left( r \sin{\theta} \right) ^{3/2} \frac{G M_\mathrm{BH}}{c^3}.
+\end{align}
+
+A set of images was produced which put a ceiling on the electron temperature $\Theta_e$, by requiring that the $\tau_\mathrm{cool} > N \cdot \tau_\mathrm{dyn}$ -- that is, assuming that electrons likely to cool on timescales shorter than $N$ dynamical times will do so. Lightcurves made using different values of this ceiling are shown in figure
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/ctcut_lightcurves.pdf}
+    \caption{Lightcurves when applying a ceiling on electron heating based on an estimate of the local electron cooling time, compared against the local dynamical time. Different values represent ceilings at different numbers of dynamical times.}
+    \label{fig:my_label}
+\end{figure*}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/ctcut_effects.pdf}
+    \caption{Effects of the electron temperature ceiling on lightcurve and variability in sample models.}
+    \label{fig:my_label}
+\end{figure*}

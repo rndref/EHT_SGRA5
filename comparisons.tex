@@ -436,7 +436,9 @@ In the MAD case, independent of the choice of $\Rh$ the emission is mostly produ
 %..............................................................................
 \subsubsubsection{86\,GHz flux}
 
-The GMVA+ALMA observations at 86\,GHz \cite{2021ApJ...915...99I} \monika{we can skip reference here, there is only one 86 GHz we talk about in this paper} probe a larger field of view than the 230\,GHz EHT observations, so we increased the field of view for the 86\,GHz to 800\,$\rm{\mu as}$ during the radiative transfer calculations. Again the non-thermal particles are mainly located in the jet sheath and thus the increased field of view ensures that no extended flux is missing during the comparison with the 86\,GHz observations.
+The 86\,GHz GMVA+ALMA observations
+%GMVA+ALMA observations at 86\,GHz \cite{2021ApJ...915...99I} \monika{we can skip reference here, there is only one 86 GHz we talk about in this paper}
+probe a larger field of view than the 230\,GHz EHT observations, so we increased the field of view for the 86\,GHz to 800\,$\rm{\mu as}$ during the radiative transfer calculations. Again the non-thermal particles are mainly located in the jet sheath and thus the increased field of view ensures that no extended flux is missing during the comparison with the 86\,GHz observations.
 
 The 86\,GHz for both SANE and MAD models flux is not affected by the addition of non-thermal particles. In case of the SANE models the edges of the 86\,GHz flux distribution are slightly shifted in the case of $\Rh>40$. However, including non-thermal particles even with the highest base efficiency $\varepsilon=0.2$ does not change the scoring of a model, i.e., a thermal-only model which full-fills the 86\,GHz constrain is still accepted if non-thermal particles are included. This behaviour can be explained by the fact that the bulk of the emission in both accretion models is generated in with a few gravitational radii. Since the non-thermal particles are mainly located in the jet sheath and thei ratio between non-thermal to thermal particles is at most 20\% the contribution of the non-thermal particles to the 86\,GHz flux can be neglected.
 
@@ -452,7 +454,7 @@ As expected, the addition of non-thermal particles via the kappa electron distri
 \begin{figure*}
   \centering
   \includegraphics[width=0.8\textwidth]{./figures/SANE_NIR_standard.pdf}
-  \caption{\monika{Impact of non-thermal electrons on NIR flux constraint.} NIR \sout{constraints}  \monika{fluxes are shown} for SANE accretion models \sout{for}\monika{with} thermal and non-thermal \sout{electron distribution function}\monika{eDF} with $\kappa=3.4$ \sout{fixed} and $\epsilon\left(\sigma,\beta,\varepsilon\right)$. The red violin plots correspond to a thermal eDF, blue, orange and green indicate kappa eDF with $\varepsilon=$0.05,0.1 and 0.2.\monika{add what is the horizontal dashed line? is that measurement?}}
+  \caption{Impact of non-thermal electrons on NIR flux constraint. NIR flux distributions are shown for SANE accretion models with thermal and non-thermal eDF with fixed $\kappa=3.4$ and $\epsilon\left(\sigma,\beta,\varepsilon\right)$ defined by Equation~\ref{eq:efficiencybetasigma}. The red violin plots correspond to a thermal eDF, blue, orange and green indicate kappa eDF with $\varepsilon=$0.05,0.1 and 0.2. The horizontal dashed line is the observational constraint.}
   \label{fig:NIR_kappaepsilon}
 \end{figure*}
 
@@ -549,7 +551,7 @@ The accretion models of \cite{2020ApJ...896L...6R, 2020MNRAS.492.3272R, 2018MNRA
 
 We consider two versions of the model: one in which the stellar wind magnetization is low ($\beta = 10^6$) and another and a second in which the magnetization is higher ($\beta = 10^2$). $\Rh$ is adjusted until each model has the observed mean flux, with $\Rh = 13$ ($\beta = 10^6$) and $\Rh = 28$ ($\beta = 10^2$).
 
-While both models pass many of the tests, they both fail the m-ring width test, producing a width that is too small.  In addition both fail the 86GHz flux test: the 86GHz flux is too large. Full results are given in Appendix~\ref{app:tables}, Table \ref{tab:resslerPF}.
+While both models pass many of the tests, they both fail the m-ring width test, producing a width that is too small.  In addition both fail the 86GHz flux test: the 86GHz flux is too large. All scoring results for this model are given in Appendix~\ref{app:tables}, Table \ref{tab:resslerPF}.
 
 Interestingly both non-EHT and EHT constraints have the power to test the wind-fed model.  We cannot draw a broad conclusion about the viability of wind-fed models, however, as the two models only consider a single spin and a single eDF model.
 
@@ -559,7 +561,7 @@ Interestingly both non-EHT and EHT constraints have the power to test the wind-f
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/bestbet.pdf}
-  \caption{Best bet models.  Each column corresponds to one best bet model; top row shows 86~GHz image, middle row 230~GHz and the bottom row shows the corresponding multiwavelength broadband SED.\monika{can we have here the golden SANE model with high spin?}} \label{fig:bestbet}
+  \caption{Best bet models.  Each column corresponds to one best bet model; top row shows 86~GHz image, middle row 230~GHz and the bottom row shows the corresponding multiwavelength broadband SED.} \label{fig:bestbet}
 \end{figure*}
 
 We now consider combined constraints, excluding variability, under the hypothesis that (1) there is a missing physical ingredient in the models that would lower variability, but (2) that missing ingredient would not vitiate the model comparison process entirely.  Models are eliminated if they fail any one constraint.
