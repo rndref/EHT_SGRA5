@@ -118,9 +118,11 @@ As discussed in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \c
 \end{deluxetable*}
 
 The one-zone model is too simple for comparison with the rich set of observations available for \sgra.
-Going beyond the one zone model, analytic spherical accretion models \citep[e.g.][]{2019ApJ...885L..33N, 2021arXiv211102178B} incorporate relativistic  gravity and analytic disk-like (RIAF) accretion models in the Kerr metric incorporate rotation and departures from spherical symmetry \citep[e.g.][]{2009ApJ...697...45B, 2009ApJ...706..960H,2018ApJ...863..148P} and can be used for parameter surveys (see Section~\ref{sec:future}).
+Going beyond the one zone model, analytic spherical accretion models \citep[e.g.][]{2019ApJ...885L..33N, 2021arXiv211102178B} incorporate relativistic  gravity and analytic disk-like (RIAF) accretion models in the Kerr metric incorporate rotation and departures from spherical symmetry \citep[e.g.][]{2009ApJ...697...45B, 2009ApJ...706..960H,2018ApJ...863..148P} can be used for parameter surveys (see Section~\ref{sec:future}).
+% I think the previous sentence says both analysis spherical and disk can be used for blab blab blab...  Minor edit to retain that meaning.
 They do not, however, self-consistently capture fluctuations in the flow---that requires either a statistical model \citep{2021ApJ...906...39L} or a time-dependent numerical integration.
-Here we use numerical simulation and adopt an ideal GRMHD model for the flow \footnote{Limitations of the ideal GRMHD model are discussed in Section~\ref{sec:limits}.}, use simple paramterized models to assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
+\ckc{May be also say they don't self-consistently capture turbulence for transport.}
+Here we use numerical simulation and adopt an ideal GRMHD model for the flow \footnote{Limitations of the ideal GRMHD model are discussed in Section~\ref{sec:limits}.}, use simple parameterized models to assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce synthetic observations.
 
 %------------------------------------------------------------------------------
 \subsubsection{Plasma Flow Model}
@@ -258,32 +260,33 @@ Once the eDF is specified, the radiative transfer coefficients (emissivities, ab
 With the exception of the special stellar wind-fed simulations, the GRMHD models considered in this work contain a characteristic speed, $c$, but are otherwise scale-free; they set $GM = c = 1$. 
 Physical scales are assigned during the radiative transfer step.
 The black hole mass $\mbh$ fixes the length unit $\rg$ and time unit $\tg$.
-Because the GRMHD models are not self-gravitating, one is free to set a density scale, or equivalently the accretion rate $\dot{M}$ or plasma mass unit $\Munit$ \citep[see, e.g.,][for a full discussion]{Wong_2022}.   
+Because the GRMHD models are not self-gravitating, one is free to set a density scale, or equivalently the accretion rate $\dot{M}$ or plasma mass scale $\Munit$ \citep[see, e.g.,][for a full discussion]{Wong_2022}.   
 
-% cfg: resolved this by reference to the PATOKA paper.  We really don't need all this anywhere else in the paper.
+% cfg, 11 dec 21: resolved this by reference to the PATOKA paper.  We really don't need all this anywhere else in the paper.
 %The density in cgs units $\rho_\mathrm{cgs}$ is obtained from the density in simulation units $\rho_\mathrm{sim}$ via
 %\begin{align}
-  \rho_\mathrm{cgs} = \rho_\mathrm{sim} \Munit_\mathrm{cgs} {(\rg)}_\mathrm{cgs}^{-3}.
+%  \rho_\mathrm{cgs} = \rho_\mathrm{sim} \Munit_\mathrm{cgs} {(\rg)}_\mathrm{cgs}^{-3}.
 %\end{align}
 %Similarly, the energy density and magnetic fields in cgs units are set by:
 %\begin{align}
-  u_\mathrm{cgs} &= u_\mathrm{sim} \Munit_\mathrm{cgs} {(\rg)}_\mathrm{cgs}^{-3} c_\mathrm{cgs}^2\\
-  B_\mathrm{cgs} &= (4\pi)^{1/2} B_\mathrm{sim} \Munit_\mathrm{cgs}^{1/2} (\rg)_\mathrm{cgs}^{-3/2} c_\mathrm{cgs};
+%  u_\mathrm{cgs} &= u_\mathrm{sim} \Munit_\mathrm{cgs} {(\rg)}_\mathrm{cgs}^{-3} c_\mathrm{cgs}^2\\
+%  B_\mathrm{cgs} &= (4\pi)^{1/2} B_\mathrm{sim} \Munit_\mathrm{cgs}^{1/2} (\rg)_\mathrm{cgs}^{-3/2} c_\mathrm{cgs};
 %\end{align}
 %the factor of $(4\pi)^{1/2}$ comes from converting Heaviside-Lorentz units (used in GRMHD simulations for efficiency) to cgs.
 %\ckc{I found this notation confusion.  For example, $c$ is dimensional, although it's not necessary in cgs.  So I'm not sure what $c_\mathrm{cgs}$ really means here.  Is the dimensionless value of $c$ in cgs?  I'm probably too picky...}\monika{we just want to stress that c should be in cm/s}
 
-The plasma mass scale parameter $\Munit$ controls the optical depth and thus the source brightness.  We employ an iterative process to solve for $\Munit$ so that the time-averaged 230\GHz flux densities of the models are within a few percent of the $2.4\,\mathrm{Jy}$ mean observ the 2017 campaign (see next section).
-Note that the flux is a nonlinear function of $\Munit$ because the accretion flow transits between the optical thick and thin regimes around 230\GHz.
+The plasma mass scale parameter $\Munit$ controls the optical depth and thus the source brightness.  We adjust $\Munit$ iteratively until the time-averaged 230\GHz flux densities of the models are within a few percent of the $2.4\,\mathrm{Jy}$ mean observed during the 2017 campaign (see next section).  The reader should keep in mind that the model trends discussed in Section~\ref{sec:trends} assume constant time-averaged millimeter flux density.   
+
+%Notice that the flux density is a nonlinear function of $\Munit$ because the accretion flow transits between the optical thick and thin regimes around 230\GHz.
 This makes the interpretations of the model trends in Section~\ref{sec:trends} less obvious.
 
 %..............................................................................
 \subsubsubsection{Radiative Transfer Calculation}
 
 Given an eDF, density scale $\Munit$, and radiative transfer coefficients, the emergent radiation is obtained by integrating the radiative transfer equation.
-We use two classes of numerical methods: ray tracing to generate synthetic images, and a Monte Carlo scheme to generate spectral energy distributions (SEDs).
+We use two classes of numerical methods: ray tracing to generate synthetic images, and Monte Carlo to generate spectral energy distributions (SEDs).
 Further detail on numerical methods is given Appendix~\ref{app:radtrans}.
-Comparisons of numerical methods \citep{2020ApJ...897..148G, Prather_et_al_2022} show that differences between numerical schemes do not contribute significantly to the error budget.
+Comparisons of numerical methods \citep{2020ApJ...897..148G, Prather_et_al_2022} show that differences between radiative transfer schemes do not contribute significantly to the error budget.
 \ckc{Ben, please fill in paper title etc for the polarized radiative transfer comparison paper.}
 
 The models are imaged at 86\GHz, 230\GHz\footnote{The mean frequency for  EHT observations is more close to 228\GHz.} and 2.2\um (near infrared, NIR hereafter).
