@@ -101,27 +101,29 @@ We reject models with a compliance fraction $< 0.01$.
 %------------------------------------------------------------------------------
 \subsubsection{230\GHz VLBI Null Location}
 
-Our first constraint provides a simple morphological check on the visibility amplitudes.
+Our second constraint provides a simple morphological check on the visibility amplitudes.
 We ask two questions of each model snapshot: is the first minimum in the visibilities in about the right place,
 and are the long-baseline visibility amplitudes comparable to the data?
-For comparison, we use data from \aprilvii, which has the best $u$-$v$ coverage near minima in the visibility amplitudes.
+For comparison, we use data from \aprilvii, which has the best $uv$ coverage near minima in the visibility amplitudes.
 
 The minima locations and long-baseline amplitudes are sensitive to the source structure.
 For example if the source is a simple, circularly symmetric ring of finite width then the location of the first minimum depends only on the ring diameter, while the visibility amplitude on long baselines depends mainly on ring width.
 GRMHD models are more complicated, with significant structural fluctuations.
-The minima locations and depths, and long-baseline amplitudes, are expected to fluctuate (e.g., \citealt{2018ApJ...856..163M} and \citetalias{M87PaperV}).
+The minima locations and depths, and long-baseline amplitudes, are expected to fluctuate (e.g., \citealt{2018ApJ...856..163M}, \citetalias{M87PaperV}.
 
-For the ``null location'', the first visibility minimum in both the N-S and E-W directions occurs between 2.5--3.5\,G$\lambda$ in the data.
+For the ``null location'', the first visibility minimum in both the N-S and E-W directions occurs between 2.5--3.5\,$\mathrm{G}\lambda$ in the data \citetalias{PaperII}.
 We do not consider the depth of the null in this simple check.
 
 \cfg{best references for scattering?}
-For the ``long baseline'' interval between 6--8\,G$\lambda$, the visibility amplitude has $\lesssim 4\%$ of the zero-baseline flux, always.
+\ckc{add Dimitrios and Michael's papers}
+For the ``long baseline'' interval between 6--8\,$\mathrm{G}\lambda$, the visibility amplitude has $\lesssim 4\%$ of the zero-baseline flux.
 One complication when comparing models to data on long baselines is the effect of interstellar scattering.
-Diffractive scattering effectively convolves the image with a smooth kernel and can reduce the amplitudes to about $\sim 50\%$ of their unscattered values in the 6--8\,G$\lambda$ range (ref!!).
-Refractive scattering, on the other hand, introduces noise at all baselines of order 0.5--3\%, depending on the particular characteristics of the scattering screen (ref).  To account for these effects, we classify a model snapshot with $|V|$ in this range that is $< 5\%$ of the zero baseline flux as compliant.
+Diffractive scattering effectively convolves the image with a smooth kernel and can reduce the amplitudes to about $\sim 50\%$ of their unscattered values in the 6--8\,$\mathrm{G}\lambda$ range;
+refractive scattering, on the other hand, introduces noise at all baselines of order 0.5--3\%, depending on the particular characteristics of the scattering screen \citep{2018arXiv180501242P, 2018ApJ...865..104J}.
+To account for these effects, we classify a model snapshot with $|V|$ in this range that is $< 5\%$ of the zero baseline flux as compliant.
 
-To apply this constraint, we compute the visibility amplitudes $V$ of each model snapshot along position angles $0^\degree$, $45^\degree$, $90^\degree$, $135^\degree$.  We find the first minimum numerically and compute the median visibility amplitude between 6 and 8\,G$\lambda$.
-We classify a snapshot as compliant if \emph{i}) for at least one position angle the first minimum falls between 2.5 and 3.5\,G$\lambda$ and \emph{ii}) at no position angle does the median visibility amplitude exceed $(0.04 / 0.5) V_0$.
+To apply this constraint, we compute the visibility amplitudes $V$ of each model snapshot along position angles $0^\degree$, $45^\degree$, $90^\degree$, $135^\degree$.  We find the first minimum numerically and compute the median visibility amplitude between 6 and 8\,$\mathrm{G}\lambda$.
+We classify a snapshot as compliant if \emph{i}) for at least one position angle the first minimum falls between 2.5 and 3.5\,$\mathrm{G}\lambda$ and \emph{ii}) at no position angle does the median visibility amplitude exceed $4\% / 50\%$ of the zero-baseline flux.
 
 We evaluate the fraction of snapshots from each model that are compliant using the criteria described above.  We reject models with compliance fraction $< 1\%$.
 
@@ -275,7 +277,7 @@ We have chosen to compare the models to light curve observations of \sgra from 2
 
 We use $T = 3$ hours because it is comparable to the correlation time for $F_{230}$ in most of the models, and because it is similar to the characteristic timescales measured in damped random walk fits to the ALMA light curve \citep[see Table 10 of][]{Wielgus2022}.  Although the correlation times tend to be slightly longer than 3 hours, that is the longest timescale for which we can consistently estimate the mean and variance of the distribution of $\mi{3}$ from the models (accurate estimation for larger $T$ would require longer GRMHD integration times).  In a damped random walk process one can show that $\mi{3}$ is minimally correlated over consecutive 3 hour intervals \citep{Lee_2022}.
 
-For each light curve, we take 3 hour segments equally spaced away from the endpoints and each other, and calculate the $\mi{3}$ on each segment. This gives us a set of 42 samples of the $\mi{3}$ for the historical dataset. We note that the $\mi{3}$ measured from the EHT 2017 observations on April 5-11 are consistent with being drawn from this distribution, although April 7 has one of the quietest segments on record, while April 11 has one of the most variable. 
+For each light curve, we take 3 hour segments equally spaced away from the endpoints and each other, and calculate the $\mi{3}$ on each segment. This gives us a set of 42 samples of the $\mi{3}$ for the historical dataset. We note that the $\mi{3}$ measured from the EHT 2017 observations on April 5-11 are consistent with being drawn from this distribution, although April 7 has one of the quietest segments on record, while April 11 has one of the most variable.
 
 % old version, revised out following D. Lee 11-dec cfg
 %We have chosen to compare the models to the 7 April 2017 ALMA light using the 3 hour {\em modulation index} $\mi{3}$, where $\mi{T} \equiv \sigma_T/\mu_T$, $\sigma_T$ is the standard deviation measured over some interval $T$, and $\mu_T$ is the mean measured over the same interval.  We use $\mi{T}$ following \citet{2015ApJ...812..103C} because it is easy to describe, easy to compute, commonly used in the literature (in the X-ray astronomy literature it is ``rms \%''), and closely related to the structure function, since the expectation value for $\sigma_T^2$ is given by an integral over the structure function (see Lee et al. 2022).
