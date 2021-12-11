@@ -106,7 +106,9 @@ As discussed in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \c
 %  \citet{Wong_2022, Dhruv_2022} \\
   \begin{tabular}{@{}c@{}} standard / \\ \bhac \end{tabular}   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $4/3$      & 30,000  & 3333     & [512x192x192]     & This work \\
   \begin{tabular}{@{}c@{}} standard / \\ \hamr \end{tabular}   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $13/9,5/3$ & 35,000  & 1000/200 & [348/240×192×192] & This work \\
-  \begin{tabular}{@{}c@{}} standard / \\ \koral \end{tabular}  & \!\!\!\!\!\!\!\!\!0,$\pm0.3$,$\pm0.5$,$\pm0.7$,$\pm0.9$\!\!\!\!\!\!\!\!\! & MAD          & $13/9$     & 101,000 & 100,000  & [288x192x144]     & \citet{2021arXiv210812380N} \\
+  \begin{tabular}{@{}c@{}} standard / \\ \koral \end{tabular}  & \!\!\!\!\!\!\!\!\!
+  \begin{tabular}{@{}c@{}c@{}}   0,$\pm0.3$,$\pm0.5$\\$\pm0.7$,$\pm0.9$ \end{tabular}
+  \!\!\!\!\!\!\!\!\! & MAD          & $13/9$     & 101,000 & 100,000  & [288x192x144]     & \citet{2021arXiv210812380N} \\
   \begin{tabular}{@{}c@{}} tilted / \\ \hamr \end{tabular}     & $15/16$     & IN-SANE      & 5/3        & 105,000 & 100,000  & [448x144x240]     & \begin{tabular}{@{}c@{}} \citet{Liska2018} \\ \citet{Chatterjee2020}\end{tabular} \\
   \begin{tabular}{@{}c@{}} wind-fed / \\ \athenapp \end{tabular} & 0           & MAD$\times2$ & 5/3        & 20,000  & 2,400    & [356x128x128]     & \citet{2020ApJ...896L...6R}
   \enddata
@@ -252,6 +254,7 @@ Evidently, any eDF assignment scheme is an approximation since the eDF depends i
 
 Once the eDF is specified, the radiative transfer coefficients (emissivities, absorptivities, and rotativities) can be readily calculated; see \cite{2021ApJ...921...17M} for a recent summary.
 
+% cfg 11 dec: decided this is not essential.
 %\kc{Perhaps add a plot of the different eDFs to display the variety of models considered.}
 
 %..............................................................................
@@ -275,10 +278,10 @@ Because the GRMHD models are not self-gravitating, one is free to set a density 
 %the factor of $(4\pi)^{1/2}$ comes from converting Heaviside-Lorentz units (used in GRMHD simulations for efficiency) to cgs.
 %\ckc{I found this notation confusion.  For example, $c$ is dimensional, although it's not necessary in cgs.  So I'm not sure what $c_\mathrm{cgs}$ really means here.  Is the dimensionless value of $c$ in cgs?  I'm probably too picky...}\monika{we just want to stress that c should be in cm/s}
 
-The plasma mass scale parameter $\Munit$ controls the optical depth and thus the source brightness.  We adjust $\Munit$ iteratively until the time-averaged 230\GHz flux densities of the models are within a few percent of the $2.4\,\mathrm{Jy}$ mean observed during the 2017 campaign (see next section).  The reader should keep in mind that the model trends discussed in Section~\ref{sec:trends} assume constant time-averaged millimeter flux density.   
+The plasma mass scale parameter $\Munit$ controls the optical depth and thus the source brightness.  We adjust $\Munit$ iteratively until the time-averaged 230\GHz flux densities of the models are within a few percent of the $2.4\,\mathrm{Jy}$ mean observed during the 2017 campaign (see next section).  The reader should keep in mind that in this work model parameters are always varied at constant time-averaged millimeter flux density.   
 
 %Notice that the flux density is a nonlinear function of $\Munit$ because the accretion flow transits between the optical thick and thin regimes around 230\GHz.
-This makes the interpretations of the model trends in Section~\ref{sec:trends} less obvious.
+%This makes the interpretations of the model trends in Section~\ref{sec:trends} less obvious.
 
 %..............................................................................
 \subsubsubsection{Radiative Transfer Calculation}
@@ -287,15 +290,16 @@ Given an eDF, density scale $\Munit$, and radiative transfer coefficients, the e
 We use two classes of numerical methods: ray tracing to generate synthetic images, and Monte Carlo to generate spectral energy distributions (SEDs).
 Further detail on numerical methods is given Appendix~\ref{app:radtrans}.
 Comparisons of numerical methods \citep{2020ApJ...897..148G, Prather_et_al_2022} show that differences between radiative transfer schemes do not contribute significantly to the error budget.
-\ckc{Ben, please fill in paper title etc for the polarized radiative transfer comparison paper.}
+% cfg 11 dec: done
+%\ckc{Ben, please fill in paper title etc for the polarized radiative transfer comparison paper in refs.bib.}
 
-The models are imaged at 86\GHz, 230\GHz\footnote{The mean frequency for  EHT observations is more close to 228\GHz.} and 2.2\um (near infrared, NIR hereafter).
+The models are imaged at 86\GHz, 230\GHz\footnote{The mean frequency for  EHT observations is closer to 228\GHz.} and 2.2\um (near infrared, herafter NIR).
 Direct imaging includes synchrotron and bremsstrahlung \citep[both ion-electron and electron-electron; see][for a recent review]{2020ApJ...898...50Y}.
 The SED is averaged over a narrow range in inclination and over all azimuthal angles.
 The SED includes synchrotron, bremsstrahlung, \emph{and} Compton scattering.
 NIR emission is usually dominated by synchrotron, but we find that occasionally NIR synchrotron is so weak that Compton scattering overtakes.
 The x-ray can be dominated by bremsstrahlung or Compton scattering, mainly depending on the electron temperature.
-In Figures~\ref{fig:fiducial_86GHz}, \ref{fig:fiducial_230GHz}, and \ref{fig:fiducial_SEDs}, we present a representative set of model images and multiwavelength SEDs from our library.
+In Figures~\ref{fig:fiducial_86GHz}, \ref{fig:fiducial_230GHz}, and \ref{fig:fiducial_SEDs}, we present an illustrative set of model images and multiwavelength SEDs from our library.
 
 \begin{figure*}
   \centering
@@ -308,6 +312,8 @@ In Figures~\ref{fig:fiducial_86GHz}, \ref{fig:fiducial_230GHz}, and \ref{fig:fid
     \ckc{will break this into 3 figures so we can freely pick re representative sets of examples.}\monika{i would like to see an example here of a edge on model}}
   \label{fig:fiducial_imgs}
 \end{figure*}
+
+All radiative transfer models used here set the emissivity to $0$ at $\sigma \equiv B^2/(8\pi\rho c^2) > \sigma_{cut} = 1$.  This is motivated by the notion that the numerical solution is unreliable at $\sigma > \sigma_{cut}$.  In particular numerical diffusion into the low density region (at the ``funnel wall'') makes the density too large, and truncation error in integration of the total energy equation produces large fractional errors in temperature. 
 
 %==============================================================================
 \subsection{Summary of \sgra model library}
