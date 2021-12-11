@@ -299,7 +299,6 @@ The plasma mass scale parameter $\Munit$ controls the optical depth and thus the
 %..............................................................................
 \subsubsubsection{Radiative Transfer Calculation}
 
-
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth,trim=0 12 0 0]{figures/sample_sed.pdf}
@@ -308,9 +307,7 @@ The plasma mass scale parameter $\Munit$ controls the optical depth and thus the
     (\emph{middle})~a thermal MAD, and
     (\emph{right})~a non-thermal variable $\kappa$ MAD.
     Note that these models do not necessary pass any of the constraints.
-    They simply demonstrate the variety of possible SEDs.
-     %\ckc{That blocks the SED itself.  OK will try}
-    }
+    They simply demonstrate the variety of possible SEDs.}
   \label{fig:sample_SEDs}
 \end{figure*}
 
@@ -395,7 +392,8 @@ Wind Accretion & 1 & [13,28]    & 1 & - & - & N/A        & [86,230] & No  & 10  
 %\gw{I didn't write N/A, but as I recall from Sean, the wind models *have* an absolute orientation with respect to Earth because of how their boundary condition is set up, so it wouldn't make sense to vary inclination. Also their bhspin = 0.}\monika{Ah, ok , so there is an inclination but we dont know it. can you find out ? maybe I can also change the Fig 1 accordingly (although that would require some thinking)!}\gw{sorry not sure what you mean by ``there is an inclination''. there is an inclination that we plug into ipole, but that inclination is with respect to the coordinate system, not anything particularly ``physical'' (because the black hole has zero spin). the coordinate system is oriented such that images are computed at inc->180 (inc as defined in the ipole sense)}\monika{ok, this makes no sense since from our point of view the "boundary conditions" for this model are fixed...we should just find best rhigh for our viewing angle..}
 %The cadence of KHARMA=5M, BHAC=10M for thermal and nonthermal variable kappa, 50M for nonthermal variable efficiency models, and HAMR=10M for thermal, nonthermal powerlaw and variable kappa.
 %\gw{Rhigh for the wind accretion models is either 28 or 13, but these are for two separate simulations (so it's not like there's one simulation where Rhigh has been varied); no SED from grmonty-like codes, but there is ``SED''-like information from imaging at different frequencies}\monika{how many 230 ghz frames we have for these two wind models and within what times??}
-}~\label{tab:radiativemodels}
+}
+\label{tab:radiativemodels}
 \end{deluxetable*}
 %\end{rotatetable}
 
