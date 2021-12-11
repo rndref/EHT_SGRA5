@@ -87,15 +87,14 @@ not be able to report an acutal spin measurement.
 % these plots should be shown together because they share rhigh label, so I merged them
 \begin{figure*}
 \centering
-\includegraphics[width=0.95\textwidth,trim=0 1.49cm 0 0,clip]{figures/illinoisv3_average_mdot.png}
-\includegraphics[width=0.95\textwidth,trim=0 0 0 0.7cm,clip]{figures/illinoisv3_average_outflow_power.png}
-\caption{{\it Top panels:} Accretion rates for the aligned, thermal models (\kharma data set) at observer inclination $i=50^{\circ}$. Since $\dot{M}$ is weakly dependent on the observer inclination angle, we plot it for a single $i$. {\it Bottom panels:} Outflow powers measured in the same models for the same observer inclination. The colors and markers are the same in the top and bottom panels.\monika{note: the original plots missing $\dot{M}$ and $P_{out}$ in y-axis label}}
-\label{fig:accretion_illinois_thermal}
+\includegraphics[width=0.95\textwidth]{figures/illinoisv3_average_mdot_pout.png}
+\caption{{\it Top panels:} Accretion rates for the aligned, thermal models (\kharma data set) at observer inclination $i=50^{\circ}$. Since $\dot{M}$ is weakly dependent on the observer inclination angle, we plot it for a single $i$. {\it Bottom panels:} Outflow powers measured in the same models for the same observer inclination. The colors and markers are the same in the top and bottom panels.\monika{note: the original plots missing $\dot{M}$ and $P_{out}$ in y-axis label}}\vd{Done}
+\label{fig:accretion_outflow_power_illinois_thermal}
 \end{figure*}
 % \begin{figure*}
 % \centering
 % \includegraphics[width=0.95\textwidth]{figures/illinoisv3_average_outflow_power.png}
-% \caption{Outflow powers measured in \kharma thermal moels at an observer inclination $i=50^{\circ}$. The colors and markers are the same as \ref{fig:accretion_illinois_thermal}.}
+% \caption{Outflow powers measured in \kharma thermal models at an observer inclination $i=50^{\circ}$. The colors and markers are the same as \ref{fig:accretion_illinois_thermal}.}
 % \label{fig:outflow_illinois_thermal}
 % \end{figure*}
 
@@ -107,7 +106,7 @@ We define the time-averaged accretion rate,
 \end{equation}
 at the event horizon; the quantity in the parenthesis is the inward rest-mass energy flux.
 
-In Figure~\ref{fig:accretion_illinois_thermal} (top panels) we show the time-averaged $\dot{M}$ (in units of solar masses per year) for the \kharma thermal models. We find the following. (i) The MAD models accrete on average, at $10^{-9}-10^{-8} M_{\odot}$yr$^{-1}$ while the SANE models have a broader range, $10^{-9}-10^{-6} M_{\odot}$yr$^{-1}$. (ii) $\dot{M}$ increases with increasing $\Rh$. Since the electron temperature inversely varies with $\Rh$, a greater $\Rh$ implies cooler electrons so to maintain an average flux density of 2.4Jy at 1.3 mm, the corresponding $\mathcal{M}$ increases. (iii) The SANE models exhibit a more pronounced change in $\dot{M}$ with changes in $\Rh$ as compared to the MAD models. The emission in the SANE models is predominantly from regions with large plasma $\beta$, where the electron temperature is regulated by $\Rh$; MAD models produce a significant fraction of the emission in regions with $\beta\sim 1$, where $\Rh$ does not notably influence electron temperature (cf. Figure~4 in \citetalias{M87PaperV}). (iv) The retrograde, SANE, $\Rh=40$ and $160$ models produce the largest accretion rates, $\dot{M}\sim 10^{-6}M_{\odot}$yr$^{-1}$. However, these models are ruled out due to overproduction of x-ray emission. (v) The thermal models with the critical-$\beta$ electron temperature assignment scheme predict accretion rates that lie between the $R_{high}=10$ and 40 values for the chosen set of parameters ($f=0.5$, $\beta_{crit}=1$).
+In Figure~\ref{fig:accretion_outflow_power_illinois_thermal} (top panels) we show the time-averaged $\dot{M}$ (in units of solar masses per year) for the \kharma thermal models. We find the following. (i) The MAD models accrete on average, at $10^{-9}-10^{-8} M_{\odot}$yr$^{-1}$ while the SANE models have a broader range, $10^{-9}-10^{-6} M_{\odot}$yr$^{-1}$. (ii) $\dot{M}$ increases with increasing $\Rh$. Since the electron temperature inversely varies with $\Rh$, a greater $\Rh$ implies cooler electrons so to maintain an average flux density of 2.4Jy at 1.3 mm, the corresponding $\mathcal{M}$ increases. (iii) The SANE models exhibit a more pronounced change in $\dot{M}$ with changes in $\Rh$ as compared to the MAD models. The emission in the SANE models is predominantly from regions with large plasma $\beta$, where the electron temperature is regulated by $\Rh$; MAD models produce a significant fraction of the emission in regions with $\beta\sim 1$, where $\Rh$ does not notably influence electron temperature (cf. Figure~4 in \citetalias{M87PaperV}). (iv) The retrograde, SANE, $\Rh=40$ and $160$ models produce the largest accretion rates, $\dot{M}\sim 10^{-6}M_{\odot}$yr$^{-1}$. However, these models are ruled out due to overproduction of x-ray emission. (v) The thermal models with the critical-$\beta$ electron temperature assignment scheme predict accretion rates that lie between the $R_{high}=10$ and 40 values for the chosen set of parameters ($f=0.5$, $\beta_{crit}=1$).
 \color{red}{\bf please add if bhac confirms this general trends. add figure but it would be best to plot this all together using maybe more transparent lines for bhac sims in the existing figure.}
 \color{black}
 
@@ -126,7 +125,7 @@ In the past, several authors have defined the jet outflow differently: \citet{re
 where $poles$ means regions where $\theta<1$ or $\theta>\pi-1$. The integral is evaluated at $r=100GM/c^{2}$ and we consider only those zones where there is outflow, ie. the quantity in the parentheses is positive. $P_{out}$ is a broad definition for energy outflow at the polar caps that includes both the narrow, relativistic jet and the nonrelativistic winds close to the jet-disk boundary.
 
 %In Figure~\ref{fig:outflow_illinois_thermal} 
-In Figure~\ref{fig:accretion_illinois_thermal}
+In Figure~\ref{fig:accretion_outflow_power_illinois_thermal}
 (bottom panels) we show
 the time-averaged, outflow power in the \kharma thermal models. As expected, the $P_{out}$ increases with increasing magnitude of black hole spin $|a_{*}|$. SANE simulations have $P_{out}$ in range $\sim 10^{35}-10^{38} \ergsps$ and $P_{out}$ is sensitive to $\rhigh$ parameter (models with larger $\rhigh$ have higher accretion rates and therefore stronger magnetic fields). For MAD models $P_{out}$ is, on average, even larger and less sensitive to $\rhigh$ and is in range of $P_{out} \sim 10^{37}$--$10^{39} \ergsps$.
 \color{red}{\bf please add results from bhac for comparison if they are available.}\color{black}
