@@ -2,6 +2,7 @@
 
 \monika{first revision done, please read and revise further}
 
+%==============================================================================
 \subsection{Consistency of Radiative Transfer Simulations}\label{app:radtrans}
 
 \begin{figure*}
@@ -28,18 +29,6 @@ The image field of view (FOV) is another potential concern in evaluating models 
   \caption{Flux produced by an image vs the camera field of view. The nominal FOV of 200 $\mu\mathrm{as}$ is enough to capture 99\% of emission from this model.\monika{add what are the two different lines: what does the color codes}}
   \label{fig:radtrans_fov_study}
 \end{figure}
-
-%\subsubsection{Consistency and Convergence of Spectral Energy Distributions}
-\monika{I merged these two subsections, also revised B1, looks good}
-\ckc{CK will do first pass on SEDs convergnece}
-
-\begin{figure*}
-    \centering
-    %\includegraphics{}
-    \note{altex: plot GRRT flux vs SED flux at different wavelengths.  Demonstrates that we have good agreements for 230GHz.  Demonstrate that NIR may require Monty Carlo calculations due to inverse Compton.  Demonstrate some 86GHz images require larger FoV but they are ruled out anyway and would not affect the results.}
-    \caption{Comparing GRRT flux from Monte Carlo calculations.  The three columns are 86GHz, 230GHz, and NIR, respectively.  GRRT is only used to spot check x-ray and does not have a corresponding scatter plot.}
-    \label{fig:sed_vv}
-\end{figure*}
 
 %==============================================================================
 \subsection{GRMHD Simulations Consistency and Convergence}\label{app:resolution_study}
@@ -68,20 +57,20 @@ We found a strong correlation between models and codes for the image size comput
 \cfg{This may change if we recompute the major axis, etc., for the IL 86 GHz large fov images}
 The middle row presents the correlation plots for the 86\,GHz flux density (left), the 86\,GHz image size using second moments (middle) and the NIR flux (right). The 86\,GHz flux and 86\,GHz image size exhibit a shift toward larger values for the \bhac models. This difference can be explained by the larger field of view used for the \bhac models at 86\,GHz during the radiative transfer calculations. Thus, more extended structure and therefore a larger total flux is included in the \bhac models. This affects mainly models with large inclinations $i\geq70^\circ$ and jet dominated emission models ($\rm{R}_{\rm high}\geq 40$).
 
-The NIR fluxes show a tight correlation over four orders of magnitude and systematically larger flux for the \bhac models for low NIR fluxes ($\log_{10}(NIR)<-7$). These fluxes are far below the NIR constraints of $\sim 1mJy$, and therefore they do not affect the passing or failing of the models. In the thermal models the NIR flux is generated from the tail of the electron distribution function and is thus very sensitive to the electron temperature. Small differences in the distribution and value of the electron temperature between the two codes explain the observed de-correlation at very low NIR flux. 
+The NIR fluxes show a tight correlation over four orders of magnitude and systematically larger flux for the \bhac models for low NIR fluxes ($\log_{10}(NIR)<-7$). These fluxes are far below the NIR constraints of $\sim 1mJy$, and therefore they do not affect the passing or failing of the models. In the thermal models the NIR flux is generated from the tail of the electron distribution function and is thus very sensitive to the electron temperature. Small differences in the distribution and value of the electron temperature between the two codes explain the observed de-correlation at very low NIR flux.
 
 The correlation between models for the m-ring parameters is presented in the third row of Figure~\ref{fig:modelcorrelation}. The correlation of the diameter of the m-ring is plotted in the left panel. The spread covers nearly the same extent as the 230\,GHz image size (top row, right panel) however the scatter in the correlation is larger.  The same is true for the width of the m-ring (middle panel in the last row of Figure~\ref{fig:modelcorrelation}). Compared to the diameter and width of the m-ring, the asymmetry of the m-ring is less correlated (right panel). Notice that horizontal and vertical limits in the asymmetries occur since the parameter hits the boundary of the allowed range.
 
-The smaller correlation of the m-ring parameters as compared to the other parameters presented in Figure~\ref{fig:modelcorrelation} is a consequence of the noisy nature of the m-ring fits.  Still, the distributions are quite symmetric under reflection across the diagonal, so the models are at least not biased with respect to each other.  Notice also that these plots do not capture all the information that is contained in the distribution of m-ring parameters, just the central value.   
+The smaller correlation of the m-ring parameters as compared to the other parameters presented in Figure~\ref{fig:modelcorrelation} is a consequence of the noisy nature of the m-ring fits.  Still, the distributions are quite symmetric under reflection across the diagonal, so the models are at least not biased with respect to each other.  Notice also that these plots do not capture all the information that is contained in the distribution of m-ring parameters, just the central value.
 
-We find ourselves somewhat surprised by the strength of the correlations seen in Figure~\ref{fig:modelcorrelation}.  The range of each constraint is significantly larger than the width of the correlation, so the variations between models are real, detectable, and reproducible with independent codes.  The question of the origin of the systematic offsets between models for some constraints (for example, in the NIR) is interesting but beyond the scope of this paper.   
+We find ourselves somewhat surprised by the strength of the correlations seen in Figure~\ref{fig:modelcorrelation}.  The range of each constraint is significantly larger than the width of the correlation, so the variations between models are real, detectable, and reproducible with independent codes.  The question of the origin of the systematic offsets between models for some constraints (for example, in the NIR) is interesting but beyond the scope of this paper.
 
 %\monika{Dec11:  in this subsection we only show details. if hamr scoring is consistent with kharma/bhac then this should be reported in the main text, not appendix; commenting this out due to lower statistics in hamr models}
 
 % \subsubsection{Comparison of \hamr and \kharma thermal models}
 
 % %\note{Doosoo, Koushik to write here about HAMR thermal models.}
-% Along the \kharma/\ipole and \bhac/\bhoss models, we produced a set of thermal models out to $35,000\tg$ using the GRMHD code \hamr and the GRRT code \bhoss (see Table~\ref{tab:GRMHDmodels}). These models consider a gas adiabatic index of $\Gamma_{\rm ad}=5/3$ for the SANE models and $\Gamma_{\rm ad}=13/9$ for the MAD models (Table~\ref{tab:radiativemodels}), allowing us to understand how sensitive the images are to the GRMHD fluid properties, in addition to code numerics. 
+% Along the \kharma/\ipole and \bhac/\bhoss models, we produced a set of thermal models out to $35,000\tg$ using the GRMHD code \hamr and the GRRT code \bhoss (see Table~\ref{tab:GRMHDmodels}). These models consider a gas adiabatic index of $\Gamma_{\rm ad}=5/3$ for the SANE models and $\Gamma_{\rm ad}=13/9$ for the MAD models (Table~\ref{tab:radiativemodels}), allowing us to understand how sensitive the images are to the GRMHD fluid properties, in addition to code numerics.
 
 % We report that overall, the \hamr/\bhoss thermal eDF images perform similarly to the \kharma/\ipole and \bhac/\bhoss models. \kc{needs verification from Michi}
 
