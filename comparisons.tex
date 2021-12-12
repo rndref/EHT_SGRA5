@@ -70,7 +70,7 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
 %  \label{fig:cmp_ozel}
 %\end{figure}
 
-\cfg{WHY?}
+\cfg{WHY? need more discussion}
 The null location constraint checks the morphology of the visibility amplitudes against $|u|$.  The test rejects edge-on MAD models at positive spin and a few large $\Rh$ SANE models.
 It disfavors edge-on MAD models at positive spin and a few large $\Rh$ SANE models.  The null location constraint rejects 16\% of models.
 
@@ -93,7 +93,9 @@ The ring diameter is better constrained than the asymmetry parameter.  It also v
 
 Most of the models that fail are low inclination models with ring diameters that are too large (no models fail because the ring diameter is too small).  For example, the face-on, $\Rh = 10$ SANE models fail for all spins except $\abh = 0.94$ because the ring is too large.  The same is true for all face-on MAD models with $\Rh = 1$.
 
-Notice that the ring diameter is not degenerate with the second moment constraint; all models that fail the latter pass the former.  The m-rings contain a centered Gaussian component that tends to grow to absorb the emission from broad rings.   
+Notice that the ring diameter is not degenerate with the second moment constraint; all models that fail the latter pass the former.  Recall that in addition to a blurred ring, the m-rings model contains a centered Gaussian component; the Gaussian tends to grow to absorb the emission when the ring is very extended.   
+
+The distribution of ring diameters for many SANE models is multimodal (consistently in the Frankfurt and Illinois model sets), with a secondary peak in the distribution at $\sim 35\mu$as.  All $\Rh = 1$ SANE models show this secondary peak.  These models' images tend to have a well defined ring at the critical impact parameter and a second broad maximum in intensity at larger impact parameter.  The second peak in the distribution is a consequence of limited baseline coverage.
 
 \begin{figure*}
   \centering
@@ -104,7 +106,7 @@ Notice that the ring diameter is not degenerate with the second moment constrain
 
 The m-ring width $w$ is best constrained and therefore most constraining.  Although the closure phases constrain $w$ as well, it is easy to see how $w$ affects visibility amplitudes: it controls long-baseline amplitudes.  For example, for a simple, symmetric ring the visibility amplitudes are a Bessel function multiplied by a Gaussian with width $\sim 1/w$, and increasing $w$ therefore decreases the amplitude of the long baselines.   
 
-All rejected models have median $w$ that is below the median $ \simeq 17.5\mu$as for the data. The rejected models include all but 3 MAD models at $\abh \le 0$ and all edge-on ($i = 90\degree$) MAD models.  MAD models exhibit a strong trend toward smaller $w$ as $i$ increases.  SANE models exhibit a similar but weaker trend. The SANE model images have  higher optical depth, broader rings, and more substructure than the MAD models.  Their $w$ distributions are typically broad, with mode well below $17.5\mu$as.  Only for $\abh = 0.94$, where the optical depth is lowest due to higher temperatures in the emitting region, do most of the models exhibit a sharply peaked $w$ distribution centered at $17.5\mu$as.  
+All rejected models have median $w$ that is below the median, $ \simeq 17.5\mu$as, for the data. The rejected models include all but 3 MAD models at $\abh \le 0$ and all edge-on ($i = 90\degree$) MAD models.  MAD models exhibit a strong trend toward smaller $w$ as $i$ increases.  SANE models exhibit a similar but weaker trend. The SANE model images have  higher optical depth, broader rings, and more substructure than the MAD models.  Their $w$ distributions are typically broad, with mode well below $17.5\mu$as.  Only for $\abh = 0.94$, where the optical depth is lowest due to higher temperatures in the emitting region, do most of the models exhibit a sharply peaked $w$ distribution centered at $17.5\mu$as.  
 
 \begin{figure*}
  \centering
@@ -116,7 +118,7 @@ All rejected models have median $w$ that is below the median $ \simeq 17.5\mu$as
 %..............................................................................
 \subsubsubsection{EHT Constraint Summary}
 
-We can combine all EHT constraints with a logical {\em and} operation.  The results are summarized in Figure  \ref{fig:all_EHT_constraints}.  The cuts favor $\abh > 0$ models.  We are left with $33/100$ SANE models and $16/100$ MAD models.
+We can combine all EHT constraint cuts with a logical {\em and} operation.  The results are summarized in Figure  \ref{fig:all_EHT_constraints}.  Evidently EHT data alone is capable of discriminating between models.   The edge-on ($i = 90$deg) MAD models all fail, with some failing m-ring width, diameter, asymmetry and the null location constraint.  The cuts clearly favor $\abh > 0$ models, although there are exceptions.  We are left with $33/100$ SANE models and $16/100$ MAD models.
 
 \begin{figure*}
   \centering
@@ -128,12 +130,12 @@ We can combine all EHT constraints with a logical {\em and} operation.  The resu
 %------------------------------------------------------------------------------
 \subsubsection{Non-EHT Constraints}
 
-Now consider constraints from 86GHz, NIR, and X-ray observations.  Most or all of the emission in these bands is believed to originate in the compact source from plasma that is close to or overlaps the plasma the 230GHz-emitting plasma observed by EHT.
+Now consider constraints from unresolved 86GHz, NIR, and X-ray observations.  Some or all of the emission in these bands is believed to originate in the compact source from plasma that is close to or overlaps the plasma that is producing the 230GHz-emitting plasma observed by EHT.
 
 %..............................................................................
 \subsubsubsection{NIR Median Flux}
 
-NIR photons are produced by synchrotron process from photons at the high energy end of the distribution function.  For a one-zone model with $B = 30$G, the  critical frequency $\nu_{crit} \simeq \gamma^2 e B/(m_e c) \simeq 80$GHz and emission at $2.2\mu$m is therefore produced by electrons with $\gamma \simeq 10^3$, compared to a mean Lorentz factor of $30$ for plasma with $\Theta_e = 10$.  NIR flux density will therefore be sensitive to $\Theta_e$ and therefore to $\Rh$.
+Most NIR photons are produced by the synchrotron process from electrons on the high energy end of the eDF.  For a one-zone model with $B = 30$G, the  critical frequency $\nu_{crit} \simeq \gamma^2 e B/(m_e c) \simeq 80$GHz and emission at $2.2\mu$m is therefore produced by electrons with  Lorentz factor $\gamma \simeq 10^3$; the mean $\gamma = 30$ for a thermal eDF with $\Theta_e = 10$.  NIR flux density will therefore be sensitive to $\Theta_e$ and therefore to $\Rh$, and to the magnetic field strength.
 
 Interestingly, we find that some models are synchrotron-weak and Compton-strong in the NIR.  \note{Discussion of which models fall in this category}
 
