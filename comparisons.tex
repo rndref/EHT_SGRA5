@@ -179,10 +179,13 @@ The MAD models that fail have low $\Rh$ and are Compton-dominated in the X-ray. 
 
 In a naive picture \sgra's millimeter flux is produced in a photosphere that decreases in size as frequency increases.  Because optical depth is not large at $1.3$mm ($\sim 0.3$ in the one-zone model) and the source structure is complicated (the optical depth varies across the image; the $\tau = 2/3$ surface is non-spherical, folded, and not even simply connected) the naive picture is imprecise.  Nevertheless 86GHz photons are on average produced at larger radius than 230GHz photons, and the 86GHz source size is larger than the 230GHz source size.
 
-The 86GHz/230GHz color is therefore sensitive to the radial structure of the source plasma.  Figure \ref{fig:cmp_86ghz_flux} shows the result of requiring that the 86GHz flux match the observed flux 3 days before the beginning of the EHT 2017 campaign.
+The 86GHz/230GHz color is therefore sensitive to the radial structure of the source plasma.  Figure \ref{fig:cmp_86ghz_flux} shows the full results of applying this constraint.
 
-Many $\Rh = 1$ models, both MAD and SANE, fail the $86$GHz flux density test: 23/25 SANE and 9/25 MAD.  These models overproduce $86$GHz emission.
-There is also a substantial set of SANE models, 19/100 in all, that underproduce $86$GHz emission.  These models have larger $\Rh$.
+\cfg{need more physical discussion}
+
+Many $\Rh = 1$ models, both MAD and SANE, fail the $86$GHz flux density test: 22/25 SANE and 11/25 MAD; all overproduce $86$GHz emission.  A large set of SANE models (17/100) underproduce $86$GHz emission, and these have $10 \le \Rh \le 40$.   
+
+The 86 GHz flux is sensitive to $\Rh$.  For example, SANE $\abh = 0$, $i = 70,90$deg models are too bright at $\Rh = 1$ and too dim at $\Rh = 10$.  There must be passing models in between, suggesting our parameter space is not sampled densely enough.  
 
 %\begin{figure}
 %  \centering
@@ -194,11 +197,14 @@ There is also a substantial set of SANE models, 19/100 in all, that underproduce
 %..............................................................................
 \subsubsubsection{86 GHz Major Axis}
 
-As for the $86$GHz flux, the $86$GHz size is sensitive to optical depth as a function of radius in the source plasma. Models that pass and fail are shown in Figure \ref{fig:cmp_86ghz_size}.
+As for the $86$GHz flux, the $86$GHz size is sensitive to optical depth as a function of radius in the source plasma. Figure \ref{fig:cmp_86ghz_size} in Appendix \ref{app:tables} shows the full results of applying this constraint.
 
-Many face-on models fail because they are too small (purple in the figure), while a few other high inclination models fail because they are too large.  Only $52\%$ of models pass, making this one of the tightest constraints.
+\cfg{need cites to earlier work for par below}
 
-The physical picture for 86GHz source size is complicated, as is the extraction of the constraint itself from observations.  Notice that (1) two different values for the 86GHz intrinsic source size have been reported in the literature; (2) scattering is $7$ times stronger at $86$GHz than at $230$GHz; (3) scattering must be subtracted accurately to obtain the intrinsic source size; (4) the error bars for the 86GHz source size are narrow and this determines the strength of the constraint.
+The 86GHz size is sensitive to inclination.  For example, the MAD, $\abh = 0$, $\Rh = 160$ models are too small at low inclination and too large when seen edge-on, because the edge-on models have prominent limb-brightened jet walls that are visible to 100$\mu$as.  The 86GHz size constraint rejects 
+$58\%$ of models and is therefore one of the tightest constraints.
+
+The physical picture for 86GHz source size is complicated, as is the extraction of the constraint itself from observations.  Notice that (1) two different values for the 86GHz intrinsic source size have been reported in the literature; (2) scattering is $7$ times stronger at $86$GHz than at $230$GHz; (3) scattering must be subtracted accurately to obtain the intrinsic source size; (4) the error bars for the 86GHz source size are narrow and this plays a key role in determining the strength of the constraint.
 
 %\begin{figure}
 %  \centering
@@ -210,9 +216,7 @@ The physical picture for 86GHz source size is complicated, as is the extraction 
 %..............................................................................
 \subsubsubsection{Summary of Non-EHT constraints}
 
-Applying only non-EHT constraints, we are left with the 9/100 SANE models and 25/100 MAD models shown in Figure~\ref{fig:non_eht_cuts}.
-
-The surviving models include a set of SANE models at intermediate $\Rh$ and modest inclination, as well as MAD models at large $\Rh \ge 40$. No $\Rh = 1$ models survive the non-EHT cuts.
+Applying only non-EHT constraints, we are left with the 24/200 models shown in Figure~\ref{fig:non_eht_cuts}. The surviving models are the result of applying a heterogeneous and noisy set of constraints using a hard cutoff, which obscures the underlying physical pictures.  Nevertheless, the surviving models are nearly all MAD (only 1 SANE model survives), all have $\Rh > 1$, and nearly all are at $i \le 70$deg.  This leaves a cluster of surviving MAD models at large $\Rh$ and moderate inclination.      
 
 \begin{figure*}
   \centering
@@ -224,7 +228,8 @@ The surviving models include a set of SANE models at intermediate $\Rh$ and mode
 %------------------------------------------------------------------------------
 \subsubsection{Variability}
 
-Variability is central to interpretation of \sgra: the small black hole size means that observations considered here are taken over intervals when the source is expected to vary significantly.  This distinguishes \sgra from \m87, where the source is expected to vary only over timescales that are long compared to a single track.\footnote{This does not mean that \m87 is less variable than \sgra.  In 2017 EHT observed \m87 over only $\sim 15\tg$\monika{1 week is 168h and \tg for m87 is 8.5h, this gies 19 \tg not 15...}, so it is not possible to characterize \m87 variability using EHT data alone.  To obtain variability information for \m87 similar to what we present here for \sgra would require multi-year observations.}
+Variability is central to interpretation of \sgra: $8$hrs on \sgra is 
+the small black hole size means that observations considered here are taken over intervals when the source is expected to vary significantly.  This distinguishes \sgra from \m87, where the source is expected to vary only over timescales that are long compared to a single track.\footnote{This does not mean that \m87 is less variable than \sgra.  In 2017 EHT observed \m87 over only $\sim 15\tg$\monika{1 week is 168h and \tg for m87 is 8.5h, this gies 19 \tg not 15...}, so it is not possible to characterize \m87 variability using EHT data alone.  To obtain variability information for \m87 similar to what we present here for \sgra would require multi-year observations.}
 
 Variability is a strong constraint on the models.  Although models differ in their degree of variability, both in an integrated sense and on 4 $G\lambda$ baselines, only a small fraction of models are as quiet as the data.  For the light curve variability, this remains true whether we use data from 2017 April 7, all days from the 2017 observing campaign, or from historical monitoring of \sgra.   In general, we find that SANE models are quieter than MAD models, and (less strongly) face-on models are quieter than edge-on models.
 
