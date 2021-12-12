@@ -3,7 +3,7 @@
 We now apply the observational constraints from Section~\ref{sec:observations} to the models described in Section~\ref{sec:models}.  The results of all constraint applications are listed in pass/fail tables contains in Appendix \ref{app:tables}, which are available in electronic form.
 
 %==============================================================================
-\subsection{Thermal, Aligned Models}\label{subsec:thermal}
+\subsection{Standard Models}\label{subsec:thermal}
 
 We start with a set of ``standard'' models with aligned (prograde or retrograde) GRMHD simulations, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.  This includes the \kharma, \bhac, and \hamr model sets listed in Table~\ref{tab:radiativemodels}.
 
@@ -307,29 +307,15 @@ We have also considered a set of thermal, $\Rh$, MAD models run with the \koral 
 None of the standard thermal models (Frankfurt or Illinois) survive the full gauntlet of constraints.   Variability rejects about 3/4 of models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models.
 Evidently either (1) the models fail in some important respect, or (2) some of the data underlying the model tests are incorrect, or (3) one or more of the constraints have been misapplied.
 
-We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens when we lift one constraint.  About 5\% of both the Frankfurt and Illinois model sets fail only 1 constraint.  For Frankfurt, 8 models fail only $\mi{3}$, and 2 fail only m-ring diameter.  For Illinois, 3 models fail only $\mi{3}$ and 5 fail only the 86GHz size.  Suspicion therefore falls on $\mi{3}$, which rejecting $\approx 70\%$ of Frankfurt and Illinois models.
+We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens when we lift one constraint.  About 5\% of both the Frankfurt and Illinois model sets fail only 1 constraint.  For Frankfurt, 8 models fail only $\mi{3}$, and 2 fail only m-ring diameter.  For Illinois, 3 models fail only $\mi{3}$ and 5 fail only the 86GHz size.  Suspicion therefore falls on $\mi{3}$, which rejecting $\approx 70\%$ of Frankfurt and Illinois models.  Why might the $\mi{3}$ constraint be off?
 
 \cfg{need learned commentary on the possibility of extended structure here.}
 
-Why might the $\mi{3}$ constraint be off?
+One possibility is that some fraction of the $230$GHz flux density, $f_{ext}$, is in an extended structure (a jet) that is slowly varying, captured in the ALMA light curves, and resolved out by EHT.  The implied $f_{ext}$ is model-dependent, but if $f_{ext} \sim 30\%$ then nearly all MAD models would pass $\mi{3}$ and many SANE models would be rejected as too quiet.  The $4$G$\lambda$ amplitude variability is normalized by the light curve and thus $a_4$ would increase by a similar factor.  Notice that if $f_{ext} > 0$ then the models would need to be normalized to the compact flux $(1 - f_{ext}) \times 2.4$Jy.  The extended flux hypothesis can be tested by the addition of new, short baselines to the EHT.  
 
-One possibility is that a fraction of the flux, $f_{ext}$, is in an extended structure (a jet) that is slowly varying, captured in the ALMA light curves, and resolved out by EHT.  The implied $f_{ext}$ is model-dependent, but if $f_{ext} \sim 30\%$ then nearly all MAD models would pass $\mi{3}$ and many SANE models would be rejected as too quiet.  The $4$G$\lambda$ amplitude variability is normalized by the light curve and thus $a_4$ would increase by a similar factor.  If $f_{ext} > 0$ then the models would need to be normalized to the compact flux $(1 - f_{ext}) \times 2.4$Jy.  The extended flux hypothesis can be tested by
+A second possibility is that physical or numerical errors in the models cause the variability to be overstated.  Several possibilities, including viscosity, radiative cooling, pair production, helium accretion, numerical resolution, simulation duration, and boundary conditions are discussed in the Conclusion.  We will nonthermal eDF models, wind-fed models, and tilted models next, but none sharply reduce $\mi{3}$.    
 
-A second possibility is that some physical or numerical errors in the models cause the variability to be overstated.  Several possibilities, including
-
-
-
-If we set aside $\mi{3}$ then 3 models survive from Frankfurt and Illinois.  All are MAD.  These are $\abh = 0.5, i = 30, \Rh = 40$; $\abh = 0.5, i = 30, \Rh = 160$; and $\abh = 0.94, i = 10, \Rh = 160$.  These models are clustered in parameter space and pass 10 of 11 tests.  They explain most of the data.  We will adopt these as ``best-bet'' models in the discussion that follows.
-
-If we set aside variability but use all remaining constraints we are left with the models shown in Figure \ref{fig:all_cuts}. No SANE models, and 8/100 MAD models, survive. The passing models cluster at low inclination ($i \le 50\degree$) MAD models with $\Rh \ge 40$.  A full set of pass/fail values is provided in Appendix~\ref{app:tables}.
-
-It is remarkable that so many of the models look like the EHT data, which lends some  confidence to the models, and that EHT data alone are capable of distinguishing between models in the model set with only $N = 6$ antennas.  Future experiments with more antennas will contain much more information and provide even tighter constraints.
-
-All $\Rh = 1$ models have been eliminated, most by multiple constraints, and we conclude that models with equal ion and electron temperatures are unacceptable.
-
-All models with $i > 50\degree$ are eliminated, most by multiple constraints, and we conclude that high inclination models are disfavored.  In the SED edge-on models have a clear signature derived from Doppler boosting, with increased NIR and X-ray flux density.  In EHT constraints many edge-on models have a clear signature derived from low m-ring widths, strong asymmetry (although only for a few models), and failed null location constraint.
-
-For thermal model sets both EHT and non-EHT constraints individually eliminate many models, but together they eliminate all but 5\%.  The success of the models for EHT constraints (apart from variability) supports the use of the models for applying non-EHT constraints and highlights the importance of contemporaneous multiwavelength monitoring of \sgra.
+If we set temporarily aside $\mi{3}$ then 3 models survive from Frankfurt and Illinois.  All are MAD.  These are $\abh = 0.5, i = 30, \Rh = 40$; $\abh = 0.5, i = 30, \Rh = 160$; and $\abh = 0.94, i = 10, \Rh = 160$.  These models are clustered in parameter space and pass 10 of 11 tests.  They explain most of the data.  We will refer to these as ``best-bet'' models in the discussion that follows.
 
 %\begin{figure*}
 %  \centering
@@ -337,8 +323,6 @@ For thermal model sets both EHT and non-EHT constraints individually eliminate m
 %  \caption{Combined EHT and non-EHT constraints, excluding variability.}
  % \label{fig:all_cuts}
 %\end{figure*}
-
-Variability, when included in the constraint map, would eliminate all thermal models.  Although a few models pass the variability constraints alone this does not mean that we should regard them as favored, since we expect to eliminate at least a couple of models incorrectly when using a $1\%$ cut for $200$ models.
 
 % this is now moved to appendix as discussed on Thursday Dec 9 2021 among coordinators
 % %------------------------------------------------------------------------------
@@ -390,9 +374,21 @@ Variability, when included in the constraint map, would eliminate all thermal mo
 % We have also considered a set of thermal, $\Rh$, MAD models run with the \koral code out to $\sim 100,000\tg$.  These models permit us to assess the importance of integration time for application of the constraints.  They permit us to obtain more accurate distributions for the constraint quantites, and to assess whether the constraints evolve from the beginning to end of the integrations. We do not see evidence for evolution in the \koral  model set (a full pass/fail table is given in Appendix \ref{app:tables}, Table~\ref{tab:koralPF}). The \koral pass/fail results are similar to those for comparable models in the \kharma thermal model set. Moreover the constraints measured at the beginning of the evolution are similar to those measured at the end.
 
 %------------------------------------------------------------------------------
-%\subsubsection{Critical Beta Model}
+\subsection{Non-Standard Models}
 
-Finally, the $\Rh$ eDF model has been the default parameterization used to span the uncertainties in emitting particle thermodynamics in EHT analyses. The $\Rh$ models  are compatible with the well-motivated turbulent plasma heating ADAF models of \cite{1999ApJ...520..248Q} in asymptotic behavior of electron-to-total heating ratio as a function of plasma $\beta$. There is, however, a vast function space of possible alternative parameterizations. Here we have also considered the Critical Beta model \cite{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  The model is motivated by the observation that when the transition between electron heating domination and proton heating domination is smoothed (controlled by increasing exponent parameter $\beta_c$), the 230 GHz emitting region profile tends to be less coronally dominated and more compact and asymmetric. This is a consequence, when fixing synthetic image flux, of higher critical beta values shifting the locus of electrons dominating the emission profile towards the colder, higher density equatorial inflow.  We consider only a single point in the critical beta parameter space, with $f = \beta_c = 1$. We have applied a subset of tests to the critical beta models (all except X-ray; NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}. All Critical beta models with high inclinations fail EHT constraints, which is consistent with our main conclusion about the thermal models. We also find that all critical beta models fail all considered non-EHT constraints.
+We now turn to models that differ from the standard aligned, thermal, $\Rh$ based models.  These include aligned models that use a different scheme for assigning temperatures to a thermal eDF; aligned models with a power-law component or kappa component in the eDF; tilted models; and stellar wind-fed models.  
+
+\subsubsection{Critical Beta Model}
+
+First we consider the consequences of departures from the $\Rh$ temperature assignment scheme in thermal models.  The $\Rh$ prescription has been the default parameterization, but there are many other possibilities.  If we still assume that the ion-electron temperature ratio depends only on current local conditions a well-motivated alternative is the critical beta model  \cite{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  We consider only a single point in the critical beta parameter space, with $f = \beta_c = 1$. 
+
+We have applied a subset of tests to the critical beta models (all except X-ray; NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}. 
+
+All Critical beta models with high inclinations fail the EHT constraints, which is consistent with our main conclusion about the thermal models.  We also find that all critical beta models fail all considered non-EHT constraints.
+
+% cfg commented out 12 dec; edited down for consistency in style.  
+
+%to span the uncertainties in emitting particle thermodynamics in EHT analyses. The $\Rh$ models  are compatible with the well-motivated turbulent plasma heating ADAF models of \cite{1999ApJ...520..248Q} in asymptotic behavior of electron-to-total heating ratio as a function of plasma $\beta$. There is, however, a vast function space of possible alternative parameterizations. Here we have also considered the Critical Beta model \cite{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  The model is motivated by the observation that when the transition between electron heating domination and proton heating domination is smoothed (controlled by increasing exponent parameter $\beta_c$), the 230 GHz emitting region profile tends to be less coronally dominated and more compact and asymmetric. This is a consequence, when fixing synthetic image flux, of higher critical beta values shifting the locus of electrons dominating the emission profile towards the colder, higher density equatorial inflow.  We consider only a single point in the critical beta parameter space, with $f = \beta_c = 1$. We have applied a subset of tests to the critical beta models (all except X-ray; NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}. All Critical beta models with high inclinations fail EHT constraints, which is consistent with our main conclusion about the thermal models. We also find that all critical beta models fail all considered non-EHT constraints.
 
 % CFG: we shouldn't report preliminary indications here
 %A second motivation is that there are preliminary indications that the exponential electron cooling in the Critical Beta Model suppressed the SANE bremsstrahlung spectral component allowing more to pass the X-ray constraint.
