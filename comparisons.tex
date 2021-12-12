@@ -401,6 +401,7 @@ To summarize, all critical beta models fail the non-EHT constraints, with 86GHz 
 
 So far we have assumed a thermal (Maxwell-J{\"u}ttner) eDF.  Next we assume that some electrons are accelerated to a non-thermal tail.  There are multiple ways of doing this, but we will continue to assume that the eDF depends instantaneously on local conditions and to set the accretion rate so that the time-averaged 230\,GHz compact flux is 2.4 Jy.
 
+% cfg 12-dec: we will comment this out by 13-dec unless we get more info, from here => 
 First we employ a hybrid thermal/power-law tail distribution using \hamr/\bhoss, and assume a power-law index of $p=4$ with a constant non-thermal acceleration efficiency $\epsilon=n_{\rm e, power-law}/n_{\rm e, thermal}=0.1$. Following the method given in \citet{Chatterjee2021}, the power-law tail is stitched to the thermal core by choosing the minimum Lorentz factor limit of the power-law $\gamma_{\rm min}$ to be at the peak of the Maxwellian component. The upper end of the power-law is taken to $10^5 \gamma_{\rm min}$.  The temperature of the thermal component is set by the $\Rh$ prescription.  We find that the accretion rate is slightly smaller than for corresponding thermal models, suggesting that the power-law components contributes to the 230\,GHz total intensity.
 
 %..............................................................................
@@ -433,16 +434,21 @@ The addition of the power-law tail primarily increases the flux in the NIR and t
 
 \note{Razi to write here about variable kappa models.  Define a subsection, describe the results and how they differ from the thermal results.}\kc{might be better to move this to 4.2.3 along with bhac/bhoss results}
 
+% cfg 12-dec: we will comment this out by 13-dec unless we get more info, to here <=
 
 %------------------------------------------------------------------------------
 \subsubsection{Constant kappa models with $kappa=5$}
 
-Next we consider a model in which all electrons live in a kappa eDF which has a thermal core and a power-law tail.
+Next we consider a model in which {\em all} electrons are in a kappa eDF, which has a thermal core and a power-law tail.  We set $\kappa = 5$ everywhere (the power-law tail then has $p = \kappa - 1 = 4$),  motivated by \cite{2016PhRvL.117w5101K}, who found $\kappa = 5$ to be a good fit to the ion DF in a 3D hybrid simulation of MHD turbulence.  
 
-\cite{2016PhRvL.117w5101K} performed 3D kinetic numerical simulations of accretion disks and found that the distribution of the ions is well described by kappa distribution with $kappa=5$. We adopted this results and assume that the radiating electrons follows a similar distribution as the ion. Therefore, we performed radiative transfer calculations using a kappa distribution with fixed value of $\kappa=5$.
-\newline \cmf{more details tomorrow: all MAD models overshoot the the NIR flux limit and only a few SANE models are below flux threshold. The SANE models which pass the NIR constraints produce too large 86\,GHz images}
+% cfg 12-dec: this section will be commented out soon unless we receive more results
 
-\subsubsection{Thermal plus Constant kappa models $\kappa=3.5$ with variable efficiency, $\varepsilon(\sigma,\beta)$}
+%performed 3D kinetic numerical simulations of accretion disks and found that the distribution of the ions is well described by kappa distribution with $kappa=5$. We adopted this results and assume that the radiating electrons follows a similar distribution as the ion. Therefore, we performed radiative transfer calculations using a kappa distribution with fixed value of $\kappa=5$.
+%\newline \cmf{more details tomorrow: all MAD models overshoot the the NIR flux limit and only a few SANE models are below flux threshold. The SANE models which pass the NIR constraints produce too large 86\,GHz images}
+
+\subsubsection{Mixed Thermal/Kappa Model}
+
+Next we consider a mixed thermal/nonthermal eDF, with the nonthermal component following the kappa DF.  We set $\kappa = 3.5$
 
 To investigate the effect of mixed thermal/nonthermal distribution functions, we combine a thermal electron distribution function with a kappa electron distribution with $\kappa=3.5$. The value of $\kappa=3.5$ is motivated from the spectral slope in the NIR during a quiescent state \cmf{add reference here} \kc{suggest to say that the slope is a limit as $\alpha=0.6$ where $F_{\nu}\propto \nu^{\alpha}$ is seen in the flaring state, e.g., Hornstein+2006}.  In addition to the fixed kappa value we assume that the fraction between thermal and non-thermal particles depends on the local plasma properties, e.g, the magnetisation, $\sigma$, and the plasma beta parameter, $\beta_{\rm p}$. Given this assumption we can write the total emissivity as:
 \begin{equation}
