@@ -141,11 +141,11 @@ The sensitivity to $\Theta_e$ implies that NIR will be strongest for parameters 
 The sensitivity to $B$ implies that NIR will be strongest for parameters with stronger fields.  The $B$ depends on the GRMHD flow configuration and also on the mass unit (that is, the accretion rate), and so NIR will be strongest when the accretion rate is largest.  For SANEs, accretion rate declines as $\abh$ increases and $\Rh$ decreases (see Figure \ref{fig:accretion_outflow_power_illinois_thermal} below); for MADs the accretion rate dependence on $\abh$ and $\Rh$ is much weaker.
 Finally, Doppler effect (blueshift) enables photons that are detected at $2.2\mu$m to be emitted at longer wavelength in plasma that is moving toward the observer, and the accompanying Doppler beaming increases the detected intensity.  We therefore expect that NIR to increase with inclination and to peak in the midplane on the approaching side of the flow.
 
-Models that pass the NIR flux limit are shown in Figure \ref{fig:cmp_2um_flux}.   The rejected SANE models ($6\%$) tend to be at positive spin and high inclination, and the images are dominated by a bright spot on the approaching side of the disk.
+Models that pass the NIR flux limit are shown in the Appendix in Figure \ref{fig:cmp_2um_flux}. The rejected SANE models ($6\%$) tend to be at positive spin and high inclination, and the images are dominated by a bright spot on the approaching side of the disk.
 The rejected SANE models ($68\%$) include all models at $\Rh = 1$ and all but 2 models at $\Rh = 10$, where $\Theta_e$ tends to be larger, and {\em all} edge-on models, where Doppler boosting is largest.   
 
-Interestingly, we find that some models are synchrotron-weak and Compton-strong in the NIR.  For example, $\abh = -0.94$ SANE models become optically thin at relatively low frequency as $\Rh$ goes to $1$, and thus synchrotron emission drops off rapidly as frequency increases.
-As $\Rh$ drops for these models the SED becomes dominated by a lower-luminosity bump of underlying Comptonized photons.  Just before this happens, at $\Rh = 10$, the combination of the Compton bump and synchrotron emission is enough to push the median NIR flux density above the observational limit, explaining the excluded SANE models at $\Rh = 10$, $\abh = -0.94$.   
+Interestingly, we find that some models are Compton dominated in the NIR.  For example, $\abh = -0.94$ SANE models become optically thin at relatively low frequency as $\Rh$ goes to $1$, and thus synchrotron emission drops off rapidly as frequency increases.
+As $\Rh$ drops and synchrotron decreases the SED becomes dominated by a lower-luminosity bump of underlying Comptonized photons.  Just before this happens, at $\Rh = 10$, the combination of the Compton bump and synchrotron emission is enough to push the median NIR flux density above the observational limit, explaining the excluded SANE models at $\Rh = 10$, $\abh = -0.94$.   
 
 %\begin{figure}
 %  \centering
@@ -157,15 +157,15 @@ As $\Rh$ drops for these models the SED becomes dominated by a lower-luminosity 
 %..............................................................................
 \subsubsubsection{X-ray Luminosity}
 
-Most thermal models produce X-ray emission through Compton upscattering of thermal synchroton photons.  Typically the X-ray band lies in the first Compton bump, although that is sensitive to the temperature of the electrons doing the upscattering.  In the first Compton bump $\nu L_\nu$ is proportional to the y-parameter $y \sim 16 \Theta_e^2 \tau_e$ where $\tau_e$ is a characteristic electron-scattering optical depth and $\Theta_e$ is a typical electron temperature.
+Many thermal models produce X-ray emission through Compton upscattering of thermal synchroton photons.  In the first Compton bump $\nu L_\nu$ is proportional to the y-parameter $y \sim 16 \Theta_e^2 \tau_e$ where $\tau_e$ is a characteristic electron-scattering optical depth and $\Theta_e$ is a typical electron temperature.  At $\Rh = 1$ the X-ray band lies in the first Compton bump, while at larger $\Rh$ the bumps move to lower energy because the bulk of the Thomson depth is in the midplane where $\Theta_e \propto 1/\Rh$.
 
-In many large $\Rh$ SANE models, however, X-ray emission is dominated by bremsstrahlung.  Since the bremsstrahlung emissivity $\propto n^2$, bremsstrahlung comes from the midplane where the density is largest, at larger radius than the synchrotron and Compton-upscattered X-ray emission.  It dominates in high accretion rate models (this turns out to mean large $\Rh$ models; see \S 5) where $\Theta_e < 1$, and is significant only when the midplane is cool and $r: \Theta_e = 1 < YY$, i.e. at large $\Rh$.  The resurgence of bremsstrahlung in cool disks occurs because at $\Theta_e < 1$, $j_\nu \propto n^2 \Theta_e^{-1/2}$.  When the disk is cool and dense the latter is large.
+In many large $\Rh$ SANE models, however, X-ray emission is dominated by bremsstrahlung.  Since its emissivity $j_{\nu,b} \propto n^2$, bremsstrahlung is dominated by regions with the highest density, i.e. the midplane.  It typically comes from larger radius than the synchrotron and Compton-upscattered X-ray emission and therefore varies more slowly.  Bremsstrahlung therefore dominates Compton in the highest accretion rate models, i.e. when $\Rh$ is large (see \S 5).  Notice that $j_{\nu,b} \propto \Theta_e^{1/2}$ for $\Theta_e > 1$ and $\Theta_e^{-1/2}$ for $\Theta_e < 1$, so cool disks enhance bremsstrahlung.  
 
-The X-ray cut results are shown in Figure \ref{fig:cmp_xray_flux}.
+The X-ray cut results are shown in Appendix \ref{app:tables} in Figure \ref{fig:cmp_xray_flux}.  
 
-Many large $\Rh$ SANE models fail the X-ray test: all but 3/25 at $\Rh = 160$ and all but 6/25 at $\Rh = 40$.  These models fail due to excess bremsstrahlung.
+Most large $\Rh$ SANE models fail the X-ray test: all but 2/25 at $\Rh = 160$ and all but 2/25 at $\Rh = 40$.  These models fail due to excess bremsstrahlung.
 
-Many MAD models that fail have large absolute spin and low $\Rh$.  These models are Compton-dominated.  The midplane temperature is highest at low $\Rh$.  Since the midplane contributes most of the electron scattering optical depth, low $\Rh$ models have the largest $y$ parameter and are most at risk of overproducing X-rays.
+The MAD models that fail have low $\Rh$ and are Compton-dominated in the X-ray.  All $\Rh = 1$ MAD models fail the X-ray test, and all but 6/25 at $\Rh = 10$.  The midplane $\Theta_e$ declines as $\Rh$ drops.  Since the midplane contributes most of the electron scattering optical depth, low $\Rh$ models have the largest $y$ parameter and are at greatest risk of overproducing X-rays.
 
 %\begin{figure}
 %  \centering
@@ -177,9 +177,9 @@ Many MAD models that fail have large absolute spin and low $\Rh$.  These models 
 %..............................................................................
 \subsubsubsection{86 GHz Median Flux}
 
-In a naive picture \sgra's millimeter flux is produced at a photosphere that decreases in size as frequency increases.  Because of the marginal optical depth at $1.3$mm ($\sim 0.3$ in the one-zone model) and the complicated source structure (the optical depth varies across the image; the $\tau = 2/3$ surface is non-spherical, folded, not even simply connected) this picture does not hold exactly.  Nevertheless 86GHz photons are on average produced at larger radius than 230GHz photons, and the 86GHz source size is therefore larger than the 230GHz source size; see Ricarte et al. 2022 for a discussion.
+In a naive picture \sgra's millimeter flux is produced in a photosphere that decreases in size as frequency increases.  Because optical depth is not large at $1.3$mm ($\sim 0.3$ in the one-zone model) and the source structure is complicated (the optical depth varies across the image; the $\tau = 2/3$ surface is non-spherical, folded, and not even simply connected) the naive picture is imprecise.  Nevertheless 86GHz photons are on average produced at larger radius than 230GHz photons, and the 86GHz source size is larger than the 230GHz source size.
 
-The 86GHz/230GHz color therefore probes the radial structure of the source plasma.  Figure~\ref{fig:cmp_86ghz_flux} shows the result of requiring that the 86GHz flux match the observed flux 3 days before the beginning of the EHT 2017 campaign.
+The 86GHz/230GHz color is therefore sensitive to the radial structure of the source plasma.  Figure \ref{fig:cmp_86ghz_flux} shows the result of requiring that the 86GHz flux match the observed flux 3 days before the beginning of the EHT 2017 campaign.
 
 Many $\Rh = 1$ models, both MAD and SANE, fail the $86$GHz flux density test: 23/25 SANE and 9/25 MAD.  These models overproduce $86$GHz emission.
 There is also a substantial set of SANE models, 19/100 in all, that underproduce $86$GHz emission.  These models have larger $\Rh$.
