@@ -135,13 +135,17 @@ Now consider constraints from unresolved 86GHz, NIR, and X-ray observations.  So
 %..............................................................................
 \subsubsubsection{NIR Median Flux}
 
-Most NIR photons are produced by the synchrotron process from electrons on the high energy end of the eDF.  For a one-zone model with $B = 30$G, the  critical frequency $\nu_{crit} \simeq \gamma^2 e B/(m_e c) \simeq 80$GHz and emission at $2.2\mu$m is therefore produced by electrons with  Lorentz factor $\gamma \simeq 10^3$; the mean $\gamma = 30$ for a thermal eDF with $\Theta_e = 10$.  NIR flux density will therefore be sensitive to $\Theta_e$ and therefore to $\Rh$, and to the magnetic field strength.
+NIR photons are produced by the synchrotron process from electrons on the high energy end of the eDF.  For the one-zone model with $B = 30$G and $\Theta_e = 10$ the mean Lorentz factor is $\gamma = 30$ and the synchrotron critical frequency $\nu_{crit} = \gamma^2 e B/(2 \pi m_e c) \simeq 80$GHz.  Emission at $2.2\mu$m is therefore produced by electrons with  Lorentz factor $\gamma \simeq 10^3$.  NIR flux density will therefore be sensitive to $\Theta_e$ and $B$.  Since both increase toward the horizon, and field strength is nearly independent of latitude, NIR photons are produced at small radius in regions where $\Theta_e$ is highest.  
 
-Interestingly, we find that some models are synchrotron-weak and Compton-strong in the NIR.  \note{Discussion of which models fall in this category}
+The sensitivity to $\Theta_e$ implies that NIR will be strongest for parameters with higher temperatures.  For SANEs the midplane temperature increases with $\abh$.  
+The sensitivity to $B$ implies that NIR will be strongest for parameters with stronger fields.  The $B$ depends on the GRMHD flow configuration and also on the mass unit (that is, the accretion rate), and so NIR will be strongest when the accretion rate is largest.  For SANEs, accretion rate declines as $\abh$ increases and $\Rh$ decreases (see Figure \ref{fig:accretion_outflow_power_illinois_thermal} below); for MADs the accretion rate dependence on $\abh$ and $\Rh$ is much weaker.
+Finally, Doppler effect (blueshift) enables photons that are detected at $2.2\mu$m to be emitted at longer wavelength in plasma that is moving toward the observer, and the accompanying Doppler beaming increases the detected intensity.  We therefore expect that NIR to increase with inclination and to peak in the midplane on the approaching side of the flow.
 
-Models that pass the NIR flux limit are shown in Figure \ref{fig:cmp_2um_flux}.
+Models that pass the NIR flux limit are shown in Figure \ref{fig:cmp_2um_flux}.   The rejected SANE models ($6\%$) tend to be at positive spin and high inclination, and the images are dominated by a bright spot on the approaching side of the disk.
+The rejected SANE models ($68\%$) include all models at $\Rh = 1$ and all but 2 models at $\Rh = 10$, where $\Theta_e$ tends to be larger, and {\em all} edge-on models, where Doppler boosting is largest.   
 
-All but $6\%$ of the SANE models pass; the exceptions are high spin, high inclination models where Doppler boosting increases the NIR flux from the bright spot on the approaching side of the disk.  Considering MAD models alone, $68\%$ fail the NIR test, including all but 1 model at $\Rh = 1$ and $10$.
+Interestingly, we find that some models are synchrotron-weak and Compton-strong in the NIR.  For example, $\abh = -0.94$ SANE models become optically thin at relatively low frequency as $\Rh$ goes to $1$, and thus synchrotron emission drops off rapidly as frequency increases.
+As $\Rh$ drops for these models the SED becomes dominated by a lower-luminosity bump of underlying Comptonized photons.  Just before this happens, at $\Rh = 10$, the combination of the Compton bump and synchrotron emission is enough to push the median NIR flux density above the observational limit, explaining the excluded SANE models at $\Rh = 10$, $\abh = -0.94$.   
 
 %\begin{figure}
 %  \centering
