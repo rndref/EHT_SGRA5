@@ -380,11 +380,11 @@ We now turn to models that differ from the standard aligned, thermal, $\Rh$ base
 
 \subsubsection{Critical Beta Model}
 
-First we consider the consequences of departures from the $\Rh$ temperature assignment scheme in thermal models.  The $\Rh$ prescription has been the default parameterization, but there are many other possibilities.  If we still assume that the ion-electron temperature ratio depends only on current local conditions a well-motivated alternative is the critical beta model  \cite{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  We consider only a single point in the critical beta parameter space, with $f = \beta_c = 1$. 
+First we consider the consequences of departures from the $\Rh$ temperature assignment scheme in thermal models.  The $\Rh$ prescription has been the default parameterization, but there are many other possibilities.  If we still assume that the ion-electron temperature ratio depends instantaneously on local conditions a well-motivated alternative is the critical beta model  \cite{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  We consider only a single point in the critical beta parameter space, with $f = \beta_c = 1$. 
 
-We have applied a subset of tests to the critical beta models (all except X-ray; NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}. 
+We have all tests except X-ray to the critical beta models (NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}. 
 
-All Critical beta models with high inclinations fail the EHT constraints, which is consistent with our main conclusion about the thermal models.  We also find that all critical beta models fail all considered non-EHT constraints.
+To summarize, all critical beta models fail the non-EHT constraints, with 86GHz size constraint rejecting the most models as too small.  The variability constraints fail $77\%$ of the models.  No models survive the combined EHT and non-EHT constraints, excluding variability.
 
 % cfg commented out 12 dec; edited down for consistency in style.  
 
@@ -394,16 +394,14 @@ All Critical beta models with high inclinations fail the EHT constraints, which 
 %A second motivation is that there are preliminary indications that the exponential electron cooling in the Critical Beta Model suppressed the SANE bremsstrahlung spectral component allowing more to pass the X-ray constraint.
 
 %==============================================================================
-\subsection{Nonthermal, Aligned Models}
 
-%\note{Koushik to write here about powerlaw nonthermal HAMR models.  Define a subsection, describe the results and how they differ from the thermal results.][Maybe add Tomohisa's models here as well.] [by including power-law, we see this and that change (only include significant changes from the thermal models)}
-
-So far we have assumed a Maxwell-J{\"u}ttner distribution function that describes a thermal population of electrons. Next we assume that these electrons are accelerated to a non-thermal tail. We model such the energy distribution of such a population of electrons using either a mixed thermal-powerlaw eDF or a pure/mixed kappa eDF. Similar to the thermal models, the accretion rates of all model sets in this section are normalized such that the time-averaged 230\,GHz compact flux is 2.4 Jy over 5,000M.
 
 %------------------------------------------------------------------------------
-\subsubsection{Thermal Plus Constant power-law models with $p_\mathrm{pl} = 4$}
+\subsubsection{Thermal Plus $p_\mathrm{pl} = 4$ Power-law Models}
 
-In this section, we employ a hybrid thermal/power-law tail distribution using \hamr/\bhoss, and assume a power-law index of $p=4$ with a constant non-thermal acceleration efficiency $\epsilon=n_{\rm e, power-law}/n_{\rm e, thermal}=0.1$. Following the method given in \citet{Chatterjee2021}, the power-law tail is stitched to the thermal core by choosing the minimum Lorentz factor limit of the power-law $\gamma_{\rm min}$ to be at the peak of the Maxwellian component. The maximum limit of the power-law is taken to $10^5 \gamma_{\rm min}$. Further, we note that the normalization value for the accretion rate is slightly smaller than that of the corresponding \hamr/\bhoss thermal models, suggesting that the power-law emission contributes to the 230\,GHz total intensity.
+So far we have assumed a thermal (Maxwell-J{\"u}ttner) eDF.  Next we assume that some electrons are accelerated to a non-thermal tail.  There are multiple ways of doing this, but we will continue to assume that the eDF depends instantaneously on local conditions and to set the accretion rate so that the time-averaged 230\,GHz compact flux is 2.4 Jy.  
+
+First we employ a hybrid thermal/power-law tail distribution using \hamr/\bhoss, and assume a power-law index of $p=4$ with a constant non-thermal acceleration efficiency $\epsilon=n_{\rm e, power-law}/n_{\rm e, thermal}=0.1$. Following the method given in \citet{Chatterjee2021}, the power-law tail is stitched to the thermal core by choosing the minimum Lorentz factor limit of the power-law $\gamma_{\rm min}$ to be at the peak of the Maxwellian component. The upper end of the power-law is taken to $10^5 \gamma_{\rm min}$.  The temperature of the thermal component is set by the $\Rh$ prescription.  We find that the accretion rate is slightly smaller than for corresponding thermal models, suggesting that the power-law components contributes to the 230\,GHz total intensity.
 
 %..............................................................................
 \subsubsubsection{230\,GHz VLBI pre-image size}
@@ -435,11 +433,13 @@ The addition of the power-law tail primarily increases the flux in the NIR and t
 
 \note{Razi to write here about variable kappa models.  Define a subsection, describe the results and how they differ from the thermal results.}\kc{might be better to move this to 4.2.3 along with bhac/bhoss results}
 
-\note{Christian to write here about constant kappa models.  Define a subsection, describe the results and how they differ from the thermal results.}\cmf{done}
 
 %------------------------------------------------------------------------------
 \subsubsection{Constant kappa models with $kappa=5$}
-\cmf{will work on the text}. Kunz et al. 2016 performed 3D kinetic numerical simulations of accretion disks and found that the distribution of the ions is well described by kappa distribution with $kappa=5$. We adopted this results and assume that the radiating electrons follows a similar distribution as the ion. Therefore, we performed radiative transfer calculations using a kappa distribution with fixed value of $\kappa=5$.
+
+Next we consider a model in which all electrons live in a kappa eDF which has a thermal core and a power-law tail.    
+
+\cite{2016PhRvL.117w5101K} performed 3D kinetic numerical simulations of accretion disks and found that the distribution of the ions is well described by kappa distribution with $kappa=5$. We adopted this results and assume that the radiating electrons follows a similar distribution as the ion. Therefore, we performed radiative transfer calculations using a kappa distribution with fixed value of $\kappa=5$.
 \newline \cmf{more details tomorrow: all MAD models overshoot the the NIR flux limit and only a few SANE models are below flux threshold. The SANE models which pass the NIR constraints produce too large 86\,GHz images}
 
 \subsubsection{Thermal plus Constant kappa models $\kappa=3.5$ with variable efficiency, $\varepsilon(\sigma,\beta)$}
