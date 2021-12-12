@@ -305,9 +305,13 @@ We have also considered a set of thermal, $\Rh$, MAD models run with the \koral 
 \subsubsection{Summary of Constraints on Thermal Models}
 
 None of the standard thermal models (Frankfurt or Illinois) survive the full gauntlet of constraints.   Variability rejects about 3/4 of models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models. 
-Evidently either (1) the models fail in some important respect, or (2) some of the data underlying the model tests are incorrect, or (3) the constraints have been misapplied.  
+Evidently either (1) the models fail in some important respect, or (2) some of the data underlying the model tests are incorrect, or (3) one or more of the constraints have been misapplied.  
 
-We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens if we leave out one constraint.  About 5\% of both the Frankfurt and Illinois model sets fail only 1 constraint.  For Frankfurt, 8 models fail only $\mi{3}$, and 2 fail only m-ring diameter.  For Illinois, 3 models fail only $\mi{3}$ and 5 fail only the 86GHz size.  
+We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens when we lift one constraint.  About 5\% of both the Frankfurt and Illinois model sets fail only 1 constraint.  For Frankfurt, 8 models fail only $\mi{3}$, and 2 fail only m-ring diameter.  For Illinois, 3 models fail only $\mi{3}$ and 5 fail only the 86GHz size.  Suspicion therefore falls on $\mi{3}$.  
+
+If we set aside $\mi{3}$ then 3 models survive from Frankfurt and Illinois.  All are MAD.  These are $\abh = 0.5, i = 30, \Rh = 40$; $\abh = 0.5, i = 30, \Rh = 160$; and $\abh = 0.94, i = 10, \Rh = 160$.  These models are clustered in parameter space and pass 10 of 11 tests.  They explain most of the data.  We will adopt these as ``best-bet'' models in the discussion that follows. 
+
+Why might the $\mi{3}$ be misinterpreted or incorrect?  One possibility is that there flux from extended structure that is slowly varying, captured in the light curves, and resolved out by EHT.  The required extended flux depends on the model, but would lie between 
 
 If we set aside variability but use all remaining constraints we are left with the models shown in Figure \ref{fig:all_cuts}. No SANE models, and 8/100 MAD models, survive. The passing models cluster at low inclination ($i \le 50\degree$) MAD models with $\Rh \ge 40$.  A full set of pass/fail values is provided in Appendix~\ref{app:tables}.
 
@@ -319,12 +323,12 @@ All models with $i > 50\degree$ are eliminated, most by multiple constraints, an
 
 For thermal model sets both EHT and non-EHT constraints individually eliminate many models, but together they eliminate all but 5\%.  The success of the models for EHT constraints (apart from variability) supports the use of the models for applying non-EHT constraints and highlights the importance of contemporaneous multiwavelength monitoring of \sgra.
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{./figures/All_Constraints.png}
-  \caption{Combined EHT and non-EHT constraints, excluding variability.}
-  \label{fig:all_cuts}
-\end{figure*}
+%\begin{figure*}
+%  \centering
+%  \includegraphics[width=\textwidth]{./figures/All_Constraints.png}
+%  \caption{Combined EHT and non-EHT constraints, excluding variability.}
+ % \label{fig:all_cuts}
+%\end{figure*}
 
 Variability, when included in the constraint map, would eliminate all thermal models.  Although a few models pass the variability constraints alone this does not mean that we should regard them as favored, since we expect to eliminate at least a couple of models incorrectly when using a $1\%$ cut for $200$ models.
 
