@@ -32,21 +32,28 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/sample_va.pdf}
-  \caption{Visibility amplitude plots for demonstrating the null location analysis.
-%    The left panels show two snapshots from a GRMHD simulation
-%    with SANE field configuration and black hole spin $a=0.5$ and the
-%    right panels the corresponding visibility amplitudes for a
-%    horizontal and a vertical cross section through the images.
-%    The snapshot in the top row obeys both selection criteria: the
-%    minima are in the 2.5-3.5 G$\lambda$ range and the amplitude in
-%    the $6-8$G$\lambda$ is below 6\%.
-%    The image in the bottom row, on the other hand, is an example that
-%    has no minimum in one cross section and too much power at long
-%    baselines, due to the asymmetry introduced by a transient bright
-%    structure in the flow.
-    \ckc{The above plot looks odd because it's just one of the snapshot.  Do we want to show the mean?  The range?}
+  \caption{Visibility amplitude plots for demonstrating the null
+    location analysis.
+    The four curves are the visibility amplitude of a snapshot as
+    functions of the $u$-$v$ distance at $-90\degree$ (horizontal),
+    $-45\degree$, $0\degree$ (vertical), and $45\degree$.
+    Because of the Hermitian symmetry, they cover 8 position angles.
+    As visual guidence, the vertical gray band marks the region
+    between 2.5 and 3.5\,$\mathrm{G}\lambda$, which covers the
+    expected location of the first null; and the horizonal gray region
+    marks the allowed median value ($V \leq (4\%/50\%) V_0$) of the
+    normalized visibility amplitude for long baselines.
+    We numerically find the local visibility minima along each
+    position angle, which are marked by solid points.
+    A model is rejected if \emph{all} the first nulls land
+    \emph{outside} the virtual gray band.
+    We also compute the median visiblity ampligutde for
+    $6\,\mathrm{G}\lambda \leq |u| \leq 8\,\mathrm{G}\lambda$ along
+    each position angle, which are marked by dotted lines.
+    A model is rejected if \emph{any} of these lines land
+    \emph{outside} the horizontal gray band.
     \aeb{A few very minor pedantic points: 1. Can we fix the plot domain to avoid the sudden ending of lines?  They are misleading in that they seem to show an end to a function that certainly continue. 2. The fonts are wrong and the font size is too small.  3. Colors are not being used effectively to indicate conceptual closeness.  4. This plot fails the Jon Aarons test: if it were printed in grayscale or seen by a colorblind individual it would be impenetrable.}}
-  \label{fig:cmp_VA}
+  \label{fig:sample_va}
 \end{figure*}
 
 %\begin{figure}
@@ -273,7 +280,7 @@ We have also considered a set of thermal, $\Rh$, MAD models run with the \koral 
 %   \includegraphics[width=\columnwidth]{./figures/va_hist.pdf}
 %   \caption{Distributions of $PSD(4\,\mathrm{G}\lambda)$ for thermal models, compared to the observed distribution from the 2017 EHT campaign.
 %   \dl{HAMR distribution will be updated later.}
-%   \aeb{The quantity on the horizontal axis has been called $a_4$ in \citetalias{PaperIV}.  I have a similar concern regarding the abrupt end of the curves in this plot as well.  What do they mean?  How should these be interpreted?  There are the standard presentation issues (see \autoref{fig:cmp_VA}).}
+%   \aeb{The quantity on the horizontal axis has been called $a_4$ in \citetalias{PaperIV}.  I have a similar concern regarding the abrupt end of the curves in this plot as well.  What do they mean?  How should these be interpreted?  There are the standard presentation issues (see \autoref{fig:sample_va}).}
 %   \ckc{Nice new plot!  Are you using matplotlib fill\_between?  I suggest setting edgecolor to None and only set facecolor.  (Or setting linewidth=0 should also remove the lines in the orange shade.)}}
 %   \label{fig:cmp_VLBI_var}
 % \end{figure}
