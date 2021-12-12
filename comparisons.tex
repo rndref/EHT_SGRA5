@@ -89,9 +89,11 @@ The asymmetry parameter is typically not well constrained. Most rejected models 
 %  \label{fig:cmp_m-ring_asymm}
 %\end{figure*}
 
-The ring diameter is better constrained than the asymmetry parameter.  It also varies systematically from model to model. A much larger fraction of models therefore fails the ring diameter test.
+The ring diameter is better constrained than the asymmetry parameter.  It also varies systematically from model to model.  For example, the distribution of diameters is much broader at $\Rh = 1$ than at larger values of $\Rh$.  More models therefore fail the ring diameter test.
 
-Most of the models that fail are low inclination models with ring diameters that are too large (only one model fails because the ring diameter is too small).  For example, the face-on, $\Rh = 10$ SANE models fail for all spins except $\abh = 0.94$ because the ring is too large.  The same is true for all face-on MAD models with $\Rh = 1$.
+Most of the models that fail are low inclination models with ring diameters that are too large (no models fail because the ring diameter is too small).  For example, the face-on, $\Rh = 10$ SANE models fail for all spins except $\abh = 0.94$ because the ring is too large.  The same is true for all face-on MAD models with $\Rh = 1$.
+
+Notice that the ring diameter is not degenerate with the second moment constraint; all models that fail the latter pass the former.  The m-rings contain a centered Gaussian component that tends to grow to absorb the emission from broad rings.   
 
 \begin{figure*}
   \centering
@@ -100,21 +102,21 @@ Most of the models that fail are low inclination models with ring diameters that
   \label{fig:cmp_m-ring_diam}
 \end{figure*}
 
-The m-ring width is best constrained and therefore most constraining.  Although the closure phases constrain the m-ring width as well, it is easy to see how the visibility amplitudes are affected by m-ring width: the width controls long-baseline amplitudes. Smaller width for a simple, symmetric ring corresponds to larger visibility amplitudes on long baselines.
+The m-ring width $w$ is best constrained and therefore most constraining.  Although the closure phases constrain $w$ as well, it is easy to see how $w$ affects visibility amplitudes: it controls long-baseline amplitudes.  For example, for a simple, symmetric ring the visibility amplitudes are a Bessel function multiplied by a Gaussian with width $\sim 1/w$, and increasing $w$ therefore decreases the amplitude of the long baselines.   
 
-All models that fail have m-ring widths that are too small.  This includes all but 3 MAD models at $\abh \le 0$ and all MAD models at $i = 90\degree$.
+All rejected models have median $w$ that is below the median $ \simeq 17.5\mu$as for the data. The rejected models include all but 3 MAD models at $\abh \le 0$ and all edge-on ($i = 90\degree$) MAD models.  MAD models exhibit a strong trend toward smaller $w$ as $i$ increases.  SANE models exhibit a similar but weaker trend. The SANE model images have  higher optical depth, broader rings, and more substructure than the MAD models.  Their $w$ distributions are typically broad, with mode well below $17.5\mu$as.  Only for $\abh = 0.94$, where the optical depth is lowest due to higher temperatures in the emitting region, do most of the models exhibit a sharply peaked $w$ distribution centered at $17.5\mu$as.  
 
 \begin{figure*}
  \centering
  \includegraphics[width=\textwidth]{./figures/Mring_w_Constraints.png}
-  \caption{m-ring widths}
+  \caption{Pass/fail plot for the m-ring widths.}
 % \label{fig:cmp_m-ring_width}
 \end{figure*}
 
 %..............................................................................
 \subsubsubsection{EHT Constraint Summary}
 
-Constraints based on EHT data are summarized in Figure \ref{fig:all_EHT_constraints}.  The cuts favor $\abh > 0$ models.  We are left with $31/100$ SANE models and $20/100$ MAD models.
+We can combine all EHT constraints with a logical {\em and} operation.  The results are summarized in Figure  \ref{fig:all_EHT_constraints}.  The cuts favor $\abh > 0$ models.  We are left with $33/100$ SANE models and $16/100$ MAD models.
 
 \begin{figure*}
   \centering
