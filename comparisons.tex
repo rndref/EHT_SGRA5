@@ -52,7 +52,14 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
     each position angle, which are marked by dotted lines.
     A model is rejected if \emph{any} of these lines land
     \emph{outside} the horizontal gray band.
-    \aeb{A few very minor pedantic points: 1. Can we fix the plot domain to avoid the sudden ending of lines?  They are misleading in that they seem to show an end to a function that certainly continue. 2. The fonts are wrong and the font size is too small.  3. Colors are not being used effectively to indicate conceptual closeness.  4. This plot fails the Jon Aarons test: if it were printed in grayscale or seen by a colorblind individual it would be impenetrable.}}
+    For the above examples, the left model failed because the $u$-$v$
+    distance of first null is too short; the middle model failed
+    because the $u$-$v$ distance of the first null is too long
+    \emph{and} some of the long baseline visibilities are too high;
+    the right model failed because all the long baseline visibilities
+    are too high.
+    \aeb{A few very minor pedantic points: 1. Can we fix the plot domain to avoid the sudden ending of lines?  They are misleading in that they seem to show an end to a function that certainly continue. 2. The fonts are wrong and the font size is too small.  3. Colors are not being used effectively to indicate conceptual closeness.  4. This plot fails the Jon Aarons test: if it were printed in grayscale or seen by a colorblind individual it would be impenetrable.}
+    \ckc{Took care of 1 and 2.  The color is not too important in my opinion because all we care about this constraint is ``or'' and ``and'' of different conditions.}}
   \label{fig:sample_va}
 \end{figure*}
 
@@ -297,7 +304,9 @@ We have also considered a set of thermal, $\Rh$, MAD models run with the \koral 
 %------------------------------------------------------------------------------
 \subsubsection{Summary of Constraints on Thermal Models}
 
-None of the standard thermal models (Frankfurt or Illinois) survive the full gauntlet of constraints.   Variability rejects about 3/4 of models and prefers SANEs, which are quieter than MADs.  The remaining constraints prefer MAD models.   
+None of the standard thermal models (Frankfurt or Illinois) survive the full gauntlet of constraints.   Variability rejects about 3/4 of models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models. 
+
+This implies that either (1) the models are wrong, or (2) some of the data underlying the model tests are incorrect (, or (3) the constraints have been misapplied.  
 
 If we set aside variability but use all remaining constraints we are left with the models shown in Figure \ref{fig:all_cuts}. No SANE models, and 8/100 MAD models, survive. The passing models cluster at low inclination ($i \le 50\degree$) MAD models with $\Rh \ge 40$.  A full set of pass/fail values is provided in Appendix~\ref{app:tables}.
 
