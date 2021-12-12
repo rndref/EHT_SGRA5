@@ -439,7 +439,7 @@ The addition of the power-law tail primarily increases the flux in the NIR and t
 %------------------------------------------------------------------------------
 \subsubsection{Constant kappa models with $kappa=5$}
 
-Next we consider a model in which {\em all} electrons are in a kappa eDF, which has a thermal core and a power-law tail.  We set $\kappa = 5$ everywhere (the power-law tail then has $p = \kappa - 1 = 4$),  motivated by \cite{2016PhRvL.117w5101K}, who found $\kappa = 5$ to be a good fit to the ion DF in a 3D hybrid simulation of MHD turbulence.  
+Next we consider a model in which {\em all} electrons are in a kappa eDF, which has a thermal core and a power-law tail.  We set $\kappa = 5$ everywhere,  motivated by \cite{2016PhRvL.117w5101K}, who found $\kappa = 5$ to be a good fit to the ion DF in a 3D hybrid simulation of MHD turbulence.  The power-law tail then has $p = \kappa - 1 = 4$, and at high frequency $\nu L_\nu \sim \nu^s$ where $s = 2 - \kappa/2 = -1/2$.  
 
 % cfg 12-dec: this section will be commented out soon unless we receive more results
 
@@ -448,7 +448,7 @@ Next we consider a model in which {\em all} electrons are in a kappa eDF, which 
 
 \subsubsection{Mixed Thermal/Kappa Model}
 
-Next we consider a mixed thermal/nonthermal eDF, with the nonthermal component following the kappa DF.  We set $\kappa = 3.5$
+Next we consider a mixed thermal/nonthermal eDF, with the nonthermal component following the kappa DF.  We set $\kappa = 3.5$.  At high frequency $\nu L_\nu \sim \nu^s$ with $s = 2 - \kappa/2 = 1/4$.  This is consistent
 
 To investigate the effect of mixed thermal/nonthermal distribution functions, we combine a thermal electron distribution function with a kappa electron distribution with $\kappa=3.5$. The value of $\kappa=3.5$ is motivated from the spectral slope in the NIR during a quiescent state \cmf{add reference here} \kc{suggest to say that the slope is a limit as $\alpha=0.6$ where $F_{\nu}\propto \nu^{\alpha}$ is seen in the flaring state, e.g., Hornstein+2006}.  In addition to the fixed kappa value we assume that the fraction between thermal and non-thermal particles depends on the local plasma properties, e.g, the magnetisation, $\sigma$, and the plasma beta parameter, $\beta_{\rm p}$. Given this assumption we can write the total emissivity as:
 \begin{equation}
