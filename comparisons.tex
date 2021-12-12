@@ -107,7 +107,7 @@ Most of the models that fail are low inclination models with ring diameters that
 
 Notice that the ring diameter is not degenerate with the second moment constraint; all models that fail the latter pass the former.  Recall that in addition to a blurred ring, the m-rings model contains a centered Gaussian component; the Gaussian tends to grow to absorb the emission when the ring is very extended.
 
-The distribution of ring diameters for many SANE models is multimodal (consistently in the Frankfurt and Illinois model sets), with a secondary peak in the distribution at $\sim 35\mu$as.  All $\Rh = 1$ SANE models show this secondary peak.  These models' images tend to have a well defined ring at the critical impact parameter and a second broad maximum in intensity at larger impact parameter.  The second peak in the distribution is a consequence of limited baseline coverage.
+The distribution of ring diameters for many SANE models is multimodal (consistently in the Frankfurt and Illinois \monika{can we stop calling these models illinois or frankfurt models???} model sets), with a secondary peak in the distribution at $\sim 35\mu$as.  All $\Rh = 1$ SANE models show this secondary peak.  These models' images tend to have a well defined ring at the critical impact parameter and a second broad maximum in intensity at larger impact parameter.  The second peak in the distribution is a consequence of limited baseline coverage.
 
 \begin{figure*}
   \centering
@@ -307,11 +307,13 @@ We have also considered a set of thermal, $\Rh$, MAD models run with the \koral 
 None of the standard thermal models (Frankfurt or Illinois) survive the full gauntlet of constraints.   Variability rejects about 3/4 of models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models. 
 Evidently either (1) the models fail in some important respect, or (2) some of the data underlying the model tests are incorrect, or (3) one or more of the constraints have been misapplied.  
 
-We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens when we lift one constraint.  About 5\% of both the Frankfurt and Illinois model sets fail only 1 constraint.  For Frankfurt, 8 models fail only $\mi{3}$, and 2 fail only m-ring diameter.  For Illinois, 3 models fail only $\mi{3}$ and 5 fail only the 86GHz size.  Suspicion therefore falls on $\mi{3}$.  
+We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens when we lift one constraint.  About 5\% of both the Frankfurt and Illinois model sets fail only 1 constraint.  For Frankfurt, 8 models fail only $\mi{3}$, and 2 fail only m-ring diameter.  For Illinois, 3 models fail only $\mi{3}$ and 5 fail only the 86GHz size.  Suspicion therefore falls on $\mi{3}$, which rejecting $\approx 70\%$ of Frankfurt and Illinois models.
+
+Why might the $\mi{3}$ constraint be wrong?  One possibility is that there is flux from extended structure that is slowly varying, captured in the light curves, and resolved out by EHT.  The required extended flux is model-dependent, but if $\sim 50\%$ of the flux were in an extended component then nearly all the MAD models would pass $\mi{3}$, and many of the SANE models would be rejected as too quiet.  
+
+\cfg{need learned commentary on the possibility of extended structure here.} 
 
 If we set aside $\mi{3}$ then 3 models survive from Frankfurt and Illinois.  All are MAD.  These are $\abh = 0.5, i = 30, \Rh = 40$; $\abh = 0.5, i = 30, \Rh = 160$; and $\abh = 0.94, i = 10, \Rh = 160$.  These models are clustered in parameter space and pass 10 of 11 tests.  They explain most of the data.  We will adopt these as ``best-bet'' models in the discussion that follows. 
-
-Why might the $\mi{3}$ be misinterpreted or incorrect?  One possibility is that there flux from extended structure that is slowly varying, captured in the light curves, and resolved out by EHT.  The required extended flux depends on the model, but would lie between 
 
 If we set aside variability but use all remaining constraints we are left with the models shown in Figure \ref{fig:all_cuts}. No SANE models, and 8/100 MAD models, survive. The passing models cluster at low inclination ($i \le 50\degree$) MAD models with $\Rh \ge 40$.  A full set of pass/fail values is provided in Appendix~\ref{app:tables}.
 
