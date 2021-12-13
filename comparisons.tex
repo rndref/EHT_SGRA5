@@ -445,17 +445,25 @@ The addition of the power-law tail primarily increases the flux in the NIR and t
 \subsubsection{Constant kappa models with $kappa=5$}
 
 Next we consider a model in which {\em all} electrons are in a kappa eDF, which has a thermal core and a power-law tail.  We set $\kappa = 5$ everywhere,  motivated by \cite{2016PhRvL.117w5101K}, who found $\kappa = 5$ to be a good fit to the ion DF in a 3D hybrid simulation of MHD turbulence.  The power-law tail then has $p = \kappa - 1 = 4$, and at high frequency $\nu L_\nu \sim \nu^s$ where $s = 2 - \kappa/2 = -1/2$.
-\cmf{If not stated otherwise the width parameter $w$ of the kappa distribution (see Eq. \ref{eq:kappa}) is set by $w= (\kappa - 3) \Theta_e/\kappa$, where the dimensionless electron temperature, $\Theta_e$, is computed according to Eq. \ref{eq:rhigh_prescription}. The underlying GRMHD simulations are taken from the \bhac runs and we use the time window from 25\,kM to 30\,kM. The radiative transfer is done employing the GRRT code \bhoss and we created images every 50\,M using the same inclinations and $R_{\rm high}$ values as for the thermal models. Each model is individually normalised to an average flux of 2.4\,Jy at 230\,GHz.
-\subsubsubsection{230\,GHz VLBI pre-image size} In the case of the MAD models the size of the $\kappa=5$ does not change. This can be explained by the fact that most of the emission is produced in the midplane. For the SANE models we find two different behaviours: The source size slightly increases for $R_{\rm high}<40$ and decreases for $R_{\rm high}\qeq 40$ especially in for the positive black hole spins and high inclinations. In the SANE case the mass accretion rate decreases as compared to the thermal models indicating that particles from the tail of the kappa distribution contribute the 230\,GHz flux. Increasing the $R_{\rm high}$ value the emission region is shifted from the midplane towards the polar region for the SANE models. Given that for the kappa distribution more emission is generated as in the thermal case the emission region becomes more compact. Together with the higher Doppler boosting at shorter distances form the black hole the source size decreases which explains the trend with black hole spin.\newline \subsubsubsection{86\,GHz flux and Source Size} The 86\,GHz image size behave similar than the 230\,GHz images.
+\cmf{If not stated otherwise the width parameter $w$ of the kappa distribution (see Eq. \ref{eq:kappa}) is set by $w= (\kappa - 3) \Theta_e/\kappa$, where the dimensionless electron temperature, $\Theta_e$, is computed according to Eq. \ref{eq:rhigh_prescription}. The underlying GRMHD simulations are taken from the \bhac runs and we use the time window from 25\,kM to 30\,kM. The radiative transfer is done employing the GRRT code \bhoss and we created images every 50\,M using the same inclinations and $R_{\rm high}$ values as for the thermal models. Each model is individually normalised to an average flux of 2.4\,Jy at 230\,GHz.}
+
+\subsubsubsection{230\,GHz VLBI pre-image size}
+
+In the case of the MAD models the size of the $\kappa=5$ does not change. This can be explained by the fact that most of the emission is produced in the midplane. For the SANE models we find two different behaviours: The source size slightly increases for $R_{\rm high}<40$ and decreases for $R_{\rm high}\geq 40$ especially in for the positive black hole spins and high inclinations. In the SANE case the mass accretion rate decreases as compared to the thermal models indicating that particles from the tail of the kappa distribution contribute the 230\,GHz flux. Increasing the $R_{\rm high}$ value the emission region is shifted from the midplane towards the polar region for the SANE models. Given that for the kappa distribution more emission is generated as in the thermal case the emission region becomes more compact. Together with the higher Doppler boosting at shorter distances form the black hole the source size decreases which explains the trend with black hole spin.
+
+\subsubsubsection{86\,GHz flux and Source Size} The 86\,GHz image size behave similar than the 230\,GHz images.
 
 \subsubsubsection{NIR constraints}
 All MAD model generate more NIR emission than the 1.0\,mJy and thus fail the NIR constraints. Similar, the SANE models with $R_{\rm high}>1$ overshoot the NIR constraint.
 
 
-\subsubsubsection{Light Curve Varaibility} The mi3 constraint is computed for a time window of length 5000\,$\rm{GM/c^3}$. This window is a factor three shorter than for the thermal models and thus a direct comparision cannot be performed. However we find that 66\% of the models fail this test. The number roughly agrees with the thermal models and thus we conclude that the non-thermal particles included via a kappa eDF with $kappa=5$ does not affect the variability.
+\subsubsubsection{Light Curve Variability}
+
+The mi3 constraint is computed for a time window of length 5000\,$\rm{GM/c^3}$. This window is a factor three shorter than for the thermal models and thus a direct comparison cannot be performed. However we find that 66\% of the models fail this test. The number roughly agrees with the thermal models and thus we conclude that the non-thermal particles included via a kappa eDF with $kappa=5$ does not affect the variability.
 
 \subsubsubsection{M-ring Constraint}
-\note{do be done}
+
+\note{to be done}
 
 % cfg 12-dec: this section will be commented out soon unless we receive more results
 
