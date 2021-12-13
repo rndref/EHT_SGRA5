@@ -25,8 +25,8 @@ The constraints are heterogeneous and it is not possible to treat theme complete
 %\begin{figure*}
 %  \centering
 %  \includegraphics[width=0.5\textwidth]{figures/va_comparison.pdf}%
-%% \note{altex: (left) visibility amplitude vs baseline for the day(s) that
- %   this study use, overplotted by the visibility amplitude from a
+%% \note{altex: (left) VA vs baseline for the day(s) that
+ %   this study use, overplotted by the VA from a
 %    fiducial model.
 %    Similar to paper~II, figure~7.
 %    Visually mark null location constraint, pre-imaging size (i.e.,
@@ -45,33 +45,35 @@ The constraints are heterogeneous and it is not possible to treat theme complete
 %  \label{fig:visibility}
 %\end{figure*}
 
-%The EHT observed \sgra at 1.3 mm during the 2017 April 5--11 observing campaign and obtained horizon scale complex visibilities.  Figure~\ref{fig:visibility} shows the visibility amplitudes on April 6 and 7 from  the HOPS pipeline, overplotted with visibility amplitudes derived from a model.  Evidently there are nulls near $\sim 5\,\mathrm{G}\lambda$ and $7\,\mathrm{G}\lambda$, suggesting a ringlike structure.
+%The EHT observed \sgra at 1.3 mm during the 2017 April 5--11 observing campaign and obtained horizon scale complex visibilities.  Figure~\ref{fig:visibility} shows the VA on April 6 and 7 from  the HOPS pipeline, overplotted with VA derived from a model.  Evidently there are nulls near $\sim 5\,\mathrm{G}\lambda$ and $7\,\mathrm{G}\lambda$, suggesting a ringlike structure.
 
 We test the models against EHT interferometric data in three ways.
-First, we compare an estimate of the source size (``second moment constraint'') to an estimate from short baselines.
-Second, we check the location of the first minimum in the visibility amplitudes and the value of the visibility amplitudes on long baselines (``null constraint'').
-Finally, using a variant of a procedure from \citetalias{PaperIV}, we compare fits for the diameter, width, and asymmetry of an m-ring (a parameterized image-plane model) to the GRMHD models.
+First, we compare an estimate (``pre-image'') of the source size to an
+estimate from the short baseline visibility amplitudes (VAs).
+Second, we check the location of the first minimum and the long
+baselines values of the VAs (``\vam'').
+Finally, using a variant of a procedure from \citetalias{PaperIV}, we
+compare fits for the diameter, width, and asymmetry of an m-ring (a
+parameterized image-plane model) to the GRMHD models.
 
 %------------------------------------------------------------------------------
 \subsubsection{230\GHz VLBI Pre-Image Size}
 
-%\ckc{ck's first pass}
-%\cfg{edited on 2 dec}
-
-\ckc{I suggest we move the 2nd moment first, then null location, then
-  m-ring.
-  The reason is that the wide (unconstraining) 2nd moment is caused by
-  allowing it to be just a Guassian (i.e., ignore the minima).
-  We then tighten the constraint by regonizing there's a minima using
-  the null analysis.
-  And then do the fit.}
+%% \ckc{ck's first pass}
+%% \cfg{edited on 2 dec}
+%% \ckc{I suggest we move the 2nd moment first, then null location, then
+%%   m-ring.
+%%   The reason is that the wide (unconstraining) 2nd moment is caused by
+%%   allowing it to be just a Guassian (i.e., ignore the minima).
+%%   We then tighten the constraint by regonizing there's a minima using
+%%   the null analysis.
+%%   And then do the fit.}
 
 The source size can be characterized using the second moments of the
 source image on the sky.
 The second moments in the image domain map to second derivatives of
 the visibilities near zero baseline in the $uv$ domain, so short
-baseline visibility amplitudes can be used to directly estimate the
-source size.
+baseline VAs can be used to directly estimate the source size.
 
 This procedure is used in \citetalias{PaperII} to set an upper limit
 of 95\uas FWHM on the second moment and lower limit of 38\uas FWHM on
@@ -101,33 +103,64 @@ $\lambda_\mathrm{min} < 93.6\uas$.
 We reject models with a compliance fraction $< 0.01$.
 
 %------------------------------------------------------------------------------
-\subsubsection{230\GHz VLBI Null Location}
+%\subsubsection{230\GHz VLBI Null Location}
+\subsubsection{230\GHz VLBI Visibility Amplitude Morphology}
 
-Our second constraint provides a simple morphological check on the visibility amplitudes.
-We ask two questions of each model snapshot: is the first minimum in the visibilities in about the right place,
-and are the long-baseline visibility amplitudes comparable to the data?
-For comparison, we use data from \aprilvii, which has the best $uv$ coverage near minima in the visibility amplitudes.
+Our second constraint provides a simple morphological check on the
+VAs.
+We ask two questions of each model snapshot: \emph{i})~is the first
+minimum in the visibilities in about the right place, and
+\emph{ii})~are the long-baseline VAs comparable to the data?
+For comparison, we use data from \aprilvii, which has the best $u$-$v$
+coverage near minima in the VAs.
 
-The minima locations and long-baseline amplitudes are sensitive to the source structure.
-For example if the source is a simple, circularly symmetric ring of finite width then the location of the first minimum depends only on the ring diameter, while the visibility amplitude on long baselines depends mainly on ring width.
-GRMHD models are more complicated, with significant structural fluctuations.
-The minima locations and depths, and long-baseline amplitudes, are expected to fluctuate (e.g., \citealt{2018ApJ...856..163M}, \citetalias{M87PaperV}.
+The minima locations and long-baseline amplitudes are sensitive to the
+source structure.
+For example if the source is a simple, circularly symmetric ring of
+finite width then the location of the first minimum depends only on
+the ring diameter, while the VAs on long-baselines depends mainly on
+ring width.
+GRMHD models are more complicated, with significant structural
+fluctuations.
+The minima locations and depths, and long-baseline amplitudes, are
+expected to fluctuate (e.g., \citealt{2018ApJ...856..163M},
+\citetalias{M87PaperV}.
 
-For the ``null location'', the first visibility minimum in both the N-S and E-W directions occurs between 2.5--3.5\,$\mathrm{G}\lambda$ in the data \citetalias{PaperII}.
+For the ``null location'', the first visibility minima in both the N-S
+and E-W directions occurs between 2.5--3.5\,$\mathrm{G}\lambda$ in the
+data \citetalias{PaperII}.
 We do not consider the depth of the null in this simple check.
 
 \cfg{best references for scattering?}
 \ckc{add Dimitrios and Michael's papers}
-For the ``long baseline'' interval between 6--8\,$\mathrm{G}\lambda$, the visibility amplitude has $\lesssim 4\%$ of the zero-baseline flux.
-One complication when comparing models to data on long baselines is the effect of interstellar scattering.
-Diffractive scattering effectively convolves the image with a smooth kernel and can reduce the amplitudes to about $\sim 50\%$ of their unscattered values in the 6--8\,$\mathrm{G}\lambda$ range;
-refractive scattering, on the other hand, introduces noise at all baselines of order 0.5--3\%, depending on the particular characteristics of the scattering screen \citep{2018arXiv180501242P, 2018ApJ...865..104J}.
-To account for these effects, we classify a model snapshot with $|V|$ in this range that is $< 5\%$ of the zero baseline flux as compliant.
+For the ``long-baseline'' interval between 6--8\,$\mathrm{G}\lambda$,
+the VAs has $\lesssim 4\%$ of the zero-baseline flux.
+One complication when comparing models to data on long-baselines is
+the effect of interstellar scattering.
+Diffractive scattering effectively convolves the image with a smooth
+kernel and can reduce the amplitudes to about $\sim 50\%$ of their
+unscattered values in the 6--8\,$\mathrm{G}\lambda$ range; refractive
+scattering, on the other hand, introduces noise at all baselines of
+order 0.5--3\%, depending on the particular characteristics of the
+scattering screen \citep{2018arXiv180501242P, 2018ApJ...865..104J}.
+To account for these effects, we classify a model snapshot with $|V|$
+in this range that is $< 5\%$ of the zero baseline flux as compliant.
 
-To apply this constraint, we compute the visibility amplitudes $V$ of each model snapshot along position angles $0^\degree$, $45^\degree$, $90^\degree$, $135^\degree$.  We find the first minimum numerically and compute the median visibility amplitude between 6 and 8\,$\mathrm{G}\lambda$.
-We classify a snapshot as compliant if \emph{i}) for at least one position angle the first minimum falls between 2.5 and 3.5\,$\mathrm{G}\lambda$ and \emph{ii}) at no position angle does the median visibility amplitude exceed $4\% / 50\%$ of the zero-baseline flux.
+To apply this constraint, we compute the VA $V$ of each model snapshot
+along position angles (PAs) $0^\degree$, $45^\degree$, $90^\degree$,
+$135^\degree$.
+Because of Hermitian symmetry this actually covers eight PAs.
+We find the first minima numerically and compute the median VAs
+between 6 and 8\,$\mathrm{G}\lambda$.
+We classify a snapshot as compliant if
+\emph{i})~for at least one position angle the first minimum falls
+between 2.5 and 3.5\,$\mathrm{G}\lambda$ and
+\emph{ii})~at no position angle does the median VAs exceed $4\% /
+50\%$ of the zero-baseline flux.
 
-We evaluate the fraction of snapshots from each model that are compliant using the criteria described above.  We reject models with compliance fraction $< 1\%$.
+We evaluate the fraction of snapshots from each model that are
+compliant using the criteria described above.
+We reject models with compliance fraction $< 1\%$.
 
 %------------------------------------------------------------------------------
 \subsubsection{230\GHz M-Ring Fitting}
@@ -141,7 +174,7 @@ The simplified m-ring model has 10 parameters; 3 are well constrained and physic
 
 We fit the m-ring independently to ``snapshots'' consisting of 2-minute intervals of EHT data. Over these short intervals, we approximate the source to be static.  Uncertainties in the fitted m-ring parameters are dominated by the limited baseline coverage during these snapshots rather than by calibration uncertainties or thermal noise. Because snapshots that are close in time sample nearly identical baselines, they do not provide additional model constraints.
 
-Thus, to compare fitted m-ring parameters from the EHT data to those for synthetic data from simulations, we focus on a reduced comparison dataset that consists of only a subset of scans with the best baseline coverage. We select scans that are widely separated in time, so that they sample distinct baseline coverage. For the comparison dataset we selected ten 120-\sec scans spread approximately uniformly through EHT observations on \aprilvii.  They are separated by an average of $\simeq 1240\sec \simeq 60 \tg$, which is small compared to the visibility amplitude correlation time in the models (see Georgiev et al. 2022). The scans were selected to have > 10 baselines, and integration time at all stations $> 40s$.    Only modest changes in model selection were observed if any one scan was removed from the comparison.  The data were de-scattered before fitting, that is, the visibility amplitudes were divided by the scattering kernel.  Maximum likelihood m-ring parameters were found for each scan.
+Thus, to compare fitted m-ring parameters from the EHT data to those for synthetic data from simulations, we focus on a reduced comparison dataset that consists of only a subset of scans with the best baseline coverage. We select scans that are widely separated in time, so that they sample distinct baseline coverage. For the comparison dataset we selected ten 120-\sec scans spread approximately uniformly through EHT observations on \aprilvii.  They are separated by an average of $\simeq 1240\sec \simeq 60 \tg$, which is small compared to the VA correlation time in the models (see Georgiev et al. 2022). The scans were selected to have > 10 baselines, and integration time at all stations $> 40s$.    Only modest changes in model selection were observed if any one scan was removed from the comparison.  The data were de-scattered before fitting, that is, the VA were divided by the scattering kernel.  Maximum likelihood m-ring parameters were found for each scan.
 
 The maximum likelihood m-ring parameters are listed in Table~\ref{tab:mringfits}.  Evidently the fit parameters are noisy.  The fit for $d$ range from 39\uas to 84\uas, for $w$ from 9\uas to 21\uas, and for $\beta_1$ from $0.04$ to $0.48$ (we require $\beta_1 \le 0.5$ to guarantee  positivity of the model image).
 
@@ -173,7 +206,7 @@ The variation in fit parameters could be caused by source variability, thermal n
 
 Next, we read in a series of model images, generate synthetic data for each image for each scan at four assumed position angles for the image, and fit m-rings to the synthetic data.  This produces a distribution of m-ring parameters for each model.
 
-The synthetic data is generated as follows.  A model image $I(x,y)$ is fourier transformed to complex visibilities $V(u,v)$ with an assumed position angle, then sampled on baselines $i$ drawn from the comparison scan, $V_i \equiv V(u_i,v_i)$.  Normally distributed thermal noise $\delta V_{th,i}$ with amplitude based on telescope performance during the scan is added, and multiplicative, normally distributed noise with unit variance $N$ is added to crudely model gain corrections: $\tilde{V}_i = V_i (1 + \epsilon N) + \delta V_{th,i}$.  We set $\epsilon = 0.05$, but no significant changes in fit parameters were observed for $\epsilon = 0.02$.  We then fit to the visibility amplitudes $|\tilde{V}_i|$ and closure phases.
+The synthetic data is generated as follows.  A model image $I(x,y)$ is fourier transformed to complex visibilities $V(u,v)$ with an assumed position angle, then sampled on baselines $i$ drawn from the comparison scan, $V_i \equiv V(u_i,v_i)$.  Normally distributed thermal noise $\delta V_{th,i}$ with amplitude based on telescope performance during the scan is added, and multiplicative, normally distributed noise with unit variance $N$ is added to crudely model gain corrections: $\tilde{V}_i = V_i (1 + \epsilon N) + \delta V_{th,i}$.  We set $\epsilon = 0.05$, but no significant changes in fit parameters were observed for $\epsilon = 0.02$.  We then fit to the VA $|\tilde{V}_i|$ and closure phases.
 %arg$(\tilde{V}_i \tilde{V}_j \tilde{V}_k^*)$, where $ijk$ form a triangle in the $(u,v)$ plane.
 The procedure was repeated for 4 positions angles (orientations of the image on the sky) and for model images separated by $500 \tg$ (comparable to a correlation time; no significant changes were observed if more position angles were used).  This results in, for example, a sample of $30$ fits per scan per position angle for the Illinois thermal model set, or a total of $30 \times 10 = 300$ samples in each distribution.
 
@@ -248,7 +281,7 @@ Similar to section \ref{subsec:nir}, we estimate $\nu L_\nu(6\,\mathrm{keV})$ in
 
 \sgra shows variability on a wide range of timescales.  This is expected: fluctuations in stellar wind feeding at the scale of the S-stars plausibly introduce long timescale variations, while turbulence at smaller radii, down to the scale of the event horizon, plausibly introduce a spectrum of shorter timescale variations.  Quantitative comparison of observed variability to the models is therefore a potentially powerful tool for model selection.
 
-Here we consider two measures of variability: one that characterizes variability of 230\GHz flux density in the light curves \citep{Wielgus2022} and a second that characterizes variability of the visibility amplitudes in EHT data \citep{PaperIV, NoiseModeling}.
+Here we consider two measures of variability: one that characterizes variability of 230\GHz flux density in the light curves \citep{Wielgus2022} and a second that characterizes variability of the VA in EHT data \citep{PaperIV, NoiseModeling}.
 
 \cfg{are these numbers still correct?}
 We will find that $> 90\%$ of models fail the combined variability tests: the data is quieter than the models.  This is the most severe downselect of all our constraints. Given the noisy nature of the model selection process we do not interpret this as success for the surviving $10\%$, all of which fail other constraints.  Instead we interpret this as a particular and interesting failure of the entire class of GRMHD models to reproduce the observed variability.  We discuss possible reasons for this {\em variability crisis} in Section~\ref{sec:discussion}.
@@ -299,7 +332,7 @@ For each model we evaluate a light curve and use that to generate a distribution
 
 %\ckc{I think Boris needs to write this...}
 
-%Fluctuations in source structure will lead to fluctuations in visibility amplitudes. \citealt{NoiseModeling} describes a technique to measure the variance of the spatially-debiased visibility amplitudes at a location in the $(u,v)$-plane. Due to the sparse coverage of the 2017 EHT observations, this variance is calculated over the first four days (April 5, 6, 7, 10), and azimuthally averaged. Using the contemporaneous measurements from the intra-site baselines, the EHT data is first normalized by the lightcurve, removing the most variable component from the data \citep{NoiseModeling,Georgiev_2022}. The resulting quantity $\sigma_\text{var}^2 (|u|)$ is a unitless measure of the variability at a baseline length $|u|$, separated from the variability present in the lightcurve. This variability is treated as an inflated noise budget when making images of and fitting models to the 2017 EHT observations of \sgra \citepalias{PaperIII,PaperIV}.
+%Fluctuations in source structure will lead to fluctuations in VA. \citealt{NoiseModeling} describes a technique to measure the variance of the spatially-debiased VA at a location in the $(u,v)$-plane. Due to the sparse coverage of the 2017 EHT observations, this variance is calculated over the first four days (April 5, 6, 7, 10), and azimuthally averaged. Using the contemporaneous measurements from the intra-site baselines, the EHT data is first normalized by the lightcurve, removing the most variable component from the data \citep{NoiseModeling,Georgiev_2022}. The resulting quantity $\sigma_\text{var}^2 (|u|)$ is a unitless measure of the variability at a baseline length $|u|$, separated from the variability present in the lightcurve. This variability is treated as an inflated noise budget when making images of and fitting models to the 2017 EHT observations of \sgra \citepalias{PaperIII,PaperIV}.
 
 % This quantity can be measured from the GRMHD simulations and is explored in detail in \citealt{Georgiev_2022}. All simulations show that $\sigma_\text{var}^2$ is a broken power law, with highly similar parameters. The GRMHD simulations are typically shorter than the observing period, and thus offer less than one realization of $\sigma_\text{var}^2$ per simulation, which itself is expected to vary in time. \citealt{Georgiev_2022} shows that the distribution of $\sigma_\text{var}^2$ as measured from multiple windows and codes covers the four-day data measurement. The uncertainties in the measurement from the GRMHD simulations due to simulation resolution, the fastlight approximation, and code differences are encapsulated by this larger uncertainty due to the variability of $\sigma_\text{var}^2$.
 
@@ -307,13 +340,13 @@ For each model we evaluate a light curve and use that to generate a distribution
 
 % For comparison to the models, we only take $\sigma_\text{var}^2 (4\ G\lambda)$. For the models, we use the techniques from \citealt{Georgiev_2022}, diffractively scattering, averaging over black hole spin orientation relative to the diffractive scattering screen, and azimuthally averaging.
 
-Fluctuations in spatial structure of the source will lead to corresponding fluctuations in visibility amplitudes.  Here we compare  the resulting power spectrum of small-scale structural variability from EHT observations with that predicted by GRMHD models.
+Fluctuations in spatial structure of the source will lead to corresponding fluctuations in VA.  Here we compare  the resulting power spectrum of small-scale structural variability from EHT observations with that predicted by GRMHD models.
 
 \cfg{Was April 11 excluded from variability analysis?}
 
-A nonparametric technique to measure the variance of the spatially-detrended visibility amplitudes at a location in the $(u,v)$-plane is described in \citet{NoiseModeling}, and briefly summarized here.  We use EHT observations of \sgra from April 5, 6, 7, and 10.  To exclude correlations associated with  variations in the total flux we normalize the visibility amplitude data with the contemporaneous intrasite light curve \citep{Georgiev_2022}.  The lightcurve-normalized visibility ampitudes are then linearly detrended, and variances computed and azimuthally averaged \citep{NoiseModeling}.  The result, $\sigma_\text{var}^2 (|u|)$, is a measure of the fractional structural variability as a function of baseline length $|u|$.  The $\sigma_\text{var}^2 (|u|)$ is included in an inflated error budget when making images of and fitting models to the 2017 EHT observations of \sgra \citepalias{PaperIII, PaperIV}.
+A nonparametric technique to measure the variance of the spatially-detrended VA at a location in the $(u,v)$-plane is described in \citet{NoiseModeling}, and briefly summarized here.  We use EHT observations of \sgra from April 5, 6, 7, and 10.  To exclude correlations associated with  variations in the total flux we normalize the VA data with the contemporaneous intrasite light curve \citep{Georgiev_2022}.  The lightcurve-normalized visibility ampitudes are then linearly detrended, and variances computed and azimuthally averaged \citep{NoiseModeling}.  The result, $\sigma_\text{var}^2 (|u|)$, is a measure of the fractional structural variability as a function of baseline length $|u|$.  The $\sigma_\text{var}^2 (|u|)$ is included in an inflated error budget when making images of and fitting models to the 2017 EHT observations of \sgra \citepalias{PaperIII, PaperIV}.
 
-% cfg 11 dec.  edited for language.  eliminated "red noise" which suggests a power spectrum that rises indefinitely toward low frequency 
+% cfg 11 dec.  edited for language.  eliminated "red noise" which suggests a power spectrum that rises indefinitely toward low frequency
 This quantity can be measured from the GRMHD simulations; see \citet{Georgiev_2022}. For all simulations reported here $\sigma_\text{var}^2$ is well-approximated by a broken power law with parameters that are nearly universal among simulations.
 % cfg rewrite
 The $\sigma_\text{var}^2$ is measured over a four-day period, which is longer than the typical duration of our models.  We therefore expect that model values will be biased downward compared to the data.  We control for this using multiple simulations with the same parameters, and by subdividing the analysis of long simulations into windows.
@@ -332,5 +365,4 @@ The procedure for estimating $\sigma_\text{var}^2 (|u|)$ has been validated usin
 
 As anticipated by \citet{Georgiev_2022}, the measured $\sigma_\text{var}^2$ is well characterized by a power law for $2~{\rm G}\lambda < |u| < 6~{\rm G}\lambda$.  For comparison with the models presented here, we distill the $\sigma_{\text{var}}^2$ to two numbers: a normalization at $4~{\rm G}\lambda$, characterized by the amplitude $\afour^2$, and a power law index, $b$.  Because the normalization is done in the center of the fit range the estimated $\afour^2=3.7\pm0.8$ and $b=2.5\pm1$ are essentially uncorrelated.
 
-Model predictions for $\afour^2$ and $b$ are computed using the power spectral densities from \citet{Georgiev_2022}, $\hat{P}(u)$. The anisotropic diffractive scattering kernel from \citet{Johnson_2018} is applied to the $\hat{P}(u)$ and averaged over relative orientations of the major axis of the scattering kernel and the black hole spin.  These estimates are then azimuthally averaged, and related\footnote{The factor of two between the $\langle\hat{P}\rangle(|u|)$ and $\sigma_\text{var}^2(|u|)$ arises from the difference between the power spectral density of the complex visibility and the visibility amplitude.} to the $\sigma_\text{var}^2(|u|)=\langle \hat{P}\rangle/2$.  The parameters $\afour^2$ and $b$ are determined from a least-squares linear fit to $\langle \hat{P}\rangle/2$ in $2~{\rm G}\lambda < |u| < 6~{\rm G}\lambda$.
-
+Model predictions for $\afour^2$ and $b$ are computed using the power spectral densities from \citet{Georgiev_2022}, $\hat{P}(u)$. The anisotropic diffractive scattering kernel from \citet{Johnson_2018} is applied to the $\hat{P}(u)$ and averaged over relative orientations of the major axis of the scattering kernel and the black hole spin.  These estimates are then azimuthally averaged, and related\footnote{The factor of two between the $\langle\hat{P}\rangle(|u|)$ and $\sigma_\text{var}^2(|u|)$ arises from the difference between the power spectral density of the complex visibility and the VA.} to the $\sigma_\text{var}^2(|u|)=\langle \hat{P}\rangle/2$.  The parameters $\afour^2$ and $b$ are determined from a least-squares linear fit to $\langle \hat{P}\rangle/2$ in $2~{\rm G}\lambda < |u| < 6~{\rm G}\lambda$.
