@@ -378,11 +378,12 @@ If we set temporarily aside $\mi{3}$ then 3 models survive from Frankfurt and Il
 % moved up to variability section
 % We have also considered a set of thermal, $\Rh$, MAD models run with the \koral code out to $\sim 100,000\tg$.  These models permit us to assess the importance of integration time for application of the constraints.  They permit us to obtain more accurate distributions for the constraint quantites, and to assess whether the constraints evolve from the beginning to end of the integrations. We do not see evidence for evolution in the \koral  model set (a full pass/fail table is given in Appendix \ref{app:tables}, Table~\ref{tab:koralPF}). The \koral pass/fail results are similar to those for comparable models in the \kharma thermal model set. Moreover the constraints measured at the beginning of the evolution are similar to those measured at the end.
 
-%------------------------------------------------------------------------------
+%==============================================================================
 \subsection{Non-Standard Models}
 
 We now turn to models that differ from the standard aligned, thermal, $\Rh$ based models.  These include aligned models that use a different scheme for assigning temperatures to a thermal eDF; aligned models with a power-law component or kappa component in the eDF; tilted models; and stellar wind-fed models.
 
+%------------------------------------------------------------------------------
 \subsubsection{Critical Beta Model}
 
 First we consider the consequences of departures from the $\Rh$ temperature assignment scheme in thermal models.  The $\Rh$ prescription has been the default parameterization, but there are many other possibilities.  If we still assume that the ion-electron temperature ratio depends instantaneously on local conditions a well-motivated alternative is the critical beta model  \cite{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  We consider only a single point in the critical beta parameter space, with $f = \beta_c = 1$.
@@ -398,11 +399,8 @@ To summarize, all critical beta models fail the non-EHT constraints, with 86GHz 
 % CFG: we shouldn't report preliminary indications here
 %A second motivation is that there are preliminary indications that the exponential electron cooling in the Critical Beta Model suppressed the SANE bremsstrahlung spectral component allowing more to pass the X-ray constraint.
 
-%==============================================================================
-
-
 %------------------------------------------------------------------------------
-\subsubsection{Thermal Plus $p_\mathrm{pl} = 4$ Power-law Models}
+\subsubsection{Thermal Plus $p = 4$ Power-law Models}
 
 So far we have assumed a thermal (Maxwell-J{\"u}ttner) eDF.  Next we assume that some electrons are accelerated to a non-thermal tail.  There are multiple ways of doing this, but we will continue to assume that the eDF depends instantaneously on local conditions and to set the accretion rate so that the time-averaged 230\,GHz compact flux is 2.4 Jy.
 
@@ -410,17 +408,17 @@ So far we have assumed a thermal (Maxwell-J{\"u}ttner) eDF.  Next we assume that
 First we employ a hybrid thermal/power-law tail distribution using \hamr/\bhoss, and assume a power-law index of $p=4$ with a constant non-thermal acceleration efficiency $\epsilon=n_{\rm e, power-law}/n_{\rm e, thermal}=0.1$. Following the method given in \citet{Chatterjee2021}, the power-law tail is stitched to the thermal core by choosing the minimum Lorentz factor limit of the power-law $\gamma_{\rm min}$ to be at the peak of the Maxwellian component. The upper end of the power-law is taken to $10^5 \gamma_{\rm min}$.  The temperature of the thermal component is set by the $\Rh$ prescription.  We find that the accretion rate is slightly smaller than for corresponding thermal models, suggesting that the power-law components contributes to the 230\,GHz total intensity.
 
 %..............................................................................
-\subsubsubsection{230\,GHz VLBI pre-image size}
+\subsubsubsection{230\GHz VLBI pre-image size}
 
 Hybrid thermal/power-law models have similar 230\,GHz VLBI pre-image sizes to their purely thermal counterparts. This is because the power-law index is large enough
 
 %..............................................................................
-\subsubsubsection{86\,GHz flux}
+\subsubsubsection{86\GHz flux}
 
 In general, the $R_{\rm high}=1$ models produce too much 86\,GHz flux. Since the lower limit of the power-law $\gamma_{\rm min}$ is directly affected by the local electron temperature, the highest energy electrons are located in the jet sheath where the ion and electron temperatures are similar, i.e. $T_i\approx T_e$. Indeed this is why SANE models produce more 86\,GHz flux when non-thermal electrons are introduced, especially at larger $R_{\rm high}$ values. On the other hand, MAD pure thermal and mixed thermal/non-thermal models behave similarly as the bulk of the emission is produced in the inner disk.
 
 %..............................................................................
-\subsubsubsection{86\,GHz image size}
+\subsubsubsection{86\GHz image size}
 
 ...
 
@@ -447,20 +445,27 @@ The addition of the power-law tail primarily increases the flux in the NIR and t
 Next we consider a model in which {\em all} electrons are in a kappa eDF, which has a thermal core and a power-law tail.  We set $\kappa = 5$ everywhere,  motivated by \cite{2016PhRvL.117w5101K}, who found $\kappa = 5$ to be a good fit to the ion DF in a 3D hybrid simulation of MHD turbulence.  The power-law tail then has $p = \kappa - 1 = 4$, and at high frequency $\nu L_\nu \sim \nu^s$ where $s = 2 - \kappa/2 = -1/2$.
 \cmf{If not stated otherwise the width parameter $w$ of the kappa distribution (see Eq. \ref{eq:kappa}) is set by $w= (\kappa - 3) \Theta_e/\kappa$, where the dimensionless electron temperature, $\Theta_e$, is computed according to Eq. \ref{eq:rhigh_prescription}. The underlying GRMHD simulations are taken from the \bhac runs and we use the time window from 25\,kM to 30\,kM. The radiative transfer is done employing the GRRT code \bhoss and we created images every 50\,M using the same inclinations and $R_{\rm high}$ values as for the thermal models. Each model is individually normalised to an average flux of 2.4\,Jy at 230\,GHz.}
 
-\subsubsubsection{230\,GHz VLBI pre-image size}
+%..............................................................................
+\subsubsubsection{230\GHz VLBI pre-image size}
 
 In the case of the MAD models the size of the $\kappa=5$ does not change. This can be explained by the fact that most of the emission is produced in the midplane. For the SANE models we find two different behaviours: The source size slightly increases for $R_{\rm high}<40$ and decreases for $R_{\rm high}\geq 40$ especially in for the positive black hole spins and high inclinations. In the SANE case the mass accretion rate decreases as compared to the thermal models indicating that particles from the tail of the kappa distribution contribute the 230\,GHz flux. Increasing the $R_{\rm high}$ value the emission region is shifted from the midplane towards the polar region for the SANE models. Given that for the kappa distribution more emission is generated as in the thermal case the emission region becomes more compact. Together with the higher Doppler boosting at shorter distances form the black hole the source size decreases which explains the trend with black hole spin.
 
-\subsubsubsection{86\,GHz flux and Source Size} The 86\,GHz image size behave similar than the 230\,GHz images.
+%..............................................................................
+\subsubsubsection{86\GHz flux and Source Size}
 
+The 86\GHz image size behave similar than the 230\,GHz images.
+
+%..............................................................................
 \subsubsubsection{NIR constraints}
+
 All MAD model generate more NIR emission than the 1.0\,mJy and thus fail the NIR constraints. Similar, the SANE models with $R_{\rm high}>1$ overshoot the NIR constraint.
 
-
+%..............................................................................
 \subsubsubsection{Light Curve Variability}
 
 The mi3 constraint is computed for a time window of length 5000\,$\rm{GM/c^3}$. This window is a factor three shorter than for the thermal models and thus a direct comparison cannot be performed. However we find that 66\% of the models fail this test. The number roughly agrees with the thermal models and thus we conclude that the non-thermal particles included via a kappa eDF with $kappa=5$ does not affect the variability.
 
+%..............................................................................
 \subsubsubsection{M-ring Constraint}
 
 \note{to be done}
@@ -470,6 +475,7 @@ The mi3 constraint is computed for a time window of length 5000\,$\rm{GM/c^3}$. 
 %performed 3D kinetic numerical simulations of accretion disks and found that the distribution of the ions is well described by kappa distribution with $kappa=5$. We adopted this results and assume that the radiating electrons follows a similar distribution as the ion. Therefore, we performed radiative transfer calculations using a kappa distribution with fixed value of $\kappa=5$.
 %\newline \cmf{more details tomorrow: all MAD models overshoot the the NIR flux limit and only a few SANE models are below flux threshold. The SANE models which pass the NIR constraints produce too large 86\,GHz images}
 
+%==============================================================================
 \subsubsection{Mixed Thermal/Kappa Model}
 
 Next we consider a mixed thermal/nonthermal eDF, with the nonthermal component following the kappa DF with $\kappa = 3.5$.  At high frequency $\nu L_\nu \sim \nu^s$ with $s = 2 - \kappa/2 = 1/4$, similar to what is seen in NIR flares \citep{2007ApJ...667..900H}.  For this model set the GRMHD models use \bhac and the imaging uses \bhoss.
@@ -619,7 +625,7 @@ We compute the the modulation index  of the light curves of variable kappa model
 %..............................................................................
 \subsubsubsection{Null Location}
 
-
+...
 
 %------------------------------------------------------------------------------
 \subsubsection{Summary of Constraints on Non-Thermal Models}
