@@ -86,6 +86,7 @@ As discussed in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \c
 \begin{deluxetable*}{cccccccc}
   \tabletypesize{\footnotesize}
   \renewcommand{\arraystretch}{1.1}
+  %
   \tablehead{                     &
     \colhead{Spacetime}           &
     \multicolumn{2}{c}{Fluid}     &
@@ -102,8 +103,8 @@ As discussed in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \c
   }
   \startdata
   \begin{tabular}{@{}c@{}} standard / \\ \kharma \end{tabular} & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $4/3$      & 30,000  & 1000     & [288x128x128]     & \!\!\!\!\!\!\!\!\!
-   \begin{tabular}{@{}c@{}c@{}} This work\\\citet{Wong_2022} \\ \citet{Dhruv_2022}\end{tabular}\\
-%  \citet{Wong_2022, Dhruv_2022} \\
+  \begin{tabular}{@{}c@{}c@{}} This work\\\citet{Wong_2022} \\ \citet{Dhruv_2022}\end{tabular}\\
+% \citet{Wong_2022, Dhruv_2022} \\
   \begin{tabular}{@{}c@{}} standard / \\ \bhac \end{tabular}   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $4/3$      & 30,000  & 3333     & [512x192x192]     & This work \\
   \begin{tabular}{@{}c@{}} standard / \\ \hamr \end{tabular}   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $13/9,5/3$ & 35,000  & 1000/200 & [348/240×192×192] & This work \\
   \begin{tabular}{@{}c@{}} standard / \\ \koral \end{tabular}  & \!\!\!\!\!\!\!\!\!
@@ -112,6 +113,7 @@ As discussed in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \c
   \begin{tabular}{@{}c@{}} tilted / \\ \hamr \end{tabular}     & $15/16$     & IN-SANE      & 5/3        & 105,000 & 100,000  & [448x144x240]     & \begin{tabular}{@{}c@{}} \citet{Liska2018} \\ \citet{Chatterjee2020}\end{tabular} \\
   \begin{tabular}{@{}c@{}} wind-fed / \\ \athenapp \end{tabular} & 0           & MAD$\times2$ & 5/3        & 20,000  & 2,400    & [356x128x128]     & \citet{2020ApJ...896L...6R}
   \enddata
+  %
   %\tablenotetext{$*$}{Non-standard model.}
   \caption{Summary of GRMHD simulations in the EHT \sgra GRMHD model library.
     The first four entries are standard \sgra simulations.
@@ -312,7 +314,7 @@ The plasma mass scale parameter $\Munit$ controls the optical depth and thus the
     fluxes at 86\GHz and 230\GHz, and the upper limits at NIR and x-ray.
     Lines with different colors show contribution to the total
     emission from different physical processes (e.g., direct
-    synchrotron emission, inverse-Compton emission or from 
+    synchrotron emission, inverse-Compton emission or from
     bremsstrahlung).
     The total emission is marked as black spectrum.
       \ckc{Fixed x-range}}

@@ -578,23 +578,39 @@ The m-ring fitting is applied to the 230\,GHz images. As mentioned earlier the f
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This table is for the best bet model section
-\begin{deluxetable*}{cccccc}
-\tablecaption{List of best bet models.}
-\label{tab:bestbets}
-\tablehead{%
-\colhead{Model}             &%
-\colhead{Spin $\abh$}       &%
-\colhead{Magnetization}     &%
-\colhead{eDF}               &%
-\colhead{Temp. ratio $\Rh$} &%
-\colhead{Inclination $i$}    %
-}
-\startdata
-A & 0.5  & MAD  & thermal                              & 160 & 30  \\
-B & 0.94 & SANE & thermal                              &  40 & 30  \\
-C & ...  & ...  & nonthermal fixed efficiency $\kappa$ & ... & ... \\
-D & ...  & ...  & nonthermal variable $\kappa$         & ... & ...
-\enddata
+\begin{deluxetable*}{ccccccc}
+  \tablewidth{\textwidth}
+  \tabletypesize{\footnotesize}
+  \renewcommand{\arraystretch}{1.1}
+  %
+  \tablehead{%
+    \colhead{Model}             &%
+    \colhead{Spin $\abh$}       &%
+    \colhead{Magnetization}     &%
+    \colhead{Flow type}         &%
+    \colhead{eDF type}          &%
+    \colhead{Temp. ratio $\Rh$} &%
+    \colhead{Inclination $i$}    %
+  }
+  \startdata
+  A & 0.5  & MAD     & torus    & thermal                               & 160 & 30  \\
+  B & 0.94 & SANE    & torus    & thermal                               &  40 & 30  \\
+  C & 0    & SANE    & wind-fed & thermal                               &  40 & 30  \\
+  D & 0.94 & IN-SANE & tilted   & thermal                               &  40 & 30  \\
+  E & ...  & ...     & torus    & nonthermal fixed efficiency power law & ... & ... \\
+  F & ...  & ...     & torus    & nonthermal fixed efficiency $\kappa$  & ... & ... \\
+  G & ...  & ...     & torus    & nonthermal variable $\kappa$          & ... & ...
+  \enddata
+  %
+  \caption{List of feature models that sample the more likely regions
+    of the model parameter space.
+    As Figure~\ref{fig:bestbets} will show, these models broadly
+    agree with the observation constraints, although they are not
+    necessary the best fit models because of both observation and
+    modeling noise.
+    See Section~\ref{sec:bestbets} for detailed descriptions of these
+    models and Section~\ref{sec:discussions} for discussions.}
+  \label{tab:bestbets}
 \end{deluxetable*}
 
 %------------------------------------------------------------------------------
@@ -727,6 +743,7 @@ Interestingly both non-EHT and EHT constraints have the power to test the wind-f
 
 %==============================================================================
 \subsection{Feature Models}
+\label{sec:bestbets}
 
 \ckc{CK's first pass}
 
