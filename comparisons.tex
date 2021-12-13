@@ -476,6 +476,27 @@ The mi3 constraint is computed for a time window of length 5000\,$\rm{GM/c^3}$. 
 %\newline \cmf{more details tomorrow: all MAD models overshoot the the NIR flux limit and only a few SANE models are below flux threshold. The SANE models which pass the NIR constraints produce too large 86\,GHz images}
 
 %==============================================================================
+% This table is for the best bet model section
+\begin{deluxetable*}{cccccc}
+\tablecaption{List of best bet models.}
+\label{tab:bestbets}
+\tablehead{%
+\colhead{Model}             &%
+\colhead{Spin $\abh$}       &%
+\colhead{Magnetization}     &%
+\colhead{eDF}               &%
+\colhead{Temp. ratio $\Rh$} &%
+\colhead{Inclination $i$}    %
+}
+\startdata
+A & 0.5  & MAD  & thermal                              & 160 & 30  \\
+B & 0.94 & SANE & thermal                              &  40 & 30  \\
+C & ...  & ...  & nonthermal fixed efficiency $\kappa$ & ... & ... \\
+D & ...  & ...  & nonthermal variable $\kappa$         & ... & ...
+\enddata
+\end{deluxetable*}
+
+%==============================================================================
 \subsubsection{Mixed Thermal/Kappa Model}
 
 Next we consider a mixed thermal/nonthermal eDF, with the nonthermal component following the kappa DF with $\kappa = 3.5$.  At high frequency $\nu L_\nu \sim \nu^s$ with $s = 2 - \kappa/2 = 1/4$, similar to what is seen in NIR flares \citep{2007ApJ...667..900H}.  For this model set the GRMHD models use \bhac and the imaging uses \bhoss.
@@ -649,26 +670,6 @@ The effect of adding nonthermal electrons in a power-law can be summarized as fo
 Most of our nonthermal models assign a width to the nonthermal component that depends on the an electron ``temperature'' assigned through the $\Rh$ scheme, so they are not fully independent of $\Rh$.
 
 The nonthermal models are run for only $5000\tg$, so most  constraints can not be applied as precisely.  For example, the model distribution of $\mi{3}$ contains only $9$ points and correspondingly more uncertain.  It is therefore difficult to detect subtle changes in models.
-
-% This table is for the best bet model section
-\begin{deluxetable*}{cccccc}
-\tablecaption{List of best bet models.}
-\label{tab:bestbets}
-\tablehead{%
-\colhead{Model}             &%
-\colhead{Spin $\abh$}       &%
-\colhead{Magnetization}     &%
-\colhead{eDF}               &%
-\colhead{Temp. ratio $\Rh$} &%
-\colhead{Inclination $i$}    %
-}
-\startdata
-A & 0.5  & MAD  & thermal                              & 160 & 30  \\
-B & 0.94 & SANE & thermal                              &  40 & 30  \\
-C & ...  & ...  & nonthermal fixed efficiency $\kappa$ & ... & ... \\
-D & ...  & ...  & nonthermal variable $\kappa$         & ... & ...
-\enddata
-\end{deluxetable*}
 
 %==============================================================================
 \subsection{Tilted Models}
