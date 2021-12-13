@@ -5,13 +5,13 @@
 \subsection{Basic Assumptions}
 \label{sec:basic}
 
-\cfg{why do we have error bars, if these are basically the mean
-of the ucla and mpe values?}\monika{to be honest I dont understand where these numbers come from,  someone from parameter definition wg should check this. Table 1 in gravity paper reports mass: 4.148+-0.014 distance:8175, while Do: (assuming gravity is valid) mass:3.964+-0.047 distance:7946}
+%\cfg{why do we have error bars, if these are basically the mean of the ucla and mpe values?}
 
+% this is now synchronized with numbers in paper 6, but check
 In this paper, we assume the mass of and distance to \sgra are
 \begin{align}
-  \mbh &= (4.14  \pm 0.014) \times 10^6 \msun, \label{eq:mass} \\
-  D    &= (8.127 \pm 0.023) \kpc,              \label{eq:dist}
+  \mbh &= 4.14  \times 10^6 \msun, \label{eq:mass} \\
+  D    &= 8.105 \kpc,              \label{eq:dist}
 \end{align}
 which are approximately the mean of values reported by \citet{2019Sci...365..664D} and \citet{2019A&A...625L..10G}.
 
@@ -348,8 +348,8 @@ contains $6$ model sets; thousands of points in model parameter space and
 %$364$ models (with different spins and electron prescriptions);
 %$1,872,409 @230GHz and 86 GHz$
 $\sim 1.8$M images in each of 86~GHz, 230~GHz, and $\sim0.5$M images in $2.2\mu$m;
-%$1,533,100 SEDs$
-$\sim1.5$M SEDs.  The images and SEDs occupy about $50$TB.
+%$1,233,100+60,000 SEDs$
+$\sim1.3$M SEDs.  The images and SEDs occupy about $50$TB.
 
 %\clearpage
 %\pagebreak
@@ -398,7 +398,6 @@ Wind Accretion & 1 & [13,28]    & 1 & - & - & N/A        & [86,230] & No  & 10  
 \enddata
 \caption{Summary of emission simulations in \sgra EHT model library. In case of the Wind Accretion the viewing angle is set by the boundary conditions used in the model and the $\rhigh$ parameter is constrained by the observed 230\,GHz flux (the two reported values correspond to two models with different magnetizations).
 %\monika{last time (Dec 11) I checked google table BHAC did not have MULTIWAVELENGTH spectra, so why did you change No to Yes? \cmf{Hi Monica, we have SEDs for thermal but not for non-thermal, I think I included this in one of the google docs \url{https://docs.google.com/spreadsheets/d/11ZP_jz0ub-SLPwXft4x_9byDS2KBsP1KEIt9xn77LoU/edit#gid=0} (row 12, maybe the confusion is due to row 20) }}
-%\monika{summary of models is now updated, we have ~1.5SEDs in total}
 %\monika{why is wind model inclination N/A? can anyone explain?}
 %\gw{I didn't write N/A, but as I recall from Sean, the wind models *have* an absolute orientation with respect to Earth because of how their boundary condition is set up, so it wouldn't make sense to vary inclination. Also their bhspin = 0.}\monika{Ah, ok , so there is an inclination but we dont know it. can you find out ? maybe I can also change the Fig 1 accordingly (although that would require some thinking)!}\gw{sorry not sure what you mean by ``there is an inclination''. there is an inclination that we plug into ipole, but that inclination is with respect to the coordinate system, not anything particularly ``physical'' (because the black hole has zero spin). the coordinate system is oriented such that images are computed at inc->180 (inc as defined in the ipole sense)}\monika{ok, this makes no sense since from our point of view the "boundary conditions" for this model are fixed...we should just find best rhigh for our viewing angle..}
 %The cadence of KHARMA=5M, BHAC=10M for thermal and nonthermal variable kappa, 50M for nonthermal variable efficiency models, and HAMR=10M for thermal, nonthermal powerlaw and variable kappa.
