@@ -698,27 +698,37 @@ Both models fail the m-ring width test, producing a width that is too small.  In
 Interestingly both non-EHT and EHT constraints have the power to test the wind-fed model.  We cannot draw a broad conclusion about the viability of wind-fed models, however, as the two models only consider a single spin and a single eDF model.
 
 %==============================================================================
-\subsection{Best Bet Models}
+\subsection{Feature Models}
 
-\ckc{CK still working on it...}
+\ckc{CK's first pass}
 
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/bestbets.png}
-  \caption{The visibility amplitudes and SEDs of the two selected
-    possible models compared with data.
-    In both panels, symbols in black are the observation constraints; blue is Model A ($\abh=0.5$ MAD, $\Rh=160$, $i=30$); and orange is Model B ($\abh=0.94$ SANE, $\Rh=40$, $i=30$).
-    In the left panel, we show the visibility amplitudes as function of $u$-$v$ distance.
-    For the observation data, we plot 10 second incoherent averaged data from the HOPS pipeline.
-    For the models, we plot 8 different position angles for every snapshot.
-    In the right panel, we show the SEDs for Model A and B and again compare them with the observation constraints.}
+  \caption{The visibility amplitudes and SEDs of the two feature
+    models compared with data.
+    In both panels, symbols in black are the observation constraints;
+    blue is Model A ($\abh=0.5$ MAD, $\Rh=160$, $i=30$); and orange is
+    Model B ($\abh=0.94$ SANE, $\Rh=40$, $i=30$).
+    (\emph{Left}) We show the visibility amplitudes as function of
+    $(u, v)$ distance.
+    For the observation data, we plot 10\sec incoherent averaged data
+    from the HOPS pipeline on \aprilvii.
+    For the models, we plot four different position angles for every
+    snapshot.
+    (\emph{Right}) We show the SEDs for Model~A and B and again
+    compare them with the observation constraints.}
   \label{fig:bestbets}
 \end{figure*}
 
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/bestbet_A.pdf}
-  \caption{Best bet model A}
+  \caption{We show here the 86\GHz and 230\GHz ray traced images of
+    feature Model~A in the left and middle panels.
+    The right panel shows the 230\GHz filtered by a Butterworth filter
+    at 10$\,\mathrm{G}\lambda$, which approximate the resolution of
+    the current EHT array.}
   \label{fig:bestbet_A}
 \end{figure*}
 
@@ -734,6 +744,8 @@ hypothesis that (1) there is a missing physical ingredient in the
 models that would lower variability, but (2) that missing ingredient
 would not vitiate the model comparison process entirely.
 Models are eliminated if they fail any one constraint.
+
+\citep{2020arXiv200406210P}
 
 Figure showing combined constraints for thermal models.
 
