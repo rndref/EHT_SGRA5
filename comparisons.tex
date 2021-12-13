@@ -24,6 +24,11 @@ How do the models fare when compared to the EHT data alone, using the size, null
 %  \label{fig:cmp_2nd_moment}
 %\end{figure}
 
+\begin{figure}
+  \caption{\ckc{Add a two panel figure show a model fail and a model pass the 2nd moment constraint.}}
+  \label{fig:passfail_size}
+\end{figure}
+
 The second moment constraint rejects only 1.5\% of models: nearly all models are about the right size.  The rejected models are $\abh \le 0$, face-on, SANE models with $\Rh = 1$. These models have extended rings of emission with angular extent that is large compared to the critical impact parameter $b_c = \sqrt{27} \rg$.
 
 %..............................................................................
@@ -31,10 +36,12 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
 
 % Statement about consistency between overlapping model sets.
 
-\begin{figure*}
+\begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{figures/sample_va.pdf}
-  \caption{Visibility amplitude plots for demonstrating the null
+  \includegraphics[width=\columnwidth]{figures/sample_va.pdf}
+  \caption{
+    \ckc{This figure will be trimmed down to demonstrate how a constraint work vs not work.}
+    Visibility amplitude plots for demonstrating the null
     location analysis.
     The four curves are the visibility amplitude of a snapshot as
     functions of the $u$-$v$ distance at $-90\degree$ (horizontal),
@@ -62,8 +69,8 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
     are too high.
     \aeb{A few very minor pedantic points: 1. Can we fix the plot domain to avoid the sudden ending of lines?  They are misleading in that they seem to show an end to a function that certainly continue. 2. The fonts are wrong and the font size is too small.  3. Colors are not being used effectively to indicate conceptual closeness.  4. This plot fails the Jon Aarons test: if it were printed in grayscale or seen by a colorblind individual it would be impenetrable.}
     \ckc{Took care of 1 and 2.  The color is not too important in my opinion because all we care about this constraint is ``or'' and ``and'' of different conditions.}}
-  \label{fig:sample_va}
-\end{figure*}
+  \label{fig:passfail_va}
+\end{figure}
 
 %\begin{figure}
 %  \centering
@@ -150,6 +157,11 @@ We can combine all EHT constraint cuts with a logical {\em and} operation.  The 
 \subsubsection{Non-EHT Constraints}
 
 Now consider constraints from unresolved 86GHz, NIR, and X-ray observations.  Some or all of the emission in these bands is believed to originate in the compact source from plasma that is close to or overlaps the plasma that is producing the 230GHz-emitting plasma observed by EHT.
+
+\begin{figure}
+  \caption{\ckc{Add a two panel figure show a model fail and a model pass all the non-EHT constraints.}}
+  \label{fig:passfail_noneht}
+\end{figure}
 
 %..............................................................................
 \subsubsubsection{NIR Median Flux}
