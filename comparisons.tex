@@ -386,11 +386,11 @@ We now turn to models that differ from the standard aligned, thermal, $\Rh$ base
 %------------------------------------------------------------------------------
 \subsubsection{Critical Beta Model}
 
-First we consider the consequences of changing the $\Rh$ temperature assignment scheme in thermal models.  The $\Rh$ prescription has been the default parameterization.  Assuming that the ion-electron temperature ratio $R$ depends instantaneously on local conditions restricts the range of possibilities but still leaves a large function space of possibilities.  One well-motivated alternative is the critical beta model \citep{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  This model has two parameters, $f$ and $\beta_c$.  Here we consider a single point in the parameter space, $f = \beta_c = 1$.
+First we consider the consequences of changing the $\Rh$ temperature assignment scheme in thermal models.  The $\Rh$ prescription has been the default parameterization.  Assuming that the ion-electron temperature ratio $R$ depends instantaneously on local conditions restricts the range of possibilities but still leaves a vast function space of alternative parameterizations.  A well-motivated choice is the critical beta model \citep{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  This model has two parameters, $f$ and $\beta_c$.  Here we consider a single point in the parameter space, $f = \beta_c = 1$.
 
-We have all tests except X-ray to the critical beta models (NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}.
+We have run all tests except X-ray for the critical beta models (NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}.
 
-To summarize, all critical beta models fail the non-EHT constraints, with 86GHz size constraint rejecting the most models as too small.  The variability constraints fail $77\%$ of the models.  No models survive the combined EHT and non-EHT constraints, excluding variability.
+To summarize, all critical beta models fail the non-EHT constraints, with 86GHz size constraint rejecting most models as too small.  The variability constraints fail $77\%$ of the models.  No models survive the combined EHT and non-EHT constraints, excluding variability.  This does not imply that critical beta models are ruled out, since we have only tested a single parameter set.  
 
 % cfg commented out 12 dec; edited down for consistency in style.
 
@@ -733,13 +733,13 @@ To summarize: for the model set considered here tilt primarily affects variabili
 %==============================================================================
 \subsection{Stellar Wind Fed Models}
 
-The accretion models of \cite{2020ApJ...896L...6R, 2020MNRAS.492.3272R, 2018MNRAS.478.3544R} track plasma from  magnetized stellar winds down to the event horizon and provide a self-consistent picture of the origin of both gas and magnetic fields in the accreting plasma in \sgra.  The resulting inflow does not fully circularize, so the models also provide a distinct alternative to the standard models, which {\em assume} that the artificial SANE or MAD initial conditions relax to a astrophysically realizable state for the inner accretion flow.
+The accretion models of \cite{2020ApJ...896L...6R, 2020MNRAS.492.3272R, 2018MNRAS.478.3544R} track plasma from  magnetized stellar winds down to the event horizon and provide a self-consistent picture of the origin of both gas and magnetic fields in the accreting plasma in \sgra.  The resulting inflow does not fully circularize, so the models also provide a distinct alternative to the standard models, which {\em assume} that the SANE or MAD initial conditions relax to a astrophysically accessible state for the inner accretion flow.
 
 We consider two versions of the model: one in which the stellar wind magnetization is low ($\beta = 10^6$) and another and a second in which the magnetization is high ($\beta = 10^2$). $\Rh$ is adjusted until each model has the observed time-averaged 230 GHz flux density, with $\Rh = 13$ ($\beta = 10^6$) and $\Rh = 28$ ($\beta = 10^2$).
 
-Both models fail the m-ring width test, producing a width that is too small.  In addition both fail the 86GHz flux test: the 86GHz flux density is too large.  The models also fail the $\mi{3}$ test.   All scoring results are given in Appendix~\ref{app:tables}, Table \ref{tab:resslerPF}.
+Both wind-fed models fail the m-ring width test, producing a width that is too small.  In addition both fail the 86GHz flux test: the 86GHz flux density is too large.  The wind-fed models also fail the $\mi{3}$ test, although they are quieter than MAD models and close to the cutoff.   All scoring results are given in Appendix~\ref{app:tables}, Table \ref{tab:resslerPF}.
 
-Interestingly both non-EHT and EHT constraints have the power to test the wind-fed model.  We cannot draw a broad conclusion about the viability of wind-fed models, however, as the two models only consider a single spin and a single eDF model.
+Both non-EHT and EHT constraints have the power to test the wind-fed model.  It is {\em not} possible to draw broad conclusions about the viability of the wind-fed models, however, since the two models tested here contain only a single spin and all use the $\Rh$ thermal eDF model.
 
 %==============================================================================
 \subsection{Feature Models}
