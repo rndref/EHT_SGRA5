@@ -302,14 +302,14 @@ We have also considered a set of thermal, $\Rh$, MAD models run with the \koral 
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{./figures/grmhd_triangle_debiased_KHARMA.pdf}
-  \caption{Distributions of $(\afour^2,b)$ for KHARMA models (green), compared to the 2017 EHT observation (red). }
+  \caption{Distributions of $(\afour^2,b)$ for Illinois models (green), compared to the 2017 EHT observation (red). The distribution in $\afour$ for the Frankfurt models is slightly broader.}
   \label{fig:cmp_VLBI_var}
 \end{figure}
 
 % At a 1\% cut, the models that pass the PSD constraint also all pass the MI constraint. It should be noted that this is partially because these constraints are weakly correlated \dl{also partially because we're imposing constraints differently between VLBI and light curve, and the light curve constraint is more lenient} None of the 12 models with acceptable variability pass the other tests.
 
 %------------------------------------------------------------------------------
-\subsubsection{Summary of Constraints on Thermal Models}
+\subsubsection{Summary of Constraints on Standard Models}
 
 None of the standard thermal models (Frankfurt or Illinois) survive the full gauntlet of constraints.   Variability rejects about $70\%$ of models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models.
 Evidently either (1) the models fail in some important respect, or (2) some of the data underlying the model tests are incorrect, or (3) one or more of the constraints have been misapplied.
@@ -388,11 +388,11 @@ We now turn to models that differ from the standard aligned, thermal, $\Rh$ base
 %------------------------------------------------------------------------------
 \subsubsection{Critical Beta Model}
 
-First we consider the consequences of changing the $\Rh$ temperature assignment scheme in thermal models.  The $\Rh$ prescription has been the default parameterization.  Assuming that the ion-electron temperature ratio $R$ depends instantaneously on local conditions restricts the range of possibilities but still leaves a large function space of possibilities.  One well-motivated alternative is the critical beta model \citep{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  This model has two parameters, $f$ and $\beta_c$.  Here we consider a single point in the parameter space, $f = \beta_c = 1$.
+First we consider the consequences of changing the $\Rh$ temperature assignment scheme in thermal models.  The $\Rh$ prescription has been the default parameterization.  Assuming that the ion-electron temperature ratio $R$ depends instantaneously on local conditions restricts the range of possibilities but still leaves a vast function space of alternative parameterizations.  A well-motivated choice is the critical beta model \citep{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  This model has two parameters, $f$ and $\beta_c$; we consider a single point in the parameter space, $f = \beta_c = 1$.
 
-We have all tests except X-ray to the critical beta models (NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}.
+We have run all tests except X-ray for the critical beta models (NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}.
 
-To summarize, all critical beta models fail the non-EHT constraints, with 86GHz size constraint rejecting the most models as too small.  The variability constraints fail $77\%$ of the models.  No models survive the combined EHT and non-EHT constraints, excluding variability.
+To summarize, all critical beta models fail the non-EHT constraints, with 86GHz size constraint rejecting most models as too small.  The variability constraints fail $77\%$ of the models.  No models survive the combined EHT and non-EHT constraints, excluding variability.  This does not imply that critical beta models are ruled out, since we have only tested a single parameter set.  
 
 % cfg commented out 12 dec; edited down for consistency in style.
 
@@ -655,7 +655,7 @@ Larger emission than thermal models excludes SANE models for $R_{\rm high}=10$ a
 We compute the the modulation index  of the light curves of variable kappa models by discretizing the entire window of GRMHD simulations, $\rm 5000\,\tg$ ($\rm 28\,hours$) every $\rm 3\,hour$ (see Table \ref{tab:GRMHDmodels}). Similar to variable efficiency models, the non-thermal particles with variable kappa has not big impact on the flux at 230GHz. The behavior of modulation index and total flux for MAD accretion models are same as thermal, and variable efficiency eDFs. We found sightly high modulation index for $R_{\rm high}=1$ and $30^{\circ} \leq i$ for SANE accretion models, the models for $R_{\rm high}=80$ has same trend as $R_{\rm high}=40$.
 
 %..............................................................................
-\subsubsubsection{m-ring}
+\subsubsubsection{M-Ring}
 
 %\aco{First Draft ... please add missing references ... waiting for calculations with help from Michi, Ben, Ck and Kotaro}\\
 
@@ -713,13 +713,15 @@ The nonthermal models are run for only $5000\tg$, so most  constraints can not b
 %==============================================================================
 \subsection{Tilted Models}
 
-In addition to the aligned models, we also consider misaligned, geometrically thick disks around black holes with a spin of $a_*=15/16$ from \citet{Liska2018} and \citet{Chatterjee2020}.
+The aligned models considered up to now are a special case: in general one would expect that the spin angular momentum of the black hole and the orbital angular momentum of the accretion flow would be misaligned.  Here we consider misaligned flows around an $a_*=15/16$ black hole from \citet{Liska2018} and \citet{Chatterjee2020}.
 
-All other models considered here produce either a SANE or MAD accretion flow.  The tilted disk model initial conditions, however, produce strongly magnetized but not MAD outcome, a state known as INSANE.  We consider three GRMHD models with misalignment or tilt angles $0^{\circ}$, $30^{\circ}$ and $60^{\circ}$.
+All aligned models considered so far produce either a SANE or MAD accretion flow.  The tilted disk model initial conditions, however, produce a strongly magnetized but not MAD outcome, a state known as INSANE.  We consider three GRMHD models with tilt $0^{\circ}$, $30^{\circ}$ and $60^{\circ}$.
 
-The models exhibit a warped disk due to the Lense-Thirring torques  imposed by the black hole.  The disk and jet are therefore non-axisymmetric. Notice that the jets are always approximately perpendicular to the outer disk in these models.  Since the inner and the outer disk have different orientations, it is necessary to specify the coordinate axis of the observer.  We consider three  observer inclinations with respect to the {\em outer} disk at a single azimuth of $0$deg \citep[for more details, see][]{Chatterjee2020}.\footnote{A full parameter survey would run over azimuth angle as well.}
+The tilted models exhibit a warped disk due to the Lense-Thirring torques imposed by the black hole.  The time-averaged disk and jet are therefore non-axisymmetric. 
+%Notice that the jets are always approximately perpendicular to the outer disk in these models. 
+Since the inner and the outer disk have different orientations, it is necessary to specify the coordinate axis of the observer.  We consider three  observer inclinations with respect to the {\em outer} disk at a single azimuth of $0$deg \citep[for more details, see][]{Chatterjee2020}.\footnote{A full parameter survey would run over azimuth angle as well.}  A full listing of the pass/fail results are given in Appendix \ref{app:tables}, Table \ref{tab:tiltedPF}.
 
-The 230\,GHz pre-image size of edge-on large $R_{\rm high}$ images slightly increases for the tilt-$60^{\circ}$ as compared to the aligned case. This occurs as the inner jet is warped and creates an extended image. This effect is also seen in the 86\,GHz image size. On the other hand, the 86\,GHz flux varies little with tilt despite the presence of a boosted jet component at large tilt angles.
+The 230\,GHz pre-image size of edge-on large $R_{\rm high}$ images increases slightly for the tilt-$60^{\circ}$ compared to the aligned case. This occurs because the inner jet is warped and creates an extended image. This effect is also seen in the 86\,GHz image size. On the other hand, the 86\,GHz flux varies little with tilt despite the presence of a boosted jet component at large tilt angles.
 
 % cfg 12-dec this is a testable proposition
 %This suggests that, on average, most of the total flux at 230 and 86\,GHz comes from a few gravitational radii from the black hole where the relativistic Doppler boost have comparable values between the in-going accretion flow and the out-flowing jet.
@@ -728,20 +730,20 @@ Variability increases wth tilt. In tilted disks, accretion occurs via thin plung
 
 \cfg{Statement about which models pass and fail MI}
 
-NIR flux increases with tilt.  The NIR flux exceeds the 1.0 mJy limit for all 3 tilts, with a few exceptions, e.g. $R_{\rm high}=160$ models at $10^{\circ}$ inclination, which makes it difficult to favor the aligned case over the tilted one. Further, the presence of misalignment destroys the axisymmetric nature of the accretion flow.  The current model set covers a small parameter space in inclination and $R_{\rm high}$.  A thorough exploration of the source azimuthal angle with respect to the observer is left to future studies.
+NIR flux also increases with tilt.  The NIR flux exceeds the 1.0 mJy limit for all 3 tilts, with a few exceptions, e.g. $R_{\rm high}=160$ models at $10^{\circ}$ inclination, which makes it difficult to favor the aligned case over the tilted one. Further, the presence of misalignment destroys the axisymmetric nature of the accretion flow.  The current model set covers a small parameter space in inclination and $R_{\rm high}$.  A thorough exploration of the source azimuthal angle with respect to the observer is left to future studies.
 
 To summarize: for the model set considered here tilt primarily affects variability and the NIR flux density, increasing both and thus shifting acceptable aligned models into rejected models as tilt angle increases.
 
 %==============================================================================
 \subsection{Stellar Wind Fed Models}
 
-The accretion models of \cite{2020ApJ...896L...6R, 2020MNRAS.492.3272R, 2018MNRAS.478.3544R} track plasma from  magnetized stellar winds down to the event horizon and provide a self-consistent picture of the origin of both gas and magnetic fields in the accreting plasma in \sgra.  The resulting inflow does not fully circularize, so the models also provide a distinct alternative to the standard models, which {\em assume} that the artificial SANE or MAD initial conditions relax to a astrophysically realizable state for the inner accretion flow.
+The accretion models of \cite{2020ApJ...896L...6R, 2020MNRAS.492.3272R, 2018MNRAS.478.3544R} track plasma from  magnetized stellar winds down to the event horizon and provide a self-consistent picture of the origin of both gas and magnetic fields in the accreting plasma in \sgra.  The resulting inflow does not fully circularize, so the models also provide a distinct alternative to the standard models, which {\em assume} that the SANE or MAD initial conditions relax to a astrophysically accessible state for the inner accretion flow.
 
 We consider two versions of the model: one in which the stellar wind magnetization is low ($\beta = 10^6$) and another and a second in which the magnetization is high ($\beta = 10^2$). $\Rh$ is adjusted until each model has the observed time-averaged 230 GHz flux density, with $\Rh = 13$ ($\beta = 10^6$) and $\Rh = 28$ ($\beta = 10^2$).
 
-Both models fail the m-ring width test, producing a width that is too small.  In addition both fail the 86GHz flux test: the 86GHz flux density is too large.  The models also fail the $\mi{3}$ test.   All scoring results are given in Appendix~\ref{app:tables}, Table \ref{tab:resslerPF}.
+Both wind-fed models fail the m-ring width test, producing a width that is too small.  In addition both fail the 86GHz flux test: the 86GHz flux density is too large.  The wind-fed models also fail the $\mi{3}$ test, although they are quieter than MAD models and close to the cutoff.   All scoring results are given in Appendix~\ref{app:tables}, Table \ref{tab:resslerPF}.
 
-Interestingly both non-EHT and EHT constraints have the power to test the wind-fed model.  We cannot draw a broad conclusion about the viability of wind-fed models, however, as the two models only consider a single spin and a single eDF model.
+Both non-EHT and EHT constraints have the power to test the wind-fed model.  It is {\em not} possible to draw broad conclusions about the viability of the wind-fed models, however, since the two models tested here contain only a single spin and all use the $\Rh$ thermal eDF model.
 
 %==============================================================================
 \subsection{Feature Models}
