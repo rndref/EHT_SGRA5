@@ -448,9 +448,9 @@ Next we consider a model in which {\em all} electrons are in a kappa eDF, which 
 
 \subsubsection{Mixed Thermal/Kappa Model}
 
-Next we consider a mixed thermal/nonthermal eDF, with the nonthermal component following the kappa DF.  We set $\kappa = 3.5$.  At high frequency $\nu L_\nu \sim \nu^s$ with $s = 2 - \kappa/2 = 1/4$, similar to what is seen in NIR flares \citep{2007ApJ...667..900H}.  The underlying GRMHD models are run with \bhac, and the radiative transfer is done with \bhoss.  
+Next we consider a mixed thermal/nonthermal eDF, with the nonthermal component following the kappa DF with $\kappa = 3.5$.  At high frequency $\nu L_\nu \sim \nu^s$ with $s = 2 - \kappa/2 = 1/4$, similar to what is seen in NIR flares \citep{2007ApJ...667..900H}.  For this model set the GRMHD models use \bhac and the imaging uses \bhoss. 
 
-The fraction of nonthermal electrons is assumed to depend on $\sigma$, and $\beta$.  We can write the total emissivity as:
+The fraction of nonthermal electrons is assumed to depend on $\sigma$ and $\beta$.  We write the emissivity as:
 \begin{equation}
 j_{\nu,\rm{tot}}=(1-\epsilon) j_{\nu,\rm{thermal}} + \epsilon j_{\nu, \kappa},
 \label{eq:kappaeff}
@@ -464,8 +464,8 @@ where the nonthermal efficiency $\epsilon( \varepsilon, \beta, \sigma)$ is
 \end{equation}
 An example time- and azimuth-averaged distribution of $\epsilon$ is shown in Fig. \ref{fig:varepsilon}.  Evidently $\epsilon \rightarrow 0$ in the disk while $\epsilon \rightarrow \varepsilon$ in the jet.  Since we remove emission at $\sigma > \sigma_{\rm cut} = 1$ the non-thermal electrons are confined to the jet sheath.
 
-We set $\sigma_{\rm min}=0.01$ and vary the base efficiency, $\varepsilon$, between 0.05, 0.1 and 0.2. For each base efficiency we generate a model set spanning the same parameter space as the thermal models (see Table \ref{tab:radiativemodels} for details),
-and normalize the accretion rate using the same procedure as the standard models.  
+We set $\sigma_{\rm min}=0.01$ and vary the base efficiency, $\varepsilon$ over 0.05, 0.1 and 0.2.  At each $\varepsilon$ we generate a model set spanning the same parameter space as the thermal models (see Table \ref{tab:radiativemodels} for details),
+and normalize the accretion rate using the standard procedure (see Section \ref{sec:models}.  
 
 %For each model we iterate the mass accretion rate to obtain an average flux of 2.4\,Jy at 230\,GHz across a time interval of 5000\,M. In order to explore several values of $\varepsilon$ efficiently we increased the model snapshot cadence to 50\,M. This allows us to keep the numerical costs for this parameter sweep low while still being within the correlation time of the GRMHD simulations.
 %($t_{\rm corr}\approx 50-100\,M$) \cmf{ do we have reference for this? So far this result is not published, maybe Boris paper?}.
@@ -506,7 +506,7 @@ For SANEs, models with $\Rh>40$ exhibit a minor increase in the source size.  In
 %The 86\,GHz GMVA+ALMA observations
 %probe a larger field of view than the 230\,GHz EHT observations, so we increased the field of view for the 86\,GHz to 800\,$\rm{\mu as}$ during the radiative transfer calculations. Again the non-thermal particles are mainly located in the jet sheath and thus the increased field of view ensures that no extended flux is missing during the comparison with the 86\,GHz observations.
 
-The 86\,GHz flux density for both SANE and MAD models is unaffected by the addition of non-thermal particles.  There is a small effect for SANE models with $\Rh>40$, but even for $\varepsilon = 0.2$ this does not change which models are rejected. Similarly the 86\,GHz major axis FWHM is unaffected by the addition of non-thermal particles.  
+The 86\,GHz flux density for both SANE and MAD models is unaffected by the addition of non-thermal particles.  There is a small effect for SANE models with $\Rh>40$, but even for $\varepsilon = 0.2$ this does not change which models are rejected.  Similarly the 86\,GHz major axis FWHM is unaffected by the addition of non-thermal particles.  
 
 %n case of the SANE models the edges of the 86\,GHz flux distribution are slightly shifted in the case of $\Rh>40$. However, including non-thermal particles even with the highest base efficiency $\varepsilon=0.2$ does not change the scoring of a model, i.e., a thermal-only model which full-fills the 86\,GHz constrain is still accepted if non-thermal particles are included. 
 
@@ -520,48 +520,54 @@ The 86\,GHz flux density for both SANE and MAD models is unaffected by the addit
 %..............................................................................
 \subsubsubsection{NIR constraints}
 
-The addition of non-thermal electrons increases the NIR flux for all models.  In Fig.~\ref{fig:NIR_kappaepsilon} we show the distribution of the NIR fluxes for thermal and kappa eDF for SANE accretion models.
+The addition of non-thermal electrons increases the NIR flux for all models. For SANE models, except $\Rh=1$, the addition of non-thermal particles leads to over-production of NIR. For MAD models, all models over-produce NIR for $\varepsilon \ge 0.05$.
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=0.8\textwidth]{./figures/SANE_NIR_standard.pdf}
-  \caption{Impact of non-thermal electrons on NIR flux constraint for the \bhac/\bhoss variable nonthermal efficiency model. NIR flux distributions are shown for SANE accretion models with thermal and non-thermal eDF with fixed $\kappa=3.4$ and $\epsilon\left(\sigma,\beta,\varepsilon\right)$ defined by Equation~\ref{eq:efficiencybetasigma}. The red violin plots correspond to a thermal eDF, blue, orange and green indicate kappa eDF with $\varepsilon=$0.05,0.1 and 0.2. The horizontal dashed line is the observational constraint.}
-  \label{fig:NIR_kappaepsilon}
-\end{figure*}
-
-For SANE models, except $\Rh=1$, the addition of non-thermal particles leads to over-production of NIR. For MAD models, all models over-produce NIR for $\varepsilon \ge 0.05$.
+% commented out 12-dec, cfg: we should show trends in some model and some test other than this one, since we can easily make the case that the NIR increases as $\varepsilon$ increases.
+%\begin{figure*}
+%  \centering
+%  \includegraphics[width=0.8\textwidth]{./figures/SANE_NIR_standard.pdf}
+%  \caption{Impact of non-thermal electrons on NIR flux constraint for the \bhac/\bhoss variable nonthermal efficiency model. NIR flux distributions are shown for SANE accretion models with thermal and non-thermal eDF with fixed $\kappa=3.4$ and $\epsilon\left(\sigma,\beta,\varepsilon\right)$ defined by Equation~\ref{eq:efficiencybetasigma}. The red violin plots correspond to a thermal eDF, blue, orange and green indicate kappa eDF with $\varepsilon=$0.05,0.1 and 0.2. The horizontal dashed line is the observational constraint.}
+%  \label{fig:NIR_kappaepsilon}
+%\end{figure*}
 
 As noted above, NIR emission is produced from the tail of the eDF.  The thermal eDF tail decreases exponentially, while the kappa eDF tail decreases as a power law, so the increase in NIR flux density is unsurprising.  This is a general feature of the nonthermal models: NIR observations sharply limit the allowed population of nonthermal electrons.  
 
 %..............................................................................
 \subsubsubsection{Light Curve Variability}
 
-We compute $mi{3}$ for a window of $5000\tg$.  Note that this is shorter than the standard models, so the results are less constraining.  Approximately 1/2 of models pass for $\varepsilon = 0.05, 0.1,$ and $0.2$.  This passing fraction is higher than for the thermal model set which includes 3 $5000\tg$ windows.   
-
-% cfg 12 dec: awaiting results that will determine whether higher passing fraction in these models is a consequence of the shorter duration or the nonthermal electrons. 
+We compute $mi{3}$ for a window of $5000\tg$.  Notice that this is shorter than the standard models, which as $3$ $5000\tg$ windows, so the results are less constraining.  The $\mi{3}$ test rejects about 1/2 of models for $\varepsilon = 0.05, 0.1,$ and $0.2$.  We conclude that $\varepsilon$ has no effect on the $\mi{3}$ test.
 
 %For the comparison with the ALMA light curves we compute the modulation index for a 3\,hour time window and across the entire simulated time window of 28\,hours (5000\,GM/c$^3$). Similar to the 86\,GHz flux the 230\,GHz flux is mainly produced within a few gravitational radii and thus not affected by the addition of non-thermal particles using Eq. \ref{eq:kappaeff}. As in the previous constraints, the MAD accretion models are insensitive to the addition of non-thermal particles whereas the SANE models show some increased modulation index for $\Rh>40$. However, the distributions for thermal and non-thermal eDF are still largely overlapping.
 
 %..............................................................................
-\subsubsubsection{m-ring}
+\subsubsubsection{M-Ring Constraint}
 
 The m-ring fitting is applied to the 230\,GHz images. As mentioned earlier the flux and size of the 230\,GHz images are not affected by the inclusion of non-thermal particles with fixed kappa and variable efficiency. Thus, we do not expect any changes in the distribution of the m-ring parameters.  Applying m-ring fitting to non-thermal models and a detailed comparison with the thermal results confirmed our initial assumption. 
 
 %\cmf{based on the results of Kotaro, who run the m-ring on non-thermal models}
 
 %------------------------------------------------------------------------------
-\subsubsection{Variable kappa model $\kappa(\sigma,\beta)$}
+\subsubsection{Variable Kappa Model}
 
 %\cfg{could we avod the equation and simply provide a reference and enough detail that someone could reproduce it?}\aco{What about inline equations?}
 
-An alternative procedure for assigning a nonthermal eDF uses the  kappa model \eqref{eq:nonthermaleDF}, and assigns the parameter $w$  and $\kappa$ parameters according to \cite{2018ApJ...862...80B}, who model the effects of particle acceleration in magnetic reconnection based on particle-in-cell simulations: $ \kappa=2.8 +0.7\sigma^{-1/2} + 3.7\sigma^{-0.19}\tanh{(23.4\sigma^{0.26} \beta)}\label{eq:kappa}$
+An alternative procedure for assigning a nonthermal eDF uses the  kappa model \eqref{eq:nonthermaleDF}, and sets $\kappa$ and $w$ according to \cite{2018ApJ...862...80B}, who model the effects of particle acceleration in magnetic reconnection.  In particular, we set $\kappa=2.8 +0.7\sigma^{-1/2} + 3.7\sigma^{-0.19}\tanh{(23.4\sigma^{0.26}\beta)}\label{eq:kappa}$
 and $w= \frac{ \kappa -3 }{\kappa} \Theta_{\rm e} + \frac{\varepsilon}{2}\left[1+\tanh(r-r_{\rm inj})\right]\, \frac{ \kappa -3 }{6 \kappa} \frac{m_{\rm p}}{m_{\rm e}} \sigma$.
-Here $\sigma \equiv B^2/(8\pi\rho c^2)$, $\beta \equiv p_{gas} 8 \pi/B^2$, and $w$ contains a thermal and nonthermal contribution, with the nonthermal contribution defined by the magnetization and nonthermal particle acceleration efficiency $\varepsilon$  \citep{2019A&A...632A...2D, 2021NatAs.tmp..218C}. We set  $\varepsilon=0$ and injection radius $r_{\rm inj}=10r_{g}$ following previous studies.  Nonzero $\varepsilon$ increases the averaged NIR flux by two orders of magnitude as $\varepsilon$ goes from 0 to 1, causing all models to overshoot NIR constraint.  Setting $\varepsilon \ne 0$ also causes the 86GHz flux density to increase around two times as well as the image size \citep{2021arXiv211102518F}. We use the emissivity and absorptivity, computed numerically for the interval $3 < \kappa \le 8$, from  \cite{2016ApJ...822...34P}. For $\kappa > 8$ we substitute a thermal eDF.  We also turn off emission in the jet spine where $\sigma > 1$ (see Figure~\ref{fig:varepsilon}).
+Evidently $w$ contains a thermal and nonthermal contribution, with the nonthermal contribution proportional to the nonthermal particle acceleration efficiency $\varepsilon$  \citep{2019A&A...632A...2D, 2021NatAs.tmp..218C}.  The thermal width $\Theta_e$ is set according to the $\Rh$ prescription.
+
+We set $\varepsilon=0$ and injection radius $r_{\rm inj}=10r_{g}$ following previous studies.  Nonzero $\varepsilon$ increases the averaged NIR flux by two orders of magnitude as $\varepsilon$ goes from 0 to 1, causing all models to overshoot NIR constraint.  Setting $\varepsilon \ne 0$ also causes the 86GHz flux density and image size to increase \citep{2021arXiv211102518F}. 
+
+We use the emissivity and absorptivity, computed numerically for the interval $3 < \kappa \le 8$, from  \cite{2016ApJ...822...34P}. For $\kappa > 8$ we substitute a thermal eDF.  As in the standard models we turn off emission at $\sigma > 1$ (see Figure~\ref{fig:varepsilon}).
+
+\cfg{need very brief discussion here of the codes and run durations}
+
+\cfg{this section needs to incorporate both the \hamr and \bhac variable kappa models}
 
 %..............................................................................
-\subsubsubsection{86\,GHz image size}
+\subsubsubsection{86\,GHz Major Axis}
 
-The total flux and image size was computed using an extended field of view, $800 \mu as$ motivated in the 86GHz observations. We found that the image size is closely similar to the thermal and variable efficiency models, only different for non-spinning black holes, where we have low magnetized and small jet. As a consequence eDF with variable kappa power-law reduces to thermal distribution and the size of the image is a bit smaller than in thermal case. For $a_{\star}=0$ almost all SANE models pass the size constraint, $R_{\rm high}=1$ we have a bit larger image. For MAD $R_{\rm high}=40$ and $a_{\star}=0.94$, and cases for $R_{\rm high}=160$ and $a_{\star}=0.50$ we have a bit smaller size image than thermal case passing the constraint.
+We found that the 86 GHz image size is similar to the thermal and variable efficiency models, differing only for non-spinning black holes, where we have low magnetization, weak jet. As a consequence our prescription makes $\kappa$ large and the radiative properties of the plasma similar to those of a thermal eDF.  
+eDF with variable kappa power-law reduces to thermal distribution and the size of the image is a bit smaller than in thermal case. For $a_{\star}=0$ almost all SANE models pass the size constraint, $R_{\rm high}=1$ we have a bit larger image. For MAD $R_{\rm high}=40$ and $a_{\star}=0.94$, and cases for $R_{\rm high}=160$ and $a_{\star}=0.50$ we have a bit smaller size image than thermal case passing the constraint.
 
 %..............................................................................
 \subsubsubsection{86\,GHz flux}
