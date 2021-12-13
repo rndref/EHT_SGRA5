@@ -392,7 +392,7 @@ First we consider the consequences of changing the $\Rh$ temperature assignment 
 
 We have run all tests except X-ray for the critical beta models (NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}.
 
-To summarize, all critical beta models fail the non-EHT constraints, with 86GHz size constraint rejecting most models as too small.  The variability constraints fail $77\%$ of the models.  No models survive the combined EHT and non-EHT constraints, excluding variability.  This does not imply that critical beta models are ruled out, since we have only tested a single parameter set.  
+To summarize, all critical beta models fail the non-EHT constraints, with 86GHz size constraint rejecting most models as too small.  The variability constraints fail $77\%$ of the models.  No models survive the combined EHT and non-EHT constraints, excluding variability.  This does not imply that critical beta models are ruled out, since we have only tested a single parameter set.
 
 % cfg commented out 12 dec; edited down for consistency in style.
 
@@ -442,7 +442,7 @@ The addition of the power-law tail primarily increases the flux in the NIR and t
 % cfg 12-dec: we will comment this out by 13-dec unless we get more info, to here <=
 
 %------------------------------------------------------------------------------
-\subsubsection{Constant kappa models with $kappa=5$}
+\subsubsection{Constant kappa models with $\kappa=5$}
 
 Next we consider a model in which {\em all} electrons are in a kappa eDF, which has a thermal core and a power-law tail.  We set $\kappa = 5$ everywhere,  motivated by \cite{2016PhRvL.117w5101K}, who found $\kappa = 5$ to be a good fit to the ion DF in a 3D hybrid simulation of MHD turbulence.  The power-law tail then has $p = \kappa - 1 = 4$, and at high frequency $\nu L_\nu \sim \nu^s$ where $s = 2 - \kappa/2 = -1/2$.
 \cmf{If not stated otherwise the width parameter $w$ of the kappa distribution (see Eq. \ref{eq:kappa}) is set by $w= (\kappa - 3) \Theta_e/\kappa$, where the dimensionless electron temperature, $\Theta_e$, is computed according to Eq. \ref{eq:rhigh_prescription}. The underlying GRMHD simulations are taken from the \bhac runs and we use the time window from 25\,kM to 30\,kM. The radiative transfer is done employing the GRRT code \bhoss and we created images every 50\,M using the same inclinations and $R_{\rm high}$ values as for the thermal models. Each model is individually normalised to an average flux of 2.4\,Jy at 230\,GHz.}
@@ -579,7 +579,7 @@ The m-ring fitting is applied to the 230\,GHz images. As mentioned earlier the f
 %\cmf{based on the results of Kotaro, who run the m-ring on non-thermal models}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This table is for the best bet model section
+% This table is for the feature model section
 \begin{deluxetable*}{ccccccc}
   \tablewidth{\textwidth}
   \tabletypesize{\footnotesize}
@@ -597,11 +597,11 @@ The m-ring fitting is applied to the 230\,GHz images. As mentioned earlier the f
   \startdata
   A & 0.5  & MAD     & torus    & thermal                               & 160 & 30  \\
   B & 0.94 & SANE    & torus    & thermal                               &  40 & 30  \\
-  C & 0    & SANE    & wind-fed & thermal                               &  40 & 30  \\
-  D & 0.94 & IN-SANE & tilted   & thermal                               &  40 & 30  \\
   E & ...  & ...     & torus    & nonthermal fixed efficiency power law & ... & ... \\
   F & ...  & ...     & torus    & nonthermal fixed efficiency $\kappa$  & ... & ... \\
   G & ...  & ...     & torus    & nonthermal variable $\kappa$          & ... & ...
+  D & 0.94 & IN-SANE & tilted   & thermal                               &  40 & 30  \\
+  C & 0    & SANE    & wind-fed & thermal                               &  40 & 30  \\
   \enddata
   %
   \caption{List of feature models that sample the more likely regions
@@ -690,7 +690,7 @@ Most of our nonthermal models assign a width to the nonthermal component that de
 The nonthermal models are run for only $5000\tg$, so most  constraints can not be applied as precisely.  For example, the model distribution of $\mi{3}$ contains only $9$ points and correspondingly more uncertain.  It is therefore difficult to detect subtle changes in models.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This figure is for the best bet model section
+% This figure is for the feature model section
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/bestbets.png}
@@ -717,8 +717,8 @@ The aligned models considered up to now are a special case: in general one would
 
 All aligned models considered so far produce either a SANE or MAD accretion flow.  The tilted disk model initial conditions, however, produce a strongly magnetized but not MAD outcome, a state known as INSANE.  We consider three GRMHD models with tilt $0^{\circ}$, $30^{\circ}$ and $60^{\circ}$.
 
-The tilted models exhibit a warped disk due to the Lense-Thirring torques imposed by the black hole.  The time-averaged disk and jet are therefore non-axisymmetric. 
-%Notice that the jets are always approximately perpendicular to the outer disk in these models. 
+The tilted models exhibit a warped disk due to the Lense-Thirring torques imposed by the black hole.  The time-averaged disk and jet are therefore non-axisymmetric.
+%Notice that the jets are always approximately perpendicular to the outer disk in these models.
 Since the inner and the outer disk have different orientations, it is necessary to specify the coordinate axis of the observer.  We consider three  observer inclinations with respect to the {\em outer} disk at a single azimuth of $0$deg \citep[for more details, see][]{Chatterjee2020}.\footnote{A full parameter survey would run over azimuth angle as well.}  A full listing of the pass/fail results are given in Appendix \ref{app:tables}, Table \ref{tab:tiltedPF}.
 
 The 230\,GHz pre-image size of edge-on large $R_{\rm high}$ images increases slightly for the tilt-$60^{\circ}$ compared to the aligned case. This occurs because the inner jet is warped and creates an extended image. This effect is also seen in the 86\,GHz image size. On the other hand, the 86\,GHz flux varies little with tilt despite the presence of a boosted jet component at large tilt angles.
@@ -765,7 +765,7 @@ Both non-EHT and EHT constraints have the power to test the wind-fed model.  It 
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/bestbet_B.pdf}
-  \caption{Best bet model B}
+  \caption{feature model B}
   \label{fig:bestbet_B}
 \end{figure*}
 
@@ -785,5 +785,5 @@ We then inspected the remaining models and selected four best-bet
 models that approximately span the space of successful models.
 \note{Written characterization of remaining models; possibly 3 or 5}
 
-\ckc{CK to work on sample plots, may add extra best bet models upon
+\ckc{CK to work on sample plots, may add extra feature models upon
   requests.}
