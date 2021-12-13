@@ -531,12 +531,12 @@ The addition of non-thermal electrons increases the NIR flux for all models.  In
 
 For SANE models, except $\Rh=1$, the addition of non-thermal particles leads to over-production of NIR. For MAD models, all models over-produce NIR for $\varepsilon \ge 0.05$.
 
-As noted above, NIR emission is produced from the tail of the eDF.  The emissivity for a thermal eDF decreases exponentially with frequency at high frequency, while for the kappa eDF 
-
-The NIR fluxes are produced by particles in the tail of the distribution function and are therefore are sensitive to slope of the tail. The emissivity for a thermal distribution decreases exponentially $\left(j_{\nu}\propto\exp(-\nu^{1/3})\right)$ while for the kappa distribution it behaves like $j_{\nu}\propto \nu^{-(\kappa-2)/2}$. Thus even at low base efficiencies, $\varepsilon$, the the flux from the kappa distribution in the NIR $\left(\nu\sim 10^{14}\,\rm{Hz}\right)$ is larger than for the thermal eDF.
+As noted above, NIR emission is produced from the tail of the eDF.  The thermal eDF tail decreases exponentially, while the kappa eDF tail decreases as a power law, so the increase in NIR flux density is unsurprising.  This is a general feature of the nonthermal models: NIR observations sharply limit the allowed population of nonthermal electrons.  
 
 %..............................................................................
-\subsubsubsection{ALMA Light curves}
+\subsubsubsection{Light Curve Variability}
+
+We compute $mi{3}$ for a window of $5000\tg$ (note that this is shorter than the standard models, so the results are less constraining).  We find that the fraction of models 
 
 For the comparison with the ALMA light curves we compute the modulation index for a 3\,hour time window and across the entire simulated time window of 28\,hours (5000\,GM/c$^3$). Similar to the 86\,GHz flux the 230\,GHz flux is mainly produced within a few gravitational radii and thus not affected by the addition of non-thermal particles using Eq. \ref{eq:kappaeff}. As in the previous constraints, the MAD accretion models are insensitive to the addition of non-thermal particles whereas the SANE models show some increased modulation index for $\Rh>40$. However, the distributions for thermal and non-thermal eDF are still largely overlapping.
 
@@ -633,7 +633,12 @@ Interestingly both non-EHT and EHT constraints have the power to test the wind-f
   \centering
   \includegraphics[width=\textwidth]{figures/bestbets.png}
   \caption{The visibility amplitudes and SEDs of the two selected
-    possible models.}
+    possible models compared with data.
+    In both panels, symbols in black are the observation constraints; blue is Model A ($\abh=0.5$ MAD, $\Rh=160$, $i=30$); and orange is Model B ($\abh=0.94$ SANE, $\Rh=40$, $i=30$).
+    In the left panel, we show the visibility amplitudes as function of $u$-$v$ distance.
+    For the observation data, we plot 10 second incoherent averaged data from the HOPS pipeline.
+    For the models, we plot 8 different position angles for every snapshot.
+    In the right panel, we show the SEDs for Model A and B and again compare them with the observation constraints.}
   \label{fig:bestbets}
 \end{figure*}
 
