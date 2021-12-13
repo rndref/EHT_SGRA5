@@ -536,14 +536,18 @@ As noted above, NIR emission is produced from the tail of the eDF.  The thermal 
 %..............................................................................
 \subsubsubsection{Light Curve Variability}
 
-We compute $mi{3}$ for a window of $5000\tg$ (note that this is shorter than the standard models, so the results are less constraining).  We find that the fraction of models 
+We compute $mi{3}$ for a window of $5000\tg$ (note that this is shorter than the standard models, so the results are less constraining).  
 
-For the comparison with the ALMA light curves we compute the modulation index for a 3\,hour time window and across the entire simulated time window of 28\,hours (5000\,GM/c$^3$). Similar to the 86\,GHz flux the 230\,GHz flux is mainly produced within a few gravitational radii and thus not affected by the addition of non-thermal particles using Eq. \ref{eq:kappaeff}. As in the previous constraints, the MAD accretion models are insensitive to the addition of non-thermal particles whereas the SANE models show some increased modulation index for $\Rh>40$. However, the distributions for thermal and non-thermal eDF are still largely overlapping.
+% cfg 12 dec: awaiting results that will determine whether higher passing fraction in these models is a consequence of the shorter duration or the nonthermal electrons. 
+
+%For the comparison with the ALMA light curves we compute the modulation index for a 3\,hour time window and across the entire simulated time window of 28\,hours (5000\,GM/c$^3$). Similar to the 86\,GHz flux the 230\,GHz flux is mainly produced within a few gravitational radii and thus not affected by the addition of non-thermal particles using Eq. \ref{eq:kappaeff}. As in the previous constraints, the MAD accretion models are insensitive to the addition of non-thermal particles whereas the SANE models show some increased modulation index for $\Rh>40$. However, the distributions for thermal and non-thermal eDF are still largely overlapping.
 
 %..............................................................................
 \subsubsubsection{m-ring}
 
-The m-ring fitting is applied to the 230\,GHz images. As mentioned earlier the flux and size of the 230\,GHz images are not affected by the inclusion of non-thermal particles with fixed kappa and variable efficiency. Thus, we do not expect any changes in the distribution of the m-ring parameters.  Applying m-ring fitting to non-thermal models and a detailed comparison with the thermal results confirmed our initial assumption. \cmf{based on the results of Kotaro, who run the m-ring on non-thermal models}
+The m-ring fitting is applied to the 230\,GHz images. As mentioned earlier the flux and size of the 230\,GHz images are not affected by the inclusion of non-thermal particles with fixed kappa and variable efficiency. Thus, we do not expect any changes in the distribution of the m-ring parameters.  Applying m-ring fitting to non-thermal models and a detailed comparison with the thermal results confirmed our initial assumption. 
+
+%\cmf{based on the results of Kotaro, who run the m-ring on non-thermal models}
 
 %------------------------------------------------------------------------------
 \subsubsection{Variable kappa model $\kappa(\sigma,\beta)$}
@@ -615,6 +619,26 @@ The 230\,GHz pre-image size of edge-on large $R_{\rm high}$ images slightly incr
 
 The nIR flux exceeds the 1.0 mJy limit for all 3 models (except for a few cases, e.g. $R_{\rm high}=160$ models at $10^{\circ}$ inclination), which makes it difficult to favor the aligned case over the tilted one. Further, the presence of misalignment destroys the axisymmetric nature of the accretion flow. The current model set covers a small parameter space in inclination and $R_{\rm high}$ and a thorough exploration of the source azimuthal angle with respect to the observer is left to future studies.
 
+% This table is for the best bet model section
+\begin{deluxetable*}{cccccc}
+\tablecaption{List of best bet models.}
+\label{tab:bestbets}
+\tablehead{%
+\colhead{Model}             &%
+\colhead{Spin $\abh$}       &%
+\colhead{Magnetization}     &%
+\colhead{eDF}               &%
+\colhead{Temp. ratio $\Rh$} &%
+\colhead{Inclination $i$}    %
+}
+\startdata
+A & 0.5  & MAD  & thermal                              & 160 & 30  \\
+B & 0.94 & SANE & thermal                              &  40 & 30  \\
+C & ...  & ...  & nonthermal fixed efficiency $\kappa$ & ... & ... \\
+D & ...  & ...  & nonthermal variable $\kappa$         & ... & ...
+\enddata
+\end{deluxetable*}
+
 %==============================================================================
 \subsection{Stellar Wind Fed Models}
 
@@ -627,7 +651,7 @@ While both models pass many of the tests, they both fail the m-ring width test, 
 Interestingly both non-EHT and EHT constraints have the power to test the wind-fed model.  We cannot draw a broad conclusion about the viability of wind-fed models, however, as the two models only consider a single spin and a single eDF model.
 
 %==============================================================================
-\subsection{Possible Models}
+\subsection{Best Bet Models}
 
 \ckc{CK still working on it...}
 
