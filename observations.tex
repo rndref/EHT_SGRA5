@@ -331,6 +331,33 @@ For each model we evaluate a light curve and use that to generate a distribution
 %0.047$ (Wielgus et al. 2021). These values are consistent with being drawn from the distribution estimated from historical non-EHT 2005-2017 light curves.
 %curves. \mw{maybe sth like "from the estimated distribution of the historical 2005-2017 lightcurves"?}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This figure is for the Standard Models:EHT Constraints:Second Moment section
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figures/passfail_sz.pdf}
+  \caption{%
+    We demostrate how the second moment constraint work in this
+    Figure.
+    For each of the panels, the white ellipse represents the FWHM of
+    the Gaussian fits.
+    Hence, the white dashed shows the FWHM major axes, and an
+    invisible line perpendicular to that is the FWHM minor axes.
+    The two green circles mark the upper and lower limits of the
+    allowed size.
+    Given the relax criteria described in Section~\ref{sec:sz}, an
+    image is deemed compliant as long as the white ellipse touch the
+    region between the two green circle.
+    The left panel is a feature model (see Section~\ref{sec:bestbets})
+    that passes this constraint because the white ellipse falls
+    between the two green circle.
+    The right panel is zero spin SANE model with $i=10$ and $\Rh = 1$,
+    that fails this constraint because even its minor axis is too big
+    compare to the upper observed limit.
+  }
+  \label{fig:passfail_sz}
+\end{figure*}
+
 %------------------------------------------------------------------------------
 \subsubsection{EHT Structural Variability}
 
