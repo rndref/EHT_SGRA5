@@ -630,7 +630,7 @@ The m-ring fitting is applied to the 230\,GHz images. As mentioned earlier the f
 An alternative procedure for assigning a nonthermal eDF uses the  kappa model \eqref{eq:nonthermaleDF}, and sets $\kappa$ and $w$ according to \cite{2018ApJ...862...80B}, who model the effects of particle acceleration in magnetic reconnection.  In particular, we set
 \begin{align}
   \kappa &= 2.8 +0.7\sigma^{-1/2} + 3.7\sigma^{-0.19}\tanh{(23.4\sigma^{0.26}\beta)}, \label{eq:kappa}\\
-  w      &= \frac{ \kappa -3 }{\kappa} \Theta_{\rm e} + 
+  w      &= \frac{ \kappa -3 }{\kappa} \Theta_{\rm e} +
   \frac{\varepsilon}{2}\Big[1+\tanh(r-r_{\rm inj})\Big]\frac{ \kappa -3 }{6 \kappa} \frac{m_{\rm p}}{m_{\rm e}} \sigma.
 \end{align}
 Evidently $w$ contains a thermal and nonthermal contribution, with the nonthermal contribution proportional to the nonthermal particle acceleration efficiency $\varepsilon$  \citep{2019A&A...632A...2D, 2021NatAs.tmp..218C}.  The thermal width $\Theta_e$ is set using the $\Rh$ prescription.
@@ -704,7 +704,7 @@ The nonthermal models are run for only $5000\tg$, so most  constraints can not b
 % This figure is for the best-bet model section
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{figures/bestbets.png}
+  \includegraphics[width=\textwidth]{figures/bestbets.pdf}
   \caption{The visibility amplitudes and SEDs of the two feature
     models compared with data.
     In both panels, symbols in black are the observation constraints;
