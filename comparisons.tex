@@ -5,7 +5,7 @@ We now apply the observational constraints from Section~\ref{sec:observations} t
 %==============================================================================
 \subsection{Standard Models}\label{subsec:thermal}
 
-\ckc{I still think thermal vs nonthermal models is better...}
+\ckc{For section title, I still think thermal vs nonthermal models is better...}
 
 We start with a set of ``standard'' models with aligned (prograde or retrograde) GRMHD simulations, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.  This includes the \kharma, \bhac, and \hamr model sets listed in Table~\ref{tab:radiativemodels}.
 
@@ -532,7 +532,7 @@ and normalize the accretion rate using the standard procedure (see Section \ref{
 
 The addition of non-thermal particles produces almost undetectable changes in the 230\,GHz VLBI pre-image sizes for the MAD models and a minor effect for the SANE models.
 
-For MADs, independent of $\Rh$, $230$GHz emission is mostly produced in the disk region (see \citetalias{M87PaperV} and Fig.~8 in \citet{Wong_2022} for a 3-D rendering).  Increasing $\Rh$ will therefore not push the emission region into the jet where the non-thermal particles are located and thus their contribution to the total emission structure is negligible.
+For MADs, independent of $\Rh$, $230$GHz emission is mostly produced in the disk region (see \citetalias{M87PaperV} and Fig.~8 in \citealt{Wong_2022} for a 3-D rendering).  Increasing $\Rh$ will therefore not push the emission region into the jet where the non-thermal particles are located and thus their contribution to the total emission structure is negligible.
 
 For SANEs, models with $\Rh>40$ exhibit a minor increase in the source size.  Increasing $\Rh$ in SANE models pushes the emission toward the jet sheath, but the effect is minor because most of the emission is still produced by thermal electrons with temperature set by the $\Rh$ prescription.
 
@@ -627,8 +627,12 @@ The m-ring fitting is applied to the 230\,GHz images. As mentioned earlier the f
 
 %\cfg{could we avod the equation and simply provide a reference and enough detail that someone could reproduce it?}\aco{What about inline equations?}
 
-An alternative procedure for assigning a nonthermal eDF uses the  kappa model \eqref{eq:nonthermaleDF}, and sets $\kappa$ and $w$ according to \cite{2018ApJ...862...80B}, who model the effects of particle acceleration in magnetic reconnection.  In particular, we set $\kappa=2.8 +0.7\sigma^{-1/2} + 3.7\sigma^{-0.19}\tanh{(23.4\sigma^{0.26}\beta)}\label{eq:kappa}$
-and $w= \frac{ \kappa -3 }{\kappa} \Theta_{\rm e} + \frac{\varepsilon}{2}\left[1+\tanh(r-r_{\rm inj})\right]\, \frac{ \kappa -3 }{6 \kappa} \frac{m_{\rm p}}{m_{\rm e}} \sigma$.
+An alternative procedure for assigning a nonthermal eDF uses the  kappa model \eqref{eq:nonthermaleDF}, and sets $\kappa$ and $w$ according to \cite{2018ApJ...862...80B}, who model the effects of particle acceleration in magnetic reconnection.  In particular, we set
+\begin{align}
+  \kappa &= 2.8 +0.7\sigma^{-1/2} + 3.7\sigma^{-0.19}\tanh{(23.4\sigma^{0.26}\beta)}, \label{eq:kappa}\\
+  w      &= \frac{ \kappa -3 }{\kappa} \Theta_{\rm e} + 
+  \frac{\varepsilon}{2}\Big[1+\tanh(r-r_{\rm inj})\Big]\frac{ \kappa -3 }{6 \kappa} \frac{m_{\rm p}}{m_{\rm e}} \sigma.
+\end{align}
 Evidently $w$ contains a thermal and nonthermal contribution, with the nonthermal contribution proportional to the nonthermal particle acceleration efficiency $\varepsilon$  \citep{2019A&A...632A...2D, 2021NatAs.tmp..218C}.  The thermal width $\Theta_e$ is set using the $\Rh$ prescription.
 
 We set $\varepsilon=0$ and injection radius $r_{\rm inj}=10r_{g}$ following previous studies.  Nonzero $\varepsilon$ increases the averaged NIR flux by two orders of magnitude as $\varepsilon$ goes from 0 to 1, causing all models to overshoot NIR constraint.  Setting $\varepsilon \ne 0$ also causes the 86GHz flux density and image size to increase \citep{2021arXiv211102518F}.
