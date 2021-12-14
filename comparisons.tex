@@ -45,20 +45,26 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
 \begin{figure*}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_va.pdf}
-  \caption{%
+  \caption{%%
     Visual representation on how the \vam\ constraint work.
     For each of the panels, we select a snapshot from a model and plot
     its visibility amplitudes as functions of the $(u,v)$ distance at
-    $-90\degree$ (horizontal), $-45\degree$, $0\degree$ (vertical),
-    and $45\degree$.
-    Because of the Hermitian symmetry, they cover 8 position angles.
+    position angles $-90\degree$ (horizontal), $-45\degree$,
+    $0\degree$ (vertical), and $45\degree$.
+    Because of the Hermitian symmetry, they cover 8 position angles in
+    the image domain.
+    The EHT \aprilvii VLBI data points are plotted as black circles.
+    Even without further details, it is clear that the model on the
+    left matches reasonablely well with the data; while the model on
+    the right is complete off.
+    The \vam\ constraint is exactly design to rule out models like the
+    one in the right.
     As a visual guideline, the vertical gray band between 2.5 and
     3.5$\,\mathrm{G}\lambda$ marks the allowed null location in the
     \vam\ constraint; and the gray region between 6 and
-    8$\,\mathrm{G}\lambda$ marks both the $(u,v)$ distance that we
-    need to compute the long-baseline amplitude, and the allowed
-    median values of the normalized visibility amplitude,
-    $\mathrm{median}[V(6\,\mathrm{G}\lambda \leq \lambda \leq
+    8$\,\mathrm{G}\lambda$ marks both the $(u,v)$ distance range for
+    computing the long-baseline median amplitude and its allowed
+    values $\mathrm{median}[V(6\,\mathrm{G}\lambda \leq \lambda \leq
       8\,\mathrm{G}\lambda)] \leq (4\%/50\%) V_0$.
     We numerically find the first local visibility minima along each
     position angle and show them as solid points.
@@ -71,9 +77,8 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
     \vam\ constraint because one of the first null (green dot) falls
     within the allowed range; and none of the long-baseline median
     (all dotted lines) go above 4\%/50\%.
-    The right model fails the \vam\ constraint because none of the
-    first null is the allowed range and all median amplitudes are above
-    4\%/50\%.}
+    The right model fails the \vam\ constraint obviously because both
+    of the null location and long-baseline VAs are off.}
   \label{fig:passfail_va}
 \end{figure*}
 
@@ -96,14 +101,18 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
 %  \label{fig:cmp_ozel}
 %\end{figure}
 
-\cfg{WHY? need more discussion}
-The \vam constraint checks the morphology of the visibility amplitudes
-against $|u|$.
+The \vam\ constraint checks if the VAs of a model roughly matches the
+observation by comparing its null location and long-baseline visiblity
+amplitude.
+As Figure~\ref{fig:passfail_va} demonstrate, this constraint is
+informative.
+It tends to matches the ring size by using the null location, and the
+ring width by using the long-baseline amplitude.
 The test rejects edge-on MAD models at positive spin and a few large
 $\Rh$ SANE models.
 It disfavors edge-on MAD models at positive spin and a few large $\Rh$
 SANE models.
-The null location constraint rejects 16\% of models.
+The null location constraint rejects 16\% of models in total.
 
 %..............................................................................
 \subsubsubsection{M-ring Fits}
