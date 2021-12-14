@@ -3,7 +3,7 @@
 We now apply the observational constraints from
 Section~\ref{sec:observations} to the models described in
 Section~\ref{sec:models}.
-We show visually how some of the constriants work in
+We show visually how some of the constraints work in
 Figures~\ref{fig:passfail_sz}, \ref{fig:passfail_va}, and
 \ref{fig:passfail_sed}.
 For each of these figures, the left panel is a feature model (see
@@ -45,36 +45,35 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
 \begin{figure*}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_va.pdf}
-  \caption{
-    \ckc{Rewrite and compare failing and pass models.}
-    Visibility amplitude plots for demonstrating the null
-    location analysis.
-    The four curves are the visibility amplitude of a snapshot as
-    functions of the $u$-$v$ distance at $-90\degree$ (horizontal),
-    $-45\degree$, $0\degree$ (vertical), and $45\degree$.
+  \caption{%
+    Visual representation on how the \vam\ constraint work.
+    For each of the panels, we select a snapshot from a model and plot
+    its visibility amplitudes as functions of the $(u,v)$ distance at
+    $-90\degree$ (horizontal), $-45\degree$, $0\degree$ (vertical),
+    and $45\degree$.
     Because of the Hermitian symmetry, they cover 8 position angles.
-    As visual guidance, the vertical gray band marks the region
-    between 2.5 and 3.5\,$\mathrm{G}\lambda$, which covers the
-    expected location of the first null; and the horizontal gray region
-    marks the allowed median value of the normalized visibility
-    amplitude, $V \leq (4\%/50\%) V_0$, for long baselines.
-    We numerically find the local visibility minima along each
+    As a visual guideline, the vertical gray band between 2.5 and
+    3.5$\,\mathrm{G}\lambda$ marks the allowed null location in the
+    \vam\ constraint; and the gray region between 6 and
+    8$\,\mathrm{G}\lambda$ marks both the $(u,v)$ distance that we
+    need to compute the long-baseline amplitude, and the allowed
+    median values of the normalized visibility amplitude,
+    $\mathrm{median}[V(6\,\mathrm{G}\lambda \leq \lambda \leq
+      8\,\mathrm{G}\lambda)] \leq (4\%/50\%) V_0$.
+    We numerically find the first local visibility minima along each
     position angle and show them as solid points.
+    We also compute the median visibility amplitude in the marked
+    region along each position angle, which are marked by dotted lines.
     A model is rejected if \emph{all} the first nulls land
-    \emph{outside} the virtual gray band.
-    We also compute the median visibility amplitude for
-    $6\,\mathrm{G}\lambda \leq |u| \leq 8\,\mathrm{G}\lambda$ along
-    each position angle, which are marked by dotted lines.
-    A model is also rejected if \emph{any} of these lines land
-    \emph{outside} the horizontal gray band.
-    For the examples in this figure, the left model failed because the
-    $u$-$v$ distance of first null is too short; the middle model failed
-    because the $u$-$v$ distance of the first null is too long
-    \emph{and} some of the long baseline visibilities are too high;
-    the right model failed because all the long baseline visibilities
-    are too high.
-    \aeb{A few very minor pedantic points: 1. Can we fix the plot domain to avoid the sudden ending of lines?  They are misleading in that they seem to show an end to a function that certainly continue. 2. The fonts are wrong and the font size is too small.  3. Colors are not being used effectively to indicate conceptual closeness.  4. This plot fails the Jon Aarons test: if it were printed in grayscale or seen by a colorblind individual it would be impenetrable.}
-    \ckc{Took care of 1 and 2.  The color is not too important in my opinion because all we care about this constraint is ``or'' and ``and'' of different conditions.}}
+    \emph{outside} the virtual gray band, or if \emph{any} of these
+    lines land \emph{outside} the horizontal gray band.
+    For the examples in this figure, the left model passes the
+    \vam\ constraint because one of the first null (green dot) falls
+    within the allowed range; and none of the long-baseline median
+    (all dotted lines) go above 4\%/50\%.
+    The right model fails the \vam\ constraint because none of the
+    first null is the allowed range and all median amplitudes are above
+    4\%/50\%.}
   \label{fig:passfail_va}
 \end{figure*}
 
@@ -127,7 +126,7 @@ Most of the models that fail are low inclination models with ring diameters that
 
 Notice that the ring diameter is not degenerate with the second moment constraint; all models that fail the latter pass the former.  Recall that in addition to a blurred ring, the m-rings model contains a centered Gaussian component; the Gaussian tends to grow to absorb the emission when the ring is very extended.
 
-The distribution of ring diameters for many SANE models is multimodal (consistently in the Frankfurt and Illinois \monika{can we stop calling these models illinois or frankfurt models???} model sets), with a secondary peak in the distribution at $\sim 35\mu$as.  All $\Rh = 1$ SANE models show this secondary peak.  These models' images tend to have a well defined ring at the critical impact parameter and a second broad maximum in intensity at larger impact parameter.  The second peak in the distribution is a consequence of limited baseline coverage.
+The distribution of ring diameters for many SANE models is multimodal (consistently in the Frankfurt and Illinois \monika{can we stop calling these models Illinois or Frankfurt models???} model sets), with a secondary peak in the distribution at $\sim 35\mu$as.  All $\Rh = 1$ SANE models show this secondary peak.  These models' images tend to have a well defined ring at the critical impact parameter and a second broad maximum in intensity at larger impact parameter.  The second peak in the distribution is a consequence of limited baseline coverage.
 
 %\begin{figure*}
 %  \centering
@@ -465,7 +464,7 @@ The addition of the power-law tail primarily increases the flux in the NIR and t
 \subsubsection{Constant kappa models with $\kappa=5$}
 
 Next we consider a model in which {\em all} electrons are in a kappa eDF, which has a thermal core and a power-law tail.  We set $\kappa = 5$ everywhere,  motivated by \cite{2016PhRvL.117w5101K}, who found $\kappa = 5$ to be a good fit to the ion DF in a 3D hybrid simulation of MHD turbulence.  The power-law tail then has $p = \kappa - 1 = 4$, and at high frequency $\nu L_\nu \sim \nu^s$ where $s = 2 - \kappa/2 = -1/2$.
-\cmf{If not stated otherwise the width parameter $w$ of the kappa distribution (see Eq. \ref{eq:kappa}) is set by $w= (\kappa - 3) \Theta_e/\kappa$, where the dimensionless electron temperature, $\Theta_e$, is computed according to Eq. \ref{eq:rhigh_prescription}. The underlying GRMHD simulations are taken from the \bhac runs and we use the time window from 25\,kM to 30\,kM. The radiative transfer is done employing the GRRT code \bhoss and we created images every 50\,M using the same inclinations and $R_{\rm high}$ values as for the thermal models. Each model is individually normalised to an average flux of 2.4\,Jy at 230\,GHz.}
+\cmf{If not stated otherwise the width parameter $w$ of the kappa distribution (see Eq. \ref{eq:kappa}) is set by $w= (\kappa - 3) \Theta_e/\kappa$, where the dimensionless electron temperature, $\Theta_e$, is computed according to Eq. \ref{eq:rhigh_prescription}. The underlying GRMHD simulations are taken from the \bhac runs and we use the time window from 25\,kM to 30\,kM. The radiative transfer is done employing the GRRT code \bhoss and we created images every 50\,M using the same inclinations and $R_{\rm high}$ values as for the thermal models. Each model is individually normalized to an average flux of 2.4\,Jy at 230\,GHz.}
 
 %..............................................................................
 \subsubsubsection{230\GHz VLBI pre-image size}
