@@ -797,7 +797,7 @@ Both wind-fed models fail the m-ring width test, producing a width that is too s
 Both non-EHT and EHT constraints have the power to test the wind-fed model.  It is {\em not} possible to draw broad conclusions about the viability of the wind-fed models, however, since the two models tested here contain only a single spin and all use the $\Rh$ thermal eDF model.
 
 %==============================================================================
-\subsection{Best-Bet Models}
+\subsection{Feature Models}
 \label{sec:bestbets}
 
 \ckc{CK's first pass}
@@ -806,10 +806,23 @@ Both non-EHT and EHT constraints have the power to test the wind-fed model.  It 
   \centering
   \includegraphics[width=\textwidth]{figures/bestbet_imgs.pdf}
   \caption{We show here the 86\GHz and 230\GHz ray traced images of
-    feature Model~A in the left and middle panels.
-    The right panel shows the 230\GHz filtered by a Butterworth filter
+    the feature models.
+    The different columns are Model~A, B, and C, respectively (see
+    figure title or Table~\ref{tab:bestbets} for model description).
+    The top row shows 86\GHz image, the middle row shows 230\GHz, and
+    the bottom row shows the 230\GHz filtered by a Butterworth filter
     at 10$\,\mathrm{G}\lambda$, which approximate the resolution of
-    the current EHT array.}
+    the 2017 EHT array.
+    On one hand, although Model~A looks different than Model~B and C,
+    they pass all the constraints we described in this paper.
+    On the other hand, Model~B and C, although one is thermal and the
+    other is nonthermal, look remarkable similar at 230\GHz.
+    The former point suggests that there is still ambiguity in the
+    image morphology, consistent with \citetalias{PaperIII,PaperIV}'s
+    conclusions.
+    The later point suggests that even for the same image morphology,
+    there are still degeneracy in the eDF, suggesting the importance
+    of new multiwavelength observations.}
   \label{fig:bestbet_imgs}
 \end{figure*}
 
