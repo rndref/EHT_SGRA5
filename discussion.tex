@@ -64,16 +64,16 @@ Still, there are comprehensible trends in the model space that favor certain sou
 % \label{fig:outflow_illinois_thermal}
 % \end{figure*}
 
-What is the mass accretion rate in \sgra?  In the models, we measure the time-averaged accretion rate
+What is the accretion rate in \sgra?  In our models, we measure the time-averaged accretion rate
 %\cmf{Hector is working on the results from the BHAC runs including non-thermal emission models, should be done over the weekend}
 \begin{equation}
     \dot{M} = \frac{1}{\Delta t}\int dt\int d\theta d\phi\hspace{0.1cm}\sqrt{-g}\big(-\rho u^{r}\big),
 \end{equation}
-at the event horizon; the quantity in the parenthesis is the inward rest-mass energy flux.
+at the event horizon; the quantity in the parenthesis is the inward rest-mass flux.
 
-Figure~\ref{fig:accretion_outflow_power_illinois_thermal} (top panels) shows the time-averaged $\dot{M}$ (in solar masses per year) for the \kharma and \bhac  thermal models.  The accretion rates follow immediately once the models are normalized so that $F_{230} = 2.4$Jy.  A listing of $\dot{M}$ for all models for which it is available is provided in Appendix \ref{app:tables}.  
+Figure~\ref{fig:accretion_outflow_power_illinois_thermal} (top panels) shows the time-averaged $\dot{M}$ (in solar masses per year) for the \kharma and \bhac  thermal models.  The accretion rates follow immediately once the models are normalized so that $\langle F_{230}\rangle = 2.4$Jy.  A listing of $\dot{M}$ for all models for which it is available is provided in Appendix \ref{app:tables}.  
 
-MAD models accrete at $10^{-9}-10^{-8} M_{\odot}$yr$^{-1}$; SANE models have a broader range, $10^{-9}-10^{-6} M_{\odot}$yr$^{-1}$.  For both SANEs and MADs $\partial\dot{M}/\partial\Rh > 0$.  This can be understood as a consequence of three facts: (i) thermal synchrotron emissivity is an increasing function of temperature; (ii) where $\beta > 1$ the electron temperature $\propto \Rh^{-1}$; (iii) in MAD models a relatively small fraction of the emitting plasma lies at $\beta > 1$ (cf. Figure~4 in \citetalias{M87PaperV}).  It follows that $d\dot{M}/d\Rh > 0$ is required to maintain $F_{230} = 2.4$Jy, with a steeper derivative for SANE models where the emissivity of more electrons is reduced by increases in $\Rh$.  For both SANE and MAD $\partial\dot{M}/\partial\abh < 0$.  This follows from the dependence of temperature on spin shown in Figure \ref{fig:grmhd_temp}: higher spin corresponds to higher temperature.   
+MAD models accrete at $10^{-9}-10^{-8} M_{\odot}$yr$^{-1}$; SANE models have a broader range, $10^{-9}-10^{-6} M_{\odot}$yr$^{-1}$.  For all models  $\partial\dot{M}/\partial\Rh > 0$.  This can be understood as a consequence of three facts: (i) thermal synchrotron emissivity is an increasing function of temperature; (ii) where $\beta > 1$ the electron temperature $\propto \Rh^{-1}$; (iii) in MAD models a relatively small fraction of the emitting plasma lies at $\beta > 1$ (cf. Figure~4 in \citetalias{M87PaperV}).  It follows that $d\dot{M}/d\Rh > 0$ is required to maintain $F_{230} = 2.4$Jy, with a steeper derivative for SANE models where the emissivity of more electrons is reduced by increases in $\Rh$.  For both SANE and MAD $\partial\dot{M}/\partial\abh < 0$.  This follows from the dependence of temperature on spin shown in Figure \ref{fig:grmhd_temp}: higher spin corresponds to higher temperature.   
 
 Retrograde SANE, $\Rh=40$ and $160$ models produce the largest accretion rates, $\dot{M}\sim 10^{-6}M_{\odot}$yr$^{-1}$.  These models have a high midplane density of cool electrons that overproduce X-ray emission through bremsstrahlung, and are therefore ruled out.   Our critical beta models have accretion rates that lie between the standard model values for $\Rh = 10$ and $\Rh = 40$, for the selected critical beta parameter values ($f=0.5$, $\beta_\mathrm{crit}=1$).
 
@@ -88,15 +88,15 @@ How do our $\dot{M}$ compare with earlier estimates?  Linear polarization and Fa
 %{\bf LEFT OVER COMMENT TO INCORPORATE: Models at the highest accretion rate are ruled out by overproduction of x-ray emission.  If our models were in equilibrium over a larger range in radius, bremss from larger radius might increase the x-ray flux and disfavor more models.}
 %\color{black}
 
-All our standard models produce outflows in the polar regions.  In many cases the outflows can be divided into a slower, denser disk wind and a relativistic, high $\sigma$ Poynting jet.  The outflows have a power that is comparable to or larger than the bolometric luminosity.  What is the outflow power $P_{out}$ in our models?
+All our standard models produce outflows in the polar regions.  In many cases the outflows can be divided into a slower, denser disk wind and a relativistic, high $\sigma$ Poynting jet.  The outflows have a power that is comparable to or larger than the bolometric luminosity.  What is the outflow power $P_{out}$?
 
 %Our numerical simulations of black hole accretion in \sgra consistently produce relativistic outflows in the polar regions (in the standard models these outflows can be divided into disk wind/corona and relativistic jet that is often strongly magnetized and nearly hollow). These relativistic outflows have an electromagnetic energy that is typically comparable or larger than the bolometric luminosity of \sgra. We are interested in the outflow power to predict if an outflow can be observed e.g., at larger distances from the black hole where the outflow energy gets dissipated.
 
-First we must define $P_{out}$.  There are a number of outflow or jet definitions used in the literature: \citet{refId0}, \citet{2014A&A...570A...7M} cut on  Bernoulli parameter Be, while \citealt{10.1111/j.1365-2966.2012.22002.x} consider the ratio of energy flux to rest mass flux $\mu$, and \citetalias{M87PaperV} apply a $\beta\gamma$ cut to define $P_{jet}$.  Here we use the time-averaged outflow power near the poles \citetalias{M87PaperV}:
+First we must define $P_{out}$.  There are a number of competing definitions in the literature: \citet{refId0}, \citet{2014A&A...570A...7M} cut on  Bernoulli parameter Be, while \citealt{10.1111/j.1365-2966.2012.22002.x} consider the ratio of energy flux to rest mass flux $\mu$, and \citetalias{M87PaperV} apply a $\beta\gamma$ cut to define $P_{jet}$.  Here we use the time-averaged outflow power near the poles \citetalias{M87PaperV}:
 \begin{equation}
     P_{out} \equiv \frac{1}{\Delta t}\int dt \int d\phi \int_{poles}d\theta \sqrt{-g}\left(-T^{r}_{t}-\rho u^{r}\right),
 \end{equation}
-where $poles$ means $\theta<1$ or $\theta>\pi-1$. The integral is evaluated at $r=100GM/c^{2}$ and only where the time-averaged energy flux is outward. $P_{out}$ includes power in the relativistic Poynting jet, if present, and in the slower, denser disk wind.
+where $poles$ means $\theta<1$ or $\theta>\pi-1$ at $\theta$ where the time- and azimuth- averaged energy flux is outward. The integral is evaluated at $r=100GM/c^{2}$. $P_{out}$ includes power in the relativistic Poynting jet, if present, and in the slower, denser disk wind.
 
 %In Figure~\ref{fig:outflow_illinois_thermal}
 In Figure~\ref{fig:accretion_outflow_power_illinois_thermal}
@@ -105,11 +105,29 @@ In Figure~\ref{fig:accretion_outflow_power_illinois_thermal}
 %\color{red}{\bf please add results from bhac for comparison if they are available.}\color{black}
 %\color{red}{\bf one should say a few words how electron distribution function changes mass accretion rate estimates and jet powers.}\color{black}
 
-Many high spin or large $\Rh$ models attain $P_{out} \sim 10^{38} \ergsps$.
+Many high spin or large $\Rh$ models have $P_{out} \sim 10^{38} \ergsps$.
 An outflow with this power could potentially have dramatic observable effects in the dense interstellar medium of the Galactic Center.  For instance, the X-ray transient CXOGC J174540.0-290031, located only 0.1 pc from \sgra and with an estimated jet power of $\sim 10^{36} {\rm erg\ s^{-1}}$ produced a compact bipolar lobe at radio wavelengths with peak flux densities near 100  mJy  \citep{2005ApJ...633..218B}.  A more continuous  outflow, however, might clear out a significant volume of space, making identification of any interaction with the ISM less certain.  Nevertheless, there have been a number of large scale features that have been suggested as the result of interaction of a jet with the ISM \citep[e.g.]{2013ApJ...779..154L, 2021ApJ...922..254C}.
 
 % cfg 14 dec: revised into par above following contribution from geoff.
 %Following \citet{2007MNRAS.379.1519M} one may ask: is it possible to hide such powerful outflow in the Galactic Center? Unlike for \m87, there is no observational estimate for power of a putative jet in \sgra system. There have been several studies at radio, X-ray and $\gamma$-ray that have suggested the presence of a mildly relativistic outflow based on morphological structures observed in the \sgra complex (\citealt{2012ApJ...758L..11Y,2012AAS...22051303S,Li_2013,2019ApJ...875...44Z,2021arXiv210713402B} and references therein). However, due to the low luminosity of \sgra and the presence of the interstellar scattering screen (\citealt{2016ApJ...824...40O,2017MNRAS.471.3563D,2018ApJ...865..104J,2019A&A...621A.119B}) there is no direct evidence of the jet or outflow from \sgra. %\monika{EHT data interpretation suggest that we cannot exclude the presence of an outflow.???}
+
+%==============================================================================
+\subsection{Electron Distribution Function}
+
+One of the central uncertainties in modeling \sgra is how to assign the electron distribution function (eDF).  Do the surviving models have anything to say about the eDF?
+
+In our standard models, thermal eDFs with equal ion and electron temperature ($\Rh = 1$) are ruled out, in most cases by more than one constraint.  For MAD models this is easily explained: Comptonization is strong and X-rays are overproduced.  The electron temperature is a maximum when $\Rh = 1$, if all other parameters are fixed. For MAD models, $\dot{M}$ and therefore the electron scattering optical depth $\tau_{es}$ are relatively insensitive to $\Rh$.  Since the amplitude of the first Compton bump is $\propto y =  16 \Theta_e^2 \tau_{es}$, the high $\Theta_e$ at $\Rh = 1$ produces a large X-ray flux.  For SANE models the situation is more complicated (see Appendix \ref{app:tables}), with m-ring width too low for many $\Rh = 1$ models, but mostly at $\abh \le 0$, and 
+
+For SANE models the effect is reversed: bremsstrahlung is strong and X-rays are overproduced with $\Rh$ is large.   
+
+\note{Koushik to provide first draft}
+
+Strong constraint on abundance of cold electrons from bremss.  A high density of cold electrons - which would be invisible in synchrotron - are ruled out.  This is in part because at $\Theta_e \equiv k T_e/(m_e c^2) \lesssim 1$, $j_\nu \propto \Theta_e^{-1/2}$ (emission in the x-ray band increases as temperature decreases).  In contrast, for $\Theta_e \gtrsim 1$ electron-electron bremsstrahlung becomes important and $j_\nu \propto \Theta_e^{+1/2}$.
+
+Strong constraint on abundance of hot electrons from NIR.
+
+Strong constraint on $T_i/T_e$: models with ion temperature equal to electron temperature fail on several counts.
+
 
 %==============================================================================
 \subsection{MAD, SANE, and Self-Consistent Wind Feeding}
@@ -120,20 +138,6 @@ There are clear differences between MAD and SANE models in VLBI data, as well as
 
 Assessment of Ressler model.  Viable!
 
-%==============================================================================
-\subsection{Electron Distribution Function}
-
-Standard models with equal ion and electron temperatures ($\Rh = 1$) are ruled out, in most cases by more than one constraint.  For MAD models this happens because midplane temperatures are highest with $\Rh = 1$.  The variation in midplane temperature with $\Rh$ is modest in MAD models, and this produces a modest variation in 
-
-For MAD 
-
-\note{Koushik to provide first draft}
-
-Strong constraint on abundance of cold electrons from bremss.  A high density of cold electrons - which would be invisible in synchrotron - are ruled out.  This is in part because at $\Theta_e \equiv k T_e/(m_e c^2) \lesssim 1$, $j_\nu \propto \Theta_e^{-1/2}$ (emission in the x-ray band increases as temperature decreases).  In contrast, for $\Theta_e \gtrsim 1$ electron-electron bremsstrahlung becomes important and $j_\nu \propto \Theta_e^{+1/2}$.
-
-Strong constraint on abundance of hot electrons from NIR.
-
-Strong constraint on $T_i/T_e$: models with ion temperature equal to electron temperature fail on several counts.
 
 %==============================================================================
 \subsection{Inclination}
