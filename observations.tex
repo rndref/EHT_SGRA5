@@ -9,7 +9,7 @@ Variability complicates the comparison of \sgra models to the data. Even an idea
 
 Most observables are correlated over $\tau\sim$ few $\times 100 \tg$.  To obtain the mean and variance of the model distribution to accuracy $f$ from a GRMHD model, then, requires running it for $\sim \tau/f^2 \sim 30,000 (\tau/300) (f/0.1)^{-2}$, assuming the model decorrelates completely at intervals $\gg \tau$.  A GRMHD model of duration $30,000 \tg$  costs $10^3-10^4$ node-hours, depending on resolution, code, and hardware.  This is expensive since $\sim 10$ runs are used for each model set, and runs need to be repeated for multiple values of numerical parameters (e.g. resolution).  Most of our models are run for $30,000 \tg$; a few are run to $100,000 \tg$.  The model distributions therefore contain sampling noise, and this must be accounted for in model selection.  For some  constraints (e.g. m-ring fits; see below) this can be done by sampling the model at a cadence similar to the correlation time and then using a 2-sample KS test to compare the observed and model distributions.
 
-The constraints are heterogeneous and it is not possible to treat theme completely consistently.  If a constraint returns a probability $p$ that, for example, the observed and model distributions are drawn from the same underlying distribution, then we reject at $p < p_c = 0.01$.  If a constraint returns a ``compliance fraction'' $f$ of, for example, the fraction of snapshots that are consistent with the data, then we also cut at $f < 0.01$.  For $N$ constraints a $p$ threshold implies that we expect to incorrectly reject $1 - (1 - p_c)^N$ of acceptable models; for $p_c = 0.01$ and $N = 10$ this is $\approx 10\%$.
+The constraints are heterogeneous and it is not possible to treat them completely consistently.  If a constraint returns a probability $p$ that, for example, the observed and model distributions are drawn from the same underlying distribution, then we reject at $p < p_c = 0.01$.  If a constraint returns a ``compliance fraction'' $f$ of, for example, the fraction of snapshots that are consistent with the data, then we also cut at $f < 0.01$.  For $N$ constraints a $p$ threshold implies that we expect to wrongly reject $1 - (1 - p_c)^N$ of acceptable models; for $p_c = 0.01$ and $N = 10$ this is $\approx 10\%$.
 
 %==============================================================================
 % \subsection{Scattering Models}
@@ -157,7 +157,7 @@ We classify a snapshot as compliant if
 between 2.5 and 3.5\,$\mathrm{G}\lambda$ and
 \emph{ii})~at no position angle does the median VAs exceed $4\% /
 50\%$ of the zero-baseline flux.
-See also Figure~\ref{fig:sample_va} and its caption.
+%See also Figure~\ref{fig:sample_va} and its caption.
 
 We evaluate the fraction of snapshots from each model that are
 compliant using the criteria described above.
