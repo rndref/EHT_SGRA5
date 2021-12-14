@@ -218,8 +218,9 @@ The transfer step requires: %(1) CK: I prefer using i), ii), iii) in text becaus
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/sample_imgs.pdf}
-  \caption{% Sample 86\GHz (top row) and 230\GHz (bottom row) images
-    from the simulation library: (\emph{left})~a thermal SANE,
+  \caption{%
+    Sample 86\GHz (top row) and 230\GHz (bottom row) images from the
+    simulation library: (\emph{left})~a thermal SANE,
     (\emph{middle})~a thermal MAD, and (\emph{right})~a nonthermal
     variable $\kappa$ MAD.
     Note that these models are simply chosen to demonstrate the
@@ -327,14 +328,17 @@ The plasma mass scale parameter $\Munit$ controls the optical depth and thus the
     synchrotron emission, inverse-Compton emission or from
     bremsstrahlung, see the legend).
     The total emission is marked as black spectrum.
-    The left panel shows a interesting case, where the spectral index
-    at 230\GHz is negative, indicating the 230\GHz image is completely
-    optically thin and the 86\GHz would over produce the flux.
+    The left panel shows a interesting special case in our simulation
+    library, where the spectral index at 230\GHz is negative,
+    indicating the 230\GHz image is completely optically thin and the
+    86\GHz would over produce the flux.
     The NIR has a flat spectral index and is dominated by inverse
     Compton, instead of direct synchrotron radiation.
-    Finally, the spetral index for x-ray is positive, indicating the
-    x-ray emission is dominated by thermal bremsstrahlung by
-    (relatively) cool electrons.
+    These properties occur only for $\Rh = 1$ SANE models.
+    For $\Rh > 1$, the direct synchrotron peak shifts to the right and
+    broadens, and also dominate the NIR.
+    For SANE, the spetral index for x-ray is always positive and
+    dominated by thermal bremsstrahlung by (relatively) cool electrons.
     The middle and right panels show the more typical MAD SEDs, where
     86\GHz, 230\GHz, and NIR all come from direct synchrotron, and
     x-ray is dominated by inverse Compton.}
