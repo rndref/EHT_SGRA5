@@ -45,7 +45,7 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
 \begin{figure*}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_va.pdf}
-  \caption{%%
+  \caption{%
     Visual representation on how the \vam\ constraint work.
     For each of the panels, we select a snapshot from a model and plot
     its visibility amplitudes as functions of the $(u,v)$ distance at
@@ -80,6 +80,26 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
     The right model fails the \vam\ constraint obviously because both
     of the null location and long-baseline VAs are off.}
   \label{fig:passfail_va}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=0.75\textwidth]{figures/passfail_sed.pdf}
+  \caption{%
+    \ckc{We may skip this figure given Fig.~\ref{fig:sample_seds} is
+      similar.}
+    Visual representation on how the non-EHT flux constraints work.
+    This figure is similar to Figure~\ref{fig:sample_seds} but, in
+    addition to show a model that works (left panel), we purposely
+    select a model that fails both both the NIR and x-ray constraints.
+    The right panel is a zero-spin face-on SANE with $\Rh = 1$.
+    Because of high electron temperature, the synchrotron at $\sim
+    10^{12}\,\mathrm{Hz}$ peak at $\sim 10^{36}\ergsps$, which creates
+    a significant inverse Compton component that pushes the NIR beyond
+    the limit.
+    For the x-ray ray, this model follows the typical SANE behave and
+    overproduce thermal Bremsstrahlung.}
+  \label{fig:passfail_sed}
 \end{figure*}
 
 %\begin{figure}
@@ -171,13 +191,6 @@ We can combine all EHT constraint cuts with a logical {\em and} operation.  The 
 \subsubsection{Non-EHT Constraints}
 
 Now consider constraints from unresolved 86GHz, NIR, and X-ray observations.  Some or all of the emission in these bands is believed to originate in the compact source from plasma that is close to or overlaps the plasma that is producing the 230GHz-emitting plasma observed by EHT.
-
-\begin{figure*}
-  \centering
-  \includegraphics[width=0.75\textwidth]{figures/passfail_sed.pdf}
-  \caption{\ckc{Add a two panel figure show a model fail and a model pass all the non-EHT constraints.}}
-  \label{fig:passfail_noneht}
-\end{figure*}
 
 %..............................................................................
 \subsubsubsection{NIR Median Flux}
