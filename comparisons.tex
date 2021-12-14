@@ -1,6 +1,44 @@
 \section{Model Comparison}\label{sec:comparisons}
 
-We now apply the observational constraints from Section~\ref{sec:observations} to the models described in Section~\ref{sec:models}.  The results of all constraint applications are listed in pass/fail tables contains in Appendix \ref{app:tables}, which are available in electronic form.
+We now apply the observational constraints from
+Section~\ref{sec:observations} to the models described in
+Section~\ref{sec:models}.
+We show visually how some of the constriants work in
+Figures~\ref{fig:passfail_sz}, \ref{fig:passfail_va}, and
+\ref{fig:passfail_sed}.
+For each of these figures, the left panel is a feature model (see
+Section~\ref{sec:bestbets} that passes all the constraints, and the
+right panel is one of a failed models.
+The results of all constraint applications are listed in pass/fail
+tables contains in Appendix \ref{app:tables}, which are available in
+electronic form.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This figure is for the Standard Models:EHT Constraints:Second Moment section
+\begin{figure*}
+  \centering
+  \includegraphics[width=0.75\textwidth]{figures/passfail_sz.pdf}
+  \caption{%
+    We demostrate how the second moment constraint work in this
+    Figure.
+    For each of the panels, the white ellipse represents the FWHM of
+    the Gaussian fits.
+    Hence, the white dashed shows the FWHM major axes, and an
+    invisible line perpendicular to that is the FWHM minor axes.
+    The two green circles mark the upper and lower limits of the
+    allowed size.
+    Given the relax criteria described in Section~\ref{sec:sz}, an
+    image is deemed compliant as long as the white ellipse touch the
+    region between the two green circle.
+    The left panel is a feature model (see Section~\ref{sec:bestbets})
+    that passes this constraint because the white ellipse falls
+    between the two green circle.
+    The right panel is zero spin SANE model with $i=10$ and $\Rh = 1$,
+    that fails this constraint because even its minor axis is too big
+    compare to the upper observed limit.
+  }
+  \label{fig:passfail_sz}
+\end{figure*}
 
 %==============================================================================
 \subsection{Standard Models}\label{subsec:thermal}
@@ -12,7 +50,7 @@ We start with a set of ``standard'' models with aligned (prograde or retrograde)
 %------------------------------------------------------------------------------
 \subsubsection{EHT Constraints}
 
-How do the models fare when compared to the EHT data alone, using the size, null location, and m-ring fitting constraints?  The size constraint is simple but uninformative: only two face-on, $\Rh = 1$ models fail the test.  The null location test is informative and tends to rule out edge-on models. M-ring fits are noisy but informative.  They are also consistent between model sets.  Many thermal model distributions look like the data, but edge-on models are strongly disfavored.
+How do the models fare when compared to the EHT data alone, using the size, null location, and m-ring fitting constraints?  The size constraint is simple but uninformative: only two face-on, $\Rh = 1$ models fail the test.  The null location test is informative and tends to rule out edge-on models.  M-ring fits are noisy but also informative.  They are also consistent between model sets.  Many thermal model distributions look like the data, but edge-on models are strongly disfavored.
 
 %..............................................................................
 \subsubsubsection{Second Moment}
@@ -24,14 +62,7 @@ How do the models fare when compared to the EHT data alone, using the size, null
 %  \label{fig:cmp_2nd_moment}
 %\end{figure}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=0.75\textwidth]{figures/passfail_sz.pdf}
-  \caption{\ckc{To be written...} Face-on images are too big.}
-  \label{fig:passfail_sz}
-\end{figure*}
-
-The second moment constraint rejects only 1.5\% of models: nearly all models are about the right size.  The rejected models are $\abh \le 0$, face-on, SANE models with $\Rh = 1$. These models have extended rings of emission with angular extent that is large compared to the critical impact parameter $b_c = \sqrt{27} \rg$.
+The second moment constraint rejects only 1.5\% of models: nearly all models are about the right size.  The rejected models are $\abh \le 0$, face-on, SANE models with $\Rh = 1$. These models have extended emission with angular extent that is large compared to the critical impact parameter $b_c = \sqrt{27} \rg$.
 
 %..............................................................................
 \subsubsubsection{Visibility Amplitude Morphology}
