@@ -92,11 +92,11 @@ All our standard models produce outflows in the polar regions.  In many cases th
 
 %Our numerical simulations of black hole accretion in \sgra consistently produce relativistic outflows in the polar regions (in the standard models these outflows can be divided into disk wind/corona and relativistic jet that is often strongly magnetized and nearly hollow). These relativistic outflows have an electromagnetic energy that is typically comparable or larger than the bolometric luminosity of \sgra. We are interested in the outflow power to predict if an outflow can be observed e.g., at larger distances from the black hole where the outflow energy gets dissipated.
 
-First we must define $P_{out}$.  There are a number of definitions available in the literature: \citet{refId0}, \citet{2014A&A...570A...7M} use a Bernoulli parameter Be, while \citealt{10.1111/j.1365-2966.2012.22002.x} consider the ratio of energy flux to rest mass flux $\mu$, and \citetalias{M87PaperV} apply a $\beta\gamma$ cut to define $P_{jet}$. Here we evaluate the total, mechanical, outflow power near the poles using \citetalias{M87PaperV}:
+First we must define $P_{out}$.  There are a number of outflow or jet definitions used in the literature: \citet{refId0}, \citet{2014A&A...570A...7M} cut on  Bernoulli parameter Be, while \citealt{10.1111/j.1365-2966.2012.22002.x} consider the ratio of energy flux to rest mass flux $\mu$, and \citetalias{M87PaperV} apply a $\beta\gamma$ cut to define $P_{jet}$.  Here we use the time-averaged outflow power near the poles \citetalias{M87PaperV}:
 \begin{equation}
-    P_{out} = \frac{1}{\Delta t}\int dt \int d\phi  \int_{poles}d\theta \sqrt{-g}\left(-T^{r}_{t}-\rho u^{r}\right),
+    P_{out} \equiv \frac{1}{\Delta t}\int dt \int d\phi \int_{poles}d\theta \sqrt{-g}\left(-T^{r}_{t}-\rho u^{r}\right),
 \end{equation}
-where $poles$ means regions where $\theta<1$ or $\theta>\pi-1$. The integral is evaluated at $r=100GM/c^{2}$ and we consider only those zones where there is outflow, i.e. the quantity in the parentheses is positive. $P_{out}$ is a broad definition for energy outflow at the polar caps that includes both the narrow, relativistic jet and the nonrelativistic winds close to the jet-disk boundary.
+where $poles$ means $\theta<1$ or $\theta>\pi-1$. The integral is evaluated at $r=100GM/c^{2}$ and we consider only those zones where there is outflow, i.e. the quantity in the parentheses is positive. $P_{out}$ includes power in the relativistic Poynting jet, if present, and in the slower, denser disk wind.
 
 %In Figure~\ref{fig:outflow_illinois_thermal}
 In Figure~\ref{fig:accretion_outflow_power_illinois_thermal}
