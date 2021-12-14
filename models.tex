@@ -197,7 +197,7 @@ The models vary in numerical method and in numerical resolution. We present more
   \label{fig:GRMHD}
 \end{figure*}
 
-One critical feature of the GRMHD models that is important for the interpretation of our results are the temperature profiles.  Figure \ref{fig:grmhd_temp} shows the time- and azimuth- averaged profiles of the midplane {\em ion} temperature in a set of aligned GRMHD models.  The temperature profiles exhibit strong trends with spin and magnetic state (MAD or SANE) that drives many of the trends seen in the radiative models: MAD models are factor of several hotter than than SANE models, and both MAD and SANE become hotter as $\abh$ increases.  
+One critical feature of the GRMHD models that is important for the interpretation of our results are the temperature profiles.  Figure \ref{fig:grmhd_temp} shows the time- and azimuth- averaged profiles of the midplane {\em ion} temperature in a set of aligned GRMHD models.  The temperature profiles exhibit strong trends with spin and magnetic state (MAD or SANE) that drives many of the trends seen in the radiative models: MAD models are factor of several hotter than than SANE models, and both MAD and SANE become hotter as $\abh$ increases.
 
 \begin{figure*}
   \centering
@@ -218,14 +218,18 @@ The transfer step requires: %(1) CK: I prefer using i), ii), iii) in text becaus
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/sample_imgs.pdf}
-  \caption{Sample 230\GHz (top row) and 86\GHz (bottom row) images
-    from the simulation library:
-    (\emph{left})~a thermal SANE,
-    (\emph{middle})~a thermal MAD, and
-    (\emph{right})~a nonthermal variable $\kappa$ MAD.
+  \caption{% Sample 86\GHz (top row) and 230\GHz (bottom row) images
+    from the simulation library: (\emph{left})~a thermal SANE,
+    (\emph{middle})~a thermal MAD, and (\emph{right})~a nonthermal
+    variable $\kappa$ MAD.
     Note that these models are simply chosen to demonstrate the
     variety of possible images.
-    They do not necessary pass all the constraints.}
+    They do not necessary pass all the constraints.
+    The left column shows that face-on images tend to be too big in
+    size.
+    And the right column shows that edge-on images tend to be too
+    asymmetric.
+  }
   \label{fig:sample_imgs}
 \end{figure*}
 
@@ -309,19 +313,31 @@ The plasma mass scale parameter $\Munit$ controls the optical depth and thus the
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/sample_seds.pdf}
-  \caption{Sample SEDs from the sample models shown in
+  \caption{%
+    Sample SEDs from the sample models shown in
     Figure~\ref{fig:sample_imgs}:
     (\emph{left})~a thermal SANE,
     (\emph{middle})~a thermal MAD, and
-    (\emph{right})~a non-thermal variable $\kappa$ MAD,
-    while the black dots and arrows in the SEDs indicate the required
-    fluxes at 86\GHz and 230\GHz, and the upper limits at NIR and x-ray,
-    respectively.
+    (\emph{right})~a non-thermal variable $\kappa$ MAD.
+    The black dots and arrows in the panels indicate the required
+    fluxes at 86\GHz and 230\GHz, and the upper limits at NIR and
+    x-ray, respectively.
     Lines with different colors show contribution to the total
     emission from different physical processes (e.g., direct
     synchrotron emission, inverse-Compton emission or from
-    bremsstrahlung).
-    The total emission is marked as black spectrum.}
+    bremsstrahlung, see the legend).
+    The total emission is marked as black spectrum.
+    The left panel shows a interesting case, where the spectral index
+    at 230\GHz is negative, indicating the 230\GHz image is completely
+    optically thin and the 86\GHz would over produce the flux.
+    The NIR has a flat spectral index and is dominated by inverse
+    Compton, instead of direct synchrotron radiation.
+    Finally, the spetral index for x-ray is positive, indicating the
+    x-ray emission is dominated by thermal bremsstrahlung by
+    (relatively) cool electrons.
+    The middle and right panels show the more typical MAD SEDs, where
+    86\GHz, 230\GHz, and NIR all come from direct synchrotron, and
+    x-ray is dominated by inverse Compton.}
   \label{fig:sample_SEDs}
 \end{figure*}
 
