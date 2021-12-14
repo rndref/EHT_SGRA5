@@ -128,7 +128,20 @@ Second, as one might expect, the $2.2\mu$m flux density is a strictly increasing
 
 Third, it is important to understand that many of the nonthermal models we use are linked to the $\Rh$ prescription in some way.  For example, the kappa distribution function contains a width parameter $w$, and this is set using an $\Rh$-like prescription with width depending on $\beta$.  Our nonthermal models are only a few points in a vast function space of possible nonthermal parameterizations, with none of the models considered allowing for an electron energy density that depends on plasma history as well as instantaneous plasma state.  
 
-\subsection{
+\subsection{Origin of Variability Excess}
+
+Most of our models have excess 230~GHz variability compared to historical data.
+Section \ref{sec:comparisons} mentions possible explanations for this, including extended flux and the possibility that our models are missing physical ingredients that would reduce their variability.  
+
+Recall that variability in the 230~GHz light curve is characterized through the distribution of the modulation index $\mi{3} \equiv \sigma_3/\mu_3$, where $\sigma$ is the standard deviation of the light curve and $\mu$ is the mean, in our case evaluated over a 3 hour interval.
+
+One possibility is that the problem lies in interpretation of the observations. 
+The observed $\mi{3}$ is, formally, only a lower limit.  Slowly varying, diffuse emission on larger angular scales could contribute to the observed mean flux ($\mu$) but not be captured in models of the compact source.  Diffuse emission on scales larger than the VLBI images ($\sim 100 \mu$as) and smaller than the connected element interferometer measurements ($\sim 100$ mas) is difficult to constrain.  The EHTC imaging strategy involves a self-calibration step that assumes no diffuse structure on scales between the zero-baseline and the shortest VLBI baselines \citep{PaperIII}.  However, longer wavelength VLBI observations place fairly significant constraints on any emission on these scales under the assumption of flat- or steep spectra.  For instance, 1.3 and 7mm VLBI observations that use the Los Alamos-Pie Town-VLA baselines probe scales of $\sim 1$ to 10 mas and demonstrate no inconsistency in closure amplitudes and closure phases with a symmetric, two-dimensional Gaussian model \citep{2004Sci...304..704B}.  VLBI observations at 3mm wavelength are also fully consistent with a two-dimensional Gaussian model with an upper limit of $\sim 10$ mJy, or approximately 1\% of the total flux density \citep{2019A&A...621A.119B}. Additionally, a dust contribution is constrained by shorter wavelength ALMA observations that find a flat or slightly falling spectrum up to 900 GHz \citep{2019ApJ...881L...2B}.  A significant diffuse dust contribution would only be consistent if its properties were tuned to match a steeply falling compact synchrotron spectrum, which would likely be inconsistent with the significantly variable far infrared component of Sgr A* emission \citep{2016ApJ...825...32S, 2018ApJ...862..129V}.
+
+The extended flux hypothesis can be tested with the addition of new, short baselines to EHT.  If confirmed, the presence of extended flux would require re-normalization of the models and re-evaluation of the constraints.  For many constraints the difference between passing and failing is larger than the $\sim 20\%$ reduction to the accretion rate required to reduce the compact flux by $\sim 30\%$
+
+
+Summary: all of the above.
 
 %==============================================================================
 \subsection{MAD, SANE, and Self-Consistent Wind Feeding}
