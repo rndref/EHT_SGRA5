@@ -1,6 +1,8 @@
 \section{Discussion}
 \label{sec:discussions}
 
+cfg: outline of some key points to be made in discussion
+
 What is the spin and orientation of  \sgra, the magnetic state of the near-horizon plasma (SANE, MAD, or something else?), the electron distribution function (in the standard models, what is $\Rh$?), the accretion rate, and the radiative efficiency?  We can't yet answer these questions with confidence because no model fully explains the data.
 
 Still, there are comprehensible trends in the model space that favor certain source parameters.  For black hole spin,
@@ -40,6 +42,63 @@ Still, there are comprehensible trends in the model space that favor certain sou
 
 - directions for future analysis.
 
+%==============================================================================
+\subsection{Accretion Rate and Outflow Power}
+% this subsection should go first because it is important for discussion that follows.  
+
+% cfg checked 14 dec 
+%\monika{this section has been revised, please check and revise further}
+
+%figures go first to align them with text better
+% these plots should be shown together because they share rhigh label, so I merged them
+\begin{figure*}
+\centering
+\includegraphics[width=0.95\textwidth]{figures/illinoisv3_average_mdot_pout.png}
+\caption{{\it Top:} Accretion rate ($\dot{M}$) for standard models. Since $\dot{M}$ depends weakly on inclination $i$, we show only $i=50\degree$. {\it Bottom:} Outflow power ($P_{out}$) for standard models at $i = 50\degree$. The colors and markers vary with $\Rh$.}
+\label{fig:accretion_outflow_power_illinois_thermal}
+\end{figure*}
+% \begin{figure*}
+% \centering
+% \includegraphics[width=0.95\textwidth]{figures/illinoisv3_average_outflow_power.png}
+% \caption{Outflow powers measured in \kharma thermal models at an observer inclination $i=50^{\circ}$. The colors and markers are the same as \ref{fig:accretion_illinois_thermal}.}
+% \label{fig:outflow_illinois_thermal}
+% \end{figure*}
+
+What is the mass accretion rate in \sgra?  In the models, we measure the time-averaged accretion rate
+%\cmf{Hector is working on the results from the BHAC runs including non-thermal emission models, should be done over the weekend}
+\begin{equation}
+    \dot{M} = \frac{1}{\Delta t}\int dt\int d\theta d\phi\hspace{0.1cm}\sqrt{-g}\big(-\rho u^{r}\big),
+\end{equation}
+at the event horizon; the quantity in the parenthesis is the inward rest-mass energy flux.
+
+Figure~\ref{fig:accretion_outflow_power_illinois_thermal} (top panels) shows the time-averaged $\dot{M}$ (in solar masses per year) for the \kharma and \bhac  thermal models.  We find the following. (i) The MAD models accrete on average, at $10^{-9}-10^{-8} M_{\odot}$yr$^{-1}$ while the SANE models have a broader range, $10^{-9}-10^{-6} M_{\odot}$yr$^{-1}$. (ii) $\dot{M}$ increases with increasing $\Rh$. Since the electron temperature inversely varies with $\Rh$, a greater $\Rh$ implies cooler electrons so to maintain an average flux density of 2.4\,Jy at 1.3\mm, the corresponding $\mathcal{M}$ increases. (iii) The SANE models exhibit a more pronounced change in $\dot{M}$ with changes in $\Rh$ as compared to the MAD models. The emission in the SANE models is predominantly from regions with large plasma $\beta$, where the electron temperature is regulated by $\Rh$; MAD models produce a significant fraction of the emission in regions with $\beta\sim 1$, where $\Rh$ does not notably influence electron temperature (cf. Figure~4 in \citetalias{M87PaperV}). (iv) The retrograde, SANE, $\Rh=40$ and $160$ models produce the largest accretion rates, $\dot{M}\sim 10^{-6}M_{\odot}$yr$^{-1}$. However, these models are ruled out due to overproduction of x-ray emission. (v) The thermal models with the critical-$\beta$ electron temperature assignment scheme predict accretion rates that lie between the $\Rh=10$ and 40 values for the chosen set of parameters ($f=0.5$, $\beta_\mathrm{crit}=1$).
+\color{red}{\bf please add if bhac confirms this general trends. add figure but it would be best to plot this all together using maybe more transparent lines for bhac sims in the existing figure.}
+\color{black}
+
+Linear polarization and Faraday rotation measurements of \sgra emission at millimeter and sub-millimeter wavelengths (\citealt{2000ApJ...538L.121A, 2000ApJ...545..842Q, 2003ApJ...588..331B, 2006ApJ...640..308M, 2006JPhCS..54..354M, 2006ApJ...646L.111M}), and X-ray emission (\citealt{2003ApJ...591..891B, doi:10.1126/science.1240755}), in conjunction with semi-analytic models estimate \sgra accretion rate to be $\dot{M} \sim 10^{-9} - 10^{-7} M_{\odot}$yr$^{-1}$. The broad range of values is due to the differences in regions of radio emission in the theoretical models that are considered (ADAFs: \citealt{1998ApJ...492..554N, Yuan_2003}; Jet models: \citealt{1993A&A...278L...1F, 2000A&A...362..113F}). All our MAD model accretion rates  fall within the range of these historical observational estimates. Interestingly almost all SANE models with larger $\rhigh$ parameter (except SANE $a_*=+0.94$, which is one of our best models) have accretion rates that are inconsistent with the expectations.
+
+\color{red}
+{\bf LEFT OVER COMMENT TO INCORPORATE: Models at the highest accretion rate are ruled out by overproduction of x-ray emission.  If our models were in equilibrium over a larger range in radius, bremss from larger radius might increase the x-ray flux and disfavor more models.}
+\color{black}
+
+Our numerical simulations of black hole accretion in \sgra consistently produce relativistic outflows in the polar regions (in the standard models these outflows can be divided into disk wind/corona and relativistic jet that is often strongly magnetized and nearly hollow). These relativistic outflows have an electromagnetic energy that is typically comparable or larger than the bolometric luminosity of \sgra. We are interested in the outflow power to predict if an outflow can be observed e.g., at larger distances from the black hole where the outflow energy gets dissipated.
+
+In the past, several authors have defined the jet outflow differently: \citet{refId0}, \citet{2014A&A...570A...7M} use a Bernoulli parameter Be, while \citealt{10.1111/j.1365-2966.2012.22002.x} consider the ratio of energy flux to rest mass flux $\mu$, and \citetalias{M87PaperV} apply a $\beta\gamma$ cut to define $P_{jet}$. Here we evaluate the total, mechanical, outflow power near the poles using \citetalias{M87PaperV}:
+\begin{equation}
+    P_{out} = \frac{1}{\Delta t}\int dt \int d\phi  \int_{poles}d\theta \sqrt{-g}\left(-T^{r}_{t}-\rho u^{r}\right),
+\end{equation}
+where $poles$ means regions where $\theta<1$ or $\theta>\pi-1$. The integral is evaluated at $r=100GM/c^{2}$ and we consider only those zones where there is outflow, i.e. the quantity in the parentheses is positive. $P_{out}$ is a broad definition for energy outflow at the polar caps that includes both the narrow, relativistic jet and the nonrelativistic winds close to the jet-disk boundary.
+
+%In Figure~\ref{fig:outflow_illinois_thermal}
+In Figure~\ref{fig:accretion_outflow_power_illinois_thermal}
+(bottom panels) we show
+the time-averaged, outflow power in the \kharma thermal models. As expected, the $P_{out}$ increases with increasing magnitude of black hole spin $|a_{*}|$. SANE simulations have $P_{out}$ in range $\sim 10^{35}-10^{38} \ergsps$ and $P_{out}$ is sensitive to $\rhigh$ parameter (models with larger $\rhigh$ have higher accretion rates and therefore stronger magnetic fields). For MAD models $P_{out}$ is, on average, even larger and less sensitive to $\rhigh$ and is in range of $P_{out} \sim 10^{37}$--$10^{39} \ergsps$.
+\color{red}{\bf please add results from bhac for comparison if they are available.}\color{black}
+\color{red}{\bf one should say a few words how electron distribution function changes mass accretion rate estimates and jet powers.}\color{black}
+
+Many of our high spin or high $\rhigh$ models attain an outflow power $P_{out} \sim 10^{38} \ergsps$. Following \citet{2007MNRAS.379.1519M} one may ask: is it possible to hide such powerful outflow in the Galactic Center? Unlike for \m87, there is no observational estimate for power of a putative jet in \sgra system. There have been several studies at radio, X-ray and $\gamma$-ray that have suggested the presence of a mildly relativistic outflow based on morphological structures observed in the \sgra complex (\citealt{2012ApJ...758L..11Y,2012AAS...22051303S,Li_2013,2019ApJ...875...44Z,2021arXiv210713402B} and references therein). However, due to the low luminosity of \sgra and the presence of the interstellar scattering screen (\citealt{2016ApJ...824...40O,2017MNRAS.471.3563D,2018ApJ...865..104J,2019A&A...621A.119B}) there is no direct evidence of the jet or outflow from \sgra. \monika{EHT data interpretation suggest that we cannot exclude the presence of an outflow.???}
+
+
 
 %==============================================================================
 \subsection{MAD, SANE, and Self-Consistent Wind Feeding}
@@ -53,7 +112,9 @@ Assessment of Ressler model.  Viable!
 %==============================================================================
 \subsection{Electron Distribution Function}
 
-Standard models with equal ion and electron temperatures are ruled out  
+Standard models with equal ion and electron temperatures ($\Rh = 1$) are ruled out, in most cases by more than one constraint.  For MAD models this happens because midplane temperatures are highest with $\Rh = 1$.  The variation in midplane temperature with $\Rh$ is modest in MAD models, and this produces a modest variation in 
+
+For MAD 
 
 \note{Koushik to provide first draft}
 
