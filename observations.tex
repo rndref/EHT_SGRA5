@@ -169,9 +169,9 @@ We reject models with compliance fraction $< 1\%$.
 How can we extract information about the spatial structure of the source from noisy, fluctuating data with limited UV coverage, and compare that to noisy, fluctuating models?
 Our strategy is to fit a source-plane model to the data and summarize the source structure using the distribution of fit parameters.
 
-\citetalias{PaperIV} fits an ``m-ring'' source model to the April~7 data.  Here we use a simplified m-ring model: a $\delta$ function in radius with diameter $d$ multiplied by a truncated (up to $m = 3$) Fourier series, convolved with a Gaussian of width $w$.  In addition the model contains a centered Gaussian component, with amplitude and width as free parameters, to absorb large scale emission and emission interior to the ring.
+\citetalias{PaperIV} fits an ``m-ring'' source model to the April~7 data.  Here we use a simplified m-ring model: a $\delta$ function in radius with diameter $d$ multiplied by a truncated (up to $m = 3$; Paper IV truncates at $m = 4$) Fourier series, convolved with a Gaussian of width $w$.  In addition the model contains a centered Gaussian component, with amplitude and width as free parameters, to absorb large scale emission and emission interior to the ring.
 
-The simplified m-ring model has 10 parameters; 3 are well constrained and physically interpretable and are therefore used here: the m-ring diameter $d$, the m-ring width $w$ (FWHM of the convolving  Gaussian), and the $m=1$ relative amplitude $\beta_1$.
+The simplified m-ring model has 10 parameters; 3 well constrained and physically interpretable parameters are used here: the m-ring diameter $d$, the m-ring width $w$ (FWHM of the convolving  Gaussian), and the $m=1$ relative amplitude $\beta_1$ (the ``asymmetry'').
 
 We fit the m-ring independently to ``snapshots'' consisting of 2-minute intervals of EHT data. Over these short intervals, we approximate the source to be static.  Uncertainties in the fitted m-ring parameters are dominated by the limited baseline coverage during these snapshots rather than by calibration uncertainties or thermal noise. Because snapshots that are close in time sample nearly identical baselines, they do not provide additional model constraints.
 
