@@ -16,7 +16,8 @@ electronic form.
 %==============================================================================
 \subsection{Standard Models}\label{subsec:thermal}
 
-\ckc{For section title, I still think thermal vs nonthermal models is better...}
+%\ckc{For section title, I still think thermal vs nonthermal models is better...}
+% cfg 15-dec: noted, but we consistently refer to this model set as "standard models", because the critical beta models are thermal but nonstandard.
 
 We start with a set of ``standard'' models with aligned (prograde or retrograde) GRMHD simulations, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.  This includes the \kharma, \bhac, and \hamr model sets listed in Table~\ref{tab:radiativemodels}.
 
@@ -45,58 +46,24 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
 \begin{figure*}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_va.pdf}
-  \caption{Visual representation on how the \vam constraint work.
-    For each of the panels, we select a snapshot from a model and plot
-    its visibility amplitudes as functions of the $(u,v)$ distance at
-    position angles $-90\degree$ (horizontal), $-45\degree$,
-    $0\degree$ (vertical), and $45\degree$.
-    Because of the Hermitian symmetry, they cover 8 position angles in
-    the image domain.
-    The EHT \aprilvii VLBI data points are plotted as black circles.
-    Even without further details, it is clear that the model on the
-    left matches reasonably well with the data; while the model on
-    the right is completely off.
-    The \vam constraint is designed exactly to rule out models like
-    the one on the right.
-    As a visual guideline, the vertical gray band between 2.5 and
-    3.5$\,\mathrm{G}\lambda$ marks the allowed null location in the
-    \vam constraint; and the gray region between 6 and
-    8$\,\mathrm{G}\lambda$ marks both the $(u,v)$ distance range for
-    computing the long-baseline median amplitude and its allowed
-    values $\mathrm{median}[V(6\,\mathrm{G}\lambda \leq \lambda \leq
-      8\,\mathrm{G}\lambda)] \leq (4\%/50\%) V_0$.
-    We numerically find the first local visibility minima along each
-    position angle and show them as solid points.
-    We also compute the median visibility amplitude in the marked
-    region along each position angle, which are marked by dotted lines.
-    A model is rejected if \emph{all} the first nulls land
-    \emph{outside} the virtual gray band, or if \emph{any} of these
-    lines land \emph{outside} the horizontal gray band.
-    For the examples in this figure, the left model passes the \vam
-    constraint because one of the first null (green dot) falls within
-    the allowed range; and none of the long-baseline median (all
-    dotted lines) go above 4\%/50\%.
-    The right model fails the \vam constraint because both of the null
-    location and long-baseline VAs are off.}
+  \caption{\vam constraint example.  Left: passing snapshot; right: failing snapshot.  The solid lines in each plot show visibility amplitudes on a section through the origin in the uv domain, at four position angles (PA).  Solid points show data from \aprilvii.  The \vam constraint requires that for at least one PA the first minimum in VA fall within the left grey band, and for all PAs the VAs lie inside the right grey band.  Evidently the snapshot at right fails {\em both} conditions.
+  % cfg 15-dec: edited down
+  %For each of the panels, we select a snapshot from a model and plot its visibility amplitudes as functions of the $(u,v)$ distance at position angles $-90\degree$ (horizontal), $-45\degree$, $0\degree$ (vertical), and $45\degree$.    Because of the Hermitian symmetry, they cover 8 position angles in the image domain. The EHT \aprilvii VLBI data points are plotted as black circles. Even without further details, it is clear that the model on the left matches reasonably well with the data; while the model on the right is completely off.  The \vam constraint is designed exactly to rule out models like the one on the right. As a visual guideline, the vertical gray band between 2.5 and 3.5$\,\mathrm{G}\lambda$ marks the allowed null location in the \vam constraint; and the gray region between 6 and 8$\,\mathrm{G}\lambda$ marks both the $(u,v)$ distance range for computing the long-baseline median amplitude and its allowed values $\mathrm{median}[V(6\,\mathrm{G}\lambda \leq \lambda \leq      8\,\mathrm{G}\lambda)] \leq (4\%/50\%) V_0$. We numerically find the first local visibility minima along each position angle and show them as solid points. We also compute the median visibility amplitude in the marked region along each position angle, which are marked by dotted lines. A model is rejected if \emph{all} the first nulls land \emph{outside} the virtual gray band, or if \emph{any} of these lines land \emph{outside} the horizontal gray band. For the examples in this figure, the left model passes the \vam constraint because one of the first null (green dot) falls within the allowed range; and none of the long-baseline median (all dotted lines) go above 4\%/50\%. The right model fails the \vam constraint because both of the null location and long-baseline VAs are off.
+  }
   \label{fig:passfail_va}
 \end{figure*}
 
 \begin{figure*}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_sed.pdf}
-  \caption{\ckc{We may skip this figure given
-      Fig.~\ref{fig:sample_seds} is similar.}
-    Visual representation on how the non-EHT flux constraints work.
-    This figure is similar to Figure~\ref{fig:sample_seds} but, in
-    addition to show a model that works (left panel), we purposely
-    select a model that fails both both the NIR and x-ray constraints.
-    The right panel is a zero-spin face-on SANE with $\Rh = 1$.
-    Because of high electron temperature, the synchrotron at $\sim
-    10^{12}\,\mathrm{Hz}$ peak at $\sim 10^{36}\ergsps$, which creates
-    a significant inverse Compton component that pushes the NIR beyond
-    the limit.
-    For the x-ray ray, this model follows the typical SANE behave and
-    overproduce thermal Bremsstrahlung.}
+  \caption{
+    % cfg 15-dec: nope, let's keep it. this explicitly shows passing and failing.   
+     %\ckc{We may skip this figure given
+      %Fig.~\ref{fig:sample_seds} is similar.}
+    Non-EHT flux density constraint example.  Left: passing model with SED close to the measured 86\GHz point and below the quiescent $2.2\um$ and $X-ray$ points.  Right: failing model with inconsistent (strongly rising) millimeter wavelength spectral index, overproduction of $2.2\um$ due to strong Comptonization, and overproduction of X-rays by bremsstrahlung. 
+    % cfg 15-dec: edited
+    %This figure is similar to Figure~\ref{fig:sample_seds} but, in addition to show a model that works (left panel), we purposely select a model that fails both both the NIR and x-ray constraints. The right panel is a zero-spin face-on SANE with $\Rh = 1$.  Because of high electron temperature, the synchrotron at $\sim 10^{12}\,\mathrm{Hz}$ peak at $\sim 10^{36}\ergsps$, which creates a significant inverse Compton component that pushes the NIR beyond the limit. For the x-ray ray, this model follows the typical SANE behave and    overproduce thermal Bremsstrahlung.
+    }
   \label{fig:passfail_sed}
 \end{figure*}
 
@@ -153,7 +120,9 @@ Most of the models that fail are low inclination models with ring diameters that
 
 Notice that the ring diameter is not degenerate with the second moment constraint; all models that fail the latter pass the former.  Recall that in addition to a blurred ring, the m-rings model contains a centered Gaussian component; the Gaussian tends to grow to absorb the emission when the ring is very extended.
 
-The distribution of ring diameters for many SANE models is multimodal (consistently in the Frankfurt and Illinois \monika{can we stop calling these models Illinois or Frankfurt models???} model sets), with a secondary peak in the distribution at $\sim 35\mu$as.  All $\Rh = 1$ SANE models show this secondary peak.  These models' images tend to have a well defined ring at the critical impact parameter and a second broad maximum in intensity at larger impact parameter.  The second peak in the distribution is a consequence of limited baseline coverage.
+% cfg 15-dec: objection noted, this is going to require some rewriting and re-labeling of figures if we go through with this.
+%\monika{can we stop calling these models Illinois or Frankfurt models???}
+The distribution of ring diameters for many SANE models is multimodal (consistently in the Frankfurt and Illinois  model sets), with a secondary peak in the distribution at $\sim 35\mu$as.  All $\Rh = 1$ SANE models show this secondary peak.  These models' images tend to have a well defined ring at the critical impact parameter and a second broad maximum in intensity at larger impact parameter.  The second peak in the distribution is a consequence of limited baseline coverage.
 
 %\begin{figure*}
 %  \centering
@@ -246,7 +215,7 @@ In a naive picture \sgra's millimeter flux is produced in a photosphere that dec
 
 The 86\GHz/230\GHz color is therefore sensitive to the radial structure of the source plasma.  Figure \ref{fig:86GHz_flux_pizza} shows the full results of applying this constraint.
 
-\cfg{need more physical discussion}
+%\cfg{need more physical discussion}
 
 Many $\Rh = 1$ models, both MAD and SANE, fail the 86\GHz flux density test: 22/25 SANE and 11/25 MAD; all overproduce 86\GHz emission.  A large set of SANE models (17/100) underproduce 86\GHz emission, and these have $10 \le \Rh \le 40$.
 
@@ -264,7 +233,7 @@ The 86\GHz flux is sensitive to $\Rh$.  For example, SANE $\abh = 0$, $i = 70,90
 
 As for the 86\GHz flux, the 86\GHz size is sensitive to optical depth as a function of radius in the source plasma. Figure~\ref{fig:86GHz_size_pizza} in Appendix~\ref{app:tables} shows the full results of applying this constraint.
 
-\cfg{need cites to earlier work for par below}
+%\cfg{need cites to earlier work for par below}
 
 The 86\GHz size is sensitive to inclination.  For example, the MAD, $\abh = 0$, $\Rh = 160$ models are too small at low inclination and too large when seen edge-on, because the edge-on models have prominent limb-brightened jet walls that are visible to 100$\mu$as.  The 86\GHz size constraint rejects
 $58\%$ of models and is therefore one of the tightest constraints.
@@ -311,7 +280,7 @@ If we instead compare the models to the full historical distribution (40 measure
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{./figures/mi_hist.pdf}
-  \caption{Distributions of $\mi{3}$ for \kharma models (black), compared to distributions from historical observations (gray). The distributions for models with the lowest (blue) and highest (red) average $\mi{3}$ for SANEs and MADs are also shown. The heights of these distributions have been scaled down for visual clarity.
+  \caption{Distributions of $\mi{3}$ for \kharma models (black), compared to distributions from historical observations (gray). The distributions for models with the lowest (blue) and highest (red) average $\mi{3}$ for SANEs and MADs are also shown. The heights of these distributions have been scaled down for clarity.
   }
   \label{fig:cmp_ALMA_var}
 \end{figure}
@@ -646,6 +615,7 @@ We use the emissivity and absorptivity, computed numerically for the interval $3
 
 \cfg{this section needs to incorporate both the \hamr and \bhac variable kappa models}
 
+The addition of nonthermal particles increases the x-ray emission from the majority of models.
 
 %..............................................................................
 %\subsubsubsection{86\GHz Major Axis}
@@ -666,26 +636,26 @@ We use the emissivity and absorptivity, computed numerically for the interval $3
 %Larger emission than thermal models excludes SANE models for $R_{\rm high}=10$ and $\abh < 0$ as well as  $R_{\rm high}=40,~80$ and $\abh \leq 0.0$. While even larger NIR flux the models for $R_{\rm high}=160$ are still under the threshold.
 
 %..............................................................................
-\subsubsubsection{ALMA Light curves}
+%\subsubsubsection{ALMA Light curves}
 
-We compute the the modulation index  of the light curves of variable kappa models by discretizing the entire window of GRMHD simulations, $\rm 5000\,\tg$ ($\rm 28\,hours$) every $\rm 3\,hour$ (see Table \ref{tab:GRMHDmodels}). Similar to variable efficiency models, the non-thermal particles with variable kappa has not big impact on the flux at 230\GHz. The behavior of modulation index and total flux for MAD accretion models are same as thermal, and variable efficiency eDFs. We found sightly high modulation index for $R_{\rm high}=1$ and $30^{\circ} \leq i$ for SANE accretion models, the models for $R_{\rm high}=80$ has same trend as $R_{\rm high}=40$.
+%We compute the the modulation index  of the light curves of variable kappa models by discretizing the entire window of GRMHD simulations, $\rm 5000\,\tg$ ($\rm 28\,hours$) every $\rm 3\,hour$ (see Table \ref{tab:GRMHDmodels}). Similar to variable efficiency models, the non-thermal particles with variable kappa has not big impact on the flux at 230\GHz. The behavior of modulation index and total flux for MAD accretion models are same as thermal, and variable efficiency eDFs. We found sightly high modulation index for $R_{\rm high}=1$ and $30^{\circ} \leq i$ for SANE accretion models, the models for $R_{\rm high}=80$ has same trend as $R_{\rm high}=40$.
 
 %..............................................................................
-\subsubsubsection{M-Ring}
+%\subsubsubsection{M-Ring}
 
 %\aco{First Draft ... please add missing references ... waiting for calculations with help from Michi, Ben, Ck and Kotaro}\\
 
-...
+%...
 
 %..............................................................................
-\subsubsubsection{Null Location}
+%\subsubsubsection{Null Location}
 
-...
+%...
 
 %------------------------------------------------------------------------------
 \subsubsection{Summary of Constraints on Non-Thermal Models}
 
-The nonthermal eDF models considered here produce surprisingly little change compared to the thermal models for most constraints.  The 86\GHz size and flux, which are the most important non-EHT constraints, are not detectably affected by the addition of nonthermal electrons.  The 230\GHz m-ring fits are hardly affected at all by the addition of nonthermal electrons.  And $\mi{3}$ is also not detectably affected by the addition of nonthermal electrons.  The NIR flux density, however, is consistently increased by the nonthermal eDF prescriptions considered here.  In a large fraction of models this leads to overproduction of NIR.
+The nonthermal eDF models considered here produce surprisingly little change compared to the thermal models for most constraints.  The 86\GHz size and flux, which are the most important non-EHT constraints, are not detectably affected by the addition of nonthermal electrons.  The 230\GHz m-ring fits are hardly affected at all by the addition of nonthermal electrons.  And $\mi{3}$ is also not detectably affected by the addition of nonthermal electrons.  The NIR and x-ray flux density, however, is consistently increased by the nonthermal eDF prescriptions considered here.  In a large fraction of models this leads to overproduction of NIR or x-ray flux.
 
 %The effect of adding non-thermal electrons in a kappa eDF with  $\kappa=3.4$ and variable efficiency via Eq.~\ref{eq:efficiencybetasigma} can be summarized as follows:
 %\begin{itemize}
@@ -695,15 +665,13 @@ The nonthermal eDF models considered here produce surprisingly little change com
 
 The effect of adding nonthermal electrons in a variable kappa eDF can be summarized as follows:
 
-The effect of adding nonthermal electrons in a variable kappa eDF can be summarized as follows:
-
 The effect of adding nonthermal electrons in a constant-kappa model can be summarized as follows:
 
 The effect of adding nonthermal electrons in a power-law can be summarized as follows:
 
 Most of our nonthermal models assign a width to the nonthermal component that depends on the an electron ``temperature'' assigned through the $\Rh$ scheme, so they are not fully independent of $\Rh$.
 
-The nonthermal models are run for only $5000\tg$, so most  constraints can not be applied as precisely.  For example, the model distribution of $\mi{3}$ contains only $9$ points and correspondingly more uncertain.  It is therefore difficult to detect subtle changes in models.
+The nonthermal models are run for only $5000\tg$, so most  constraints can not be applied as precisely.  For example, the model distribution of $\mi{3}$ contains only $9$ points and is correspondingly more uncertain than for the thermal models.  It is therefore difficult to detect subtle changes in models.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This table is for the feature model section
@@ -773,17 +741,15 @@ Both wind-fed models fail the m-ring width test, producing a width that is too s
 Both non-EHT and EHT constraints have the power to test the wind-fed model.  It is {\em not} possible to draw broad conclusions about the viability of the wind-fed models, however, since the two models tested here contain only a single spin and all use the $\Rh$ thermal eDF model.
 
 %==============================================================================
-\subsection{Feature Models}
+\subsection{Featured Models}
 \label{sec:bestbets}
 
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/bestbets.pdf}
-  \caption{The visibility amplitudes and SEDs of the three feature
-    models compared with data.
-    In both panels, symbols in black are from observations; blue,
-    orange, and green are Models~A, B, C, respectively (see
-    Table~\ref{tab:bestbets} for definitions).
+  \caption{Visibility amplitudes (left) and SEDs (right) of the three featured models, compared with the data.  Black symbols show observations.  Blue, orange, and green are Models~A, B, C, respectively (see Table~\ref{tab:bestbets} for details).  Observed VAs are 10\sec incoherently averaged data from the HOPS pi
+  
+  
     (\emph{Left}) We show the visibility amplitudes as function of
     $(u, v)$ distance similar to Figure~\ref{fig:passfail_va}.
     For the observation data, we plot 10\sec incoherent averaged data

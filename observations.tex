@@ -84,8 +84,8 @@ baselines.
 This is done without any assumption about the structure of the source;
 if we used a ring prior the constraint would be narrower.
 
-\cfg{is this scattered or unscattered?}
-\ckc{add descattered values}
+%\cfg{is this scattered or unscattered?}
+%\ckc{add descattered values}
 The scattering kernel is estimated to have a 16.2\uas FWHM along the
 relevant EHT baselines.
 To descatter the sky image size, we subtract this value in quadrature
@@ -151,7 +151,7 @@ To apply this constraint, we compute the VA $V$ of each model snapshot
 along position angles (PAs) $0^\degree$, $45^\degree$, $90^\degree$,
 $135^\degree$.
 Because of Hermitian symmetry this actually covers eight PAs.
-We find the first minima numerically and compute the median VAs
+We find the first minimum numerically and compute the median VAs
 between 6 and 8\,$\mathrm{G}\lambda$.
 We classify a snapshot as compliant if
 \emph{i})~for at least one position angle the first minimum falls
@@ -334,23 +334,9 @@ For each model we evaluate a light curve and use that to generate a distribution
 \begin{figure*}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_sz.pdf}
-  \caption{%
-    Visual representation on how the second moment constraint work.
-    For each of the panels, the white ellipse represents the FWHM of
-    the Gaussian fits.
-    Hence, the white dashed shows the FWHM major axes, and an
-    invisible line perpendicular to that is the FWHM minor axes.
-    The two green circles mark the upper and lower limits of the
-    allowed size.
-    Given the relax criteria described in Section~\ref{sec:sz}, an
-    image is deemed compliant as long as the white ellipse touch the
-    region between the two green circle.
-    The left panel is a feature model (see Section~\ref{sec:bestbets})
-    that passes this constraint because the white ellipse falls
-    between the two green circle.
-    The right panel is zero spin SANE model with $i=10$ and $\Rh = 1$,
-    that fails this constraint because even its minor axis is too big
-    compare to the upper observed limit.
+  \caption{Second moment constraint example.  Left: passing snapshot; right: failing snapshot.  The model is rejected if $< 1\%$ of model snapshots pass.  Solid white ellipse  represents the second moments of the image, and the dashed line shows the major axis.  The two green circles show the observed lower and upper limits from \cite{PaperIII}. The snapshot is rejected if either the major or minor axis lies between the lower and upper limits. 
+  % cfg 15-dec: edited down
+  %Visual representation on how the second moment constraint work. For each of the panels, the white ellipse represents the FWHM of the Gaussian fits. Hence, the white dashed shows the FWHM major axes, and an invisible line perpendicular to that is the FWHM minor axes. The two green circles mark the upper and lower limits of the allowed size. Given the relax criteria described in Section~\ref{sec:sz}, an image is deemed compliant as long as the white ellipse touch the region between the two green circle. The left panel is a feature model (see Section~\ref{sec:bestbets}) that passes this constraint because the white ellipse falls between the two green circle. The right panel is zero spin SANE model with $i=10$ and $\Rh = 1$, that fails this constraint because even its minor axis is too big compare to the upper observed limit.
   }
   \label{fig:passfail_sz}
 \end{figure*}
@@ -370,7 +356,8 @@ For each model we evaluate a light curve and use that to generate a distribution
 
 Fluctuations in spatial structure of the source will lead to corresponding fluctuations in VA.  Here we compare  the resulting power spectrum of small-scale structural variability from EHT observations with that predicted by GRMHD models.
 
-\cfg{Was April 11 excluded from variability analysis?}
+%\cfg{Was April 11 excluded from variability analysis?}
+% cfg 15-dec: noted that April 11 was excluded.
 
 A nonparametric technique to measure the variance of the spatially-detrended VA at a location in the $(u,v)$-plane is described in \citet{NoiseModeling}, and briefly summarized here.  We use EHT observations of \sgra from April 5, 6, 7, and 10.  To exclude correlations associated with  variations in the total flux we normalize the VA data with the contemporaneous intrasite light curve \citep{Georgiev_2022}.  The lightcurve-normalized visibility ampitudes are then linearly detrended, and variances computed and azimuthally averaged \citep{NoiseModeling}.  The result, $\sigma_\text{var}^2 (|u|)$, is a measure of the fractional structural variability as a function of baseline length $|u|$.  The $\sigma_\text{var}^2 (|u|)$ is included in an inflated error budget when making images of and fitting models to the 2017 EHT observations of \sgra \citepalias{PaperIII, PaperIV}.
 
