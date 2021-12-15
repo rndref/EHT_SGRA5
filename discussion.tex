@@ -150,64 +150,63 @@ Our models also neglect cooling.  Cooling is likely to be most important where t
 
 There are more prosaic possible explanations for the variability excess: numerical inaccuracies in radiative transfer, truncation error in the GRMHD integrations (limited resolution), limited simulation duration, or misspecification of the adiabatic index.  These are considered in Appendix \ref{app:numerical}.  There is no evidence that any of these effects produces a significant correction to $\mi{3}$.
 
-A plausible scenario would combine each of the above effects, with a 10\% reduction in $\mi{3}$ from extended flux, a 10\% reduction from viscosity, and a 10\% correction from cooling.  A small correction to $\mi{3}$ from numerical resolution in ideal GRMHD models also cannot be ruled out.  
-
-
-%==============================================================================
-\subsection{Inclination}
-
-\note{Michi to provide first draft}
-\note{Strong constraints on inclination from m-ring fitting.}
-\ckc{ck's first pass}
-
-When the accretion flow around a black hole has enough angular momentum, the corresponding black hole image is sensitive to its inclination---in an edge-on case, the image is more asymmetric, with one side lighted up because of Doppler boosting; for a face-on case, the image is a more symmetric ring.
-\gw{I agree with the preceding, but I'm worried that this may be misleading with respect to how the geometry of the spacetime influences the image. For example, even if the flow angular momentum is zero, if bhspin > 0, then the corresponding image is *still* sensitive to inclination.}
-\ckc{Good point.  Feel free to edit.}
-However, this dependency is weak in a low angular moment accretion flow, or when frame dragging cancels out the Doppler effect. These situations include the MAD state, where the accretion flow is magnetically supported, and retrograde accretion flows \citep{2021arXiv210503424M}.
-
-The above conditional dependency of the asymmetry of the ring and
-inclination makes it non-trivial to measure inclination from the
-observation.
-In addition, it is important to note that the asymmetry described
-above does not directly corresponds to the m-ring asymmetry.
-Consider a situation that the Doppler boosting is so extreme that only
-the bright side of the photon ring is visible, while the dim side is
-hidden under the noise.
-In such a situation, the m-ring (or the gm-ring in \citetalias{PaperIV})
-may misidentify the boosted side as the full image, and return a low
-asymmetry, small image size, and wide image width.
-This is the reason that it is difficult to directly link one m-ring
-measurement to the inclination.
-Nevertheless, given that the EHT observation is surprisingly
-symmetric, the m-ring asymmetry measurement is not constraining.
-In stead, the m-ring size disfavors the face-on images.
+One plausible scenario is that each of the above effects (extended flux, viscosity, and cooling) contributes 10\% toward moving $\mi{3}$ from the models and data closer together. A small correction to $\mi{3}$ from numerical resolution in ideal GRMHD models also cannot be ruled out.  
 
 %==============================================================================
-\subsection{Position Angle}
+%\subsection{Inclination}
 
-\note{Virtually no constraint on position angle [check m-ring fits]}
+%\note{Michi to provide first draft}
+%\note{Strong constraints on inclination from m-ring fitting.}
+%\ckc{ck's first pass}
 
-According to the data, the image of \sgra is surprisingly symmetric.
-The position angle measurement is dominated by noise.
-Our visibility domain constraining is therefore not constrianing on
-the position angle.
+%When the accretion flow around a black hole has enough angular momentum, the corresponding black hole image is sensitive to its inclination---in an edge-on case, the image is more asymmetric, with one side lighted up because of Doppler boosting; for a face-on case, the image is a more symmetric ring.
+%\gw{I agree with the preceding, but I'm worried that this may be misleading with respect to how the geometry of the spacetime influences the image. For example, even if the flow angular momentum is zero, if bhspin > 0, then the corresponding image is *still* sensitive to inclination.}
+%\ckc{Good point.  Feel free to edit.}
+%However, this dependency is weak in a low angular moment accretion flow, or when frame dragging cancels out the Doppler effect. These situations include the MAD state, where the accretion flow is magnetically supported, and retrograde accretion flows \citep{2021arXiv210503424M}.
+
+%The above conditional dependency of the asymmetry of the ring and
+%inclination makes it non-trivial to measure inclination from the
+%observation.
+%In addition, it is important to note that the asymmetry described
+%above does not directly corresponds to the m-ring asymmetry.
+%Consider a situation that the Doppler boosting is so extreme that only
+%the bright side of the photon ring is visible, while the dim side is
+%hidden under the noise.
+%In such a situation, the m-ring (or the gm-ring in \citetalias{PaperIV})
+%may misidentify the boosted side as the full image, and return a low
+%asymmetry, small image size, and wide image width.
+%This is the reason that it is difficult to directly link one m-ring
+%measurement to the inclination.
+%Nevertheless, given that the EHT observation is surprisingly
+%symmetric, the m-ring asymmetry measurement is not constraining.
+%In stead, the m-ring size disfavors the face-on images.
 
 %==============================================================================
-\subsection{Black Hole Spin}
+%\subsection{Position Angle}
 
-\note{Still quite weak constraints on black hole spin.}
+%\note{Virtually no constraint on position angle [check m-ring fits]}
 
-Given that the size and the shape of the black hole shadow is
-insensitive to its spin, the black hole spin remains one of the most
-difficult black hole parameters to constraint.
+%According to the data, the image of \sgra is surprisingly symmetric.
+%The position angle measurement is dominated by noise.
+%Our visibility domain constraining is therefore not constrianing on
+%the position angle.
 
-However, as we discussed earlier, the asymmetry of the image does
-depend on the black hole spin, assuming that there is significant
-angular momentum in the accretion flow, In this sense, the
-astrophysics can help us narrow down the spin.
-Specifically, the m-ring diameter disfavors low spin models.
-However, with the current u uncertainties in, e.g., the eDF, we are
-not be able to report an acutal spin measurement.
+%==============================================================================
+%\subsection{Black Hole Spin}
+
+%\note{Still quite weak constraints on black hole spin.}
+
+%Given that the size and the shape of the black hole shadow is
+%insensitive to its spin, the black hole spin remains one of the most
+%difficult black hole parameters to constraint.
+
+%However, as we discussed earlier, the asymmetry of the image does
+%depend on the black hole spin, assuming that there is significant
+%angular momentum in the accretion flow, In this sense, the
+%astrophysics can help us narrow down the spin.
+%Specifically, the m-ring diameter disfavors low spin models.
+%However, with the current u uncertainties in, e.g., the eDF, we are
+%not be able to report an acutal spin measurement.
 
 
 %==============================================================================
@@ -235,14 +234,24 @@ not be able to report an acutal spin measurement.
 %------------------------------------------------------------------------------
 \subsubsection{Positrons}\label{sec:pair}
 
-\monika{i think this section should start with some general statement why do we want to consider positrons at all.}
-\ckc{I refer to this section from the eDF section.  Please feel free to move this around as long as we keep the label.}
+% cfg 14 dec: edited a bit and marked comments as resolved
+%\monika{i think this section should start with some general statement why do we want to consider positrons at all.}
+%\ckc{I refer to this section from the eDF section.  Please feel free to move this around as long as we keep the label.}
 
-\monika{Also, is it possible to incorporate this positron story into Caveats and Limitations?}
-\br{I would add it as a subsection (with a subtitle) of the caveats, and it indeed needs a general statement why we want to consider positrons (I would mention magnetosphere (or potential jet that we dont see?) is pair plasma, and (non-thermal) positrons (accelerated in a gap, or by a current sheet in the jet/magnetosphere) can be mixed into the disk through reconnection or instabilities at the jet base, injecting non-thermal magnetized blobs into the disk}\monika{arent most of the collisionless kinetic plasma simulations you report above actually done for electron-positron plasmas? i think this should be maybe connected somehow}\br{I would not mix those paragraphs but do it as you did now (with separate subtitles), because the main point the two paragraphs are making is different (I think the current subtitles reflect that well). We could indeed connect an introducing sentence of this positron paragraph to the collisionless paragraph:}
+%\monika{Also, is it possible to incorporate this positron story into Caveats and Limitations?}
+%\br{I would add it as a subsection (with a subtitle) of the caveats, and it indeed needs a general statement why we want to consider positrons (I would mention magnetosphere (or potential jet that we dont see?) is pair plasma, and (non-thermal) positrons (accelerated in a gap, or by a current sheet in the jet/magnetosphere) can be mixed into the disk through reconnection or instabilities at the jet base, injecting non-thermal magnetized blobs into the disk}\monika{arent most of the collisionless kinetic plasma simulations you report above actually done for electron-positron plasmas? i think this should be maybe connected somehow}\br{I would not mix those paragraphs but do it as you did now (with separate subtitles), because the main point the two paragraphs are making is different (I think the current subtitles reflect that well). We could indeed connect an introducing sentence of this positron paragraph to the collisionless paragraph:}
 
 
-\br{``The black hole magnetosphere or potential jet region may consist mainly of highly magnetized electron-positron pair plasma produced by pair discharges. The pair plasma can be accelerated to non-thermal power-law energy distributions in spark gaps or reconnecting current sheets \citep{2018A&A...616A.184L,2018ApJ...863L..31C,2019PhRvL.122c5101P,2020PhRvL.124n5101C,2020ApJ...895..121C,2020ApJ...902...80K,2021PhRvL.127e5101B} and potentially get mixed into the accretion disk through the exhaust of the reconnection layer \citep{2021arXiv210915115R}.''}
+%\br{``
+%The black hole magnetosphere or potential jet region may consist mainly of highly magnetized electron-positron pair plasma produced by pair discharges. The pair plasma can be accelerated to non-thermal power-law energy distributions in spark gaps or reconnecting current sheets \citep{2018A&A...616A.184L,2018ApJ...863L..31C,2019PhRvL.122c5101P,2020PhRvL.124n5101C,2020ApJ...895..121C,2020ApJ...902...80K,2021PhRvL.127e5101B} and potentially get mixed into the accretion disk through the exhaust of the reconnection layer \citep{2021arXiv210915115R}.
+%''}
+
+So far we have considered only ion-electron plasmas, but pairs can be produced in black hole magnetospheres through pair discharges or through so-called pair drizzle.  
+
+the low density polar region may be dominated by an electron-position pair plasma.  How might this affect the models?  
+
+The low density polar region may contain an electron-positron pair plasma produced by pair discharges.
+black hole magnetosphere or potential jet region may consist mainly of highly magnetized electron-positron pair plasma produced by pair discharges. The pair plasma can be accelerated to non-thermal power-law energy distributions in spark gaps or reconnecting current sheets \citep{2018A&A...616A.184L,2018ApJ...863L..31C,2019PhRvL.122c5101P,2020PhRvL.124n5101C,2020ApJ...895..121C,2020ApJ...902...80K,2021PhRvL.127e5101B} and potentially get mixed into the accretion disk through the exhaust of the reconnection layer \citep{2021arXiv210915115R}
 
 
 \cite{2006MNRAS.367..905B} devised a canonical model of Sgr A* as a  radiatively inefficient accretion flow (RIAF). Semi-analytic RIAF models implementing  this using the general relativistic ray tracer GRTRANS \citep{2016MNRAS.462..115D} can be found in  \cite{2021arXiv210105327E}, where  positrons are included using emission modeling motivated in  \cite{2020ApJ...896...30A}. The Figs. 1-3 %\ref{fig:EmamiRIAF}
@@ -252,7 +261,6 @@ models from \cite{2021arXiv210105327E} shows Stokes maps and polarized spectra o
 The addition of small non-thermal populations of positrons \citep{2020ApJ...896...30A,2021arXiv210105327E} tends to: increase overall intensity in jet regions for fixed electron number density; modify the low-frequency spectral slope; cancel the observed intrinsic circular polarization and enhance circular polarization due to Faraday conversion. The last of these positron effects is particularly apparent when comparing declining tails of x-ray spectra of positron-rich versus positron-poor sources, as seen in \cite{2021arXiv210105327E}.%Fig. \ref{fig:EmamiRIAFSpectra}.
 
 However, positron effects for Sgr A* are severely limited by the compactness \citep{2012MNRAS.424L..26G} due to the low observed luminosity and outflow geometry. In fact \cite{2011ApJ...735....9M} estimate the funnel positron pair density of Sgr A* to be $10^{-8}\mathrm{cm}^{-3}$ (well below the Goldreich-Julian density required to screen plasma electric fields). By contrast, the comparable density for M87 is $10^3\mathrm{cm}^{-3}$.
-
 
 
 %MOVED from Sect. 3.1 to Sect. 3.0
