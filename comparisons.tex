@@ -613,7 +613,7 @@ As noted above, NIR emission is produced from the tail of the eDF.  The thermal 
 %..............................................................................
 \subsubsubsection{Light Curve Variability}
 
-We compute $mi{3}$ for a window of $5000\tg$.  Notice that this is shorter than the standard models, which as $3$ $5000\tg$ windows, so the results are less constraining.  The $\mi{3}$ test rejects about 1/2 of models for $\varepsilon = 0.05, 0.1,$ and $0.2$.  We conclude that $\varepsilon$ has no effect on the $\mi{3}$ test.
+We compute $mi{3}$ for a window of $\num{5000}\tg$.  Notice that this is shorter than the standard models, which as three $\num{5000}\tg$ windows, so the results are less constraining.  The $\mi{3}$ test rejects about 1/2 of models for $\varepsilon = 0.05$, $0.1$, and $0.2$.  We conclude that $\varepsilon$ has no effect on the $\mi{3}$ test.
 
 %For the comparison with the ALMA light curves we compute the modulation index for a 3\,hour time window and across the entire simulated time window of 28\,hours (5000\,GM/c$^3$). Similar to the 86\GHz flux the 230\GHz flux is mainly produced within a few gravitational radii and thus not affected by the addition of non-thermal particles using Eq. \ref{eq:kappaeff}. As in the previous constraints, the MAD accretion models are insensitive to the addition of non-thermal particles whereas the SANE models show some increased modulation index for $\Rh>40$. However, the distributions for thermal and non-thermal eDF are still largely overlapping.
 
@@ -664,8 +664,8 @@ The m-ring fitting is applied to the 230\GHz images. As mentioned earlier the fl
 An alternative procedure for assigning a nonthermal eDF uses the  kappa model \eqref{eq:nonthermaleDF}, and sets $\kappa$ and $w$ according to \cite{2018ApJ...862...80B}, who model the effects of particle acceleration in magnetic reconnection.  In particular, we set
 \begin{align}
   \kappa &= 2.8 +0.7\sigma^{-1/2} + 3.7\sigma^{-0.19}\tanh{(23.4\sigma^{0.26}\beta)}, \label{eq:kappa}\\
-  w      &= \frac{ \kappa -3 }{\kappa} \Theta_{\rm e} +
-  \frac{\varepsilon}{2}\Big[1+\tanh(r-r_{\rm inj})\Big]\frac{ \kappa -3 }{6 \kappa} \frac{m_{\rm p}}{m_{\rm e}} \sigma.
+  w      &= \frac{ \kappa -3 }{\kappa} \Theta_e +
+  \frac{\varepsilon}{2}\Big[1+\tanh(r-r_{\rm inj})\Big]\frac{\kappa - 3}{6 \kappa} \frac{m_p}{m_e} \sigma.
 \end{align}
 Evidently $w$ contains a thermal and nonthermal contribution, with the nonthermal contribution proportional to the nonthermal particle acceleration efficiency $\varepsilon$  \citep{2019A&A...632A...2D, 2021NatAs.tmp..218C}.  The thermal width $\Theta_e$ is set using the $\Rh$ prescription.
 

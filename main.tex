@@ -1,5 +1,11 @@
 \documentclass[twocolumn,twocolappendix,tighten,dvipsnames,linenumbers]{aastex63}
 \usepackage{eht}
+
+\usepackage{savesym}
+\savesymbol{tablenum}
+\usepackage[group-separator={,}]{siunitx}
+\restoresymbol{SIX}{tablenum}
+
 %\usepackage{lscape}
 
 \newcommand\subsubsubsection[1]{\paragraph{#1}}
