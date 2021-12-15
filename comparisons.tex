@@ -625,38 +625,6 @@ As noted above, NIR emission is produced from the tail of the eDF.  The thermal 
 
 %\cmf{based on the results of Kotaro, who run the m-ring on non-thermal models}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This table is for the feature model section
-\begin{deluxetable*}{cccccc}
-  \tablewidth{\textwidth}
-  \tabletypesize{\footnotesize}
-  \renewcommand{\arraystretch}{1.1}
-  %
-  \tablehead{%
-    \colhead{Model}             &%
-    \colhead{Spin $\abh$}       &%
-    \colhead{Magnetization}     &%
-    \colhead{eDF type}          &%
-    \colhead{Temp. ratio $\Rh$} &%
-    \colhead{Inclination $i$}    %
-  }
-  \startdata
-  A & 0.94 & SANE & thermal                      &  40 & $30\degree$ \\ % Frankfurt
-  B & 0.5  & MAD  & thermal                      &  40 & $30\degree$ \\ % Illinois
-  C & 0.5  & MAD  & nonthermal variable $\kappa$ & 160 & $30\degree$    % HAMR
-  \enddata
-  %
-  \caption{List of featured models that sample the more possible regions
-    of the model parameter space.
-    As Figure~\ref{fig:bestbets} shows below, these models broadly
-    agree with the observation constraints, although they are not
-    necessary the best fit models because of both observation and
-    modeling noise.
-    See Section~\ref{sec:bestbets} for detailed descriptions of these
-    models and Section~\ref{sec:discussions} for discussions.}
-  \label{tab:bestbets}
-\end{deluxetable*}
-
 %------------------------------------------------------------------------------
 \subsubsection{Variable Kappa Model}
 
@@ -758,6 +726,38 @@ Variability increases with the tilt. In tilted disks, accretion occurs via thin 
 NIR flux also increases with tilt.  The NIR flux exceeds the 1.0 mJy limit for all 3 tilts, with a few exceptions, e.g. $R_{\rm high}=160$ models at $10^{\circ}$ inclination, which makes it difficult to favor the aligned case over the tilted one. Further, the presence of misalignment destroys the axisymmetric nature of the accretion flow.  The current model set covers a small parameter space in inclination and $R_{\rm high}$.  A thorough exploration of the source azimuthal angle with respect to the observer is left to future studies.
 
 To summarize: for the model set considered here tilt primarily affects variability and the NIR flux density, increasing both and thus shifting acceptable aligned models into rejected models as tilt angle increases.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This table is for the feature model section
+\begin{deluxetable*}{cccccc}
+  \tablewidth{\textwidth}
+  \tabletypesize{\footnotesize}
+  \renewcommand{\arraystretch}{1.1}
+  %
+  \tablehead{%
+    \colhead{Model}             &%
+    \colhead{Spin $\abh$}       &%
+    \colhead{Magnetization}     &%
+    \colhead{eDF type}          &%
+    \colhead{Temp. ratio $\Rh$} &%
+    \colhead{Inclination $i$}    %
+  }
+  \startdata
+  A & 0.94 & SANE & thermal                      &  40 & $30\degree$ \\ % Frankfurt
+  B & 0.5  & MAD  & thermal                      &  40 & $30\degree$ \\ % Illinois
+  C & 0.5  & MAD  & nonthermal variable $\kappa$ & 160 & $30\degree$    % HAMR
+  \enddata
+  %
+  \caption{List of featured models that sample the more possible regions
+    of the model parameter space.
+    As Figure~\ref{fig:bestbets} shows below, these models broadly
+    agree with the observation constraints, although they are not
+    necessary the best fit models because of both observation and
+    modeling noise.
+    See Section~\ref{sec:bestbets} for detailed descriptions of these
+    models and Section~\ref{sec:discussions} for discussions.}
+  \label{tab:bestbets}
+\end{deluxetable*}
 
 %==============================================================================
 \subsection{Stellar Wind Fed Models}
