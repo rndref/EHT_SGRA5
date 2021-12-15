@@ -281,7 +281,7 @@ The physical picture for 86\GHz source size is complicated, as is the extraction
 %..............................................................................
 \subsubsubsection{Summary of Non-EHT constraints}
 
-Applying only non-EHT constraints, we are left with the 24/200 models shown in Figure~\ref{fig:non_eht_cuts}. The surviving models are the result of applying a heterogeneous and noisy set of constraints using a hard cutoff, which obscures the underlying physical pictures.  Nevertheless, the surviving models are nearly all MAD (only 1 SANE model survives), all have $\Rh > 1$, and nearly all are at $i \le 70$deg.  This leaves a cluster of surviving MAD models at large $\Rh$ and moderate inclination.
+Applying only non-EHT constraints, we are left with the 24/200 models shown in Figure~\ref{fig:non_eht_cuts}. The surviving models are the result of applying a heterogeneous and noisy set of constraints using a hard cutoff, which obscures the underlying physical pictures.  Nevertheless, the surviving models are nearly all MAD (only 1 SANE model survives), all have $\Rh > 1$, and nearly all are at $i \le 70\degree$.  This leaves a cluster of surviving MAD models at large $\Rh$ and moderate inclination.
 
 \begin{figure*}
   \centering
@@ -805,8 +805,6 @@ Both non-EHT and EHT constraints have the power to test the wind-fed model.  It 
 \subsection{Feature Models}
 \label{sec:bestbets}
 
-\ckc{CK's first pass}
-
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/bestbet_imgs.pdf}
@@ -814,28 +812,94 @@ Both non-EHT and EHT constraints have the power to test the wind-fed model.  It 
     the feature models.
     The different columns are Model~A, B, and C, respectively (see
     figure title or Table~\ref{tab:bestbets} for model description).
-    The top row shows 86\GHz image, the middle row shows 230\GHz, and
-    the bottom row shows the 230\GHz filtered by a Butterworth filter
-    at 10$\,\mathrm{G}\lambda$, which approximate the resolution of
-    the 2017 EHT array.
-    On one hand, although Model~A looks different than Model~B and C,
-    they pass all the constraints we described in this paper.
-    On the other hand, Model~B and C, although one is thermal and the
-    other is nonthermal, look remarkable similar at 230\GHz.
-    The former point suggests that there is still ambiguity in the
-    image morphology, consistent with \citetalias{PaperIII,PaperIV}'s
-    conclusions.
-    The later point suggests that even for the same image morphology,
-    there are still degeneracy in the eDF, suggesting the importance
-    of new multiwavelength observations.}
+    The top row shows the simulated 86\GHz images, the middle row
+    shows the simulated 230\GHz images, and the bottom row shows the
+    simulated 230\GHz images filtered by a Butterworth filter at
+    10$\,\mathrm{G}\lambda$.
+    The resulting images approximate the resolution of the 2017 EHT
+    array.}
   \label{fig:bestbet_imgs}
 \end{figure*}
 
+\ckc{We don't have pizza plot for all the constrants now in the main text?}
+
+EHT's VLBI data is most constraining on the ring size and width.
+However, its surprisingly low-level of asymmetry makes the position
+angle non-constraining.
+The EHT constraints roughly reduce the dimension of the parameter
+space by two, carving out a region of the parameter space that prefers
+intermediate inclination retrograde or low spin prograde SANE models,
+or face-on prograde models.
+Together with non-EHT observations in other wavelengths, we conclude
+that \sgra is most likely a low spin prograde $\abh \sim 0.5$ MAD with
+intermediate inclination $20\degree \lesssim i \lesssim 60\degree$.
+Using a thermal model, the accretion flow around \sgra is two
+temperature, and likely to have ion-electron temperate $\Rh \gtrsim
+40$.
+
+While there are also isolated pockets in the parameter space that pass
+many constraints, however, even with an extensive study like this, it
+is difficult to draw strong conclusion about these isolated regions.
+Do these models pass all constraint by ``luck'' and are simply noise?
+Or do we not have fine enough samples in the parameter space to
+identify the narrow region of the parameter space?
+While further expanding the simulation library would reduce model
+uncertainty and help addressing these questions, we expect using
+future EHT results, especially polarimetry information and
+observations with larger arrays and better $(u, v)$ coverage, will
+reduce observation uncertainty and resolve these ambiguity.
+
+Although we are successful in predicting average image properties, the
+variability is more challenging.
+Since \sgra is radiative inefficient, the radiation energy budget is
+insignificant to the total energy budget.
+While this simplify modeling because we can solve the radiative
+transfer equation as postprocess, it also leaves very little control
+by the conservation laws over the radiation.
+In fact, from our large simulation library, it is clear that radiation
+can be sensitive to the small details in the chaotic turbulence flow.
+We also provide a few possible physical origins in
+section~\ref{sec:variability}.
+Dissipation mechanisms and their typical timescales that can directly
+modulate variability, like turbulence, reconnection, and their
+interplay are governed by non-ideal effects like viscosity,
+resistivity, heat conduction, and pressure anisotropy that we
+currently do not model.
+To capture these effects, higher-resolution GRMHD simulations are
+essential.
+Typical dissipative time-scales, governing variability, may be very
+different in collisionless plasma, than in the collisional fluid as
+described by (ideal or non-ideal) GRMHD.
+To probe dissipative timescales in the collisionless plasma, a kinetic
+approach is required and GRMHD is not sufficient as a model.
+However, these hypotheses can only be tested once models that
+accurately predicted variability are available.
+
+The EHT observations, combined with multiwavelength information, are
+now able to provide quantitative measurements to challenging numerical
+models.
+\emph{We have arrived a new era of precision black hole astrophysics.}
+On the theory side, clearly one of the next major breakthroughs will
+come from more accurate modeling of the kinetic collisionless plasma
+aspects, as it will provide the electron distribution functions from
+first principles.
+Non-ideal MHD is also a promising intermediate step to improve our
+predictability of the variability.
+
 We now consider combined constraints, excluding variability, under the
-hypothesis that (1) there is a missing physical ingredient in the
-models that would lower variability, but (2) that missing ingredient
-would not vitiate the model comparison process entirely.
+hypothesis that
+\emph{i}) there is a missing physical ingredient in the models that
+would lower variability, but
+\emph{ii}) that missing ingredient would not vitiate the model
+comparison process entirely.
+
 Models are eliminated if they fail any one constraint.
+Amoung the tens of models that pass all constraints (see
+Appendix~\ref{sec:tables}), we feature three models in this section,
+summarized in Table~\ref{tab:bestbets}.
+
+These models are selected in the following ways.
+Because of the model and observation noise
 
 \citep{2020arXiv200406210P}
 
@@ -849,3 +913,14 @@ models that approximately span the space of successful models.
 
 \ckc{CK to work on sample plots, may add extra feature models upon
   requests.}
+
+On one hand, although Model~A looks different than Model~B and C, they
+pass all the constraints we described in this paper.
+On the other hand, Model~B and C, even though one is thermal and the
+other is nonthermal, look remarkable similar at 230\GHz.
+The former point suggests that there is still ambiguity in the image
+morphology, consistent with \citetalias{PaperIII,PaperIV}'s
+conclusions.
+The later point suggests that even for the same image morphology,
+there are still degeneracy in the eDF, suggesting the importance of
+new multiwavelength observations.
