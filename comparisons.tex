@@ -739,9 +739,8 @@ The nonthermal models are run for only $5000\tg$, so most  constraints can not b
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/bestbets.pdf}
-  \caption{%
-    The visibility amplitudes and SEDs of the two feature models
-    compared with data.
+  \caption{The visibility amplitudes and SEDs of the three feature
+    models compared with data.
     In both panels, symbols in black are from observations; blue is
     Model~A ($\abh=0.94$ SANE, $\Rh=40$, $i=30$); orange is Model~B
     ($\abh=0.5$ MAD, $\Rh=40$, $i=30$); and green is Model~C
@@ -761,8 +760,7 @@ The nonthermal models are run for only $5000\tg$, so most  constraints can not b
     (\emph{Right}) We show the SEDs for the feature models and again
     compare them with the observation constraints.
     The solid lines are the mean SEDs, while the transparent bands
-    show the range across different snapshots.
-  }
+    show the range across different snapshots.}
   \label{fig:bestbets}
 \end{figure*}
 
@@ -815,76 +813,13 @@ Both non-EHT and EHT constraints have the power to test the wind-fed model.  It 
     The top row shows the simulated 86\GHz images, the middle row
     shows the simulated 230\GHz images, and the bottom row shows the
     simulated 230\GHz images filtered by a Butterworth filter at
-    10$\,\mathrm{G}\lambda$.
-    The resulting images approximate the resolution of the 2017 EHT
-    array.}
+    10$\,\mathrm{G}\lambda$, which approximate the resolution of the
+    2017 EHT array.}
   \label{fig:bestbet_imgs}
 \end{figure*}
 
-\ckc{We don't have pizza plot for all the constraints now in the main text?}
-
-EHT's VLBI data is most constraining on the ring size and width.
-However, its surprisingly low-level of asymmetry makes the position
-angle non-constraining.
-The EHT constraints roughly reduce the dimension of the parameter
-space by two, carving out a region of the parameter space that prefers
-intermediate inclination retrograde or low spin prograde SANE models,
-or face-on prograde models.
-Together with non-EHT observations in other wavelengths, we conclude
-that \sgra is most likely a low spin prograde $\abh \sim 0.5$ MAD with
-intermediate inclination $20\degree \lesssim i \lesssim 60\degree$.
-Using a thermal model, the accretion flow around \sgra is two
-temperature, and likely to have ion-electron temperate $\Rh \gtrsim
-40$.
-
-While there are also isolated pockets in the parameter space that pass
-many constraints, however, even with an extensive study like this, it
-is difficult to draw strong conclusion about these isolated regions.
-Do these models pass all constraint by ``luck'' and are simply noise?
-Or do we not have fine enough samples in the parameter space to
-identify the narrow region of the parameter space?
-While further expanding the simulation library would reduce model
-uncertainty and help addressing these questions, we expect using
-future EHT results, especially polarimetry information and
-observations with larger arrays and better $(u, v)$ coverage, will
-reduce observation uncertainty and resolve these ambiguity.
-
-Although we are successful in predicting average image properties, the
-variability is more challenging.
-Since \sgra is radiative inefficient, the radiation energy budget is
-insignificant to the total energy budget.
-While this simplify modeling because we can solve the radiative
-transfer equation as postprocess, it also leaves very little control
-by the conservation laws over the radiation.
-In fact, from our large simulation library, it is clear that radiation
-can be sensitive to the small details in the chaotic turbulence flow.
-We also provide a few possible physical origins in
-section~\ref{sec:variability}.
-Dissipation mechanisms and their typical timescales that can directly
-modulate variability, like turbulence, reconnection, and their
-interplay are governed by non-ideal effects like viscosity,
-resistivity, heat conduction, and pressure anisotropy that we
-currently do not model.
-To capture these effects, higher-resolution GRMHD simulations are
-essential.
-Typical dissipative time-scales, governing variability, may be very
-different in collisionless plasma, than in the collisional fluid as
-described by (ideal or non-ideal) GRMHD.
-To probe dissipative timescales in the collisionless plasma, a kinetic
-approach is required and GRMHD is not sufficient as a model.
-However, these hypotheses can only be tested once models that
-accurately predicted variability are available.
-
-The EHT observations, combined with multiwavelength information, are
-now able to provide quantitative measurements to challenging numerical
-models.
-\emph{We have arrived a new era of precision black hole astrophysics.}
-On the theory side, clearly one of the next major breakthroughs will
-come from more accurate modeling of the kinetic collisionless plasma
-aspects, as it will provide the electron distribution functions from
-first principles.
-Non-ideal MHD is also a promising intermediate step to improve our
-predictability of the variability.
+\ckc{We don't have pizza plot for all the constraints now in the main
+  text?}
 
 We now consider combined constraints, excluding variability, under the
 hypothesis that
@@ -892,30 +827,70 @@ hypothesis that
 would lower variability, but
 \emph{ii}) that missing ingredient would not vitiate the model
 comparison process entirely.
-
 Models are eliminated if they fail any one constraint.
+
+EHT's VLBI data is most constraining on the ring size and width.
+However, its surprisingly low-level of asymmetry makes the position
+angle non-constraining.
+The EHT constraints roughly reduce the dimension of the parameter
+space by two, carving out a region of the parameter space that prefers
+prograde models at low-to-intermediate inclinations
+(Figure~\citep{fig:all_EHT_constraints}).
+Together with non-EHT observations in other wavelengths
+(Figure~\ref{fig:non_eht_cuts}), we further narrow this down to two
+temperature models.
+
+While there are also isolated pockets in the parameter space that pass
+many constraints, however, even with an extensive study like this, it
+is difficult to draw strong conclusion about these isolated regions.
+Do these models pass all constraint by ``luck'' and are simply noise?
+Or do we not have fine enough samples in the parameter space to
+identify the narrow region of the parameter space?
+
 Among the tens of models that pass all constraints (see
 Appendix~\ref{sec:tables}), we feature three models in this section,
 summarized in Table~\ref{tab:bestbets}.
+These models are selected because they represent the different
+magnetic configurations (both SANE and MAD) and eDFs (both thermal and
+nonthermal), and tend to live inside a cluster of passing models in
+the parameter space.
 
-These models are selected in the following ways.
-Because of the model and observation noise
+In Figure~\ref{fig:bestbets}, we shows he visibility amplitudes and
+SEDs of the the feature models and compare them with both EHT and
+non-EHT data.
+In both panels, symbols in black are from observations; blue is
+Model~A ($\abh=0.94$ SANE, $\Rh=40$, $i=30$); orange is Model~B
+($\abh=0.5$ MAD, $\Rh=40$, $i=30$); and green is Model~C ($\abh=0.5$
+MAD variable $\kappa$, $\Rh=160$, $i=30$); see
+Table~\ref{tab:bestbets}.
+(\emph{Left}) We show the visibility amplitudes as function of
+$(u, v)$ distance similar to Figure~\ref{fig:passfail_va}.
+For the observation data, we plot 10\sec incoherent averaged data from
+the HOPS pipeline on \aprilvii.
+For the models, the solid curves are the VA for only the position
+angle $0\degree$ (parallel to the spin axis) for a particular
+snapshot.
+while the transparent bands show the 1 to 99 percentiles for all
+position angles and all time.
+This panel shows that the feature models agree well with the EHT VLBI
+data.
+(\emph{Right}) We show the SEDs for the feature models and again
+compare them with the observation constraints.
+The solid lines are the mean SEDs, while the transparent bands show
+the range across different snapshots.
 
-\citep{2020arXiv200406210P}
-
-Figure showing combined constraints for thermal models.
-
-Figure showing combined constraints for nonthermal models.
-
-We then inspected the remaining models and selected four best-bet
-models that approximately span the space of successful models.
-\note{Written characterization of remaining models; possibly 3 or 5}
-
-\ckc{CK to work on sample plots, may add extra feature models upon
-  requests.}
+In Figure~\ref{fig:bestbet_imgs}, we show the 86\GHz and 230\GHz ray
+traced images of the feature models.
+The different columns are Model~A, B, and C, respectively.
+The top row shows the simulated 86\GHz images, the middle row shows
+the simulated 230\GHz images, and the bottom row shows the simulated
+230\GHz images filtered by a Butterworth filter at
+10$\,\mathrm{G}\lambda$, which approximate the resolution of the 2017
+EHT array \citep{2020arXiv200406210P}.
 
 On one hand, although Model~A looks different than Model~B and C, they
-pass all the constraints we described in this paper.
+pass all the constraints (excluding variability) we described in this
+paper.
 On the other hand, Model~B and C, even though one is thermal and the
 other is nonthermal, look remarkable similar at 230\GHz.
 The former point suggests that there is still ambiguity in the image
