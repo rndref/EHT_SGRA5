@@ -54,7 +54,7 @@ Still, there are comprehensible trends in the model space that favor certain sou
 \begin{figure*}
 \centering
 \includegraphics[width=0.95\textwidth]{figures/bhac_kharma_average_mdot_pout.png}
-\caption{{\it Top:} Accretion rate ($\dot{M}$) for standard models. Since $\dot{M}$ depends weakly on inclination $i$, we show only $i=50\degree$. {\it Bottom:} Outflow power ($P_{out}$) for standard models at $i = 50\degree$. The colors and markers vary with $\Rh$. The dashed lines with higher opacity correspond to \kharma thermal models while the dotted lines with lower opacity indicate \bhac thermal models.}
+\caption{{\it Top:} Accretion rate ($\dot{M}$) for standard models. Since $\dot{M}$ depends weakly on inclination $i$, we show only $i=50\degree$. {\it Bottom:} Outflow power ($P_{out}$) for standard models at $i = 50\degree$. The colors and markers vary with $\Rh$. The dashed lines correspond to \kharma thermal models while the dotted lines indicate \bhac thermal models.}
 \label{fig:accretion_outflow_power_illinois_thermal}
 \end{figure*}
 % \begin{figure*}
@@ -142,16 +142,15 @@ Future observations with denser, short-baseline coverage such as that provided b
 
 The variability excess might also be a failure in the models.  Two physical effects top our list of suspects: collisionless effects and cooling.  
 
-We have modeled the accreting plasma as an ideal fluid (short mean free path approximation) when in fact it is collisionless, with Coulomb mean free path large compared to $\rg$.  This is less worrisome than one might think: electrons and ions are still confined to helical orbits around field lines, implying an effective mean free path perpendicular to the field lines given by the gyroradius $\sim 56 \Theta_e (B/(30 {\rm G}))^{-1} \cm \ll \rg$.  The mean free path parallel to field lines is still long, but may be limited by scattering off wave produced by kinetic instabilities.  
+We have modeled the accreting plasma as an ideal fluid (short mean free path approximation) when in fact it is collisionless, with Coulomb mean free path large compared to $\rg$.  This is less worrisome than one might think: electrons and ions are confined to helical orbits around field lines, implying an effective mean free path perpendicular to the field lines given by the gyroradius $\sim 56 \Theta_e (B/(30 {\rm G}))^{-1} \cm \ll \rg$.  The mean free path parallel to field lines is still long, but may be limited by scattering off plasma fluctuations excited by kinetic instabilities.  
 
-A relativistic fluid model based on this notion has been developed by \cite{2015ApJ...810..162C} and studied numerically by \cite{2017MNRAS.470.2240F}.  The leading order corrections to the ideal GRMHD are conduction and pressure anisotropy (viscosity).  It is not known what the effect on $\mi{3}$ might be, but numerical integrations suggest the effect on turbulent magnetic stresses in  MAD models is weaker than SANE models \citep{2017MNRAS.470.2240F}. 
+A relativistic fluid model based on this notion has been developed by \cite{2015ApJ...810..162C} and studied numerically by \cite{2017MNRAS.470.2240F}.  The leading order corrections to the ideal GRMHD are conduction and pressure anisotropy (i.e. viscosity).  It is not known what the effect on $\mi{3}$ might be, but numerical integrations suggest the effect on turbulent magnetic stresses in  MAD models is weaker than SANE models \citep{2017MNRAS.470.2240F}. 
 
-Our models also neglect cooling.  Cooling is likely to be most important where the electron temperature is highest.  Electron temperature is expected to fluctuate, so cooling may round off the peaks in the light curve when those are produced by localized heating events.  Investigating cooling self-consistently 
+Our models also neglect cooling.  Cooling is likely to be most important where the electron temperature is highest.  Electron temperature is expected to fluctuate, so cooling may round off the peaks in the light curve when those are produced in localized heating events where cooling times are short.  To investigate cooling self-consistently requires integration of an electron energy equation, as in \cite{2015MNRAS.454.1848R}, and that requires a model for partitioning dissipation between the electrons and ions, as well as - to capture radiative cooling - assignment of a density scale (mass unit or accretion rate) at the time the GRMHD model is run.  This requires iterativAnalysis of these model sets is beyond the scope of this paper.  We note that we have analyzed $\mi{3}$ in a set of models with self-consistent electron heating and without radiative cooling; these models still show a variability excess.
 
-Summary: all of the above.
+There are more prosaic possible explanations for the variability excess: numerical inaccuracies in radiative transfer, truncation error in the GRMHD integrations (limited resolution), limited simulation duration, or misspecification of the adiabatic index.  These are considered in Appendix \ref{app:numerical}.  There is no evidence that any of these effects produces a significant correction to $\mi{3}$.
 
-%==============================================================================
-\subsection{MAD, SANE, and Self-Consistent Wind Feeding}
+A plausible scenario would combine each of the above effects, with a 10\% reduction in $\mi{3}$ from extended flux, a 10\% reduction from viscosity, and a 10\% correction from cooling.  A small correction to $\mi{3}$ from numerical resolution in ideal GRMHD models also cannot be ruled out.  
 
 
 %==============================================================================
