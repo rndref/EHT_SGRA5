@@ -1,4 +1,4 @@
-c\section{Model Comparison}\label{sec:comparisons}
+\section{Model Comparison}\label{sec:comparisons}
 
 We now apply the observational constraints from
 Section~\ref{sec:observations} to the models described in
@@ -51,6 +51,14 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
   %For each of the panels, we select a snapshot from a model and plot its visibility amplitudes as functions of the $(u,v)$ distance at position angles $-90\degree$ (horizontal), $-45\degree$, $0\degree$ (vertical), and $45\degree$.    Because of the Hermitian symmetry, they cover 8 position angles in the image domain. The EHT \aprilvii VLBI data points are plotted as black circles. Even without further details, it is clear that the model on the left matches reasonably well with the data; while the model on the right is completely off.  The \vam constraint is designed exactly to rule out models like the one on the right. As a visual guideline, the vertical gray band between 2.5 and 3.5$\,\mathrm{G}\lambda$ marks the allowed null location in the \vam constraint; and the gray region between 6 and 8$\,\mathrm{G}\lambda$ marks both the $(u,v)$ distance range for computing the long-baseline median amplitude and its allowed values $\mathrm{median}[V(6\,\mathrm{G}\lambda \leq \lambda \leq      8\,\mathrm{G}\lambda)] \leq (4\%/50\%) V_0$. We numerically find the first local visibility minima along each position angle and show them as solid points. We also compute the median visibility amplitude in the marked region along each position angle, which are marked by dotted lines. A model is rejected if \emph{all} the first nulls land \emph{outside} the virtual gray band, or if \emph{any} of these lines land \emph{outside} the horizontal gray band. For the examples in this figure, the left model passes the \vam constraint because one of the first null (green dot) falls within the allowed range; and none of the long-baseline median (all dotted lines) go above 4\%/50\%. The right model fails the \vam constraint because both of the null location and long-baseline VAs are off.
   }
   \label{fig:passfail_va}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{figures/mring_width_example.png}
+  \caption{M-ring width constraint example.  Top left: image that satisfies the constraint; top right: image that fails the constraint; bottom left: observed distribution of m-ring widths over our 10 selected scans (light grey) and passing image distribution over 10 scans and 4 position angles (black); bottom right: observed distribution of m-ring widths over our 10 selected scans (light grey) and failing image distribution over 10 scans and 4 position angles.
+  }
+  \label{fig:mring_width_example}
 \end{figure*}
 
 \begin{figure*}
@@ -694,13 +702,7 @@ The nonthermal models are run for only $5000\tg$, so most  constraints can not b
   C & 0.5  & MAD  & nonthermal variable $\kappa$ & 160 & $30\degree$    % HAMR
   \enddata
   %
-  \caption{List of featured models that sample the more possible regions
-    of the model parameter space.
-    As Figure~\ref{fig:bestbets} shows below, these models broadly
-    agree with the observation constraints, although they are not
-    necessary the best fit models because of both observation and
-    modeling noise.
-    See Section~\ref{sec:bestbets} for detailed descriptions of these
+  \caption{List of featured models.  The models were selected to sample the plausible regions of parameters space.  We discuss best-bet models (which are close to model B) later.  See Section~\ref{sec:bestbets} for detailed descriptions of these
     models and Section~\ref{sec:discussions} for discussions.}
   \label{tab:bestbets}
 \end{deluxetable*}
@@ -756,21 +758,15 @@ Both non-EHT and EHT constraints have the power to test the wind-fed model.  It 
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/bestbet_imgs.pdf}
-  \caption{Featured models 86\GHz and 230\GHz images.  The columns show models ~A, B, and C from Table~\ref{tab:bestbets}, rows show 
-  We show here the 86\GHz and 230\GHz ray traced images of
-    the three feature models listed in Table~\ref{tab:bestbets}.
-    The different columns are Models~A, B, and C, respectively.
-    The top row shows the simulated 86\GHz images, the middle row
-    shows the simulated 230\GHz images, and the bottom row shows the
-    simulated 230\GHz images filtered by a Butterworth filter at
-    10$\,\mathrm{G}\lambda$, which approximate the resolution of the
-    2017 EHT array.
-    \ckc{Will update snapshot once receipt the consensus image from PaperIII}}
+  % cfg 15-dec: edited down
+  \caption{Example images from featured models.  The columns show models ~A, B, and C from Table~\ref{tab:bestbets}, the rows show the 86\GHz image, 230\GHz image, and 230\GHz image smoothed to EHT resolution from top to bottom. 
+  \ckc{Will update snapshot once receipt the consensus image from PaperIII}
+  }
   \label{fig:bestbet_imgs}
 \end{figure*}
 
-\ckc{We don't have pizza plot for all the constraints now in the main
-  text?}
+% cfg 15-dec: correct, that seemed like too much. 
+%\ckc{We don't have pizza plot for all the constraints now in the main text?}
 
 We have applied 11 observational constraints in this section.
 We now consider combining all constraints, excluding variability,

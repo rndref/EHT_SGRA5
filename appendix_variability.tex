@@ -44,8 +44,7 @@
 
 \monika{first revision done, please read and revise further}
 
-Majority of the simulations considered in this work fails to recover the \sgra observed variability in total flux.
-In this Appendix we discuss and dismiss a few possible causes for mismatch of $\mi{3}$ metric in models and ALMA data.
+Majority of our simulations fail to recover the \sgra observed variability in total flux.  In this Appendix we discuss and dismiss a few possible causes for mismatch of $\mi{3}$ metric in models and ALMA data.
 
 %==============================================================================
 \subsection{Simulations Duration}\label{app:narayan}
@@ -60,7 +59,9 @@ In this Appendix we discuss and dismiss a few possible causes for mismatch of $\
 Our standard models of accretion are typically evolved for $\sim 30,000 \tg$. In Figure~\ref{fig:koral_MI} we show comparison of $\mi{3}$ distributions from typical duration simulation to the one that was evolved approximately three times longer. The distribution functions are in good agreement in terms of mean and standard deviation regardless of time interval chosen for comparison. The two models that are displayed in the figure are \kharma and \koral simulations differ in resolution of the numerical grid and initial torus size meaning that the variability mismatch is unlikely due to numerical resolution issues or initial conditions of the GRMHD simulations.
 
 %==============================================================================
-\subsection{Effects of \texorpdfstring{$\Rl$}{Rl} and radiative cooling}
+%
+% some questions about cooling work; commented out until/unless we are sure we understand what is going on.
+\subsection{Effects of \texorpdfstring{$\Rl$}{Rl} } %and radiative cooling}
 
 For systems with sub-Eddington accretion rates, $\Dot{M}\ll\Dot{M}_\mathrm{Edd}$, such as \sgra, radiative processes can be neglected during fluid evolution (\citealt{2012MNRAS.426.1928D, 10.1093/mnras/stw3116, Ryan_2017}).
 %and the plasma can be considered Coulomb collisionless (\citealt{Mahadevan_1997, 10.1093/mnras/stw3116, Ryan_2017}).
@@ -90,30 +91,30 @@ The average $\mi{3}$ does not match the observational values.
 
 %\subsection{Radiative cooling}\label{app:cooling}
 
-Next, we also check if excess flux variability comes from an overestimate of electron temperatures in any areas where radiative cooling of the electrons may become important. We can estimate the possible effects of this change by imposing a limit on electron temperatures based on the local dynamical time, reflecting the assumption that higher-temperature electrons would cool before crossing the event horizon.
-This limit comes from comparing two timescales: the synchrotron cooling rate at high temperature,
-\begin{align}
-  \tau_\mathrm{cool} \approx \frac{3 m_e^3 c^5}{16 B^2 e^4 \Theta_e}
-\end{align}
+%Next, we also check if excess flux variability comes from an overestimate of electron temperatures in any areas where radiative cooling of the electrons may become important. We can estimate the possible effects of this change by imposing a limit on electron temperatures based on the local dynamical time, reflecting the assumption that higher-temperature electrons would cool before crossing the event horizon.
+%This limit comes from comparing two timescales: the synchrotron cooling rate at high temperature,
+%\begin{align}
+%  \tau_\mathrm{cool} \approx \frac{3 m_e^3 c^5}{16 B^2 e^4 \Theta_e}
+%\end{align}
 %dependent on the electron temperature $\Theta_e$, expressed in units of the rest mass energy, and the local field strength $B$ in Gauss.
-and the the dynamical time
-\begin{align}
-  \tau_\mathrm{dyn} \approx \left( r \sin{\theta} \right)^{3/2} \frac{G M_\mathrm{BH}}{c^3}.
-\end{align}
-A set of images was produced which put a ceiling on the electron temperature $\Theta_e$, by requiring that the $\tau_\mathrm{cool} > N \cdot \tau_\mathrm{dyn}$ -- that is, assuming that electrons likely to cool on timescales shorter than $N$ dynamical times will do so. Lightcurves made using different values of this ceiling are shown in Figure~\ref{fig:ceiling_lc1} and the corresponding $\mi{3}$ index is shown in Figure~\ref{fig:ceiling_lc2}. Setting ceiling on electron temperature decreases the total flux but does not decrease the $\mi{3}$ to the desired value.
-\begin{figure*}
-  \centering
-  \includegraphics[width=0.95\textwidth]{figures/ctcut_lightcurves.pdf}
-  \caption{Light curves when applying a ceiling on electron heating based on an estimate of the local electron cooling time, compared against the local dynamical time. Different values represent ceilings at different numbers of dynamical times. Left and right panels display light curves for different accretion models: SANE $a_*=+0.94$ (left panel) and MAD $a_*=+0.94$ (right panel).}
-  \label{fig:ceiling_lc1}
-\end{figure*}
+%and the the dynamical time
+%\begin{align}
+%  \tau_\mathrm{dyn} \approx \left( r \sin{\theta} \right)^{3/2} \frac{G M_\mathrm{BH}}{c^3}.
+%\end{align}
+%A set of images was produced which put a ceiling on the electron temperature $\Theta_e$, by requiring that the $\tau_\mathrm{cool} > N \cdot \tau_\mathrm{dyn}$ -- that is, assuming that electrons likely to cool on timescales shorter than $N$ dynamical times will do so. Lightcurves made using different values of this ceiling are shown in Figure~\ref{fig:ceiling_lc1} and the corresponding $\mi{3}$ index is shown in Figure~\ref{fig:ceiling_lc2}. Setting ceiling on electron temperature decreases the total flux but does not decrease the $\mi{3}$ to the desired value.
+%\begin{figure*}
+ % \centering
+ % \includegraphics[width=0.95\textwidth]{figures/ctcut_lightcurves.pdf}
+%  \caption{Light curves when applying a ceiling on electron heating based on an estimate of the local electron cooling time, compared against the local dynamical time. Different values represent ceilings at different numbers of dynamical times. Left and right panels display light curves for different accretion models: SANE $a_*=+0.94$ (left panel) and MAD $a_*=+0.94$ (right panel).}
+ % \label{fig:ceiling_lc1}
+%\end{figure*}
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=0.95\textwidth]{figures/ctcut_effects.pdf}
-  \caption{Effects of the electron temperature ceiling on the 230\,GHz variability (left panel) and on the total flux (right panel).}
-  \label{fig:ceiling_lc2}
-\end{figure*}
+%\begin{figure*}
+ % \centering
+%  \includegraphics[width=0.95\textwidth]{figures/ctcut_effects.pdf}
+ % \caption{Effects of the electron temperature ceiling on the 230\,GHz variability (left panel) and on the total flux (right panel).}
+%  \label{fig:ceiling_lc2}
+%\end{figure*}
 
 %==============================================================================
 %8. The flow is actually made of helium. [George]
@@ -125,7 +126,7 @@ A set of images was produced which put a ceiling on the electron temperature $\T
 %==============================================================================
 %9. $\gamma = 5/3$ rather than $4/3$.   [Vedant]  When $\gamma = 4/3$ the compression ratio across the shock is larger.
 
-\subsection{Effects of self-consistent electron heating}
+\subsection{Effect of self-consistent electron heating}
 
 %The thermal models considered in Section~\ref{sec:models} assign a local electron temperature as a post-processing step based on local magnetic field strength, parameterized by plasma $\beta$ (Equation \ref{eq:rhigh_prescription}).
 
