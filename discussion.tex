@@ -226,8 +226,8 @@ One plausible scenario is that each of the above effects (extended flux, viscosi
 %------------------------------------------------------------------------------
 \subsubsection{Collisionless plasma effects}
 
-\monika{some of the collisionless aspects are addressed in appendix C1 in subsection on selfconsistent electron heating models. check if this is mentioned below}
-\br{I rewrote a little bit and added a sentence.}
+%\monika{some of the collisionless aspects are addressed in appendix C1 in subsection on selfconsistent electron heating models. check if this is mentioned below}
+%\br{I rewrote a little bit and added a sentence.}
 
 {The mean free path to collisions for particles is typically larger than or comparable to the system size for the accretion disk of \sgra, rendering its plasma collisionless. The GRMHD models employed in this work, describe a collisional system, whereas a first-principles modeling of the collisionless plasma requires a fully kinetic treatment. General relativistic (radiative) kinetic simulations are crucial for dynamically probing the electron temperature, effects of non-thermal distribution functions, and pressure anisotropy and their interplay with radiation in collisionless plasma in the accretion disk and jet. While global general relativistic kinetic simulations cannot be performed with full physical separation between microscopic plasma scales (the particle's Larmor radius $r_{\rm L}$, and plasma skin depth $d_{\rm e}$) and macroscopic scales (the gravitational radius $r_{\rm g}$), they can achieve the right hierarchy of scales ($r_{\rm g} \gg d_{\rm e} \gg r_{\rm L}$) for magnetized plasmas \citep{2018A&A...616A.184L,2018ApJ...863L..31C,2019PhRvL.122c5101P,2020PhRvL.124n5101C,2020ApJ...895..121C,2020ApJ...902...80K,2021A&A...650A.163C,2021PhRvL.127e5101B}. Even in GRMHD, it is computationally challenging to resolve plasma heating processes powering the observed radiation in a converged manner. It is currently not yet feasible to resolve dissipation at the smallest scales of the turbulent cascade or the interplay between turbulence and reconnection at a similar level as in local box simulations \citep{2012ApJ...755...50R,2013ApJ...773..118H,2015PhRvL.114f1101H,2016PhRvL.117w5101K,2017PhRvL.118e5103Z,2018PhRvL.121y5101C,2018ApJ...859..149I,2019PhRvL.122e5101Z,2021ApJ...921...87N,2021arXiv211108188C}. However, \citet{2019ApJS..243...26P} and \citet[in prep.]{Olivares_et_al} show that the global accretion dynamics (mass accretion rate, magnetic flux on the horizon, and MRI quality factor) are converging between the different simulations in this work. Kinetic processes in the (near-)collisionless plasma may increase the effective particle collision rate \citep[see e.g.,][]{2016PhRvL.117w5101K}. Deviations from the infinitely conductive ideal fluid approximation may alter the thermodynamics of the flow \citep[see e.g., ][and Appendix C1]{2017MNRAS.470.2240F}. Some aspects of (near-)collisionless plasma dynamics can be described with non-ideal effects (e.g., viscosity, resistivity, heat conduction, pressure anisotropy) in GRMHD models for black hole accretion, e.g.,  \cite{2014MNRAS.440L..41B,2015ApJ...810..162C,2016MNRAS.456.1332F,2017ApJ...837...92C,2017MNRAS.470.2240F,2018ApJ...859...28Q,2019ApJS..244...10R,2019ApJ...882....2V,2020ApJ...900..100R,2021PhRvD.104j3028M,2021arXiv211103689N,2021arXiv211105752M}. For example, the first efforts have recently been made with high-resolution global GRMHD simulations to capture heating through magnetic reconnection in the largest current sheets in the system \citep{2020MNRAS.495.1549N,2020ApJ...900..100R,2021MNRAS.508.1241C,2021arXiv210915115R,2021arXiv211103689N}.}
 
@@ -270,19 +270,25 @@ Production of pairs through the drizzle process is weak in \sgra because its lum
 
 Our analysis ignores polarization.  Future analyses should test our models against integrated polarization of \sgra \citep{2021ApJ...910L..14G}, and against polarized imaging, as was done for M87* \citep{M87PaperVII, M87PaperVIII}.  
 
-For M87* we were able to identify a sense of rotation of the source from the asymmetry of the observed ring.  For \sgra we have not been able to identify a preferred position angle for the source or measure source asymmetry \citep{PaperIV}.  This is largely due to sparse baseline coverage.  Future EHT campaigns with new stations have the potential to remedy this defect.  Unless the source is aligned and $i \approx 0$, all our standard models predict that the brightest point should lie on the approaching side of the accretion flow.  Failure to observe a clear 
+For M87* we were able to identify a sense of rotation of the source from the asymmetry of the observed ring.  For \sgra we have not yet been able to identify a preferred position angle for the source or measure the amplitude of source asymmetry, perhaps because it is small \citep{PaperIV}.  Sparse baseline coverage sharply limits our ability to detect asymmetry, however.  Future EHT campaigns will have new stations.  Unless the source is aligned and $i \approx 0$, all our standard models (which have a definite sense of rotation) predict that the brightest point on the ring is produced by Doppler boosting and should lie on the approaching side of the accretion flow.  The sense of rotation could then be compared to the clockwise motion of infrared flares observed by GRAVITY \citep{2018A&A...618L..10G}.  
 
-\begin{itemize}
+Our analysis shows the value of simultaneous measurements.  Simultaneous or near-simultaneous GMVA observations, in particular, provide a powerful constraint on the models.  The eDF is a major source of uncertainty in our analysis, and since the submillimeter and $2.2\mu$m flux density are most sensitive to the eDF, future analyses should incorporate submillimeter data and future EHT campaigns should seek simultaneous observations.
 
-\item SANE/MAD will be settled by polarization, but that is beyond the scope of this paper
+Our analysis provides some guidance for future numerical modeling of \sgra.  It is clear that models require long integrations ($\ge 30,000 \tg$) to provide meaningful measurements of source feature distributions.  We also note that there are regions in parameter space where we may not have sampled densely enough - where, for example, the model is too large and too small at adjacent points in parameter space.  An example of this is the 86GHz size measurement, which is sensitive to inclination.  We have found that being able to compare two simulation pipelines helped us identify numerical sensitivities and saved us from embarrassing errors on a number of occasions.  One point these comparisons brought to our attention is that the $2.2\mu$m flux density is sensitive to where emission is cut off in high $\sigma$ regions of the flow - the so-called $\sigma_{cut}$ parameter.  This point merits future investigation.
 
-\item Shows value of contemporaneous GMVA observations
+Finally, we make no claims for optimality in our modeling approach.  Numerical simulations of black hole accretion flows are expensive and - in the end - fail to produce models that survive the full gauntlet of constraints.  Still, they bring some discipline to our efforts to understand a complicated physical situation where many physical processes influence the outcome at the order unity level.   
 
-\item We cannot assess the sense of rotation.
-Future analysis can potentially extract sense of rotation.  Sensitive to inclination: the edge-on models "flash" simultaneously over all PAs, while face-on exhibits rotation.
+%\begin{itemize}
 
-\item note on fitting riafs?
+%\item SANE/MAD will be settled by polarization, but that is beyond the scope of this paper
 
-\item do we need better models or better data in the future to e.g. measure the spin of the black hole in \sgra?
+%\item Shows value of contemporaneous GMVA observations
 
-\end{itemize}
+%\item We cannot assess the sense of rotation.
+%Future analysis can potentially extract sense of rotation.  Sensitive to inclination: the edge-on models "flash" simultaneously over all PAs, while face-on exhibits rotation.
+
+%\item note on fitting riafs?
+
+%\item do we need better models or better data in the future to e.g. measure the spin of the black hole in \sgra?
+
+%\end{itemize}
