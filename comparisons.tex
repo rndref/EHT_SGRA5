@@ -734,34 +734,6 @@ Most of our nonthermal models assign a width to the nonthermal component that de
 
 The nonthermal models are run for only $5000\tg$, so most  constraints can not be applied as precisely.  For example, the model distribution of $\mi{3}$ contains only $9$ points and correspondingly more uncertain.  It is therefore difficult to detect subtle changes in models.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This figure is for the best-bet model section
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{figures/bestbets.pdf}
-  \caption{The visibility amplitudes and SEDs of the three feature
-    models compared with data.
-    In both panels, symbols in black are from observations; blue,
-    orange, and green are Models~A, B, C, respectively (see
-    Table~\ref{tab:bestbets} for definitions).
-    (\emph{Left}) We show the visibility amplitudes as function of
-    $(u, v)$ distance similar to Figure~\ref{fig:passfail_va}.
-    For the observation data, we plot 10\sec incoherent averaged data
-    from the HOPS pipeline on \aprilvii.
-    For the models, the solid curves are the VAs for only the position
-    angle $0\degree$ (parallel to the spin axis) for a particular
-    snapshot.
-    while the transparent bands show the 1 to 99 percentiles for all
-    position angles and all time.
-    This panel shows that the feature models agree well with the EHT
-    VLBI data.
-    (\emph{Right}) We show the SEDs for the feature models and again
-    compare them with the observation constraints.
-    The solid lines are the mean SEDs, while the transparent bands
-    show the range across different snapshots.}
-  \label{fig:bestbets}
-\end{figure*}
-
 %==============================================================================
 \subsection{Tilted Models}
 
@@ -803,6 +775,32 @@ Both non-EHT and EHT constraints have the power to test the wind-fed model.  It 
 
 \begin{figure*}
   \centering
+  \includegraphics[width=\textwidth]{figures/bestbets.pdf}
+  \caption{The visibility amplitudes and SEDs of the three feature
+    models compared with data.
+    In both panels, symbols in black are from observations; blue,
+    orange, and green are Models~A, B, C, respectively (see
+    Table~\ref{tab:bestbets} for definitions).
+    (\emph{Left}) We show the visibility amplitudes as function of
+    $(u, v)$ distance similar to Figure~\ref{fig:passfail_va}.
+    For the observation data, we plot 10\sec incoherent averaged data
+    from the HOPS pipeline on \aprilvii.
+    For the models, the solid curves are the VAs for only the position
+    angle $0\degree$ (parallel to the spin axis) for a particular
+    snapshot.
+    while the transparent bands show the 1 to 99 percentiles for all
+    position angles and all time.
+    This panel shows that the feature models agree well with the EHT
+    VLBI data.
+    (\emph{Right}) We show the SEDs for the feature models and again
+    compare them with the observation constraints.
+    The solid lines are the mean SEDs, while the transparent bands
+    show the range across different snapshots.}
+  \label{fig:bestbets}
+\end{figure*}
+
+\begin{figure*}
+  \centering
   \includegraphics[width=\textwidth]{figures/bestbet_imgs.pdf}
   \caption{We show here the 86\GHz and 230\GHz ray traced images of
     the three feature models listed in Table~\ref{tab:bestbets}.
@@ -818,7 +816,7 @@ Both non-EHT and EHT constraints have the power to test the wind-fed model.  It 
 \ckc{We don't have pizza plot for all the constraints now in the main
   text?}
 
-We selected and applied 11 observational constraints in this section.
+We have applied 11 observational constraints in this section.
 We now consider combining all constraints, excluding variability,
 under the hypothesis that
 \emph{i}) there is a missing physical ingredient in the models that
@@ -832,15 +830,15 @@ and carving out a region of the parameter space that prefers prograde
 models at low-to-intermediate inclinations
 (Figure~\ref{fig:all_EHT_constraints}).
 
-The 5 non-EHT constraints are most constraining on the strength of the
-horizon magnetic field and the electron temperature, roughly reduce
-the dimension of the parameter space by another two, and prefer high
-ion-electron ratio MAD models (Figure~\ref{fig:non_eht_cuts}).
+The 4 non-EHT constraints (230GHz lightcurve variability excluded) are
+most constraining on the strength of the magnetic field and the
+electron temperature, roughly reduce the dimension of the parameter
+space by another two, and prefer high ion-electron ratio MAD models
+(Figure~\ref{fig:non_eht_cuts}).
 
 While there are also isolated pockets in the parameter space that pass
 many constraints, however, even with an extensive study like this, it
 is difficult to draw strong conclusion about these regions.
-
 Among the tens of models that pass 10/11 constraints (see
 Appendix~\ref{app:tables}), we feature three models in this section,
 summarized in Table~\ref{tab:bestbets}.
