@@ -45,8 +45,7 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
 \begin{figure*}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_va.pdf}
-  \caption{%
-    Visual representation on how the \vam\ constraint work.
+  \caption{Visual representation on how the \vam constraint work.
     For each of the panels, we select a snapshot from a model and plot
     its visibility amplitudes as functions of the $(u,v)$ distance at
     position angles $-90\degree$ (horizontal), $-45\degree$,
@@ -56,12 +55,12 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
     The EHT \aprilvii VLBI data points are plotted as black circles.
     Even without further details, it is clear that the model on the
     left matches reasonablely well with the data; while the model on
-    the right is complete off.
-    The \vam\ constraint is exactly design to rule out models like the
-    one in the right.
+    the right is completely off.
+    The \vam constraint is designed exactly to rule out models like
+    the one on the right.
     As a visual guideline, the vertical gray band between 2.5 and
     3.5$\,\mathrm{G}\lambda$ marks the allowed null location in the
-    \vam\ constraint; and the gray region between 6 and
+    \vam constraint; and the gray region between 6 and
     8$\,\mathrm{G}\lambda$ marks both the $(u,v)$ distance range for
     computing the long-baseline median amplitude and its allowed
     values $\mathrm{median}[V(6\,\mathrm{G}\lambda \leq \lambda \leq
@@ -73,21 +72,20 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
     A model is rejected if \emph{all} the first nulls land
     \emph{outside} the virtual gray band, or if \emph{any} of these
     lines land \emph{outside} the horizontal gray band.
-    For the examples in this figure, the left model passes the
-    \vam\ constraint because one of the first null (green dot) falls
-    within the allowed range; and none of the long-baseline median
-    (all dotted lines) go above 4\%/50\%.
-    The right model fails the \vam\ constraint obviously because both
-    of the null location and long-baseline VAs are off.}
+    For the examples in this figure, the left model passes the \vam
+    constraint because one of the first null (green dot) falls within
+    the allowed range; and none of the long-baseline median (all
+    dotted lines) go above 4\%/50\%.
+    The right model fails the \vam constraint because both of the null
+    location and long-baseline VAs are off.}
   \label{fig:passfail_va}
 \end{figure*}
 
 \begin{figure*}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_sed.pdf}
-  \caption{%
-    \ckc{We may skip this figure given Fig.~\ref{fig:sample_seds} is
-      similar.}
+  \caption{\ckc{We may skip this figure given
+      Fig.~\ref{fig:sample_seds} is similar.}
     Visual representation on how the non-EHT flux constraints work.
     This figure is similar to Figure~\ref{fig:sample_seds} but, in
     addition to show a model that works (left panel), we purposely
@@ -121,13 +119,13 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
 %  \label{fig:cmp_ozel}
 %\end{figure}
 
-The \vam\ constraint checks if the VAs of a model roughly matches the
+The \vam constraint checks if the VAs of a model roughly matches the
 observation by comparing its null location and long-baseline visiblity
 amplitude.
-As Figure~\ref{fig:passfail_va} demonstrate, this constraint is
+As Figure~\ref{fig:passfail_va} demonstrates, this constraint is
 informative.
-It tends to matches the ring size by using the null location, and the
-ring width by using the long-baseline amplitude.
+It matches the ring size by using the null location, and the ring
+width by using the long-baseline amplitude.
 The test rejects edge-on MAD models at positive spin and a few large
 $\Rh$ SANE models.
 It disfavors edge-on MAD models at positive spin and a few large $\Rh$
@@ -190,12 +188,19 @@ We can combine all EHT constraint cuts with a logical {\em and} operation.  The 
 %------------------------------------------------------------------------------
 \subsubsection{Non-EHT Constraints}
 
-Now consider constraints from unresolved 86GHz, NIR, and X-ray observations.  Some or all of the emission in these bands is believed to originate in the compact source from plasma that is close to or overlaps the plasma that is producing the 230GHz-emitting plasma observed by EHT.
+Now consider constraints from unresolved 86\GHz, NIR, and X-ray
+observations.
+Some or all of the emission in these bands are believed to originate
+in the compact source from plasma that is close to or overlaps the
+plasma that is producing the 230\GHz-emitting plasma observed by EHT.
+While we will go through each of the constraints one-by-one,
+Figure~\ref{fig:passfail_sed} compares models that pass and fail these
+constraints.
 
 %..............................................................................
 \subsubsubsection{NIR Median Flux}
 
-NIR photons are produced by the synchrotron process from electrons on the high energy end of the eDF.  For the one-zone model with $B = 30$G and $\Theta_e = 10$ the mean Lorentz factor is $\gamma = 30$ and the synchrotron critical frequency $\nu_{crit} = \gamma^2 e B/(2 \pi m_e c) \simeq 80$GHz.  Emission at $2.2\mu$m is therefore produced by electrons with  Lorentz factor $\gamma \simeq 10^3$.  NIR flux density will therefore be sensitive to $\Theta_e$ and $B$.  Since both increase toward the horizon, and field strength is nearly independent of latitude, NIR photons are produced at small radius in regions where $\Theta_e$ is highest.
+NIR photons are produced by the synchrotron process from electrons on the high energy end of the eDF.  For the one-zone model with $B = 30$G and $\Theta_e = 10$ the mean Lorentz factor is $\gamma = 30$ and the synchrotron critical frequency $\nu_{crit} = \gamma^2 e B/(2 \pi m_e c) \simeq 80\GHz$.  Emission at $2.2\um$ is therefore produced by electrons with  Lorentz factor $\gamma \simeq 10^3$.  NIR flux density will therefore be sensitive to $\Theta_e$ and $B$.  Since both increase toward the horizon, and field strength is nearly independent of latitude, NIR photons are produced at small radius in regions where $\Theta_e$ is highest.
 
 The sensitivity to $\Theta_e$ implies that NIR will be strongest for parameters with higher temperatures.  For SANEs the midplane temperature increases with $\abh$.
 The sensitivity to $B$ implies that NIR will be strongest for parameters with stronger fields.  The $B$ depends on the GRMHD flow configuration and also on the mass unit (that is, the accretion rate), and so NIR will be strongest when the accretion rate is largest.  For SANEs, accretion rate declines as $\abh$ increases and $\Rh$ decreases (see Figure \ref{fig:accretion_outflow_power_illinois_thermal} below); for MADs the accretion rate dependence on $\abh$ and $\Rh$ is much weaker.
@@ -235,17 +240,17 @@ The MAD models that fail have low $\Rh$ and are Compton-dominated in the X-ray. 
 %\end{figure}
 
 %..............................................................................
-\subsubsubsection{86 GHz Median Flux}
+\subsubsubsection{86\GHz Median Flux}
 
-In a naive picture \sgra's millimeter flux is produced in a photosphere that decreases in size as frequency increases.  Because optical depth is not large at $1.3$mm ($\sim 0.3$ in the one-zone model) and the source structure is complicated (the optical depth varies across the image; the $\tau = 2/3$ surface is non-spherical, folded, and not even simply connected) the naive picture is imprecise.  Nevertheless 86GHz photons are on average produced at larger radius than 230GHz photons, and the 86GHz source size is larger than the 230GHz source size.
+In a naive picture \sgra's millimeter flux is produced in a photosphere that decreases in size as frequency increases.  Because optical depth is not large at $1.3$mm ($\sim 0.3$ in the one-zone model) and the source structure is complicated (the optical depth varies across the image; the $\tau = 2/3$ surface is non-spherical, folded, and not even simply connected) the naive picture is imprecise.  Nevertheless 86\GHz photons are on average produced at larger radius than 230\GHz photons, and the 86\GHz source size is larger than the 230\GHz source size.
 
-The 86GHz/230GHz color is therefore sensitive to the radial structure of the source plasma.  Figure \ref{fig:cmp_86ghz_flux} shows the full results of applying this constraint.
+The 86\GHz/230\GHz color is therefore sensitive to the radial structure of the source plasma.  Figure \ref{fig:cmp_86ghz_flux} shows the full results of applying this constraint.
 
 \cfg{need more physical discussion}
 
-Many $\Rh = 1$ models, both MAD and SANE, fail the $86$GHz flux density test: 22/25 SANE and 11/25 MAD; all overproduce $86$GHz emission.  A large set of SANE models (17/100) underproduce $86$GHz emission, and these have $10 \le \Rh \le 40$.
+Many $\Rh = 1$ models, both MAD and SANE, fail the 86\GHz flux density test: 22/25 SANE and 11/25 MAD; all overproduce 86\GHz emission.  A large set of SANE models (17/100) underproduce 86\GHz emission, and these have $10 \le \Rh \le 40$.
 
-The 86 GHz flux is sensitive to $\Rh$.  For example, SANE $\abh = 0$, $i = 70,90$deg models are too bright at $\Rh = 1$ and too dim at $\Rh = 10$.  There must be passing models in between, suggesting our parameter space is not sampled densely enough.
+The 86\GHz flux is sensitive to $\Rh$.  For example, SANE $\abh = 0$, $i = 70,90$deg models are too bright at $\Rh = 1$ and too dim at $\Rh = 10$.  There must be passing models in between, suggesting our parameter space is not sampled densely enough.
 
 %\begin{figure}
 %  \centering
@@ -255,16 +260,16 @@ The 86 GHz flux is sensitive to $\Rh$.  For example, SANE $\abh = 0$, $i = 70,90
 %\end{figure}
 
 %..............................................................................
-\subsubsubsection{86 GHz Major Axis}
+\subsubsubsection{86\GHz Major Axis}
 
-As for the $86$GHz flux, the $86$GHz size is sensitive to optical depth as a function of radius in the source plasma. Figure \ref{fig:cmp_86ghz_size} in Appendix \ref{app:tables} shows the full results of applying this constraint.
+As for the 86\GHz flux, the 86\GHz size is sensitive to optical depth as a function of radius in the source plasma. Figure \ref{fig:cmp_86ghz_size} in Appendix \ref{app:tables} shows the full results of applying this constraint.
 
 \cfg{need cites to earlier work for par below}
 
-The 86GHz size is sensitive to inclination.  For example, the MAD, $\abh = 0$, $\Rh = 160$ models are too small at low inclination and too large when seen edge-on, because the edge-on models have prominent limb-brightened jet walls that are visible to 100$\mu$as.  The 86GHz size constraint rejects
+The 86\GHz size is sensitive to inclination.  For example, the MAD, $\abh = 0$, $\Rh = 160$ models are too small at low inclination and too large when seen edge-on, because the edge-on models have prominent limb-brightened jet walls that are visible to 100$\mu$as.  The 86\GHz size constraint rejects
 $58\%$ of models and is therefore one of the tightest constraints.
 
-The physical picture for 86GHz source size is complicated, as is the extraction of the constraint itself from observations.  Notice that (1) two different values for the 86GHz intrinsic source size have been reported in the literature; (2) scattering is $7$ times stronger at $86$GHz than at $230$GHz; (3) scattering must be subtracted accurately to obtain the intrinsic source size; (4) the error bars for the 86GHz source size are narrow and this plays a key role in determining the strength of the constraint.
+The physical picture for 86\GHz source size is complicated, as is the extraction of the constraint itself from observations.  Notice that (1) two different values for the 86\GHz intrinsic source size have been reported in the literature; (2) scattering is $7$ times stronger at 86\GHz than at 230\GHz; (3) scattering must be subtracted accurately to obtain the intrinsic source size; (4) the error bars for the 86\GHz source size are narrow and this plays a key role in determining the strength of the constraint.
 
 %\begin{figure}
 %  \centering
@@ -355,11 +360,11 @@ We have also considered a set of thermal, $\Rh$, MAD models run with the \koral 
 None of the standard thermal models (Frankfurt or Illinois) survive the full gauntlet of constraints.   Variability rejects about $70\%$ of models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models.
 Evidently either (1) the models fail in some important respect, or (2) some of the data underlying the model tests are incorrect, or (3) one or more of the constraints have been misapplied.
 
-We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens when we lift one constraint.  About 5\% of both the Frankfurt and Illinois model sets fail only 1 constraint.  For Frankfurt, 8 models fail only $\mi{3}$, and 2 fail only m-ring diameter.  For Illinois, 3 models fail only $\mi{3}$ and 5 fail only the 86GHz size.  Suspicion therefore falls on $\mi{3}$, which rejects $\approx 70\%$ of Frankfurt and Illinois models.  Why might the $\mi{3}$ constraint be misleading?
+We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens when we lift one constraint.  About 5\% of both the Frankfurt and Illinois model sets fail only 1 constraint.  For Frankfurt, 8 models fail only $\mi{3}$, and 2 fail only m-ring diameter.  For Illinois, 3 models fail only $\mi{3}$ and 5 fail only the 86\GHz size.  Suspicion therefore falls on $\mi{3}$, which rejects $\approx 70\%$ of Frankfurt and Illinois models.  Why might the $\mi{3}$ constraint be misleading?
 
 \cfg{need learned commentary on the possibility of extended structure here.}
 
-One possibility is that some fraction of the $230$GHz flux density, $f_{ext}$, is in an extended structure (a jet) that is slowly varying, captured in the ALMA light curves, and resolved out by EHT.  The implied $f_{ext}$ is model-dependent, but if $f_{ext} \sim 30\%$ then nearly all MAD models would pass $\mi{3}$ and many SANE models would be rejected as too quiet.  The $4$G$\lambda$ amplitude variability is normalized by the light curve and thus $a_4$ would increase by a similar factor.  Notice that if $f_{ext} > 0$ then the models would need to be re-normalized (the accretion rate adjusted) so that the compact flux is $(1 - f_{ext}) \times 2.4$Jy.  The extended flux hypothesis can be tested by the addition of new, short baselines to the EHT.
+One possibility is that some fraction of the $230\GHz$ flux density, $f_{ext}$, is in an extended structure (a jet) that is slowly varying, captured in the ALMA light curves, and resolved out by EHT.  The implied $f_{ext}$ is model-dependent, but if $f_{ext} \sim 30\%$ then nearly all MAD models would pass $\mi{3}$ and many SANE models would be rejected as too quiet.  The $4$G$\lambda$ amplitude variability is normalized by the light curve and thus $a_4$ would increase by a similar factor.  Notice that if $f_{ext} > 0$ then the models would need to be re-normalized (the accretion rate adjusted) so that the compact flux is $(1 - f_{ext}) \times 2.4$Jy.  The extended flux hypothesis can be tested by the addition of new, short baselines to the EHT.
 
 A second possibility is that physical or numerical errors in the models cause the variability to be overstated.  Several possibilities, including viscosity, radiative cooling, pair production, helium accretion, numerical resolution, simulation duration, and boundary conditions are discussed in Section \ref{sec:discussions}.  We will consider nonthermal eDF models, wind-fed models, and tilted models next.  None sharply reduce $\mi{3}$.
 
@@ -391,18 +396,18 @@ If $\mi{3}$ is set aside then 3 models survive from Frankfurt and Illinois.  All
 
 % In Figure \ref{fig:modelcorrelation} we show the correlation between the thermal KHARMA and BHAC models for constraints where we have predictions from both models.
 
-% The top row shows from left to right the 230\,GHz flux density, the 230\,GHz modulation index, MI, computed for a time window of 3 hours, and the 230\,GHz image size obtained from image moments. Since we normalise the 230\,GHz images to an average flux of 2.4\,Jy within a time window of 5000\,M (corresponds to 28.5 h for SgrA a mass of $4.14\times 10^6\,\msun$), the scatter around this values is small. The deviation from an ideal correlation reflects the precision and number of GRMHD snapshots included during normalization procedure.
+% The top row shows from left to right the 230\GHz flux density, the 230\GHz modulation index, MI, computed for a time window of 3 hours, and the 230\GHz image size obtained from image moments. Since we normalise the 230\GHz images to an average flux of 2.4\,Jy within a time window of 5000\,M (corresponds to 28.5 h for SgrA a mass of $4.14\times 10^6\,\msun$), the scatter around this values is small. The deviation from an ideal correlation reflects the precision and number of GRMHD snapshots included during normalization procedure.
 
 % The correlation in the 3\,hour modulation index spreads over $\Delta \mi{3}=0.75$ which serves as a measure of intra-code ( e.g., MAD vs. SANE accretion) and inter-code (BHAC vs. KHARMA) differences. Despite these differences the models show a strong correlation throughout the investigated models and parameter space.
 
 % We found a strong correlation between models and codes for the image size computed from image moments, i.e. second moments analysis.
 
-% \cfg{This may change if we recompute the major axis, etc., for the IL 86 GHz large fov images}
-% The middle row presents the correlation plots for the 86\,GHz flux density (left), the 86\,GHz image size using second moments (middle) and the NIR flux (right). The 86\,GHz flux and 86\,GHz image size exhibit a shift toward larger values for the BHAC models. This difference can be explained by the larger field of view used for the BHAC models at 86\,GHz during the radiative transfer calculations. Thus, more extended structure and therefore a larger total flux is included in the BHAC models. This affects mainly models with large inclinations $i\geq70^\circ$ and jet dominated emission models ($\rm{R}_{\rm high}\geq 40$).
+% \cfg{This may change if we recompute the major axis, etc., for the IL 86\GHz large fov images}
+% The middle row presents the correlation plots for the 86\GHz flux density (left), the 86\GHz image size using second moments (middle) and the NIR flux (right). The 86\GHz flux and 86\GHz image size exhibit a shift toward larger values for the BHAC models. This difference can be explained by the larger field of view used for the BHAC models at 86\GHz during the radiative transfer calculations. Thus, more extended structure and therefore a larger total flux is included in the BHAC models. This affects mainly models with large inclinations $i\geq70^\circ$ and jet dominated emission models ($\rm{R}_{\rm high}\geq 40$).
 
 % The NIR fluxes show a tight correlation over four orders of magnitude and systematically larger flux for the BHAC models for low NIR fluxes ($\log_{10}(NIR)<-7$). These fluxes are far below the NIR constraints of $\sim 1mJy$, and therefore they do not affect the passing or failing of the models. In the thermal models the NIR flux is generated from the tail of the electron distribution function and is thus very sensitive to the electron temperature. Small differences in the distribution and value of the electron temperature between the two codes explain the observed de-correlation at very low NIR flux.
 
-% The correlation between models for the m-ring parameters is presented in the third row of Fig.~\ref{fig:modelcorrelation}. The correlation of the diameter of the m-ring is plotted in the left panel. The spread covers nearly the same extent as the 230\,GHz image size (top row, right panel) however the scatter in the correlation is larger.  The same is true for the width of the m-ring (middle panel in the last row of Fig.~\ref{fig:modelcorrelation}). Compared to the diameter and width of the m-ring, the asymmetry of the m-ring is less correlated (right panel). Notice that horizontal and vertical limits in the asymmetries occur since the parameter hits the boundary of the allowed range.
+% The correlation between models for the m-ring parameters is presented in the third row of Fig.~\ref{fig:modelcorrelation}. The correlation of the diameter of the m-ring is plotted in the left panel. The spread covers nearly the same extent as the 230\GHz image size (top row, right panel) however the scatter in the correlation is larger.  The same is true for the width of the m-ring (middle panel in the last row of Fig.~\ref{fig:modelcorrelation}). Compared to the diameter and width of the m-ring, the asymmetry of the m-ring is less correlated (right panel). Notice that horizontal and vertical limits in the asymmetries occur since the parameter hits the boundary of the allowed range.
 
 % The smaller correlation of the m-ring parameters as compared to the other parameters presented in Fig.~\ref{fig:modelcorrelation} is a consequence of the noisy nature of the m-ring fits.  Still, the distributions are quite symmetric under reflection across the diagonal, so the models are at least not biased with respect to each other.  Notice also that these plots do not capture all the information that is contained in the distribution of m-ring parameters, just the central value.
 
@@ -437,7 +442,7 @@ To summarize, all critical beta models fail the non-EHT constraints, with 86GHz 
 
 % cfg commented out 12 dec; edited down for consistency in style.
 
-%to span the uncertainties in emitting particle thermodynamics in EHT analyses. The $\Rh$ models  are compatible with the well-motivated turbulent plasma heating ADAF models of \cite{1999ApJ...520..248Q} in asymptotic behavior of electron-to-total heating ratio as a function of plasma $\beta$. There is, however, a vast function space of possible alternative parameterizations. Here we have also considered the Critical Beta model \cite{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  The model is motivated by the observation that when the transition between electron heating domination and proton heating domination is smoothed (controlled by increasing exponent parameter $\beta_c$), the 230 GHz emitting region profile tends to be less coronally dominated and more compact and asymmetric. This is a consequence, when fixing synthetic image flux, of higher critical beta values shifting the locus of electrons dominating the emission profile towards the colder, higher density equatorial inflow.  We consider only a single point in the critical beta parameter space, with $f = \beta_c = 1$. We have applied a subset of tests to the critical beta models (all except X-ray; NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}. All Critical beta models with high inclinations fail EHT constraints, which is consistent with our main conclusion about the thermal models. We also find that all critical beta models fail all considered non-EHT constraints.
+%to span the uncertainties in emitting particle thermodynamics in EHT analyses. The $\Rh$ models  are compatible with the well-motivated turbulent plasma heating ADAF models of \cite{1999ApJ...520..248Q} in asymptotic behavior of electron-to-total heating ratio as a function of plasma $\beta$. There is, however, a vast function space of possible alternative parameterizations. Here we have also considered the Critical Beta model \cite{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  The model is motivated by the observation that when the transition between electron heating domination and proton heating domination is smoothed (controlled by increasing exponent parameter $\beta_c$), the 230\GHz emitting region profile tends to be less coronally dominated and more compact and asymmetric. This is a consequence, when fixing synthetic image flux, of higher critical beta values shifting the locus of electrons dominating the emission profile towards the colder, higher density equatorial inflow.  We consider only a single point in the critical beta parameter space, with $f = \beta_c = 1$. We have applied a subset of tests to the critical beta models (all except X-ray; NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}. All Critical beta models with high inclinations fail EHT constraints, which is consistent with our main conclusion about the thermal models. We also find that all critical beta models fail all considered non-EHT constraints.
 
 % CFG: we shouldn't report preliminary indications here
 %A second motivation is that there are preliminary indications that the exponential electron cooling in the Critical Beta Model suppressed the SANE bremsstrahlung spectral component allowing more to pass the X-ray constraint.
@@ -445,20 +450,20 @@ To summarize, all critical beta models fail the non-EHT constraints, with 86GHz 
 %------------------------------------------------------------------------------
 \subsubsection{Thermal Plus $p = 4$ Power-law Models}
 
-So far we have assumed a thermal (Maxwell-J{\"u}ttner) eDF.  Next we assume that some electrons are accelerated to a non-thermal tail.  There are multiple ways of doing this, but we will continue to assume that the eDF depends instantaneously on local conditions and to set the accretion rate so that the time-averaged 230\,GHz compact flux is 2.4 Jy.
+So far we have assumed a thermal (Maxwell-J{\"u}ttner) eDF.  Next we assume that some electrons are accelerated to a non-thermal tail.  There are multiple ways of doing this, but we will continue to assume that the eDF depends instantaneously on local conditions and to set the accretion rate so that the time-averaged 230\GHz compact flux is 2.4 Jy.
 
 % cfg 12-dec: we will comment this out by 13-dec unless we get more info, from here =>
-First we employ a hybrid thermal/power-law tail distribution using \hamr/\bhoss, and assume a power-law index of $p=4$ with a constant non-thermal acceleration efficiency $\epsilon=n_{\rm e, power-law}/n_{\rm e, thermal}=0.1$. Following the method given in \citet{Chatterjee2021}, the power-law tail is stitched to the thermal core by choosing the minimum Lorentz factor limit of the power-law $\gamma_{\rm min}$ to be at the peak of the Maxwellian component. The upper end of the power-law is taken to $10^5 \gamma_{\rm min}$.  The temperature of the thermal component is set by the $\Rh$ prescription.  We find that the accretion rate is slightly smaller than for corresponding thermal models, suggesting that the power-law components contributes to the 230\,GHz total intensity.
+First we employ a hybrid thermal/power-law tail distribution using \hamr/\bhoss, and assume a power-law index of $p=4$ with a constant non-thermal acceleration efficiency $\epsilon=n_{\rm e, power-law}/n_{\rm e, thermal}=0.1$. Following the method given in \citet{Chatterjee2021}, the power-law tail is stitched to the thermal core by choosing the minimum Lorentz factor limit of the power-law $\gamma_{\rm min}$ to be at the peak of the Maxwellian component. The upper end of the power-law is taken to $10^5 \gamma_{\rm min}$.  The temperature of the thermal component is set by the $\Rh$ prescription.  We find that the accretion rate is slightly smaller than for corresponding thermal models, suggesting that the power-law components contributes to the 230\GHz total intensity.
 
 %..............................................................................
 \subsubsubsection{230\GHz VLBI pre-image size}
 
-Hybrid thermal/power-law models have similar 230\,GHz VLBI pre-image sizes to their purely thermal counterparts. This is because the power-law index is large enough
+Hybrid thermal/power-law models have similar 230\GHz VLBI pre-image sizes to their purely thermal counterparts. This is because the power-law index is large enough
 
 %..............................................................................
 \subsubsubsection{86\GHz flux}
 
-In general, the $R_{\rm high}=1$ models produce too much 86\,GHz flux. Since the lower limit of the power-law $\gamma_{\rm min}$ is directly affected by the local electron temperature, the highest energy electrons are located in the jet sheath where the ion and electron temperatures are similar, i.e. $T_i\approx T_e$. Indeed this is why SANE models produce more 86\,GHz flux when non-thermal electrons are introduced, especially at larger $R_{\rm high}$ values. On the other hand, MAD pure thermal and mixed thermal/non-thermal models behave similarly as the bulk of the emission is produced in the inner disk.
+In general, the $R_{\rm high}=1$ models produce too much 86\GHz flux. Since the lower limit of the power-law $\gamma_{\rm min}$ is directly affected by the local electron temperature, the highest energy electrons are located in the jet sheath where the ion and electron temperatures are similar, i.e. $T_i\approx T_e$. Indeed this is why SANE models produce more 86\GHz flux when non-thermal electrons are introduced, especially at larger $R_{\rm high}$ values. On the other hand, MAD pure thermal and mixed thermal/non-thermal models behave similarly as the bulk of the emission is produced in the inner disk.
 
 %..............................................................................
 \subsubsubsection{86\GHz image size}
@@ -486,17 +491,17 @@ The addition of the power-law tail primarily increases the flux in the NIR and t
 \subsubsection{Constant kappa models with $\kappa=5$}
 
 Next we consider a model in which {\em all} electrons are in a kappa eDF, which has a thermal core and a power-law tail.  We set $\kappa = 5$ everywhere,  motivated by \cite{2016PhRvL.117w5101K}, who found $\kappa = 5$ to be a good fit to the ion DF in a 3D hybrid simulation of MHD turbulence.  The power-law tail then has $p = \kappa - 1 = 4$, and at high frequency $\nu L_\nu \sim \nu^s$ where $s = 2 - \kappa/2 = -1/2$.
-\cmf{If not stated otherwise the width parameter $w$ of the kappa distribution (see Eq. \ref{eq:kappa}) is set by $w= (\kappa - 3) \Theta_e/\kappa$, where the dimensionless electron temperature, $\Theta_e$, is computed according to Eq. \ref{eq:rhigh_prescription}. The underlying GRMHD simulations are taken from the \bhac runs and we use the time window from 25\,kM to 30\,kM. The radiative transfer is done employing the GRRT code \bhoss and we created images every 50\,M using the same inclinations and $R_{\rm high}$ values as for the thermal models. Each model is individually normalized to an average flux of 2.4\,Jy at 230\,GHz.}
+\cmf{If not stated otherwise the width parameter $w$ of the kappa distribution (see Eq. \ref{eq:kappa}) is set by $w= (\kappa - 3) \Theta_e/\kappa$, where the dimensionless electron temperature, $\Theta_e$, is computed according to Eq. \ref{eq:rhigh_prescription}. The underlying GRMHD simulations are taken from the \bhac runs and we use the time window from 25\,kM to 30\,kM. The radiative transfer is done employing the GRRT code \bhoss and we created images every 50\,M using the same inclinations and $R_{\rm high}$ values as for the thermal models. Each model is individually normalized to an average flux of 2.4\,Jy at 230\GHz.}
 
 %..............................................................................
 \subsubsubsection{230\GHz VLBI pre-image size}
 
-In the case of the MAD models the size of the $\kappa=5$ does not change. This can be explained by the fact that most of the emission is produced in the midplane. For the SANE models we find two different behaviours: The source size slightly increases for $R_{\rm high}<40$ and decreases for $R_{\rm high}\geq 40$ especially in for the positive black hole spins and high inclinations. In the SANE case the mass accretion rate decreases as compared to the thermal models indicating that particles from the tail of the kappa distribution contribute the 230\,GHz flux. Increasing the $R_{\rm high}$ value the emission region is shifted from the midplane towards the polar region for the SANE models. Given that for the kappa distribution more emission is generated as in the thermal case the emission region becomes more compact. Together with the higher Doppler boosting at shorter distances from the black hole the source size decreases which explains the trend with black hole spin.
+In the case of the MAD models the size of the $\kappa=5$ does not change. This can be explained by the fact that most of the emission is produced in the midplane. For the SANE models we find two different behaviours: The source size slightly increases for $R_{\rm high}<40$ and decreases for $R_{\rm high}\geq 40$ especially in for the positive black hole spins and high inclinations. In the SANE case the mass accretion rate decreases as compared to the thermal models indicating that particles from the tail of the kappa distribution contribute the 230\GHz flux. Increasing the $R_{\rm high}$ value the emission region is shifted from the midplane towards the polar region for the SANE models. Given that for the kappa distribution more emission is generated as in the thermal case the emission region becomes more compact. Together with the higher Doppler boosting at shorter distances from the black hole the source size decreases which explains the trend with black hole spin.
 
 %..............................................................................
 \subsubsubsection{86\GHz flux and Source Size}
 
-The 86\GHz image size behave similar than the 230\,GHz images.
+The 86\GHz image size behave similar than the 230\GHz images.
 
 %..............................................................................
 \subsubsubsection{NIR constraints}
@@ -516,7 +521,7 @@ The $\mi{3}$ constraint is computed for a time window of length 5000\,$\rm{GM/c^
 % cfg 12-dec: this section will be commented out soon unless we receive more results
 
 %performed 3D kinetic numerical simulations of accretion disks and found that the distribution of the ions is well described by kappa distribution with $kappa=5$. We adopted this results and assume that the radiating electrons follows a similar distribution as the ion. Therefore, we performed radiative transfer calculations using a kappa distribution with fixed value of $\kappa=5$.
-%\newline \cmf{more details tomorrow: all MAD models overshoot the the NIR flux limit and only a few SANE models are below flux threshold. The SANE models which pass the NIR constraints produce too large 86\,GHz images}
+%\newline \cmf{more details tomorrow: all MAD models overshoot the the NIR flux limit and only a few SANE models are below flux threshold. The SANE models which pass the NIR constraints produce too large 86\GHz images}
 
 %==============================================================================
 \subsubsection{Mixed Thermal/Kappa Model}
@@ -540,7 +545,7 @@ An example time- and azimuth-averaged distribution of $\epsilon$ is shown in Fig
 We set $\sigma_{\rm min}=0.01$ and vary the base efficiency, $\varepsilon$ over 0.05, 0.1 and 0.2.  At each $\varepsilon$ we generate a model set spanning the same parameter space as the thermal models (see Table \ref{tab:radiativemodels} for details),
 and normalize the accretion rate using the standard procedure (see Section \ref{sec:models}.
 
-%For each model we iterate the mass accretion rate to obtain an average flux of 2.4\,Jy at 230\,GHz across a time interval of 5000\,M. In order to explore several values of $\varepsilon$ efficiently we increased the model snapshot cadence to 50\,M. This allows us to keep the numerical costs for this parameter sweep low while still being within the correlation time of the GRMHD simulations.
+%For each model we iterate the mass accretion rate to obtain an average flux of 2.4\,Jy at 230\GHz across a time interval of 5000\,M. In order to explore several values of $\varepsilon$ efficiently we increased the model snapshot cadence to 50\,M. This allows us to keep the numerical costs for this parameter sweep low while still being within the correlation time of the GRMHD simulations.
 %($t_{\rm corr}\approx 50-100\,M$) \cmf{ do we have reference for this? So far this result is not published, maybe Boris paper?}.
 % CFG: this is mentioned earlier in the paper and also implicit, but not actually calculated, in Boris's paper.  Let us not specify a correlation time here, so that we don't set the correlation time in multiple places.
 
@@ -557,9 +562,9 @@ and normalize the accretion rate using the standard procedure (see Section \ref{
 %In the following we will elaborate on the impact of adding non-thermal particles via the kappa electron distribution with fixed kappa value ($\kappa=3.5$) and three different base efficiencies $\varepsilon=$0.05, 0.1 and 0.2 on the observational constraints listed in Section~\ref{subsec:thermal}.
 
 %..............................................................................
-\subsubsubsection{230\,GHz VLBI pre-image size}
+\subsubsubsection{230\GHz VLBI pre-image size}
 
-The addition of non-thermal particles produces almost undetectable changes in the 230\,GHz VLBI pre-image sizes for the MAD models and a minor effect for the SANE models.
+The addition of non-thermal particles produces almost undetectable changes in the 230\GHz VLBI pre-image sizes for the MAD models and a minor effect for the SANE models.
 
 For MADs, independent of $\Rh$, $230$GHz emission is mostly produced in the disk region (see \citetalias{M87PaperV} and Fig.~8 in \citealt{Wong_2022} for a 3-D rendering).  Increasing $\Rh$ will therefore not push the emission region into the jet where the non-thermal particles are located and thus their contribution to the total emission structure is negligible.
 
@@ -573,22 +578,22 @@ For SANEs, models with $\Rh>40$ exhibit a minor increase in the source size.  In
 %In MADs, independent of the choice of $\Rh$, the emission is mostly produced in the disk region (see \citetalias{M87PaperV} and Fig.~8 in \citet{Wong_2022} for a 3-D rendering).  Increasing $\Rh$ will not push the emission region into the jet where the non-thermal particles are located and thus their contribution to the total emission structure is negligible.
 
 %..............................................................................
-\subsubsubsection{86\,GHz Flux and Source Size}
+\subsubsubsection{86\GHz Flux and Source Size}
 
 % cfg 12-dec: this has already been mentioned elsewhere
-%The 86\,GHz GMVA+ALMA observations
-%probe a larger field of view than the 230\,GHz EHT observations, so we increased the field of view for the 86\,GHz to 800\,$\rm{\mu as}$ during the radiative transfer calculations. Again the non-thermal particles are mainly located in the jet sheath and thus the increased field of view ensures that no extended flux is missing during the comparison with the 86\,GHz observations.
+%The 86\GHz GMVA+ALMA observations
+%probe a larger field of view than the 230\GHz EHT observations, so we increased the field of view for the 86\GHz to 800\,$\rm{\mu as}$ during the radiative transfer calculations. Again the non-thermal particles are mainly located in the jet sheath and thus the increased field of view ensures that no extended flux is missing during the comparison with the 86\GHz observations.
 
-The 86\,GHz flux density for both SANE and MAD models is unaffected by the addition of non-thermal particles.  There is a small effect for SANE models with $\Rh>40$, but even for $\varepsilon = 0.2$ this does not change which models are rejected.  Similarly the 86\,GHz major axis FWHM is unaffected by the addition of non-thermal particles.
+The 86\GHz flux density for both SANE and MAD models is unaffected by the addition of non-thermal particles.  There is a small effect for SANE models with $\Rh>40$, but even for $\varepsilon = 0.2$ this does not change which models are rejected.  Similarly the 86\GHz major axis FWHM is unaffected by the addition of non-thermal particles.
 
-%n case of the SANE models the edges of the 86\,GHz flux distribution are slightly shifted in the case of $\Rh>40$. However, including non-thermal particles even with the highest base efficiency $\varepsilon=0.2$ does not change the scoring of a model, i.e., a thermal-only model which full-fills the 86\,GHz constrain is still accepted if non-thermal particles are included.
+%n case of the SANE models the edges of the 86\GHz flux distribution are slightly shifted in the case of $\Rh>40$. However, including non-thermal particles even with the highest base efficiency $\varepsilon=0.2$ does not change the scoring of a model, i.e., a thermal-only model which full-fills the 86\GHz constrain is still accepted if non-thermal particles are included.
 
-%This behaviour can be explained by the fact that the bulk of the emission in both accretion models is generated in with a few gravitational radii. Since the non-thermal particles are mainly located in the jet sheath and thei ratio between non-thermal to thermal particles is at most 20\% the contribution of the non-thermal particles to the 86\,GHz flux can be neglected.
+%This behaviour can be explained by the fact that the bulk of the emission in both accretion models is generated in with a few gravitational radii. Since the non-thermal particles are mainly located in the jet sheath and thei ratio between non-thermal to thermal particles is at most 20\% the contribution of the non-thermal particles to the 86\GHz flux can be neglected.
 
 %..............................................................................
-%\subsubsubsection{86\,GHz image size}
+%\subsubsubsection{86\GHz image size}
 
-%The behaviour of the 86\,GHz image size is very similar to the above described 230\,GHz image size: There is no change in image size for the MAD models and only a minor increase in the SANE models for $\Rh>40$. The physical reasons for this behaviour follows the same arguments as in the 230\,GHz VLBI pre-image size.
+%The behaviour of the 86\GHz image size is very similar to the above described 230\GHz image size: There is no change in image size for the MAD models and only a minor increase in the SANE models for $\Rh>40$. The physical reasons for this behaviour follows the same arguments as in the 230\GHz VLBI pre-image size.
 
 %..............................................................................
 \subsubsubsection{NIR constraints}
@@ -610,12 +615,12 @@ As noted above, NIR emission is produced from the tail of the eDF.  The thermal 
 
 We compute $mi{3}$ for a window of $5000\tg$.  Notice that this is shorter than the standard models, which as $3$ $5000\tg$ windows, so the results are less constraining.  The $\mi{3}$ test rejects about 1/2 of models for $\varepsilon = 0.05, 0.1,$ and $0.2$.  We conclude that $\varepsilon$ has no effect on the $\mi{3}$ test.
 
-%For the comparison with the ALMA light curves we compute the modulation index for a 3\,hour time window and across the entire simulated time window of 28\,hours (5000\,GM/c$^3$). Similar to the 86\,GHz flux the 230\,GHz flux is mainly produced within a few gravitational radii and thus not affected by the addition of non-thermal particles using Eq. \ref{eq:kappaeff}. As in the previous constraints, the MAD accretion models are insensitive to the addition of non-thermal particles whereas the SANE models show some increased modulation index for $\Rh>40$. However, the distributions for thermal and non-thermal eDF are still largely overlapping.
+%For the comparison with the ALMA light curves we compute the modulation index for a 3\,hour time window and across the entire simulated time window of 28\,hours (5000\,GM/c$^3$). Similar to the 86\GHz flux the 230\GHz flux is mainly produced within a few gravitational radii and thus not affected by the addition of non-thermal particles using Eq. \ref{eq:kappaeff}. As in the previous constraints, the MAD accretion models are insensitive to the addition of non-thermal particles whereas the SANE models show some increased modulation index for $\Rh>40$. However, the distributions for thermal and non-thermal eDF are still largely overlapping.
 
 %..............................................................................
 \subsubsubsection{M-Ring Constraint}
 
-The m-ring fitting is applied to the 230\,GHz images. As mentioned earlier the flux and size of the 230\,GHz images are not affected by the inclusion of non-thermal particles with fixed kappa and variable efficiency. Thus, we do not expect any changes in the distribution of the m-ring parameters.  Applying m-ring fitting to non-thermal models and a detailed comparison with the thermal results confirmed our initial assumption.
+The m-ring fitting is applied to the 230\GHz images. As mentioned earlier the flux and size of the 230\GHz images are not affected by the inclusion of non-thermal particles with fixed kappa and variable efficiency. Thus, we do not expect any changes in the distribution of the m-ring parameters.  Applying m-ring fitting to non-thermal models and a detailed comparison with the thermal results confirmed our initial assumption.
 
 %\cmf{based on the results of Kotaro, who run the m-ring on non-thermal models}
 
@@ -664,7 +669,7 @@ An alternative procedure for assigning a nonthermal eDF uses the  kappa model \e
 \end{align}
 Evidently $w$ contains a thermal and nonthermal contribution, with the nonthermal contribution proportional to the nonthermal particle acceleration efficiency $\varepsilon$  \citep{2019A&A...632A...2D, 2021NatAs.tmp..218C}.  The thermal width $\Theta_e$ is set using the $\Rh$ prescription.
 
-We set $\varepsilon=0$ and injection radius $r_{\rm inj}=10r_{g}$ following previous studies.  Nonzero $\varepsilon$ increases the averaged NIR flux by two orders of magnitude as $\varepsilon$ goes from 0 to 1, causing all models to overshoot NIR constraint.  Setting $\varepsilon \ne 0$ also causes the 86GHz flux density and image size to increase \citep{2021arXiv211102518F}.
+We set $\varepsilon=0$ and injection radius $r_{\rm inj}=10r_{g}$ following previous studies.  Nonzero $\varepsilon$ increases the averaged NIR flux by two orders of magnitude as $\varepsilon$ goes from 0 to 1, causing all models to overshoot NIR constraint.  Setting $\varepsilon \ne 0$ also causes the 86\GHz flux density and image size to increase \citep{2021arXiv211102518F}.
 
 We use the emissivity and absorptivity, computed numerically for the interval $3 < \kappa \le 8$, from  \cite{2016ApJ...822...34P}. For $\kappa > 8$ we substitute a thermal eDF.  As in the standard models we turn off emission at $\sigma > 1$ (see Figure~\ref{fig:varepsilon}).
 
@@ -673,13 +678,13 @@ We use the emissivity and absorptivity, computed numerically for the interval $3
 \cfg{this section needs to incorporate both the \hamr and \bhac variable kappa models}
 
 %..............................................................................
-\subsubsubsection{86\,GHz Major Axis}
+\subsubsubsection{86\GHz Major Axis}
 
-We found that the 86 GHz image size is similar to the thermal and variable efficiency models, differing only for non-spinning black holes, where we have low magnetization, weak jet. As a consequence our prescription makes $\kappa$ large and the radiative properties of the plasma similar to those of a thermal eDF.
+We found that the 86\GHz image size is similar to the thermal and variable efficiency models, differing only for non-spinning black holes, where we have low magnetization, weak jet. As a consequence our prescription makes $\kappa$ large and the radiative properties of the plasma similar to those of a thermal eDF.
 eDF with variable kappa power-law reduces to thermal distribution and the size of the image is a bit smaller than in thermal case. For $a_{\star}=0$ almost all SANE models pass the size constraint, $R_{\rm high}=1$ we have a bit larger image. For MAD $R_{\rm high}=40$ and $a_{\star}=0.94$, and cases for $R_{\rm high}=160$ and $a_{\star}=0.50$ we have a bit smaller size image than thermal case passing the constraint.
 
 %..............................................................................
-\subsubsubsection{86\,GHz flux}
+\subsubsubsection{86\GHz flux}
 
 The total flux on overall non-thermal models increases in comparison to thermal models, however, the general results for MAD models do not change. For SANE models with R$_{\rm high}=1$ slightly increases, all of them fail in contrast with thermal models. While for $R_{\rm high}=10,40,80$ and $R_{\rm high}=160$ the flux decreases under the lower bound $1.8 \rm {Jy}$.
 
@@ -713,7 +718,7 @@ The nonthermal eDF models considered here produce surprisingly little change com
 
 %The effect of adding non-thermal electrons in a kappa eDF with  $\kappa=3.4$ and variable efficiency via Eq.~\ref{eq:efficiencybetasigma} can be summarized as follows:
 %\begin{itemize}
- %   \item The 86\,GHz and 230\,GHz constraints are hardly affected by the addition of non-thermal particles.
+ %   \item The 86\GHz and 230\GHz constraints are hardly affected by the addition of non-thermal particles.
 %    \item Even the lowest base efficiency considered, $\varepsilon=0.05$, leads to an over-production of NIR flux. \cmf{indication that we need very localised regions of non-thermal particle productions and no "global" approach?}
 %\end{itemize}
 
@@ -772,10 +777,10 @@ The tilted models exhibit a warped disk due to the Lense-Thirring torques impose
 %Notice that the jets are always approximately perpendicular to the outer disk in these models.
 Since the inner and the outer disk have different orientations, it is necessary to specify the coordinate axis of the observer.  We consider three  observer inclinations with respect to the {\em outer} disk at a single azimuth of $0$deg \citep[for more details, see][]{Chatterjee2020}.\footnote{A full parameter survey would run over azimuth angle as well.}  A full listing of the pass/fail results are given in Appendix \ref{app:tables}, Table \ref{tab:tiltedPF}.
 
-The 230\,GHz pre-image size of edge-on large $R_{\rm high}$ images increases slightly for the tilt-$60^{\circ}$ compared to the aligned case. This occurs because the inner jet is warped and creates an extended image. This effect is also seen in the 86\,GHz image size. On the other hand, the 86\,GHz flux varies little with tilt despite the presence of a boosted jet component at large tilt angles.
+The 230\GHz pre-image size of edge-on large $\Rh$ images increases slightly for the tilt-$60\degree$ compared to the aligned case. This occurs because the inner jet is warped and creates an extended image. This effect is also seen in the 86\GHz image size. On the other hand, the 86\GHz flux varies little with tilt despite the presence of a boosted jet component at large tilt angles.
 
 % cfg 12-dec this is a testable proposition
-%This suggests that, on average, most of the total flux at 230 and 86\,GHz comes from a few gravitational radii from the black hole where the relativistic Doppler boost have comparable values between the in-going accretion flow and the out-flowing jet.
+%This suggests that, on average, most of the total flux at 230 and 86\GHz comes from a few gravitational radii from the black hole where the relativistic Doppler boost have comparable values between the in-going accretion flow and the out-flowing jet.
 
 Variability increases wth tilt. In tilted disks, accretion occurs via thin plunging streams \citep[e.g.,][]{Fragile2007} where electrons in the shocked flow can be heated to relativistic temperatures \citep[e.g.][]{Dexter2013}, forming localized, fluctuating hotspots more easily than in aligned disks, thereby increasing flux variability \citep{Chatterjee2020}.
 
@@ -790,7 +795,7 @@ To summarize: for the model set considered here tilt primarily affects variabili
 
 The accretion models of \cite{2020ApJ...896L...6R, 2020MNRAS.492.3272R, 2018MNRAS.478.3544R} track plasma from  magnetized stellar winds down to the event horizon and provide a self-consistent picture of the origin of both gas and magnetic fields in the accreting plasma in \sgra.  The resulting inflow does not fully circularize, so the models also provide a distinct alternative to the standard models, which {\em assume} that the SANE or MAD initial conditions relax to a astrophysically accessible state for the inner accretion flow.
 
-We consider two versions of the model: one in which the stellar wind magnetization is low ($\beta = 10^6$) and another and a second in which the magnetization is high ($\beta = 10^2$). $\Rh$ is adjusted until each model has the observed time-averaged 230 GHz flux density, with $\Rh = 13$ ($\beta = 10^6$) and $\Rh = 28$ ($\beta = 10^2$).
+We consider two versions of the model: one in which the stellar wind magnetization is low ($\beta = 10^6$) and another and a second in which the magnetization is high ($\beta = 10^2$). $\Rh$ is adjusted until each model has the observed time-averaged 230\GHz flux density, with $\Rh = 13$ ($\beta = 10^6$) and $\Rh = 28$ ($\beta = 10^2$).
 
 Both wind-fed models fail the m-ring width test, producing a width that is too small.  In addition both fail the 86GHz flux test: the 86GHz flux density is too large.  The wind-fed models also fail the $\mi{3}$ test, although they are quieter than MAD models and close to the cutoff.   All scoring results are given in Appendix~\ref{app:tables}, Table \ref{tab:resslerPF}.
 
