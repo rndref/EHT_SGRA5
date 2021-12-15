@@ -295,11 +295,10 @@ The plasma mass scale parameter $\Munit$ controls the optical depth and thus the
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/sample_imgs.pdf}
-  \caption{%
-    Sample 86\GHz (top row) and 230\GHz (bottom row) images from the
-    simulation library: (\emph{left})~a thermal SANE,
-    (\emph{middle})~a thermal MAD, and (\emph{right})~a nonthermal
-    variable $\kappa$ MAD.
+  \caption{Sample 86\GHz (top row) and 230\GHz (bottom row) images
+    from the simulation library: the left column shows a thermal SANE,
+    middle column shows a thermal MAD, and the right column shows a
+    nonthermal variable $\kappa$ MAD.
     Note that these models are simply chosen to demonstrate the
     variety of possible images.
     They do not necessary pass all the constraints.
@@ -309,22 +308,18 @@ The plasma mass scale parameter $\Munit$ controls the optical depth and thus the
     regime, making the sharp photon ring visibile (bottom left and
     middle panels).
     On the other hand, most of the 86\GHz images are in an optically
-    thick regime, and the accretion disk would block the photon ring
-    (top middle and right panels).
-    See also Figure~\ref{fig:sample_seds} for confirming the optical
-    depth.
-    In general, face-on images like those in the left column tend to be too
-    big in size, and the edge-on images in the right column tend to be too
-    asymmetric.
-  }
+    thick regime, and the accretion disk would block the sharp photon
+    ring (top middle and right panels).
+    In general, face-on images like the ones in the left column tend
+    to be too big in size, and the edge-on images in the right column
+    tend to be too asymmetric.}
   \label{fig:sample_imgs}
 \end{figure*}
 
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/sample_seds.pdf}
-  \caption{%
-    Sample SEDs from the sample models shown in
+  \caption{Sample SEDs from the same models shown in
     Figure~\ref{fig:sample_imgs}:
     (\emph{left})~a thermal SANE,
     (\emph{middle})~a thermal MAD, and
@@ -338,20 +333,20 @@ The plasma mass scale parameter $\Munit$ controls the optical depth and thus the
     bremsstrahlung, see the legend).
     The total emission is marked as black spectrum.
     The left panel shows a interesting special case in our simulation
-    library, where the spectral index at 230\GHz is negative,
-    indicating the 230\GHz image is completely optically thin and the
-    86\GHz would over produce the flux.
+    library, where the spectral index at 230\GHz is negative.
+    This indicates the 230\GHz image is completely optically thin and
+    the 86\GHz would over produce the flux.
     The NIR has a flat spectral index and is dominated by inverse
     Compton, instead of direct synchrotron radiation.
     These properties occur only for $\Rh = 1$ SANE models.
-    For $\Rh > 1$, the direct synchrotron peak shifts to the right and
-    broadens, and also dominate the NIR.
-    For SANE, the spetral index for x-ray is always positive and
-    dominated by thermal bremsstrahlung by (relatively) cool electrons.
+    For $\Rh > 1$, the direct synchrotron peak shifts to the right,
+    broadens its width, and dominates the NIR.
+    For SANE, the spetral index for x-ray is almost always positive
+    and dominated by thermal bremsstrahlung by (relatively) cool
+    electrons.
     The middle and right panels show the more typical MAD SEDs, where
     86\GHz, 230\GHz, and NIR all come from direct synchrotron, and
-    x-ray is dominated by inverse Compton.
-  }
+    x-ray is dominated by inverse Compton.}
   \label{fig:sample_seds}
 \end{figure*}
 
