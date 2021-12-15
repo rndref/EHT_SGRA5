@@ -206,7 +206,7 @@ The sensitivity to $\Theta_e$ implies that NIR will be strongest for parameters 
 The sensitivity to $B$ implies that NIR will be strongest for parameters with stronger fields.  The $B$ depends on the GRMHD flow configuration and also on the mass unit (that is, the accretion rate), and so NIR will be strongest when the accretion rate is largest.  For SANEs, accretion rate declines as $\abh$ increases and $\Rh$ decreases (see Figure \ref{fig:accretion_outflow_power_illinois_thermal} below); for MADs the accretion rate dependence on $\abh$ and $\Rh$ is much weaker.
 Finally, Doppler effect (blueshift) enables photons that are detected at $2.2\mu$m to be emitted at longer wavelength in plasma that is moving toward the observer, and the accompanying Doppler beaming increases the detected intensity.  We therefore expect that NIR to increase with inclination and to peak in the midplane on the approaching side of the flow.
 
-Models that pass the NIR flux limit are shown in the Appendix in Figure \ref{fig:cmp_2um_flux}. The rejected SANE models ($6\%$) tend to be at positive spin and high inclination, and the images are dominated by a bright spot on the approaching side of the disk.
+Models that pass the NIR flux limit are shown in the Appendix in Figure~\ref{fig:2um_flux_pizza}. The rejected SANE models ($6\%$) tend to be at positive spin and high inclination, and the images are dominated by a bright spot on the approaching side of the disk.
 The rejected SANE models ($68\%$) include all models at $\Rh = 1$ and all but 2 models at $\Rh = 10$, where $\Theta_e$ tends to be larger, and {\em all} edge-on models, where Doppler boosting is largest.
 
 Interestingly, we find that some models are Compton dominated in the NIR.  For example, $\abh = -0.94$ SANE models become optically thin at relatively low frequency as $\Rh$ goes to $1$, and thus synchrotron emission drops off rapidly as frequency increases.
@@ -226,7 +226,7 @@ Many thermal models produce X-ray emission through Compton upscattering of therm
 
 In many large $\Rh$ SANE models, however, X-ray emission is dominated by bremsstrahlung.  Since its emissivity $j_{\nu,b} \propto n^2$, bremsstrahlung is dominated by regions with the highest density, i.e. the midplane.  It typically comes from larger radius than the synchrotron and Compton-upscattered X-ray emission and therefore varies more slowly.  Bremsstrahlung therefore dominates Compton in the highest accretion rate models, i.e. when $\Rh$ is large (see Section~\ref{sec:discussions}).  Notice that $j_{\nu,b} \propto \Theta_e^{1/2}$ for $\Theta_e > 1$ and $\Theta_e^{-1/2}$ for $\Theta_e < 1$, so cool disks enhance bremsstrahlung.
 
-The X-ray cut results are shown in Appendix \ref{app:tables} in Figure \ref{fig:cmp_xray_flux}.
+The X-ray cut results are shown in Appendix~\ref{app:tables} in Figure~\ref{fig:xray_pizza}.
 
 Most large $\Rh$ SANE models fail the X-ray test: all but 2/25 at $\Rh = 160$ and all but 2/25 at $\Rh = 40$.  These models fail due to excess bremsstrahlung.
 
@@ -244,7 +244,7 @@ The MAD models that fail have low $\Rh$ and are Compton-dominated in the X-ray. 
 
 In a naive picture \sgra's millimeter flux is produced in a photosphere that decreases in size as frequency increases.  Because optical depth is not large at $1.3$mm ($\sim 0.3$ in the one-zone model) and the source structure is complicated (the optical depth varies across the image; the $\tau = 2/3$ surface is non-spherical, folded, and not even simply connected) the naive picture is imprecise.  Nevertheless 86\GHz photons are on average produced at larger radius than 230\GHz photons, and the 86\GHz source size is larger than the 230\GHz source size.
 
-The 86\GHz/230\GHz color is therefore sensitive to the radial structure of the source plasma.  Figure \ref{fig:cmp_86ghz_flux} shows the full results of applying this constraint.
+The 86\GHz/230\GHz color is therefore sensitive to the radial structure of the source plasma.  Figure \ref{fig:86GHz_flux_pizza} shows the full results of applying this constraint.
 
 \cfg{need more physical discussion}
 
@@ -488,7 +488,7 @@ The addition of the power-law tail primarily increases the flux in the NIR and t
 % cfg 12-dec: we will comment this out by 13-dec unless we get more info, to here <=
 
 %------------------------------------------------------------------------------
-\subsubsection{Constant kappa models with $\kappa=5$}
+\subsubsection{Constant kappa models with $\kappa = 5$}
 
 Next we consider a model in which {\em all} electrons are in a kappa eDF, which has a thermal core and a power-law tail.  We set $\kappa = 5$ everywhere,  motivated by \cite{2016PhRvL.117w5101K}, who found $\kappa = 5$ to be a good fit to the ion DF in a 3D hybrid simulation of MHD turbulence.  The power-law tail then has $p = \kappa - 1 = 4$, and at high frequency $\nu L_\nu \sim \nu^s$ where $s = 2 - \kappa/2 = -1/2$.
 \cmf{If not stated otherwise the width parameter $w$ of the kappa distribution (see Eq. \ref{eq:kappa}) is set by $w= (\kappa - 3) \Theta_e/\kappa$, where the dimensionless electron temperature, $\Theta_e$, is computed according to Eq. \ref{eq:rhigh_prescription}. The underlying GRMHD simulations are taken from the \bhac runs and we use the time window from 25\,kM to 30\,kM. The radiative transfer is done employing the GRRT code \bhoss and we created images every 50\,M using the same inclinations and $R_{\rm high}$ values as for the thermal models. Each model is individually normalized to an average flux of 2.4\,Jy at 230\GHz.}
@@ -773,7 +773,7 @@ All aligned models considered so far produce either a SANE or MAD accretion flow
 
 The tilted models exhibit a warped disk due to the Lense-Thirring torques imposed by the black hole.  The time-averaged disk and jet are therefore non-axisymmetric.
 %Notice that the jets are always approximately perpendicular to the outer disk in these models.
-Since the inner and the outer disk have different orientations, it is necessary to specify the coordinate axis of the observer.  We consider three  observer inclinations with respect to the {\em outer} disk at a single azimuth of $0$deg \citep[for more details, see][]{Chatterjee2020}.\footnote{A full parameter survey would run over azimuth angle as well.}  A full listing of the pass/fail results are given in Appendix \ref{app:tables}, Table \ref{tab:tiltedPF}.
+Since the inner and the outer disk have different orientations, it is necessary to specify the coordinate axis of the observer.  We consider three  observer inclinations with respect to the {\em outer} disk at a single azimuth of $0\degree$ \citep[for more details, see][]{Chatterjee2020}.\footnote{A full parameter survey would run over azimuth angle as well.}  A full listing of the pass/fail results are given in Appendix~\ref{app:tables}, Table~\ref{tab:tiltedPF}.
 
 The 230\GHz pre-image size of edge-on large $\Rh$ images increases slightly for the tilt-$60\degree$ compared to the aligned case. This occurs because the inner jet is warped and creates an extended image. This effect is also seen in the 86\GHz image size. On the other hand, the 86\GHz flux varies little with tilt despite the presence of a boosted jet component at large tilt angles.
 
@@ -848,7 +848,7 @@ Or do we not have fine enough samples in the parameter space to
 identify the narrow region of the parameter space?
 
 Among the tens of models that pass all constraints (see
-Appendix~\ref{sec:tables}), we feature three models in this section,
+Appendix~\ref{app:tables}), we feature three models in this section,
 summarized in Table~\ref{tab:bestbets}.
 These models are selected because they represent the different
 magnetic configurations (both SANE and MAD) and eDFs (both thermal and
