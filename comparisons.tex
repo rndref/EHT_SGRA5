@@ -362,13 +362,11 @@ Evidently either (1) the models fail in some important respect, or (2) some of t
 
 We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens when we lift one constraint.  About 5\% of both the Frankfurt and Illinois model sets fail only 1 constraint.  For Frankfurt, 8 models fail only $\mi{3}$, and 2 fail only m-ring diameter.  For Illinois, 3 models fail only $\mi{3}$ and 5 fail only the 86\GHz size.  Suspicion therefore falls on $\mi{3}$, which rejects $\approx 70\%$ of Frankfurt and Illinois models.  Why might the $\mi{3}$ constraint be misleading?
 
-\cfg{need learned commentary on the possibility of extended structure here.}
-
 One possibility is that some fraction of the $230\GHz$ flux density, $f_{ext}$, is in an extended structure (a jet) that is slowly varying, captured in the ALMA light curves, and resolved out by EHT.  The implied $f_{ext}$ is model-dependent, but if $f_{ext} \sim 30\%$ then nearly all MAD models would pass $\mi{3}$ and many SANE models would be rejected as too quiet.  The $4$G$\lambda$ amplitude variability is normalized by the light curve and thus $a_4$ would increase by a similar factor.  Notice that if $f_{ext} > 0$ then the models would need to be re-normalized (the accretion rate adjusted) so that the compact flux is $(1 - f_{ext}) \times 2.4\,\mathrm{Jy}$.  The extended flux hypothesis can be tested by the addition of new, short baselines to the EHT.
 
-A second possibility is that physical or numerical errors in the models cause the variability to be overstated.  Several possibilities, including viscosity, radiative cooling, pair production, helium accretion, numerical resolution, simulation duration, and boundary conditions are discussed in Section \ref{sec:discussions}.  We will consider nonthermal eDF models, wind-fed models, and tilted models next.  None sharply reduce $\mi{3}$.
+A second possibility is that physical or numerical errors in the models cause the variability to be overstated.  Several possibilities, including viscosity, conduction, and radiative cooling are discussed in Section \ref{sec:discussions}.  We will consider nonthermal eDF models, wind-fed models, and tilted models next.  None sharply reduce $\mi{3}$.
 
-If $\mi{3}$ is set aside then 3 models survive from Frankfurt and Illinois.  All are MAD.  These are: $\abh = 0.5, i = 30, \Rh = 40$; $\abh = 0.5, i = 30, \Rh = 160$; and $\abh = 0.94, i = 10, \Rh = 160$.  These models are clustered in parameter space and pass 10 of 11 tests.  They explain most of the data.  We identify these as ``best-bet'' models in the discussion that follows.
+If extended flux, viscosity and conduction, and radiative cooling each reduce the variability excess by $\sim 10\%$ then many of the MAD models would come into compliance with the data (and some SANE models would become inconsistent because they are not variable enough).  If we set aside the $\mi{3}$ constraint then a cluster of 3 standard models survive from both Frankfurt and Illinois.  All are MAD, $\Rh = 160$.  These are: $\abh = 0.5, i = 30$; $\abh = 0.94, i = 10$; and $\abh = 0.94, i = 30$.  These models are clustered in parameter space and pass 10 of 11 tests.  We highlight these models in our discussion and analysis.
 
 %\begin{figure*}
 %  \centering
@@ -496,22 +494,23 @@ Next we consider a model in which {\em all} electrons are in a kappa eDF, which 
 %..............................................................................
 \subsubsubsection{230\GHz VLBI pre-image size}
 
-In the case of the MAD models the size of the $\kappa=5$ does not change. This can be explained by the fact that most of the emission is produced in the midplane. For the SANE models we find two different behaviors: The source size slightly increases for $R_{\rm high}<40$ and decreases for $R_{\rm high}\geq 40$ especially in for the positive black hole spins and high inclinations. In the SANE case the mass accretion rate decreases as compared to the thermal models indicating that particles from the tail of the kappa distribution contribute the 230\GHz flux. Increasing the $R_{\rm high}$ value the emission region is shifted from the midplane towards the polar region for the SANE models. Given that for the kappa distribution more emission is generated as in the thermal case the emission region becomes more compact. Together with the higher Doppler boosting at shorter distances from the black hole the source size decreases which explains the trend with black hole spin.
+In the case of the MAD models the size of the $\kappa=5$ models does not change. This can be explained by the fact that most of the emission is produced in the midplane. For the SANE models we find two different behaviors: The source size increases for $R_{\rm high}<40$ and decreases for $R_{\rm high}\geq 40$ especially for positive black hole spins and high inclinations. In the SANE case the mass accretion rate decreases compared to the thermal models, indicating that particles from the tail of the kappa distribution contribute the 230\GHz flux. Increasing the $R_{\rm high}$ value causes the emission region to shift from the midplane towards the polar region. For the kappa distribution more emission is generated as in the thermal case the emission region becomes more compact. Together with the higher Doppler boosting at shorter distances from the black hole the source size decreases, which explains the trend with black hole spin.
 
 %..............................................................................
 \subsubsubsection{86\GHz flux and Source Size}
 
-The 86\GHz image size behave similar than the 230\GHz images.
+The 86\GHz image size and flux behave behave in a way consistent with the explanation above.
 
 %..............................................................................
 \subsubsubsection{NIR constraints}
 
-All MAD model generate more NIR emission than the 1.0\,mJy and thus fail the NIR constraints. Similar, the SANE models with $R_{\rm high}>1$ overshoot the NIR constraint.
+All MAD model generate more NIR emission than 1.0\,mJy and thus fail the NIR constraints. Similar, the SANE models with $R_{\rm high}>1$ overshoot the NIR constraint.
 
 %..............................................................................
 \subsubsubsection{Light Curve Variability}
 
-The $\mi{3}$ constraint is computed for a time window of length 5000\,$\rm{GM/c^3}$. This window is a factor three shorter than for the thermal models and thus a direct comparison cannot be performed. However we find that 66\% of the models fail this test. The number roughly agrees with the thermal models and thus we conclude that the non-thermal particles included via a kappa eDF with $kappa=5$ does not affect the variability.
+The variability is almost completely unaffected by the kappa distribution. We find that the $\kappa=5$ models have a higher $\mi{3}$for a small number of SANE $R_{\rm high}>40$ models. However, since the $\mi{3}$ constraint is computed for a time window of length only 5000\,$\rm{GM/c^3}$, a factor three shorter than for the thermal models, this does not increase the fraction of models ruled out by this constraint.
+%and thus a direct comparison cannot be performed. However we find that 66\% of the models fail this test. The number roughly agrees with the thermal models and thus we conclude that the non-thermal particles included via a kappa eDF with $kappa=5$ does not affect the variability.
 
 %..............................................................................
 \subsubsubsection{M-ring Constraint}
@@ -645,7 +644,7 @@ The m-ring fitting is applied to the 230\GHz images. As mentioned earlier the fl
   C & 0.5  & MAD  & nonthermal variable $\kappa$ & 160 & $30\degree$    % HAMR
   \enddata
   %
-  \caption{List of feature models that sample the more possible regions
+  \caption{List of featured models that sample the more possible regions
     of the model parameter space.
     As Figure~\ref{fig:bestbets} shows below, these models broadly
     agree with the observation constraints, although they are not
