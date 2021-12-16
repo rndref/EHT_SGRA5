@@ -65,10 +65,10 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_sed.pdf}
   \caption{
-    % cfg 15-dec: nope, let's keep it. this explicitly shows passing and failing.   
+    % cfg 15-dec: nope, let's keep it. this explicitly shows passing and failing.
      %\ckc{We may skip this figure given
       %Fig.~\ref{fig:sample_seds} is similar.}
-    Non-EHT flux density constraint example.  Left: passing model with SED close to the measured 86\GHz point and below the quiescent $2.2\um$ and $X-ray$ points.  Right: failing model with inconsistent (strongly rising) millimeter wavelength spectral index, overproduction of $2.2\um$ due to strong Comptonization, and overproduction of X-rays by bremsstrahlung. 
+    Non-EHT flux density constraint example.  Left: passing model with SED close to the measured 86\GHz point and below the quiescent $2.2\um$ and $X-ray$ points.  Right: failing model with inconsistent (strongly rising) millimeter wavelength spectral index, overproduction of $2.2\um$ due to strong Comptonization, and overproduction of X-rays by bremsstrahlung.
     % cfg 15-dec: edited
     %This figure is similar to Figure~\ref{fig:sample_seds} but, in addition to show a model that works (left panel), we purposely select a model that fails both both the NIR and x-ray constraints. The right panel is a zero-spin face-on SANE with $\Rh = 1$.  Because of high electron temperature, the synchrotron at $\sim 10^{12}\,\mathrm{Hz}$ peak at $\sim 10^{36}\ergsps$, which creates a significant inverse Compton component that pushes the NIR beyond the limit. For the x-ray ray, this model follows the typical SANE behave and    overproduce thermal Bremsstrahlung.
     }
@@ -475,7 +475,7 @@ We find that the $\kappa=5$ models produce generally consistent results with the
 %\subsubsubsection{230\GHz VLBI pre-image size}
 \subsubsubsection{Source size and 86\GHz flux}
 
-In the case of the MAD models the size of the $\kappa=5$ models does not change. This can be explained by the fact that most of the emission is produced in the midplane. For the SANE models we find two different behaviors: The source size increases for $R_{\rm high}<40$ and decreases for $R_{\rm high}\geq 40$, especially for positive black hole spins and high inclinations. This change in size is consistent between the images at 230\GHz and at 86GHz. 
+In the case of the MAD models the size of the $\kappa=5$ models does not change. This can be explained by the fact that most of the emission is produced in the midplane. For the SANE models we find two different behaviors: The source size increases for $R_{\rm high}<40$ and decreases for $R_{\rm high}\geq 40$, especially for positive black hole spins and high inclinations. This change in size is consistent between the images at 230\GHz and at 86GHz.
 %In the SANE case the mass accretion rate decreases compared to the thermal models, indicating that particles from the tail of the kappa distribution contribute to the 230\GHz flux. Increasing the $R_{\rm high}$ value causes the emission region to shift from the midplane towards the polar region.
 %\michi{Need to rephrase these sentences---I don't understand them: For the kappa distribution more emission is generated as in the thermal case the emission region becomes more compact. Together with the higher Doppler boosting at shorter distances from the black hole the source size decreases, which explains the trend with black hole spin.}
 
@@ -621,9 +621,13 @@ Evidently $w$ contains a thermal and nonthermal contribution, with the nontherma
 We set $\varepsilon=0$ and injection radius $r_{\rm inj}=10r_{g}$ following previous studies.  Nonzero $\varepsilon$ increases the averaged NIR flux by two orders of magnitude as $\varepsilon$ goes from 0 to 1, causing all models to overshoot NIR constraint.  Setting $\varepsilon \ne 0$ also causes the 86\GHz flux density and image size to increase \citep{2021arXiv211102518F}.
 
 We use the emissivity and absorptivity, computed numerically for the interval $3 < \kappa \le 8$, from  \cite{2016ApJ...822...34P}. For $\kappa > 8$ we substitute a thermal eDF.  As in the standard models we turn off emission at $\sigma > 1$ (see Figure~\ref{fig:varepsilon}).
-\cmf{text from Alejandro: The post-processing radiative transfer is done employing the GRRT code \bhoss using GRMHD simulations from the \bhac. We use the time window from $\rm 25,000M-30,000M$ and we created images every $\rm 10M$ normalizing the average flux of $\rm 2.4\,Jy$ at $\rm 230\,GHz$. \subsubsubsection{Null Location}
+\cmf{text from Alejandro: The post-processing radiative transfer is done employing the GRRT code \bhoss using GRMHD simulations from the \bhac. We use the time window from $\rm 25,000M-30,000M$ and we created images every $\rm 10M$ normalizing the average flux of $\rm 2.4\,Jy$ at $\rm 230\,GHz$.
+
+%..............................................................................
+\subsubsubsection{Null Location}
 We found that $80\% ~(201/250)$  pass the expected null location ($2.5\lambda - 3.5G\lambda$). The differences to the thermal models can be described as follows: higher inclinations are rejected for $i \geq 70^{\circ}$ (MAD)  and $i \geq 50^{\circ}$ (SANE). Although, the total number of rejected models is similar to thermal models.
 
+%..............................................................................
 \subsubsubsection{4 $G\lambda$ Visibility Amplitude Variability}
 
 In case of the variability at 4 $G\lambda$ 151/200 pass the constraint, same percent as for the thermal models, for instance $\sim 40 \%$ of the models are rejected, mostly negative $a_{\star} = -0.94$ SANE and MAD, also high temperatures, $R_{\rm high} = 160$, $a_{\star} \leq 0$ MAD accretion models, and  $i \geq 70^{\circ}$  for SANE prograde models.}
@@ -759,7 +763,7 @@ Both non-EHT and EHT constraints have the power to test the wind-fed model.  It 
   \centering
   \includegraphics[width=\textwidth]{figures/bestbets.pdf}
   % cfg 15-dec: edited for clarity, left all content in.
-  \caption{Visibility amplitudes (left) and SEDs (right) of the three featured models, compared with the data.  Black symbols show observations.  Blue, orange, and green are Models~A, B, C, respectively (see Table~\ref{tab:bestbets} for details).  Observed VAs are 10\sec incoherently averaged data from the HOPS pipeline on \aprilvii.  Model VAs are shown as a solid line for a section at position angle $0\deg$ for a single snapshot, and the band shows the 1st through 99th percentile over all position angles and all times.  Model SEDs show a solid line for the mean SED and a band for the range across snapshots.  
+  \caption{Visibility amplitudes (left) and SEDs (right) of the three featured models, compared with the data.  Black symbols show observations.  Blue, orange, and green are Models~A, B, C, respectively (see Table~\ref{tab:bestbets} for details).  Observed VAs are 10\sec incoherently averaged data from the HOPS pipeline on \aprilvii.  Model VAs are shown as a solid line for a section at position angle $0\deg$ for a single snapshot, and the band shows the 1st through 99th percentile over all position angles and all times.  Model SEDs show a solid line for the mean SED and a band for the range across snapshots.
   }
   \label{fig:bestbets}
 \end{figure*}
@@ -768,13 +772,13 @@ Both non-EHT and EHT constraints have the power to test the wind-fed model.  It 
   \centering
   \includegraphics[width=\textwidth]{figures/bestbet_imgs.pdf}
   % cfg 15-dec: edited down
-  \caption{Example images from featured models.  The columns show models ~A, B, and C from Table~\ref{tab:bestbets}, the rows show the 86\GHz image, 230\GHz image, and 230\GHz image smoothed to EHT resolution from top to bottom. 
+  \caption{Example images from featured models.  The columns show models ~A, B, and C from Table~\ref{tab:bestbets}, the rows show the 86\GHz image, 230\GHz image, and 230\GHz image smoothed to EHT resolution from top to bottom.
   \ckc{Will update snapshot once receipt the consensus image from PaperIII}
   }
   \label{fig:bestbet_imgs}
 \end{figure*}
 
-% cfg 15-dec: correct, that seemed like too much. 
+% cfg 15-dec: correct, that seemed like too much.
 %\ckc{We don't have pizza plot for all the constraints now in the main text?}
 
 We have applied 11 observational constraints in this section.
