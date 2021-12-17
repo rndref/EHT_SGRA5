@@ -27,7 +27,7 @@ characteristic length $r_\mathrm{g}         \equiv G\mbh/ c^2    \simeq 6.1\time
 characteristic time   $t_\mathrm{g}         \equiv G\mbh/ c^3    \simeq 20.4\sec$, and
 angular scale         $\vartheta_\mathrm{g} \equiv G\mbh/(c^2 D) \simeq 5.03\uas$.
 The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D) = (52.3 \pm 2.08)\uas$,
-where errorbars enclose uncertainty in the black hole spin and viewing angle \citep[see, e.g.,][]{2013ApJ...777...13C, 2020ApJ...896....7M}.
+where errorbars enclose uncertainty in the black hole spin and viewing angle \citep[see, e.g.,][]{2020ApJ...896....7M}.
 
 If the emitting plasma is ionized hydrogen (electron-proton plasma), then the Eddington luminosity is
 $L_\mathrm{Edd} = 4\pi G\mbh c m_p/\sigma_\mathrm{T} = 5.2 \times 10^{44}\ergps$.
@@ -37,7 +37,7 @@ where the nominal efficiency is 10\% and the Eddington ratio:
 $L_\mathrm{bol}/L_\mathrm{Edd} = 1.9 \times 10^{-10} (L_\mathrm{bol} /10^{35})$,
 where $L_\mathrm{bol}$ is in unit of $\ergps$.
 In a quiescent, non-flaring state, the bolometric luminosity of \sgra is $L_\mathrm{bol} \sim 10^{35}\ergps$, resulting in an extremely small Eddington ratio.
-In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected (which is justified in the next sections) and that model emission can be calculated as post-processing. 
+In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected (which is justified in the next sections) and that model emission can be calculated as post-processing.
 
 %==============================================================================
 \subsection{Estimate from One-Zone Model}
@@ -189,7 +189,7 @@ The models vary in numerical method and in numerical resolution. We present more
   \includegraphics[width=0.425\textwidth]{figures/tilted_3D_final.png}\hspace{1.5pt}%
   \includegraphics[width=0.425\textwidth]{figures/ressler_3D_final.png}
   \caption{3-D overview of selected GRMHD simulations of \sgra in our library.
-    The color marks constant dimensionless density surfaces and lines follow magnetic field lines (the magnetic field lines shown are only those which are attached to the inner part of the accretion flow, at $r\approx 5~\rg$). 
+    The color marks constant dimensionless density surfaces and lines follow magnetic field lines (the magnetic field lines shown are only those which are attached to the inner part of the accretion flow, at $r\approx 5~\rg$).
     Two top panels show standard accretion models: SANE (left panel, $\abh=0.94$) and MAD (right panel, $\abh=0.5$).
     Two bottom panels show non-standard accretion models: tilted disk (left panel, $\abh=0.94$ and tilt angle of $60\degree$) and Wind Accretion (right panel, $\abh=0$).
     In case of spinning black holes, the spin is aligned with z-axis.}
@@ -236,7 +236,7 @@ We adopt the same model as \citetalias{M87PaperV} and \citetalias{M87PaperVIII},
   \label{eq:rhigh_prescription}
 \end{equation}
 where $b \equiv \beta/\beta_\mathrm{crit}$.
-This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.  Here we take $\Rl = 1$ and $\beta_\mathrm{crit} = 1$, but allow $\Rh$ to vary from 1 to 160. \cmf{This parameterised electron temperature prescription is well matched to electron temperature distribution obtained by two-temperature GRMHD simulations including electron heating prescription \citep{Mizuno2021}.}\monika{has that been checked for Sgr A* conditions in Mizuno paper?}{\color{red}[AC:] add reference to Paper 8, where we compare Rhigh models directly to two-temperature simulations (of M87). There we do \emph{not} find that Rhigh/low is always a good description, but see more complicated structure in the temperature ratio from two-temperature.} 
+This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.  Here we take $\Rl = 1$ and $\beta_\mathrm{crit} = 1$, but allow $\Rh$ to vary from 1 to 160. \cmf{This parameterised electron temperature prescription is well matched to electron temperature distribution obtained by two-temperature GRMHD simulations including electron heating prescription \citep{Mizuno2021}.}\monika{has that been checked for Sgr A* conditions in Mizuno paper?}{\color{red}[AC:] add reference to Paper 8, where we compare Rhigh models directly to two-temperature simulations (of M87). There we do \emph{not} find that Rhigh/low is always a good description, but see more complicated structure in the temperature ratio from two-temperature.}
 
 In \emph{non-thermal} models, the eDF has a power-law tail extending to high energy.
 We explore two implementations in this paper:
@@ -294,7 +294,7 @@ The plasma mass scale parameter $\Munit$ controls the plasma emissivity and the 
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/sample_imgs.pdf}
-  \caption{Example 86\GHz (top row) and 230\GHz (bottom row) images from the simulation library.  Left column: thermal SANE; middle column: thermal MAD; right column: nonthermal variable $\kappa$ MAD.  The models were chosen to show the variety of possible images and do necessarily not not pass all constraints. 
+  \caption{Example 86\GHz (top row) and 230\GHz (bottom row) images from the simulation library.  Left column: thermal SANE; middle column: thermal MAD; right column: nonthermal variable $\kappa$ MAD.  The models were chosen to show the variety of possible images and do necessarily not not pass all constraints.
     % cfg 15 dec: edited remainder out
     %On one hand, most of the 230\GHz images are in an optically thin regime, making the sharp photon ring visibile (bottom left and middle panels). On the other hand, most of the 86\GHz images are in an optically thick regime, and the accretion disk would block the sharp photon ring (top middle and right panels). In general, face-on images like the ones in the left column tend to be too big in size, and the edge-on images in the right column tend to be too asymmetric.
     }
