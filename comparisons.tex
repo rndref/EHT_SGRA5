@@ -6,8 +6,8 @@ Section~\ref{sec:models}.
 We show visually how some of the models pass or fail in
 Figures~\ref{fig:passfail_sz}, \ref{fig:passfail_va}, and
 \ref{fig:passfail_sed}.
-For each of these figures, the left panel is a feature model (see
-Section~\ref{sec:bestbets} that passes all the constraints, and the
+For each of these figures, the left panel is the best bet model (see
+Section~\ref{sec:discussions} that passes all the constraints, and the
 right panel is one of a failed models.
 The results of all constraint applications are listed in pass/fail
 tables contains in Appendix \ref{app:tables}, which are available in
@@ -675,7 +675,7 @@ The 230\GHz m-ring fits are hardly affected at all by the addition of nonthermal
 %    \item Even the lowest base efficiency considered, $\varepsilon=0.05$, leads to an over-production of NIR flux. \cmf{indication that we need very localised regions of non-thermal particle productions and no "global" approach?}
 %\end{itemize}
 
-The effect of adding nonthermal electrons in a variable kappa eDF can be summarized as follows: Only $1\%$ of models pass all constrains, MAD accretion model, balc hole spin $a_{\star}=0.5$, $\rm R_{high}=160\ (i=10^{\circ},~30^{\circ})$ and $\rm R_{high}=80\ (i=10^{\circ})$, see model C in Figure \ref{fig:bestbet_imgs}. 
+The effect of adding nonthermal electrons in a variable kappa eDF can be summarized as follows: Only $1\%$ of models pass all constrains, MAD accretion model, balc hole spin $a_{\star}=0.5$, $\rm R_{high}=160\ (i=10^{\circ},~30^{\circ})$ and $\rm R_{high}=80\ (i=10^{\circ})$, see model C in Figure \ref{fig:bestbet_imgs}.
 
 %The effect of adding nonthermal electrons in a constant-kappa model can be summarized as follows:
 
@@ -685,32 +685,6 @@ Most of our nonthermal models assign a width to the nonthermal component that de
 
 The nonthermal models are run for only $5000\tg$, so most  constraints can not be applied as precisely.  For example, the model distribution of $\mi{3}$ contains only $9$ points and is correspondingly more uncertain than for the thermal models.  It is therefore difficult to detect subtle changes in models.
 }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This table is for the feature model section
-\begin{deluxetable*}{cccccc}
-  \tablewidth{\textwidth}
-  \tabletypesize{\footnotesize}
-  \renewcommand{\arraystretch}{1.1}
-  %
-  \tablehead{%
-    \colhead{Model}             &%
-    \colhead{Spin $\abh$}       &%
-    \colhead{Magnetization}     &%
-    \colhead{eDF type}          &%
-    \colhead{Temp. ratio $\Rh$} &%
-    \colhead{Inclination $i$}    %
-  }
-  \startdata
-  A & 0.94 & SANE & thermal                      &  40 & $30\degree$ \\ % Frankfurt
-  B & 0.5  & MAD  & thermal                      &  40 & $30\degree$ \\ % Illinois
-  C & 0.5  & MAD  & nonthermal variable $\kappa$ & 160 & $30\degree$    % HAMR
-  \enddata
-  %
-  \caption{List of featured models.  The models were selected to sample the plausible regions of parameters space.  We discuss best-bet models (which are close to model B) later.  See Section~\ref{sec:bestbets} for detailed descriptions of these
-    models and Section~\ref{sec:discussions} for discussions.}
-  \label{tab:bestbets}
-\end{deluxetable*}
 
 %==============================================================================
 \subsection{Tilted Models}
@@ -749,10 +723,6 @@ Both wind-fed models fail the m-ring width test, producing a width that is too s
 
 Both non-EHT and EHT constraints have the power to test the wind-fed model.  It is {\em not} possible to draw broad conclusions about the viability of the wind-fed models, however, since the two models tested here contain only a single spin ($a_\star=0$) and all use the $\Rh$ thermal eDF model.
 
-%==============================================================================
-\subsection{Featured Models}
-\label{sec:bestbets}
-
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/bestbets.pdf}
@@ -771,85 +741,113 @@ Both non-EHT and EHT constraints have the power to test the wind-fed model.  It 
   \label{fig:bestbet_imgs}
 \end{figure*}
 
+%==============================================================================
+%% \subsection{Featured Models}
+%% \label{sec:bestbets}
+
+%% \begin{deluxetable*}{cccccc}
+%%   \tablewidth{\textwidth}
+%%   \tabletypesize{\footnotesize}
+%%   \renewcommand{\arraystretch}{1.1}
+%%   %
+%%   \tablehead{%
+%%     \colhead{Model}             &%
+%%     \colhead{Spin $\abh$}       &%
+%%     \colhead{Magnetization}     &%
+%%     \colhead{eDF type}          &%
+%%     \colhead{Temp. ratio $\Rh$} &%
+%%     \colhead{Inclination $i$}    %
+%%   }
+%%   \startdata
+%%   A & 0.94 & SANE & thermal                      &  40 & $30\degree$ \\ % Frankfurt
+%%   B & 0.5  & MAD  & thermal                      &  40 & $30\degree$ \\ % Illinois
+%%   C & 0.5  & MAD  & nonthermal variable $\kappa$ & 160 & $30\degree$    % HAMR
+%%   \enddata
+%%   %
+%%   \caption{List of featured models.  The models were selected to sample the plausible regions of parameters space.  We discuss best-bet models (which are close to model B) later.  See Section~\ref{sec:bestbets} for detailed descriptions of these
+%%     models and Section~\ref{sec:discussions} for discussions.}
+%%   \label{tab:bestbets}
+%% \end{deluxetable*}
+
 % cfg 15-dec: correct, that seemed like too much.
 %\ckc{We don't have pizza plot for all the constraints now in the main text?}
 
-We have applied 11 observational constraints in this section.
-We now consider combining all constraints, excluding variability,
-under the hypothesis that
-\emph{i}) there is a missing physical ingredient in the models that
-would lower variability, but
-\emph{ii}) that missing ingredient would not vitiate the model
-comparison process entirely.
+%% We have applied 11 observational constraints in this section.
+%% We now consider combining all constraints, excluding variability,
+%% under the hypothesis that
+%% \emph{i}) there is a missing physical ingredient in the models that
+%% would lower variability, but
+%% \emph{ii}) that missing ingredient would not vitiate the model
+%% comparison process entirely.
 
-The 6 EHT derived constraints are most constraining on the ring size
-and width, roughly reduce the dimension of the parameter space by two,
-and carving out a region of the parameter space that prefers prograde
-models at low-to-intermediate inclinations
-(Figure~\ref{fig:all_EHT_constraints}).
+%% The 6 EHT derived constraints are most constraining on the ring size
+%% and width, roughly reduce the dimension of the parameter space by two,
+%% and carving out a region of the parameter space that prefers prograde
+%% models at low-to-intermediate inclinations
+%% (Figure~\ref{fig:all_EHT_constraints}).
 
-The 4 non-EHT constraints (230GHz lightcurve variability excluded) are
-most constraining on the strength of the magnetic field and the
-electron temperature, roughly reduce the dimension of the parameter
-space by another two, and prefer high ion-electron ratio MAD models
-(Figure~\ref{fig:non_eht_cuts}).
+%% The 4 non-EHT constraints (230GHz lightcurve variability excluded) are
+%% most constraining on the strength of the magnetic field and the
+%% electron temperature, roughly reduce the dimension of the parameter
+%% space by another two, and prefer high ion-electron ratio MAD models
+%% (Figure~\ref{fig:non_eht_cuts}).
 
-While there are also isolated pockets in the parameter space that pass
-many constraints, however, even with an extensive study like this, it
-is difficult to draw strong conclusion about these regions.
-Among the tens of models that pass 10/11 constraints (see
-Appendix~\ref{app:tables}), we feature three models in this section,
-summarized in Table~\ref{tab:bestbets}.
-These models are selected because they represent the different
-magnetic field strength (both SANE and MAD) and eDFs (both thermal and
-nonthermal), and represent clusters of passing models in the parameter
-space.
+%% While there are also isolated pockets in the parameter space that pass
+%% many constraints, however, even with an extensive study like this, it
+%% is difficult to draw strong conclusion about these regions.
+%% Among the tens of models that pass 10/11 constraints (see
+%% Appendix~\ref{app:tables}), we feature three models in this section,
+%% summarized in Table~\ref{tab:bestbets}.
+%% These models are selected because they represent the different
+%% magnetic field strength (both SANE and MAD) and eDFs (both thermal and
+%% nonthermal), and represent clusters of passing models in the parameter
+%% space.
 
-In Figure~\ref{fig:bestbets}, we shows the visibility amplitudes and
-SEDs of the the feature models and compare them with both EHT and
-non-EHT data.
-In both panels, symbols in black are from observations; blue is
-Model~A ($\abh=0.94$ SANE, $\Rh=40$, $i=30$); orange is Model~B
-($\abh=0.5$ MAD, $\Rh=40$, $i=30$); and green is Model~C ($\abh=0.5$
-MAD variable $\kappa$, $\Rh=160$, $i=30$); see
-Table~\ref{tab:bestbets}.
+%% In Figure~\ref{fig:bestbets}, we shows the visibility amplitudes and
+%% SEDs of the the feature models and compare them with both EHT and
+%% non-EHT data.
+%% In both panels, symbols in black are from observations; blue is
+%% Model~A ($\abh=0.94$ SANE, $\Rh=40$, $i=30$); orange is Model~B
+%% ($\abh=0.5$ MAD, $\Rh=40$, $i=30$); and green is Model~C ($\abh=0.5$
+%% MAD variable $\kappa$, $\Rh=160$, $i=30$); see
+%% Table~\ref{tab:bestbets}.
 
-In the left panel, we show the visibility amplitudes as function of
-$(u, v)$ distance similar to Figure~\ref{fig:passfail_va}.
-For the observation, we plot 10\sec incoherent averaged data from the
-HOPS pipeline on \aprilvii.
-For the models, the solid curves are the VAs for only the position
-angle $0\degree$ (parallel to the spin axis) for a particular
-snapshot.
-while the transparent bands show the 1 to 99 percentiles for all
-position angles and all time.
-This panel shows that the feature models agree well with the EHT VLBI
-data.
+%% In the left panel, we show the visibility amplitudes as function of
+%% $(u, v)$ distance similar to Figure~\ref{fig:passfail_va}.
+%% For the observation, we plot 10\sec incoherent averaged data from the
+%% HOPS pipeline on \aprilvii.
+%% For the models, the solid curves are the VAs for only the position
+%% angle $0\degree$ (parallel to the spin axis) for a particular
+%% snapshot.
+%% while the transparent bands show the 1 to 99 percentiles for all
+%% position angles and all time.
+%% This panel shows that the feature models agree well with the EHT VLBI
+%% data.
 
-In the right panel, we show the SEDs for the feature models and again
-compare them with the observation constraints.
-The solid lines are the mean SEDs, while the transparent bands show
-the range across different snapshots.
+%% In the right panel, we show the SEDs for the feature models and again
+%% compare them with the observation constraints.
+%% The solid lines are the mean SEDs, while the transparent bands show
+%% the range across different snapshots.
 
-In Figure~\ref{fig:bestbet_imgs}, we show the 86\GHz and 230\GHz ray
-traced images of the feature models.
-The different columns are Models~A, B, and C, respectively.
-The top row shows the simulated 86\GHz images, the middle row shows
-the simulated 230\GHz images, and the bottom row shows the simulated
-230\GHz images filtered by a Butterworth filter at
-10$\,\mathrm{G}\lambda$, which approximate the resolution of the 2017
-EHT array \citep{2020arXiv200406210P}.
+%% In Figure~\ref{fig:bestbet_imgs}, we show the 86\GHz and 230\GHz ray
+%% traced images of the feature models.
+%% The different columns are Models~A, B, and C, respectively.
+%% The top row shows the simulated 86\GHz images, the middle row shows
+%% the simulated 230\GHz images, and the bottom row shows the simulated
+%% 230\GHz images filtered by a Butterworth filter at
+%% 10$\,\mathrm{G}\lambda$, which approximate the resolution of the 2017
+%% EHT array \citep{2020arXiv200406210P}.
 
-On one hand, although Model~A looks different than Model~B and C, they
-pass all the constraints (excluding variability) we described in this
-paper.
-On the other hand, Model~B and C, even though one is thermal and the
-other is nonthermal, look remarkable similar at 230\GHz.
-The former point suggests that there is still ambiguity in the image
-morphology, consistent with \citetalias{PaperIII} and
-\citetalias{PaperIV}'s conclusions.
-The later point suggests that even for the same image morphology,
-there are still degeneracy in the eDF, suggesting the importance of
-new multiwavelength observations.
-In the following sections, we will provide a more in-depth discussions
-on their implications.
+%% On one hand, although Model~A looks different than Model~B and C, they
+%% pass all the constraints (excluding variability) we described in this
+%% paper.
+%% On the other hand, Model~B and C, even though one is thermal and the
+%% other is nonthermal, look remarkable similar at 230\GHz.
+%% The former point suggests that there is still ambiguity in the image
+%% morphology, consistent with \citetalias{PaperIII} and
+%% \citetalias{PaperIV}'s conclusions.
+%% The later point suggests that even for the same image morphology,
+%% there are still degeneracy in the eDF, suggesting the importance of
+%% new multiwavelength observations.
+%% In the following sections, we will provide a more in-depth discussions
+%% on their implications.
