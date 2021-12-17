@@ -80,7 +80,7 @@ One plausible scenario is that each of the above effects (extended flux, viscosi
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.95\textwidth]{figures/bhac_kharma_average_mdot_pout.png}
+  \includegraphics[width=0.95\textwidth]{figures/bhac_kharma_average_mdot_pout.pdf}
   \caption{{\it Top:} Accretion rate ($\dot{M}$) for standard models. Since $\dot{M}$ depends weakly on inclination $i$, we show only $i=50\degree$. {\it Bottom:} Outflow power ($P_{out}$) for standard models at $i = 50\degree$. The colors and markers vary with $\Rh$. The dashed lines correspond to \kharma thermal models while the dotted lines indicate \bhac thermal models.}
   \label{fig:accretion_outflow_power_illinois_thermal}
 \end{figure*}
@@ -120,7 +120,7 @@ All our standard models produce outflows in the polar regions.  In many cases th
 
 %Our numerical simulations of black hole accretion in \sgra consistently produce relativistic outflows in the polar regions (in the standard models these outflows can be divided into disk wind/corona and relativistic jet that is often strongly magnetized and nearly hollow). These relativistic outflows have an electromagnetic energy that is typically comparable or larger than the bolometric luminosity of \sgra. We are interested in the outflow power to predict if an outflow can be observed e.g., at larger distances from the black hole where the outflow energy gets dissipated.
 
-First we must define $P_{out}$.  There are a number of competing definitions in the literature: \citet{refId0}, \citet{2014A&A...570A...7M} cut on  Bernoulli parameter Be, while \citet{10.1111/j.1365-2966.2012.22002.x} consider the ratio of energy flux to rest mass flux $\mu$, and \citetalias{M87PaperV} apply a $\beta\gamma$ cut to define $P_\mathrm{jet}$.  Here we use the time-averaged outflow power near the poles \citetalias{M87PaperV}:
+First we must define $P_\matrhm{out}$.  There are a number of competing definitions in the literature: \citet{refId0}, \citet{2014A&A...570A...7M} cut on  Bernoulli parameter Be, while \citet{10.1111/j.1365-2966.2012.22002.x} consider the ratio of energy flux to rest mass flux $\mu$, and \citetalias{M87PaperV} apply a $\beta\gamma$ cut to define $P_\mathrm{out}$.  Here we use the time-averaged outflow power near the poles \citetalias{M87PaperV}:
 \begin{equation}
   P_{out} \equiv \frac{1}{\Delta t}\int dt \int d\phi \int_\mathrm{poles} d\theta \sqrt{-g}\left(-T^{r}_{t}-\rho u^{r}\right),
 \end{equation}
@@ -128,7 +128,7 @@ where ``poles'' means $\theta<1$ or $\theta>\pi-1$ at $\theta$ where the time- a
 
 %In Figure~\ref{fig:outflow_illinois_thermal}
 In Figure~\ref{fig:accretion_outflow_power_illinois_thermal}
-(bottom panels) we compute $P_\mathrm{out}$ for the standard models models. As expected, the $\partial P_\mathrm{out}/\partial |\abh| > 0$. SANE models have $P_\mathrm{out}$ in range $\sim 10^{35}-10^{38} \ergps$.  Evidently $\partial P_\mathrm{out}/\partial \Rh > 0$, which echoes the behavior of $\dot{M}$: higher $\dot{M}$ models have stronger magnetic fields. MAD models have $P_\mathrm{out}$ in the range $10^{37}$--$10^{39} \ergps$ and are, on average, larger and less sensitive to $\Rh$, again echoing the behavior of $\dot{M}$.
+(bottom panels) we compute $P_\mathrm{out}$ for the standard models. As expected, the $\partial P_\mathrm{out}/\partial |\abh| > 0$. SANE models have $P_\mathrm{out}$ in range $\sim 10^{35}-10^{38} \ergps$.  Evidently $\partial P_\mathrm{out}/\partial \Rh > 0$, which echoes the behavior of $\dot{M}$: higher $\dot{M}$ models have stronger magnetic fields. MAD models have $P_\mathrm{out}$ in the range $10^{37}$--$10^{39} \ergps$ and are, on average, larger and less sensitive to $\Rh$, again echoing the behavior of $\dot{M}$.
 % 14-dec: yes, need statement about nonthermal models.
 %\color{red}{\bf please add results from bhac for comparison if they are available.}\color{black}
 %\color{red}{\bf one should say a few words how electron distribution function changes mass accretion rate estimates and jet powers.}\color{black}

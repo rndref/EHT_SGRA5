@@ -37,7 +37,7 @@ where the nominal efficiency is 10\% and the Eddington ratio:
 $L_\mathrm{bol}/L_\mathrm{Edd} = 1.9 \times 10^{-10} (L_\mathrm{bol} /10^{35})$,
 where $L_\mathrm{bol}$ is in unit of $\ergps$.
 In a quiescent, non-flaring state, the bolometric luminosity of \sgra is $L_\mathrm{bol} \sim 10^{35}\ergps$, resulting in an extremely small Eddington ratio.
-In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected and that model emission can be calculated as post-processing.
+In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected (which is justified in the next sections) and that model emission can be calculated as post-processing. 
 
 %==============================================================================
 \subsection{Estimate from One-Zone Model}
@@ -132,7 +132,7 @@ Here we use numerical simulations and adopt an ideal GRMHD model for the flow\fo
 \subsubsection{Plasma Flow Model}
 
 We model the plasma flow around \sgra using ideal, non-radiative GRMHD.
-The gravitational field is given by the Kerr metric, with mass from Equation~(\ref{eq:mass}) and with black hole spin $\abh$ a free parameter \citep[see e.g.,][]{2003ApJ...589..444G, 2005ApJ...635..723A, 2007A&A...473...11D}.
+The gravitational field is described by the Kerr metric, with mass from Equation~(\ref{eq:mass}) and with black hole spin $\abh$ a free parameter \citep[see e.g.,][]{2003ApJ...589..444G, 2005ApJ...635..723A, 2007A&A...473...11D}.
 
 We integrate the GRMHD equations in three spatial dimensions using multiple algorithms:
 \kharma   \citep{2021JOSS....6.3336P},
@@ -189,7 +189,7 @@ The models vary in numerical method and in numerical resolution. We present more
   \includegraphics[width=0.425\textwidth]{figures/tilted_3D_final.png}\hspace{1.5pt}%
   \includegraphics[width=0.425\textwidth]{figures/ressler_3D_final.png}
   \caption{3-D overview of selected GRMHD simulations of \sgra in our library.
-    The color marks constant dimensionless density surfaces and lines follow magnetic field lines.
+    The color marks constant dimensionless density surfaces and lines follow magnetic field lines (the magnetic field lines shown are only those which are attached to the inner part of the accretion flow, at $r\approx 5~\rg$). 
     Two top panels show standard accretion models: SANE (left panel, $\abh=0.94$) and MAD (right panel, $\abh=0.5$).
     Two bottom panels show non-standard accretion models: tilted disk (left panel, $\abh=0.94$ and tilt angle of $60\degree$) and Wind Accretion (right panel, $\abh=0$).
     In case of spinning black holes, the spin is aligned with z-axis.}
@@ -200,7 +200,7 @@ One critical feature of the GRMHD models that is important for the interpretatio
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.9\textwidth]{figures/grmhd_temp.png}
+  \includegraphics[width=0.9\textwidth]{figures/grmhd_temp.pdf}
   \caption{Time- and azimuth- averaged profiles of midplane gas temperature in aligned GRMHD models.  Evidently MAD models are hotter than SANE, and both MADs and SANEs grow hotter as the black hole spin $\abh$ increases.  The hottest models are $\abh = 0.94$ MAD models.}
   \label{fig:grmhd_temp}
 \end{figure*}
@@ -229,14 +229,14 @@ where $K_2$ is the modified Bessel function of the second kind and $\gamma$ is t
 Here $u$ and $\rho$ are the internal energy density and rest-mass density from the GRMHD simulation.
 Thermal models are motivated by the idea that wave-particle scattering drives partial relaxation of the eDF, even though Coulomb scattering is ineffective.
 
-Plasma heating models suggest that the partitioning of dissipation between ions and electrons depends on the local magnetic properties \citep[e.g.,][]{2010MNRAS.409L.104H, Kawazura771}.  This motivates a prescription in which the temperature ratio is a function of the plasma $\beta \equiv P_\mathrm{gas}/P_\mathrm{mag}$ \citep{2015ApJ...799....1C}.
+Plasma heating models suggest that the partitioning of dissipation between ions and electrons depends on the local magnetic properties \citep[e.g.,][]{1999ApJ...520..248Q,2010MNRAS.409L.104H, Kawazura771}.  This motivates a prescription in which the temperature ratio is a function of the plasma $\beta \equiv P_\mathrm{gas}/P_\mathrm{mag}$ \citep{2015ApJ...799....1C}.
 We adopt the same model as \citetalias{M87PaperV} and \citetalias{M87PaperVIII}, where $R$ is a smooth function adopted from \cite{2016A&A...586A..38M}:
 \begin{equation}
   R = \frac{T_i}{T_e} = \Rh \frac{b^2}{b^2+1} + \Rl \frac{1}{b^2+1}
   \label{eq:rhigh_prescription}
 \end{equation}
 where $b \equiv \beta/\beta_\mathrm{crit}$.
-This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.  Here we take $\Rl = 1$ and $\beta_\mathrm{crit} = 1$, but allow $\Rh$ to vary from 1 to 160. \cmf{This parameterised electron temperature prescription is well matched to electron temperature distribution obtained by two-temperature GRMHD simulations including electron heating prescription \citep{Mizuno2021}.}
+This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.  Here we take $\Rl = 1$ and $\beta_\mathrm{crit} = 1$, but allow $\Rh$ to vary from 1 to 160. \cmf{This parameterised electron temperature prescription is well matched to electron temperature distribution obtained by two-temperature GRMHD simulations including electron heating prescription \citep{Mizuno2021}.}\monika{has that been checked for Sgr A* conditions in Mizuno paper?}
 
 In \emph{non-thermal} models, the eDF has a power-law tail extending to high energy.
 We explore two implementations in this paper:
@@ -294,7 +294,7 @@ The plasma mass scale parameter $\Munit$ controls the plasma emissivity and the 
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/sample_imgs.pdf}
-  \caption{Sample 86\GHz (top row) and 230\GHz (bottom row) images from the simulation library.  Left column: thermal SANE; middle column: thermal MAD; right column: nonthermal variable $\kappa$ MAD.  The models were chosen to show the variety of possible images and do necessarily not not pass all constraints.
+  \caption{Example 86\GHz (top row) and 230\GHz (bottom row) images from the simulation library.  Left column: thermal SANE; middle column: thermal MAD; right column: nonthermal variable $\kappa$ MAD.  The models were chosen to show the variety of possible images and do necessarily not not pass all constraints. 
     % cfg 15 dec: edited remainder out
     %On one hand, most of the 230\GHz images are in an optically thin regime, making the sharp photon ring visibile (bottom left and middle panels). On the other hand, most of the 86\GHz images are in an optically thick regime, and the accretion disk would block the sharp photon ring (top middle and right panels). In general, face-on images like the ones in the left column tend to be too big in size, and the edge-on images in the right column tend to be too asymmetric.
     }
@@ -304,7 +304,7 @@ The plasma mass scale parameter $\Munit$ controls the plasma emissivity and the 
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/sample_seds.pdf}
-  \caption{Sample SEDs from the models shown in
+  \caption{Example SEDs from the models shown in
     Figure~\ref{fig:sample_imgs}:
     (\emph{left})~thermal SANE,
     (\emph{middle})~thermal MAD, and
@@ -324,13 +324,13 @@ Comparisons of numerical methods \citep{2020ApJ...897..148G, Prather_et_al_2022}
 
 The models are imaged at 86\GHz, 230\GHz\footnote{The mean frequency for  EHT observations is closer to 228\GHz.} and 2.2\um (near infrared, herafter NIR).
 Direct imaging includes synchrotron and bremsstrahlung \citep[both ion-electron and electron-electron; see][for a recent review]{2020ApJ...898...50Y}.
-The SED is averaged over a narrow range in inclination and over all azimuthal angles.
+Separate SEDs are produced for a set of narrow bins in inclination angle. For each inclination, the SED is averaged over all azimuthal angles.
 The SED includes synchrotron, bremsstrahlung, \emph{and} Compton scattering.
 NIR emission is usually dominated by synchrotron, but we find that occasionally NIR synchrotron is so weak that Compton scattering overtakes.
 The x-ray can be dominated by bremsstrahlung or Compton scattering, mainly depending on the electron temperature.
 In Figures~\ref{fig:sample_imgs} and \ref{fig:sample_seds}, we present an illustrative set of model images and multiwavelength SEDs from our library.
 
-All radiative transfer models used here set the emissivity and inverse-Compton scattering cross-sections to $0$ at $\sigma \equiv B^2/(8\pi\rho c^2) > \sigma_\mathrm{cut} = 1$.  This cutoff is motivated by the notion that the numerical solution is unreliable at $\sigma > \sigma_\mathrm{cut}$.  In particular numerical diffusion into the low density region (at the ``funnel wall'') makes the density too large, and truncation error in integration of the total energy equation produces large fractional errors in temperature.
+All radiative transfer models used here set the emissivity, absorptivity and inverse-Compton scattering cross-sections to $0$ at $\sigma \equiv B^2/(8\pi\rho c^2) > \sigma_\mathrm{cut} = 1$.  This cutoff is motivated by the notion that the numerical solution is unreliable at $\sigma > \sigma_\mathrm{cut}$.  In particular numerical diffusion into the low density region (at the ``funnel wall'') makes the density too large, and truncation error in integration of the total energy equation produces large fractional errors in temperature.
 
 %==============================================================================
 \subsection{Summary of \sgra Model Library}
