@@ -74,7 +74,7 @@ The electron-ion Coulomb scattering timescale is also long, and the electrons an
 This motivates consideration of
 \emph{i})~a two-temperature model for the plasma where electrons are cooler than the ions \citep{1976ApJ...204..187S,1977ApJ...214..840I, 1982Natur.295...17R} and
 \emph{ii})~nonthermal (unrelaxed) electron distribution functions.
-As discussed in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \citet{2014A&A...570A...7M} \citep[see also more recent work by][]{2018A&A...612A..34D,2021arXiv211102518F, 2021NatAs.tmp..218C, 2021arXiv211203933E}, both effects may change the predicted properties of \sgra.
+As discussed in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \citet{2014A&A...570A...7M} \citep[see also more recent work by][]{2018A&A...612A..34D,2021arXiv211102518F, 2021NatAs.tmp..218C, Chatterjee2021, 2021arXiv211203933E,Scepi2021}, both effects may change the predicted properties of \sgra.
 %\br{my only remaining comment is that I think that the sentence ``As demonstrated in \citet{2000ApJ...541..234O} and \citet{2014A&A...570A...7M} (see also more recent work by \citealt{2018A&A...612A..34D} and references therein) both effects may change the predicted properties of \sgra.'' should be cut, or extended with non-EHT refs on how other groups actually probe those collisionless effects dynamically}
 %\ckc{In principle, we could numerically check all of the assumptions in the one zone model for consistency.  Probably leave until after PC submission.}
 %\monika{i think that the purpose of this section is to make a rough estimates on the back of the envelope so that everyone can repeat them, numerical work is always more difficult to repeat}
@@ -236,7 +236,7 @@ We adopt the same model as \citetalias{M87PaperV} and \citetalias{M87PaperVIII},
   \label{eq:rhigh_prescription}
 \end{equation}
 where $b \equiv \beta/\beta_\mathrm{crit}$.
-This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.  Here we take $\Rl = 1$ and $\beta_\mathrm{crit} = 1$, but allow $\Rh$ to vary from 1 to 160. \cmf{This parameterised electron temperature prescription is well matched to electron temperature distribution obtained by two-temperature GRMHD simulations including electron heating prescription \citep{Mizuno2021}.}\monika{has that been checked for Sgr A* conditions in Mizuno paper?}{\color{red}[AC:] add reference to Paper 8, where we compare Rhigh models directly to two-temperature simulations (of M87). There we do \emph{not} find that Rhigh/low is always a good description, but see more complicated structure in the temperature ratio from two-temperature.}
+This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.  Here we take $\Rl = 1$ and $\beta_\mathrm{crit} = 1$, but allow $\Rh$ to vary from 1 to 160. \cmf{This parameterised electron temperature prescription is well matched to electron temperature distribution obtained by two-temperature GRMHD simulations including electron heating prescription \citep{Mizuno2021}.}\monika{has that been checked for Sgr A* conditions in Mizuno paper?}{\color{red}[AC:] add reference to Paper 8, where we compare Rhigh models directly to two-temperature simulations (of M87). There we do \emph{not} find that Rhigh/low is always a good description, but see more complicated structure in the temperature ratio from two-temperature.}\gw{I'll note that I did a comparison to various simulations (ebhlight and iharm3d) with Howes and Kawazura electrons and also did not find good agreement.}
 
 In \emph{non-thermal} models, the eDF has a power-law tail extending to high energy.
 We explore two implementations in this paper:
@@ -295,6 +295,7 @@ The plasma mass scale parameter $\Munit$ controls the plasma emissivity and the 
   \centering
   \includegraphics[width=\textwidth]{figures/sample_imgs.pdf}
   \caption{Example 86\GHz (top row) and 230\GHz (bottom row) images from the simulation library.  Left column: thermal SANE; middle column: thermal MAD; right column: nonthermal variable $\kappa$ MAD.  The models were chosen to show the variety of possible images and do necessarily not not pass all constraints.
+  \ckc{Frankfurt model pending...}
     % cfg 15 dec: edited remainder out
     %On one hand, most of the 230\GHz images are in an optically thin regime, making the sharp photon ring visibile (bottom left and middle panels). On the other hand, most of the 86\GHz images are in an optically thick regime, and the accretion disk would block the sharp photon ring (top middle and right panels). In general, face-on images like the ones in the left column tend to be too big in size, and the edge-on images in the right column tend to be too asymmetric.
     }

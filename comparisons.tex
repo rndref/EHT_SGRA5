@@ -55,7 +55,7 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{figures/mring_width_example.pdf}
+  \includegraphics[width=0.75\textwidth]{figures/mring_width_example.pdf}
   \caption{M-ring width constraint example.  Top left: image that satisfies the constraint; top right: image that fails the constraint; bottom left: observed distribution of m-ring widths over our 10 selected scans (light grey) and passing image distribution over 10 scans and 4 position angles (black); bottom right: observed distribution of m-ring widths over our 10 selected scans (light grey) and failing image distribution over 10 scans and 4 position angles.
   }
   \label{fig:mring_width_example}
@@ -430,22 +430,22 @@ To summarize, all critical beta models fail the non-EHT constraints, with 86GHz 
 So far we have assumed a thermal (Maxwell-J{\"u}ttner) eDF.  Next we assume that some electrons are accelerated to a non-thermal tail.  There are multiple ways of doing this, but we will continue to assume that the eDF depends instantaneously on local conditions and to set the accretion rate so that the time-averaged 230\GHz compact flux is 2.4 Jy.
 
 % cfg 12-dec: we will comment this out by 13-dec unless we get more info, from here =>
-First we employ a hybrid thermal/power-law tail distribution using \hamr/\bhoss, and assume a power-law index of $p=4$ with a constant non-thermal acceleration efficiency $\epsilon=n_{\rm e, power-law}/n_{\rm e, thermal}=0.1$. Following the method given in \citet{Chatterjee2021}, the power-law tail is stitched to the thermal core by choosing the minimum Lorentz factor limit of the power-law $\gamma_{\rm min}$ to be at the peak of the Maxwellian component. The upper end of the power-law is taken to $10^5 \gamma_{\rm min}$.  The temperature of the thermal component is set by the $\Rh$ prescription.  We find that the accretion rate is slightly smaller than for corresponding thermal models, suggesting that the power-law components contributes to the 230\GHz total intensity. \kc{The full pass/fail table of hybrid thermal-powerlaw models is given in Table.{}}
+First we employ a hybrid thermal/power-law tail distribution using \hamr/\bhoss, and assume a power-law index of $p=4$ with a constant non-thermal acceleration efficiency $\epsilon=n_{\rm e, power-law}/n_{\rm e, thermal}=0.1$. Following the method given in \citet{Chatterjee2021}, the power-law tail is stitched to the thermal core by choosing the minimum Lorentz factor limit of the power-law $\gamma_{\rm min}$ to be at the peak of the Maxwellian component. The upper end of the power-law is taken to $10^5 \gamma_{\rm min}$.  The temperature of the thermal component is set by the $\Rh$ prescription.  We find that the accretion rate is slightly smaller than for corresponding thermal models, suggesting that the power-law components contributes to the 230\GHz total intensity. \kc{The full pass/fail table of hybrid thermal-powerlaw models is given in Table.~\ref{?}}
 
 %..............................................................................
 \subsubsubsection{230\GHz VLBI pre-image size}
 
-Hybrid thermal/power-law models have similar 230\GHz VLBI pre-image sizes to their purely thermal counterparts. This is because the power-law index is large enough
+Hybrid thermal/power-law models have larger 230\GHz VLBI pre-image sizes as compared to their purely-thermal counterparts. This is because the power-law component of the eDF allows high energy electrons at distances more than a few gravitational radii (i.e., larger than the typical emission radius of the 230\GHz images.) to contribute to the total image. However, the extension in the images is much smaller for MAD models with most images displaying a net increment in the size by $<10\%$.
 
 %..............................................................................
 \subsubsubsection{86\GHz flux}
 
-In general, the $R_{\rm high}=1$ models produce too much 86\GHz flux. Since the lower limit of the power-law $\gamma_{\rm min}$ is directly affected by the local electron temperature, the highest energy electrons are located in the jet sheath where the ion and electron temperatures are similar, i.e. $T_i\approx T_e$. Indeed this is why SANE models produce more 86\GHz flux when non-thermal electrons are introduced, especially at larger $R_{\rm high}$ values. On the other hand, MAD pure thermal and mixed thermal/non-thermal models behave similarly as the bulk of the emission is produced in the inner disk.
+In general, the $R_{\rm high}=1$ models produce too much 86\GHz flux. Since the lower limit of the power-law $\gamma_{\rm min}$ is directly affected by the local electron temperature, the highest energy electrons are located in the jet sheath where the ion and electron temperatures are similar, i.e., $T_i\approx T_e$. Indeed this is why SANE models produce more 86\GHz flux when non-thermal electrons are introduced, especially at larger $R_{\rm high}$ values. On the other hand, MAD pure thermal and mixed thermal/non-thermal models behave similarly as the bulk of the emission is produced in the inner disk.
 
 %..............................................................................
 \subsubsubsection{86\GHz image size}
 
-\kc{Due to the additional power-law component, the 86\GHz image sizes for the hybrid \hamr models are, on average, larger than their thermal-only counterparts. }
+\kc{Due to the additional power-law component, the 86\GHz image sizes for the hybrid \hamr models are, on average, larger than their thermal-only counterparts, similar to the 230\GHz results. The higher energy electrons of a hybrid thermal-nonthermal population emit at higher frequencies than their thermal core, thereby extending the image size. This effect is not significant in the case of MAD accretion models as the image sizes increase by a few percent only.}
 ...
 
 %..............................................................................
@@ -614,10 +614,11 @@ As noted above, NIR emission is produced from the tail of the eDF.  The thermal 
 An alternative procedure for assigning a nonthermal eDF uses the  kappa model \eqref{eq:nonthermaleDF}, and sets $\kappa$ and $w$ according to \cite{2018ApJ...862...80B}, who model the effects of particle acceleration in magnetic reconnection.  In particular, we set
 \begin{align}
   \kappa &= 2.8 +0.7\sigma^{-1/2} + 3.7\sigma^{-0.19}\tanh{(23.4\sigma^{0.26}\beta)}, \label{eq:kappa}\\
-  w      &= \frac{ \kappa -3 }{\kappa} \Theta_e +
-  \frac{\varepsilon}{2}\Big[1+\tanh(r-r_{\rm inj})\Big]\frac{\kappa - 3}{6 \kappa} \frac{m_p}{m_e} \sigma.
+  w      &= \frac{ \kappa -3 }{\kappa} \Theta_e
+  %w      &= \frac{ \kappa -3 }{\kappa} \Theta_e +
+  %\frac{\varepsilon}{2}\Big[1+\tanh(r-r_{\rm inj})\Big]\frac{\kappa - 3}{6 \kappa} \frac{m_p}{m_e} \sigma.
 \end{align}
-\cmf{Since $\varepsilon=0$ we can simplify the $w$ and adopt the text below,or?}
+%\cmf{Since $\varepsilon=0$ we can simplify the $w$ and adopt the text below,or?}
 Evidently $w$ contains a thermal and nonthermal contribution, with the nonthermal contribution proportional to the nonthermal particle acceleration efficiency $\varepsilon$  \citep{2019A&A...632A...2D, 2021NatAs.tmp..218C}.  The thermal width $\Theta_e$ is set using the $\Rh$ prescription.
 
 We set $\varepsilon=0$ and injection radius $r_{\rm inj}=10r_{g}$ following previous studies.  Nonzero $\varepsilon$ increases the averaged NIR flux by two orders of magnitude as $\varepsilon$ goes from 0 to 1, causing all models to overshoot NIR constraint.  Setting $\varepsilon \ne 0$ also causes the 86\GHz flux density and image size to increase \citep{2021arXiv211102518F}.
@@ -675,11 +676,13 @@ The 230\GHz m-ring fits are hardly affected at all by the addition of nonthermal
 %    \item Even the lowest base efficiency considered, $\varepsilon=0.05$, leads to an over-production of NIR flux. \cmf{indication that we need very localised regions of non-thermal particle productions and no "global" approach?}
 %\end{itemize}
 
+Adding nonthermal electrons in the form of a power-law results in a definite increase in 230 and 86\GHz image sizes. Very few models survive all constraints: one SANE accretion model with black hole spin $a_{\star}=15/16$, $\rm R_{high}=40$ at an inclination of $50^{\circ}$ passes EHT, non-EHT and variability tests. A couple of MAD spin $a_{\star}=0.5$ models also pass EHT and non-EHT constraints.
+
+
 The effect of adding nonthermal electrons in a variable kappa eDF can be summarized as follows: Only $1\%$ of models pass all constrains, MAD accretion model, balc hole spin $a_{\star}=0.5$, $\rm R_{high}=160\ (i=10^{\circ},~30^{\circ})$ and $\rm R_{high}=80\ (i=10^{\circ})$, see model C in Figure \ref{fig:bestbet_imgs}.
 
 %The effect of adding nonthermal electrons in a constant-kappa model can be summarized as follows:
 
-%The effect of adding nonthermal electrons in a power-law can be summarized as follows:
 
 Most of our nonthermal models assign a width to the nonthermal component that depends on the an electron ``temperature'' assigned through the $\Rh$ scheme, so they are not fully independent of $\Rh$.
 
