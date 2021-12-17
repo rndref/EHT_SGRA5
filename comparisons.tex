@@ -8,9 +8,9 @@ Figures~\ref{fig:passfail_sz}, \ref{fig:passfail_va}, and
 \ref{fig:passfail_sed}.
 For each of these figures, the left panel is the best bet model (see
 Section~\ref{sec:discussions} that passes all the constraints, and the
-right panel is one of a failed models.
+right panel is one of the failed models.
 The results of all constraint applications are listed in pass/fail
-tables contains in Appendix \ref{app:tables}, which are available in
+tables contained in Appendix \ref{app:tables}, which are available in
 electronic form.
 
 %==============================================================================
@@ -427,7 +427,7 @@ To summarize, all critical beta models fail the non-EHT constraints, with 86GHz 
 %------------------------------------------------------------------------------
 \subsubsection{Thermal Plus \texorpdfstring{$p = 4$}{p=4} Power-law Models}
 
-So far we have assumed a thermal (Maxwell-J{\"u}ttner) eDF.  Next we assume that some electrons are accelerated to a non-thermal tail.  There are multiple ways of doing this, but we will continue to assume that the eDF depends instantaneously on local conditions and to set the accretion rate so that the time-averaged 230\GHz compact flux is 2.4 Jy.
+So far we have assumed a thermal (Maxwell-J{\"u}ttner) eDF.  Next we assume that some electrons are accelerated to a non-thermal tail.  There are multiple ways of doing this, but we will continue to assume that the eDF depends instantaneously on local conditions and set the accretion rate so that the time-averaged 230\GHz compact flux is 2.4 Jy.
 
 % cfg 12-dec: we will comment this out by 13-dec unless we get more info, from here =>
 First we employ a hybrid thermal/power-law tail distribution using \hamr/\bhoss, and assume a power-law index of $p=4$ with a constant non-thermal acceleration efficiency $\epsilon=n_{\rm e, power-law}/n_{\rm e, thermal}=0.1$. Following the method given in \citet{Chatterjee2021}, the power-law tail is stitched to the thermal core by choosing the minimum Lorentz factor limit of the power-law $\gamma_{\rm min}$ to be at the peak of the Maxwellian component. The upper end of the power-law is taken to $10^5 \gamma_{\rm min}$.  The temperature of the thermal component is set by the $\Rh$ prescription.  We find that the accretion rate is slightly smaller than for corresponding thermal models, suggesting that the power-law components contributes to the 230\GHz total intensity. \kc{The full pass/fail table of hybrid thermal-powerlaw models is given in Table.~\ref{?}}
@@ -614,26 +614,22 @@ As noted above, NIR emission is produced from the tail of the eDF.  The thermal 
 An alternative procedure for assigning a nonthermal eDF uses the  kappa model \eqref{eq:nonthermaleDF}, and sets $\kappa$ and $w$ according to \cite{2018ApJ...862...80B}, who model the effects of particle acceleration in magnetic reconnection.  In particular, we set
 \begin{align}
   \kappa &= 2.8 +0.7\sigma^{-1/2} + 3.7\sigma^{-0.19}\tanh{(23.4\sigma^{0.26}\beta)}, \label{eq:kappa}\\
-  w      &= \frac{ \kappa -3 }{\kappa} \Theta_e
-  %w      &= \frac{ \kappa -3 }{\kappa} \Theta_e +
-  %\frac{\varepsilon}{2}\Big[1+\tanh(r-r_{\rm inj})\Big]\frac{\kappa - 3}{6 \kappa} \frac{m_p}{m_e} \sigma.
+  w      &= \frac{ \kappa -3 }{\kappa} \Theta_e.
 \end{align}
-%\cmf{Since $\varepsilon=0$ we can simplify the $w$ and adopt the text below,or?}
+%\cmf{Since $\varepsilon=0$ we can simplify the $w$ and adopt the text below,or?}\aco{Yes}
 Evidently $w$ contains a thermal and nonthermal contribution, with the nonthermal contribution proportional to the nonthermal particle acceleration efficiency $\varepsilon$  \citep{2019A&A...632A...2D, 2021NatAs.tmp..218C}.  The thermal width $\Theta_e$ is set using the $\Rh$ prescription.
 
 We set $\varepsilon=0$ and injection radius $r_{\rm inj}=10r_{g}$ following previous studies.  Nonzero $\varepsilon$ increases the averaged NIR flux by two orders of magnitude as $\varepsilon$ goes from 0 to 1, causing all models to overshoot NIR constraint.  Setting $\varepsilon \ne 0$ also causes the 86\GHz flux density and image size to increase \citep{2021arXiv211102518F}.
 
 We use the emissivity and absorptivity, computed numerically for the interval $3 < \kappa \le 8$, from  \cite{2016ApJ...822...34P}. For $\kappa > 8$ we substitute a thermal eDF.  As in the standard models we turn off emission at $\sigma > 1$ (see Figure~\ref{fig:varepsilon}).
-\cmf{text from Alejandro: The post-processing radiative transfer is done employing the GRRT code \bhoss using GRMHD simulations from the \bhac. We use the time window from $\rm 25,000M-30,000M$ and we created images every $\rm 10M$ normalizing the average flux of $\rm 2.4\,Jy$ at $\rm 230\,GHz$.
+\cmf{The post-processing radiative transfer is done employing the GRRT code \bhoss using GRMHD simulations from the \bhac. We use the time window from $\rm 25,000M-30,000M$ and we created images every $\rm 10M$ normalizing the average flux of $\rm 2.4\,Jy$ at $\rm 230\,GHz$.
+\aco{Add here details for ipole and igrmonty.}
+%..............................................................................
+%\subsubsubsection{Null Location} We found that $80\% ~(201/250)$  pass the expected null location ($2.5\lambda - 3.5G\lambda$). The differences to the thermal models can be described as follows: higher inclinations are rejected for $i \geq 70^{\circ}$ (MAD)  and $i \geq 50^{\circ}$ (SANE). Although, the total number of rejected models is similar to thermal models.
 
 %..............................................................................
-\subsubsubsection{Null Location}
-We found that $80\% ~(201/250)$  pass the expected null location ($2.5\lambda - 3.5G\lambda$). The differences to the thermal models can be described as follows: higher inclinations are rejected for $i \geq 70^{\circ}$ (MAD)  and $i \geq 50^{\circ}$ (SANE). Although, the total number of rejected models is similar to thermal models.
-
-%..............................................................................
-\subsubsubsection{4 \texorpdfstring{$G\lambda$}{Gl} Visibility Amplitude Variability}
-
-In case of the variability at 4 $G\lambda$ 151/200 pass the constraint, same percent as for the thermal models, for instance $\sim 40 \%$ of the models are rejected, mostly negative $a_{\star} = -0.94$ SANE and MAD, also high temperatures, $R_{\rm high} = 160$, $a_{\star} \leq 0$ MAD accretion models, and  $i \geq 70^{\circ}$  for SANE prograde models.}
+%\subsubsubsection{4 \texorpdfstring{$G\lambda$}{Gl} Visibility Amplitude Variability} In case of the variability at 4 $G\lambda$ 151/200 pass the constraint, same percent as for the thermal models, for instance $\sim 40 \%$ of the models are rejected, mostly negative $a_{\star} = -0.94$ SANE and MAD, also high temperatures, $R_{\rm high} = 160$, $a_{\star} \leq 0$ MAD accretion models, and  $i \geq 70^{\circ}$  for SANE prograde models.
+}
 
 \cfg{need very brief discussion here of the codes and run durations}
 
@@ -668,7 +664,7 @@ The addition of nonthermal particles increases the x-ray emission from the major
 \subsubsection{Summary of Constraints on Non-Thermal Models}
 
 The nonthermal eDF models considered here produce little change compared to the thermal models for most constraints.  The 86\GHz size and flux, which are the most important non-EHT constraints, are not detectably affected by the addition of nonthermal electrons.
-The 230\GHz m-ring fits are hardly affected at all by the addition of nonthermal electrons.  And $\mi{3}$ is also not detectably affected by the addition of nonthermal electrons.  The NIR and x-ray flux density, however, is consistently increased by the nonthermal eDF prescriptions considered here.  In a large fraction of models this leads to overproduction of NIR or x-ray flux. Since the nonthermal models analysed here are not considering the heating efficiency due to the magnetic reconnection, $\varepsilon \neq 0$, those effects can be explained by asymptotic behaviour of the nonthermal emissivity, $ j_{\nu}\propto\exp\left(-\Theta_e^{-2/3}\nu^{1/3}\right)+\nu^{-(\kappa-2)/2} \left[(\kappa -3)\Theta_{\rm e} + \varepsilon(\kappa -3) \sigma\right]^{\kappa-2}$, the second term dominates at NIR and x-rays, while at mm and radio frequencies the thermal component, the first term dominates. However, we expect that including high efficiency heating of nonthermal particles the 86\GHz, the flux will increase two times and larger image size \citep{2021NatAs.tmp..218C,2021arXiv211102518F}. Furthermore, NIR and x-ray average flux increase as efficiency increase, on the other hand, the SED is not sensitive to the black hole spin but image size increase for prograde models, we have consistency overall our models (\bhac / \hamr).
+The 230\GHz m-ring fits are hardly affected at all by the addition of nonthermal electrons, and $\mi{3}$ is also not detectably affected by the addition of nonthermal electrons.  The NIR and x-ray flux densities, however, are consistently increased by the nonthermal eDF prescriptions.  In a large fraction of models this leads to overproduction of NIR or x-ray flux. Since the nonthermal models analysed here do not consider the heating efficiency due to the magnetic reconnection, $\varepsilon \neq 0$, those effects can be explained by asymptotic behaviour of the nonthermal emissivity, $ j_{\nu}\propto\exp\left(-\Theta_e^{-2/3}\nu^{1/3}\right)+\nu^{-(\kappa-2)/2} \left[(\kappa -3)\Theta_{\rm e} + \varepsilon(\kappa -3) \sigma\right]^{\kappa-2}$, the second term dominates at NIR and x-rays, while at mm and radio frequencies the thermal component, the first term dominates. However, as soon as heating efficiency in the third term becomes nonzero, the nonthermal contribution generates longer emission region, expanding the image size at 86\GHz two times than in the thermal model,  and increasing the total intensity \citep{2021NatAs.tmp..218C,2021arXiv211102518F}. Furthermore, NIR and x-ray average flux increase as efficiency increase, on the other hand, the SED is not sensitive to the black hole spin but image size increase for prograde models, we have consistency overall our models (\bhac / \hamr).
 
 %The effect of adding non-thermal electrons in a kappa eDF with  $\kappa=3.4$ and variable efficiency via Eq.~\ref{eq:efficiencybetasigma} can be summarized as follows:
 %\begin{itemize}
@@ -705,11 +701,12 @@ The 230\GHz pre-image size of edge-on large $\Rh$ images increases slightly for 
 % cfg 12-dec this is a testable proposition
 %This suggests that, on average, most of the total flux at 230 and 86\GHz comes from a few gravitational radii from the black hole where the relativistic Doppler boost have comparable values between the in-going accretion flow and the out-flowing jet.
 
-Variability increases with the tilt. In tilted disks, accretion occurs via thin plunging streams \citep[e.g.,][]{Fragile2007} where electrons in the shocked flow can be heated to relativistic temperatures \citep[e.g.][]{Dexter2013}, forming localized, fluctuating hotspots more easily than in aligned disks, thereby increasing flux variability \citep{Chatterjee2020}.
+Variability increases with the tilt. In tilted disks, accretion occurs via thin plunging streams \citep[e.g.,][]{Fragile2007} where electrons in the shocked flow can be heated to relativistic temperatures \citep[e.g.][]{Dexter2013,White2019}, forming localized, fluctuating hotspots more easily than in aligned disks, thereby increasing flux variability \citep{Chatterjee2020}.
 
 \smr{Should we cite other works on tilted accretion flows (e.g., Generozov+ 2013, https://arxiv.org/abs/1311.5565, White et al 2019, https://arxiv.org/abs/1902.09662, White \& Quataert 2021, https://arxiv.org/abs/2104.12896)?}
 
 \cfg{Statement about which models pass and fail MI}
+\kc{These models generally fair well with the $\mi{3}$ constraint with 20/27 models passing. A few models with $\rm R_{high}=160$ and one model with $\rm R_{high}=40$ fail.}
 
 NIR flux also increases with tilt.  The NIR flux exceeds the 1.0 mJy limit for all 3 tilts, with a few exceptions, e.g. $R_{\rm high}=160$ models at $10^{\circ}$ inclination, which makes it difficult to favor the aligned case over the tilted one. Further, the presence of misalignment destroys the axisymmetric nature of the accretion flow.  The current model set covers a small parameter space in inclination and $R_{\rm high}$.  A thorough exploration of the source azimuthal angle with respect to the observer is left to future studies.
 
