@@ -270,7 +270,7 @@ Applying only non-EHT constraints, we are left with the 24/200 models shown in F
 %------------------------------------------------------------------------------
 \subsubsection{Variability}
 
-Variability is central to interpretation of \sgra: an $8$hr observation of \sgra is $1400 \tg$, a timescale over which most models vary significantly.  In contract, an $8$hr observation of M87* is $\sim \tg$ and the source is hardly expected to vary at all.\footnote{This does not mean that \m87 is less variable than \sgra.  In 2017 EHT observed \m87 over only $\sim 19\tg$, so it is not possible to characterize \m87 variability using EHT data alone.  To obtain variability information for \m87 similar to what we present here for \sgra would require multi-year observations.}
+Variability is central to  the interpretation of \sgra: an $8$hr observation of \sgra is $1400 \tg$, a timescale over which most models vary significantly.  In contrast, an $8$hr observation of M87* is $\sim \tg$ and the source is hardly expected to vary at all.\footnote{This does not mean that \m87 is less variable than \sgra.  In 2017 EHT observed \m87 over only $\sim 19\tg$, so it is not possible to characterize \m87 variability using EHT data alone.  To obtain variability information for \m87 similar to what we present here for \sgra would require multi-year observations.}
 
 Variability is a strong constraint.  Although models differ in their degree of variability, both in an integrated sense and on 4 $G\lambda$ baselines, only a small fraction of models are as quiet as the data.  For the light curve variability, this remains true whether we use data from 2017 April 7, all days from the 2017 observing campaign, or from historical monitoring of \sgra.   In general, we find that SANE models are quieter than MAD models, and (less strongly) face-on models are quieter than edge-on models.
 
@@ -468,7 +468,7 @@ The addition of the power-law tail primarily increases the flux in the NIR and t
 \subsubsection{Constant kappa models with \texorpdfstring{$\kappa = 5$}{k = 5}}
 
 Next we consider a model in which {\em all} electrons are in a kappa eDF, which has a thermal core and a power-law tail.  We set $\kappa = 5$ everywhere,  motivated by \cite{2016PhRvL.117w5101K}, who found $\kappa = 5$ to be a good fit to the ion DF in a 3D hybrid simulation of MHD turbulence.  The power-law tail then has $p = \kappa - 1 = 4$, and at high frequency $\nu L_\nu \sim \nu^s$ where $s = 2 - \kappa/2 = -1/2$.
-{If not stated otherwise the width parameter $w$ of the kappa distribution (see Equation~(\ref{eq:kappa}) is set by $w = (\kappa - 3) \Theta_e/\kappa$, where the dimensionless electron temperature, $\Theta_e$, is computed according to Equation~(\ref{eq:rhigh_prescription}). The underlying GRMHD simulations are taken from the \bhac runs and we use the time window from 25\,kM to 30\,kM. The radiative transfer is done employing the GRRT code \bhoss and we created images every 50\,M using the same inclinations and $\Rh$ values as for the thermal models. Each model is individually normalized to an average flux of 2.4\,Jy at 230\GHz.}
+{If not stated otherwise the width parameter $w$ of the kappa distribution (see Equation~(\ref{eq:kappa}) is set by $w = (\kappa - 3) \Theta_e/\kappa$, where the dimensionless electron temperature, $\Theta_e$, is computed according to Equation~(\ref{eq:rhigh_prescription}). The underlying GRMHD simulations are taken from the \bhac runs and we use the time window from 25\,kM to 30\,kM. The radiative transfer is done employing the GRRT code \bhoss \citep{Younsi2012,Younsi2020} and we created images every 50\,M using the same inclinations and $\Rh$ values as for the thermal models. Each model is individually normalized to an average flux of 2.4\,Jy at 230\GHz.}
 
 We find that the $\kappa=5$ models produce generally consistent results with the \bhac thermal models. We discuss the constraints for which they differ below.
 %..............................................................................
@@ -765,7 +765,7 @@ Both non-EHT and EHT constraints have the power to test the wind-fed model.  It 
   \includegraphics[width=\textwidth]{figures/bestbet_imgs.pdf}
   % cfg 15-dec: edited down
   \caption{Example images from featured models.  The columns show models ~A, B, and C from Table~\ref{tab:bestbets}, the rows show the 86\GHz image, 230\GHz image, and 230\GHz image smoothed to EHT resolution from top to bottom.
-    \ckc{Will update snapshot once receive the consensus image from PaperIII.}}
+    \ckc{Will update snapshot once receive the consensus image from PaperIII.}\monika{notice that the first column has ticks outside, the rest have ticks inside of the frame!}}
   \label{fig:bestbet_imgs}
 \end{figure*}
 

@@ -1,13 +1,13 @@
 \section{Observational Constraints}\label{sec:observations}
 
-\sgra is one of the most observed objects in the sky.  It has been observed with a slew of telescopes, across 5 decades in time and more than 17 decades in frequency. We need to select a manageable subset of this data to constrain our models. In doing so we have attempted to select
+\sgra is one of the most observed objects in the sky.  It has been observed with a slew of telescopes across 5 decades in time and more than 17 decades in frequency. We must identify a manageable subset of this data to constrain our models. In doing so we have attempted to select
 \emph{i})~approximately uncorrelated constraints, so that each tests a distinct aspect of the model;
 \emph{ii})~constraints based on data that can be simulated with the models; and
 \emph{iii})~constraints based on EHT 2017 1.3\mm VLBI data or based on photons produced within or close to the 1.3\mm emission region that are contemporaneous or near-contemporaneous.
 
 Variability complicates the comparison of \sgra models to the data. Even an ideal evolution of a successful model will never match the data point for point because the space of possible realizations of the model is large; the dataset is high dimensional.  We expect the {\em distribution} of  observables derived from a successful model to match the data, however, if the model is run long enough to sample the distribution.  For example, the distribution of the 86\GHz flux density $F_{86}$ for a model ought to contain the observed $F_{86}$.
 
-Most observables are correlated over $\tau\sim$ few $\times 100 \tg$.  To obtain the mean and variance of the model distribution to accuracy $f$ from a GRMHD model, then, requires running it for $\sim \tau/f^2 \sim 30,000 (\tau/300) (f/0.1)^{-2}$, assuming the model decorrelates completely at intervals $\gg \tau$.  A GRMHD model of duration $30,000 \tg$  costs $10^3-10^4$ node-hours, depending on resolution, code, and hardware.  This is expensive since $\sim 10$ runs are used for each model set, and runs need to be repeated for multiple values of numerical parameters (e.g. resolution).  Most of our models are run for $30,000 \tg$; a few are run to $100,000 \tg$.  The model distributions therefore contain sampling noise, and this must be accounted for in model selection.  For some  constraints (e.g. m-ring fits; see below) this can be done by sampling the model at a cadence similar to the correlation time and then using a 2-sample KS test to compare the observed and model distributions.
+Most observables are correlated over $\tau\sim$ few $\times 100 \tg$.  To obtain the mean and variance of the model distribution to accuracy $f$ from a GRMHD model, then, requires running it for $\sim \tau/f^2 \sim 30,000 (\tau/300) (f/0.1)^{-2}$, assuming the model decorrelates completely at intervals $\gg \tau$.  A GRMHD model of duration $30,000 \tg$  costs $10^3-10^4$ node-hours, depending on resolution, code, and hardware.  This is expensive since $\sim 10$ runs are used for each model set, and runs need to be repeated for multiple values of numerical parameters (e.g., resolution).  Most of our models are run for $30,000 \tg$; a few are run to $100,000 \tg$.  The model distributions therefore contain sampling noise, and this must be accounted for in model selection.  For some  constraints (e.g., m-ring fits; see below) this can be done by sampling the model at a cadence similar to the correlation time and then using a 2-sample KS test to compare the observed and model distributions.
 
 The constraints are heterogeneous and it is not possible to treat them completely consistently.  If a constraint returns a probability $p$ that, for example, the observed and model distributions are drawn from the same underlying distribution, then we reject at $p < p_c = 0.01$.  If a constraint returns a ``compliance fraction'' $f$ of, for example, the fraction of snapshots that are consistent with the data, then we also cut at $f < 0.01$.  For $N$ constraints a $p$ threshold implies that we expect to wrongly reject $1 - (1 - p_c)^N$ of acceptable models; for $p_c = 0.01$ and $N = 10$ this is $\approx 10\%$.
 
@@ -90,14 +90,14 @@ The scattering kernel is estimated to have a 16.2\uas FWHM along the
 relevant EHT baselines.
 To descatter the sky image size, we subtract this value in quadrature
 from the size.
-This results an upper limit of 93.6\uas FWHM and lower limit of
+This results in an upper limit of 93.6\uas FWHM and a lower limit of
 34.4\uas FWHM.
 
-To assess a model, we evaluate for each synthetic 230\GHz image the
+To assess a model, for each simulated 230\GHz image we evaluate the
 second moment tensor and find its eigenvalues
 $\lambda_\mathrm{maj}^2/(8\log 2)$ and $\lambda_\mathrm{min}^2/(8\log
 2)$, where $\lambda_\mathrm{maj}$ and $\lambda_\mathrm{min}$ are the
-FWHM of the major and minor axis.
+FWHM of the major and minor axes.
 The image is deemed non-compliant if it is inconsistent with the data for
 all orientations, that is, if $\lambda_\mathrm{maj} < 34.4\uas$ or
 $\lambda_\mathrm{min} > 93.6\uas$.
@@ -110,7 +110,7 @@ We reject models with a compliance fraction $< 0.01$.
 Our second constraint provides a simple morphological check on the
 VAs.
 We ask two questions of each model snapshot: \emph{i})~is the first
-minimum in the visibilities in about the right place, and
+minimum in the visibilities in about the right place and
 \emph{ii})~are the long-baseline VAs comparable to the data?
 For comparison, we use data from \aprilvii, which has the best $u$-$v$
 coverage near minima in the VAs.
@@ -213,7 +213,7 @@ Next, we read in a series of model images, generate synthetic data for each imag
 
 The synthetic data is generated as follows.  A model image $I(x,y)$ is Fourier transformed to complex visibilities $V(u,v)$ with an assumed position angle, then sampled on baselines $i$ drawn from the comparison scan, $V_i \equiv V(u_i,v_i)$.  Normally distributed thermal noise $\delta V_{th,i}$ with amplitude based on telescope performance during the scan is added, and multiplicative, normally distributed noise with unit variance $N$ is added to crudely model gain corrections: $\tilde{V}_i = V_i (1 + \epsilon N) + \delta V_{th,i}$.  We set $\epsilon = 0.05$, but no significant changes in fit parameters were observed for $\epsilon = 0.02$.  We then fit to the VA $|\tilde{V}_i|$ and closure phases.
 %arg$(\tilde{V}_i \tilde{V}_j \tilde{V}_k^*)$, where $ijk$ form a triangle in the $(u,v)$ plane.
-The procedure was repeated for 4 positions angles (orientations of the image on the sky) and for model images separated by $500 \tg$ (comparable to a correlation time; no significant changes were observed if more position angles were used).  This results in, for example, a sample of $30$ fits per scan per position angle for the Illinois thermal model set, or a total of $30 \times 10 = 300$ samples in each distribution.
+The procedure was repeated for 4 position angles (orientations of the image on the sky) and for model images separated by $500 \tg$ (comparable to a correlation time; no significant changes were observed if more position angles were used).  This results in, for example, a sample of $30$ fits per scan per position angle for the Illinois thermal model set, or a total of $30 \times 10 = 300$ samples in each distribution.
 
 In comparing the models to the data we
 \emph{i}) generate the distribution of fit parameters at each position angle;
@@ -254,7 +254,7 @@ We compute the 2.2\um flux density using one of two procedures.  If a full SED\t
 %------------------------------------------------------------------------------
 \subsubsection{X-ray (Non-Overproduction) Constraints}
 
-\sgra flares in the x-ray less than about once per day \citep[see, e.g.,][and reference therein]{2018MNRAS.473..306Y}.  Chandra observations during the 2017 campaign suggest an upper limit on the median (quiescent) $\nu L_\nu$ at $6\,\mathrm{keV}$ of $10^{33}\ergps$ \citep{PaperIII}.
+\sgra flares in the x-ray less than about once per day \citep[see, e.g.,][and references therein]{2018MNRAS.473..306Y}.  Chandra observations during the 2017 campaign suggest an upper limit on the median (quiescent) $\nu L_\nu$ at $6\,\mathrm{keV}$ of $10^{33}\ergps$ \citep{PaperIII}.
 
 Similar to section \ref{subsec:nir}, we estimate $\nu L_\nu(6\,\mathrm{keV})$ in two ways.  The SED is used if the model contains Compton scattering and bremsstrahlung.  If the SED is not available then we compute an x-ray image that includes only bremsstrahlung (which dominates the x-ray emission in thermal SANE models with $\Rh = 40$, $160$) permitting us to eliminate a few additional models.  We reject the model if the median $\nu L_\nu(6\,\mathrm{keV}) > 10^{33}\ergps$.
 
@@ -282,7 +282,7 @@ Similar to section \ref{subsec:nir}, we estimate $\nu L_\nu(6\,\mathrm{keV})$ in
 
 \sgra shows variability on a wide range of timescales.  This is expected: fluctuations in stellar wind feeding at the scale of the S-stars plausibly introduce long timescale variations, while turbulence at smaller radii, down to the scale of the event horizon, plausibly introduce a spectrum of shorter timescale variations.  Quantitative comparison of observed variability to the models is therefore a potentially powerful tool for model selection.
 
-Here we consider two measures of variability: one that characterizes variability of 230\GHz flux density in the light curves \citep{Wielgus2022} and a second that characterizes variability of the VA in EHT data \citep{PaperIV, NoiseModeling}.
+Here we consider two measures of variability: one that characterizes variability of the 230\GHz flux density in the light curves \citep{Wielgus2022} and a second that characterizes variability of the VA in EHT data \citep{PaperIV, NoiseModeling}.
 
 %\cfg{are these numbers still correct?}
 %\michi{For all models 66.5\% fail MI. For Illinois/Frankfurt thermal, 76\% fail MI.}
@@ -356,7 +356,7 @@ For each model we evaluate a light curve and use that to generate a distribution
 
 % For comparison to the models, we only take $\sigma_\text{var}^2 (4\ G\lambda)$. For the models, we use the techniques from \citealt{Georgiev_2022}, diffractively scattering, averaging over black hole spin orientation relative to the diffractive scattering screen, and azimuthally averaging.
 
-Fluctuations in spatial structure of the source will lead to corresponding fluctuations in VA.  Here we compare  the resulting power spectrum of small-scale structural variability from EHT observations with that predicted by GRMHD models.
+Fluctuations in the spatial structure of the source will lead to corresponding fluctuations in VA.  Here we compare  the resulting power spectrum of small-scale structural variability from EHT observations with that predicted by GRMHD models.
 
 %\cfg{Was April 11 excluded from variability analysis?}
 % cfg 15-dec: noted that April 11 was excluded.

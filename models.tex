@@ -47,10 +47,10 @@ Following \citetalias{M87PaperV}, we first consider an one-zone model for \sgra.
 These results follow one-zone models developed in the literature over many decades \note{(refs)}.
 
 Our one-zone model is a uniform plasma sphere of radius $r = 5\rg$ with uniform magnetic field oriented at $\pi/3$ to the line-of-sight.
-The magnetic field is given by $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $T_i$ denotes ion temperature, $T_e$ denotes electron temperature, $\beta=1$, and $T_i = 3 T_e$.
+The magnetic field is given by $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $T_i$ denotes ion temperature, $T_e$ denotes electron temperature, B denotes magnetic field strength, $\beta=1$, and $T_i = 3 T_e$.
 We also assume $\Theta_e \equiv  k T_e / m_e c^2 = 10$.
 
-Using the thermal emissivity for synchrotron radiation $j_\nu$ \citep[e.g.,][]{2011ApJ...737...21L} and assuming optically thin emission, the flux density is given by $F_\nu = (4/3)\pi r^3 j_\nu D^{-2} 10^{23}\,\mathrm{Jy}$.  Setting $F_\nu = 2.4\,\mathrm{Jy}$ (the average measured by ALMA during the 2017 campaign) yields a nonlinear equation for $n_e$ with solution
+Using the thermal emissivity for synchrotron radiation $j_\nu$ \citep[e.g.,][]{2011ApJ...737...21L} and assuming optically thin emission, the flux density is given by $F_\nu = (4/3)\pi r^3 j_\nu D^{-2} 10^{23}\,\mathrm{Jy}$.  Setting $F_\nu = 2.4\,\mathrm{Jy}$ (the average measured by ALMA during the 2017 campaign) yields a nonlinear equation for plasma electron density, $n_e$ with solution
 \begin{align}
   n_e &\simeq 1.1\times10^6\cm^{-3},\\
   B   &\simeq 30\,\mathrm{G}
@@ -153,7 +153,7 @@ In all models except the \hamr-Tilted models, the torus orbital angular momentum
 %\monika{11dec: we dont want to elaborate on details like that here, this section is intended to describe only common features of all simulations, other details can be described in section 4, incase there are differences in the results that may be due to initial conditions.}
 The torus is seeded with a weak, poloidal magnetic field.
 
-The torus initial conditions are motivated by the notion that the near-horizon flow, where most of the emission is generated (\citetalias{M87PaperV}) relaxes to a statistically steady state that is nearly independent of the flow at larger radius.  This notion is challenged in the stellar wind-fed models of \cite{2020ApJ...896L...6R}, which we includ in our study.
+The torus initial conditions are motivated by the notion that the near-horizon flow, where most of the emission is generated (\citetalias{M87PaperV}) relaxes to a statistically steady state that is nearly independent of the flow at larger radius.  This notion is challenged in the stellar wind-fed models of \cite{2020ApJ...896L...6R}, which we include in our study.
 
 All simulations are run in horizon penetrating coordinates that derive from Kerr-Schild coordinates, which are regular on the horizon.
 Most are run in a variant of spherical polar coordinates.
@@ -222,7 +222,7 @@ In \emph{thermal} models electron energies are distributed into the Maxwell-J{\"
 \begin{align}
   \frac{1}{n_e}\frac{dn_e}{d\gamma} = \frac{\gamma^2 \sqrt{1-1/\gamma^2}} {\Theta_e K_2(1/\Theta_e)} \exp\left(-\frac{\gamma}{\Theta_e}\right);
 \end{align}
-recall $\Theta_e = k_b T_e/(m_e c^2)$, which is determined by the ion-electron temperature ratio $R \equiv T_i/T_e$:
+where $K_2$ is the modified Bessel function of the second kind and $\gamma$ is the Lorentz factor of an electron. Recall $\Theta_e = k_b T_e/(m_e c^2)$, which is determined by the ion-electron temperature ratio $R \equiv T_i/T_e$:
 \begin{align}
   T_e=\frac{2 m_p u}{3 k_B \rho (2+R)}.
 \end{align}
@@ -236,7 +236,7 @@ We adopt the same model as \citetalias{M87PaperV} and \citetalias{M87PaperVIII},
   \label{eq:rhigh_prescription}
 \end{equation}
 where $b \equiv \beta/\beta_\mathrm{crit}$.
-This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.  Here we take $\Rl = 1$ and $\beta_\mathrm{crit} = 1$, but allow $\Rh$ to vary from 1 to 160.
+This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.  Here we take $\Rl = 1$ and $\beta_\mathrm{crit} = 1$, but allow $\Rh$ to vary from 1 to 160. \cmf{This parameterised electron temperature prescription is well matched to electron temperature distribution obtained by two-temperature GRMHD simulations including electron heating prescription \citep{Mizuno2021}.}
 
 In \emph{non-thermal} models, the eDF has a power-law tail extending to high energy.
 We explore two implementations in this paper:
@@ -308,7 +308,7 @@ The plasma mass scale parameter $\Munit$ controls the plasma emissivity and the 
     Figure~\ref{fig:sample_imgs}:
     (\emph{left})~thermal SANE,
     (\emph{middle})~thermal MAD, and
-    (\emph{right})~non-thermal variable $\kappa$ MAD.  Black dots and arrows show measured flux density at $86\GHz$ and $230\GHz$ and $2.2\um$ and x-ray quiescent upper limits. Black line shows total SED; colored lines show contributions from direct synchrotron emission, Compton scattering, and bremsstrahlung (see legend).
+    (\emph{right})~non-thermal variable $\kappa$ MAD.  Black dots and arrows show measured flux density at $86\GHz$ and $230\GHz$ and $2.2\um$ and x-ray quiescent upper limits. The black line shows the total SED; colored lines show contributions from direct synchrotron emission, Compton scattering, and bremsstrahlung (see legend).
     % cfg 15 dec: edited out the rest
     %The left panel shows a interesting special case in our simulation library, where the spectral index at 230\GHz is negative.  This indicates the 230\GHz image is completely optically thin and the 86\GHz would over produce the flux.  The NIR has a flat spectral index and is dominated by inverse Compton, instead of direct synchrotron radiation. These properties occur only for $\Rh = 1$ SANE models.     For $\Rh > 1$, the direct synchrotron peak shifts to the right, broadens its width, and dominates the NIR. For SANE, the spetral index for x-ray is almost always positive and dominated by thermal bremsstrahlung by (relatively) cool electrons. The middle and right panels show the more typical MAD SEDs, where 86\GHz, 230\GHz, and NIR all come from direct synchrotron, and x-ray is dominated by inverse Compton.
     }
