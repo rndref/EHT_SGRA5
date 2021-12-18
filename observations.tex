@@ -309,7 +309,7 @@ We have chosen to compare the models to light curve observations of \sgra from $
 
 We use $\Delta T = 3$ hours ($\sim 530~\tg$) because it is comparable to the correlation time for $F_{230}$ in most of the models, and because it is similar to the characteristic timescales measured in damped random walk fits to the ALMA light curve \citep[see Table 10 of][]{Wielgus2022}.  Although the correlation times tend to be slightly longer than 3 hours, that is the longest timescale for which we can consistently estimate the mean and variance of the distribution of $\mi{3}$ from the models (accurate estimation for larger $T$ would require longer GRMHD integration times).  In a damped random walk process one can show that $\mi{3}$ is minimally correlated over consecutive 3 hour intervals \citep{Lee_2022}.
 
-For each light curve, we take 3 hour segments equally spaced away from the endpoints and each other and calculate the $\mi{3}$ on each segment. This procedure gives us a set of 42 samples of the $\mi{3}$ for the historical dataset. We note that the $\mi{3}$ measured from the EHT 2017 observations on April $5-11$ are consistent with being drawn from this distribution, although April 7 has one of the quietest segments on record, while April 11 has one of the most variable.
+For each light curve available longer than 3 hours in the ALMA data and in earlier SMA and CARMA data (the ``historical dataset''; see \citetalias{Wielgus2022}), we take 3 hour segments equally spaced away from the endpoints and each other and calculate  $\mi{3}$ on each segment. This procedure gives us a set of 42 samples of the $\mi{3}$ for the historical dataset. We note that the $\mi{3}$ measured from the EHT 2017 observations on April $5-11$ are consistent with being drawn from this distribution, although April 7 has one of the quietest segments on record, and April 11 has one of the most variable.
 
 % old version, revised out following D. Lee 11-dec cfg
 %We have chosen to compare the models to the  April 7, 2017 ALMA light using the 3 hour {\em modulation index} $\mi{3}$, where $\mi{T} \equiv \sigma_T/\mu_T$, $\sigma_T$ is the standard deviation measured over some interval $T$, and $\mu_T$ is the mean measured over the same interval.  We use $\mi{T}$ following \citet{2015ApJ...812..103C} because it is easy to describe, easy to compute, commonly used in the literature (in the x-ray astronomy literature it is ``rms \%''), and closely related to the structure function, since the expectation value for $\sigma_T^2$ is given by an integral over the structure function (see Lee et al. 2022).
@@ -318,7 +318,7 @@ For each light curve, we take 3 hour segments equally spaced away from the endpo
 
 %We measure $\mi{3}$ in maximally spaced intervals in the ALMA lightcurve on April 6, 7, and 11.\footnote{The model comparisons are insensitive to interval spacing.}  We have also measured $\mi{3}$ in historical data for \sgra from 2005-2017 light curves.  The April 6, 7, and 11 values for $\mi{3}$ (5 in all: 0.029, 0.031, 0.051, 0.041, 0.099) are consistent with having been drawn from the historical distribution, although April 7 is among the quietest intervals on record and April 11 is one of the most variable intervals on record.
 
-For each model we evaluate a light curve and use that to generate a distribution of $\mi{3}$.  We then use a KS test to ask whether that distribution is consistent with the historical distribution.
+For each model we evaluate a light curve and use that to generate a distribution of $\mi{3}$.  We then use a KS test to ask whether that distribution is consistent with the historical distribution.\footnote{We can also use light curves from the 2017 campaign alone, which rejects {\em more} models.  The 2017 campaign light curve samples are consistent with having been drawn from the full historical dataset.} 
 %The constraint comes from $M_T$ measured over 3 maximally spaced intervals
 %in the April 7, 2017 ALMA light curve, where $M_3 = 0.024, 0.051,
 %0.047$ (Wielgus et al. 2021). These values are consistent with being drawn from the distribution estimated from historical non-EHT 2005-2017 light curves.
@@ -349,7 +349,7 @@ For each model we evaluate a light curve and use that to generate a distribution
 
 % For comparison to the models, we only take $\sigma_\text{var}^2 (4\ G\lambda)$. For the models, we use the techniques from \citealt{Georgiev_2022}, diffractively scattering, averaging over black hole spin orientation relative to the diffractive scattering screen, and azimuthally averaging.
 
-Fluctuations in the spatial structure of the source will lead to corresponding fluctuations in VA.  Here we compare  the resulting power spectrum of small-scale structural variability from EHT observations with that predicted by GRMHD models.
+Fluctuations in the spatial structure of the source will produce fluctuations in VA.  Here we compare  the power spectrum of small-scale structural variability from EHT observations with the predictions of GRMHD models.
 
 %\cfg{Was April 11 excluded from variability analysis?}
 % cfg 15-dec: noted that April 11 was excluded.
