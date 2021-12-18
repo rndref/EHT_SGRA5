@@ -15,13 +15,13 @@
 
 Two extensive studies have been undertaken within the EHT Collaboration comparing radiative transfer methods used to evaluate models.  The first, \citep{2020ApJ...897..148G}, evaluated the consistency between general relativistic ray-traced radiative transfer (GRRT) codes when tracing geodesics and when integrating the unpolarized radiative transfer equation.  The second, \citet{Prather_et_al_2022}, evaluates code performance when imaging GRMHD simulation output and when integrating the equations of polarized radiative transfer.
 
-Several EHT radiative transfer codes participated in a comparison exercise, in which each code produced an image of the same GRMHD snapshot file, designed to realistically simulate an image of the black hole \m87 with 230\GHz total flux of 0.5\,Jy.  Figure \ref{fig:radtrans_grmhd_comp} shows tables comparing the total flux of the resulting images, as well as image differences measured by the mean squared error (MSE) between images, defined as
+Several EHT radiative transfer codes participated in a comparison exercise in which each code produced an image of the same GRMHD snapshot file  with parameter chosen to realistically simulate an image of the black hole \m87 with 230\GHz total flux of 0.5\,Jy.  Figure \ref{fig:radtrans_grmhd_comp} shows tables comparing the total flux of the resulting images as well as image differences measured by the mean squared error (MSE) between images, defined as
 \begin{align}
     \mathrm{MSE}(A, B) &= \frac{\sum_j|A_j-B_j|^2}{\sum_j|A_j|^2}
 \end{align}
-summed over each image pixel $j$. All images agree to 0.04\,Jy (8\%) in flux, and to a mean squared error of 0.0211, recorded by convention as a percentage 2.11\%.  This level of agreement far exceeds the detector uncertainties in the EHT measurements of \sgra or \m87, rendering the choice of GRRT code irrelevant in producing images for analyses in this paper.
+summed over each image pixel $j$. All images agree to 0.04\,Jy (8\%) in flux and to a mean squared error of 0.0211, recorded by convention as a percentage 2.11\%.  This level of agreement far exceeds the detector uncertainties in the EHT measurements of \sgra or \m87, rendering the choice of GRRT code irrelevant in producing images for analyses in this paper.
 
-The image field of view (FOV) is another potential concern in evaluating models -- the need for efficiency in generating the millions of images used in this analysis was weighed against any emission which might be missed in images with small FOV. For models which pass size \& other constraints, the FOV is large enough to capture relevant emission, as shown in Figure~\ref{fig:radtrans_fov_study}.
+The image field of view (FOV) is another potential concern in evaluating models---the need for efficiency in generating the millions of images used in this analysis was weighed against any emission which might be missed in images with small FOV. For models that pass size and other constraints, the FOV is large enough to capture relevant emission, as shown in Figure~\ref{fig:radtrans_fov_study}.
 
 \begin{figure}
   \centering
