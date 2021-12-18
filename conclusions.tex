@@ -1,6 +1,20 @@
 \section{Conclusions}
 \label{sec:conclusions}
 
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{figures/bestbet_imgs.pdf}
+  % cfg 15-dec: edited down
+  \caption{Best bet model that pass 10/11 constraints.
+    The leftmost panel shows its 86\GHz ray traced image.
+    The subsequent panels are the 230\GHz ray traced image,
+    the 230\GHz image convolved with a 20\uas FWHM Gaussian for approximating the image at EHT resolution, and
+    the actual reconstructed image from the EHT 2017 observation.
+    Note that the position angle is not well constrained.
+    So the rotation of the image here for matching the observed image is not statistically meaningful.}
+  \label{fig:bestbet_imgs}
+\end{figure*}
+
 We have made a first comparison of the EHT 2017 \sgra data to a state-of-the-art library of ideal general relativistic magnetohydrodynamics (GRMHD) models.  The models assume that the mass and distance to \sgra are known and that the central object is a black hole described by the Kerr metric.  We use multiple simulation pipelines and find that for a given set of initial and boundary conditions, independent simulations are remarkably consistent (see Appendix~\ref{app:numerical}).
 
 The model parameters are: whether the horizon magnetic field is strong or weak (MAD or SANE, respectively); the black hole spin $\abh$; and the inclination angle $i$ between the line of sight and the black hole spin vector.  The electron distribution function (eDF) also has one or more parameters.  In our ``standard'' model set, run with three independent codes, the eDF is determined using the so-called $\Rh$ prescription (see Section \ref{sec:models}).  We have also considered non-standard models with alternate eDF prescriptions and alternate initial conditions.
