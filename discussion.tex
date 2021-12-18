@@ -32,7 +32,7 @@
 
 %- bremsstrahlung and SANE models: possibly tighter constraints with more radially extended models.  Interesting to look at x-rays from ressler models.
 
-%- m-ring image plane models likely to be inadequate with more data.  Already many of the images are poorly fit.  Need more
+%- \Mring image plane models likely to be inadequate with more data.  Already many of the images are poorly fit.  Need more
 
 %- future analysis may be able to detect rotation
 
@@ -144,7 +144,7 @@ An outflow with this power could produce dramatic observable effects in the dens
 
 One of the central uncertainties in modeling \sgra is how to assign the electron distribution function (eDF).  Do the surviving models have anything to say about the eDF?
 
-In our standard models, thermal eDFs with equal ion and electron temperature ($\Rh = 1$) are ruled out, in most cases by more than one constraint.  For MAD models this is easily explained: Comptonization is strong at $\Rh = 1$ and x-rays are overproduced.  The electron temperature is a maximum when $\Rh = 1$, if all other parameters are fixed. For MAD models, $\dot{M}$ and therefore the electron scattering optical depth $\tau_\mathrm{es}$ is insensitive to $\Rh$.  Since the amplitude of the first Compton bump is $\propto y = 16 \Theta_e^2 \tau_\mathrm{es}$, the high $\Theta_e$ at $\Rh = 1$ produces a large x-ray flux.  For SANE models the situation is more complicated (see Appendix~\ref{app:tables}), with an m-ring width rejecting many $\Rh = 1$ models at $\abh \le 0$, and 86~GHz flux and size rejecting the rest.  The latter is a consequence of model electron temperature reaching a maximum at large $\abh$ and low $\Rh$, so that optical depth is minimum and therefore so is the 86~GHz image size.
+In our standard models, thermal eDFs with equal ion and electron temperature ($\Rh = 1$) are ruled out, in most cases by more than one constraint.  For MAD models this is easily explained: Comptonization is strong at $\Rh = 1$ and x-rays are overproduced.  The electron temperature is a maximum when $\Rh = 1$, if all other parameters are fixed. For MAD models, $\dot{M}$ and therefore the electron scattering optical depth $\tau_\mathrm{es}$ is insensitive to $\Rh$.  Since the amplitude of the first Compton bump is $\propto y = 16 \Theta_e^2 \tau_\mathrm{es}$, the high $\Theta_e$ at $\Rh = 1$ produces a large x-ray flux.  For SANE models the situation is more complicated (see Appendix~\ref{app:tables}), with an \mring width rejecting many $\Rh = 1$ models at $\abh \le 0$, and 86~GHz flux and size rejecting the rest.  The latter is a consequence of model electron temperature reaching a maximum at large $\abh$ and low $\Rh$, so that optical depth is minimum and therefore so is the 86~GHz image size.
 
 In standard SANE models the sense of the x-ray constraint is reversed: bremsstrahlung is strong and x-rays are overproduced where $\Rh$ is {\em large}.  Again this is easily understood: when $\Rh$ is large the midplane electrons are cold, the accretion rates (and therefore $n^2$) are high, and the bremsstrahlung emissivity is large.  More generally the x-rays provide a strong constraint on the presence of dark (subrelativistic) electrons, which are otherwise undetectable in millimeter wavelength emission or absorption, although they can produce strong Faraday rotation.
 
@@ -161,7 +161,7 @@ Third, it is important to understand that many of the nonthermal models we use a
 %\subsection{Inclination}
 
 %\note{Michi to provide first draft}
-%\note{Strong constraints on inclination from m-ring fitting.}
+%\note{Strong constraints on inclination from \mring fitting.}
 %\ckc{ck's first pass}
 
 %When the accretion flow around a black hole has enough angular momentum, the corresponding black hole image is sensitive to its inclination---in an edge-on case, the image is more asymmetric, with one side lighted up because of Doppler boosting; for a face-on case, the image is a more symmetric ring.
@@ -173,23 +173,23 @@ Third, it is important to understand that many of the nonthermal models we use a
 %inclination makes it non-trivial to measure inclination from the
 %observation.
 %In addition, it is important to note that the asymmetry described
-%above does not directly corresponds to the m-ring asymmetry.
+%above does not directly corresponds to the \mring asymmetry.
 %Consider a situation that the Doppler boosting is so extreme that only
 %the bright side of the photon ring is visible, while the dim side is
 %hidden under the noise.
-%In such a situation, the m-ring (or the gm-ring in \citetalias{PaperIV})
+%In such a situation, the \mring (or the g\mring in \citetalias{PaperIV})
 %may misidentify the boosted side as the full image, and return a low
 %asymmetry, small image size, and wide image width.
-%This is the reason that it is difficult to directly link one m-ring
+%This is the reason that it is difficult to directly link one \mring
 %measurement to the inclination.
 %Nevertheless, given that the EHT observation is surprisingly
-%symmetric, the m-ring asymmetry measurement is not constraining.
-%In stead, the m-ring size disfavors the face-on images.
+%symmetric, the \mring asymmetry measurement is not constraining.
+%In stead, the \mring size disfavors the face-on images.
 
 %==============================================================================
 %\subsection{Position Angle}
 
-%\note{Virtually no constraint on position angle [check m-ring fits]}
+%\note{Virtually no constraint on position angle [check \mring fits]}
 
 %According to the data, the image of \sgra is surprisingly symmetric.
 %The position angle measurement is dominated by noise.
@@ -209,7 +209,7 @@ Third, it is important to understand that many of the nonthermal models we use a
 %depend on the black hole spin, assuming that there is significant
 %angular momentum in the accretion flow, In this sense, the
 %astrophysics can help us narrow down the spin.
-%Specifically, the m-ring diameter disfavors low spin models.
+%Specifically, the \mring diameter disfavors low spin models.
 %However, with the current u uncertainties in, e.g., the eDF, we are
 %not be able to report an acutal spin measurement.
 
@@ -281,5 +281,3 @@ Our analysis shows the value of simultaneous measurements.  Simultaneous or near
 Our analysis provides some guidance for future numerical modeling of \sgra.  It is clear that models require long integrations ($\ge 30,000 \tg$) to provide meaningful measurements of source feature distributions.  We also note that there are regions in parameter space where we may not have sampled densely enough---where, for example, the model is too large and too small at adjacent points in parameter space.  An example of this is the 86GHz size measurement, which is sensitive to inclination.  We have found that being able to compare two simulation pipelines helped us identify numerical sensitivities and saved us from errors on a number of occasions.  One point these comparisons brought to our attention is that the $2.2\um$ flux density is sensitive to where emission is cut off in high $\sigma$ regions of the flow---the so-called $\sigma_\mathrm{cut}$ parameter.  This point merits future investigation.
 
 Finally, we make no claims for optimality in our modeling approach.  Numerical simulations of black hole accretion flows are expensive and---in the end---fail to produce models that survive the full gauntlet of constraints.  Still, they bring some discipline to our efforts to understand a complicated physical situation where many physical processes influence the outcome at the order unity level.
-
-

@@ -7,7 +7,7 @@
 
 Variability complicates the comparison of \sgra models to the data. Even an ideal evolution of a successful model will never match the data point for point because the space of possible realizations of the model is large.  We do, however, expect the {\em distribution} of  observables derived from a successful model to match the data if the model is run long enough to sample the distribution.  For example, the distribution of the 86\GHz flux density $F_{86}$ for a model ought to contain the observed $F_{86}$.
 
-Most observables are correlated over $\tau\sim$ few $\times 100 \tg$.  To obtain the mean and variance of the model distribution to accuracy $f$ from a GRMHD model, then, requires running it for $\sim \tau/f^2 \sim 30,000 (\tau/300) (f/0.1)^{-2}$, assuming the model decorrelates completely at intervals $\gg \tau$.  A GRMHD model of duration $30,000 \tg$  costs $10^3-10^4$ node hours, depending on resolution, code, and hardware.  This is expensive since $\sim 10$ runs are used for each model set, and runs need to be repeated for multiple values of numerical parameters (e.g., resolution).  Most of our models are run for $30,000 \tg$; a few are run to $100,000 \tg$.  The model distributions therefore contain sampling noise, and this must be accounted for in model selection.  For some  constraints (e.g., m-ring fits; see Section \ref{sec:mring}) this can be done by sampling the model at a cadence similar to the correlation time and then using a 2-sample KS test to compare the observed and model distributions.
+Most observables are correlated over $\tau\sim$ few $\times 100 \tg$.  To obtain the mean and variance of the model distribution to accuracy $f$ from a GRMHD model, then, requires running it for $\sim \tau/f^2 \sim 30,000 (\tau/300) (f/0.1)^{-2}$, assuming the model decorrelates completely at intervals $\gg \tau$.  A GRMHD model of duration $30,000 \tg$  costs $10^3-10^4$ node hours, depending on resolution, code, and hardware.  This is expensive since $\sim 10$ runs are used for each model set, and runs need to be repeated for multiple values of numerical parameters (e.g., resolution).  Most of our models are run for $30,000 \tg$; a few are run to $100,000 \tg$.  The model distributions therefore contain sampling noise, and this must be accounted for in model selection.  For some  constraints (e.g., \mring fits; see Section \ref{sec:mring}) this can be done by sampling the model at a cadence similar to the correlation time and then using a 2-sample KS test to compare the observed and model distributions.
 
 The constraints are heterogeneous and it is not possible to treat them completely consistently.  If a constraint returns a probability $p$ that, for example, the observed and model distributions are drawn from the same underlying distribution, then we reject at $p < p_c = 0.01$.  If a constraint returns a ``compliance fraction'' $f$ of, for example, the fraction of snapshots that are consistent with the data, then we also cut at $f < 0.01$.  For $N$ constraints a $p$ threshold implies that we expect to wrongly reject $1 - (1 - p_c)^N$ of acceptable models; for $p_c = 0.01$ and $N = 10$ this is $\approx 10\%$.
 
@@ -53,7 +53,7 @@ against an estimate from the short baseline visibility amplitudes (VAs).
 Second, we check the location of the first minimum and the long
 baselines values of the VAs (``\vam'').
 Finally, using a variant of a procedure from \citetalias{PaperIV}, we
-compare fits for the diameter, width, and asymmetry of an m-ring (a parameterized image-plane model, ``m-ring constraints'') to the GRMHD models.
+compare fits for the diameter, width, and asymmetry of an \mring (a parameterized image-plane model, ``\mring constraints'') to the GRMHD models.
 
 %------------------------------------------------------------------------------
 \subsubsection{230\GHz VLBI Pre-Image Size}
@@ -62,7 +62,7 @@ compare fits for the diameter, width, and asymmetry of an m-ring (a parameterize
 %% \ckc{ck's first pass}
 %% \cfg{edited on 2 dec}
 %% \ckc{I suggest we move the 2nd moment first, then null location, then
-%%   m-ring.
+%%   \mring.
 %%   The reason is that the wide (unconstraining) 2nd moment is caused by
 %%   allowing it to be just a Guassian (i.e., ignore the minima).
 %%   We then tighten the constraint by regonizing there's a minima using
@@ -163,18 +163,18 @@ compliant using the criteria described above.
 We reject models with compliance fraction $< 1\%$.
 
 %------------------------------------------------------------------------------
-\subsubsection{230\GHz M-Ring Fitting}
+\subsubsection{230\GHz \Mring Fitting}
 
 How can we extract information about the spatial structure of the source from noisy, fluctuating data with limited UV coverage, and compare that to noisy, fluctuating models?
 Our strategy is to fit a source-plane model to the data and summarize the source structure using the distribution of fit parameters.
 
-\citetalias{PaperIV} fits an ``m-ring'' source model to the April~7 data.  Here we use a simplified m-ring model: a $\delta$ function in radius with diameter $d$ multiplied by a truncated (up to $m = 3$; Paper IV truncates at $m = 4$) Fourier series, convolved with a Gaussian of width $w$.  In addition the model contains a centered Gaussian component, with amplitude and width as free parameters, to absorb large scale emission and emission interior to the ring.\footnote{In \cite{PaperIV} this is referred to as an mG-ring.}  The simplified m-ring model has 10 parameters; 3 well constrained and physically interpretable parameters are used here: the m-ring diameter $d$, the m-ring width $w$ (FWHM of the convolving  Gaussian), and the $m=1$ relative amplitude $\beta_1$ (the ``asymmetry'').
+\citetalias{PaperIV} fits an ``\mring'' source model to the April~7 data.  Here we use a simplified \mring model: a $\delta$ function in radius with diameter $d$ multiplied by a truncated (up to $m = 3$; Paper IV truncates at $m = 4$) Fourier series, convolved with a Gaussian of width $w$.  In addition the model contains a centered Gaussian component, with amplitude and width as free parameters, to absorb large scale emission and emission interior to the ring.\footnote{In \cite{PaperIV} this is referred to as an mG-ring.}  The simplified \mring model has 10 parameters; 3 well constrained and physically interpretable parameters are used here: the \mring diameter $d$, the \mring width $w$ (FWHM of the convolving  Gaussian), and the $m=1$ relative amplitude $\beta_1$ (the ``asymmetry'').
 
-We fit the m-ring independently to snapshots consisting of 2-minute intervals of EHT data. Over these short intervals, we approximate the source as static.  Uncertainties in the fitted m-ring parameters are dominated by the limited baseline coverage during these snapshots rather than by calibration uncertainties or thermal noise. Because snapshots that are close in time sample nearly identical baselines, they do not provide additional model constraints.
+We fit the \mring independently to snapshots consisting of 2-minute intervals of EHT data. Over these short intervals, we approximate the source as static.  Uncertainties in the fitted \mring parameters are dominated by the limited baseline coverage during these snapshots rather than by calibration uncertainties or thermal noise. Because snapshots that are close in time sample nearly identical baselines, they do not provide additional model constraints.
 
-Thus, to compare fitted m-ring parameters from the EHT data to those for synthetic data from simulations, we focus on a reduced comparison dataset that consists of only a subset of scans with the best baseline coverage. We select scans that are widely separated in time so that they sample distinct baseline coverage. For the comparison dataset we selected ten 120-\sec scans spread approximately uniformly through EHT observations on \aprilvii.  The scans are separated by an average of $\simeq 1240\sec \simeq 60 \tg$, which is small compared to the VA correlation time in the models \citep{Georgiev_2022}. The scans were selected to have > 10 baselines and integration times at all stations $> 40s$.  Only modest changes in model selection were observed if any one scan was removed from the comparison.  The data were de-scattered before fitting, that is, the VA were divided by the scattering kernel.  Maximum likelihood m-ring parameters were found for each scan.
+Thus, to compare fitted \mring parameters from the EHT data to those for synthetic data from simulations, we focus on a reduced comparison dataset that consists of only a subset of scans with the best baseline coverage. We select scans that are widely separated in time so that they sample distinct baseline coverage. For the comparison dataset we selected ten 120-\sec scans spread approximately uniformly through EHT observations on \aprilvii.  The scans are separated by an average of $\simeq 1240\sec \simeq 60 \tg$, which is small compared to the VA correlation time in the models \citep{Georgiev_2022}. The scans were selected to have > 10 baselines and integration times at all stations $> 40s$.  Only modest changes in model selection were observed if any one scan was removed from the comparison.  The data were de-scattered before fitting, that is, the VA were divided by the scattering kernel.  Maximum likelihood \mring parameters were found for each scan.
 
-The maximum likelihood m-ring parameters are listed in Table~\ref{tab:mringfits}.  Evidently the fit parameters are noisy.  The fits for $d$ range from 39\uas to 84\uas, for $w$ from 9\uas to 21\uas, and for $\beta_1$ from $0.04$ to $0.48$ (we require $\beta_1 \le 0.5$ to guarantee  positivity of the model image).  The variation in fit parameters could be caused by source variability, thermal noise, or gain variations.  In the models the main driver of fit variations is source variability.
+The maximum likelihood \mring parameters are listed in Table~\ref{tab:mringfits}.  Evidently the fit parameters are noisy.  The fits for $d$ range from 39\uas to 84\uas, for $w$ from 9\uas to 21\uas, and for $\beta_1$ from $0.04$ to $0.48$ (we require $\beta_1 \le 0.5$ to guarantee  positivity of the model image).  The variation in fit parameters could be caused by source variability, thermal noise, or gain variations.  In the models the main driver of fit variations is source variability.
 
 \begin{deluxetable}{ccccc}
   %
@@ -198,11 +198,11 @@ The maximum likelihood m-ring parameters are listed in Table~\ref{tab:mringfits}
   171 & 14.38 & 39.48 & 17.71 & 0.408 \\
   \enddata
   %
-  \caption{M-Ring Fits to EHT Observations}
+  \caption{\Mring Fits to EHT Observations}
   \label{tab:mringfits}
 \end{deluxetable}
 
-Next, we read in a series of model images, generate synthetic data for each image for each scan at four assumed position angles for the image, and fit m-rings to the synthetic data.  This produces a distribution of m-ring parameters for each model.
+Next, we read in a series of model images, generate synthetic data for each image for each scan at four assumed position angles for the image, and fit \mrings to the synthetic data.  This produces a distribution of \mring parameters for each model.
 
 The synthetic data is generated as follows.  A model image $I(x,y)$ is Fourier transformed to complex visibilities $V(u,v)$ with an assumed position angle then sampled on baselines $i$ drawn from the comparison scan, $V_i \equiv V(u_i,v_i)$.  Normally distributed thermal noise $\delta V_{th,i}$ with amplitude based on telescope performance during the scan is added, and multiplicative, normally distributed noise with unit variance $N$ is added to crudely model gain corrections: $\tilde{V}_i = V_i (1 + \epsilon N) + \delta V_{th,i}$.  We set $\epsilon = 0.05$, but no significant changes in fit parameters were observed for $\epsilon = 0.02$.  We then fit to the VA $|\tilde{V}_i|$ and closure phases.
 %arg$(\tilde{V}_i \tilde{V}_j \tilde{V}_k^*)$, where $ijk$ form a triangle in the $(u,v)$ plane.
@@ -279,7 +279,7 @@ Here we consider two measures of variability: one that characterizes variability
 
 %\cfg{are these numbers still correct?}
 %\michi{For all models 66.5\% fail MI. For Illinois/Frankfurt thermal, 76\% fail MI.}
-%We will find that $76\%$ of standard models fail the $\mi{3}$ test: the data is quieter than the models.  This is the most severe downselect of all our constraints. Given the noisy nature of the model selection process we do not interpret this as success for the surviving $24\%$, all of which fail other constraints.  Instead we interpret this as a failure of the entire class of GRMHD models to reproduce the observed variability.  
+%We will find that $76\%$ of standard models fail the $\mi{3}$ test: the data is quieter than the models.  This is the most severe downselect of all our constraints. Given the noisy nature of the model selection process we do not interpret this as success for the surviving $24\%$, all of which fail other constraints.  Instead we interpret this as a failure of the entire class of GRMHD models to reproduce the observed variability.
 
 %We discuss possible reasons for this exce in Section~\ref{sec:discussions}.
 
@@ -318,7 +318,7 @@ For each light curve available longer than 3 hours in the ALMA data and in earli
 
 %We measure $\mi{3}$ in maximally spaced intervals in the ALMA lightcurve on April 6, 7, and 11.\footnote{The model comparisons are insensitive to interval spacing.}  We have also measured $\mi{3}$ in historical data for \sgra from 2005-2017 light curves.  The April 6, 7, and 11 values for $\mi{3}$ (5 in all: 0.029, 0.031, 0.051, 0.041, 0.099) are consistent with having been drawn from the historical distribution, although April 7 is among the quietest intervals on record and April 11 is one of the most variable intervals on record.
 
-For each model we evaluate a light curve and use that to generate a distribution of $\mi{3}$.  We then use a KS test to ask whether that distribution is consistent with the historical distribution.\footnote{We can also use light curves from the 2017 campaign alone, which rejects {\em more} models.  The 2017 campaign light curve samples are consistent with having been drawn from the full historical dataset.} 
+For each model we evaluate a light curve and use that to generate a distribution of $\mi{3}$.  We then use a KS test to ask whether that distribution is consistent with the historical distribution.\footnote{We can also use light curves from the 2017 campaign alone, which rejects {\em more} models.  The 2017 campaign light curve samples are consistent with having been drawn from the full historical dataset.}
 %The constraint comes from $M_T$ measured over 3 maximally spaced intervals
 %in the April 7, 2017 ALMA light curve, where $M_3 = 0.024, 0.051,
 %0.047$ (Wielgus et al. 2021). These values are consistent with being drawn from the distribution estimated from historical non-EHT 2005-2017 light curves.
@@ -329,7 +329,7 @@ For each model we evaluate a light curve and use that to generate a distribution
 \begin{figure*}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_sz.pdf}
-  \caption{Second moment constraint example.  Left: passing snapshot; right: failing snapshot.  The model is rejected if $< 1\%$ of model snapshots pass. The solid white ellipse  represents the second moments of the image, and the dashed line shows the major axis.  The two green circles show the observed lower and upper limits from \citetalias{PaperIII}. The snapshot is rejected if either the major or minor axis lies between the lower and upper limits. 
+  \caption{Second moment constraint example.  Left: passing snapshot; right: failing snapshot.  The model is rejected if $< 1\%$ of model snapshots pass. The solid white ellipse  represents the second moments of the image, and the dashed line shows the major axis.  The two green circles show the observed lower and upper limits from \citetalias{PaperIII}. The snapshot is rejected if either the major or minor axis lies between the lower and upper limits.
   % cfg 15-dec: edited down
   %Visual representation on how the second moment constraint work. For each of the panels, the white ellipse represents the FWHM of the Gaussian fits. Hence, the white dashed shows the FWHM major axes, and an invisible line perpendicular to that is the FWHM minor axes. The two green circles mark the upper and lower limits of the allowed size. Given the relax criteria described in Section~\ref{sec:sz}, an image is deemed compliant as long as the white ellipse touch the region between the two green circle. The left panel is a feature model (see Section~\ref{sec:bestbets}) that passes this constraint because the white ellipse falls between the two green circle. The right panel is zero spin SANE model with $i=10$ and $\Rh = 1$, that fails this constraint because even its minor axis is too big compare to the upper observed limit.
   }
@@ -375,4 +375,4 @@ The procedure for estimating $\sigma_\text{var}^2 (|u|)$ has been validated usin
 
 The measured $\sigma_\text{var}^2$ is well characterized by a power law for $2~{\rm G}\lambda < |u| < 6~{\rm G}\lambda$ \citep{Georgiev_2022}.  For comparison with the models presented here, we distill the $\sigma_{\text{var}}^2$ to two numbers: a normalization at $4~{\rm G}\lambda$, characterized by the amplitude $\afour^2$ and a power law index $b$.  Because the normalization is done in the center of the fit range the estimated $\afour^2=3.7\pm0.8$ and $b=2.5\pm1$ are essentially uncorrelated.
 
-Model predictions for $\afour^2$ and $b$ are computed using the power spectral densities from \citet{Georgiev_2022}.\footnote{\citet{Georgiev_2022} gives the power spectral density of the complex visibility, $\langle\hat{P}(|u|)\rangle$, rather than the VA, and thus $\sigma_\text{var}^2=\langle \hat{P}\rangle/2$. } The anisotropic diffractive scattering kernel from \citet{Johnson_2018} is applied to $\sigma_\text{var}^2(|u|)$ and averaged over relative orientations of the major axis of the scattering kernel and the black hole spin.  These estimates are then azimuthally averaged, and the parameters $\afour^2$ and $b$ are determined from a least-squares linear fit to $\sigma_\text{var}^2(|u|)$ in $2~{\rm G}\lambda < |u| < 6~{\rm G}\lambda$. 
+Model predictions for $\afour^2$ and $b$ are computed using the power spectral densities from \citet{Georgiev_2022}.\footnote{\citet{Georgiev_2022} gives the power spectral density of the complex visibility, $\langle\hat{P}(|u|)\rangle$, rather than the VA, and thus $\sigma_\text{var}^2=\langle \hat{P}\rangle/2$. } The anisotropic diffractive scattering kernel from \citet{Johnson_2018} is applied to $\sigma_\text{var}^2(|u|)$ and averaged over relative orientations of the major axis of the scattering kernel and the black hole spin.  These estimates are then azimuthally averaged, and the parameters $\afour^2$ and $b$ are determined from a least-squares linear fit to $\sigma_\text{var}^2(|u|)$ in $2~{\rm G}\lambda < |u| < 6~{\rm G}\lambda$.

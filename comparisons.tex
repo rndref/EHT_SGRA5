@@ -24,7 +24,7 @@ We start with a set of ``standard'' models with aligned (prograde or retrograde)
 %------------------------------------------------------------------------------
 \subsubsection{EHT Constraints}
 
-How do the models fare when compared to the EHT data alone, using the size, null location, and m-ring fitting constraints?  The size constraint is simple but uninformative: only two face-on, $\Rh = 1$ models fail the test.  The null location test is informative and tends to rule out edge-on models.  M-ring fits are noisy but also informative---they are also consistent between model sets.  Many thermal model distributions look like the data, but edge-on models are strongly disfavored.
+How do the models fare when compared to the EHT data alone, using the size, null location, and \mring fitting constraints?  The size constraint is simple but uninformative: only two face-on, $\Rh = 1$ models fail the test.  The null location test is informative and tends to rule out edge-on models.  \Mring fits are noisy but also informative---they are also consistent between model sets.  Many thermal model distributions look like the data, but edge-on models are strongly disfavored.
 
 %..............................................................................
 \subsubsubsection{Second Moment}
@@ -57,7 +57,7 @@ Without assuming a ring, the observation data allows a wide range of second mome
 \begin{figure*}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/mring_width_example.pdf}
-  \caption{M-ring width constraint example.  Top left: image that satisfies the constraint; top right: image that fails the constraint; bottom left: observed distribution of m-ring widths over our 10 selected scans (light grey) and passing image distribution over 10 scans and 4 position angles (black); bottom right: observed distribution of m-ring widths over our 10 selected scans (light grey) and failing image distribution over 10 scans and 4 position angles.
+  \caption{\Mring width constraint example.  Top left: image that satisfies the constraint; top right: image that fails the constraint; bottom left: observed distribution of \mring widths over our 10 selected scans (light grey) and passing image distribution over 10 scans and 4 position angles (black); bottom right: observed distribution of \mring widths over our 10 selected scans (light grey) and failing image distribution over 10 scans and 4 position angles.
   }
   \label{fig:mring_width_example}
 \end{figure*}
@@ -94,17 +94,16 @@ This is mainly because the edge-on MADs are bright blobs with faint rings, so th
 The null location constraint rejects 16\% of models in total.
 
 %..............................................................................
-\subsubsubsection{M-ring Fits}
+\subsubsubsection{\Mring Fits}
 \label{sec:mring}
 
-The m-ring fits reject 7\%, 33\%, and 65\% of models for the ring asymmetry, diameter, and width respectively.
+The \mring fits reject 7\%, 33\%, and 65\% of models for the ring asymmetry, diameter, and width respectively.
 
 The asymmetry parameter is typically not well constrained. Most rejected models are high inclination MAD models with $\abh \ge 0$.  These models have asymmetries that are large and detectable because Doppler boosting concentrates emission in an equatorial spot on the approaching side of the disk.
 
 %\begin{figure*}
 %  \centering
- % \includegraphics[width=\columnwidth]{./figures/Mring_f1_Constraints.png}
-%  \caption{m-ring asymmetry}
+ % \includegraphics[width=\columnwidth]{./figures/Mring_f1_Constraints.png} %  \caption{\mring asymmetry}
 %  \label{fig:cmp_m-ring_asymm}
 %\end{figure*}
 
@@ -112,7 +111,7 @@ The ring diameter is better constrained than the asymmetry parameter and varies 
 
 Most of the models that fail are low inclination models with ring diameters that are too large (no models fail because the ring diameter is too small).  For example, the face-on, $\Rh = 10$ SANE models fail for all spins except $\abh = 0.94$ because the ring is too large.  The same is true for all face-on MAD models with $\Rh = 1$.
 
-Notice that the ring diameter is not degenerate with the second moment constraint; all models that fail the latter pass the former.  Recall that in addition to a blurred ring, the m-rings model contains a centered Gaussian component; the Gaussian tends to grow to absorb the emission when the ring is very extended.
+Notice that the ring diameter is not degenerate with the second moment constraint; all models that fail the latter pass the former.  Recall that in addition to a blurred ring, the \mrings model contains a centered Gaussian component; the Gaussian tends to grow to absorb the emission when the ring is very extended.
 
 % cfg 15-dec: objection noted, this is going to require some rewriting and re-labeling of figures if we go through with this.
 %\monika{can we stop calling these models Illinois or Frankfurt models???}
@@ -121,30 +120,30 @@ The distribution of ring diameters for many SANE models is multimodal (consisten
 %\begin{figure*}
 %  \centering
 %  \includegraphics[width=\textwidth]{./figures/Mring_d_Constraints.png}
-%  \caption{M-Ring diameter.}
+%  \caption{\Mring diameter.}
 %  \label{fig:cmp_m-ring_diam}
 %\end{figure*}
 
-The m-ring width $w$ is the most tightly constrained of our 3 parameters. Although the closure phases constrain $w$ as well, it is easy to see how $w$ affects visibility amplitudes at long baselines. For example, for a simple, symmetric ring the visibility amplitudes are a Bessel function multiplied by a Gaussian with width $\sim 1/w$, and increasing $w$ therefore decreases the amplitude of the long baselines.
+The \mring width $w$ is the most tightly constrained of our 3 parameters. Although the closure phases constrain $w$ as well, it is easy to see how $w$ affects visibility amplitudes at long baselines. For example, for a simple, symmetric ring the visibility amplitudes are a Bessel function multiplied by a Gaussian with width $\sim 1/w$, and increasing $w$ therefore decreases the amplitude of the long baselines.
 
 Figure~\ref{fig:mring_width_example} shows which models pass this constraint. All rejected models have median $w$ that is below the median of the data, $ \simeq 17.5\mu$as. The rejected models include all but 3 MAD models at $\abh \le 0$ and all edge-on ($i = 90\degree$) MAD models.  MAD models exhibit a strong trend toward smaller $w$ as $i$ increases.  SANE models exhibit a similar but weaker trend. The SANE model images have  higher optical depth, broader rings, and more substructure than the MAD models.  Their $w$ distributions are typically broad, with mode well below $17.5\mu$as.  Only for $\abh = 0.94$, where the optical depth is lowest due to higher temperatures in the emitting region, do most of the models exhibit a sharply peaked $w$ distribution centered at $17.5\mu$as.
 
 \begin{figure*}
  \centering
  \includegraphics[width=\textwidth]{./figures/Mring_w_Constraints.png}
-  \caption{Pass/fail plot for the m-ring widths.}
+  \caption{Pass/fail plot for the \mring widths.}
 % \label{fig:cmp_m-ring_width}
 \end{figure*}
 
 %..............................................................................
 \subsubsubsection{EHT Constraint Summary}
 
-We can combine all EHT constraint cuts with a logical {\em and} operation.  The results are summarized in Figure~\ref{fig:all_EHT_constraints}.  Evidently EHT data alone is capable of discriminating between models.   The edge-on ($i = 90\degree$) MAD models all fail, with some failing m-ring width, diameter, asymmetry and the null location constraint.  The cuts clearly favor $\abh > 0$ models, although there are exceptions.  For the Illinois model set, we are left with $33/100$ SANE models and $16/100$ MAD models.
+We can combine all EHT constraint cuts with a logical {\em and} operation.  The results are summarized in Figure~\ref{fig:all_EHT_constraints}.  Evidently EHT data alone is capable of discriminating between models.   The edge-on ($i = 90\degree$) MAD models all fail, with some failing \mring width, diameter, asymmetry and the null location constraint.  The cuts clearly favor $\abh > 0$ models, although there are exceptions.  For the Illinois model set, we are left with $33/100$ SANE models and $16/100$ MAD models.
 
 \begin{figure*}
   \centering
     \includegraphics[width=\textwidth]{./figures/Interferometric_Constraints.png}
-  \caption{Combined EHT constraints (logical {\em and}) including the second moment, null location, and m-ring fit constraints.}
+  \caption{Combined EHT constraints (logical {\em and}) including the second moment, null location, and \mring fit constraints.}
   \label{fig:all_EHT_constraints}
 \end{figure*}
 
@@ -329,7 +328,7 @@ We have also considered a set of thermal, $\Rh$, MAD models run with the \koral 
 None of the standard thermal models (Frankfurt or Illinois) survive the full gauntlet of constraints.   Variability rejects about $70\%$ of models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models.
 Evidently either (1) the models fail in some important respect, or (2) some of the data underlying the model tests are incorrect, or (3) one or more of the constraints have been misapplied.
 
-We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens when we lift one constraint.  About 5\% of both the Frankfurt and Illinois model sets fail only 1 constraint.  For Frankfurt, 8 models fail only $\mi{3}$, and 2 fail only m-ring diameter.  For Illinois, 3 models fail only $\mi{3}$ and 5 fail only the 86\GHz size.  Suspicion therefore falls on $\mi{3}$, which rejects $\approx 70\%$ of Frankfurt and Illinois models.  Why might the $\mi{3}$ constraint be misleading?
+We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens when we lift one constraint.  About 5\% of both the Frankfurt and Illinois model sets fail only 1 constraint.  For Frankfurt, 8 models fail only $\mi{3}$, and 2 fail only \mring diameter.  For Illinois, 3 models fail only $\mi{3}$ and 5 fail only the 86\GHz size.  Suspicion therefore falls on $\mi{3}$, which rejects $\approx 70\%$ of Frankfurt and Illinois models.  Why might the $\mi{3}$ constraint be misleading?
 
 One possibility is that some fraction of the $230\GHz$ flux density, $f_\mathrm{ext}$, is in an extended structure (a jet) that is slowly varying, captured in the ALMA light curves, and resolved out by EHT.  The implied $f_{ext}$ is model-dependent, but if $f_{ext} \sim 30\%$ then nearly all MAD models would pass $\mi{3}$ and many SANE models would be rejected as too quiet.  The $4$G$\lambda$ amplitude variability is normalized by the light curve and thus $a_4$ would increase by a similar factor.  Notice that if $f_{ext} > 0$ then the models would need to be re-normalized (the accretion rate adjusted) so that the compact flux is $(1 - f_{ext}) \times 2.4\,\mathrm{Jy}$.  The extended flux hypothesis can be tested by the addition of new, short baselines to the EHT.
 
@@ -376,9 +375,9 @@ We consider nonstandard models next, including nonthermal eDF models, wind-fed m
 
 % The NIR fluxes show a tight correlation over four orders of magnitude and systematically larger flux for the BHAC models for low NIR fluxes ($\log_{10}(NIR)<-7$). These fluxes are far below the NIR constraints of $\sim 1mJy$, and therefore they do not affect the passing or failing of the models. In the thermal models the NIR flux is generated from the tail of the electron distribution function and is thus very sensitive to the electron temperature. Small differences in the distribution and value of the electron temperature between the two codes explain the observed de-correlation at very low NIR flux.
 
-% The correlation between models for the m-ring parameters is presented in the third row of Fig.~\ref{fig:modelcorrelation}. The correlation of the diameter of the m-ring is plotted in the left panel. The spread covers nearly the same extent as the 230\GHz image size (top row, right panel) however the scatter in the correlation is larger.  The same is true for the width of the m-ring (middle panel in the last row of Fig.~\ref{fig:modelcorrelation}). Compared to the diameter and width of the m-ring, the asymmetry of the m-ring is less correlated (right panel). Notice that horizontal and vertical limits in the asymmetries occur since the parameter hits the boundary of the allowed range.
+% The correlation between models for the \mring parameters is presented in the third row of Fig.~\ref{fig:modelcorrelation}. The correlation of the diameter of the \mring is plotted in the left panel. The spread covers nearly the same extent as the 230\GHz image size (top row, right panel) however the scatter in the correlation is larger.  The same is true for the width of the \mring (middle panel in the last row of Fig.~\ref{fig:modelcorrelation}). Compared to the diameter and width of the \mring, the asymmetry of the \mring is less correlated (right panel). Notice that horizontal and vertical limits in the asymmetries occur since the parameter hits the boundary of the allowed range.
 
-% The smaller correlation of the m-ring parameters as compared to the other parameters presented in Fig.~\ref{fig:modelcorrelation} is a consequence of the noisy nature of the m-ring fits.  Still, the distributions are quite symmetric under reflection across the diagonal, so the models are at least not biased with respect to each other.  Notice also that these plots do not capture all the information that is contained in the distribution of m-ring parameters, just the central value.
+% The smaller correlation of the \mring parameters as compared to the other parameters presented in Fig.~\ref{fig:modelcorrelation} is a consequence of the noisy nature of the \mring fits.  Still, the distributions are quite symmetric under reflection across the diagonal, so the models are at least not biased with respect to each other.  Notice also that these plots do not capture all the information that is contained in the distribution of \mring parameters, just the central value.
 
 % We find ourselves somewhat surprised by the strength of the correlations seen in Figure \ref{fig:modelcorrelation}.  The range of each constraint is significantly larger than the width of the correlation, so the variations between models are real, detectable, and reproducible with independent codes.  The question of the origin of the systematic offsets between models for some constraints (for example, in the NIR) is interesting but beyond the scope of this paper.
 
@@ -451,7 +450,7 @@ The addition of the power-law tail primarily increases the flux in the NIR and t
 ...
 
 %..............................................................................
-%\subsubsubsection{m-ring}
+%\subsubsubsection{\Mring}
 
 %\note{Razi to write here about variable $\kappa$ models.  Define a subsection, describe the results and how they differ from the thermal results.}\kc{might be better to move this to 4.2.3 along with bhac/bhoss results}
 
@@ -490,7 +489,7 @@ The variability is almost completely unaffected by the $\kappa$ distribution. We
 %and thus a direct comparison cannot be performed. However we find that 66\% of the models fail this test. The number roughly agrees with the thermal models and thus we conclude that the non-thermal particles included via a $\kappa$ eDF with $kappa=5$ does not affect the variability.
 
 %..............................................................................
-%\subsubsubsection{M-ring Constraint}
+%\subsubsubsection{\Mring Constraint}
 
 %\note{to be done}
 
@@ -591,11 +590,11 @@ As noted above, NIR emission is produced from the tail of the eDF.  The thermal 
 %For the comparison with the ALMA light curves we compute the modulation index for a 3\,hour time window and across the entire simulated time window of 28\,hours (5000\,GM/c$^3$). Similar to the 86\GHz flux the 230\GHz flux is mainly produced within a few gravitational radii and thus not affected by the addition of non-thermal particles using Eq. \ref{eq:kappaeff}. As in the previous constraints, the MAD accretion models are insensitive to the addition of non-thermal particles whereas the SANE models show some increased modulation index for $\Rh>40$. However, the distributions for thermal and non-thermal eDF are still largely overlapping.
 
 %..............................................................................
-%\subsubsubsection{M-Ring Constraint}
+%\subsubsubsection{\Mring Constraint}
 
-%The m-ring fitting is applied to the 230\GHz images. As mentioned earlier the flux and size of the 230\GHz images are not affected by the inclusion of non-thermal particles with fixed $\kappa$ and variable efficiency. Thus, we do not expect any changes in the distribution of the m-ring parameters.  Applying m-ring fitting to non-thermal models and a detailed comparison with the thermal results confirmed our initial assumption.
+%The \mring fitting is applied to the 230\GHz images. As mentioned earlier the flux and size of the 230\GHz images are not affected by the inclusion of non-thermal particles with fixed $\kappa$ and variable efficiency. Thus, we do not expect any changes in the distribution of the \mring parameters.  Applying \mring fitting to non-thermal models and a detailed comparison with the thermal results confirmed our initial assumption.
 
-%\cmf{based on the results of Kotaro, who run the m-ring on non-thermal models}
+%\cmf{based on the results of Kotaro, who run the \mring on non-thermal models}
 
 %------------------------------------------------------------------------------
 \subsubsection{Variable \texorpdfstring{$kappa$}{kappa} Model}
@@ -655,7 +654,7 @@ The addition of nonthermal particles increases the x-ray emission from the major
 \subsubsection{Summary of Constraints on Non-Thermal Models}
 
 The nonthermal eDF models considered here produce little change compared to the thermal models for most constraints.  The 86\GHz size and flux, which are the most important non-EHT constraints, are only marginally affected by the addition of nonthermal electrons.
-The 230\GHz m-ring fits are hardly affected at all by the addition of nonthermal electrons, and $\mi{3}$ is also not significantly affected by the addition of nonthermal electrons.  The NIR and x-ray flux densities, however, are consistently increased by the nonthermal eDF prescriptions.  In a large fraction of models this leads to overproduction of NIR or x-ray flux. Since the nonthermal models analysed here do not consider the heating efficiency due to the magnetic reconnection, $\varepsilon \neq 0$, those effects can be explained by asymptotic behaviour of the nonthermal emissivity, $ j_{\nu}\propto\exp\left(-\Theta_e^{-2/3}\nu^{1/3}\right)+\nu^{-(\kappa-2)/2} \left[(\kappa -3)\Theta_{\rm e} + \varepsilon(\kappa -3) \sigma\right]^{\kappa-2}$. The second term dominates at NIR and x-rays, while at mm and radio frequencies the first term dominates. However, as soon as heating efficiency in the third term becomes nonzero, the nonthermal contribution generates a larger emission region, expanding the image size at 86\GHz,  and increasing the total intensity \citep{2021NatAs.tmp..218C,2021arXiv211102518F}. Furthermore, both the NIR and the x-ray average flux increases as efficiency increases. 
+The 230\GHz \mring fits are hardly affected at all by the addition of nonthermal electrons, and $\mi{3}$ is also not significantly affected by the addition of nonthermal electrons.  The NIR and x-ray flux densities, however, are consistently increased by the nonthermal eDF prescriptions.  In a large fraction of models this leads to overproduction of NIR or x-ray flux. Since the nonthermal models analysed here do not consider the heating efficiency due to the magnetic reconnection, $\varepsilon \neq 0$, those effects can be explained by asymptotic behaviour of the nonthermal emissivity, $ j_{\nu}\propto\exp\left(-\Theta_e^{-2/3}\nu^{1/3}\right)+\nu^{-(\kappa-2)/2} \left[(\kappa -3)\Theta_{\rm e} + \varepsilon(\kappa -3) \sigma\right]^{\kappa-2}$. The second term dominates at NIR and x-rays, while at mm and radio frequencies the first term dominates. However, as soon as heating efficiency in the third term becomes nonzero, the nonthermal contribution generates a larger emission region, expanding the image size at 86\GHz,  and increasing the total intensity \citep{2021NatAs.tmp..218C,2021arXiv211102518F}. Furthermore, both the NIR and the x-ray average flux increases as efficiency increases.
 %on the other hand, the SED is not sensitive to the black hole spin but image size increase for prograde models, we have consistency overall our models (\bhac / \hamr).
 
 %The effect of adding non-thermal electrons in a $\kappa$ eDF with  $\kappa=3.4$ and variable efficiency via Eq.~\ref{eq:efficiencybetasigma} can be summarized as follows:
@@ -711,7 +710,7 @@ The accretion models of \cite{2020ApJ...896L...6R, 2020MNRAS.492.3272R, 2018MNRA
 
 We consider two versions of the model: one in which the stellar wind magnetization is low ($\beta = 10^6$) and another and a second in which the magnetization is high ($\beta = 10^2$). $\Rh$ is adjusted until each model has the observed time-averaged 230\GHz flux density, with $\Rh = 13$ ($\beta = 10^6$) and $\Rh = 28$ ($\beta = 10^2$).
 
-Both wind-fed models fail the m-ring width test, producing a width that is too small.  In addition both fail the 86GHz flux test: the 86GHz flux density is too large.  The wind-fed models also fail the $\mi{3}$ test, although they are quieter than MAD models and close to the cutoff.   All scoring results are given in Appendix~\ref{app:tables}, Table \ref{tab:resslerPF}.
+Both wind-fed models fail the \mring width test, producing a width that is too small.  In addition both fail the 86GHz flux test: the 86GHz flux density is too large.  The wind-fed models also fail the $\mi{3}$ test, although they are quieter than MAD models and close to the cutoff.   All scoring results are given in Appendix~\ref{app:tables}, Table \ref{tab:resslerPF}.
 
 Both non-EHT and EHT constraints have the power to test the wind-fed model.  It is {\em not} possible to draw broad conclusions about the viability of the wind-fed models in general, however, since the two models tested here contain only a single spin ($a_\star=0$) and all use the $\Rh$ thermal eDF model.
 
