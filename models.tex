@@ -293,19 +293,19 @@ The plasma mass scale parameter $\Munit$ controls the plasma emissivity and the 
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{figures/sample_imgs.pdf}
+  \includegraphics[width=\textwidth]{figures/example_imgs.pdf}
   \caption{Example models from the simulation library.  (top row) 86\GHz images (bottom row)  230\GHz images.  Left column: best-bet thermal MAD; middle column: nonthermal variable $\kappa$ MAD; right column: thermal SANE model.  These models satisfy 9/11 (variable $\kappa$) or 10/11 constraints.
     % cfg 15 dec: edited remainder out
     %On one hand, most of the 230\GHz images are in an optically thin regime, making the sharp photon ring visibile (bottom left and middle panels). On the other hand, most of the 86\GHz images are in an optically thick regime, and the accretion disk would block the sharp photon ring (top middle and right panels). In general, face-on images like the ones in the left column tend to be too big in size, and the edge-on images in the right column tend to be too asymmetric.
     }
-  \label{fig:sample_imgs}
+  \label{fig:example_imgs}
 \end{figure*}
 
 %% \begin{figure*}
 %%   \centering
 %%   \includegraphics[width=\textwidth]{figures/sample_seds.pdf}
 %%   \caption{Example SEDs from the models shown in
-%%     Figure~\ref{fig:sample_imgs}:
+%%     Figure~\ref{fig:example_imgs}:
 %%     (\emph{left})~thermal SANE,
 %%     (\emph{middle})~thermal MAD, and
 %%     (\emph{right})~non-thermal variable $\kappa$ MAD.  Black dots and arrows show measured flux density at $86\GHz$ and $230\GHz$ and $2.2\um$ and x-ray quiescent upper limits. The black line shows the total SED; colored lines show contributions from direct synchrotron emission, Compton scattering, and bremsstrahlung (see legend).
@@ -318,11 +318,11 @@ The plasma mass scale parameter $\Munit$ controls the plasma emissivity and the 
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{figures/sample_vas_seds.pdf}
+  \includegraphics[width=\textwidth]{figures/example_vas_seds.pdf}
   % cfg 15-dec: edited for clarity, left all content in.
   \caption{Visibility amplitudes (left) and SEDs (right) of the three featured models, compared with the data.  Black symbols show observations.  Blue, orange, and green are Models~A, B, C, respectively (see Table~\ref{tab:bestbets} for details).  Observed VAs are 10\sec incoherently averaged data from the HOPS pipeline on \aprilvii.  Model VAs are shown as a solid line for a section at position angle $0\deg$ for a single snapshot, and the band shows the 1st through 99th percentile over all position angles and all times.  Model SEDs show a solid line for the mean SED and a band for the range across snapshots.
   }
-  \label{fig:sample_vas_seds}
+  \label{fig:example_vas_seds}
 \end{figure*}
 
 Given an eDF, density scale $\Munit$, and radiative transfer coefficients based on local properties of plasma, the emergent radiation is obtained by integrating the radiative transfer equation.
@@ -338,7 +338,7 @@ Separate SEDs are produced for a set of narrow bins in inclination angle. For ea
 The SED includes synchrotron, bremsstrahlung, \emph{and} Compton scattering.
 NIR emission is usually dominated by synchrotron, but we find that occasionally NIR synchrotron is so weak that Compton scattering overtakes.
 The x-ray can be dominated by bremsstrahlung or Compton scattering, mainly depending on the electron temperature.
-In Figures~\ref{fig:sample_imgs} and \ref{fig:sample_seds}, we present an illustrative set of model images and multiwavelength SEDs from our library.
+In Figures~\ref{fig:example_imgs} and \ref{fig:example_vas_seds}, we present an illustrative set of model images and multiwavelength SEDs from our library.
 
 All radiative transfer models used here set the emissivity, absorptivity and inverse-Compton scattering cross-sections to $0$ at $\sigma \equiv B^2/(8\pi\rho c^2) > \sigma_\mathrm{cut} = 1$.  This cutoff is motivated by the notion that the numerical solution is unreliable at $\sigma > \sigma_\mathrm{cut}$.  In particular numerical diffusion into the low density region (at the ``funnel wall'') makes the density too large, and truncation error in integration of the total energy equation produces large fractional errors in temperature.
 
