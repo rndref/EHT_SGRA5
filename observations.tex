@@ -3,11 +3,11 @@
 \sgra is one of the most observed objects in the sky.  It has been observed with a slew of telescopes across 5 decades in time and more than 17 decades in frequency. We must identify a manageable subset of this data to constrain our models. In doing so we have attempted to select
 \emph{i})~approximately uncorrelated constraints, so that each tests a distinct aspect of the model;
 \emph{ii})~constraints based on data that can be simulated with the models; and
-\emph{iii})~constraints based on EHT 2017 1.3\mm VLBI data or based on photons produced within or close to the 1.3\mm emission region that are contemporaneous or near-contemporaneous.
+\emph{iii})~constraints based on EHT 2017 1.3\mm VLBI data or based on photons produced within or close to the 1.3\mm emission region and observed contemporaneously or near-contemporaneously with the EHT 2017 campaign.
 
-Variability complicates the comparison of \sgra models to the data. Even an ideal evolution of a successful model will never match the data point for point because the space of possible realizations of the model is large; the dataset is high dimensional.  We expect the {\em distribution} of  observables derived from a successful model to match the data, however, if the model is run long enough to sample the distribution.  For example, the distribution of the 86\GHz flux density $F_{86}$ for a model ought to contain the observed $F_{86}$.
+Variability complicates the comparison of \sgra models to the data. Even an ideal evolution of a successful model will never match the data point for point because the space of possible realizations of the model is large.  We do, however, expect the {\em distribution} of  observables derived from a successful model to match the data if the model is run long enough to sample the distribution.  For example, the distribution of the 86\GHz flux density $F_{86}$ for a model ought to contain the observed $F_{86}$.
 
-Most observables are correlated over $\tau\sim$ few $\times 100 \tg$.  To obtain the mean and variance of the model distribution to accuracy $f$ from a GRMHD model, then, requires running it for $\sim \tau/f^2 \sim 30,000 (\tau/300) (f/0.1)^{-2}$, assuming the model decorrelates completely at intervals $\gg \tau$.  A GRMHD model of duration $30,000 \tg$  costs $10^3-10^4$ node-hours, depending on resolution, code, and hardware.  This is expensive since $\sim 10$ runs are used for each model set, and runs need to be repeated for multiple values of numerical parameters (e.g., resolution).  Most of our models are run for $30,000 \tg$; a few are run to $100,000 \tg$.  The model distributions therefore contain sampling noise, and this must be accounted for in model selection.  For some  constraints (e.g., m-ring fits; see below) this can be done by sampling the model at a cadence similar to the correlation time and then using a 2-sample KS test to compare the observed and model distributions.
+Most observables are correlated over $\tau\sim$ few $\times 100 \tg$.  To obtain the mean and variance of the model distribution to accuracy $f$ from a GRMHD model, then, requires running it for $\sim \tau/f^2 \sim 30,000 (\tau/300) (f/0.1)^{-2}$, assuming the model decorrelates completely at intervals $\gg \tau$.  A GRMHD model of duration $30,000 \tg$  costs $10^3-10^4$ node hours, depending on resolution, code, and hardware.  This is expensive since $\sim 10$ runs are used for each model set, and runs need to be repeated for multiple values of numerical parameters (e.g., resolution).  Most of our models are run for $30,000 \tg$; a few are run to $100,000 \tg$.  The model distributions therefore contain sampling noise, and this must be accounted for in model selection.  For some  constraints (e.g., m-ring fits; see Section \ref{sec:mring}) this can be done by sampling the model at a cadence similar to the correlation time and then using a 2-sample KS test to compare the observed and model distributions.
 
 The constraints are heterogeneous and it is not possible to treat them completely consistently.  If a constraint returns a probability $p$ that, for example, the observed and model distributions are drawn from the same underlying distribution, then we reject at $p < p_c = 0.01$.  If a constraint returns a ``compliance fraction'' $f$ of, for example, the fraction of snapshots that are consistent with the data, then we also cut at $f < 0.01$.  For $N$ constraints a $p$ threshold implies that we expect to wrongly reject $1 - (1 - p_c)^N$ of acceptable models; for $p_c = 0.01$ and $N = 10$ this is $\approx 10\%$.
 
@@ -49,12 +49,11 @@ The constraints are heterogeneous and it is not possible to treat them completel
 
 We test the models against EHT interferometric data in three ways.
 First, we compare an estimate of the source size (``second moment'')
-to an estimate from the short baseline visibility amplitudes (VAs).
+against an estimate from the short baseline visibility amplitudes (VAs).
 Second, we check the location of the first minimum and the long
 baselines values of the VAs (``\vam'').
 Finally, using a variant of a procedure from \citetalias{PaperIV}, we
-compare fits for the diameter, width, and asymmetry of an m-ring (a
-parameterized image-plane model) to the GRMHD models.
+compare fits for the diameter, width, and asymmetry of an m-ring (a parameterized image-plane model, ``m-ring constraints'') to the GRMHD models.
 
 %------------------------------------------------------------------------------
 \subsubsection{230\GHz VLBI Pre-Image Size}
@@ -77,9 +76,7 @@ the visibilities near zero baseline in the $uv$ domain, so short
 baseline VAs can be used to directly estimate the source size.
 
 This procedure is used in \citetalias{PaperII} to set an upper limit
-of 95\uas FWHM on the second moment and lower limit of 38\uas FWHM on
-the second moment along a particular directions through the source,
-with the direction determined by the orientation of the short
+of 95\uas FWHM (full width at half maximum; standard deviation $\times \sqrt{8\log{2}}$.) on the second moment and lower limit of 38\uas FWHM on the second moment along a particular directions through the source, with the direction determined by the orientation of the short
 baselines.
 This is done without any assumption about the structure of the source;
 if we used a ring prior the constraint would be narrower.
@@ -319,7 +316,7 @@ We use $T = 3$ hours ($\sim 530~\tg$) because it is comparable to the correlatio
 For each light curve, we take 3 hour segments equally spaced away from the endpoints and each other and calculate the $\mi{3}$ on each segment. This procedure gives us a set of 42 samples of the $\mi{3}$ for the historical dataset. We note that the $\mi{3}$ measured from the EHT 2017 observations on April 5-11 are consistent with being drawn from this distribution, although April 7 has one of the quietest segments on record, while April 11 has one of the most variable.
 
 % old version, revised out following D. Lee 11-dec cfg
-%We have chosen to compare the models to the 7 April 2017 ALMA light using the 3 hour {\em modulation index} $\mi{3}$, where $\mi{T} \equiv \sigma_T/\mu_T$, $\sigma_T$ is the standard deviation measured over some interval $T$, and $\mu_T$ is the mean measured over the same interval.  We use $\mi{T}$ following \citet{2015ApJ...812..103C} because it is easy to describe, easy to compute, commonly used in the literature (in the x-ray astronomy literature it is ``rms \%''), and closely related to the structure function, since the expectation value for $\sigma_T^2$ is given by an integral over the structure function (see Lee et al. 2022).
+%We have chosen to compare the models to the  April 7, 2017 ALMA light using the 3 hour {\em modulation index} $\mi{3}$, where $\mi{T} \equiv \sigma_T/\mu_T$, $\sigma_T$ is the standard deviation measured over some interval $T$, and $\mu_T$ is the mean measured over the same interval.  We use $\mi{T}$ following \citet{2015ApJ...812..103C} because it is easy to describe, easy to compute, commonly used in the literature (in the x-ray astronomy literature it is ``rms \%''), and closely related to the structure function, since the expectation value for $\sigma_T^2$ is given by an integral over the structure function (see Lee et al. 2022).
 
 %We use $T = 3$ hours because it is comparable to the correlation time for $F_{230}$ in most of the models, and because it is similar to the characteristic timescales measured in damped random walk fits to the ALMA lightcurve \citep[see Table 10 of][]{Wielgus2022}.  Although the correlation times tend to be slightly longer than $3$hr, that is the longest timescale for which we can consistently estimate the mean and variance of the distribution of $\mi{3}$ from the models (accurate estimation for larger $T$ would require longer GRMHD integration times).  In a damped random walk process one can show that $\mi{3}$ is minimally correlated over consecutive 3 hour intervals (Lee et al. 2022).
 
@@ -327,7 +324,7 @@ For each light curve, we take 3 hour segments equally spaced away from the endpo
 
 For each model we evaluate a light curve and use that to generate a distribution of $\mi{3}$.  We then use a KS test to ask whether that distribution is consistent with the historical distribution.
 %The constraint comes from $M_T$ measured over 3 maximally spaced intervals
-%in the 7 April 2017 ALMA light curve, where $M_3 = 0.024, 0.051,
+%in the April 7, 2017 ALMA light curve, where $M_3 = 0.024, 0.051,
 %0.047$ (Wielgus et al. 2021). These values are consistent with being drawn from the distribution estimated from historical non-EHT 2005-2017 light curves.
 %curves. \mw{maybe sth like "from the estimated distribution of the historical 2005-2017 lightcurves"?}
 
