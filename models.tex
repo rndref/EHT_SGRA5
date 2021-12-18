@@ -102,12 +102,12 @@ As discussed in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \c
     \colhead{Reference}
   }
   \startdata
-  \begin{tabular}{@{}c@{}} standard / \\ \kharma \end{tabular} & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $4/3$      & 30,000  & 1000     & [288x128x128]     & \!\!\!\!\!\!\!\!\!
+  \begin{tabular}{@{}c@{}} torus / \\ \kharma \end{tabular} & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $4/3$      & 30,000  & 1000     & [288x128x128]     & \!\!\!\!\!\!\!\!\!
   \begin{tabular}{@{}c@{}c@{}c@{}} This work\\\citet{kharma_2022}\\\citet{Wong_2022} \\ \citet{Dhruv_2022}\end{tabular}\\
 % \citet{Wong_2022, Dhruv_2022} \\
-  \begin{tabular}{@{}c@{}} standard / \\ \bhac \end{tabular}   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $4/3$      & 30,000  & 3333     & [512x192x192]     & This work \\
-  \begin{tabular}{@{}c@{}} standard / \\ \hamr \end{tabular}   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $13/9,5/3$ & 35,000  & 1000/200 & [348/240×192×192] & This work \\
-  \begin{tabular}{@{}c@{}} standard / \\ \koral \end{tabular}  & \!\!\!\!\!\!\!\!\!
+  \begin{tabular}{@{}c@{}} torus / \\ \bhac \end{tabular}   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $4/3$      & 30,000  & 3333     & [512x192x192]     & This work \\
+  \begin{tabular}{@{}c@{}} torus / \\ \hamr \end{tabular}   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $13/9,5/3$ & 35,000  & 1000/200 & [348/240×192×192] & This work \\
+  \begin{tabular}{@{}c@{}} torus / \\ \koral \end{tabular}  & \!\!\!\!\!\!\!\!\!
   \begin{tabular}{@{}c@{}c@{}}   0,$\pm0.3$,$\pm0.5$\\$\pm0.7$,$\pm0.9$ \end{tabular}
   \!\!\!\!\!\!\!\!\! & MAD          & $13/9$     & 101,000 & 100,000  & [288x192x144]     & \citet{2021arXiv210812380N} \\
   \begin{tabular}{@{}c@{}} tilted / \\ \hamr \end{tabular}     & $15/16$     & IN-SANE      & 5/3        & 105,000 & 100,000  & [448x144x240]     & \begin{tabular}{@{}c@{}} \citet{Liska2018} \\ \citet{Chatterjee2020}\end{tabular} \\
@@ -157,7 +157,7 @@ The torus initial conditions are motivated by the notion that the near-horizon f
 
 All simulations are run in horizon penetrating coordinates that derive from Kerr-Schild coordinates, which are regular on the horizon.
 Most are run in a variant of spherical polar coordinates.
-The \emph{standard} boundary conditions are outflow at the inner boundary, located inside the event horizon, outflow at the outer boundary, located at $r \gtrsim 1000~\rg$, and reflecting boundary conditions at the poles.
+Unless stated otherwise, boundary conditions are outflow at the inner boundary, located inside the event horizon, outflow at the outer boundary, located at $r \gtrsim 1000~\rg$, and reflecting boundary conditions at the poles.
 Standard simulations are evolved to $t_\mathrm{final} = 30,000~\tg$.
 
 Once the evolution has started, a combination of instabilities including the magnetorotational instability \citep[MRI][]{1992ApJ...400..610B} drives the torus to a turbulent, fluctuating state.
@@ -174,12 +174,12 @@ MAD models have $\phi \sim \phi_{\rm crit} \sim 60$.\footnote{In the Lorentz-Hea
 In MAD models, magnetic flux accretes onto the hole until $\phi \gtrsim \phi_\mathrm{crit}$, then magnetic flux is expelled from the hole and escapes through the inflowing plasma.
 SANE models have $\phi < \phi_c$, and in most of our standard models have $\phi \sim 1$.
 
-We also consider two \emph{non-standard} GRMHD simulations: strongly magnetized non-MAD tilted torus simulations \citep{Liska2018, Chatterjee2020} and a model in which \sgra is fed directly by winds from stars in its vicinity \citep{2020ApJ...896L...6R}.
+We also consider two GRMHD simulations with different initial conditions: strongly magnetized non-MAD tilted torus simulations \citep{Liska2018, Chatterjee2020} and a model in which \sgra is fed directly by winds from stars in its vicinity \citep{2020ApJ...896L...6R}.
 The self-consistent wind feeding simulations result in a mode of accretion that is similar to MAD but typically has lower mean angular momentum and is less well organized.
 The wind-fed models have $\abh = 0$.
 
 The GRMHD model library is summarized in Table~\ref{tab:GRMHDmodels}.
-In Figure~\ref{fig:GRMHD} we show a few examples of standard and non-standard GRMHD runs.
+In Figure~\ref{fig:GRMHD} we show a few examples of GRMHD runs with both standard torus and non-standard GRMHD runs.
 The models vary in numerical method and in numerical resolution. We present more information on the numerical methods and models in Appendices~\ref{app:numerical} and \ref{app:variability}.
 
 \begin{figure*}
@@ -190,7 +190,7 @@ The models vary in numerical method and in numerical resolution. We present more
   \includegraphics[width=0.425\textwidth]{figures/ressler_3D_final.png}
   \caption{3-D overview of selected GRMHD simulations of \sgra in our library.
     The color marks constant dimensionless density surfaces and lines follow magnetic field lines (the magnetic field lines shown are only those which are attached to the inner part of the accretion flow, at $r\approx 5~\rg$).
-    Two top panels show standard accretion models: SANE (left panel, $\abh=0.94$) and MAD (right panel, $\abh=0.5$).
+    Two top panels show accretion models with standard torus initial condition: SANE (left panel, $\abh=0.94$) and MAD (right panel, $\abh=0.5$).
     Two bottom panels show non-standard accretion models: tilted disk (left panel, $\abh=0.94$ and tilt angle of $60\degree$) and Wind Accretion (right panel, $\abh=0$).
     In case of spinning black holes, the spin is aligned with z-axis.}
   \label{fig:GRMHD}
