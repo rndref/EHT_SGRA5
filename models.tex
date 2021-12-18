@@ -30,23 +30,23 @@ The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D) = (5
 where errorbars enclose uncertainty in the black hole spin and viewing angle \citep[see, e.g.,][]{2020ApJ...896....7M}.
 
 If the emitting plasma is ionized hydrogen (electron-proton plasma), then the Eddington luminosity is
-$L_\mathrm{Edd} = 4\pi G\mbh c m_p/\sigma_\mathrm{T} = 5.2 \times 10^{44}\ergps$.
+$L_\mathrm{Edd} = 4\pi G\mbh c m_p/\sigma_\mathrm{T} = 5.2 \times 10^{44}\erg \sec^{-1}$.
 The corresponding Eddington accretion rate is
 $\dot\mbh_\mathrm{Edd} \equiv L_\mathrm{Edd}/(0.1 c^2) = 5.8 \times 10^{24} \gm \rm{s}^{-1} = 0.09 \msun \yr^{-1}$,
 where the nominal efficiency is 10\% and the Eddington ratio:
 $L_\mathrm{bol}/L_\mathrm{Edd} = 1.9 \times 10^{-10} (L_\mathrm{bol} /10^{35})$,
 where $L_\mathrm{bol}$ is in unit of $\ergps$.
 In a quiescent, non-flaring state, the bolometric luminosity of \sgra is $L_\mathrm{bol} \sim 10^{35}\ergps$, resulting in an extremely small Eddington ratio.
-In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected (which is justified in the next sections) and that model emission can be calculated as post-processing.
+In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected (which is partially justified later) and that model emission can be calculated in post-processing.
 
 %==============================================================================
 \subsection{Estimate from One-Zone Model}
 
-The development of complex models is guided by simple estimates.
-Following \citetalias{M87PaperV}, we first consider an one-zone model for \sgra.
-These results follow one-zone models developed in the literature over many decades \note{(refs)}.
+%The development of complex models is guided by simple estimates.
+To motivate the more complicated models that follow, we first consider a one-zone model for \sgra, as in \citetalias{M87PaperV}, we first consider a  one-zone model for \sgra.
+These results follow one-zone models developed in the literature over many decades \citep[e.g.][]{1996IAUS..169..169F}.
 
-Our one-zone model is a uniform plasma sphere of radius $r = 5\rg$ with uniform magnetic field oriented at $\pi/3$ to the line-of-sight.
+Our one-zone model consists of a uniform plasma sphere of radius $r = 5\rg$ with uniform magnetic field oriented at $\pi/3$ to the line-of-sight.
 The magnetic field is given by $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $T_i$ denotes ion temperature, $T_e$ denotes electron temperature, B denotes magnetic field strength, $\beta=1$, and $T_i = 3 T_e$.
 We also assume $\Theta_e \equiv  k T_e / m_e c^2 = 10$.
 
@@ -116,7 +116,7 @@ As discussed in \citet{2000ApJ...541..234O}, \citet{2009ApJ...701..521C}, and \c
   %
   %\tablenotetext{$*$}{Non-standard model.}
   \caption{Summary of GRMHD simulations in the EHT \sgra GRMHD model library.
-    The first four entries are standard \sgra simulations.
+    The first four entries are \sgra simulations based on default torus initial conditions.
     The last two entries are the tilted accretion model and two realizations of the Wind Accretion models which differ in stellar wind magnetization.}
   \label{tab:GRMHDmodels}
 \end{deluxetable*}
@@ -143,7 +143,7 @@ We integrate the GRMHD equations in three spatial dimensions using multiple algo
 see \citet{2019ApJS..243...26P} and \citet{Olivares_et_al} for comparisons of GRMHD codes.
 All simulations assume a constant adiabatic index $\Gamma_\mathrm{ad}$.
 
-The \emph{standard} initial conditions for the GRMHD integrations are a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F}
+The \emph{default} initial conditions for the GRMHD integrations are a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F}
 %\aco{\citep[see also][]{2002MNRAS.334..383F}} \monika{why do we need to have this second citation? is that essential?} \br{I thought Font shows another hydro torus equilibrium in this paper? We don't use that one, so I would not cite that paper} \ckc{all modelers: do any of you use the Font initial condition?  If not I will comment out this reference.}\aco{There are two independent hydro solutions, we have both of them. With same initial condition for magnetic field on top of hydro-solution}\br{is there a reason for using different initial conditions? I tried both FD and FM torus myself and the FD torus evolution is somewhat different. It would be better to start from the same IC to compare late states of the models to images. Which models exactly do use the (different) initial conditions of the Font-Daigne torus? I thought in paper V for M87 we used only the FM torus. Then the first sentence in this paragraph above is also wrong, because we are not using the FM torus exclusively.}\monika{exactly which model in the library starts from FD torus? please answer before midnight.} % \aco{Yes, I think is essential to cite, is true that we not using FD but we also have it in BHAC. Please be free to remove it. But definitively don't have same initial condition in all GRMHD codes.}
 % /monika{11dec: we dont want to elaborate on details like that here, this section is intended to describe only common features of all simulations, other details can be described in section 4.]
 in a prograde ($\abh > 0$) or retrograde ($\abh < 0$) orbit.
@@ -179,7 +179,7 @@ The self-consistent wind feeding simulations result in a mode of accretion that 
 The wind-fed models have $\abh = 0$.
 
 The GRMHD model library is summarized in Table~\ref{tab:GRMHDmodels}.
-In Figure~\ref{fig:GRMHD} we show a few examples of GRMHD runs with both standard torus and non-standard GRMHD runs.
+In Figure~\ref{fig:GRMHD} we show a few examples of GRMHD runs with both default torus and non-default GRMHD runs.
 The models vary in numerical method and in numerical resolution. We present more information on the numerical methods and models in Appendices~\ref{app:numerical} and \ref{app:variability}.
 
 \begin{figure*}
@@ -190,7 +190,7 @@ The models vary in numerical method and in numerical resolution. We present more
   \includegraphics[width=0.425\textwidth]{figures/ressler_3D_final.png}
   \caption{3-D overview of selected GRMHD simulations of \sgra in our library.
     The color marks constant dimensionless density surfaces and lines follow magnetic field lines (the magnetic field lines shown are only those which are attached to the inner part of the accretion flow, at $r\approx 5~\rg$).
-    Two top panels show accretion models with standard torus initial condition: SANE (left panel, $\abh=0.94$) and MAD (right panel, $\abh=0.5$).
+    Two top panels show accretion models with default torus initial condition: SANE (left panel, $\abh=0.94$) and MAD (right panel, $\abh=0.5$).
     Two bottom panels show non-standard accretion models: tilted disk (left panel, $\abh=0.94$ and tilt angle of $60\degree$) and Wind Accretion (right panel, $\abh=0$).
     In case of spinning black holes, the spin is aligned with z-axis.}
   \label{fig:GRMHD}
