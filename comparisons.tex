@@ -266,12 +266,12 @@ Applying only non-EHT constraints, we are left with the 24/200 models shown in F
 Variability is central to  the interpretation of \sgra: an $8\,\mathrm{hr}$ observation of \sgra is $1400 \tg$, a timescale over which most models vary significantly.  In contrast, an $8\,\mathrm{hr}$ observation of M87* is $\sim \tg$ and on this timescale M87* and \sgra hardly vary at all.
 %\footnote{This does not mean that \m87 is less variable than \sgra, just that we do not have }
 
-Variability is a strong constraint.  Although models differ in their degree of variability, both in an integrated sense and on 2--6~$G\lambda$ baselines, only a small fraction of models are as quiet as the data.  For the light curve variability, this remains true whether we use data from April 7, 2017, all days from the 2017 observing campaign, or from historical monitoring of \sgra.   In general, we find that SANE models are quieter than MAD models, and (to a lesser extent) face-on models are quieter than edge-on models.
+Variability is a strong constraint.  Although models differ in their degree of variability, both in an integrated sense and on 2--6~$G\lambda$ baselines, only a small fraction of models are as quiet as the data.  For the lightcurve variability, this remains true whether we use data from April 7, 2017, all days from the 2017 observing campaign, or from historical monitoring of \sgra.   In general, we find that SANE models are quieter than MAD models, and (to a lesser extent) face-on models are quieter than edge-on models.
 
 If we were to apply the variability constraints directly to the models, there would be 37/200 successful models remaining using 1\% cuts (47/200 for the ALMA constraint and 121/200 for the visibility amplitude constraint).  One interpretation of this result is that the surviving models are the correct description of the source (although we would expect some misclassification of models as consistent or inconsistent when using 1\% cuts on such a large model set).  Another interpretation is that there is a missing physical ingredient in the models, which could affect our entire model library. This possibility is discussed in Section \ref{sec:discussions}.
 
 %..............................................................................
-\subsubsubsection{ALMA Light Curve}
+\subsubsubsection{ALMA Lightcurve}
 
 The distributions of 3 hour modulation index (rms \%) across all SANE models, across all MAD models, and across the historical dataset are shown in Figure \ref{fig:cmp_ALMA_var}, along with individual distributions for the models with the lowest and highest $\mi{3}$ for SANEs and MADs. Although some individual models  pass (particularly SANE models), the distributions for the SANEs and the MADs are noticeably offset from the data, with the MADs in particular being more variable. As can be seen, even the quietest MAD model lies above the historical distribution.
 
@@ -323,7 +323,7 @@ We have also considered a set of thermal, $\Rh$, MAD models run with the \koral 
   \label{fig:cmp_VLBI_var}
 \end{figure}
 
-% At a 1\% cut, the models that pass the PSD constraint also all pass the MI constraint. It should be noted that this is partially because these constraints are weakly correlated \dl{also partially because we're imposing constraints differently between VLBI and light curve, and the light curve constraint is more lenient} None of the 12 models with acceptable variability pass the other tests.
+% At a 1\% cut, the models that pass the PSD constraint also all pass the MI constraint. It should be noted that this is partially because these constraints are weakly correlated \dl{also partially because we're imposing constraints differently between VLBI and lightcurve, and the lightcurve constraint is more lenient} None of the 12 models with acceptable variability pass the other tests.
 
 %------------------------------------------------------------------------------
 \subsubsection{Summary of Constraints on Standard Models}
@@ -333,7 +333,7 @@ Evidently either (1) the models fail in some important respect, or (2) some of t
 
 We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens when we lift one constraint.  About 5\% of both the Frankfurt and Illinois model sets fail only 1 constraint.  For Frankfurt, 8 models fail only $\mi{3}$, and 2 fail only \mring diameter.  For Illinois, 3 models fail only $\mi{3}$ and 5 fail only the 86\GHz size.  Suspicion therefore falls on $\mi{3}$, which rejects $\approx 70\%$ of Frankfurt and Illinois models.  Why might the $\mi{3}$ constraint be misleading?
 
-One possibility is that some fraction of the $230\GHz$ flux density, $f_\mathrm{ext}$, is in an extended structure (a jet) that is slowly varying, captured in the ALMA light curves, and resolved out by EHT.  The implied $f_{ext}$ is model-dependent, but if $f_{ext} \sim 30\%$ then nearly all MAD models would pass $\mi{3}$ and many SANE models would be rejected as too quiet.  The $4$G$\lambda$ amplitude variability is normalized by the light curve and thus $a_4$ would increase by a similar factor.  Notice that if $f_{ext} > 0$ then the models would need to be re-normalized (the accretion rate adjusted) so that the compact flux is $(1 - f_{ext}) \times 2.4\,\mathrm{Jy}$.  The extended flux hypothesis can be tested by the addition of new, short baselines to the EHT.
+One possibility is that some fraction of the $230\GHz$ flux density, $f_\mathrm{ext}$, is in an extended structure (a jet) that is slowly varying, captured in the ALMA lightcurves, and resolved out by EHT.  The implied $f_{ext}$ is model-dependent, but if $f_{ext} \sim 30\%$ then nearly all MAD models would pass $\mi{3}$ and many SANE models would be rejected as too quiet.  The $4$G$\lambda$ amplitude variability is normalized by the lightcurve and thus $a_4$ would increase by a similar factor.  Notice that if $f_{ext} > 0$ then the models would need to be re-normalized (the accretion rate adjusted) so that the compact flux is $(1 - f_{ext}) \times 2.4\,\mathrm{Jy}$.  The extended flux hypothesis can be tested by the addition of new, short baselines to the EHT.
 
 A second possibility is that physical or numerical errors in the models cause the variability to be overstated.  Several possibilities, including viscosity, conduction, and radiative cooling are discussed in Section \ref{sec:discussions}.
 
@@ -448,7 +448,7 @@ In general, the $R_{\rm high}=1$ models produce too much 86\GHz flux. Since the 
 The addition of the power-law tail primarily increases the flux in the NIR and thus, the NIR GRAVITY flux of $1.0\,\mathrm{mJy}$ could provide a constraint on the power-law index and the acceleration efficiency. In brief, $\Rh=1$ and $40$ MAD models are ruled out by the NIR constraint.
 
 %..............................................................................
-%\subsubsubsection{ALMA Light curves}
+%\subsubsubsection{ALMA lightcurves}
 
 ...
 
@@ -486,7 +486,7 @@ In the case of the MAD models the size of the $\kappa=5$ models does not change.
 All MAD model generate more NIR emission than 1.0\,mJy and thus fail the NIR constraints. Similar, the SANE models with $R_{\rm high}>1$ overshoot the NIR constraint.
 
 %..............................................................................
-\subsubsubsection{Light Curve Variability}
+\subsubsubsection{Lightcurve Variability}
 
 The variability is almost completely unaffected by the $\kappa$ distribution. We find that the $\kappa=5$ models have a higher $\mi{3}$ for a small number of SANE $R_{\rm high}\geq 40$ models. However, since the $\mi{3}$ constraint is computed for a time window of length only 5000\,$\rm{GM/c^3}$, a factor three shorter than for the thermal models, this increase does not increase the fraction of models ruled out by this constraint.
 %and thus a direct comparison cannot be performed. However we find that 66\% of the models fail this test. The number roughly agrees with the thermal models and thus we conclude that the non-thermal particles included via a $\kappa$ eDF with $kappa=5$ does not affect the variability.
@@ -586,11 +586,11 @@ The addition of non-thermal electrons increases the NIR flux for all models. For
 As noted above, NIR emission is produced from the tail of the eDF.  The thermal eDF tail decreases exponentially, while the $\kappa$ eDF tail decreases as a power law, so the increase in NIR flux density is unsurprising.  This is a general feature of the nonthermal models: NIR observations sharply limit the allowed population of nonthermal electrons.
 
 %..............................................................................
-%\subsubsubsection{Light Curve Variability}
+%\subsubsubsection{Lightcurve Variability}
 
 %We compute $mi{3}$ for a window of $\num{5000}\tg$.  Notice that this is shorter than the standard models, which as three $\num{5000}\tg$ windows, so the results are less constraining.  The $\mi{3}$ test rejects about 1/2 of models for $\varepsilon = 0.05$, $0.1$, and $0.2$.  We conclude that $\varepsilon$ has no effect on the $\mi{3}$ test.
 
-%For the comparison with the ALMA light curves we compute the modulation index for a 3\,hour time window and across the entire simulated time window of 28\,hours (5000\,GM/c$^3$). Similar to the 86\GHz flux the 230\GHz flux is mainly produced within a few gravitational radii and thus not affected by the addition of non-thermal particles using Eq. \ref{eq:kappaeff}. As in the previous constraints, the MAD accretion models are insensitive to the addition of non-thermal particles whereas the SANE models show some increased modulation index for $\Rh>40$. However, the distributions for thermal and non-thermal eDF are still largely overlapping.
+%For the comparison with the ALMA lightcurves we compute the modulation index for a 3\,hour time window and across the entire simulated time window of 28\,hours (5000\,GM/c$^3$). Similar to the 86\GHz flux the 230\GHz flux is mainly produced within a few gravitational radii and thus not affected by the addition of non-thermal particles using Eq. \ref{eq:kappaeff}. As in the previous constraints, the MAD accretion models are insensitive to the addition of non-thermal particles whereas the SANE models show some increased modulation index for $\Rh>40$. However, the distributions for thermal and non-thermal eDF are still largely overlapping.
 
 %..............................................................................
 %\subsubsubsection{\Mring Constraint}
@@ -649,18 +649,18 @@ The addition of nonthermal particles increases the x-ray emission from the major
 %Larger emission than thermal models excludes SANE models for $R_{\rm high}=10$ and $\abh < 0$ as well as  $R_{\rm high}=40,~80$ and $\abh \leq 0.0$. While even larger NIR flux the models for $R_{\rm high}=160$ are still under the threshold.
 
 %..............................................................................
-%\subsubsubsection{ALMA Light curves}
+%\subsubsubsection{ALMA lightcurves}
 
-%We compute the the modulation index  of the light curves of variable $\kappa$ models by discretizing the entire window of GRMHD simulations, $\rm 5000\,\tg$ ($\rm 28\,hours$) every $\rm 3\,hour$ (see Table \ref{tab:GRMHDmodels}). Similar to variable efficiency models, the non-thermal particles with variable $\kappa$ has not big impact on the flux at 230\GHz. The behavior of modulation index and total flux for MAD accretion models are same as thermal, and variable efficiency eDFs. We found sightly high modulation index for $R_{\rm high}=1$ and $30^{\circ} \leq i$ for SANE accretion models, the models for $R_{\rm high}=80$ has same trend as $R_{\rm high}=40$.
+%We compute the the modulation index  of the lightcurves of variable $\kappa$ models by discretizing the entire window of GRMHD simulations, $\rm 5000\,\tg$ ($\rm 28\,hours$) every $\rm 3\,hour$ (see Table \ref{tab:GRMHDmodels}). Similar to variable efficiency models, the non-thermal particles with variable $\kappa$ has not big impact on the flux at 230\GHz. The behavior of modulation index and total flux for MAD accretion models are same as thermal, and variable efficiency eDFs. We found sightly high modulation index for $R_{\rm high}=1$ and $30^{\circ} \leq i$ for SANE accretion models, the models for $R_{\rm high}=80$ has same trend as $R_{\rm high}=40$.
 
 %------------------------------------------------------------------------------
 \subsubsection{Summary of Constraints on Non-Thermal Models}
 
-Most nonthermal eDF models considered here produce little change compared to the thermal models for most constraints.  The 86\GHz size and flux, which are the most important non-EHT constraints, are only marginally affected by the addition of nonthermal electrons.  The exception is for the powerlaw models, where the addition of nonthermal electrons increases the 86GHz size by 50\%.  
+Most nonthermal eDF models considered here produce little change compared to the thermal models for most constraints.  The 86\GHz size and flux, which are the most important non-EHT constraints, are only marginally affected by the addition of nonthermal electrons.  The exception is for the powerlaw models, where the addition of nonthermal electrons increases the 86GHz size by 50\%.
 
-The 230\GHz \mring fits are hardly affected at all by the addition of nonthermal electrons using the prescriptions considered here, and $\mi{3}$ is also not significantly affected by the addition of nonthermal electrons.  
+The 230\GHz \mring fits are hardly affected at all by the addition of nonthermal electrons using the prescriptions considered here, and $\mi{3}$ is also not significantly affected by the addition of nonthermal electrons.
 
-The NIR and x-ray flux densities, however, are consistently increased by the nonthermal eDF prescriptions.  In a large fraction of models this leads to overproduction of NIR or x-ray flux. 
+The NIR and x-ray flux densities, however, are consistently increased by the nonthermal eDF prescriptions.  In a large fraction of models this leads to overproduction of NIR or x-ray flux.
 
 %Since the nonthermal models analyzed here do not consider the heating efficiency due to the magnetic reconnection, $\varepsilon \neq 0$, those effects can be explained by asymptotic behaviour of the nonthermal emissivity, $ j_{\nu}\propto\exp\left(-\Theta_e^{-2/3}\nu^{1/3}\right)+\nu^{-(\kappa-2)/2} \left[(\kappa -3)\Theta_{\rm e} + \varepsilon(\kappa -3) \sigma\right]^{\kappa-2}$. The second term dominates at NIR and x-rays, while at mm and radio frequencies the first term dominates. However, as soon as heating efficiency in the third term becomes nonzero, the nonthermal contribution generates a larger emission region, expanding the image size at 86\GHz,  and increasing the total intensity \citep{2021NatAs.tmp..218C,2021arXiv211102518F}. Furthermore, both the NIR and the x-ray average flux increases as efficiency increases.
 %on the other hand, the SED is not sensitive to the black hole spin but image size increase for prograde models, we have consistency overall our models (\bhac / \hamr).
