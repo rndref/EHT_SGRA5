@@ -67,11 +67,11 @@ For systems with sub-Eddington accretion rates, $\Dot{M}\ll\Dot{M}_\mathrm{Edd}$
 %and the plasma can be considered Coulomb collisionless (\citealt{Mahadevan_1997, 10.1093/mnras/stw3116, Ryan_2017}).
 However, the uncertainties with electron heating and advection, and a limited understanding of the funnel region warrant a discussion of electron cooling in regions of high magnetization, and in particular, its effect on the 230\,GHz light curve variability.
 
-The $\Rh$ prescription (Equation \ref{eq:rhigh_prescription}) has three free parameters: $\Rh$, $\Rl$ and $\beta_\mathrm{crit}$. During post-processing, the $\Rh$ parameter is generally varied while $\Rl$ and $\beta_\mathrm{crit}$ is set to unity because the Paticle-in-cell (PIC) simulations modelling turbulent dissipation or dissipation associated with magnetic reconnection suggest preferential heating of the electrons in regions of low plasma $\beta$ (\citealt{2010MNRAS.409L.104H, Rowan_2017, 10.1093/mnras/stx2530, Rowan_2019, Kawazura771, PhysRevX.10.041050, kawazura2021energy}).
+The $\Rh$ prescription (Equation \ref{eq:rhigh_prescription}) has three free parameters: $\Rh$, $\Rl$ and $\beta_\mathrm{crit}$. During post-processing, the $\Rh$ parameter is generally varied while $\Rl$ and $\beta_\mathrm{crit}$ is set to unity because the Particle-in-cell (PIC) simulations modeling turbulent dissipation or dissipation associated with magnetic reconnection suggest preferential heating of the electrons in regions of low plasma $\beta$ (\citealt{2010MNRAS.409L.104H, Rowan_2017, 10.1093/mnras/stx2530, Rowan_2019, Kawazura771, PhysRevX.10.041050, kawazura2021energy}).
 
 We first investigate the effect of varying $\Rl$ on the 3 hour modulation index, $\mi{3}$. The $\Rl$ parameter dictates the electron temperature in these regions, that is, in the funnel. Increasing $\Rl$ mimics rapid electron cooling along the funnel.
 \ckc{Do we want to keep the $\Rl$ plot?  It is skipped currently}
-In Figure~\ref{fig:rlow_comparison} we show the effect of $\Rl$ on image morphology. It is evident that the emission becomes more compact and one may expect that this will suppress the variability.
+% In Figure~\ref{fig:rlow_comparison} we show the effect of $\Rl$ on image morphology. It is evident that the emission becomes more compact and one may expect that this will suppress the variability.
 We vary $\Rl$ for various set of the thermal (\kharma data sets) and calculate $\mi{3}$. In Figure~\ref{fig:mi_rlow} we show that the modulation index is weakly dependent on $\Rl$ parameter.
 The average $\mi{3}$ does not match the observational values.
 
@@ -85,7 +85,7 @@ The average $\mi{3}$ does not match the observational values.
 \begin{figure*}
   \centering
   \includegraphics[width=0.95\textwidth]{figures/mi_rlow_select_models.png}
-  \caption{Modulation index computed over 3 hour intervals $\mi{3}$, for a subset of the thermal models (\kharma data sets). For this analysis, we considered the (25k--30k)$GM/c^{3}$ time interval.}
+  \caption{Modulation index computed over 3 hour intervals $\mi{3}$ for a subset of the thermal models (\kharma data sets). For this analysis, we considered the (25,000--30,000)$\gt$ time interval.}
   \label{fig:mi_rlow}
 \end{figure*}
 
