@@ -36,17 +36,18 @@ How do the models fare when compared to the EHT data alone, using the size, null
 %  \label{fig:cmp_2nd_moment}
 %\end{figure}
 
-The second moment constraint rejects only 1.5\% of models: nearly all models are about the right size.  The rejected models are $\abh \le 0$, face-on, SANE models with $\Rh = 1$.  These models have extended emission that is large compared to the critical impact parameter $b_c = \sqrt{27} \rg$.  The right panel of Figure~\ref{fig:passfail_sz} shows one of these failed models.
+Without assuming a ring, the observation data allows a wide range of second moment.  Therefore, the second moment constraint rejects only 1.5\% of models: nearly all models are about the right size once we use the 230\GHz to fix the mass unit $\mathcal{M}$.  The rejected models are $\abh \le 0$, face-on, SANE models with $\Rh = 1$.  These models have extended emission that is large compared to the critical impact parameter $b_c = \sqrt{27} \rg$.  The right panel of Figure~\ref{fig:passfail_sz} shows one of these failed models.
 
 %..............................................................................
 \subsubsubsection{Visibility Amplitude Morphology}
+\label{sec:vam}
 
 % Statement about consistency between overlapping model sets.
 
 \begin{figure*}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_va.pdf}
-  \caption{\vam constraint example.  Left: passing snapshot; right: failing snapshot.  The solid lines in each plot show visibility amplitudes on a section through the origin in the \uv domain, at four position angles (PA).  Solid points show data from \aprilvii.  The \vam constraint requires that for at least one PA the first minimum in VA fall within the left grey band, and for all PAs the VAs lie inside the right grey band.  Evidently the snapshot at right fails {\em both} conditions.
+  \caption{\vam constraint example.  Left: passing snapshot; right: failing snapshot.  The solid lines in each plot show visibility amplitudes on a section through the origin in the \uv domain, at four position angles (PA), where $0\degree$ is the direction parallel to the angular momentum vector, $-90\degree$ is measured from $0\degree$ counterclockwisely.  Solid black points show data from \aprilvii.  The \vam constraint requires that for at least one PA the first minimum in VA fall within the left grey band, and for all PAs the median of the VAs lie inside the right grey band (see Section~\ref{sec:vam} for details).  Evidently the snapshot at right fails {\em both} conditions.
   % cfg 15-dec: edited down
   %For each of the panels, we select a snapshot from a model and plot its visibility amplitudes as functions of the $(u,v)$ distance at position angles $-90\degree$ (horizontal), $-45\degree$, $0\degree$ (vertical), and $45\degree$.    Because of the Hermitian symmetry, they cover 8 position angles in the image domain. The EHT \aprilvii VLBI data points are plotted as black circles. Even without further details, it is clear that the model on the left matches reasonably well with the data; while the model on the right is completely off.  The \vam constraint is designed exactly to rule out models like the one on the right. As a visual guideline, the vertical gray band between 2.5 and 3.5$\,\mathrm{G}\lambda$ marks the allowed null location in the \vam constraint; and the gray region between 6 and 8$\,\mathrm{G}\lambda$ marks both the $(u,v)$ distance range for computing the long-baseline median amplitude and its allowed values $\mathrm{median}[V(6\,\mathrm{G}\lambda \leq \lambda \leq      8\,\mathrm{G}\lambda)] \leq (4\%/50\%) V_0$. We numerically find the first local visibility minima along each position angle and show them as solid points. We also compute the median visibility amplitude in the marked region along each position angle, which are marked by dotted lines. A model is rejected if \emph{all} the first nulls land \emph{outside} the virtual gray band, or if \emph{any} of these lines land \emph{outside} the horizontal gray band. For the examples in this figure, the left model passes the \vam constraint because one of the first null (green dot) falls within the allowed range; and none of the long-baseline median (all dotted lines) go above 4\%/50\%. The right model fails the \vam constraint because both of the null location and long-baseline VAs are off.
   }
@@ -60,7 +61,6 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
   }
   \label{fig:mring_width_example}
 \end{figure*}
-
 
 %\begin{figure}
 %  \centering
@@ -83,15 +83,14 @@ The second moment constraint rejects only 1.5\% of models: nearly all models are
 
 The \vam constraint checks if the VAs of a model roughly matches the
 observation by comparing its null location and long-baseline visibility
-amplitude.
+amplitude with assuming a model.
 As Figure~\ref{fig:passfail_va} demonstrates, this constraint is
 informative.
 It matches the ring size by using the null location, and the ring
 width by using the long-baseline amplitude.
-The test rejects edge-on MAD models at positive spin and a few large
-$\Rh$ SANE models.
 It disfavors edge-on MAD models at positive spin and a few large $\Rh$
 SANE models.
+This is mainly because the edge-on MADs are bright blobs with faint rings, so the first nulls get washed out by the bright features.
 The null location constraint rejects 16\% of models in total.
 
 %..............................................................................
@@ -117,7 +116,7 @@ Notice that the ring diameter is not degenerate with the second moment constrain
 
 % cfg 15-dec: objection noted, this is going to require some rewriting and re-labeling of figures if we go through with this.
 %\monika{can we stop calling these models Illinois or Frankfurt models???}
-The distribution of ring diameters for many SANE models is multimodal (consistently in the Frankfurt and Illinois model sets), with a secondary peak in the distribution at $\sim 35\mu$as.  All $\Rh = 1$ SANE models show this secondary peak.  The images of these models tend to have a well defined ring at the critical impact parameter and a second broad maximum in intensity at larger impact parameter.  The second peak in the distribution is a consequence of limited baseline coverage.
+The distribution of ring diameters for many SANE models is multimodal (consistently in the Frankfurt and Illinois model sets), with a secondary peak in the distribution at $\sim 35\uas$.  All $\Rh = 1$ SANE models show this secondary peak.  The images of these models tend to have a well defined ring at the critical impact parameter and a second broad maximum in intensity at larger impact parameter.  The second peak in the distribution is a consequence of limited baseline coverage.
 
 %\begin{figure*}
 %  \centering
