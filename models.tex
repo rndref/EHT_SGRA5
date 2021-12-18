@@ -43,7 +43,7 @@ In what follows, we will assume that the radiative cooling of plasma around the 
 \subsection{Estimate from One-Zone Model}
 
 %The development of complex models is guided by simple estimates.
-Here we use a one-zone model to motivate the more complicated models that follow, as in \citetalias{M87PaperV}. 
+Here we use a one-zone model to motivate the more complicated models that follow, as in \citetalias{M87PaperV}.
 These results follow one-zone models developed in the literature over many decades \citep[e.g.][]{1996IAUS..169..169F}.
 
 Consider a uniform plasma sphere of radius $r = 5\rg$, comparable to the observed size of \sgra at 1.3mm, with uniform magnetic field oriented at $\pi/3$ to the line-of-sight.
@@ -69,7 +69,7 @@ The cooling time is therefore $t_\mathrm{cool}=2.3 \times 10^4\sec \simeq 1.1 \t
 The one-zone model implies that the source plasma is at low density and is therefore collisionless, in the sense that the mean free path to Coulomb scattering is large compared to $\rg$.
 At $\Theta_e \sim 1$, for example, the Coulomb scattering cross section is comparable to the Thomson cross section, and therefore the mean free path $\sim \tau_e^{-1} \rg$.
 The electron-ion Coulomb scattering timescale is also long, and the electrons and ions are therefore poorly coupled.
-This is consistent with our assumption of a two-temperature  plasma where electrons are cooler than the ions \citep{1976ApJ...204..187S,1977ApJ...214..840I, 1982Natur.295...17R} and also motivates consideration of 
+This is consistent with our assumption of a two-temperature  plasma where electrons are cooler than the ions \citep{1976ApJ...204..187S,1977ApJ...214..840I, 1982Natur.295...17R} and also motivates consideration of
 nonthermal (unrelaxed) electron distribution functions \citep[see]{2000ApJ...541..234O, 2009ApJ...701..521C, 2014A&A...570A...7M, 2018A&A...612A..34D, 2021arXiv211102518F, 2021NatAs.tmp..218C, Chatterjee2021, 2021arXiv211203933E, Scepi2021}.
 %\br{my only remaining comment is that I think that the sentence ``As demonstrated in \citet{2000ApJ...541..234O} and \citet{2014A&A...570A...7M} (see also more recent work by \citealt{2018A&A...612A..34D} and references therein) both effects may change the predicted properties of \sgra.'' should be cut, or extended with non-EHT refs on how other groups actually probe those collisionless effects dynamically}
 %\ckc{In principle, we could numerically check all of the assumptions in the one zone model for consistency.  Probably leave until after PC submission.}
@@ -117,7 +117,7 @@ nonthermal (unrelaxed) electron distribution functions \citep[see]{2000ApJ...541
   \label{tab:GRMHDmodels}
 \end{deluxetable*}
 
-The one-zone model is too simple for comparison with the rich set of observations available for \sgra.  Analytic 
+The one-zone model is too simple for comparison with the rich set of observations available for \sgra.  Analytic
 steady spherical accretion models \citep[e.g.,][]{2019ApJ...885L..33N, 2021arXiv211102178B} go a step beyond the one zone model, incorporating relativistic gravity.  Analytic, steady, disk-like (RIAF) accretion models in the Kerr metric go still further and include rotation and departures from spherical symmetry \citep[e.g.,][]{2009ApJ...697...45B, 2009ApJ...706..960H,2018ApJ...863..148P}.
 % I think the previous sentence says both analysis spherical and disk can be used for blab blab blab...  Minor edit to retain that meaning.
 Steady state phenomenological models do not, however, self-consistently capture fluctuations in the flow---that requires either a statistical model \citep{2021ApJ...906...39L} or a time-dependent numerical integration.
@@ -127,7 +127,7 @@ Here we use numerical simulations and adopt an ideal GRMHD model for the flow\fo
 %------------------------------------------------------------------------------
 \subsubsection{Plasma Flow Model}
 
-We model the plasma flow around \sgra using ideal, non-radiative GRMHD.  We assume the gravitational field 
+We model the plasma flow around \sgra using ideal, non-radiative GRMHD.  We assume the gravitational field
 is described by the Kerr metric, with mass from Equation~(\ref{eq:mass}) and with black hole spin $\abh$ a free parameter \citep[see e.g.,][]{2003ApJ...589..444G, 2005ApJ...635..723A, 2007A&A...473...11D}.
 
 We integrate the GRMHD equations in three spatial dimensions using multiple algorithms:
@@ -402,7 +402,7 @@ Wind Accretion & 1 & [13,28]    & 1 & - & - & N/A        & [86,230] & No  & 10  
 %\monika{last time (Dec 11) I checked google table BHAC did not have MULTIWAVELENGTH spectra, so why did you change No to Yes? \cmf{Hi Monica, we have SEDs for thermal but not for non-thermal, I think I included this in one of the google docs \url{https://docs.google.com/spreadsheets/d/11ZP_jz0ub-SLPwXft4x_9byDS2KBsP1KEIt9xn77LoU/edit#gid=0} (row 12, maybe the confusion is due to row 20) }}
 %\monika{why is wind model inclination N/A? can anyone explain?}
 %\gw{I didn't write N/A, but as I recall from Sean, the wind models *have* an absolute orientation with respect to Earth because of how their boundary condition is set up, so it wouldn't make sense to vary inclination. Also their bhspin = 0.}\monika{Ah, ok , so there is an inclination but we dont know it. can you find out ? maybe I can also change the Fig 1 accordingly (although that would require some thinking)!}\gw{sorry not sure what you mean by ``there is an inclination''. there is an inclination that we plug into ipole, but that inclination is with respect to the coordinate system, not anything particularly ``physical'' (because the black hole has zero spin). the coordinate system is oriented such that images are computed at inc->180 (inc as defined in the ipole sense)}\monika{ok, this makes no sense since from our point of view the "boundary conditions" for this model are fixed...we should just find best rhigh for our viewing angle..}
-%The cadence of KHARMA=5M, BHAC=10M for thermal and nonthermal variable kappa, 50M for nonthermal variable efficiency models, and HAMR=10M for thermal, nonthermal powerlaw and variable kappa.
+%The cadence of KHARMA=5M, BHAC=10M for thermal and nonthermal variable $\kappa$, 50M for nonthermal variable efficiency models, and HAMR=10M for thermal, nonthermal powerlaw and variable $\kappa$.
 %\gw{Rhigh for the wind accretion models is either 28 or 13, but these are for two separate simulations (so it's not like there's one simulation where Rhigh has been varied); no SED from grmonty-like codes, but there is ``SED''-like information from imaging at different frequencies}\monika{how many 230 ghz frames we have for these two wind models and within what times??}
 }
 \label{tab:radiativemodels}
@@ -547,7 +547,7 @@ Wind Accretion & 1 & [13,28]    & 1 & - & - & N/A        & [86,230] & No  & 10  
 % \item Magnetic Flux: MAD, SANE
 % \item Adiabatic Index $\Gamma$: 4/3
 % \item Time $t_\mathrm{final}$: 30000
-% \item $\rho_0$: individual normalisation for each kappa model; only  for $t \in [25,000, 30,000)$
+% \item $\rho_0$: individual normalisation for each $\kappa$ model; only  for $t \in [25,000, 30,000)$
 % \item $\kappa$: variable $\kappa(\beta, \sigma)$, fixed $\kappa=3.5$ with $\epsilon=\epsilon_{0} f(\beta,\sigma)$ for $\epsilon_{0}=0.05,0.10,0.20$
 % \item $\Rh$: 1, 2.5, 5, 10, 40, 160
 % \item Inclination $i$: 10$^\circ$, 30$^\circ$, 50$^\circ$,..., 90$^\circ$
