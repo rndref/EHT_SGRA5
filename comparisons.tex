@@ -405,7 +405,7 @@ We now turn to models that differ from the standard aligned, thermal, $\Rh$ mode
 %------------------------------------------------------------------------------
 \subsubsection{Critical Beta Model}
 
-First we consider the consequences of changing the $\Rh$ temperature assignment scheme in thermal models.  The $\Rh$ prescription has been the default parameterization.  Assuming that the ion-electron temperature ratio $R$ depends instantaneously on local conditions restricts the range of possibilities but still leaves a vast function space of alternative parameterizations.  A well-motivated choice is the critical beta model \citep{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  This model has two parameters, $f$ and $\beta_c$; we consider a single point in the parameter space, $f = 0.5$, $\beta_c = 1$.
+First we consider the consequences of changing the $\Rh$ temperature assignment scheme in thermal models.  The $\Rh$ prescription has been the default parameterization.  Assuming that the ion-electron temperature ratio $R$ depends instantaneously on local conditions restricts the range of possibilities but still leaves a vast function space of alternative parameterizations.  A well-motivated choice is the critical beta model \citep{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  This model has two parameters, $f$ and $\beta_c$; we consider a single point in the parameter space, $f = 0.5$, $\beta_c = 1$.  Compared to the \Rh temperature prescription, the main new characteristic of critical beta is that the electron to ion temperature ratio approaches 0 at high $\beta$ instead of $1/\Rh$.  This could lead to much lower electron temperatures in large $\beta$ regions.
 
 We have run all tests except x-ray for the critical beta models (NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}.
 
@@ -537,7 +537,7 @@ We set $\sigma_{\rm min}=0.01$ and vary the base efficiency, $\varepsilon$ over 
 \end{figure}
 
 %In the following we will elaborate on the impact of adding non-thermal particles via the $\kappa$ electron distribution with fixed $\kappa$ value ($\kappa=3.5$) and three different base efficiencies $\varepsilon=$0.05, 0.1 and 0.2 on the observational constraints listed in Section~\ref{subsec:thermal}.
-The addition of non-thermal particles does not signficantly affect the flux or size of the image at 230\GHz or 86\GHz. For MAD models, 230\GHz emission is mostly produced in the disk region (see \citetalias{M87PaperV} and Fig.~8 in \citealt{Wong_2022} for a 3-D rendering).  Thus, the images are unaffected by the non-thermal particles, which are located in the jet. For SANE models, increasing $\Rh$ pushes the emission towards the jet sheath. However, the effect of non-thermal particles on the image is minor, because most of the emission is still produced by thermal electrons with temperature set by the $\Rh$ prescription.
+For this model, the addition of non-thermal particles does not signficantly affect the flux or size of the image at 230\GHz or 86\GHz. For MAD models, 230\GHz emission is mostly produced in the disk region (see \citetalias{M87PaperV} and Fig.~8 in \citealt{Wong_2022} for a 3-D rendering).  Thus, the images are unaffected by the non-thermal particles, which are located in the jet. For SANE models, increasing $\Rh$ pushes the emission towards the jet sheath. However, the effect of non-thermal particles on the image is minor, because most of the emission is still produced by thermal electrons with temperature set by the $\Rh$ prescription.
 
 %..............................................................................
 %\subsubsubsection{230\GHz VLBI pre-image size}
@@ -624,11 +624,11 @@ We use the emissivity and absorptivity, computed numerically for the interval $3
 %\subsubsubsection{4 \texorpdfstring{$G\lambda$}{Gl} Visibility Amplitude Variability} In case of the variability at 4 $G\lambda$ 151/200 pass the constraint, same percent as for the thermal models, for instance $\sim 40 \%$ of the models are rejected, mostly negative $a_{\star} = -0.94$ SANE and MAD, also high temperatures, $R_{\rm high} = 160$, $a_{\star} \leq 0$ MAD accretion models, and  $i \geq 70^{\circ}$  for SANE prograde models.
 %}
 
-\cfg{need very brief discussion here of the codes and run durations}
+%\cfg{need very brief discussion here of the codes and run durations}
 
-\cfg{this section needs to incorporate both the \hamr and \bhac variable $\kappa$ models}
+%\cfg{this section needs to incorporate both the \hamr and \bhac variable $\kappa$ models}
 
-\aco{
+%\aco{
 The addition of nonthermal particles increases the x-ray emission from the majority of MAD models, causing them to overshoot the constraints. It does not change the general behaviour of weak magnetic field SANE models.
 %..............................................................................
 %\subsubsubsection{86\GHz Major Axis}
@@ -656,8 +656,13 @@ The addition of nonthermal particles increases the x-ray emission from the major
 %------------------------------------------------------------------------------
 \subsubsection{Summary of Constraints on Non-Thermal Models}
 
-The nonthermal eDF models considered here produce little change compared to the thermal models for most constraints.  The 86\GHz size and flux, which are the most important non-EHT constraints, are only marginally affected by the addition of nonthermal electrons.
-The 230\GHz \mring fits are hardly affected at all by the addition of nonthermal electrons, and $\mi{3}$ is also not significantly affected by the addition of nonthermal electrons.  The NIR and x-ray flux densities, however, are consistently increased by the nonthermal eDF prescriptions.  In a large fraction of models this leads to overproduction of NIR or x-ray flux. Since the nonthermal models analysed here do not consider the heating efficiency due to the magnetic reconnection, $\varepsilon \neq 0$, those effects can be explained by asymptotic behaviour of the nonthermal emissivity, $ j_{\nu}\propto\exp\left(-\Theta_e^{-2/3}\nu^{1/3}\right)+\nu^{-(\kappa-2)/2} \left[(\kappa -3)\Theta_{\rm e} + \varepsilon(\kappa -3) \sigma\right]^{\kappa-2}$. The second term dominates at NIR and x-rays, while at mm and radio frequencies the first term dominates. However, as soon as heating efficiency in the third term becomes nonzero, the nonthermal contribution generates a larger emission region, expanding the image size at 86\GHz,  and increasing the total intensity \citep{2021NatAs.tmp..218C,2021arXiv211102518F}. Furthermore, both the NIR and the x-ray average flux increases as efficiency increases.
+Most nonthermal eDF models considered here produce little change compared to the thermal models for most constraints.  The 86\GHz size and flux, which are the most important non-EHT constraints, are only marginally affected by the addition of nonthermal electrons.  The exception is for the powerlaw models, where the addition of nonthermal electrons increases the 86GHz size by 50\%.  
+
+The 230\GHz \mring fits are hardly affected at all by the addition of nonthermal electrons using the prescriptions considered here, and $\mi{3}$ is also not significantly affected by the addition of nonthermal electrons.  
+
+The NIR and x-ray flux densities, however, are consistently increased by the nonthermal eDF prescriptions.  In a large fraction of models this leads to overproduction of NIR or x-ray flux. 
+
+%Since the nonthermal models analyzed here do not consider the heating efficiency due to the magnetic reconnection, $\varepsilon \neq 0$, those effects can be explained by asymptotic behaviour of the nonthermal emissivity, $ j_{\nu}\propto\exp\left(-\Theta_e^{-2/3}\nu^{1/3}\right)+\nu^{-(\kappa-2)/2} \left[(\kappa -3)\Theta_{\rm e} + \varepsilon(\kappa -3) \sigma\right]^{\kappa-2}$. The second term dominates at NIR and x-rays, while at mm and radio frequencies the first term dominates. However, as soon as heating efficiency in the third term becomes nonzero, the nonthermal contribution generates a larger emission region, expanding the image size at 86\GHz,  and increasing the total intensity \citep{2021NatAs.tmp..218C,2021arXiv211102518F}. Furthermore, both the NIR and the x-ray average flux increases as efficiency increases.
 %on the other hand, the SED is not sensitive to the black hole spin but image size increase for prograde models, we have consistency overall our models (\bhac / \hamr).
 
 %The effect of adding non-thermal electrons in a $\kappa$ eDF with  $\kappa=3.4$ and variable efficiency via Eq.~\ref{eq:efficiencybetasigma} can be summarized as follows:
@@ -677,7 +682,7 @@ The effect of adding nonthermal electrons in a variable $\kappa$ eDF can be summ
 Most of our nonthermal models assign a width to the nonthermal component that depends on the an electron `temperature assigned through the $\Rh$ scheme, so they are not fully independent of $\Rh$.
 
 The nonthermal models are run for only $5000\tg$, so most  constraints can not be applied as precisely.  For example, the model distribution of $\mi{3}$ contains only $9$ points and is correspondingly more uncertain than for the thermal models.  It is therefore difficult to detect subtle changes in models.
-}
+%}
 
 %==============================================================================
 \subsection{Tilted Models}
