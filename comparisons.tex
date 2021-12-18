@@ -458,7 +458,7 @@ The addition of the power-law tail primarily increases the flux in the NIR and t
 % cfg 12-dec: we will comment this out by 13-dec unless we get more info, to here <=
 
 %------------------------------------------------------------------------------
-\subsubsection{Constant $\kappa$ models with \texorpdfstring{$\kappa = 5$}{k = 5}}
+\subsubsection{Constant \texorpdfstring{$\kappa$}{kappa} models with \texorpdfstring{$\kappa = 5$}{kappa = 5}}
 
 Next we consider a model in which {\em all} electrons are in a $\kappa$ eDF, which has a thermal core and a power-law tail.  In the models considered in this section, we set $\kappa = 5$ everywhere,  motivated by \cite{2016PhRvL.117w5101K}, who found $\kappa = 5$ to be a good fit to the ion DF in a 3D hybrid simulation of MHD turbulence.  The power-law tail then has $p = \kappa - 1 = 4$, and at high frequency $\nu L_\nu \sim \nu^s$ where $s = 2 - \kappa/2 = -1/2$.
 {If not stated otherwise the width parameter $w$ of the $\kappa$ distribution (see Equation~(\ref{eq:kappa})) is set by $w = (\kappa - 3) \Theta_e/\kappa$, where the dimensionless electron temperature $\Theta_e$ is computed according to Equation~(\ref{eq:rhigh_prescription}). The underlying GRMHD simulations are taken from the \bhac runs and we use the time window from 25\,kM to 30\,kM. The radiative transfer is done employing the GRRT code \bhoss \citep{Younsi2012,Younsi2020} and we created images every 50\,M using the same inclinations and $\Rh$ values as for the thermal models. Each model is individually normalized to an average flux of 2.4\,Jy at 230\GHz.}
@@ -500,7 +500,7 @@ The variability is almost completely unaffected by the $\kappa$ distribution. We
 %\newline \cmf{more details tomorrow: all MAD models overshoot the the NIR flux limit and only a few SANE models are below flux threshold. The SANE models which pass the NIR constraints produce too large 86\GHz images}
 
 %==============================================================================
-\subsubsection{Mixed Thermal/$\kappa$ Model}
+\subsubsection{Mixed Thermal/\texorpdfstring{$\kappa$}{kappa} Model}
 
 Next we consider a mixed thermal/nonthermal eDF, with the nonthermal component following the $\kappa$ DF with $\kappa = 3.5$.  At high frequency $\nu L_\nu \sim \nu^s$ with $s = 2 - \kappa/2 = 1/4$, similar to what is seen in NIR flares \citep{2007ApJ...667..900H}.  For this model set the GRMHD models use \bhac and the imaging uses \bhoss.
 
@@ -598,7 +598,7 @@ As noted above, NIR emission is produced from the tail of the eDF.  The thermal 
 %\cmf{based on the results of Kotaro, who run the m-ring on non-thermal models}
 
 %------------------------------------------------------------------------------
-\subsubsection{Variable $kappa$ Model}
+\subsubsection{Variable \texorpdfstring{$kappa$}{kappa} Model}
 
 %\cfg{could we avod the equation and simply provide a reference and enough detail that someone could reproduce it?}\aco{What about inline equations?}
 
@@ -722,9 +722,9 @@ Both non-EHT and EHT constraints have the power to test the wind-fed model.  It 
   \caption{Best bet model that pass 10/11 constraints.
     The leftmost panel shows its 86\GHz ray traced image.
     The subsequent panels are the 230\GHz ray traced image,
-    the 230\GHz image convolved with 20\uas FWHM Gaussian for demonstrating the image at EHT resolution, and
+    the 230\GHz image convolved with a 20\uas FWHM Gaussian for approximating the image at EHT resolution, and
     the actual reconstructed image from the EHT 2017 observation.
-    Note that the position angle is not well constrained.}
+    Note that the position angle is not well constrained, so detailed the rotation of the image to match the observed image is not statistically meaningful here.}
   \label{fig:bestbet_imgs}
 \end{figure*}
 
