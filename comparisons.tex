@@ -612,13 +612,13 @@ An alternative procedure for assigning a nonthermal eDF uses the $\kappa$ model 
   w      &= \frac{ \kappa -3 }{\kappa} \Theta_e.
 \end{align}
 %\cmf{Since $\varepsilon=0$ we can simplify the $w$ and adopt the text below,or?}\aco{Yes}
-Evidently $w$ contains a thermal and nonthermal contribution, with the nonthermal contribution proportional to the nonthermal particle acceleration efficiency $\varepsilon$  \citep{2019A&A...632A...2D, 2021NatAs.tmp..218C}.  The thermal width $\Theta_e$ is set using the $\Rh$ prescription.
+%Evidently $w$ contains a thermal and nonthermal contribution, with the nonthermal contribution proportional to the nonthermal particle acceleration efficiency $\varepsilon$  \citep{2019A&A...632A...2D, 2021NatAs.tmp..218C}.  The thermal width $\Theta_e$ is set using the $\Rh$ prescription.
 
-We set $\varepsilon=0$ and injection radius $r_{\rm inj}=10r_{g}$ following previous studies.  Nonzero $\varepsilon$ increases the averaged NIR flux by two orders of magnitude as $\varepsilon$ goes from 0 to 1, causing all models to overshoot NIR constraint.  Setting $\varepsilon \ne 0$ also causes the 86\GHz flux density and image size to increase \citep{2021arXiv211102518F}.
+%We set $\varepsilon=0$ and injection radius $r_{\rm inj}=10r_{g}$ following previous studies.  Nonzero $\varepsilon$ increases the averaged NIR flux by two orders of magnitude as $\varepsilon$ goes from 0 to 1, causing all models to overshoot NIR constraint.  Setting $\varepsilon \ne 0$ also causes the 86\GHz flux density and image size to increase \citep{2021arXiv211102518F}.
 
 We use the emissivity and absorptivity, computed numerically for the interval $3 < \kappa \le 8$, from  \cite{2016ApJ...822...34P}. For $\kappa > 8$ we substitute a thermal eDF.  As in the standard models we turn off emission at $\sigma > 1$ (see Figure~\ref{fig:varepsilon}).
-\cmf{The post-processing radiative transfer is done employing the GRRT code \bhoss using GRMHD simulations from the \bhac. We use the time window from $\rm 25,000M-30,000M$ and we created images every $\rm 10M$ normalizing the average flux of $\rm 2.4\,Jy$ at $\rm 230\,GHz$.}
-\aco{Add here details for ipole and igrmonty.}
+\cmf{The variable $\kappa$ models are computed from \hamr and \bhac GRMHD models where the time windows $30-35$\,kM (\hamr) and $25-30$\,kM (\bhac) are used. For the radiative transfer \ipole is applied to the \hamr models and the GRRT code \bhoss is employed for the \bhac models. For both models an image is created every 10\,M and we iterate the mass unit to obtain an average flux of 2.4\,Jy at 230\,GHz. In order to obtain the x-ray luminosity of the models, the monte carlo radiative transfer code \grmonty is connected to the \hamr models.}
+%\aco{Add here details for ipole and igrmonty.}
 %..............................................................................
 %\subsubsubsection{Null Location} We found that $80\% ~(201/250)$  pass the expected null location ($2.5\lambda - 3.5G\lambda$). The differences to the thermal models can be described as follows: higher inclinations are rejected for $i \geq 70^{\circ}$ (MAD)  and $i \geq 50^{\circ}$ (SANE). Although, the total number of rejected models is similar to thermal models.
 
