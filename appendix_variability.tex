@@ -42,8 +42,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\monika{first revision done, please read and revise further}
-
 The majority of our simulations fail to recover the \sgra observed variability in total flux.  In this Appendix we discuss and dismiss a few possible causes for mismatch of $\mi{3}$ metric in models and ALMA data.
 
 %==============================================================================
@@ -64,22 +62,13 @@ Our standard models of accretion are typically evolved for $\sim 30,000 \tg$. In
 \subsection{Effects of \texorpdfstring{$\Rl$}{Rl} } %and radiative cooling}
 
 For systems with sub-Eddington accretion rates, $\Dot{M}\ll\Dot{M}_\mathrm{Edd}$, such as \sgra, radiative processes can be neglected during fluid evolution (\citealt{2012MNRAS.426.1928D, 10.1093/mnras/stw3116, Ryan_2017}).
-%and the plasma can be considered Coulomb collisionless (\citealt{Mahadevan_1997, 10.1093/mnras/stw3116, Ryan_2017}).
 However, the uncertainties with electron heating and advection, and a limited understanding of the funnel region warrant a discussion of electron cooling in regions of high magnetization, and in particular, its effect on the 230\,GHz lightcurve variability.
 
 The $\Rh$ prescription (Equation \ref{eq:rhigh_prescription}) has three free parameters: $\Rh$, $\Rl$ and $\beta_\mathrm{crit}$. During post-processing, the $\Rh$ parameter is generally varied while $\Rl$ and $\beta_\mathrm{crit}$ is set to unity because the Particle-in-cell (PIC) simulations modeling turbulent dissipation or dissipation associated with magnetic reconnection suggest preferential heating of the electrons in regions of low plasma $\beta$ (\citealt{2010MNRAS.409L.104H, Rowan_2017, 10.1093/mnras/stx2530, Rowan_2019, Kawazura771, PhysRevX.10.041050, kawazura2021energy}).
 
 We first investigate the effect of varying $\Rl$ on the 3 hour modulation index, $\mi{3}$. The $\Rl$ parameter dictates the electron temperature in these regions, that is, in the funnel. Increasing $\Rl$ mimics rapid electron cooling along the funnel.
-%In Figure~\ref{fig:rlow_comparison} we show the effect of $\Rl$ on image morphology. It is evident that the emission becomes more compact and one may expect that this will suppress the variability.
 We vary $\Rl$ for various set of the thermal (\kharma data sets) and calculate $\mi{3}$. In Figure~\ref{fig:mi_rlow} we show that the modulation index is weakly dependent on $\Rl$ parameter.
 The $\mi{3}$ distributions do not match the observational values.
-
-%\begin{figure*}
-%\centering
-%\includegraphics[width=0.95\textwidth]{figures/rlow_comparison_rhigh160.png}
-%\caption{Comparison of images for the same fluid snapshot with varying $\Rl$. The density scale $\mathcal{M}$, and FOV were increased to accentuate the differences between the images. The total emission along the funnel decreases with increasing $\Rl$.}
-%\label{fig:rlow_comparison}
-%\end{figure*}
 
 \begin{figure*}
   \centering
@@ -88,32 +77,6 @@ The $\mi{3}$ distributions do not match the observational values.
   \label{fig:mi_rlow}
 \end{figure*}
 
-%\subsection{Radiative cooling}\label{app:cooling}
-
-%Next, we also check if excess flux variability comes from an overestimate of electron temperatures in any areas where radiative cooling of the electrons may become important. We can estimate the possible effects of this change by imposing a limit on electron temperatures based on the local dynamical time, reflecting the assumption that higher-temperature electrons would cool before crossing the event horizon.
-%This limit comes from comparing two timescales: the synchrotron cooling rate at high temperature,
-%\begin{align}
-%  \tau_\mathrm{cool} \approx \frac{3 m_e^3 c^5}{16 B^2 e^4 \Theta_e}
-%\end{align}
-%dependent on the electron temperature $\Theta_e$, expressed in units of the rest mass energy, and the local field strength $B$ in Gauss.
-%and the the dynamical time
-%\begin{align}
-%  \tau_\mathrm{dyn} \approx \left( r \sin{\theta} \right)^{3/2} \frac{G M_\mathrm{BH}}{c^3}.
-%\end{align}
-%A set of images was produced which put a ceiling on the electron temperature $\Theta_e$, by requiring that the $\tau_\mathrm{cool} > N \cdot \tau_\mathrm{dyn}$ -- that is, assuming that electrons likely to cool on timescales shorter than $N$ dynamical times will do so. Lightcurves made using different values of this ceiling are shown in Figure~\ref{fig:ceiling_lc1} and the corresponding $\mi{3}$ index is shown in Figure~\ref{fig:ceiling_lc2}. Setting ceiling on electron temperature decreases the total flux but does not decrease the $\mi{3}$ to the desired value.
-%\begin{figure*}
- % \centering
- % \includegraphics[width=0.95\textwidth]{figures/ctcut_lightcurves.pdf}
-%  \caption{lightcurves when applying a ceiling on electron heating based on an estimate of the local electron cooling time, compared against the local dynamical time. Different values represent ceilings at different numbers of dynamical times. Left and right panels display lightcurves for different accretion models: SANE $a_*=+0.94$ (left panel) and MAD $a_*=+0.94$ (right panel).}
- % \label{fig:ceiling_lc1}
-%\end{figure*}
-
-%\begin{figure*}
- % \centering
-%  \includegraphics[width=0.95\textwidth]{figures/ctcut_effects.pdf}
- % \caption{Effects of the electron temperature ceiling on the 230\,GHz variability (left panel) and on the total flux (right panel).}
-%  \label{fig:ceiling_lc2}
-%\end{figure*}
 
 %==============================================================================
 %8. The flow is actually made of helium. [George]
@@ -127,7 +90,6 @@ The $\mi{3}$ distributions do not match the observational values.
 
 \subsection{Effect of self-consistent electron heating}
 
-%The thermal models considered in Section~\ref{sec:models} assign a local electron temperature as a post-processing step based on local magnetic field strength, parameterized by plasma $\beta$ (Equation \ref{eq:rhigh_prescription}).
 
 \citealt{10.1093/mnras/stv2084} provided a formulation to model electron thermodynamics during the fluid evolution. Numerical dissipation at the grid scale sources entropy generation and is used to heat the electrons based on a microphysical, sub-grid heating prescription. Local fluid and electromagnetic variables are used to compute the electron entropy which, along with the ideal gas equation of state, can be converted into a temperature $\Theta_{e}$. This approach allows computing the electron temperature at each timestep of the simulation rather than post-processing, as it is done in the $\Rh$ and Critical-$\beta$ prescriptions.
 
@@ -144,6 +106,5 @@ We expect the ions and electrons in hot accretion flows to be thermally decouple
 The adiabatic index of the fluid assumes a value between $\Gamma_{e}$ and $\Gamma_{i}$ dictated by the thermodynamics of the ions and electrons (cf. Figure 4 in \citealt{10.1093/mnras/stw3116}). Since we do not model electron thermodynamics and ignore radiative effects during our fluid simulations, we consider a constant value $\Gamma_\mathrm{ad}$ and set it to 4/3 for the \textit{standard} set of simulations, i.e., $\Gamma_\mathrm{ad}=\Gamma_{e}$. While this may be the case in the funnel, where the electrons are the hottest and highly relativistic; the fluid adiabatic index value away from the poles can be higher than the relativistic value.
 Two-temperature simulations can self-consistently evolve adiabatic indices of electrons and ions and compute the net fluid adiabatic index with contributions from both species \cite{10.1093/mnras/stw3116}. These two-temperature simulations often show variation of the adiabatic index with polar angle, with the fluid energy dominated by hot electrons near the poles ($\Gamma = 4/3$) and by cooler ions and  electrons in the midplane ($\Gamma=5/3$).
 
-We look at the interplay between fluid adiabatic index and lightcurve variability by evaluating $\mi{3}$ for thermal, GRMHD models with a higher fluid adiabatic index. This includes MAD models with $\Gamma_\mathrm{ad}=13/9$ (see Section~\ref{app:narayan} and  \citealt{2021arXiv210812380N}) and SANE models with $\Gamma_\mathrm{ad}=5/3$. The models exhibit lightcurve variability similar to the \textit{standard} library and have an average $\mi{3}$ that is greater than the value obtained from the ALMA lightcurve.
-%\kc{maybe discuss hamr thermal models here too}
-%MM 11 Dec: if results are ready then please let know the coordinators and they will incorporate them here.
+We look at the interplay between fluid adiabatic index and lightcurve variability by evaluating $\mi{3}$ for thermal, GRMHD simulations with a higher fluid adiabatic index. This includes MAD models with $\Gamma_\mathrm{ad}=13/9$ (see Section~\ref{app:narayan} and  \citealt{2021arXiv210812380N}) and SANE models with $\Gamma_\mathrm{ad}=5/3$. The models exhibit lightcurve variability similar to the \textit{standard} library and have an average $\mi{3}$ that is greater than the value obtained from the ALMA lightcurve.
+
