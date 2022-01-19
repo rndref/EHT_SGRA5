@@ -29,7 +29,7 @@ where errorbars enclose uncertainty in the black hole spin and viewing angle \ci
 If the emitting plasma is ionized hydrogen (electron-proton plasma), then the Eddington luminosity is
 $L_\mathrm{Edd} = 4\pi G\mbh c m_p/\sigma_\mathrm{T} = 5.2 \times 10^{44}\erg \sec^{-1}$.
 The corresponding Eddington accretion rate is
-$\dot\mbh_\mathrm{Edd} \equiv L_\mathrm{Edd}/(0.1 c^2) = 5.8 \times 10^{24} \gm \rm{s}^{-1} = 0.09 \msun \yr^{-1}$,
+$\dot\mbh_\mathrm{Edd} \equiv L_\mathrm{Edd}/(0.1 c^2) = 5.8 \times 10^{24} \gm \sec^{-1} = 0.09 \msun \yr^{-1}$,
 where the nominal efficiency is 10\% and the Eddington ratio:
 $L_\mathrm{bol}/L_\mathrm{Edd} = 1.9 \times 10^{-10} (L_\mathrm{bol} /10^{35})$,
 where $L_\mathrm{bol}$ is in unit of $\ergps$.
@@ -43,16 +43,16 @@ In what follows, we will assume that the radiative cooling of plasma around the 
 Here we use a one-zone model to motivate the more complicated models that follow, as in \citetalias{M87PaperV}.
 These results follow one-zone models developed in the literature over many decades \citep[e.g.][]{1996IAUS..169..169F}.
 
-Consider a uniform plasma sphere of radius $r = 5\rg$, comparable to the observed size of \sgra at $230\GHz$, with uniform magnetic field oriented at $\pi/3$ to the line-of-sight.
-The magnetic field is set so that the gas pressure and magnetic pressure are proportional: $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $T_i \equiv$ ion temperature, $T_e \equiv$ electron temperature, $B \equiv$ magnetic field strength.  We will assume $\beta=1$, $T_i = 3 T_e$ (a two-temperature plasma), and $\Theta_e \equiv  k T_e / m_e c^2 = 10$ (relativistic electrons and nonrelativistic ions).
+Consider a uniform plasma sphere of radius $r = 5\rg$, comparable to the observed size of \sgra at $230\GHz$ (\citetalias{PaperIII}, \citetalias{PaperIV}), with uniform magnetic field oriented at $\pi/3$ to the line-of-sight.
+The magnetic field is set so that the gas pressure and magnetic pressure are proportional: $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $T_i \equiv$ ion temperature, $T_e \equiv$ electron temperature, $B \equiv$ magnetic field strength in Gauss.  We will assume $\beta=1$, $T_i = 3 T_e$ (a two-temperature plasma), and $\Theta_e \equiv  k T_e / m_e c^2 = 10$ (relativistic electrons and nonrelativistic ions).
 
-Using the thermal emissivity for synchrotron radiation $j_\nu$ \citep[e.g.,][]{2011ApJ...737...21L} and assuming optically thin emission, the flux density $F_\nu = (4/3)\pi r^3 j_\nu D^{-2} 10^{23}\,\mathrm{Jy}$.  Setting $F_\nu = 2.4\,\mathrm{Jy}$ (the average measured by ALMA during the 2017 campaign; \citealt{Wielgus2022}) yields a nonlinear equation for plasma electron density, $n_e$ with solution
+Using the thermal emissivity for synchrotron radiation $j_\nu$ \citep[e.g.,][]{2011ApJ...737...21L} and assuming optically thin emission, the flux density from a uniform sphere, $F_\nu = (4/3)\pi r^3 j_\nu D^{-2} 10^{23}\,\mathrm{Jy}$.  Setting $F_\nu = 2.4\,\mathrm{Jy}$ (the average measured by ALMA during the 2017 campaign; \citealt{Wielgus2022}) yields a nonlinear equation for plasma electron density, $n_e$ with solution
 \begin{align}
   n_e &\simeq 1.1\times10^6\cm^{-3},\\
-  B   &\simeq 30\,\mathrm{G}
+  B   &\simeq 30\,\mathrm{Gauss}
   \label{eq:onezone}
 \end{align}
-(the synchrotron optical depth $\tau_\mathrm{sync} = r j_\nu/B_\nu \simeq 0.4$, so the optically thin approximation is marginal).
+(the synchrotron optical depth $\tau_\mathrm{sync} = r j_\nu/B_\nu \simeq 0.4$, where $B_\nu$ is the Planck function, so the optically thin approximation is marginal).
 These values are consistent with $n_e$ and $B$ of a similar one-zone model fitted to archival \sgra millimeter spectrum as reported in \citet{2019ApJ...881L...2B}.
 %MM: fit of similar one zone model to Terahertz spectrum from ALMA infers ne=2-5x10^6 cm^-3, B=10-50 Gauss, T_e=1-3x10^11 K => Thetae=16-50
 % CFG: I've placed a mathematica script implementing the one zone model in eht.astro.illinois.edu://bd4/eht/paperV/OneZoneThin.ma
@@ -67,7 +67,7 @@ The one-zone model implies that the source plasma is at low density and is there
 At $\Theta_e \sim 1$, for example, the Coulomb scattering cross section is comparable to the Thomson cross section, and therefore the mean free path $\sim \tau_e^{-1} \rg$.
 The electron-ion Coulomb scattering timescale is also long, and the electrons and ions are therefore poorly coupled.
 This is consistent with our assumption of a two-temperature  plasma where electrons are cooler than the ions \citep{1976ApJ...204..187S,1977ApJ...214..840I, 1982Natur.295...17R} and also motivates consideration of
-nonthermal (unrelaxed) electron distribution functions \citep[see]{2000ApJ...541..234O, 2009ApJ...701..521C, 2014A&A...570A...7M, 2018A&A...612A..34D, 2021arXiv211102518F, 2021NatAs.tmp..218C, Chatterjee2021, 2021arXiv211203933E, Scepi2021}.
+nonthermal (unrelaxed) electron distribution functions \citep[see][]{2000ApJ...541..234O, 2009ApJ...701..521C, 2014A&A...570A...7M, 2018A&A...612A..34D, 2021arXiv211102518F, 2021NatAs.tmp..218C, Chatterjee2021, 2021arXiv211203933E, Scepi2021}.
 %\br{my only remaining comment is that I think that the sentence ``As demonstrated in \citet{2000ApJ...541..234O} and \citet{2014A&A...570A...7M} (see also more recent work by \citealt{2018A&A...612A..34D} and references therein) both effects may change the predicted properties of \sgra.'' should be cut, or extended with non-EHT refs on how other groups actually probe those collisionless effects dynamically}
 %\ckc{In principle, we could numerically check all of the assumptions in the one zone model for consistency.  Probably leave until after PC submission.}
 %\monika{i think that the purpose of this section is to make a rough estimates on the back of the envelope so that everyone can repeat them, numerical work is always more difficult to repeat}
@@ -104,7 +104,7 @@ nonthermal (unrelaxed) electron distribution functions \citep[see]{2000ApJ...541
   \begin{tabular}{@{}c@{}} torus / \\ \koral \end{tabular}  & \!\!\!\!\!\!\!\!\!
   \begin{tabular}{@{}c@{}c@{}}   0,$\pm0.3$,$\pm0.5$\\$\pm0.7$,$\pm0.9$ \end{tabular}
   \!\!\!\!\!\!\!\!\! & MAD          & $\frac{13}{9}$     & 101,000 & 100,000  & [288x192x144]     & \citet{2021arXiv210812380N} \\
-  \begin{tabular}{@{}c@{}} tilted / \\ \hamr \end{tabular}     & $15/16$     & IN-SANE      & $\frac{5}{3}$        & 105,000 & 100,000  & [448x144x240]     & \begin{tabular}{@{}c@{}} \citet{Liska2018} \\ \citet{Chatterjee2020}\end{tabular} \\
+  \begin{tabular}{@{}c@{}} tilted / \\ \hamr \end{tabular}     & $15/16$     & IN-SANE$\times3$      & $\frac{5}{3}$        & 105,000 & 100,000  & [448x144x240]     & \begin{tabular}{@{}c@{}} \citet{Liska2018} \\ \citet{Chatterjee2020}\end{tabular} \\
   \begin{tabular}{@{}c@{}} wind-fed / \\ \athenapp \end{tabular} & 0           & MAD$\times2$ & $\frac{5}{3}\times2$        & 20,000  & 2,400    & [356x128x128]     & \begin{tabular}{@{}c@{}} \cite{2016ApJS..225...22W} \\ \citet{2020ApJ...896L...6R} \end{tabular}
   \enddata
   %
@@ -135,7 +135,7 @@ We integrate the GRMHD equations in three spatial dimensions using multiple algo
 \koral    \citep{2013MNRAS.429.3533S}, and
 \athenapp \citep{2016ApJS..225...22W};
 see \citet{2019ApJS..243...26P} and \citet{Olivares_et_al} for comparisons of GRMHD codes.
-All simulations assume a constant adiabatic index  $\Gamma_\mathrm{ad}$.
+All simulations assume a constant adiabatic index  $\Gamma_\mathrm{ad}$. 
 
 The \emph{default} initial conditions for the GRMHD simulations are a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F}
 %\aco{\citep[see also][]{2002MNRAS.334..383F}} \monika{why do we need to have this second citation? is that essential?} \br{I thought Font shows another hydro torus equilibrium in this paper? We don't use that one, so I would not cite that paper} \ckc{all modelers: do any of you use the Font initial condition?  If not I will comment out this reference.}\aco{There are two independent hydro solutions, we have both of them. With same initial condition for magnetic field on top of hydro-solution}\br{is there a reason for using different initial conditions? I tried both FD and FM torus myself and the FD torus evolution is somewhat different. It would be better to start from the same IC to compare late states of the models to images. Which models exactly do use the (different) initial conditions of the Font-Daigne torus? I thought in paper V for M87 we used only the FM torus. Then the first sentence in this paragraph above is also wrong, because we are not using the FM torus exclusively.}\monika{exactly which model in the library starts from FD torus? please answer before midnight.} % \aco{Yes, I think is essential to cite, is true that we not using FD but we also have it in BHAC. Please be free to remove it. But definitively don't have same initial condition in all GRMHD codes.}
@@ -164,7 +164,7 @@ The magnetic flux can be characterized by $\phi \equiv \Phi_{\mathrm{BH}} (\dot{
 MAD models have $\phi \sim \phi_{\rm crit} \sim 60$.\footnote{In the Lorentz-Heaviside units commonly used in GRMHD simulations $\phi_\mathrm{crit}$ is smaller by a factor of $(4\pi)^{1/2} \simeq 3.545$.}
 %\aco{Should we cite the work-in-progress by Narayan about spinup-spindown for MAD models where magnetic flux it can be written as a function of BH spin? I've verified the same tendency for BHAC.}
 %\monika{not necessary, this is not established and should be first published we want to limit in prep as much as possible}
-In MAD models, magnetic flux accretes onto the hole until $\phi \gtrsim \phi_\mathrm{crit}$, then magnetic flux is expelled from the hole and escapes through the inflowing plasma.  SANE models have $\phi < \phi_\mathrm{crit}$, and in most of our standard models have $\phi \sim 1$.
+In MAD models, magnetic flux accretes onto the hole until $\phi \gtrsim \phi_\mathrm{crit}$, then magnetic flux is expelled from the hole and escapes through the inflowing plasma.  SANE models have $\phi < \phi_\mathrm{crit}$, and most of our standard models have $\phi \sim 1$.
 
 We also consider two GRMHD simulations with different initial conditions: strongly magnetized non-MAD tilted torus simulations \citep{Liska2018, Chatterjee2020} and a model in which \sgra is fed directly by winds from stars in its vicinity \citep{2020ApJ...896L...6R}.
 The self-consistent wind feeding simulations result in a mode of accretion that is similar to MAD but typically has lower mean angular momentum and is less well organized.
@@ -176,15 +176,14 @@ The models vary in numerical method and in numerical resolution. We present more
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.425\textwidth]{figures/sane_3D_final.png}\hspace{1.5pt}%
-  \includegraphics[width=0.425\textwidth]{figures/mad_3D_final.png}\\
-  \includegraphics[width=0.425\textwidth]{figures/tilted_3D_final.png}\hspace{1.5pt}%
-  \includegraphics[width=0.425\textwidth]{figures/ressler_3D_final.png}
+  \includegraphics[width=0.425\textwidth]{figures/sane_3D_corrected.png}\hspace{1.5pt}%
+  \includegraphics[width=0.425\textwidth]{figures/mad_3D_corrected.png}\\
+  \includegraphics[width=0.425\textwidth]{figures/tilted_3D_corrected.png}\hspace{1.5pt}%
+  \includegraphics[width=0.425\textwidth]{figures/ressler_3D_corrected.png}
   \caption{3-D overview of selected GRMHD simulations of \sgra in our library.
     The color marks constant dimensionless density surfaces and lines follow magnetic field lines (the magnetic field lines shown are only those which are attached to the inner part of the accretion flow, at $r\approx 5~\rg$).
-    Two top panels show accretion models with default torus initial condition: SANE (left panel, $\abh=0.94$) and MAD (right panel, $\abh=0.5$).
-    Two bottom panels show non-standard accretion models: tilted disk (left panel, $\abh=0.94$ and tilt angle of $60\degree$) and Wind Accretion (right panel, $\abh=0$).
-    In case of spinning black holes, the spin is aligned with z-axis.}
+    Two top panels show accretion simulations with default torus initial condition and
+    two bottom panels show non-standard accretion models. In case of spinning black holes, the spin is aligned with z-axis.}
   \label{fig:GRMHD}
 \end{figure*}
 
@@ -213,6 +212,7 @@ The transfer step requires:
 In \emph{thermal} models electron energies are distributed into the Maxwell-J{\"u}ttner distribution function:
 \begin{align}
   \frac{1}{n_e}\frac{dn_e}{d\gamma} = \frac{\gamma^2 \sqrt{1-1/\gamma^2}} {\Theta_e K_2(1/\Theta_e)} \exp\left(-\frac{\gamma}{\Theta_e}\right);
+  \label{eq:thermaleDF}
 \end{align}
 where $K_2$ is the modified Bessel function of the second kind and $\gamma$ is the Lorentz factor of an electron. Recall $\Theta_e = k_b T_e/(m_e c^2)$, which is determined by the ion-electron temperature ratio $R \equiv T_i/T_e$:
 \begin{align}
@@ -312,12 +312,14 @@ The plasma mass scale parameter $\Munit$ controls the plasma emissivity and the 
   \centering
   \includegraphics[width=\textwidth]{figures/example_vas_seds.pdf}
   % cfg 15-dec: edited for clarity, left all content in.
-  \caption{Visibility amplitudes (left) and SEDs (right) of the three examples, compared with the data.  Black symbols show observations.  Blue, orange, and green are the models showed in Figure~\ref{fig:example_imgs} (see also legend for details).  Observed VAs are 1\,minute incoherently averaged data from the HOPS pipeline on \aprilvii.  Model VAs are shown as a solid line for a section at position angle $0\degree$ for a single snapshot, and the band shows the 1st through 99th percentile over all position angles and all times; in this figure no noise is included in the model VAs.  Model SEDs show a solid line for the mean SED and a band for the range across snapshots.}
+  \caption{Visibility amplitudes (left) and SEDs (right) of the three examples, compared with the EHT~2017 data.  Black symbols show observations.  Blue, orange, and green are the models showed in Figure~\ref{fig:example_imgs} (see also legend for details).  Observed VAs are 1\,minute incoherently averaged data from the HOPS pipeline on \aprilvii.  Model VAs are shown as a solid line for a section at position angle $0\degree$ for a single snapshot, and the band shows the 1st through 99th percentile over all position angles and all times; in this figure no noise is included in the model VAs.  Model SEDs show a solid line for the mean SED and a band for the range across snapshots.}
   \label{fig:example_vas_seds}
 \end{figure*}
 
 Given an eDF, density scale $\Munit$, and radiative transfer coefficients based on local properties of the plasma, the emergent radiation is obtained by integrating the radiative transfer equation.
 We use two classes of numerical methods: ray tracing to generate synthetic images, and Monte Carlo to generate spectral energy distributions (SEDs).
+All light transport simulations are carried out using the fast light approach, in which plasma variables are read from a single GRMHD dump file and are assumed not to change during the ray tracing. 
+It has been demonstrated by \citet{2010ApJ...717.1092D} (and recently by \citealt{2021MNRAS.508.4282M}) that including light travel effects in the model introduces minor changes to light curves and images.  
 Further detail on numerical methods is given Appendix~\ref{app:radtrans}.
 Comparisons of numerical methods \citep{2020ApJ...897..148G, Prather_et_al_2022} show that differences between radiative transfer schemes do not contribute significantly to the error budget.
 % cfg 11 dec: done
