@@ -15,7 +15,7 @@ which are approximately the mean of the values reported by \citet{2019Sci...365.
 In this paper we assume that \sgra is a black hole described by the Kerr metric.
 The black hole dimensionless spin, $\abh \equiv Jc/G\mbh^2$, is a free parameter with $-1 < \abh < 1$.
 Here, $J$, $G$, and $c$ are the black hole spin angular momentum, gravitational constant, and speed of light, respectively.
-Following \citetalias{M87PaperV}, we use 
+Following \citet{M87PaperV}, hereafter \citetalias{M87PaperV}, we use
 $\abh > 0$ to indicate that the angular momentum of the accretion flow and black hole are parallel (the accretion flow is ``prograde'') and
 $\abh < 0$ to indicate that the angular momentum of the accretion flow and black hole are antiparallel (``retrograde'').
 
@@ -80,7 +80,7 @@ nonthermal (unrelaxed) electron distribution functions \citep[see][]{2000ApJ...5
   \tabletypesize{\footnotesize}
   \renewcommand{\arraystretch}{1.1}
   %
-  \tablehead{  
+  \tablehead{
  % &
  %   \colhead{Spacetime}           &
  %   \multicolumn{2}{c}{Fluid}     &
@@ -135,7 +135,7 @@ We integrate the GRMHD equations in three spatial dimensions using multiple algo
 \koral    \citep{2013MNRAS.429.3533S}, and
 \athenapp \citep{2016ApJS..225...22W};
 see \citet{2019ApJS..243...26P} and \citet{Olivares_et_al} for comparisons of GRMHD codes.
-All simulations assume a constant adiabatic index  $\Gamma_\mathrm{ad}$. 
+All simulations assume a constant adiabatic index  $\Gamma_\mathrm{ad}$.
 
 The \emph{default} initial conditions for the GRMHD simulations are a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F}
 %\aco{\citep[see also][]{2002MNRAS.334..383F}} \monika{why do we need to have this second citation? is that essential?} \br{I thought Font shows another hydro torus equilibrium in this paper? We don't use that one, so I would not cite that paper} \ckc{all modelers: do any of you use the Font initial condition?  If not I will comment out this reference.}\aco{There are two independent hydro solutions, we have both of them. With same initial condition for magnetic field on top of hydro-solution}\br{is there a reason for using different initial conditions? I tried both FD and FM torus myself and the FD torus evolution is somewhat different. It would be better to start from the same IC to compare late states of the models to images. Which models exactly do use the (different) initial conditions of the Font-Daigne torus? I thought in paper V for M87 we used only the FM torus. Then the first sentence in this paragraph above is also wrong, because we are not using the FM torus exclusively.}\monika{exactly which model in the library starts from FD torus? please answer before midnight.} % \aco{Yes, I think is essential to cite, is true that we not using FD but we also have it in BHAC. Please be free to remove it. But definitively don't have same initial condition in all GRMHD codes.}
@@ -158,8 +158,7 @@ Letting $P_\mathrm{gas}$ be the gas pressure and $P_\mathrm{mag} \equiv B^2 / (8
 \emph{i})~equatorial inflow,
 \emph{ii})~a mid-latitude disk wind/corona with  $\beta  \equiv P_\mathrm{gas} / P_\mathrm{mag} \sim 1$, and
 \emph{iii})~a polar funnel/relativistic jet with $\sigma \equiv B^2/4\pi \rho c^2 \gg 1$.
-
-It is well established \citepalias[see, e.g.,][and references therein]{M87PaperV, M87PaperVIII} that the magnetic flux through the event horizon divides the outcomes into two categories: the magnetically arrested disk (MAD) state \citep[e.g.,][]{1974Ap&SS..28...45B, 2003ApJ...592.1042I, 2003PASJ...55L..69N} in which the magnetic flux on the horizon saturates and significantly affects the dynamics of the flow, and the Standard and Normal Evolution (SANE) state \citep[e.g.,][]{2003ApJ...589..444G, 2003ApJ...599.1238D, 2012MNRAS.426.3241N}.
+It is well established (see, e.g, \citealt{M87PaperV} and \citealt{M87PaperVIII}, hereafter \citepalias{M87PaperVIII}, and references therein) that the magnetic flux through the event horizon divides the outcomes into two categories: the magnetically arrested disk (MAD) state \citep[e.g.,][]{1974Ap&SS..28...45B, 2003ApJ...592.1042I, 2003PASJ...55L..69N} in which the magnetic flux on the horizon saturates and significantly affects the dynamics of the flow, and the Standard and Normal Evolution (SANE) state \citep[e.g.,][]{2003ApJ...589..444G, 2003ApJ...599.1238D, 2012MNRAS.426.3241N}.
 The magnetic flux can be characterized by $\phi \equiv \Phi_{\mathrm{BH}} (\dot{M} r_\mathrm{g}^2 c)^{-1/2}$, where $\Phi_{\rm BH}$ is the magnetic flux interior to the black hole equator and $\dot{M}$ is the mass accretion rate through the horizon.
 MAD models have $\phi \sim \phi_{\rm crit} \sim 60$.\footnote{In the Lorentz-Heaviside units commonly used in GRMHD simulations $\phi_\mathrm{crit}$ is smaller by a factor of $(4\pi)^{1/2} \simeq 3.545$.}
 %\aco{Should we cite the work-in-progress by Narayan about spinup-spindown for MAD models where magnetic flux it can be written as a function of BH spin? I've verified the same tendency for BHAC.}
@@ -200,7 +199,7 @@ One critical feature of the GRMHD simulations that is important for the interpre
 \subsubsection{Radiative Transfer Model}
 
 Synthetic images are generated from the GRMHD simulations in a radiative transfer step.
-The transfer step requires: 
+The transfer step requires:
 \emph{i})~a model for the electron temperature and electron distribution function (hereafter eDF);
 \emph{ii})~an assignment of a density scale to the GRMHD simulation;
 \emph{iii})~a numerical radiative transfer step performed after the GRMHD simulation, assuming that the plasma evolution is unaffected by radiation.
@@ -319,8 +318,8 @@ The plasma mass scale parameter $\Munit$ controls the plasma emissivity and the 
 
 Given an eDF, density scale $\Munit$, and radiative transfer coefficients based on local properties of the plasma, the emergent radiation is obtained by integrating the radiative transfer equation.
 We use two classes of numerical methods: ray tracing to generate synthetic images, and Monte Carlo to generate spectral energy distributions (SEDs).
-All light transport simulations are carried out using the fast light approach, in which plasma variables are read from a single GRMHD dump file and are assumed not to change during the ray tracing. 
-It has been demonstrated by \citet{2010ApJ...717.1092D} (and recently by \citealt{2021MNRAS.508.4282M}) that including light travel effects in the model introduces minor changes to light curves and images.  
+All light transport simulations are carried out using the fast light approach, in which plasma variables are read from a single GRMHD dump file and are assumed not to change during the ray tracing.
+It has been demonstrated by \citet{2010ApJ...717.1092D} (and recently by \citealt{2021MNRAS.508.4282M}) that including light travel effects in the model introduces minor changes to light curves and images.
 Further detail on numerical methods is given Appendix~\ref{app:radtrans}.
 Comparisons of numerical methods \citep{2020ApJ...897..148G, Prather_et_al_2022} show that differences between radiative transfer schemes do not contribute significantly to the error budget.
 % cfg 11 dec: done
