@@ -118,7 +118,7 @@ For example if the source is a simple, circularly symmetric ring of
 finite width then the location of the first minimum depends only on
 the ring diameter, while the VAs on long baselines depend mainly on
 ring width.
-GRMHD models are more complicated, with significant structural
+GRMHD models are more complicated, with substantial structural
 fluctuations.
 The minimum locations and depths, and long-baseline amplitudes, are
 expected to fluctuate (e.g., \citealt{2018ApJ...856..163M},
@@ -205,14 +205,14 @@ The maximum likelihood \mring parameters are listed in Table~\ref{tab:mringfits}
 
 Next, we read in a series of model images, generate synthetic data for each image for each scan at four assumed position angles for the image, and fit \mrings to the synthetic data.  This produces a distribution of \mring parameters for each model.
 
-The synthetic data is generated as follows.  A model image $I(x,y)$ is Fourier transformed to complex visibilities $V(u,v)$ with an assumed position angle then sampled on baselines $i$ drawn from the comparison scan, $V_i \equiv V(u_i,v_i)$.  Normally distributed thermal noise $\delta V_{\mathrm{th},i}$ with amplitude based on telescope performance during the scan is added, and multiplicative, normally distributed noise with unit variance $N$ is added to crudely model gain corrections: $\tilde{V}_i = V_i (1 + \epsilon N) + \delta V_{th,i}$.  We set $\epsilon = 0.05$, but no significant changes in fit parameters were observed for $\epsilon = 0.02$.  We then fit to the VA $|\tilde{V}_i|$ and closure phases.
+The synthetic data is generated as follows.  A model image $I(x,y)$ is Fourier transformed to complex visibilities $V(u,v)$ with an assumed position angle then sampled on baselines $i$ drawn from the comparison scan, $V_i \equiv V(u_i,v_i)$.  Normally distributed thermal noise $\delta V_{\mathrm{th},i}$ with amplitude based on telescope performance during the scan is added, and multiplicative, normally distributed noise with unit variance $N$ is added to crudely model gain corrections: $\tilde{V}_i = V_i (1 + \epsilon N) + \delta V_{th,i}$.  We set $\epsilon = 0.05$, but no substantial changes in fit parameters were observed for $\epsilon = 0.02$.  We then fit to the VA $|\tilde{V}_i|$ and closure phases.
 %arg$(\tilde{V}_i \tilde{V}_j \tilde{V}_k^*)$, where $ijk$ form a triangle in the $(u,v)$ plane.
-The procedure was repeated for 4 position angles (orientations of the image on the sky; no significant changes were observed if more position angles were used) and for model images separated by $500 \tg$, which is comparable to a correlation time.  This results in, for example, a sample of $30$ fits per scan per position angle for model sets with $15,000\tg$ integration time, or a total of $30 \times 10 = 300$ samples in each distribution.
+The procedure was repeated for 4 position angles (orientations of the image on the sky; no substantial changes were observed if more position angles were used) and for model images separated by $500 \tg$, which is comparable to a correlation time.  This results in, for example, a sample of $30$ fits per scan per position angle for model sets with $15,000\tg$ integration time, or a total of $30 \times 10 = 300$ samples in each distribution.
 
 In comparing the models to the data we
 \emph{i}) generate the distribution of fit parameters at each position angle;
 \emph{ii}) use a Kolmogorov-Smirnov test to compare the distribution of $300$ synthetic data fits with the distribution of $10$ observational fits, and obtain a p-value (what is the probability they are drawn from the same underlying distribution?);
-\emph{iii}) average p-values over position angles (i.e., marginalize over position angle; the models do not show a significant position angle preference); and
+\emph{iii}) average p-values over position angles (i.e., marginalize over position angle; the models do not show a substantial position angle preference); and
 \emph{iv}) reject the model if $p < 0.01$.
 
 %==============================================================================
