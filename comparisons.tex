@@ -465,9 +465,12 @@ Next we consider a model in which {\em all} electrons are in a $\kappa$ eDF, whi
 We find that the $\kappa=5$ models produce generally consistent results with the \bhac thermal models. Especially at 230\,GHz we find similar passing fractions for the 230\GHz source sizes (92\% of the $\kappa=5$ models pass the size constraint as compared to 98\% for the thermal models) and for the modulation index (MI) (29\% of the $\kappa=5$ models are passing MI constraint as compared to 27\% of the thermal models). The lower passing fraction in source size for the $kappa=5$ models can be explained by mainly SANE models at low $\Rh$ which show larger sizes than the thermal models. We discuss the constraints for which they differ more substantial below.
 %..............................................................................
 %\subsubsubsection{230\GHz VLBI pre-image size}
+\subsubsubsection{Null location and Visibility Amplitude Morphology }
+As mentioned earlier, the $\kappa=5$ models are optically thinner than the thermal models and typically show a thin, bright ring feature. As a consequence of the shift in the emission structure only 59\% of the $\kappa=5$ models pass the Null location constraint while the passing fraction for the thermal models is 84\%. Similar, due to the change in the opacity, only 55\% of the non-thermal models are in agreement with the VA Morphology in contrast to 72\% of the thermal models.
+
 
 \subsubsubsection{M-ring fits}
-The m-ring constraints on diameter, width and asymmetry is based by 71\%, 3\% and 73\% of the $\kappa=5$ models. Except for the diameter all pass fractions are smaller than for the thermal models (65\%, 21\%, and 0.95\% for diameter, widht and asymmetry). The slightly larger pass fraction for the diameter could be affected by the shorter time window used for the $\kappa$ models as compared to the thermal ones. However, the low fraction for the m-ring width can be explained by the optical depth of the $\kappa$ models. Most of the $\kappa$ models  are optically thinner than their thermal counter-part which leads to finer ring-structure which is picked by the m-ring fitting.
+The m-ring constraints on diameter, width and asymmetry is passed by 71\%, 3\% and 73\% of the $\kappa=5$ models. Except for the diameter all pass fractions are smaller than for the thermal models (65\%, 21\%, and 0.95\% for diameter, width and asymmetry). The slightly larger pass fraction for the diameter could be affected by the shorter time window used for the $\kappa$ models as compared to the thermal ones. However, the low fraction for the m-ring width can be explained by the optical depth of the $\kappa$ models. Most of the $\kappa$ models  are optically thinner than their thermal counter-part which leads to finer ring-structure which is picked by the m-ring fitting.
 
 \subsubsubsection{86\GHz source size}
 
@@ -526,7 +529,7 @@ where the nonthermal efficiency $\epsilon( \varepsilon, \beta, \sigma)$ is
 %An example time- and azimuth-averaged distribution of $\epsilon$ is shown in Fig. \ref{fig:varepsilon}.
 Evidently $\epsilon \rightarrow 0$ in the disk while $\epsilon \rightarrow \varepsilon$ in the jet.  Since we remove emission at $\sigma > \sigma_{\rm cut} = 1$ the non-thermal electrons are confined to the jet sheath.
 
-We set $\sigma_{\rm min}=0.01$ and vary the base efficiency, $\varepsilon$ over 0.05, 0.1 and 0.2.  At each $\varepsilon$ we generate a model set spanning the same parameter space as the thermal models (see Table \ref{tab:radiativemodels} for details) and normalize the accretion rate using the standard procedure (see Section \ref{sec:models}. The mass accretion rate required to obtain 2.4 Jy at 230\,GHz only changes on average around 1.5\% as compared to the thermal models. This small variation in the mass accretion rate reveals the fact that most of the emission at 230\,GHz is created from the thermal part of the mixed model in agreement with the small fraction of non-thermal particles added ($\varepsilon=0.05,0.1,\rm{and}\,0.2$).
+We set $\sigma_{\rm min}=0.01$ and vary the base efficiency, $\varepsilon$ over 0.05, 0.1 and 0.2.  At each $\varepsilon$ we generate a model set spanning the same parameter space as the thermal models (see Table \ref{tab:radiativemodels} for details) and normalize the accretion rate using the standard procedure (see Section \ref{sec:models}. The mass accretion rate required to obtain 2.4 Jy at 230\,GHz only changes on average around 1.5\% as compared to the thermal models. This small variation in the mass accretion rate reveals the fact that most of the emission at 230\,GHz is created from the thermal part of the hybrid eDF in agreement with the small fraction of non-thermal particles added ($\varepsilon=0.05,0.1,\rm{and}\,0.2$).
 
 %For each model we iterate the mass accretion rate to obtain an average flux of 2.4\,Jy at 230\GHz across a time interval of 5000\,M. In order to explore several values of $\varepsilon$ efficiently we increased the model snapshot cadence to 50\,M. This allows us to keep the numerical costs for this parameter sweep low while still being within the correlation time of the GRMHD simulations.
 %($t_{\rm corr}\approx 50-100\,M$) \cmf{ do we have reference for this? So far this result is not published, maybe Boris paper?}.
@@ -536,8 +539,8 @@ We set $\sigma_{\rm min}=0.01$ and vary the base efficiency, $\varepsilon$ over 
 
 \begin{figure*}[t!]
   \centering
-  \includegraphics[width=\textwidth]{./figures/SANE_eDFs.pdf}
-  \caption{Influence of the eDF on the image structure for a SANE model with spin $a_{\star}=0.5$ seen under a viewing angle of 30$^\circ$ using $R_{\rm high}=40$ at t=25000\,M. The panels show from left to right a thermal, variable kappa $\kappa(\sigma,\beta)$, $\kappa=3.5$ (fixed) with efficiency $\varepsilon=0.2$ and $\kappa=5$ (fixed) everywhere eDF. The top row shows the emission structure at 230\,GHz and the bottom one for 86\,GHz. Notice the increased field of view for the 86\,GHz images}
+  \includegraphics[width=\textwidth]{./figures/SANE_eDFs_diff.pdf}
+  \caption{Influence of the eDF on the image structure for a SANE model with spin $a_{\star}=0.5$ seen under a viewing angle of 30$^\circ$ using $R_{\rm high}=40$ at t=25000\,M. In the first and third row the panels show the image structure from left to right a thermal, variable kappa $\kappa(\sigma,\beta)$, $\kappa=3.5$ (fixed) with efficiency $\varepsilon=0.2$ and $\kappa=5$ (fixed) everywhere eDF at 230GHz and at 86GHz. Notice the increased field of view for the 86\,GHz images. The second and fourth row show the difference between thermal image and the different non-thermal eDFs}
   \label{fig:SANE_edfs}
 \end{figure*}
 
@@ -550,8 +553,19 @@ We set $\sigma_{\rm min}=0.01$ and vary the base efficiency, $\varepsilon$ over 
 %\end{figure}
 
 %In the following we will elaborate on the impact of adding non-thermal particles via the $\kappa$ electron distribution with fixed $\kappa$ value ($\kappa=3.5$) and three different base efficiencies $\varepsilon=$0.05, 0.1 and 0.2 on the observational constraints listed in Section~\ref{subsec:thermal}.
-For this model, the addition of non-thermal particles does not substantially affect the flux or size of the image at 230\GHz. For MAD models, 230\GHz emission is mostly produced in the disk region (see \citetalias{M87PaperV} and Fig.~8 in \citealt{Wong_2022} for a 3-D rendering).  Thus, the images are unaffected by the non-thermal particles, which are located in the jet. For SANE models, increasing $\Rh$ pushes the emission towards the jet sheath. However, the effect of non-thermal particles on the image is minor, because most of the emission is still produced by thermal electrons with temperature set by the $\Rh$ prescription.
+\subsubsubsection{230\GHz size and Lightcurve Variability}
+\label{varkappa230}
+For this model, the addition of non-thermal particles does not substantially affect the flux or size of the image at 230\GHz. For MAD models, 230\GHz emission is mostly produced in the disk region (see \citetalias{M87PaperV} and Fig.~8 in \citealt{Wong_2022} for a 3-D rendering).  Thus, the images are unaffected by the non-thermal particles, which are located in the jet. For SANE models, increasing $\Rh$ pushes the emission towards the jet sheath which increases the source size for high spins and large $\Rh$. However, the effect of non-thermal particles on the image is minor, because most of the emission is still produced by thermal electrons with temperature set by the $\Rh$ prescription. The passing fraction for the 230\GHz image size is 98\% independent of the efficiency, $\varepsilon$, which is consistent with 98\% of the thermal models fulfilling the image size constraint. We find that the 47\% of the models are in agreement with the 230\GHz variability constraint. This passing fraction is larger than for the thermal models (27\%). This discrepancy is most likely an effect of the shorter time window (5\,kM) considered for the non-thermal models in contrast to 15\,kM for the thermal ones. 
 
+\subsubsubsection{Null location and Visibility Amplitude Morphology}
+The null location and VA morphology constraint are obtained from the 230\GHz images. Since 230\GHZ images of the $\kappa=3.5$ models with variable efficiency are similar to the thermal models (see previous paragraph) the fraction of passing models for both the Null location and VA morphology are comparable. The three non-thermal models have an average passing fraction for the Null location of 80\% whereas 83\% of the thermal models pass. The VA morphology constrain is fulfilled by 72\% of the models for both thermal and non-thermal eDF.  
+
+\subsubsubsection{M-ring fits}
+Given that including non-thermal particles via the equations presented in Eq. \ref{eq:efficiencybetasigma} does not change the image structure and variability properties of the 230\GHz images the M-ring fits provide the same passing fractions for the diameter (65\%), width (22\%) and asymmetry (95\%).
+
+\subsubsubsection{86\GHz source size and flux}
+The 86\GHz source is only slightly affected by the addition of non-thermal particles as compared to the thermal models. Only for the SANE models with $R_{\rm high}\geq 40$ and $a^{\star}>0$ produce 86\GHz image sizes larger than the thermal SANE models. This trend increases with the efficiency and is reflected in the decreasing pass fraction: 56\% (for $varepsilon=0.05,0.1$) and 55\% ($varpesilon=0.2$) as compared to thermal models (59\%). 
+A similar trend is found for the 86\GHz flux density. The non-thermal particles are mainly located in the jet and thus contribute to the 86\GHz flux. Again, jet dominated high spinning SANE models typically fail the 86\GHz flux constraint. With increasing efficiency i.e. adding more non-thermal particles the pass fraction decreases and we found the following fractions: 67\% ($varepsilon=0.05$), 66\% ($varepsilon=0.1$) and 63\% ($varepsilon=0.2$). In contrast to a pass fraction of 68\% for the thermal models.
 %..............................................................................
 %\subsubsubsection{230\GHz VLBI pre-image size}
 
@@ -586,7 +600,7 @@ For this model, the addition of non-thermal particles does not substantially aff
 %..............................................................................
 \subsubsubsection{$2.2\um$ Constraint}
 
-The addition of non-thermal electrons increases the $2.2\um$ flux for all models. For SANE models, except $\Rh=1$, the addition of non-thermal particles leads to over-production of $2.2\um$ photons. For MAD models, all models over-produce at $2.2\um$ for $\varepsilon \ge 0.05$.
+The addition of non-thermal electrons increases the $2.2\um$ flux for all models. For SANE models, except $\Rh=1$, the addition of non-thermal particles leads to over-production of $2.2\um$ photons. For MAD models, all models over-produce at $2.2\um$ for $\varepsilon \ge 0.05$. As noted above, $2.2\um$ emission is produced from the tail of the eDF.  The thermal eDF tail decreases exponentially, while the $\kappa$ eDF tail decreases as a power law, so the increase in $2.2\um$ flux density is unsurprising.  This is a general feature of the nonthermal models: $2.2\um$ observations sharply limit the allowed population of nonthermal electrons.
 
 % commented out 12-dec, cfg: we should show trends in some model and some test other than this one, since we can easily make the case that the NIR increases as $\varepsilon$ increases.
 %\begin{figure*}
@@ -596,7 +610,7 @@ The addition of non-thermal electrons increases the $2.2\um$ flux for all models
 %  \label{fig:NIR_kappaepsilon}
 %\end{figure*}
 
-As noted above, $2.2\um$ emission is produced from the tail of the eDF.  The thermal eDF tail decreases exponentially, while the $\kappa$ eDF tail decreases as a power law, so the increase in $2.2\um$ flux density is unsurprising.  This is a general feature of the nonthermal models: $2.2\um$ observations sharply limit the allowed population of nonthermal electrons.
+
 
 %..............................................................................
 %\subsubsubsection{Lightcurve Variability}

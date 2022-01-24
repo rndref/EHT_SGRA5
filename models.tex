@@ -10,123 +10,162 @@ In this paper, we assume the mass of and distance to \sgra are
   \mbh &= 4.14  \times 10^6 \msun, \label{eq:mass} \\
   D    &= 8.127 \kpc,              \label{eq:dist}
 \end{align}
-which are approximately the mean of the values reported by \citet{2019Sci...365..664D} and \citet{2019A&A...625L..10G}.  The distance is consistent with maser parallax measurements \citet{2019ApJ...885..131R}.
+which are approximately the mean of the values reported by \citet{2019Sci...365..664D} and \citet{2019A&A...625L..10G}, which differ by about 4\%.  The distance is consistent with maser parallax measurements \citep{2019ApJ...885..131R}.
 
 In this paper we assume that \sgra is a black hole described by the Kerr metric.
-The black hole dimensionless spin, $\abh \equiv Jc/G\mbh^2$, is a free parameter with $-1 < \abh < 1$.
-Here, $J$, $G$, and $c$ are the black hole spin angular momentum, gravitational constant, and speed of light, respectively.
+The black hole dimensionless spin, $\abh \equiv Jc/G\mbh^2$, is a free parameter with $-1 < \abh < 1$;  $J$, $G$, and $c$ are the black hole spin angular momentum, gravitational constant, and speed of light, respectively.
 Following \citet{M87PaperV}, hereafter \citetalias{M87PaperV}, we use
 $\abh > 0$ to indicate that the angular momentum of the accretion flow and black hole are parallel (the accretion flow is ``prograde'') and
 $\abh < 0$ to indicate that the angular momentum of the accretion flow and black hole are antiparallel (``retrograde'').
 
 Using the above mass and distance, the implied
-characteristic length $r_\mathrm{g}         \equiv G\mbh/ c^2    \simeq 6.1\times10^{11}\cm$,
-characteristic time   $t_\mathrm{g}         \equiv G\mbh/ c^3    \simeq 20.4\sec$, and
-angular scale         $\vartheta_\mathrm{g} \equiv G\mbh/(c^2 D) \simeq 5.03\uas$.
-The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D) = (52.3 \pm 2.08)\uas$,
-where errorbars enclose uncertainty in the black hole spin and viewing angle \citep[see, e.g.,][]{2020ApJ...896....7M}.
+characteristic length: 
+\begin{equation}
+r_\mathrm{g}         \equiv G\mbh/ c^2    \simeq 6.1\times10^{11}\cm,
+\end{equation}
+characteristic time: 
+\begin{equation}
+t_\mathrm{g}         \equiv G\mbh/ c^3    \simeq 20.4\sec,
+\end{equation}
+and
+angular scale: 
+\begin{equation}
+\vartheta_\mathrm{g} \equiv G\mbh/(c^2 D) \simeq 5.03\uas.
+\end{equation}
+The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D)$ for $\abh = 0$.  For $|\abh| > 0$ the shadow is noncircular and its size and shape depend on $\abh$ and inclination $i$; its width can be as small as $9 G\mbh/(c^2 D)$ for $\abh = 1$ and $i = 90\deg$ \citep{1973blho.conf..215B}.
 
-If the emitting plasma is ionized hydrogen (electron-proton plasma), then the Eddington luminosity is
-$L_\mathrm{Edd} = 4\pi G\mbh c m_p/\sigma_\mathrm{T} = 5.2 \times 10^{44}\erg \sec^{-1}$.
+If the emitting plasma is ionized hydrogen (electron-proton plasma) then the Eddington luminosity is:
+\begin{equation}
+L_\mathrm{Edd} \equiv 4\pi G\mbh c m_p/\sigma_\mathrm{T} = 5.2 \times 10^{44}\erg \sec^{-1},
+\end{equation}
+where symbols have their usual meaning.
 The corresponding Eddington accretion rate is
-$\dot\mbh_\mathrm{Edd} \equiv L_\mathrm{Edd}/(0.1 c^2) = 5.8 \times 10^{24} \gm \sec^{-1} = 0.09 \msun \yr^{-1}$,
+\begin{equation}
+\dot\mbh_\mathrm{Edd} \equiv L_\mathrm{Edd}/(0.1 c^2) = 5.8 \times 10^{24} \gm \sec^{-1} = 0.09 \msun \yr^{-1},
+\end{equation}
 where the nominal efficiency is 10\% and the Eddington ratio:
-$L_\mathrm{bol}/L_\mathrm{Edd} = 1.9 \times 10^{-10} (L_\mathrm{bol} /10^{35})$,
-where $L_\mathrm{bol}$ is in unit of $\ergps$.
+$L_\mathrm{bol}/L_\mathrm{Edd} = 1.9 \times 10^{-10} (L_\mathrm{bol} \ergps /10^{35} \ergps)$.
 In a quiescent, non-flaring state, the bolometric luminosity of \sgra is $L_\mathrm{bol} \sim 10^{35}\ergps$, resulting in an extremely small Eddington ratio.
-In what follows, we will assume that the radiative cooling of plasma around the black hole can be neglected (which is partially justified later) and that model emission can be calculated in post-processing.
+In what follows we assume that radiative cooling of plasma around the black hole can be neglected (which is partially justified later) and that the emergent radiation can be calculated in a post-processing.
 
 %==============================================================================
-\subsection{Estimate from One-Zone Model}
+\subsection{One-Zone Model Estimates}
 
-%The development of complex models is guided by simple estimates.
-Here we use a one-zone model to motivate the more complicated models that follow, as in \citetalias{M87PaperV}.
-These results follow one-zone models developed in the literature over many decades \citep[e.g.][]{1996IAUS..169..169F}.
+Here we use a one-zone model to motivate the more complicated models that follow, as in \citetalias{M87PaperV}.  These results follow one-zone models developed in the literature over many decades \citep[e.g.][]{1996IAUS..169..169F}.
 
-Consider a uniform plasma sphere of radius $r = 5\rg$, comparable to the observed size of \sgra at $230\GHz$ (\citetalias{PaperIII}, \citetalias{PaperIV}), with uniform magnetic field oriented at $\pi/3$ to the line-of-sight.
-The magnetic field is set so that the gas pressure and magnetic pressure are proportional: $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $T_i \equiv$ ion temperature, $T_e \equiv$ electron temperature, $B \equiv$ magnetic field strength in Gauss.  We will assume $\beta=1$, $T_i = 3 T_e$ (a two-temperature plasma), and $\Theta_e \equiv  k T_e / m_e c^2 = 10$ (relativistic electrons and nonrelativistic ions).
+Consider a spherical, uniform plasma of radius $r = 5\rg$, comparable to the observed size of \sgra at $230\GHz$ (\citetalias{PaperIII}, \citetalias{PaperIV}), with uniform magnetic field oriented at $\pi/3$ to the line-of-sight.
+The magnetic field is set so that the gas pressure and magnetic pressure are proportional: $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $T_i \equiv$ ion temperature, $T_e \equiv$ electron temperature, $B \equiv$ magnetic field strength in Gauss.  We assume $\beta=1$, $T_i = 3 T_e$ (a two-temperature plasma), and $\Theta_e \equiv  k T_e / m_e c^2 = 10$ (relativistic electrons and nonrelativistic ions).
 
-Using the thermal emissivity for synchrotron radiation $j_\nu$ \citep[e.g.,][]{2011ApJ...737...21L} and assuming optically thin emission, the flux density from a uniform sphere, $F_\nu = (4/3)\pi r^3 j_\nu D^{-2} 10^{23}\,\mathrm{Jy}$.  Setting $F_\nu = 2.4\,\mathrm{Jy}$ (the average measured by ALMA during the 2017 campaign; \citealt{Wielgus2022}) yields a nonlinear equation for plasma electron density, $n_e$ with solution
+Using a thermal synchrotron emissivity $j_\nu$ \citep[e.g.,][]{2011ApJ...737...21L} and assuming optically thin emission, the flux density from a uniform sphere, $F_\nu = (4/3)\pi r^3 j_\nu D^{-2} 10^{23}\,\mathrm{Jy}$.  Setting $F_\nu = 2.4\,\mathrm{Jy}$ (the average measured by ALMA during the 2017 campaign; \citealt{Wielgus2022}) yields a nonlinear equation for the electron density, $n_e$, with solution
 \begin{align}
   n_e &\simeq 1.1\times10^6\cm^{-3},\\
   B   &\simeq 30\,\mathrm{Gauss}
   \label{eq:onezone}
 \end{align}
 (the synchrotron optical depth $\tau_\mathrm{sync} = r j_\nu/B_\nu \simeq 0.4$, where $B_\nu$ is the Planck function, so the optically thin approximation is marginal).
-These values are consistent with $n_e$ and $B$ of a similar one-zone model fitted to archival \sgra millimeter spectrum as reported in \citet{2019ApJ...881L...2B}.
+These values are consistent with $n_e$ and $B$ of a similar one-zone model fitted to archival \sgra millimeter spectrum \citep{2019ApJ...881L...2B}.
 %MM: fit of similar one zone model to Terahertz spectrum from ALMA infers ne=2-5x10^6 cm^-3, B=10-50 Gauss, T_e=1-3x10^11 K => Thetae=16-50
 % CFG: I've placed a mathematica script implementing the one zone model in eht.astro.illinois.edu://bd4/eht/paperV/OneZoneThin.ma
 
-The one-zone model has electron scattering optical depth  $\tau_e \sim \sigma_T n_e r \simeq 2\times10^{-5}$ and thus a small Compton parameter: $y = 16 \Theta_e^2 \max(\tau_e,\tau_e^2) \simeq 3\times10^{-2}$.
+The one-zone model has electron scattering optical depth  $\tau_e \sim \sigma_T n_e r \simeq 2\times10^{-5}$ and thus a small Compton parameter: $y = 16 \Theta_e^2 \max(\tau_e,\tau_e^2) \simeq 0.03$.
 Synchrotron cooling therefore dominates Compton cooling.
 
-The synchrotron cooling timescale is $t_\mathrm{cool} \equiv u/\Lambda$ where $u_e = 3 n_e k T_e$ is the electron internal energy and $\Lambda \simeq 5.4 B^2 e^4 n_e \Theta_e^2 /(c^3 m_e^2)$ is the synchrotron cooling rate for thermal population of electrons with $\Theta_e \gtrsim 1$ (for details see Appendix~A in \citealt{2011ApJ...735....9M}; finite optical depth reduces $\Lambda$).
-The cooling time is therefore $t_\mathrm{cool}=2.3 \times 10^4\sec \simeq 1.1 \times 10^3 \tg$ which is longer than the inflow timescale $r/v^r \sim r^{3/2}$.  This suggests that radiative cooling can be neglected in the plasma models \citep[more detailed calculations confirm this estimate][]{2012MNRAS.426.1928D,2020MNRAS.499.3178Y}.\footnote{Notice that if \sgra is fed by stellar winds then the inflowing plasma may be mainly helium \citep{2019MNRAS.482L.123R}; this changes the one-zone model slightly. Helium accretion is discussed in detail in \citep{Wong_2022}.}  We return to the role of radiative cooling in determining variability in Section \ref{sec:discussions}.
+The synchrotron cooling timescale $t_\mathrm{cool} \equiv u/\Lambda$ where $u_e = 3 n_e k T_e$ is the electron internal energy and $\Lambda \simeq 5.4 B^2 e^4 n_e \Theta_e^2 /(c^3 m_e^2)$ is the synchrotron cooling rate for a thermal population of electrons with $\Theta_e \gtrsim 1$ (see Appendix~A in \citealt{2011ApJ...735....9M}; finite optical depth reduces $\Lambda$).
+The cooling time is therefore $t_\mathrm{cool}=2.3 \times 10^4\sec \simeq 1.1 \times 10^3 \tg$ which is longer than the inflow timescale $r/v^r \sim r^{3/2}$.  This suggests that radiative cooling can be neglected in the plasma models \citep[more detailed calculations confirm this estimate][]{2012MNRAS.426.1928D,2020MNRAS.499.3178Y}.\footnote{Notice that if \sgra is fed by stellar winds then the inflowing plasma may be mainly helium \citep{2019MNRAS.482L.123R}; this changes the one-zone model slightly. Helium accretion is discussed in detail in \citep{Wong_2022}.} 
 
-The one-zone model implies that the source plasma is at low density and is therefore collisionless, in the sense that the mean free path to Coulomb scattering is large compared to $\rg$.
+The one-zone model $n_e, \Theta_e$ imply that the mean free path to Coulomb scattering is large compared to $\rg$, i.e. the source plasma is collisionless.
 At $\Theta_e \sim 1$, for example, the Coulomb scattering cross section is comparable to the Thomson cross section, and therefore the mean free path $\sim \tau_e^{-1} \rg$.
 The electron-ion Coulomb scattering timescale is also long, and the electrons and ions are therefore poorly coupled.
-This is consistent with our assumption of a two-temperature  plasma where electrons are cooler than the ions \citep{1976ApJ...204..187S,1977ApJ...214..840I, 1982Natur.295...17R} and also motivates consideration of
+This is consistent with our assumption of a two-temperature  plasma where electrons are cooler than the ions \citep{1976ApJ...204..187S,1977ApJ...214..840I, 1982Natur.295...17R} and motivates consideration of
 nonthermal (unrelaxed) electron distribution functions \citep[see][]{2000ApJ...541..234O, 2009ApJ...701..521C, 2014A&A...570A...7M, 2018A&A...612A..34D, 2021arXiv211102518F, 2021NatAs.tmp..218C, Chatterjee2021, 2021arXiv211203933E, Scepi2021}.
-%\br{my only remaining comment is that I think that the sentence ``As demonstrated in \citet{2000ApJ...541..234O} and \citet{2014A&A...570A...7M} (see also more recent work by \citealt{2018A&A...612A..34D} and references therein) both effects may change the predicted properties of \sgra.'' should be cut, or extended with non-EHT refs on how other groups actually probe those collisionless effects dynamically}
-%\ckc{In principle, we could numerically check all of the assumptions in the one zone model for consistency.  Probably leave until after PC submission.}
-%\monika{i think that the purpose of this section is to make a rough estimates on the back of the envelope so that everyone can repeat them, numerical work is always more difficult to repeat}
-%\ckc{Yes but these also usually physical interesting quantities.  At least we should compute the values that paper~I wants.}
 
 %==============================================================================
 \subsection{Numerical Models of the Inner Accretion Flow}
 
-\begin{deluxetable*}{cccccccc}
-  \tabletypesize{\footnotesize}
-  \renewcommand{\arraystretch}{1.1}
-  %
+% CFG new version
+% do we need the rmax column?  perhaps provide torus information?
+\begin{deluxetable*}{cccccccc}\label{tab:GRMHDmodels}
+  \tablecaption{EHT GRMHD Simulation Library}
   \tablehead{
- % &
- %   \colhead{Spacetime}           &
- %   \multicolumn{2}{c}{Fluid}     &
- %   \multicolumn{3}{c}{Numerical} &
- %   \colhead{Note} \\
-    \colhead{Setup/Code}                  &
-    \colhead{BH spin $\abh$}                     &
+    \colhead{Setup}                  &
+    \colhead{Code}                   &
+    \colhead{$\abh$}                     &
     \colhead{Mode}                       &
     \colhead{$\Gamma_\mathrm{ad}$}       &
-    \colhead{\!\!\!\!\!\!$t_\mathrm{final}$ [$\rg$]} &
-    \colhead{$r_{\rm max}$ [$\rg$]\!\!\!\!\!\!}               &
-    \colhead{Resolution}                 &
-    \colhead{Reference}
+    \colhead{$t_\mathrm{final}$ } &
+    \colhead{$r_{\rm max}$}               &
+    \colhead{Resolution}                 
   }
   \startdata
-  \begin{tabular}{@{}c@{}} torus / \\ \kharma \end{tabular} & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $\frac{4}{3}/\frac{4}{3}$      & 30,000  & 1000     & [288x128x128]     & \!\!\!\!\!\!\!\!\!
-  \begin{tabular}{@{}c@{}c@{}c@{}} This work\\\citet{kharma_2022}\\\citet{Wong_2022} \\ \citet{Dhruv_2022}\end{tabular}\\
-% \citet{Wong_2022, Dhruv_2022} \\
-  \begin{tabular}{@{}c@{}} torus / \\ \bhac \end{tabular}   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $\frac{4}{3}/\frac{4}{3}$      & 30,000  & 3333     & [512x192x192]     & This work \\
-  \begin{tabular}{@{}c@{}} torus / \\ \hamr \end{tabular}   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $\frac{13}{9}/\frac{5}{3}$ & 35,000  & 1000/200 & [348/240×192×192] & This work \\
-  \begin{tabular}{@{}c@{}} torus / \\ \koral \end{tabular}  & \!\!\!\!\!\!\!\!\!
-  \begin{tabular}{@{}c@{}c@{}}   0,$\pm0.3$,$\pm0.5$\\$\pm0.7$,$\pm0.9$ \end{tabular}
-  \!\!\!\!\!\!\!\!\! & MAD          & $\frac{13}{9}$     & 101,000 & 100,000  & [288x192x144]     & \citet{2021arXiv210812380N} \\
-  \begin{tabular}{@{}c@{}} tilted / \\ \hamr \end{tabular}     & $15/16$     & IN-SANE$\times3$      & $\frac{5}{3}$        & 105,000 & 100,000  & [448x144x240]     & \begin{tabular}{@{}c@{}} \citet{Liska2018} \\ \citet{Chatterjee2020}\end{tabular} \\
-  \begin{tabular}{@{}c@{}} wind-fed / \\ \athenapp \end{tabular} & 0           & MAD$\times2$ & $\frac{5}{3}\times2$        & 20,000  & 2,400    & [356x128x128]     & \begin{tabular}{@{}c@{}} \cite{2016ApJS..225...22W} \\ \citet{2020ApJ...896L...6R} \end{tabular}
+  torus & {\kharma}$^a$ &
+   0,$\pm1/2$,$\pm15/16$  & MAD/SANE     & $\frac{4}{3}/\frac{4}{3}$      & 30,000  & 1000     & 288x128x128
+  \\
+   torus & \bhac$^b$   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $\frac{4}{3}/\frac{4}{3}$      & 30,000  & 3333     & 512x192x192 \\
+  torus & \hamr$^c$ & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $\frac{13}{9}/\frac{5}{3}$ & 35,000  & 1000/200 & 348/240×192×192 \\
+  torus & \koral$^d$  &  0,$\pm0.3$,$\pm0.5$,$\pm0.7$,$\pm0.9$ 
+  & MAD          & $\frac{13}{9}$     & 101,000 & 100,000  & 288x192x144 \\
+   tilted  & \hamr$^e$   & $15/16$     & IN-SANE      & $\frac{5}{3}$        & 105,000 & 100,000  & 448x144x240  \\
+   wind-fed  & \athenapp$^f$ & 0           & MAD & $\frac{5}{3}$        & 20,000  & 2,400    & 356x128x128  
   \enddata
-  %
-  %\tablenotetext{$*$}{Non-standard model.}
-  \caption{Summary of GRMHD simulations in the EHT \sgra GRMHD simulation library.
-    The first four entries are \sgra simulations based on default torus initial conditions.
-    The last two entries are the tilted accretion model and two realizations of the Wind Accretion models which differ in stellar wind magnetization.}
-  \label{tab:GRMHDmodels}
+  \tablecomments{Summary of GRMHD simulations in the EHT \sgra GRMHD simulation library.
+    The first four entries use aligned torus initial conditions.
+    The last two entries are tilted accretion models and two realizations of the Wind-fed accretion model which differ in stellar wind magnetization.  Times are given in units of $G M/c^3 = 20.4$sec and radii in units of $G M/c^2$.}
+\tablerefs{
+$^a$ see \cite{2021JOSS....6.3336P}; \kharma is a GPU-enabled version of the {\tt iharm3d} code. 
+$^b$ \cite{2017ComAC...4....1P, 2019A&A...629A..61OF}. 
+$^c$ \cite{2021arXiv210812380N}. 
+$^e$ \cite{arXiv:1912.10192, Chatterjee2020}. 
+$^f$ \cite{2016ApJS..225...22W, 2020ApJ...896L...6R}.
+}
 \end{deluxetable*}
 
-The one-zone model is too simple for comparison with the rich set of observations available for \sgra.  Analytic
-steady spherical accretion models \citep[e.g.,][]{2019ApJ...885L..33N, 2021arXiv211102178B} go a step beyond the one zone model, incorporating relativistic gravity.  Analytic, steady, disk-like (RIAF) accretion models in the Kerr metric go still further and include rotation and departures from spherical symmetry \citep[e.g.,][]{2009ApJ...697...45B, 2009ApJ...706..960H,2018ApJ...863..148P}.
+% version as of 1/23/22
+%\begin{deluxetable*}{cccccccc}
+%  \tabletypesize{\footnotesize}
+ % \renewcommand{\arraystretch}{1.1}
+  %
+%  \tablehead{
+%    \colhead{Setup/Code}                  &
+%    \colhead{BH spin $\abh$}                     &
+%    \colhead{Mode}                       &
+%    \colhead{$\Gamma_\mathrm{ad}$}       &
+%    \colhead{\!\!\!\!\!\!$t_\mathrm{final}$ [$\rg$]} &
+%    \colhead{$r_{\rm max}$ [$\rg$]\!\!\!\!\!\!}         %      &
+%    \colhead{Resolution}                 &
+%    \colhead{Reference}
+%  }
+%  \startdata
+%  \begin{tabular}{@{}c@{}} torus / \\ \kharma \end{tabular} & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $\frac{4}{3}/\frac{4}{3}$      & 30,000  & 1000     & [288x128x128]     & \!\!\!\!\!\!\!\!\!
+%  \begin{tabular}{@{}c@{}c@{}c@{}} This work\\\citet{kharma_2022}\\\citet{Wong_2022} \\ \citet{Dhruv_2022}\end{tabular}\\
+% \citet{Wong_2022, Dhruv_2022} \\
+%  \begin{tabular}{@{}c@{}} torus / \\ \bhac \end{tabular}   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $\frac{4}{3}/\frac{4}{3}$      & 30,000  & 3333     & [512x192x192]     &  \!\!\!\!\!\!\!\!\!
+%  \begin{tabular}{@{}c@{}c@{}c@{}} This work \\ \citet{Mizuno2021}\\  \citet{2021NatAs.tmp..218C}\\ \citet{2021arXiv211102518F} \end{tabular}\\
+%  \begin{tabular}{@{}c@{}} torus / \\ \hamr \end{tabular}   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $\frac{13}{9}/\frac{5}{3}$ & 35,000  & 1000/200 & [348/240×192×192] & This work \\
+%  \begin{tabular}{@{}c@{}} torus / \\ \koral \end{tabular}  & \!\!\!\!\!\!\!\!\!
+%  \begin{tabular}{@{}c@{}c@{}}   0,$\pm0.3$,$\pm0.5$\\$\pm0.7$,$\pm0.9$ \end{tabular}
+%  \!\!\!\!\!\!\!\!\! & MAD          & $\frac{13}{9}$     & 101,000 & 100,000  & [288x192x144]     & \citet{2021arXiv210812380N} \\
+%  \begin{tabular}{@{}c@{}} tilted / \\ \hamr \end{tabular}     & $15/16$     & IN-SANE$\times3$      & $\frac{5}{3}$        & 105,000 & 100,000  & [448x144x240]     & \begin{tabular}{@{}c@{}} \citet{Liska2018} \\ \citet{Chatterjee2020}\end{tabular} \\
+%  \begin{tabular}{@{}c@{}} wind-fed / \\ \athenapp \end{tabular} & 0           & MAD$\times2$ & $\frac{5}{3}\times2$        & 20,000  & 2,400    & [356x128x128]     & \begin{tabular}{@{}c@{}} \cite{2016ApJS..225...22W} \\ \citet{2020ApJ...896L...6R} \end{tabular}
+%  \enddata
+  %
+  %\tablenotetext{$*$}{Non-standard model.}
+%  \caption{Summary of GRMHD simulations in the EHT \sgra GRMHD simulation library.
+%    The first four entries are \sgra simulations based on default torus initial conditions.
+%   The last two entries are the tilted accretion model and two realizations of the Wind Accretion models which differ in stellar wind magnetization.}
+%  \label{tab:GRMHDmodels}
+%\end{deluxetable*}
+
+The one-zone model is too simple for comparison with the rich set of observations available for \sgra.  Steady spherical accretion models \citep[e.g.,][]{2019ApJ...885L..33N, 2021arXiv211102178B} go a step beyond the one zone model, incorporating relativistic gravity.  Steady, disk-like (RIAF) accretion models in the Kerr metric go still further and include rotation and departures from spherical symmetry \citep[e.g.,][]{2009ApJ...697...45B, 2009ApJ...706..960H,2018ApJ...863..148P}.
 % I think the previous sentence says both analysis spherical and disk can be used for blab blab blab...  Minor edit to retain that meaning.
-Steady state phenomenological models do not, however, self-consistently capture fluctuations in the flow---that requires either a statistical model \citep{2021ApJ...906...39L} or a time-dependent numerical integration.
+Steady phenomenological models do not, however, self-consistently capture fluctuations in the flow.  That requires either a statistical model \citep{2021ApJ...906...39L} or a time-dependent numerical simulation.
 %\ckc{May be also say they don't self-consistently capture turbulence for transport.}
-Here we use numerical simulations and adopt an ideal GRMHD model for the flow\footnote{Limitations of the ideal GRMHD model are discussed in Section~\ref{sec:discussions}.}, use simple parameterized models to assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce simulated images.
+Here we use numerical simulations, adopt an ideal GRMHD model for the flow, use simple parameterized models to assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce simulated images.
 
 %------------------------------------------------------------------------------
 \subsubsection{Plasma Flow Model}
 
 We model the plasma flow around \sgra using ideal, non-radiative GRMHD.  We assume the gravitational field
-is described by the Kerr metric, with mass from Equation~(\ref{eq:mass}) and with black hole spin $\abh$ a free parameter \citep[see e.g.,][]{2003ApJ...589..444G, 2005ApJ...635..723A, 2007A&A...473...11D}.
+is described by the Kerr metric, with mass from Equation~(\ref{eq:mass}) and with $\abh$ a free parameter \citep[see e.g.,][]{1999ApJ...522..727K, 2003ApJ...589..444G, 2003ApJ...589..458D, 2005ApJ...635..723A, 2007A&A...473...11D}.
 
 We integrate the GRMHD equations in three spatial dimensions using multiple algorithms:
 \kharma   \citep{2021JOSS....6.3336P},
@@ -135,15 +174,9 @@ We integrate the GRMHD equations in three spatial dimensions using multiple algo
 \koral    \citep{2013MNRAS.429.3533S}, and
 \athenapp \citep{2016ApJS..225...22W};
 see \citet{2019ApJS..243...26P} and \citet{Olivares_et_al} for comparisons of GRMHD codes.
-All simulations assume a constant adiabatic index  $\Gamma_\mathrm{ad}$.
+All simulations assume constant adiabatic index  $\Gamma_\mathrm{ad}$.
 
-The \emph{default} initial conditions for the GRMHD simulations are a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F}
-%\aco{\citep[see also][]{2002MNRAS.334..383F}} \monika{why do we need to have this second citation? is that essential?} \br{I thought Font shows another hydro torus equilibrium in this paper? We don't use that one, so I would not cite that paper} \ckc{all modelers: do any of you use the Font initial condition?  If not I will comment out this reference.}\aco{There are two independent hydro solutions, we have both of them. With same initial condition for magnetic field on top of hydro-solution}\br{is there a reason for using different initial conditions? I tried both FD and FM torus myself and the FD torus evolution is somewhat different. It would be better to start from the same IC to compare late states of the models to images. Which models exactly do use the (different) initial conditions of the Font-Daigne torus? I thought in paper V for M87 we used only the FM torus. Then the first sentence in this paragraph above is also wrong, because we are not using the FM torus exclusively.}\monika{exactly which model in the library starts from FD torus? please answer before midnight.} % \aco{Yes, I think is essential to cite, is true that we not using FD but we also have it in BHAC. Please be free to remove it. But definitively don't have same initial condition in all GRMHD codes.}
-% /monika{11dec: we dont want to elaborate on details like that here, this section is intended to describe only common features of all simulations, other details can be described in section 4.]
-in a prograde ($\abh > 0$) or retrograde ($\abh < 0$) orbit.  Although there are variations in initial conditions between model sets, in all models except the \hamr-Tilted models, the torus orbital angular momentum is either parallel or antiparallel to the black hole spin. %The torus is parameterized by an inner radius $R_{\rm in}$, typically $12~\rg$, and the pressure maximum radius $R_\mathrm{max}$, typically $24~\rg$.
-%\aco{We should specify the torus size? or should we refer to the reader to SANE and MAD code comparison. We have different initial data between codes, not only in the size but also in adiabatic index in the equation of state.}
-%\aco{ with magnetization $\beta \equiv p_{\rm gas}/p_{\rm mag} =100$}
-%\monika{11dec: we dont want to elaborate on details like that here, this section is intended to describe only common features of all simulations, other details can be described in section 4, incase there are differences in the results that may be due to initial conditions.}
+The initial condition for most of our GRMHD simulations is a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F}. Although there are variations in initial conditions between simulations, in all except the \hamr-Tilted models, the torus orbital angular momentum is either parallel or antiparallel to the black hole spin.
 The torus is seeded with a weak, poloidal magnetic field.
 
 The torus initial conditions are motivated by the notion that the near-horizon flow, where most of the emission is generated (\citetalias{M87PaperV}) relaxes to a statistically steady state that is nearly independent of the flow at larger radius.  This notion is challenged in the stellar wind-fed models of \cite{2020ApJ...896L...6R}, which we include in our study.
@@ -354,58 +387,51 @@ $\sim1.3$M SEDs.  The images and SEDs occupy about $50$TB.
 %\pagebreak
 %\movetabledown=3cm % recommended in AASTeX docs to center table on page
 %\begin{rotatetable}
-\begin{deluxetable*}{ccccccccccc}
-\tabletypesize{\footnotesize}
-\renewcommand{\arraystretch}{1.1}
+\begin{deluxetable*}{cccccccc}\label{tab:radiativemodels}
+%\tabletypesize{\footnotesize}
+\tablecaption{EHT Synthetic Image Library}
+%\renewcommand{\arraystretch}{1.1}
 \tablehead{
-  \colhead{Model}              &%
-  \colhead{$\Rl$}              &%
+  \colhead{Simulation}              &%
   \colhead{$\Rh$}              &%
-  \colhead{$\beta_{\rm crit}$} &%
   \colhead{$p$}                &%
-% \colhead{$\gamma_{\rm min/max}$} &%
   \colhead{$\kappa$}           &%
   \colhead{$i^\circ$}          &%
-  \colhead{$\nu$}              &%
-  \colhead{MWL SED}            &%
-  \colhead{$\Delta t$}         &%
-  \colhead{\#frames}           \\
-  & & & & & & & \colhead{[GHz]} & & \colhead{[1000 M]} & [@230 GHz]}
+  \colhead{$\nu$\GHz}              &%
+  \colhead{SED}            &%
+  \colhead{$\Delta t/(10^4 GM/c^2)$}         }
 \startdata
-\multicolumn{11}{c}{\bf Thermal models}\\
-\kharma        & 1 & [1, 10, 40, 160] & 1 & - & - & [10, 30, ..., 170] & [86, 230] & Yes & [15, 20)  & \num{360000} \\
-\kharma        & 1 & [1, 10, 40, 160] & 1 & - & - & [10, 30, ..., 170] & [86, 230] & Yes & [20, 25)  & \num{360000} \\
-\kharma        & 1 & [1, 10, 40, 160] & 1 & - & - & [10, 30, ..., 170] & [86, 230] & Yes & [25, 30)  & \num{360000} \\
-\bhac          & 1 & [1, 10, 40, 160] & 1 & - & - & [10, 30, ..., 90]  & [86, 230] & Yes & [12, 15)  & \num{60000} \\
-\bhac          & 1 & [1, 10, 40, 160] & 1 & - & - & [10, 30, ..., 90]  & [86, 230] & Yes & [20, 25)  & \num{100000} \\
-\bhac          & 1 & [1, 10, 40, 160] & 1 & - & - & [10, 30, ..., 90]  & [86, 230] & Yes & [25, 30)  & \num{100000} \\
-\hamr          & 1 & [1, 40, 160]     & 1 & - & - & [10, 50, 90]       & [86, 230] & Yes & [30, 35)  & \num{ 45000} \\
-\koral         & 1 & [20]             & 1 & - & - & [10, 30, ..., 170] & [86, 230] & No  & [5, 100)  & \num{107507} \\
-\hamr Tilted   & 1 & [1, 40, 160]     & 1 & - & - & [10, 50, 90]       & [86, 230] & Yes & [100-103) & \num{  8100} \\
-Wind Accretion\!\!\!\!\!\! & 1 & [13, 28]         & 1 & - & - & N/A                & [86, 230] & No  & 10        & \num{  1802} \\
+\multicolumn{8}{c}{\bf Fiducial models}\\
 \hline
-\multicolumn{11}{c}{\bf Critical $\beta$ model} \\
-\kharma & 1 & [1, 40, 160] & 1 & 4 & - & [10, 50, 90] & [86, 230] & No & [30-35) & \num{45000} \\
+\kharma &  1, 10, 40, 160 &  - & - & 10, 30, ..., 170 & 86, 230 & Yes & 15-30 \\
+\bhac  &  1, 10, 40, 160 &  - & - & 10, 30, ..., 90  & 86, 230 & Yes & 20-30 \\
+\hamr  &  1, 40, 160     &  - & - & 10, 50, 90       & 86, 230 & Yes & 30-35 \\
+\koral &  20             &  - & - & 10, 30, ..., 170 & 86, 230 & No  & 5-100 \\
 \hline
-\multicolumn{11}{c}{\bf Thermal + non-thermal power-law models} \\
-\hamr & 1 & [1, 40, 160] & 1 & 4 & - & [10, 50, 90] & [86, 230] & No & [30-35) & \num{45000} \\
+\multicolumn{8}{c}{\bf Exploratory models}\\
 \hline
-\multicolumn{11}{c}{\bf Thermal + non-thermal $\kappa$ models} \\
-\bhac & 1 & [1, 10, 40, 160]     & 1 & - & 5                                       & [10, 30, ..., 90] & [86, 230] & No  & [25-30) & \num{ 20000} \\
-\bhac & 1 & [1, 10, 40, 160]     & 1 & - & 3.5 ($\epsilon_0=0.05$)                 & [10, 30, ..., 90] & [86, 230] & No  & [25-30) & \num{ 20000} \\
-\bhac & 1 & [1, 10, 40, 160]     & 1 & - & 3.5 ($\epsilon_0=0.10$)                 & [10, 30, ..., 90] & [86, 230] & No  & [25-30) & \num{ 20000} \\
-\bhac & 1 & [1, 10, 40, 160]     & 1 & - & 3.5 ($\epsilon_0=0.20$)                 & [10, 30, ..., 90] & [86, 230] & No  & [25-30) & \num{ 20000} \\
-\bhac & 1 & [1, 10, 40, 80, 160] & 1 & - & variable $\kappa=\kappa(\beta, \sigma)$ & [10, 30, ..., 90] & [86, 230] & No  & [25-30) & \num{125000} \\
-\hamr & 1 & [1, 10, 40, 160]     & 1 & - & variable $\kappa=\kappa(\beta, \sigma)$ & [10, 30, ..., 90] & [86, 230] & Yes & [30-35) & \num{100000} \\
+\multicolumn{4}{l}{\it Thermal $\Rh$ models} & & & & \\
+\hamr Tilted &  1, 40, 160  & - & - & 10, 50, 90     & 86, 230 & Yes & 100-103 \\
+Wind Accretion & 13, 28  &  - & - & N/A     & 86, 230 & No  & 10        \\
+\hline
+\multicolumn{4}{l}{\it Thermal critical $\beta$ model} & & & & \\
+\kharma & 1, 40, 160 &  4 & - & 10, 50, 90 & 86, 230 & No & 30-35  \\
+\hline
+\multicolumn{4}{l}{\it Thermal + power-law models} & & & & \\
+\hamr &  1, 40, 160 &  4 & - & 10, 50, 90 & 86, 230 & No & 30-35  \\
+\hline
+\multicolumn{4}{l}{\it Thermal + $\kappa$ models} & & & & \\
+\bhac & 1, 10, 40, 160 &  - & 5  & 10, 30, ..., 90 & 86, 230 & No  & 25-30  \\
+\bhac & 1, 10, 40, 160 &  - & 3.5 ($\epsilon_0=0.05$) & 10, 30, ..., 90 & 86, 230 & No  & 25-30 \\
+\bhac & 1, 10, 40, 160 &  - & 3.5 ($\epsilon_0=0.10$)  & 10, 30, ..., 90 & 86, 230 & No  & 25-30  \\
+\bhac & 1, 10, 40, 160 &  - & 3.5 ($\epsilon_0=0.20$) & 10, 30, ..., 90 & 86, 230 & No  & 25-30  \\
+\bhac & 1, 10, 40, 80, 160 &  - & variable $\kappa=\kappa(\beta, \sigma)$ & 10, 30, ..., 90 & 86, 230 & No  & 25-30  \\
+\hamr & 1, 10, 40, 160 &  - & variable $\kappa=\kappa(\beta, \sigma)$ & 10, 30, ..., 90 & 86, 230 & Yes & 30-35  \\
 \enddata
-\caption{Summary of emission simulations in the EHT \sgra model library. For the Wind Accretion model the viewing angle is set by the boundary conditions used in the model and $\Rh$ is set so the model matches the observed 230\GHz flux.  The two reported values correspond to two models with different stellar wind magnetizations.
-%\monika{last time (Dec 11) I checked google table BHAC did not have MULTIWAVELENGTH spectra, so why did you change No to Yes? \cmf{Hi Monica, we have SEDs for thermal but not for non-thermal, I think I included this in one of the google docs \url{https://docs.google.com/spreadsheets/d/11ZP_jz0ub-SLPwXft4x_9byDS2KBsP1KEIt9xn77LoU/edit#gid=0} (row 12, maybe the confusion is due to row 20) }}
-%\monika{why is wind model inclination N/A? can anyone explain?}
-%\gw{I didn't write N/A, but as I recall from Sean, the wind models *have* an absolute orientation with respect to Earth because of how their boundary condition is set up, so it wouldn't make sense to vary inclination. Also their bhspin = 0.}\monika{Ah, ok , so there is an inclination but we dont know it. can you find out ? maybe I can also change the Fig 1 accordingly (although that would require some thinking)!}\gw{sorry not sure what you mean by ``there is an inclination''. there is an inclination that we plug into ipole, but that inclination is with respect to the coordinate system, not anything particularly ``physical'' (because the black hole has zero spin). the coordinate system is oriented such that images are computed at inc->180 (inc as defined in the ipole sense)}\monika{ok, this makes no sense since from our point of view the "boundary conditions" for this model are fixed...we should just find best rhigh for our viewing angle..}
-%The cadence of KHARMA=5M, BHAC=10M for thermal and nonthermal variable $\kappa$, 50M for nonthermal variable efficiency models, and HAMR=10M for thermal, nonthermal powerlaw and variable $\kappa$.
-%\gw{Rhigh for the wind accretion models is either 28 or 13, but these are for two separate simulations (so it's not like there's one simulation where Rhigh has been varied); no SED from grmonty-like codes, but there is ``SED''-like information from imaging at different frequencies}\monika{how many 230 ghz frames we have for these two wind models and within what times??}
+\tablenotetext{
+Summary of emission simulations in the EHT \sgra model library. For the Wind Accretion model the viewing angle is set by the boundary conditions used in the model and $\Rh$ is set so the model matches the observed 230\GHz flux.  The two reported values correspond to two models with different stellar wind magnetizations.
 }
-\label{tab:radiativemodels}
+
 \end{deluxetable*}
 %\end{rotatetable}
 
