@@ -1,51 +1,21 @@
 \section{Observational Constraints}\label{sec:observations}
 
-\sgra is one of the most observed objects in the sky.  It has been observed with a slew of telescopes across 5 decades in time and more than 17 decades in frequency. We must identify a manageable subset of this data to constrain our models. In doing so we have attempted to select
-\emph{i})~approximately uncorrelated constraints, so that each tests a distinct aspect of the model;
-\emph{ii})~constraints based on data that can be simulated with the models; and
+\sgra is one of the most frequently observed objects on the sky: it has been observed with a slew of telescopes over 5 decades in time and 17 decades in electromagnetic frequency. We must identify a manageable subset of this data to constrain our models. In doing so we have attempted to select
+\emph{i})~constraints that are believed to be uncorrelated, so that each tests a distinct aspect of the model; \emph{ii})~constraints based on data that can be simulated with the models; and
 \emph{iii})~constraints based on EHT 2017 $230\GHz$ VLBI data or based on photons produced within or close to the $230\GHz$ emission region and observed contemporaneously or near-contemporaneously with the EHT 2017 campaign.
 
-Variability complicates the comparison of \sgra models to the data. Even an ideal evolution of a successful model will never match the data point for point because the space of possible realizations of the model is large.  We do, however, expect the {\em distribution} of  observables derived from a successful model to match the data if the model is run long enough to sample the distribution.  For example, the distribution of the 86\GHz flux density $F_{86}$ for a model ought to contain the observed $F_{86}$.
+The selected constraints are described in detail below.  In brief, we select 11 constraints that can be grouped into 3 broad classes.  The first class uses EHT data and compares estimates of source size, morphology of the visibility amplitude distribution, and three best-fit parameters to the \mring image model (5 constraints).  The second class uses non-EHT data, including 86\GHz flux density and source size, the median $2.2\um$ flux density, and the X-ray luminosity (4 constraints).  The third class considers variability, including the 230\GHz source-integrated variability and the visibility amplitude (VA) variability (2 constraints). 
 
-Most observables are correlated over $\tau\sim$ few $\times 100 \tg$.  To obtain the mean and variance of the model distribution to accuracy $f$ from a GRMHD model, then, requires running it for $\sim \tau/f^2 \sim 30,000 (\tau/300) (f/0.1)^{-2}$, assuming the model decorrelates completely at intervals $\gg \tau$.  A GRMHD model of duration $30,000 \tg$  costs $10^3-10^4$ node hours, depending on resolution, code, and hardware.  This is expensive since $\sim 10$ runs are used for each model set, and runs need to be repeated for multiple values of numerical parameters (e.g., resolution).  Most of our models are run for $30,000 \tg$; a few are run to $100,000 \tg$.  The model distributions therefore contain sampling noise, and this must be accounted for in model selection.  For some  constraints (e.g., \mring fits; see Section \ref{sec:mring}) this can be done by sampling the model at a cadence similar to the correlation time and then using a 2-sample KS test to compare the observed and model distributions.
+The selected constraints are heterogeneous and it is not yet possible to combine them in a consistent, fully satisfactory way.  Indeed, uncertainties in the data and the models are not yet well enough understood to make that possible.  In this first analysis, then, we set a pass/fail criterion for each constraint and consider the implications of various combinations of constraints for \sgra.  
 
-The constraints are heterogeneous and it is not possible to treat them completely consistently.  If a constraint returns a probability $p$ that, for example, the observed and model distributions are drawn from the same underlying distribution, then we reject at $p < p_c = 0.01$.  If a constraint returns a ``compliance fraction'' $f$ of, for example, the fraction of snapshots that are consistent with the data, then we also cut at $f < 0.01$.  For $N$ constraints a $p$ threshold implies that we expect to wrongly reject $1 - (1 - p_c)^N$ of acceptable models; for $p_c = 0.01$ and $N = 10$ this is $\approx 10\%$.
+The large number of constraints increases the probability of wrongly rejecting a model.  Consider a set of $N$ constraints, and for each assign a probability $p$ that the model is consistent with the data; the model is rejected if $p < p_c$.  Then the probability that the model is wrongly rejected is $p_c$.  Applying all $N$ constraints, the probability that the model is wrongly rejected is $1 - (1 - p_c)^N$; for $N = 11$ and $p_c = 0.01$, this is $\approx N p_c \simeq 10\%$.  Each of $N$ constraints  must therefore be able to reject a model with probability $\lesssim 0.1/N$, otherwise the model scoring is meaningless.  Many constraints requires small threshold probability. 
 
-%==============================================================================
-% \subsection{Scattering Models}
+The confidence with which a model can be rejected is limited, however, by sampling noise.  Many  constraints compare an observation to a distribution of synthetic observations from a model.  Time series of synthetic observations are not yet well characterized, but most have a correlation time $\tau\sim$ few $\times 100 \tg$.  If the model decorrelates on timescales longer than $\tau$ then a model of duration $T$ yields $\sim T/\tau$ independent samples,\footnote{In what follows we must sometimes estimate how many independent samples are available in a time series.  Rather than estimating $\tau$  model-by-model we uniformly assume $\tau = 540 \tg$.  The analysis is insensitive to this choice.} and thus a fractional error in moments of the distribution $\sim (T/\tau)^{-1/2} = 0.14 (T/(15,000))^{-1/2}(\tau/300)^{1/2}$.  An analysis with many constraints therefore requires long GRMHD simulations.
+
+Evidently the models have significant sampling noise, and our use of hard cuts (pass/fail scoring) amplifies this noise.  We control for this in part by using three redundant fiducial models.  Nevertheless one should not attach too much significance to the success or failure of individual models.  The success or failure of regions in the parameter space is more significant.
 
 %==============================================================================
 \subsection{EHT Observational Constraints}
-
-%\ckc{ck's first pass}
-%\mw{I think it would be good to mention the EHT array composition (name the telescopes)}
-%\cfg{much of this material could be incorporated by reference to paperII}
-
-% CFG: suggest we can do without these.  They do make what we are doing clearer, but it is yet another figure in a bazillion-figure paper.
-%\begin{figure*}
-%  \centering
-%  \includegraphics[width=0.5\textwidth]{figures/va_comparison.pdf}%
-%% \note{altex: (left) VA vs baseline for the day(s) that
- %   this study use, overplotted by the VA from a
-%    fiducial model.
-%    Similar to paper~II, figure~7.
-%    Visually mark null location constraint, pre-imaging size (i.e.,
-%    second moment).
- %   (right) SED from Gurther overplotted by the SEDs from a fiducial
-%    model.
-%    Visually mark the SED constraints.}
-%  \caption{(\emph{left}) Measured correlated flux densities of \sgra
- %   on April 7, 2017, from the HOPS pipeline, overplotted with a fiducial
-%    GRMHD+GRRT model.
-%    Details on the data can be found in paper~II, section~5.
-%    A description of the fiducial model is in section~\ref{sec:models}.
-%    (\emph{right}) \ckc{Q: do we want to show only EHT observation and
- %     referencing to other papers for non-EHT constraints?
-%      Or should we have representative figures for all measurements?}}
-%  \label{fig:visibility}
-%\end{figure*}
-
-%The EHT observed \sgra at 1.3 mm during the 2017 April 5--11 observing campaign and obtained horizon scale complex visibilities.  Figure~\ref{fig:visibility} shows the VA on April 6 and 7 from  the HOPS pipeline, overplotted with VA derived from a model.  Evidently there are nulls near $\sim 5\,\mathrm{G}\lambda$ and $7\,\mathrm{G}\lambda$, suggesting a ringlike structure.
 
 We test the models against EHT interferometric data in three ways.
 First, we compare an estimate of the source size (``second moment'')
@@ -53,21 +23,11 @@ against an estimate from the short baseline visibility amplitudes (VAs).
 Second, we check the location of the first minimum and the long
 baselines values of the VAs (``\vam'').
 Finally, using a variant of a procedure from \citetalias{PaperIV}, we
-compare fits for the diameter, width, and asymmetry of an \mring (a parameterized image-plane model, ``\mring constraints'') to the GRMHD models.
+compare fits for the diameter, width, and asymmetry of an \mring (a parameterized image-plane model, ``\mring constraints'') to synthetic distributions generated from the model library.
 
 %------------------------------------------------------------------------------
 \subsubsection{230\GHz VLBI Pre-Image Size}
 \label{sec:sz}
-
-%% \ckc{ck's first pass}
-%% \cfg{edited on 2 dec}
-%% \ckc{I suggest we move the 2nd moment first, then null location, then
-%%   \mring.
-%%   The reason is that the wide (unconstraining) 2nd moment is caused by
-%%   allowing it to be just a Guassian (i.e., ignore the minima).
-%%   We then tighten the constraint by regonizing there's a minima using
-%%   the null analysis.
-%%   And then do the fit.}
 
 The source size can be characterized using the second moments of the
 source image on the sky.
@@ -76,13 +36,11 @@ the visibilities near zero baseline in the \uv domain, so short
 baseline VAs can be used to directly estimate the source size.
 
 This procedure is used in \citetalias{PaperII} to set an upper limit
-of 95\uas FWHM (full width at half maximum; standard deviation $\times \sqrt{8\log{2}}$.) on the second moment and lower limit of 38\uas FWHM on the second moment along a particular directions through the source, with the direction determined by the orientation of the short
-baselines.
-This is done without any assumption about the structure of the source;
+of 95\uas FWHM (full width at half maximum; standard deviation $\times \sqrt{8\log{2}}$.) on the second moment and lower limit of 38\uas FWHM on the second moment along a direction 
+through the source corresponding to the orientation of the short
+baselines.  This is done without any assumption about the structure of the source;
 if we used a ring prior the constraint would be narrower.
 
-%\cfg{is this scattered or unscattered?}
-%\ckc{add descattered values}
 The scattering kernel is estimated to have a 16.2\uas FWHM along the
 relevant EHT baselines.
 To descatter the sky image size, we subtract this value in quadrature
@@ -90,23 +48,21 @@ from the size.
 This results in an upper limit of 93.6\uas FWHM and a lower limit of
 34.4\uas FWHM.
 
-To assess a model, for each simulated 230\GHz image we evaluate the
-second moment tensor and find its eigenvalues
-$\lambda_\mathrm{maj}^2/(8\log 2)$ and $\lambda_\mathrm{min}^2/(8\log
-2)$, where $\lambda_\mathrm{maj}$ and $\lambda_\mathrm{min}$ are the
-FWHM of the major and minor axes.
+To score a model we evaluate the second moment tensor for each simulated 230\GHz image 
+and find its eigenvalues $\lambda_\mathrm{maj}^2/(8\log 2)$ and $\lambda_\mathrm{min}^2/(8\log
+2)$, where $\lambda_\mathrm{maj}$ and $\lambda_\mathrm{min}$ are the major and minor axis
+FWHM.
 The image is deemed non-compliant if it is inconsistent with the data for
 all orientations, that is, if $\lambda_\mathrm{maj} < 34.4\uas$ or
 $\lambda_\mathrm{min} > 93.6\uas$.
-We reject models with a compliance fraction $< 0.01$.
+We reject models with compliance fraction $< 0.01$.
 
 %------------------------------------------------------------------------------
-%\subsubsection{230\GHz VLBI Null Location}
+
 \subsubsection{230\GHz VLBI Visibility Amplitude Morphology}
 
 Our second constraint provides a simple morphological check on the
-VAs.
-We ask two questions of each model snapshot: \emph{i})~is the first
+VAs.  We ask two questions of each model snapshot: \emph{i})~is the first
 minimum in the visibilities in about the right place and
 \emph{ii})~are the long-baseline VAs comparable to the data?
 For comparison, we use data from \aprilvii, which has the best \uv
@@ -146,8 +102,7 @@ in this range that is $< 5\%$ of the zero baseline flux as compliant.
 
 To apply this constraint, we compute the VA $V$ of each model snapshot
 along position angles (PAs) $0^\degree$, $45^\degree$, $90^\degree$,
-$135^\degree$.
-Because of Hermitian symmetry this actually covers eight PAs.
+$135^\degree$ (because of Hermitian symmetry we need only cover $0-180\deg$).
 We find the first minimum numerically and compute the median VAs
 between 6 and 8\,$\mathrm{G}\lambda$.
 We classify a snapshot as compliant if
@@ -319,7 +274,7 @@ For each lightcurve available longer than 3 hours in the ALMA data and in earlie
 
 %We measure $\mi{3}$ in maximally spaced intervals in the ALMA lightcurve on April 6, 7, and 11.\footnote{The model comparisons are insensitive to interval spacing.}  We have also measured $\mi{3}$ in historical data for \sgra from 2005-2017 lightcurves.  The April 6, 7, and 11 values for $\mi{3}$ (5 in all: 0.029, 0.031, 0.051, 0.041, 0.099) are consistent with having been drawn from the historical distribution, although April 7 is among the quietest intervals on record and April 11 is one of the most variable intervals on record.
 
-For each model we evaluate a lightcurve and use that to generate a distribution of $\mi{3}$.  We then use a KS test to ask whether that distribution is consistent with the historical distribution.\footnote{We can also use lightcurves from the 2017 campaign alone, which rejects {\em more} models.  The 2017 campaign lightcurve samples are consistent with having been drawn from the full historical dataset.}
+For each model we evaluate a lightcurve and use that to generate a distribution of $\mi{3}$.  We then use a Kolmogorov-Smirnov (KS) test to ask whether that distribution is consistent with the historical distribution.\footnote{We can also use lightcurves from the 2017 campaign alone, which rejects {\em more} models.  The 2017 campaign lightcurve samples are consistent with having been drawn from the full historical dataset.}
 %The constraint comes from $M_T$ measured over 3 maximally spaced intervals
 %in the April 7, 2017 ALMA lightcurve, where $M_3 = 0.024, 0.051,
 %0.047$ (Wielgus et al. 2021). These values are consistent with being drawn from the distribution estimated from historical non-EHT 2005-2017 lightcurves.

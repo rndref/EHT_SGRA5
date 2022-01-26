@@ -42,7 +42,7 @@ As evident in Table~\ref{tab:GRMHDmodels} the thermal models have been calculate
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.8\textwidth]{./figures/BHAC_iharm_correlation2}
+  \includegraphics[width=0.8\textwidth]{./figures/BHAC_iharm_correlationNew}
   \caption{Correlation between \bhac and \kharma models for 9 model constraints.  The horizontal axis is the constraint value from \bhac/\bhoss, and the vertical axis shows the constraint value from \kharma/\ipole.  Each point corresponds to a single model, with the width of the distribution shown by the error bars.  See text for details.}
   \label{fig:modelcorrelation}
 \end{figure*}
@@ -54,6 +54,7 @@ The correlation in the 3\,hour modulation index $\mi{3}$ spreads over $\Delta \m
 We found a strong correlation between models and codes for the image size computed from image moments, i.e. second moments analysis.
 
 \cfg{This may change if we recompute the major axis, etc., for the IL 86\GHz large fov images}
+\cmf{using the new source sizes improves the correlation}
 The middle row presents the correlation plots for the 86\GHz flux density (left), the 86\,GHz image size using second moments (middle), and the NIR flux (right). The 86\GHz flux and 86\GHz image size exhibit a shift toward larger values for the \bhac models. This difference can be explained by the larger field of view used for the \bhac models at 86\GHz during the radiative transfer calculations. Thus, more extended structure and therefore a larger total flux is included in the \bhac models. This affects mainly models with large inclinations $i\geq70^\circ$ and jet dominated emission models ($\rm{R}_{\rm high}\geq 40$).
 
 The NIR fluxes show a tight correlation over four orders of magnitude and systematically larger flux for the \bhac models for low NIR fluxes ($\log_{10}({\rm NIR}) < -7$). These fluxes are far below the NIR constraints of $\sim 1\,\mathrm{mJy}$, and therefore they do not affect the passing or failing of the models. In the thermal models the NIR flux is generated from the tail of the electron distribution function and is thus very sensitive to the electron temperature. Small differences in the distribution and value of the electron temperature between the two codes explain the observed de-correlation at very low NIR flux.

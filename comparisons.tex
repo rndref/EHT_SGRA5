@@ -14,10 +14,7 @@ tables contained in Appendix \ref{app:tables}, which are available in
 electronic form.
 
 %==============================================================================
-\subsection{Standard Models}\label{subsec:thermal}
-
-%\ckc{For section title, I still think thermal vs nonthermal models is better...}
-% cfg 15-dec: noted, but we consistently refer to this model set as "standard models", because the critical beta models are thermal but nonstandard.
+\subsection{Fiducial Models}\label{subsec:thermal}
 
 We start with a set of ``standard'' models with aligned (prograde or retrograde) accretion flows, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.  This selection includes the Illinois (i.e.\ \kharma), Frankfurt (i.e.\ \bhac), and \hamr model sets listed in Table~\ref{tab:radiativemodels}.
 
@@ -327,7 +324,7 @@ We have also considered a set of thermal, $\Rh$, MAD models run with the \koral 
 
 %------------------------------------------------------------------------------
 \subsubsection{Summary of Constraints on Standard Models}
-
+\label{sec:summarythermal}
 None of the standard thermal models (Frankfurt or Illinois) survive the full gauntlet of constraints.   Variability rejects about $70\%$ of models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models.
 Evidently either (1) the models fail in some important respect, or (2) some of the data underlying the model tests are incorrect, or (3) one or more of the constraints have been misapplied.
 
@@ -459,10 +456,15 @@ Overall, we see that hamr nonthermal powerlaw models behave quite differently fr
 %------------------------------------------------------------------------------
 \subsubsection{Constant \texorpdfstring{$\kappa$}{kappa} models with \texorpdfstring{$\kappa = 5$}{kappa = 5}}
 
-Next we consider a model in which {\em all} electrons are in a $\kappa$ eDF, which has a thermal core and a power-law tail.  In the models considered in this section, we set $\kappa = 5$ everywhere,  motivated by \cite{2016PhRvL.117w5101K}, who found $\kappa = 5$ to be a good fit to the ion DF in a 3D hybrid simulation of MHD turbulence. A application of $\kappa$ eDFs with fixed $\kappa$ values for SgrA can be found in \citet{davelaar2018}.  The power-law tail then has $p = \kappa - 1 = 4$, and at high frequency $\nu L_\nu \sim \nu^s$ where $s = 2 - \kappa/2 = -1/2$.
-{If not stated otherwise the width parameter $w$ of the $\kappa$ distribution (see Equation~(\ref{eq:kappa})) is set by $w = (\kappa - 3) \Theta_e/\kappa$, where the dimensionless electron temperature $\Theta_e$ is computed according to Equation~(\ref{eq:rhigh_prescription}). The underlying GRMHD simulations are taken from the \bhac runs and we use the time window from 25\,kM to 30\,kM. The radiative transfer is done employing the GRRT code \bhoss \citep{Younsi2012,Younsi2020} and we created images every 50\,M using the same inclinations and $\Rh$ values as for the thermal models. Each model is individually normalized to an average flux of 2.4\,Jy at 230\GHz.} The accretion rate required to obtain 2.4\,Jy is smaller than for the thermal models. This implies that many of the $\kappa=5$ models are optically thin at 230\,GHz and show fine thin ring feature as compared to their thermal counter-part.
+Next we consider a model in which {\em all} electrons are in a $\kappa$ eDF, which has a thermal core and a power-law tail.  In the models considered in this section, we set $\kappa = 5$ everywhere,  motivated by \cite{2016PhRvL.117w5101K}, who found $\kappa = 5$ to be a good fit to the ion DF in a 3D hybrid simulation of MHD turbulence. A similar application of $\kappa$ eDFs with fixed $\kappa$ values for SgrA can be found in \citet{davelaar2018}.  The power-law tail then has $p = \kappa - 1 = 4$, and at high frequency $\nu L_\nu \sim \nu^s$ where $s = 2 - \kappa/2 = -1/2$.
+{If not stated otherwise the width parameter $w$ of the $\kappa$ distribution (see Equation~(\ref{eq:kappa})) is set by $w = (\kappa - 3) \Theta_e/\kappa$, where the dimensionless electron temperature $\Theta_e$ is computed according to Equation~(\ref{eq:rhigh_prescription}). The underlying GRMHD simulations are taken from the \bhac runs and we use the time window from 25\,kM to 30\,kM. The radiative transfer is done employing the GRRT code \bhoss \citep{Younsi2012,Younsi2020} and we created images every 50\,M using the same inclinations and $\Rh$ values as for the thermal models. Each model is individually normalized to an average flux of 2.4\,Jy at 230\GHz.} The accretion rate required to obtain 2.4\,Jy is smaller than for the thermal models. This implies that many of the $\kappa=5$ models are optically thin at 230\,GHz and show fine thin ring feature as compared to their thermal counter-part (see first and second row in Fig.~\ref{fig:SANE_edfs}).
 
-We find that the $\kappa=5$ models produce generally consistent results with the \bhac thermal models. Especially at 230\,GHz we find similar passing fractions for the 230\GHz source sizes (92\% of the $\kappa=5$ models pass the size constraint as compared to 98\% for the thermal models) and for the modulation index (MI) (29\% of the $\kappa=5$ models are passing MI constraint as compared to 27\% of the thermal models). The lower passing fraction in source size for the $kappa=5$ models can be explained by mainly SANE models at low $\Rh$ which show larger sizes than the thermal models. We discuss the constraints for which they differ more substantial below.
+\subsubsubsection{230\GHz size and lightcurve variability}
+We find that the $\kappa=5$ models produce generally consistent results with the \bhac thermal models. Especially at 230\,GHz we find similar passing fractions for the 230\GHz source sizes. 92\% of the $\kappa=5$ models pass the size constraint as compared to 98\% for the thermal models. The lower passing fraction in source size for the $\kappa=5$ models can be explained mainly by SANE models at low $\Rh$ which show larger sizes than the thermal models.
+The variability is almost completely unaffected by the $\kappa$ distribution. The $\kappa=5$ models 29\% are in agreement with the constraint compared to 27\% for the thermal models.  We find that the $\kappa=5$ models have a higher $\mi{3}$ for a small number of SANE $R_{\rm high}\geq 40$ models. However, since the $\mi{3}$ constraint is computed for a time window of length only 5000\,$\rm{GM/c^3}$, a factor three shorter than for the thermal models, this increase does not increase the fraction of models ruled out by this constraint.
+
+%and for the modulation index (MI) (29\% of the $\kappa=5$ models are passing the MI constraint as compared to 27\% of the thermal models).
+We discuss the constraints for which they differ more substantial below.
 %..............................................................................
 %\subsubsubsection{230\GHz VLBI pre-image size}
 \subsubsubsection{Null location and Visibility Amplitude Morphology }
@@ -470,15 +472,15 @@ As mentioned earlier, the $\kappa=5$ models are optically thinner than the therm
 
 
 \subsubsubsection{M-ring fits}
-The m-ring constraints on diameter, width and asymmetry is passed by 71\%, 3\% and 73\% of the $\kappa=5$ models. Except for the diameter all pass fractions are smaller than for the thermal models (65\%, 21\%, and 0.95\% for diameter, width and asymmetry). The slightly larger pass fraction for the diameter could be affected by the shorter time window used for the $\kappa$ models as compared to the thermal ones. However, the low fraction for the m-ring width can be explained by the optical depth of the $\kappa$ models. Most of the $\kappa$ models  are optically thinner than their thermal counter-part which leads to finer ring-structure which is picked by the m-ring fitting.
+The m-ring constraints on diameter, width and asymmetry is passed by 71\%, 3\% and 73\% of the $\kappa=5$ models. Except for the diameter all pass fractions are smaller than for the thermal models (65\%, 21\%, and 95\% for diameter, width and asymmetry). The slightly larger pass fraction for the diameter could be affected by the shorter time window used for the $\kappa$ models as compared to the thermal ones. However, the low fraction for the m-ring width can be explained by the optical depth of the $\kappa$ models. Most of the $\kappa$ models are optically thinner than their thermal counter-part which leads to a finer, brighter ring-structure which is picked by the m-ring fitting (see Fig.~\ref{fig:SANE_edfs}).
 
 \subsubsubsection{86\GHz source size}
 
-In the case of the MAD models the size of the $\kappa=5$ models does not change. This can be explained by the fact that most of the emission is produced in the midplane. For the SANE models we find two different behaviors: The source size increases for $R_{\rm high}<40$ and decreases for $R_{\rm high}\geq 40$, especially for positive black hole spins and high inclinations (compare first and last panel in the bottom row of Fig.~\ref{fig:SANE_edfs}). This change in size is consistent between the images at 230\GHz and at 86GHz. The passing fraction for the $\kappa=5$ models drops to 29\% as compared to 59\% for the thermal models.
+In the case of MAD accretion the size of the $\kappa=5$ models does not change. This can be explained by the fact that most of the emission is produced in the midplane. For the SANE models we find two different behaviors: The source size increases for $R_{\rm high}<40$ and decreases for $R_{\rm high}\geq 40$, especially for positive black hole spins and high inclinations (compare first and last panel in the bottom row of Fig.~\ref{fig:SANE_edfs}). This change in size is consistent between the images at 230\GHz and at 86GHz. The passing fraction for the $\kappa=5$ models drops to 29\% as compared to 59\% for the thermal models.
 
 
 \subsubsubsection{86\GHz flux}
-As mentioned earlier the $\kappa=5$ models are mainly optically thin at 86\,GHz. Together with the spectral slope $p=\kappa-1$ the flux at lower frequencies can be approximated as: $2.4\times \left(\nu/230\,\rm{GHz}\right)^{-(p-1)/2}$. This leads for 86\,GHz to an flux density around 10\,Jy which is far above the 86\,GHz flux constraint of 2$\pm$0.2 Jy. As consequence the passing fraction for the $\kappa=5$ models reduces to 12\% whereas the passing fraction for the thermal models is around 68\%.
+As mentioned earlier the $\kappa=5$ models are mainly optically thin at 86\,GHz. Together with the spectral slope $p=\kappa-1$ the flux at lower frequencies can be approximated as: $2.4\times \left(\nu/230\,\rm{GHz}\right)^{-(p-1)/2}$. This leads for 86\GHz to a flux density around 10\,Jy which is far above the 86\,GHz flux constraint of 2$\pm$0.2 Jy. As consequence the passing fraction for the $\kappa=5$ models reduces to 12\% whereas 68\% of the thermal models pass the 86\GHz flux constraint.
 %In the SANE case the mass accretion rate decreases compared to the thermal models, indicating that particles from the tail of the $\kappa$ distribution contribute to the 230\GHz flux. Increasing the $R_{\rm high}$ value causes the emission region to shift from the midplane towards the polar region.
 %\michi{Need to rephrase these sentences---I don't understand them: For the $\kappa$ distribution more emission is generated as in the thermal case the emission region becomes more compact. Together with the higher Doppler boosting at shorter distances from the black hole the source size decreases, which explains the trend with black hole spin.}
 
@@ -494,9 +496,9 @@ As mentioned earlier the $\kappa=5$ models are mainly optically thin at 86\,GHz.
 All MAD model generate more $2.2\um$ emission than 1.0\,mJy and thus fail the $2.2\um$ constraint. Similar, the SANE models with $R_{\rm high}>1$ overshoot the $2.2\um$ constraint. This can be explained by the power-law tail of the $\kappa$ eDF (see Eq.~\ref{eq:kappaeDF}) as compared to the exponential behaviour in the thermal eDF (see Eq.~\ref{eq:thermaleDF}). The emission at high frequencies is generated by particles in the tail of the distribution. Since there are more high-energetic particles in the tail of the $\kappa$ eDF than in the thermal one the the $2.2\mu$ flux increases for the $\kappa$ eDF. Thus, only 14\% of the $\kappa$ models pass in contrast to 70\% of the thermal models.
 
 %..............................................................................
-\subsubsubsection{Lightcurve Variability}
+%\subsubsubsection{Lightcurve Variability}
 
-The variability is almost completely unaffected by the $\kappa$ distribution. We find that the $\kappa=5$ models have a higher $\mi{3}$ for a small number of SANE $R_{\rm high}\geq 40$ models. However, since the $\mi{3}$ constraint is computed for a time window of length only 5000\,$\rm{GM/c^3}$, a factor three shorter than for the thermal models, this increase does not increase the fraction of models ruled out by this constraint.
+%The variability is almost completely unaffected by the $\kappa$ distribution. We find that the $\kappa=5$ models have a higher $\mi{3}$ for a small number of SANE $R_{\rm high}\geq 40$ models. However, since the $\mi{3}$ constraint is computed for a time window of length only 5000\,$\rm{GM/c^3}$, a factor three shorter than for the thermal models, this increase does not increase the fraction of models ruled out by this constraint.
 %and thus a direct comparison cannot be performed. However we find that 66\% of the models fail this test. The number roughly agrees with the thermal models and thus we conclude that the non-thermal particles included via a $\kappa$ eDF with $\kappa=5$ does not affect the variability.
 
 %..............................................................................
@@ -555,17 +557,17 @@ We set $\sigma_{\rm min}=0.01$ and vary the base efficiency, $\varepsilon$ over 
 %In the following we will elaborate on the impact of adding non-thermal particles via the $\kappa$ electron distribution with fixed $\kappa$ value ($\kappa=3.5$) and three different base efficiencies $\varepsilon=$0.05, 0.1 and 0.2 on the observational constraints listed in Section~\ref{subsec:thermal}.
 \subsubsubsection{230\GHz size and Lightcurve Variability}
 \label{varkappa230}
-For this model, the addition of non-thermal particles does not substantially affect the flux or size of the image at 230\GHz. For MAD models, 230\GHz emission is mostly produced in the disk region (see \citetalias{M87PaperV} and Fig.~8 in \citealt{Wong_2022} for a 3-D rendering).  Thus, the images are unaffected by the non-thermal particles, which are located in the jet. For SANE models, increasing $\Rh$ pushes the emission towards the jet sheath which increases the source size for high spins and large $\Rh$. However, the effect of non-thermal particles on the image is minor, because most of the emission is still produced by thermal electrons with temperature set by the $\Rh$ prescription. The passing fraction for the 230\GHz image size is 98\% independent of the efficiency, $\varepsilon$, which is consistent with 98\% of the thermal models fulfilling the image size constraint. We find that the 47\% of the models are in agreement with the 230\GHz variability constraint. This passing fraction is larger than for the thermal models (27\%). This discrepancy is most likely an effect of the shorter time window (5\,kM) considered for the non-thermal models in contrast to 15\,kM for the thermal ones. 
+For this model, the addition of non-thermal particles does not substantially affect the flux or size of the image at 230\GHz. For MAD models, 230\GHz emission is mostly produced in the disk region (see \citetalias{M87PaperV} and Fig.~8 in \citealt{Wong_2022} for a 3-D rendering).  Thus, the images are unaffected by the non-thermal particles, which are located in the jet. For SANE models, increasing $\Rh$ pushes the emission towards the jet sheath which increases the source size for high spins and large $\Rh$. However, the effect of non-thermal particles on the image is minor, because most of the emission is still produced by thermal electrons with temperature set by the $\Rh$ prescription (compare first and third panel in top row of Fig.~\ref{fig:SANE_edfs}). The passing fraction for the 230\GHz image size is 98\% independent of the efficiency, $\varepsilon$, which is consistent with 98\% of the thermal models fulfilling the image size constraint. We find that the 47\% of the models are in agreement with the 230\GHz variability constraint. This passing fraction is larger than for the thermal models (27\%). This discrepancy is most likely an effect of the shorter time window (5\,kM) considered for the non-thermal models in contrast to 15\,kM for the thermal ones. 
 
 \subsubsubsection{Null location and Visibility Amplitude Morphology}
-The null location and VA morphology constraint are obtained from the 230\GHz images. Since 230\GHZ images of the $\kappa=3.5$ models with variable efficiency are similar to the thermal models (see previous paragraph) the fraction of passing models for both the Null location and VA morphology are comparable. The three non-thermal models have an average passing fraction for the Null location of 80\% whereas 83\% of the thermal models pass. The VA morphology constrain is fulfilled by 72\% of the models for both thermal and non-thermal eDF.  
+The null location and VA morphology constraint are obtained from the 230\GHz images. Since 230\GHz images of the $\kappa=3.5$ models with variable efficiency are similar to the thermal models (see previous paragraph) the fraction of passing models for both the Null location and VA morphology are comparable. The three non-thermal models have an average passing fraction for the Null location of 80\% whereas 83\% of the thermal models pass. The VA morphology constrain is fulfilled by 72\% of the models for both thermal and non-thermal eDF.  
 
 \subsubsubsection{M-ring fits}
-Given that including non-thermal particles via the equations presented in Eq. \ref{eq:efficiencybetasigma} does not change the image structure and variability properties of the 230\GHz images the M-ring fits provide the same passing fractions for the diameter (65\%), width (22\%) and asymmetry (95\%).
+Given that including non-thermal particles via the equations presented in Eq.~\ref{eq:efficiencybetasigma} does not change the image structure and variability properties of the 230\GHz images the M-ring fits provide the same passing fractions for the diameter (65\%), width (22\%) and asymmetry (95\%).
 
 \subsubsubsection{86\GHz source size and flux}
-The 86\GHz source is only slightly affected by the addition of non-thermal particles as compared to the thermal models. Only for the SANE models with $R_{\rm high}\geq 40$ and $a^{\star}>0$ produce 86\GHz image sizes larger than the thermal SANE models. This trend increases with the efficiency and is reflected in the decreasing pass fraction: 56\% (for $varepsilon=0.05,0.1$) and 55\% ($varpesilon=0.2$) as compared to thermal models (59\%). 
-A similar trend is found for the 86\GHz flux density. The non-thermal particles are mainly located in the jet and thus contribute to the 86\GHz flux. Again, jet dominated high spinning SANE models typically fail the 86\GHz flux constraint. With increasing efficiency i.e. adding more non-thermal particles the pass fraction decreases and we found the following fractions: 67\% ($varepsilon=0.05$), 66\% ($varepsilon=0.1$) and 63\% ($varepsilon=0.2$). In contrast to a pass fraction of 68\% for the thermal models.
+The 86\GHz source is only slightly affected by the addition of non-thermal particles as compared to the thermal models. Only the SANE models with $R_{\rm high}\geq 40$ and $a^{\star}>0$ produce 86\GHz image sizes larger than the thermal SANE models. This effect can be seen in  first and third panel in the bottom row of Fig.~\ref{fig:SANE_edfs}. Notice the increased flux density in the jet sheath in the difference image (blue color). This trend increases with the efficiency and is reflected in the decreasing pass fraction: 56\% (for $\varepsilon=0.05,0.1$) and 55\% ($\varpesilon=0.2$) as compared to thermal models (59\%).  
+A similar trend is found for the 86\GHz flux density. The non-thermal particles are mainly located in the jet and thus contribute to the 86\GHz flux. Again, jet dominated high spinning SANE models typically fail the 86\GHz flux constraint. With increasing efficiency i.e. adding more non-thermal particles the pass fraction decreases and we found the following fractions: 67\% ($\varepsilon=0.05$), 66\% ($\varepsilon=0.1$) and 63\% ($\varepsilon=0.2$). In contrast to a pass fraction of 68\% for the thermal models.
 %..............................................................................
 %\subsubsubsection{230\GHz VLBI pre-image size}
 
@@ -600,7 +602,7 @@ A similar trend is found for the 86\GHz flux density. The non-thermal particles 
 %..............................................................................
 \subsubsubsection{$2.2\um$ Constraint}
 
-The addition of non-thermal electrons increases the $2.2\um$ flux for all models. For SANE models, except $\Rh=1$, the addition of non-thermal particles leads to over-production of $2.2\um$ photons. For MAD models, all models over-produce at $2.2\um$ for $\varepsilon \ge 0.05$. As noted above, $2.2\um$ emission is produced from the tail of the eDF.  The thermal eDF tail decreases exponentially, while the $\kappa$ eDF tail decreases as a power law, so the increase in $2.2\um$ flux density is unsurprising.  This is a general feature of the nonthermal models: $2.2\um$ observations sharply limit the allowed population of nonthermal electrons.
+The addition of non-thermal electrons increases the $2.2\um$ flux for all models. For SANE models, except $\Rh=1$, the addition of non-thermal particles leads to over-production of $2.2\um$ photons. For MAD models, all models over-produce at $2.2\um$ for $\varepsilon \ge 0.05$. As noted above, $2.2\um$ emission is produced from the tail of the eDF.  The thermal eDF tail decreases exponentially, while the $\kappa$ eDF tail decreases as a power law, so the increase in $2.2\um$ flux density is unsurprising.  This is a general feature of the non-thermal models: $2.2\um$ observations sharply limit the allowed population of non-thermal electrons.
 
 % commented out 12-dec, cfg: we should show trends in some model and some test other than this one, since we can easily make the case that the NIR increases as $\varepsilon$ increases.
 %\begin{figure*}
@@ -631,7 +633,7 @@ The addition of non-thermal electrons increases the $2.2\um$ flux for all models
 
 %\cfg{could we avod the equation and simply provide a reference and enough detail that someone could reproduce it?}\aco{What about inline equations?}
 
-The high-energy variability observed in many astrophysical sources including the galactic centre could be explained by magnetic reconnection. During the reconfiguration of the magnetic field topology energy stored in the magnetic field is diffused into the plasma leading to the heating and acceleration of particles finally resulting in the development of a non-thermal tails in the electron distribution functions. Particle in Cell (PIC) simulations have found that the slope of the non-thermal tail of the eDF depends on the magnetisation and plasma-beta of the plasma \citep[see, e.g.,][]{2018ApJ...862...80B}. Given that the magnetisation and plasma-beta vary within our GRMHD models we assume as an alternative procedure for assigning a nonthermal eDF a $\kappa$ model \eqref{eq:nonthermaleDF} and set the $\kappa$ value and $w$ according to \cite{2018ApJ...862...80B}.
+The high-energy variability observed in many astrophysical sources including the galactic centre could be explained by magnetic reconnection. During the reconfiguration of the magnetic field topology energy stored in the magnetic field is diffused into the plasma leading to the heating and acceleration of particles and finally resulting in the development of a non-thermal tails in the electron distribution functions. Particle in Cell (PIC) simulations have found that the slope of the non-thermal tail depends on the magnetisation of the plasma and its plasma-beta \citep[see, e.g.,][]{2018ApJ...862...80B}. Given that the magnetisation and plasma-beta vary within our GRMHD models we include as an alternative procedure for assigning a non-thermal eDF a $\kappa$ model \eqref{eq:nonthermaleDF} with variable $\kappa$ value and $w$ according to \cite{2018ApJ...862...80B}.
 %, who model the effects of particle acceleration in magnetic reconnection.
 In particular, we set
 \begin{align}
@@ -640,7 +642,26 @@ In particular, we set
 \end{align}
 
 We use the emissivity and absorptivity, computed numerically for the interval $3 < \kappa \le 8$, from  \cite{2016ApJ...822...34P}. For $\kappa > 8$ we substitute a thermal eDF.  As in the standard models we turn off emission at $\sigma > 1$.
-{The variable $\kappa$ models are computed from \hamr and \bhac GRMHD models where the time windows $30-35$\,kM (\hamr) and $25-30$\,kM (\bhac) are used. For the radiative transfer \ipole is applied to the \hamr models and the GRRT code \bhoss is employed for the \bhac models. For both models an image is created every 10\,M and we iterate the mass unit to obtain an average flux of 2.4\,Jy at 230\,GHz. In order to obtain the X-ray luminosity of the models, the monte carlo radiative transfer code \grmonty is connected to the \hamr models.}
+{The variable $\kappa$ models are computed from \hamr and \bhac GRMHD models where the time windows $30-35$\,kM (\hamr) and $25-30$\,kM (\bhac) are used. For the radiative transfer \ipole is applied to the \hamr models and the GRRT code \bhoss is employed for the \bhac models. For both models an image is created every 10\,M and we iterate the mass unit to obtain an average flux of 2.4\,Jy at 230\,GHz. In order to obtain the X-ray luminosity of the models, the monte carlo radiative transfer code \grmonty is connected to the \hamr models.}\\
+%\cmf{The following text is for the \bhac models}
+The required mass accretion rate to obtain 2.4\,Jy increases on average by 4\% as compared to the thermal. The larger mass accretion rate increases the number density of electrons, $n_e$, and thus the variable kappa models are slightly optically thicker than the thermal models.
+\subsubsubsection{230\GHz size and Lightcurve Variability} The $kappa$ eDF is mainly applied in the jet sheath while the disk region is mostly populated by thermal particles. Therefore, the 230\GHz source size of the variable $\kappa$ models is similar to the thermal ones and no difference in the pass fraction is found. 98\% of the both models are in agreement with the 230\GHz size estimate (see first and second panel in the top row of Fig.~\ref{fig:SANE_edfs}). With a passing fraction of 30\% a slightly larger number of $\kappa$ models show the same lightcurve variability as the observations (27\% for thermal models).
+
+\subsubsubsection{Null location and Visibility Amplitude Morphology} For the null location of the variable $\kappa$ models we find no difference to their thermal counterparts and for both $\sim$80\% pass this constraint. However, there is a clear discrepancy between the variable $\kappa$ and thermal models regarding the VA morphology. Only 60\% of the $\kappa$ models pass the VA morphology constraint, in contrast to 72\% of the thermal models.  
+
+\subsubsubsection{M-ring fits}
+Similar to the Null location and 230\GHz size constraint the thermal and variable $\kappa$ models agree in the passing fraction for the m-ring diameter (66\%), m-ring width (22\%) and asymmetry (95\%). 
+
+\subsubsubsection{86\GHz source size and flux}
+The number of models which are in agreement with 86\GHz source size are comparable for both thermal (59\%) and variable $\kappa$ models (55\%). Given that most of the variable $\kappa$ models are optically thicker than their thermal counter parts the 86\GHz flux is on average lower which increases the passing fraction from 68\% (thermal eDF) to 75\% (variable $kappa$ eDF).
+
+\subsubsubsection{2.2\um Constraint}
+Including non-thermal particles via the $\kappa$ eDF increases the 2.2\um flux as compared to the thermal eDF. The power law slope of the $kappa$ eDF depends on the magnetisation and plasma beta of the plasma (see Eq.~\ref{eq:kappa}). Since high magnetisation are typically found in MAD accretion models most of the MAD overproduce the 2.2\um flux. On the other hand in the low magnetised SANE models Eq.~\ref{eq:kappa} leads to large $\kappa$ values i.e., less high-energy electrons in the tail of the eDF. Therefore, the passing fraction for the SANE models is almost the same as for their thermal counter-parts. In total 35\% of the variable $\kappa$ models pass the 2.2\um constraint which should be compared to 55\% for models including only thermal particles.
+
+\subsubsubsection{X-ray constraint}
+As mentioned earlier, for the \hamr models we computed the x-ray luminosity. Including non-thermal particles via the variable $\kappa$ eDF reduces the passing fraction from 61\% (for thermal eDF) to 35\%. This behaviour is agreement with our expectations since the $\kappa$ eDF provides a larger reservoir of high energy electrons contributing to the up-scattering of photons.   
+\subsubsubsection{Trends a across \bhac and \hamr models for variable $\kappa$ models}
+For the variable $\kappa$ models two set of models from the \bhac and \hamr codes were used. Given the different adiabatic indices used (see Table \ref{tab:GRMHDmodels}) a direct comparison between the models is difficult. However, both models show similar trends for all constraints (see above paragraphs and Table~\ref{tab:passfraction}) except for the lightcurve variability and the VA morphology. For the \hamr models there is an increase of 21\% in the passing fraction for the lightcurve variability if non-thermal particles are included. Similar but not as pronounced for the variability constraint the fraction of passing models for the VA morphology increases from 39\% to 48\% if non-thermal particles are present.
 %\aco{Add here details for ipole and igrmonty.}
 %..............................................................................
 %\subsubsubsection{Null Location} We found that $80\% ~(201/250)$  pass the expected null location ($2.5\lambda - 3.5G\lambda$). The differences to the thermal models can be described as follows: higher inclinations are rejected for $i \geq 70^{\circ}$ (MAD)  and $i \geq 50^{\circ}$ (SANE). Although, the total number of rejected models is similar to thermal models.
@@ -654,7 +675,7 @@ We use the emissivity and absorptivity, computed numerically for the interval $3
 %\cfg{this section needs to incorporate both the \hamr and \bhac variable $\kappa$ models}
 
 %\aco{
-The addition of nonthermal particles increases the X-ray emission from the majority of MAD models, causing them to overshoot the constraints. It does not change the general behavior of weak magnetic field SANE models.
+%The addition of nonthermal particles increases the X-ray emission from the majority of MAD models, causing them to overshoot the constraints. It does not change the general behavior of weak magnetic field SANE models.
 %..............................................................................
 %\subsubsubsection{86\GHz Major Axis}
 %\michi{This description doesn't seem to correspond to what I see for either the BHAC or the HAMR variable $\kappa$ vs. thermal comparison}
@@ -679,13 +700,50 @@ The addition of nonthermal particles increases the X-ray emission from the major
 %We compute the the modulation index  of the lightcurves of variable $\kappa$ models by discretizing the entire window of GRMHD simulations, $\rm 5000\,\tg$ ($\rm 28\,hours$) every $\rm 3\,hour$ (see Table \ref{tab:GRMHDmodels}). Similar to variable efficiency models, the non-thermal particles with variable $\kappa$ has not big impact on the flux at 230\GHz. The behavior of modulation index and total flux for MAD accretion models are same as thermal, and variable efficiency eDFs. We found sightly high modulation index for $R_{\rm high}=1$ and $30^{\circ} \leq i$ for SANE accretion models, the models for $R_{\rm high}=80$ has same trend as $R_{\rm high}=40$.
 
 %------------------------------------------------------------------------------
+\begin{table*}
+\caption{Pass fractions for \bhac and \hamr models for varios eDFs}
+\centering
+\begin{tabular}{l|cccccc|ccc}
+\hline
+ constraint/model	& \multicolumn{6}{c}{\bhac}        & \multicolumn{3}{|c}{\hamr} \\
+ \hline
+				& thermal & $\kappa(\sigma,\beta)$ & $\kappa=3.5\,\varepsilon=0.05$  & $\kappa=3.5\,\varepsilon=0.1$   & $\kappa=3.5\,\varepsilon=0.2$ & $\kappa=5$ & thermal & $\kappa(\sigma,\beta)$  & $p=4$\\
+\hline
+\hline
+230\,GHz size&  0.98 	& 0.99	& 0.98 	& 0.98	& 0.98 	& 0.92  & 1.0	& 0.99 	& 0.94 \\
+lc varability&  	  0.27	& 0.30	&  0.47	& 0.47    	& 0.46	& 0.29  & 0.07	& 0.28	&  0.41\\
+VA Morphology& 0.72	& 0.60	&  0.74	& 0.73    	& 0.71	& 0.55  & 0.39	& 0.46	&  0.63\\
+Null location     &0.83	& 0.80	&  0.81	& 0.81    	& 0.78	& 0.59  & 0.80	& 0.88	&  --\\	
+M-ring diameter&0.65	& 0.69	&  0.66	& 0.66    	& 0.67	& 0.71  & 0.61	& 0.67	&  0.89\\
+M-ring width    & 0.21	& 0.21	&  0.24	& 0.23    	& 0.23	& 0.03  & 0.32	& 0.40	&  0.13\\
+M-ring asym.   &0.95		& 0.97	&  0.95	& 0.95    	& 0.94	& 0.73  & 0.99	& 0.97	&  0.98\\
+86\,GHz size   &0.59		& 0.57	&  0.56	& 0.56    	& 0.55	& 0.38  & 0.46	& 0.45	&  0.47\\
+86\,GHz flux    &0.68		& 0.75	&  0.67	& 0.66    	& 0.63	& 0.12  & 0.62	& 0.65	&  0.72\\
+2.2$\mu$m flux&0.55	& 0.35	&  0.14	& 0.12    	& 0.12	& 0.14  & 0.80	& 0.25	&  0.41\\
+x-ray flux& 	0.70		& --		&  --		&  --    	& --		& --  	    & 0.61	&  0.35	& --\\
+\hline
+\end{tabular}
+\label{tab:passfraction}
+\end{table*} 
+
 \subsubsection{Summary of Constraints on Non-Thermal Models}
+In Table \ref{tab:passfraction} we list the pass fractions for \bhac and \hamr models using different eDFs.
+Most non-thermal eDF models considered here produce little change compared to the thermal models for most constraints. The 86\GHz size and flux, which are the most important non-EHT constraints, are only marginally affected by the addition of nonthermal electrons. This behaviour is obtained especially for eDFs which mainly add non-thermal particles in jet while the disk is populated by thermal ones. In our case this setup is given for variable $\kappa$ and $\kappa=3.5$ with variable efficiency and is consistent between \bhac and \hamr models (see Table~\ref{tab:passfraction}).
 
-Most nonthermal eDF models considered here produce little change compared to the thermal models for most constraints.  The 86\GHz size and flux, which are the most important non-EHT constraints, are only marginally affected by the addition of nonthermal electrons.  The exception is for the powerlaw models, where the addition of nonthermal electrons increases the 86GHz size by 50\%.
+If non-thermal particles are included also in the disk, either via a power-law with slope p=4 stitched to a thermal distribution or via a $\kappa=5$ distribution there are some variations in pass fractions as compared to the above-mentioned eDFs.
+\newline For the power-law models the addition of non-thermal electrons increase the 86\GHz size by 50\%. However the pass fractions with respect to the thermal model is not changed. In contrast to the $\kappa=5$ models where pass fraction decreased by 20\% as compared to the thermal models.
+\newline For both models, $p=4$ and $\kappa=5$ fewer models pass the 230\GHz m-ring width. We find a consistent decrease by $\sim20\%$ for both models. Interestingly the other m-ring constraints i.e., the diameter and asymmetry are not affected by the addition of non-thermal particles. This can be explained by the finer and brighter ring feature found in $p=4$ and $\kappa=5$ models connected to their smaller optical depth compared to their thermal counter-parts (see Table~\ref{tab:passfraction}). 
+\newline In general the fraction of models passing the $\mi{3}$ increase with the addition of non-thermal particles independent on the prescriptions of the eDF \cmf{for the \hamr models there is a large increase from 7\% to 41\% which I think will survive even if we would run all models longer. The change for the \bhac models is smaller and could be removed if the models are run for longer. How to include this?}
+\newline The main characteristic of the non-thermal models is the increase of 2.2 μm and X-ray flux densities. However, in a large fraction of models this leads to overproduction of 2.2 μm or X-ray flux and reduces the pass fractions.\\
 
-The 230\GHz \mring fits are hardly affected at all by the addition of nonthermal electrons using the prescriptions considered here, and $\mi{3}$ is also not substantially affected by the addition of nonthermal electrons.
+If all constraints are considered all non-thermal models fail. However there are a few models which only fail the lightcurve variability, $\mi{3}$. These models are: a \hamr MAD $p=4$ model with $a^\star=0.5$ seen under an inclination of 90$^\circ$ and $R_{\rm high}=1$ and a \bhac MAD variable $\kappa$ model with spin $a^\star=0.5$ inclination 30$^\circ$ and $R_{\rm high}=160$. These two models agree with the cluster of thermal models found for both \bhac and \kharma models (see Sect.~\ref{sec:summarythermal}).
+\cmf{there is one \bhac SANE $\varpesilon=0.05$ with spin $a^\star=0.94$, inclination 10$^\circ$, and $R_{\rm high}=10$ which only fails M3. However this one would fail most likely the polarisation constraint. How do include this here? }
 
-The $2.2\um$ and X-ray flux densities, however, are consistently increased by the nonthermal eDF prescriptions.  In a large fraction of models this leads to overproduction of $2.2\um$ or X-ray flux.
+%The exception is for the powerlaw models, where the addition of nonthermal electrons increases the 86GHz size by 50\%. \cmf{howerver, the pass fraction is not changed}
+
+%The 230\GHz \mring fits are hardly affected at all by the addition of nonthermal electrons using the prescriptions considered here, and $\mi{3}$ is also not substantially affected by the addition of nonthermal electrons.
+
+
 
 %Since the nonthermal models analyzed here do not consider the heating efficiency due to the magnetic reconnection, $\varepsilon \neq 0$, those effects can be explained by asymptotic behaviour of the nonthermal emissivity, $ j_{\nu}\propto\exp\left(-\Theta_e^{-2/3}\nu^{1/3}\right)+\nu^{-(\kappa-2)/2} \left[(\kappa -3)\Theta_{\rm e} + \varepsilon(\kappa -3) \sigma\right]^{\kappa-2}$. The second term dominates at NIR and X-rays, while at mm and radio frequencies the first term dominates. However, as soon as heating efficiency in the third term becomes nonzero, the nonthermal contribution generates a larger emission region, expanding the image size at 86\GHz,  and increasing the total intensity \citep{2021NatAs.tmp..218C,2021arXiv211102518F}. Furthermore, both the NIR and the X-ray average flux increases as efficiency increases.
 %on the other hand, the SED is not sensitive to the black hole spin but image size increase for prograde models, we have consistency overall our models (\bhac / \hamr).
@@ -696,15 +754,15 @@ The $2.2\um$ and X-ray flux densities, however, are consistently increased by th
 %    \item Even the lowest base efficiency considered, $\varepsilon=0.05$, leads to an over-production of NIR flux. \cmf{indication that we need very localised regions of non-thermal particle productions and no "global" approach?}
 %\end{itemize}
 
-Adding nonthermal electrons in the form of a power-law results in a definite increase in 230 and 86\GHz image sizes. Very few models survive all constraints: one SANE accretion model with black hole spin $a_{\star}=15/16$, $\rm R_{high}=40$ at an inclination of $50^{\circ}$ passes EHT, non-EHT and variability tests. A couple of MAD spin $a_{\star}=0.5$ models also pass EHT and non-EHT constraints.
+%Adding nonthermal electrons in the form of a power-law results in a definite increase in 230 and 86\GHz image sizes. Very few models survive all constraints: one SANE accretion model with black hole spin $a_{\star}=15/16$, $\rm R_{high}=40$ at an inclination of $50^{\circ}$ passes EHT, non-EHT and variability tests. A couple of MAD spin $a_{\star}=0.5$ models also pass EHT and non-EHT constraints.
 
 
-The effect of adding nonthermal electrons in a variable $\kappa$ eDF can be summarized as follows: Only $1\%$ of models pass all constrains, MAD accretion model, black hole spin $a_{\star}=0.5$, $\rm R_{high}=160\ (i=10^{\circ},~30^{\circ})$ and $\rm R_{high}=80\ (i=10^{\circ})$.%, see model C in Figure \ref{fig:bestbet_imgs}.
+%The effect of adding nonthermal electrons in a variable $\kappa$ eDF can be summarized as follows: Only $1\%$ of models pass all constrains, MAD accretion model, black hole spin $a_{\star}=0.5$, $\rm R_{high}=160\ (i=10^{\circ},~30^{\circ})$ and $\rm R_{high}=80\ (i=10^{\circ})$.%, see model C in Figure \ref{fig:bestbet_imgs}.
 
 %The effect of adding nonthermal electrons in a constant-$\kappa$ model can be summarized as follows:
 
 
-Most of our nonthermal models assign a width to the nonthermal component that depends on the an electron `temperature assigned through the $\Rh$ scheme, so they are not fully independent of $\Rh$.
+%Most of our nonthermal models assign a width to the nonthermal component that depends on the an electron `temperature assigned through the $\Rh$ scheme, so they are not fully independent of $\Rh$.
 
 The nonthermal models are run for only $5000\tg$, so most  constraints can not be applied as precisely.  For example, the model distribution of $\mi{3}$ contains only $9$ points and is correspondingly more uncertain than for the thermal models.  It is therefore difficult to detect subtle changes in models.
 %}

@@ -84,30 +84,33 @@ nonthermal (unrelaxed) electron distribution functions \citep[see][]{2000ApJ...5
 
 % CFG new version
 % do we need the rmax column?  perhaps provide torus information?
-\begin{deluxetable*}{cccccccc}\label{tab:GRMHDmodels}
+\begin{deluxetable*}{cccccccccc}\label{tab:GRMHDmodels}
+  \small
   \tablecaption{EHT GRMHD Simulation Library}
   \tablehead{
-    \colhead{Setup}                  &
-    \colhead{Code}                   &
-    \colhead{$\abh$}                     &
-    \colhead{Mode}                       &
-    \colhead{$\Gamma_\mathrm{ad}$}       &
+    \colhead{Setup}               &
+    \colhead{Code}                &
+    \colhead{$\abh$}              &
+    \colhead{Mode}                &
+    \colhead{$\Gamma_\mathrm{ad}$}&
     \colhead{$t_\mathrm{final}$ } &
-    \colhead{$r_{\rm max}$}               &
-    \colhead{Resolution}                 
+    \colhead{$r_{\rm in}$}        &
+    \colhead{$r_{\rm max}$}       &
+    \colhead{$r_{\rm out}$}       &
+    \colhead{Resolution}
   }
   \startdata
   torus & {\kharma}$^a$ &
-   0,$\pm1/2$,$\pm15/16$  & MAD/SANE     & $\frac{4}{3}/\frac{4}{3}$      & 30,000  & 1000     & 288x128x128
+   0,$\pm1/2$,$\pm15/16$  & MAD/SANE     & $\frac{4}{3}/\frac{4}{3}$      & 30,000  & --- & --- & 1000     & 288x128x128
   \\
-   torus & \bhac$^b$   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $\frac{4}{3}/\frac{4}{3}$      & 30,000  & 3333     & 512x192x192 \\
-  torus & \hamr$^c$ & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $\frac{13}{9}/\frac{5}{3}$ & 35,000  & 1000/200 & 348/240×192×192 \\
+   torus & \bhac$^b$   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $\frac{4}{3}/\frac{4}{3}$      & 30,000  & --- & --- & 3333     & 512x192x192 \\
+  torus & \hamr$^c$ & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $\frac{13}{9}/\frac{5}{3}$ & 35,000 & --- & --- & 1000/200 & 348/240×192×192 \\
   torus & \koral$^d$  &  0,$\pm0.3$,$\pm0.5$,$\pm0.7$,$\pm0.9$ 
-  & MAD          & $\frac{13}{9}$     & 101,000 & 100,000  & 288x192x144 \\
-   tilted  & \hamr$^e$   & $15/16$     & IN-SANE      & $\frac{5}{3}$        & 105,000 & 100,000  & 448x144x240  \\
-   wind-fed  & \athenapp$^f$ & 0           & MAD & $\frac{5}{3}$        & 20,000  & 2,400    & 356x128x128  
-  \enddata
-  \tablecomments{Summary of GRMHD simulations in the EHT \sgra GRMHD simulation library.
+  & MAD          & $\frac{13}{9}$     & 101,000 & --- & --- & 100,000  & 288x192x144 \\
+   tilted  & \hamr$^e$   & $15/16$     & IN-SANE      & $\frac{5}{3}$        & 105,000 & --- & --- & 100,000  & 448x144x240  \\
+   wind-fed  & \athenapp$^f$ & 0           & ILAF & $\frac{5}{3}$        & 20,000 & --- & --- & 2,400    & 356x128x128  
+ \enddata
+ \tablecomments{Summary of the EHT \sgra GRMHD simulation library.
     The first four entries use aligned torus initial conditions.
     The last two entries are tilted accretion models and two realizations of the Wind-fed accretion model which differ in stellar wind magnetization.  Times are given in units of $G M/c^3 = 20.4$sec and radii in units of $G M/c^2$.}
 \tablerefs{
@@ -165,7 +168,7 @@ Here we use numerical simulations, adopt an ideal GRMHD model for the flow, use 
 \subsubsection{Plasma Flow Model}
 
 We model the plasma flow around \sgra using ideal, non-radiative GRMHD.  We assume the gravitational field
-is described by the Kerr metric, with mass from Equation~(\ref{eq:mass}) and with $\abh$ a free parameter \citep[see e.g.,][]{1999ApJ...522..727K, 2003ApJ...589..444G, 2003ApJ...589..458D, 2005ApJ...635..723A, 2007A&A...473...11D}.
+is described by the Kerr metric, with mass from Equation~(\ref{eq:mass}) and with $\abh$ a free parameter \citep[see e.g.,][]{1999ApJ...522..727K,2003ApJ...589..444G, 2003ApJ...589..458D, 2005ApJ...635..723A, 2007A&A...473...11D}.
 
 We integrate the GRMHD equations in three spatial dimensions using multiple algorithms:
 \kharma   \citep{2021JOSS....6.3336P},
@@ -176,34 +179,34 @@ We integrate the GRMHD equations in three spatial dimensions using multiple algo
 see \citet{2019ApJS..243...26P} and \citet{Olivares_et_al} for comparisons of GRMHD codes.
 All simulations assume constant adiabatic index  $\Gamma_\mathrm{ad}$.
 
-The initial condition for most of our GRMHD simulations is a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F}. Although there are variations in initial conditions between simulations, in all except the \hamr-Tilted models, the torus orbital angular momentum is either parallel or antiparallel to the black hole spin.
-The torus is seeded with a weak, poloidal magnetic field.
+The initial condition for most of our GRMHD simulations is a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F}. Although there are variations in initial conditions between simulations, in all except the \hamr-Tilted models, the torus orbital angular momentum is either parallel or antiparallel to the black hole spin.  The torus is seeded with a weak, poloidal magnetic field.
 
-The torus initial conditions are motivated by the notion that the near-horizon flow, where most of the emission is generated (\citetalias{M87PaperV}) relaxes to a statistically steady state that is nearly independent of the flow at larger radius.  This notion is challenged in the stellar wind-fed models of \cite{2020ApJ...896L...6R}, which we include in our study.
+The torus initial conditions are motivated by the notion that the near-horizon flow, where most of the emission is generated (\citetalias{M87PaperV}) relaxes to a statistically steady state that is nearly independent of the flow at larger radius.  This notion is challenged in the stellar wind-fed models of \cite{2020ApJ...896L...6R}, which are included in our study.
 
-All simulations are run in horizon penetrating coordinates that derive from Kerr-Schild coordinates, which are regular on the horizon.
+All simulations are run in variations of Kerr-Schild coordinates, which are regular on the horizon.
 Most are run in a variant of spherical polar coordinates.
 Unless stated otherwise, boundary conditions are outflow at the inner boundary, located inside the event horizon, outflow at the outer boundary, located at $r_{\rm max} \gtrsim 1000~\rg$, and reflecting boundary conditions at the poles.
-Standard simulations are evolved to $t_\mathrm{final} = 30,000~\tg$.
+Most simulations are evolved to $t_\mathrm{final} = 30,000~\tg$.
 
 Once the evolution has started, a combination of instabilities including the magnetorotational instability \citep[MRI][]{1992ApJ...400..610B} drives the torus to a turbulent, fluctuating state.
-Letting $P_\mathrm{gas}$ be the gas pressure and $P_\mathrm{mag} \equiv B^2 / (8\pi)$ be the magnetic pressure, the standard accretion flow models can be divided by latitude into three zones:
-\emph{i})~equatorial inflow,
+If $P_\mathrm{gas} \equiv$ gas pressure and $P_\mathrm{mag} \equiv B^2 / (8\pi) \equiv$ magnetic pressure, the standard accretion flow models can be divided by latitude into three zones:
+\emph{i})~an equatorial inflow,
 \emph{ii})~a mid-latitude disk wind/corona with  $\beta  \equiv P_\mathrm{gas} / P_\mathrm{mag} \sim 1$, and
-\emph{iii})~a polar funnel/relativistic jet with $\sigma \equiv B^2/4\pi \rho c^2 \gg 1$.
-It is well established (see, e.g, \citealt{M87PaperV} and \citealt{M87PaperVIII}, hereafter \citepalias{M87PaperVIII}, and references therein) that the magnetic flux through the event horizon divides the outcomes into two categories: the magnetically arrested disk (MAD) state \citep[e.g.,][]{1974Ap&SS..28...45B, 2003ApJ...592.1042I, 2003PASJ...55L..69N} in which the magnetic flux on the horizon saturates and substantially affects the dynamics of the flow, and the Standard and Normal Evolution (SANE) state \citep[e.g.,][]{2003ApJ...589..444G, 2003ApJ...599.1238D, 2012MNRAS.426.3241N}.
-The magnetic flux can be characterized by $\phi \equiv \Phi_{\mathrm{BH}} (\dot{M} r_\mathrm{g}^2 c)^{-1/2}$, where $\Phi_{\rm BH}$ is the magnetic flux interior to the black hole equator and $\dot{M}$ is the mass accretion rate through the horizon.
+\emph{iii})~a polar ``funnel'' with $\sigma \equiv B^2/4\pi \rho c^2 \gg 1$.
+
+The magnetic flux through the horizon divides the outcome into two categories (see, e.g, \citealt{M87PaperV} and \citealt{M87PaperVIII}, hereafter \citepalias{M87PaperVIII}, and references therein): the magnetically arrested disk (MAD) state \citep[e.g.,][]{1974Ap&SS..28...45B, 2003ApJ...592.1042I, 2003PASJ...55L..69N, 2011MNRAS.418L..79T} in which the magnetic flux on the horizon saturates and substantially affects the dynamics of the flow, and the Standard and Normal Evolution (SANE) state \citep[e.g.,][]{2003ApJ...589..444G, 2003ApJ...599.1238D, 2012MNRAS.426.3241N}.
+The dimensionless magnetic flux $\phi \equiv \Phi_{\mathrm{BH}} (\dot{M} r_\mathrm{g}^2 c)^{-1/2}$, where $\Phi_{\rm BH}$ is the magnetic flux interior to the black hole equator and $\dot{M}$ is the mass accretion rate through the horizon.
 MAD models have $\phi \sim \phi_{\rm crit} \sim 60$.\footnote{In the Lorentz-Heaviside units commonly used in GRMHD simulations $\phi_\mathrm{crit}$ is smaller by a factor of $(4\pi)^{1/2} \simeq 3.545$.}
 %\aco{Should we cite the work-in-progress by Narayan about spinup-spindown for MAD models where magnetic flux it can be written as a function of BH spin? I've verified the same tendency for BHAC.}
 %\monika{not necessary, this is not established and should be first published we want to limit in prep as much as possible}
 In MAD models, magnetic flux accretes onto the hole until $\phi \gtrsim \phi_\mathrm{crit}$, then magnetic flux is expelled from the hole and escapes through the inflowing plasma.  SANE models have $\phi < \phi_\mathrm{crit}$, and most of our standard models have $\phi \sim 1$.
 
-We also consider two GRMHD simulations with different initial conditions: strongly magnetized non-MAD tilted torus simulations \citep{Liska2018, Chatterjee2020} and a model in which \sgra is fed directly by winds from stars in its vicinity \citep{2020ApJ...896L...6R}.
-The self-consistent wind feeding simulations result in a mode of accretion that is similar to MAD but typically has lower mean angular momentum and is less well organized.
+We consider two GRMHD simulations with initial conditions that differ from the fiducial aligned torus: strongly magnetized non-MAD tilted torus simulations \citep{Liska2018, Chatterjee2020} and a model in which \sgra is fed directly by winds from stars in its vicinity \citep{2020ApJ...896L...6R}.
+The wind-fed simulations result in a mode of accretion that is similar to MAD but typically has lower mean angular momentum and is less well organized.
 The wind-fed models have $\abh = 0$.
 
 The GRMHD simulation library is summarized in Table~\ref{tab:GRMHDmodels}.
-In Figure~\ref{fig:GRMHD} we show a few examples of GRMHD runs with both default torus and non-default GRMHD runs.
+In Figure~\ref{fig:GRMHD} we show a few examples of GRMHD simulations for an aligned SANE, an aligned MAD, a tilted torus, and a wind-fed simulation.
 The models vary in numerical method and in numerical resolution. We present more information on the numerical methods and models in Appendices~\ref{app:numerical} and \ref{app:variability}.
 
 \begin{figure*}
@@ -280,7 +283,7 @@ which has power-law index $p$ and upper and lower limits $\gamma_{\min}$ and $\g
 \end{align}
 which has width parameter $w$ and power-law index parameter $\kappa$.
 
-Evidently, any eDF assignment scheme is an approximation since the eDF depends in general on both local conditions and particle histories.  Notice that we also assume the eDF is isotropic and neglect electron-positron pairs (see Section~\ref{sec:pair} for a discussion of potential impact of pair plasma for \sgra).
+Evidently, any eDF assignment scheme is an approximation since the eDF depends in general on both local conditions and particle histories.  Notice that we also assume the eDF is isotropic and neglect electron-positron pairs.
 
 Once the eDF is specified, the radiative transfer coefficients (emissivities, absorptivities, and rotativities) can be readily calculated; see \cite{2021ApJ...921...17M} for a recent summary.
 
@@ -295,23 +298,7 @@ Physical scales are assigned during the radiative transfer step.
 The black hole mass $\mbh$ fixes the length unit $\rg$ and time unit $\tg$.
 Because the GRMHD simulations are non-selfgravitating, one is free to set a density scale, or equivalently the accretion rate $\dot{M}$ or plasma mass scale $\Munit$ \citep[see, e.g.,][for a full discussion]{Wong_2022}.
 
-% cfg, 11 dec 21: resolved this by reference to the PATOKA paper.  We really don't need all this anywhere else in the paper.
-%The density in cgs units $\rho_\mathrm{cgs}$ is obtained from the density in simulation units $\rho_\mathrm{sim}$ via
-%\begin{align}
-%  \rho_\mathrm{cgs} = \rho_\mathrm{sim} \Munit_\mathrm{cgs} {(\rg)}_\mathrm{cgs}^{-3}.
-%\end{align}
-%Similarly, the energy density and magnetic fields in cgs units are set by:
-%\begin{align}
-%  u_\mathrm{cgs} &= u_\mathrm{sim} \Munit_\mathrm{cgs} {(\rg)}_\mathrm{cgs}^{-3} c_\mathrm{cgs}^2\\
-%  B_\mathrm{cgs} &= (4\pi)^{1/2} B_\mathrm{sim} \Munit_\mathrm{cgs}^{1/2} (\rg)_\mathrm{cgs}^{-3/2} c_\mathrm{cgs};
-%\end{align}
-%the factor of $(4\pi)^{1/2}$ comes from converting Heaviside-Lorentz units (used in GRMHD simulations for efficiency) to cgs.
-%\ckc{I found this notation confusion.  For example, $c$ is dimensional, although it's not necessary in cgs.  So I'm not sure what $c_\mathrm{cgs}$ really means here.  Is the dimensionless value of $c$ in cgs?  I'm probably too picky...}\monika{we just want to stress that c should be in cm/s}
-
-The plasma mass scale parameter $\Munit$ controls the plasma emissivity and the plasma optical depth and thus the source brightness.  We adjust $\Munit$ iteratively until the time-averaged 230\GHz flux densities of the models are within a few percent of the $2.4\,\mathrm{Jy}$ mean observed during the 2017 campaign (see next section).  The reader should keep in mind that in this work model parameters are always varied at constant time-averaged millimeter flux density.
-
-%Notice that the flux density is a nonlinear function of $\Munit$ because the accretion flow transits between the optical thick and thin regimes around 230\GHz.
-%This makes the interpretations of the model trends in Section~\ref{sec:trends} less obvious.
+The plasma mass scale parameter $\Munit$ controls the plasma emissivity and the plasma optical depth and thus the source brightness.  We adjust $\Munit$ iteratively until the time-averaged 230\GHz flux densities of the models are within a few percent of the $2.4\,\mathrm{Jy}$ mean observed during the 2017 campaign (see next section).  Notice that, in this work, model parameters are always varied at constant time-averaged millimeter flux density.
 
 %..............................................................................
 \subsubsubsection{Radiative Transfer Calculation}
@@ -319,54 +306,35 @@ The plasma mass scale parameter $\Munit$ controls the plasma emissivity and the 
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/example_imgs.pdf}
-  \caption{Example models from the simulation library.  Left column: best-bet thermal MAD; middle column: nonthermal variable $\kappa$ MAD; right column: thermal SANE model.  Top row: 86\GHz images; bottom row: 230\GHz images.  Color represents intensity, or equivalently brightness temperature.  Angular momentum of the accretion flow projected onto the image points up\monika{it seems to me that the angular momentum in the first two panels points down, correct me if I am wrong} \ckc{Good eyes!  The images were rotated incorrectly.  Will fix.}.  These are relatively successful models satisfying 9/11 (variable $\kappa$) or 10/11 constraints.
-    % cfg 15 dec: edited remainder out
-    %On one hand, most of the 230\GHz images are in an optically thin regime, making the sharp photon ring visibile (bottom left and middle panels). On the other hand, most of the 86\GHz images are in an optically thick regime, and the accretion disk would block the sharp photon ring (top middle and right panels). In general, face-on images like the ones in the left column tend to be too big in size, and the edge-on images in the right column tend to be too asymmetric.
+  \caption{Example models from the simulation library.  Left column: best-bet thermal MAD; middle column: nonthermal variable $\kappa$ MAD; right column: thermal SANE model.  Top row: 86\GHz images; bottom row: 230\GHz images.  Color represents intensity, or equivalently brightness temperature.  Angular momentum of the accretion flow projected onto the image points up.  These are relatively successful models satisfying most of the observational  constraints.
   \ckc{will improve 86\GHz resolutions.}}
   \label{fig:example_imgs}
 \end{figure*}
 
-%% \begin{figure*}
-%%   \centering
-%%   \includegraphics[width=\textwidth]{figures/sample_seds.pdf}
-%%   \caption{Example SEDs from the models shown in
-%%     Figure~\ref{fig:example_imgs}:
-%%     (\emph{left})~thermal SANE,
-%%     (\emph{middle})~thermal MAD, and
-%%     (\emph{right})~non-thermal variable $\kappa$ MAD.  Black dots and arrows show measured flux density at $86\GHz$ and $230\GHz$ and $2.2\um$ and x-ray quiescent upper limits. The black line shows the total SED; colored lines show contributions from direct synchrotron emission, Compton scattering, and bremsstrahlung (see legend).
-%%     % cfg 15 dec: edited out the rest
-%%     %The left panel shows a interesting special case in our simulation library, where the spectral index at 230\GHz is negative.  This indicates the 230\GHz image is completely optically thin and the 86\GHz would over produce the flux.  The NIR has a flat spectral index and is dominated by inverse Compton, instead of direct synchrotron radiation. These properties occur only for $\Rh = 1$ SANE models.     For $\Rh > 1$, the direct synchrotron peak shifts to the right, broadens its width, and dominates the NIR. For SANE, the spetral index for x-ray is almost always positive and dominated by thermal bremsstrahlung by (relatively) cool electrons. The middle and right panels show the more typical MAD SEDs, where 86\GHz, 230\GHz, and NIR all come from direct synchrotron, and x-ray is dominated by inverse Compton.
-%%     \ckc{TODO: fix brems (once) SED in the middle panel; udpate Frankfurt SED (right).}
-%%     }
-%%   \label{fig:sample_seds}
-%% \end{figure*}
-
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/example_vas_seds.pdf}
-  % cfg 15-dec: edited for clarity, left all content in.
   \caption{Visibility amplitudes (left) and SEDs (right) of the three examples, compared with the EHT~2017 data.  Black symbols show observations.  Blue, orange, and green are the models showed in Figure~\ref{fig:example_imgs} (see also legend for details).  Observed VAs are 1\,minute incoherently averaged data from the HOPS pipeline on \aprilvii.  Model VAs are shown as a solid line for a section at position angle $0\degree$ for a single snapshot, and the band shows the 1st through 99th percentile over all position angles and all times; in this figure no noise is included in the model VAs.  Model SEDs show a solid line for the mean SED and a band for the range across snapshots.}
   \label{fig:example_vas_seds}
 \end{figure*}
 
 Given an eDF, density scale $\Munit$, and radiative transfer coefficients based on local properties of the plasma, the emergent radiation is obtained by integrating the radiative transfer equation.
 We use two classes of numerical methods: ray tracing to generate synthetic images, and Monte Carlo to generate spectral energy distributions (SEDs).
-All light transport simulations are carried out using the fast light approach, in which plasma variables are read from a single GRMHD dump file and are assumed not to change during the ray tracing.
+
+All radiative transport calculations are carried out using the fast light approach, in which plasma variables are read from a single GRMHD dump file and are assumed not to change during ray tracing.
 It has been demonstrated by \citet{2010ApJ...717.1092D} (and recently by \citealt{2021MNRAS.508.4282M}) that including light travel effects in the model introduces minor changes to light curves and images.
 Further detail on numerical methods is given Appendix~\ref{app:radtrans}.
 Comparisons of numerical methods \citep{2020ApJ...897..148G, Prather_et_al_2022} show that differences between radiative transfer schemes do not contribute substantially to the error budget.
-% cfg 11 dec: done
-%\ckc{Ben, please fill in paper title etc for the polarized radiative transfer comparison paper in refs.bib.}
 
-The models are imaged at 86\GHz, 230\GHz\footnote{The mean frequency for  EHT observations is closer to 228\GHz.} and 2.2\um (near infrared, hereafter NIR).
-Direct imaging includes synchrotron and bremsstrahlung \citep[both ion-electron and electron-electron; see][for a recent review]{2020ApJ...898...50Y}.
-Separate SEDs are produced for a set of narrow bins in inclination angle. For each inclination, the SED is averaged over all azimuthal angles.
-The SED includes synchrotron, bremsstrahlung, \emph{and} Compton scattering.
-$2.2\um$ emission is usually dominated by synchrotron, but we find that occasionally $2.2\um$ synchrotron is so weak that Compton scattering dominates.
-The X-ray can be dominated by bremsstrahlung or Compton scattering, mainly depending on the electron temperature.
-In Figures~\ref{fig:example_imgs} and \ref{fig:example_vas_seds}, we present a set of model images and multiwavelength SEDs from our library.
+The imaged are produced at 86\GHz, 230\GHz and 2.2\um (near infrared, hereafter NIR).
+Direct imaging includes synchrotron and bremsstrahlung \citep[both ion-electron and electron-electron; see][for a recent review]{2020ApJ...898...50Y}.  The image library has a typical field of view (full width), resolution (pixel count), and half-width angular size of: $800\uas$, $200 \times 200$, $80 \vartheta_\mathrm{g}$ at 86\GHz; $200\uas$, $400 \times 400$, $20 \vartheta_\mathrm{g}$ at 230\GHz; and $100\uas$, $200\times 200$, $10 \vartheta_\mathrm{g}$ at $2.2\um$.  A few models are imaged with larger field of view or higher resolution.    
 
-All radiative transfer models used here set the emissivity, absorptivity and inverse-Compton scattering cross-sections to $0$ at $\sigma \equiv B^2/(8\pi\rho c^2) > \sigma_\mathrm{cut} = 1$.  This cutoff is motivated by the notion that the numerical solution is unreliable at $\sigma > \sigma_\mathrm{cut}$.  In particular numerical diffusion into the low density region (at the ``funnel wall'') makes the density too large, and truncation error in integration of the total energy equation produces large fractional errors in temperature.
+The SEDs are produced for a set of narrow bins in inclination angle. At each inclination, the SED is averaged over azimuth.  The SED includes synchrotron, bremsstrahlung, \emph{and} Compton scattering.
+
+We find that, although $2.2\um$ emission is usually dominated by synchrotron, occasionally $2.2\um$ synchrotron is so weak that Compton scattering dominates.  We also find that the X-ray can be dominated by either Compton scattering or bremsstrahlung, with the latter dominating in models with a large population of cold electrons at large radius.
+Figures~\ref{fig:example_imgs} and \ref{fig:example_vas_seds} show examples of model images and multiwavelength SEDs from our library.
+
+The GRMHD simulation-derived temperatures are unreliable in regions where $\sigma \equiv B^2/(8\pi\rho c^2)$ is large, because truncation error in integration of the total energy equation produces large fractional errors in temperature.  All our radiative transfer models therefore set the emissivity, absorptivity and inverse-Compton scattering cross-sections to $0$ at $\sigma > \sigma_\mathrm{cut} = 1$. 
 
 %==============================================================================
 \subsection{Summary of \sgra Model Library}
@@ -375,306 +343,59 @@ All radiative transfer models used here set the emissivity, absorptivity and inv
 %https://docs.google.com/spreadsheets/d/1gw9ichvvYGHLFsZl2wlxqu-O03qEULrwcw3Wixd8BhQ/edit#gid=930351969
 %not sure that gives complete answer, but it will help.
 
-A summary of all radiative transfer calculations is given in Table~\ref{tab:radiativemodels}. The entire image library
-contains $6$ model sets; thousands of points in model parameter space and
-%$364$ models (with different spins and electron prescriptions);
-%$1,872,409 @230GHz and 86 GHz$
-$\sim 1.8$M images in each of 86~GHz, 230~GHz, and $\sim0.5$M images in $2.2\mu$m;
-%$1,233,100+60,000 SEDs$
-$\sim1.3$M SEDs.  The images and SEDs occupy about $50$TB.
+A summary of radiative transfer calculations is given in Table~\ref{tab:radiativemodels}. The entire image library contains $6$ simulation sets; thousands of points in model parameter space and $\sim 1.8$M images at each of 86~GHz, 230~GHz, and $2.2\mu$, and $\sim1.3$M SEDs.  The images and SEDs occupy about $50$TB.
 
-%\clearpage
-%\pagebreak
-%\movetabledown=3cm % recommended in AASTeX docs to center table on page
-%\begin{rotatetable}
-\begin{deluxetable*}{cccccccc}\label{tab:radiativemodels}
+We refer to the thermal, $\Rh$ models as ``fiducial'' models, and the remainder as ``exploratory'' models that test the effect of incorporating changes in the eDF or initial conditions.  Nearly all the exploratory models (exceptions are described in the discussion) are imaged over $5 \times 10^3 G M/c^3$, in comparison to $> 10^4 G M/c^3$ for the fiducial models. The sampling noise in the exploratory models is therefore larger than in the fiducial models and they cannot be tested as rigorously as the fiducial models. 
+
+For the fiducial models and the variable $\kappa$ models we have multiple, redundant models.  This allows us to control, in part, for uncertainties associated with numerical setup and algorithms. 
+
+\begin{deluxetable*}{ccccccc}\label{tab:radiativemodels}
 %\tabletypesize{\footnotesize}
-\tablecaption{EHT Synthetic Image Library}
+\tablecaption{EHT Model Library}
 %\renewcommand{\arraystretch}{1.1}
 \tablehead{
   \colhead{Simulation}              &%
+  \colhead{Transfer Code} &%
   \colhead{$\Rh$}              &%
-  \colhead{$p$}                &%
-  \colhead{$\kappa$}           &%
   \colhead{$i^\circ$}          &%
-  \colhead{$\nu$\GHz}              &%
   \colhead{SED}            &%
-  \colhead{$\Delta t/(10^4 GM/c^2)$}         }
+  \colhead{$\Delta t/(10^4 GM/c^2)$} &%
+  \colhead{Notes}
+  }
 \startdata
-\multicolumn{8}{c}{\bf Fiducial models}\\
+\multicolumn{7}{c}{\bf Fiducial models}\\
 \hline
-\kharma &  1, 10, 40, 160 &  - & - & 10, 30, ..., 170 & 86, 230 & Yes & 15-30 \\
-\bhac  &  1, 10, 40, 160 &  - & - & 10, 30, ..., 90  & 86, 230 & Yes & 20-30 \\
-\hamr  &  1, 40, 160     &  - & - & 10, 50, 90       & 86, 230 & Yes & 30-35 \\
-\koral &  20             &  - & - & 10, 30, ..., 170 & 86, 230 & No  & 5-100 \\
+\multicolumn{4}{l}{\it Thermal $\Rh$ models} & &  &\\
+\kharma& \ipole & 1, 10, 40, 160 &  10, 30, ..., 170 &  Yes & 15-30 & \\
+\bhac  & \bhoss & 1, 10, 40, 160 &   10, 30, ..., 90  &  Yes & 20-30 & \\
+\hamr  & \ipole & 1, 40, 160     &   10, 50, 90       &  Yes & 30-35 & \\
+\koral & \ipole & 20             &   10, 30, ..., 170 &  No  & 5-100 & \\
 \hline
-\multicolumn{8}{c}{\bf Exploratory models}\\
+\multicolumn{7}{c}{\bf Exploratory models}\\
 \hline
-\multicolumn{4}{l}{\it Thermal $\Rh$ models} & & & & \\
-\hamr Tilted &  1, 40, 160  & - & - & 10, 50, 90     & 86, 230 & Yes & 100-103 \\
-Wind Accretion & 13, 28  &  - & - & N/A     & 86, 230 & No  & 10        \\
+\multicolumn{4}{l}{\it Thermal $\Rh$ models} & &  &\\
+\hamr Tilted & \ipole & 1, 40, 160  &  10, 50, 90     &  Yes & 100-103 & \\
+Wind Accretion & \ipole & 13, 28  &   N/A     &  No  & 10    &     \\
 \hline
-\multicolumn{4}{l}{\it Thermal critical $\beta$ model} & & & & \\
-\kharma & 1, 40, 160 &  4 & - & 10, 50, 90 & 86, 230 & No & 30-35  \\
+\multicolumn{4}{l}{\it Thermal critical $\beta$ model} & & & \\
+\kharma & \ipole & 1, 40, 160 &  10, 50, 90 &  No & 30-35 &  \\
 \hline
-\multicolumn{4}{l}{\it Thermal + power-law models} & & & & \\
-\hamr &  1, 40, 160 &  4 & - & 10, 50, 90 & 86, 230 & No & 30-35  \\
+\multicolumn{4}{l}{\it Thermal + power-law models} & & & \\
+\hamr &  \ipole & 1, 40, 160 &  10, 50, 90 &  No & 30-35 & $p = 4$ \\
 \hline
-\multicolumn{4}{l}{\it Thermal + $\kappa$ models} & & & & \\
-\bhac & 1, 10, 40, 160 &  - & 5  & 10, 30, ..., 90 & 86, 230 & No  & 25-30  \\
-\bhac & 1, 10, 40, 160 &  - & 3.5 ($\epsilon_0=0.05$) & 10, 30, ..., 90 & 86, 230 & No  & 25-30 \\
-\bhac & 1, 10, 40, 160 &  - & 3.5 ($\epsilon_0=0.10$)  & 10, 30, ..., 90 & 86, 230 & No  & 25-30  \\
-\bhac & 1, 10, 40, 160 &  - & 3.5 ($\epsilon_0=0.20$) & 10, 30, ..., 90 & 86, 230 & No  & 25-30  \\
-\bhac & 1, 10, 40, 80, 160 &  - & variable $\kappa=\kappa(\beta, \sigma)$ & 10, 30, ..., 90 & 86, 230 & No  & 25-30  \\
-\hamr & 1, 10, 40, 160 &  - & variable $\kappa=\kappa(\beta, \sigma)$ & 10, 30, ..., 90 & 86, 230 & Yes & 30-35  \\
+\multicolumn{4}{l}{\it Thermal + $\kappa$ models} & & & \\
+\bhac & \bhoss & 1, 10, 40, 160 &  10, 30, ..., 90 &  No  & 25-30 & $\kappa = 5$ \\
+\bhac & \bhoss & 1, 10, 40, 160 &  10, 30, ..., 90 &  No  & 25-30 & $\kappa = 3.5 (\epsilon_0 = 0.05)$\\
+\bhac & \bhoss & 1, 10, 40, 160 &  10, 30, ..., 90 &  No  & 25-30 & $ \kappa = 3.5 (\epsilon_0=0.10)$ \\
+\bhac & \bhoss & 1, 10, 40, 160 &  10, 30, ..., 90 &  No  & 25-30 & $\kappa = 3.5 (\epsilon_0=0.20)$ \\
+\bhac & \bhoss & 1, 10, 40, 80, 160 &  10, 30, ..., 90 &  No  & 25-30 & variable $\kappa=\kappa(\beta, \sigma)$ \\
+\hamr & \ipole & 1, 10, 40, 160 &  10, 30, ..., 90 &  Yes & 30-35 & variable $\kappa=\kappa(\beta, \sigma)$ \\
 \enddata
-\tablenotetext{
-Summary of emission simulations in the EHT \sgra model library. For the Wind Accretion model the viewing angle is set by the boundary conditions used in the model and $\Rh$ is set so the model matches the observed 230\GHz flux.  The two reported values correspond to two models with different stellar wind magnetizations.
+\tablecomments{
+Summary of the EHT \sgra model library. All models are imaged at $86\GHz$, $230\GHz$, and $2.2\um$ and some (see column 5) also have spectral energy distributions.  For the wind-fed accretion model the viewing angle is set by the stellar orbits and $\Rh$ is set so the model matches the observed 230\GHz flux; $\Rh = 13, 28$ for models with stellar wind magnetizations $\beta = A, B$ respectively \cite{2020ApJ...896L...6R}.
 }
 
 \end{deluxetable*}
 %\end{rotatetable}
 
-%\pagebreak
-%\clearpage
-% %..............................................................................
-% \subsubsection{Thermal Models}
-%
-% ...
-%
-% \paragraph{Illinois Models}
-%
-% % Please fill in basic information of the models in the following list.
-% % Please add more details if necessary. A full paragraph description
-% % of the model is welcome, but not required at this point.
-% \begin{itemize}[noitemsep]
-% \item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-% \item Magnetic Flux: MAD, SANE
-% \item Adiabatic Index $\Gamma$: 4/3
-% \item Time $t_\mathrm{final}$: 30,000$M$
-% \item $\rho_0$: 3 different density normalization chosen for each parameter set for $t \in [15,000, 20,000), [20,000, 25,000), [25,000, 30,000)$.
-% \item $\Rh$: 1, 10, 40, 160
-% \item Inclination $i$: 10$^\circ$, 30$^\circ$, 50$^\circ$, ..., 170$^\circ$
-% \item Resolution:
-% \item Initial conditions:
-% \item Reference: this work
-% \item Status: w4 and w5 all done; w3 in progress
-% \end{itemize}
-%
-% \paragraph{Frankfurt Models}
-%
-% % Please fill in basic information of the models in the following list.
-% % Please add more details if necessary. A full paragraph description
-% % of the model is welcome, but not required at this point.
-% \begin{itemize}[noitemsep]
-% \item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-% \item Magnetic Flux: MAD, SANE
-% \item Adiabatic Index $\Gamma$: 4/3
-% \item Time $t_\mathrm{final}$: 30000
-% \item $\rho_0$: 3 different density normalizations chosen for each parameter set for $t \in [10,000, 15,000), [20,000, 25,000), [25,000, 30,000)$
-% \item $\Rh$: 1, 2.5, 5, 10, 40, 160
-% \item Inclination $i$: 10$^\circ$, 30$^\circ$, 50$^\circ$,..., 90$^\circ$
-% \item Resolution:
-% \item Initial conditions:
-% \item Reference: this work
-% \item Status: all done except for SANE a=-15o16
-% \end{itemize}
-%
-% \paragraph{HAMR Models}
-%
-% % Please fill in basic information of the models in the following list.
-% % Please add more details if necessary. A full paragraph description
-% % of the model is welcome, but not required at this point.
-% \begin{itemize}[noitemsep]
-% \item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-% \item Magnetic Flux: MAD, SANE
-% \item Adiabatic Index $\Gamma$: 13/9, 5/3
-% \item Time $t_\mathrm{final}$: $35,000M$
-% \item $\rho_0$: 1 density normalization for $[30,000-35,000)M$
-% \item $\Rh$: 1, 40, 160
-% \item Inclination $i$: 10$^\circ$, 50$^\circ$, 90$^\circ$
-% \item Resolution: $348\times 192\times 192$, $240\times 192\times 192$
-% \item Initial conditions: FM: $r_{\rm in}=6, 20M$; $r_{\rm pmax}=12, 41M$
-% \item Grid outer radius: $1000M$, $200M$
-% \item Reference: this work
-% \item Status: GRMHD simulations done
-% \end{itemize}
-%
-% %..............................................................................
-% \subsubsection{Non-thermal (power-law )Models}
-%
-% ...
-%
-% \paragraph{Frankfurt Models}
-%
-% % Please fill in basic information of the models in the following list.
-% % Please add more details if necessary. A full paragraph description
-% % of the model is welcome, but not required at this point.
-% \begin{itemize}[noitemsep]
-% \item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-% \item Magnetic Flux: MAD, SANE
-% \item Adiabatic Index $\Gamma$:
-% \item Time $t_\mathrm{final}$:
-% \item $\rho_0$:
-% \item Power law fraction $f$:
-% \item Power law index $p$:
-% \item Inclination $i$:
-% \item Reference:
-% \item Status: no power-law model so far
-% \end{itemize}
 
-% \paragraph{HAMR Models}
-
-% % Please fill in basic information of the models in the following list.
-% % Please add more details if necessary. A full paragraph description
-% % of the model is welcome, but not required at this point.
-% \begin{itemize}[noitemsep]
-% \item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-% \item Magnetic Flux: MAD, SANE
-% \item Adiabatic Index $\Gamma$: 13/9, 5/3
-% \item Time $t_\mathrm{final}$: $35,000M$
-% \item $\rho_0$: 1 density normalization for $[30,000-35,000)M$
-% \item $\Rh$: 1, 40, 160
-% \item Inclination $i$: 10$^\circ$, 50$^\circ$, 90$^\circ$
-% \item Resolution: $348\times 192\times 192$, $240\times 192\times 192$
-% \item Initial conditions: FM: $r_{\rm in}=6, 20M$; $r_{\rm pmax}=12, 41M$
-% \item Grid outer radius: $1000M$, $200M$
-% \item Reference: this work
-% \item Status: GRMHD simulations same as for thermal models
-% \end{itemize}
-%
-% %..............................................................................
-% \subsubsection{Non-thermal ($\kappa$) Models}
-%
-% ...
-%
-% % Please fill in basic information of the models in the following list.
-% % Please add more details if necessary. A full paragraph description
-% % of the model is welcome, but not required at this point.
-% \begin{itemize}[noitemsep]
-% \item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-% \item Magnetic Flux: MAD, SANE
-% \item Adiabatic Index $\Gamma$:
-% \item Time $t_\mathrm{final}$:
-% \item $\rho_0$:
-% \item $\kappa$:
-% \item Inclination $i$:
-% \item Reference:
-% \item Status:
-% \end{itemize}
-%
-% \paragraph{Frankfurt Models}
-%
-% % Please fill in basic information of the models in the following list.
-% % Please add more details if necessary. A full paragraph description
-% % of the model is welcome, but not required at this point.
-% \begin{itemize}[noitemsep]
-% \item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-% \item Magnetic Flux: MAD, SANE
-% \item Adiabatic Index $\Gamma$: 4/3
-% \item Time $t_\mathrm{final}$: 30000
-% \item $\rho_0$: individual normalisation for each $\kappa$ model; only  for $t \in [25,000, 30,000)$
-% \item $\kappa$: variable $\kappa(\beta, \sigma)$, fixed $\kappa=3.5$ with $\epsilon=\epsilon_{0} f(\beta,\sigma)$ for $\epsilon_{0}=0.05,0.10,0.20$
-% \item $\Rh$: 1, 2.5, 5, 10, 40, 160
-% \item Inclination $i$: 10$^\circ$, 30$^\circ$, 50$^\circ$,..., 90$^\circ$
-% \item Reference: this work
-% \item Status: in production
-% \end{itemize}
-%
-% \paragraph{HAMR Models}
-%
-% % Please fill in basic information of the models in the following list.
-% % Please add more details if necessary. A full paragraph description
-% % of the model is welcome, but not required at this point.
-% \begin{itemize}[noitemsep]
-% \item $a_\mathrm{spin}$: 0, $\pm1/2$, $\pm15/16$
-% \item Magnetic Flux: MAD, SANE
-% \item Adiabatic Index $\Gamma$: 13/9, 5/3
-% \item Time $t_\mathrm{final}$: $35,000M$
-% \item $\rho_0$: 1 density normalization for $[30,000-35,000)M$
-% \item $\kappa$: variable $\kappa (\beta, \sigma)$
-% \item $\Rh$: 1, 40, 160
-% \item Inclination $i$: 10$^\circ$, 50$^\circ$, 90$^\circ$
-% \item Resolution: $348\times 192\times 192$, $240\times 192\times 192$
-% \item Initial conditions: FM: $r_{\rm in}=6, 20M$; $r_{\rm pmax}=12, 41M$
-% \item Grid outer radius: $1000M$, $200M$
-% \item Reference: this work
-% \item Status:
-% \end{itemize}
-%
-% %..............................................................................
-% \subsubsection{Critical $\beta$ Models}
-%
-% % Please fill in basic information of the models in the following list.
-% % Please add more details if necessary. A full paragraph description
-% % of the model is welcome, but not required at this point.
-% \begin{itemize}[noitemsep]
-% \item $a_\mathrm{spin}$:
-% \item Magnetic Flux: MAD, SANE
-% \item Adiabatic Index $\Gamma$:
-% \item Time $t_\mathrm{final}$:
-% \item $\rho_0$:
-% \item Power law fraction $f$:
-% \item Power law index $p$:
-% \item Inclination $i$:
-% \item Reference:
-% \item Status:
-% \end{itemize}
-%
-% %..............................................................................
-% \subsubsection{Stellar Wind Accretion Models}
-%
-% % Please fill in basic information of the models in the following list.
-% % Please add more details if necessary. A full paragraph description
-% % of the model is welcome, but not required at this point.
-% \begin{itemize}[noitemsep]
-% \item $a_\mathrm{spin}$: 0
-% \item Magnetic Flux: MAD, SANE
-% \item Adiabatic Index $\Gamma$:
-% \item Time $t_\mathrm{final}$:
-% \item $\rho_0$:
-% \item Power law fraction $f$:
-% \item Power law index $p$:
-% \item Inclination $i$:
-% \item Reference:
-% \item Status:
-% \end{itemize}
-%
-% %..............................................................................
-% \subsubsection{Koral Long MAD Models}
-%
-% % Please fill in basic information of the models in the following list.
-% % Please add more details if necessary. A full paragraph description
-% % of the model is welcome, but not required at this point.
-% \begin{itemize}[noitemsep]
-% \item $a_\mathrm{spin}$: 0, $\pm0.3$, $\pm0.5$, $\pm0.7$, $\pm0.9$
-% \item Magnetic Flux: MAD
-% \item Adiabatic Index $\Gamma$:
-% \item Time $t_\mathrm{final}$: 100,000$M$
-% \item $\rho_0$:
-% \item Power law fraction $f$:
-% \item Power law index $p$:
-% \item Inclination $i$:
-% \item Reference:
-% \item Status:
-% \end{itemize}
-%
-% %..............................................................................
-% \subsubsection{Tilted Models}
-%
-% % Please fill in basic information of the models in the following list.
-% % Please add more details if necessary. A full paragraph description
-% % of the model is welcome, but not required at this point.
-% \begin{itemize}[noitemsep]
-% \item $a_\mathrm{spin}$: $+15/16$
-% \item Magnetic Flux: INSANE
-% \item Adiabatic Index $\Gamma$: 5/3
-% \item Time $t_\mathrm{final}$: $>100,000M$
-% \item $\rho_0$: 1 density normalization for $[100,000-103,000)M$
-% \item $\Rh$: 1, 40, 160
-% \item Inclination $i$: 10$^\circ$, 50$^\circ$, 90$^\circ$
-% \item Resolution: $448\times 144\times 240$,
-% \item Initial conditions: FM: $r_{\rm in}=12.5M$; $r_{\rm pmax}=25M$
-% \item Grid outer radius: $100,000M$
-% \item Reference: Chatterjee+20, Liska+18
-% \end{itemize}
