@@ -17,7 +17,7 @@ Evidently the models have significant sampling noise, and our use of hard cuts (
 %==============================================================================
 \subsection{EHT Observational Constraints}
 
-We test the models against EHT interferometric data in three ways.
+We test the models against EHT interferometric data, which constrains the spatial structure of the source, in three ways.
 First, we compare an estimate of the source size (``second moment'')
 against an estimate from the short baseline visibility amplitudes (VAs).
 Second, we check the location of the first minimum and the long
@@ -38,8 +38,8 @@ baseline VAs can be used to directly estimate the source size.
 This procedure is used in \citetalias{PaperII} to set an upper limit
 of 95\uas FWHM (full width at half maximum; standard deviation $\times \sqrt{8\log{2}}$.) on the second moment and lower limit of 38\uas FWHM on the second moment along a direction 
 through the source corresponding to the orientation of the short
-baselines.  This is done without any assumption about the structure of the source;
-if we used a ring prior the constraint would be narrower.
+baselines (SMT-LMT and ALMA-LMT).  This is done without any assumption 
+about the structure of the source and is therefore very permissive.
 
 The scattering kernel is estimated to have a 16.2\uas FWHM along the
 relevant EHT baselines.
@@ -102,7 +102,7 @@ in this range that is $< 5\%$ of the zero baseline flux as compliant.
 
 To apply this constraint, we compute the VA $V$ of each model snapshot
 along position angles (PAs) $0^\degree$, $45^\degree$, $90^\degree$,
-$135^\degree$ (because of Hermitian symmetry we need only cover $0-180\deg$).
+$135^\degree$ (because of Hermitian symmetry we need only consider PAs in the $0-180\deg$ range).
 We find the first minimum numerically and compute the median VAs
 between 6 and 8\,$\mathrm{G}\lambda$.
 We classify a snapshot as compliant if
@@ -121,10 +121,9 @@ We reject models with compliance fraction $< 1\%$.
 %------------------------------------------------------------------------------
 \subsubsection{230\GHz \Mring Fitting}
 
-How can we extract information about the spatial structure of the source from noisy, fluctuating data with limited UV coverage, and compare that to noisy, fluctuating models?
-Our strategy is to fit a source-plane model to the data and summarize the source structure using the distribution of fit parameters.
+To test model compliance with more general properties of the EHT data that are not tested by the 2nd moment or visibility amplitude constraints, we fit a source-plane model to 2-minute snapshots from both the real EHT data and from simulated data from the model library and compare the distributions of fit parameters.
 
-\citetalias{PaperIV} fits an ``\mring'' source model to the April~7 data.  Here we use a simplified \mring model: a $\delta$ function in radius with diameter $d$ multiplied by a truncated (up to $m = 3$; Paper IV truncates at $m = 4$) Fourier series, convolved with a Gaussian of width $w$.  In addition the model contains a centered Gaussian component, with amplitude and width as free parameters, to absorb large scale emission and emission interior to the ring.\footnote{In \cite{PaperIV} this is referred to as an mG-ring.}  The simplified \mring model has 10 parameters; 3 well constrained and physically interpretable parameters are used here: the \mring diameter $d$, the \mring width $w$ (FWHM of the convolving  Gaussian), and the $m=1$ relative amplitude $\beta_1$ (the ``asymmetry'').
+\citetalias{PaperIV} fits an ``\mring'' source model to the April~7 data.  Here we use a simplified \mring model: a $\delta$ function in radius with diameter $d$ multiplied by a truncated (up to $m = 3$; Paper IV truncates at $m = 4$) Fourier series, convolved with a Gaussian of width $w$.  In addition the model contains a centered Gaussian component, with amplitude and width as free parameters, to absorb large scale emission and emission interior to the ring.\footnote{In \cite{PaperIV} this is referred to as an mG-ring.}  The simplified \mring model has 10 parameters;\footnote{The 10 parameters are: ring diameter, ring width, fraction of the flux in the Gaussian component, width of the Gaussian, and six parameters describing the amplitude and phase of the Fourier components} 3 well constrained and physically interpretable parameters are used here: the \mring diameter $d$, the \mring width $w$ (FWHM of the convolving  Gaussian), and the $m=1$ relative amplitude $\beta_1$ (the ``asymmetry'').
 
 We fit the \mring independently to snapshots consisting of 2-minute intervals of EHT data. Over these short intervals, we approximate the source as static.  Uncertainties in the fitted \mring parameters are dominated by the limited baseline coverage during these snapshots rather than by calibration uncertainties or thermal noise. Because snapshots that are close in time sample nearly identical baselines, they do not provide additional model constraints.
 
@@ -159,10 +158,9 @@ The maximum likelihood \mring parameters are listed in Table~\ref{tab:mringfits}
 
 \end{deluxetable}
 
-Next, we read in a series of model images, generate synthetic data for each image for each scan at four assumed position angles for the image, and fit \mrings to the synthetic data.  This produces a distribution of \mring parameters for each model.
+Next, we read in a series of model images, generate synthetic data for each image for each scan at four position angles ($0, 45, 90, 135$ degrees) for the image, and fit \mrings to the synthetic data.  This produces a distribution of \mring parameters for each model.
 
 The synthetic data is generated as follows.  A model image $I(x,y)$ is Fourier transformed to complex visibilities $V(u,v)$ with an assumed position angle then sampled on baselines $i$ drawn from the comparison scan, $V_i \equiv V(u_i,v_i)$.  Normally distributed thermal noise $\delta V_{\mathrm{th},i}$ with amplitude based on telescope performance during the scan is added, and multiplicative, normally distributed noise with unit variance $N$ is added to crudely model gain corrections: $\tilde{V}_i = V_i (1 + \epsilon N) + \delta V_{th,i}$.  We set $\epsilon = 0.05$, but no substantial changes in fit parameters were observed for $\epsilon = 0.02$.  We then fit to the VA $|\tilde{V}_i|$ and closure phases.
-%arg$(\tilde{V}_i \tilde{V}_j \tilde{V}_k^*)$, where $ijk$ form a triangle in the $(u,v)$ plane.
 The procedure was repeated for 4 position angles (orientations of the image on the sky; no substantial changes were observed if more position angles were used) and for model images separated by $500 \tg$, which is comparable to a correlation time.  This results in, for example, a sample of $30$ fits per scan per position angle for model sets with $15,000\tg$ integration time, or a total of $30 \times 10 = 300$ samples in each distribution.
 
 In comparing the models to the data we
@@ -226,12 +224,12 @@ We use $\Delta T = 3$ hours ($\sim 530~\tg$) because it is comparable to the cor
 
 For each model we make a synthetic lightcurve and from that generate a distribution of $\mi{3}$.  We then use a Kolmogorov-Smirnov (KS) test to ask whether that distribution is consistent with the observed distribution, and reject the model if $p < 0.01$.
 
-We must make a choice about which observed distribution of $\mi{3}$ to use.  The April 7 data alone (where we have focused the rest of our analysis) provide only a weak constraint.  The natural candidates, then, are the $\mi{3}$ measured from the EHT 2017 observations on April $5-11$ alone, or the $mi{3}$ measured from each lightcurve longer than 3 hours in the ALMA data and in earlier SMA and CARMA data (the ``historical dataset''; see \citealt{Wielgus2022}).  The procedure in each case is to find all light curves longer than 3 hours, take 3 hour segments equally spaced away from the endpoints and each other, and calculate $\mi{3}$ on each segment.  This procedure yields 42 samples for the full historical distribution, and 7 samples for the 2017 distribution alone.  We note that the 2017 distribution is consistent with being drawn from the historical distribution, although April 7 has one of the quietest segments on record, and April 11 has one of the most variable.  In the results presented below we have opted to use the historical distribution.  Using the 2017 distribution alone rejects slightly {\em more} models and does materially affect any of our conclusions.
+We must make a choice about which observed distribution of $\mi{3}$ to use.  The April 7 data alone (where we have focused the rest of our analysis) provide only a weak constraint.  The natural candidates, then, are the $\mi{3}$ measured from the EHT 2017 observations on April $5-11$ alone, or the $mi{3}$ measured from each lightcurve longer than 3 hours in the ALMA data and in earlier SMA and CARMA data (the ``historical distribution''; see \citealt{Wielgus2022}).  The procedure in each case is to find all light curves longer than 3 hours, take 3 hour segments equally spaced away from the endpoints and each other, and calculate $\mi{3}$ on each segment.  This procedure yields 42 samples for the full historical distribution, and 7 samples for the 2017 distribution alone.  We note that the 2017 distribution is consistent with being drawn from the historical distribution, although April 6 has one of the quietest segments on record, and April 11 has one of the most variable.  In the results presented below we have opted to use the historical distribution.  Using the 2017 distribution alone rejects slightly {\em more} models and does materially affect any of our conclusions.
 
 \begin{figure*}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_sz.pdf}
-  \caption{Second moment constraint example.  Left: passing snapshot; right: failing snapshot.  The model is rejected if $< 1\%$ of model snapshots pass. The solid white ellipse  represents the second moments of the image, and the dashed line shows the major axis.  The two green circles show the observed lower and upper limits from \citetalias{PaperIII}. The snapshot is rejected if either the major or minor axis lies between the lower and upper limits.
+  \caption{Second moment constraint example.  Left: passing snapshot; right: failing snapshot.  The model is rejected if $< 1\%$ of model snapshots pass. The solid white ellipse  represents the second moments of the image, and the dashed line shows the major axis.  The two green circles show the observed lower and upper limits from \citetalias{PaperIII}. The snapshot is accepted if either the major or minor axis lies between the lower and upper limits.
   }
   \label{fig:passfail_sz}
 \end{figure*}
@@ -248,12 +246,7 @@ This quantity can be measured from the GRMHD simulations; see \citet{Georgiev_20
 The $\sigma_\text{var}^2$ is measured over a four-day period, which is longer than the typical duration of our models.  We therefore expect that model values will be biased downward compared to the data.  We control for this using multiple simulations with the same parameters and by subdividing the analysis of long simulations into windows.
 The uncertainties in the measurement from the GRMHD simulations due to simulation resolution, the fast-light approximation, and code differences are small compared to the uncertainty due to the variability of $\sigma_\text{var}^2$ due to short simulations \citep{Georgiev_2022}.
 
-The procedure for estimating $\sigma_\text{var}^2 (|u|)$ has been validated using mock datasets generated from a variety of different models.  In particular, it been tested using the 100 GRMHD models that comprise the calibration and validation sets in \citetalias{PaperIV}, which incorporate all known systematic effects.  Due to sparse $(u,v)$ coverage, short-timescale temporal correlations induce known biases in the recovered variability measurements, requiring an additional $|u|$-dependent calibration prior to direct comparison; this calibration function and its construction are described in \citealt{NoiseModeling}.  The true $\sigma_\text{var}^2 (|u|)$ can be accurately recovered for $2~{\rm G}\lambda\lesssim|u|\lesssim6~{\rm G}\lambda$, limited by ancillary calibration procedures below $2~{\rm G}\lambda$ and statistical uncertainties above $6~{\rm G}\lambda$.  \citetalias{PaperIV} applies this technique to the 2017 EHT observations of \sgra and provides a measurement of a debiased $\sigma_\text{var}^2$.
-
-%The data-driven, nonparametric estimates of $\sigma_\text{var}^2 (|u|)$ have been validated using mock datasets generated from a variety of different variable images.  In particular, these have been tested using the 100 GRMHD models that comprise the calibration and validation sets in \citetalias{PaperIV}.  These mock datasets incorporate all known systematic effects.  Due to the sparse $(u,v)$ coverage, short-timescale temporal correlations induce known biases in the recovered variability measurements, requiring an additional $|u|$-dependent calibration prior to direct comparison; this calibration function and its construction are described in \citealt{NoiseModeling}.  The true $\sigma_\text{var}^2 (|u|)$ can be accurately recovered for $2~{\rm G}\lambda\lesssim|u|\lesssim6~{\rm G}\lambda$, limited by ancillary calibration procedures below $2~{\rm G}\lambda$ and the statistical uncertainties above $6~{\rm G}\lambda$.  \citetalias{PaperIV} applies this technique to the 2017 EHT observations of \sgra, and provides a measurement of a debiased $\sigma_\text{var}^2$.
-
-%For comparison to the models presented here, we only employ the amplitude of $\sigma_\text{var}^2$ at $4~{\rm G}\lambda$, i.e.,   $\sigma_\text{var}^2 (4~{\rm G}\lambda)$, which is well constrained. \aeb{Why not use $b$?}\bg{Seconded. I think we should show $b$.}
-%To produce a comparable measurement produced from the GRMHD simulations, we use the techniques from \citet{Georgiev_2022}, diffractively scattering, averaging over black hole spin orientation relative to the diffractive scattering screen, and azimuthally averaging. We also divide by two to convert this GRMHD measurement of a complex variance to the EHT data estimate of a real variance.
+The procedure for estimating $\sigma_\text{var}^2 (|u|)$ has been validated using mock datasets generated from a variety of different models.  In particular, it has been tested using the 100 GRMHD models that comprise the calibration and validation sets in \citetalias{PaperIV}, which incorporate all known systematic effects.  Due to sparse $(u,v)$ coverage, short-timescale temporal correlations induce known biases in the recovered variability measurements, requiring an additional $|u|$-dependent calibration prior to direct comparison; this calibration function and its construction are described in \citealt{NoiseModeling}.  The true $\sigma_\text{var}^2 (|u|)$ can be accurately recovered for $2~{\rm G}\lambda\lesssim|u|\lesssim6~{\rm G}\lambda$, limited by ancillary calibration procedures below $2~{\rm G}\lambda$ and statistical uncertainties above $6~{\rm G}\lambda$.  \citetalias{PaperIV} applies this technique to the 2017 EHT observations of \sgra and provides a measurement of a debiased $\sigma_\text{var}^2$.
 
 The measured $\sigma_\text{var}^2$ is well characterized by a power law for $2~{\rm G}\lambda < |u| < 6~{\rm G}\lambda$ \citep{Georgiev_2022}.  For comparison with the models presented here, we distill the $\sigma_{\text{var}}^2$ to two numbers: a normalization at $4~{\rm G}\lambda$, characterized by the amplitude $\afour^2$ and a power law index $b$.  Because the normalization is done in the center of the fit range the estimated $\afour^2=3.7\pm0.8$ and $b=2.5\pm1$ are essentially uncorrelated.
 

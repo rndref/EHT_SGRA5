@@ -328,10 +328,12 @@ We have also considered a set of thermal, $\Rh$, MAD models run with the \koral 
 %------------------------------------------------------------------------------
 \subsubsection{Summary of Constraints on Standard Models}
 \label{sec:summarythermal}
-None of the standard thermal models (Frankfurt or Illinois) survive the full gauntlet of constraints.   Variability rejects about $70\%$ of models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models.
+None of the standard thermal models (Frankfurt or Illinois) survive the full gauntlet of constraints. Variability rejects about $70\%$ of models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models.
 Evidently either (1) the models fail in some important respect, or (2) some of the data underlying the model tests are incorrect, or (3) one or more of the constraints have been misapplied.
 
-We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens when we lift one constraint.  About 5\% of both the Frankfurt and Illinois model sets fail only 1 constraint.  For Frankfurt, 8 models fail only $\mi{3}$, and 2 fail only \mring diameter.  For Illinois, 3 models fail only $\mi{3}$ and 5 fail only the 86\GHz size.  Suspicion therefore falls on $\mi{3}$, which rejects $\approx 70\%$ of Frankfurt and Illinois models.  Why might the $\mi{3}$ constraint be misleading?
+We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens when we lift one constraint.  Table~\ref{tab:fail_one} lists the models that fail only one constraints---about 5\% each for the \bhac and \kharma model sets.  For \bhac, 8 models fail only $\mi{3}$, and 2 fail only \mring diameter.  For \kharma, 3 models fail only $\mi{3}$ and 5 fail only the 86\GHz size.  Suspicion therefore falls on $\mi{3}$, which rejects $\approx 70\%$ of \bhac and \kharma models.  Why might the $\mi{3}$ constraint be misleading?
+
+%\include{Tables/fail_one}
 
 One possibility is that some fraction of the $230\GHz$ flux density, $f_\mathrm{ext}$, is in an extended structure (a jet) that is slowly varying, captured in the ALMA lightcurves, and resolved out by EHT.  The implied $f_{ext}$ is model-dependent, but if $f_{ext} \sim 30\%$ then nearly all MAD models would pass $\mi{3}$ and many SANE models would be rejected as too quiet.  The $4$G$\lambda$ amplitude variability is normalized by the lightcurve and thus $a_4$ would increase by a similar factor.  Notice that if $f_{ext} > 0$ then the models would need to be re-normalized (the accretion rate adjusted) so that the compact flux is $(1 - f_{ext}) \times 2.4\,\mathrm{Jy}$.  The extended flux hypothesis can be tested by the addition of new, short baselines to the EHT.
 
