@@ -1,31 +1,66 @@
-\begin{table*}
+\begin{table}
 \caption{Models that fail only one constraints}
 \centering
 \begin{tabular}{l|cccc|c}
 \hline
-Code/Setup		& MAD/SANE	&	spin	&	inc		&	rhigh	&	failed constraint	\\
+Code/Setup						& MAD/SANE	&	spin	&	inc		&	rhigh	&	failed constraint	\\
 \hline
-\kharma Thermal	&	SANE	&	0.94	&	10		&	40		&	86\,GHz size		\\
-\kharma Thermal	&	SANE	&	0.94	&	30		&	40		&	86\,GHz size		\\
-\kharma Thermal	&	SANE	&	0.94	&	50		&	1		&	86\,GHz size		\\
-\kharma Thermal	&	MAD		&	0.5		&	30		&	40		&	\mi{3}				\\
-\kharma Thermal	&	MAD		&	0.5		&	30		&	160		&	\mi{3}				\\
-\kharma Thermal	&	MAD		&	0.94	&	10		&	160		&	\mi{3}				\\
-\kharma Thermal	&	MAD		&	0.94	&	30		&	160		&	\mi{3}				\\
+\kharma Thermal					&	SANE	&	0.94	&	10		&	40		&	86\,GHz size		\\
+\kharma Thermal					&	SANE	&	0.94	&	30		&	40		&	86\,GHz size		\\
+\kharma Thermal					&	SANE	&	0.94	&	50		&	1		&	86\,GHz size		\\
+\kharma Thermal					&	MAD		&	0.5		&	30		&	40		&	\mi{3}				\\
+\kharma Thermal					&	MAD		&	0.5		&	30		&	160		&	\mi{3}				\\
+\kharma Thermal					&	MAD		&	0.94	&	10		&	160		&	\mi{3}				\\
+\kharma Thermal					&	MAD		&	0.94	&	30		&	160		&	\mi{3}				\\
 \hline
-\bhac Thermal	&	SANE	&	-0.5	&	30		&	40		&	Mring diameter   	\\
-\bhac Thermal	&	SANE	&	0		&	30		&	40		&	Mring diameter   	\\
-\bhac Thermal	&	SANE	&	0.5		&	10		&	40		&   \mi{3}  			\\
-\bhac Thermal	&	SANE	&	0.5		&	10		&	160		&   \mi{3}  			\\
-\bhac Thermal	&	SANE	&	0.5		&	30		&	40		&   \mi{3}  			\\
-\bhac Thermal	&	SANE	&	0.5		&	30		&	160		&   \mi{3}  			\\
-\bhac Thermal	&	MAD		&	0.5		&	30		&	160		&   \mi{3}  			\\
-\bhac Thermal	&	MAD		&	0.5		&	50		&	160		&   \mi{3}  			\\
-\bhac Thermal	&	MAD		&	0.94	&	10		&	160		&   \mi{3}  			\\
-\bhac Thermal	&	MAD		&	0.94	&	30		&	160		&   \mi{3}  			\\
+\bhac Thermal					&	SANE	&	-0.5	&	30		&	40		&	Mring diameter   	\\
+\bhac Thermal					&	SANE	&	0		&	30		&	40		&	Mring diameter   	\\
+\bhac Thermal					&	SANE	&	0.5		&	10		&	40		&   \mi{3}  			\\
+\bhac Thermal					&	SANE	&	0.5		&	10		&	160		&   \mi{3}  			\\
+\bhac Thermal					&	SANE	&	0.5		&	30		&	40		&   \mi{3}  			\\
+\bhac Thermal					&	SANE	&	0.5		&	30		&	160		&   \mi{3}  			\\
+\bhac Thermal					&	MAD		&	0.5		&	30		&	160		&   \mi{3}  			\\
+\bhac Thermal					&	MAD		&	0.5		&	50		&	160		&   \mi{3}  			\\
+\bhac Thermal					&	MAD		&	0.94	&	10		&	160		&   \mi{3}  			\\
+\bhac Thermal					&	MAD		&	0.94	&	30		&	160		&   \mi{3}  			\\
 \hline
+\bhac $\kappa(\sigma, \beta)$	&	SANE	&	0		&	70		&	1		&	86\,GHz flux		\\	  
+\bhac $\kappa(\sigma, \beta)$	&	MAD		&	0.5		&	10		&	40		&	2.2\,$\mu$m flux	\\	  
+\bhac $\kappa(\sigma, \beta)$	&	SANE	&	0.5		&	10		&	40		&	\mi{3}   			\\	  
+\bhac $\kappa(\sigma, \beta)$	&	SANE	&	0.5		&	10		&	80		&	\mi{3}   			\\	  
+\bhac $\kappa(\sigma, \beta)$	&	SANE	&	0.5		&	10		&	160		&	\mi{3}   			\\	  
+\bhac $\kappa(\sigma, \beta)$	&	SANE	&	0.5		&	30		&	40		&	\mi{3}   			\\	  
+\bhac $\kappa(\sigma, \beta)$	&	SANE	&	0.5		&	30		&	80		&	\mi{3}   			\\	  
+\bhac $\kappa(\sigma, \beta)$	&	SANE	&	0.5		&	30		&	160		&	\mi{3}   			\\	  
+\bhac $\kappa(\sigma, \beta)$	&	MAD		&	0.5		&	30		&	80		&	\mi{3}   			\\	  
+\bhac $\kappa(\sigma, \beta)$	&	MAD		&	0.5		&	50		&	160		&	\mi{3}   			\\	  
+\bhac $\kappa(\sigma, \beta)$	&	MAD		&	0.94	&	10		&	160		&	\mi{3}   			\\	  
+\bhac $\kappa(\sigma, \beta)$	&	MAD		&	0.5		&	30		&	160		&	\mi{3}				\\	  
+%\bhac $\kappa(\sigma, \beta)$	&	MAD		&	0.5		&	10		&	80		&	??					\\	%This fail two constraints, but only in the 15kM runs  
+%\bhac $\kappa(\sigma, \beta)$	&	MAD		&	0.5		&	10		&	160		&	??					\\	%This fail two constraints, but only in the 15kM runs   
+\hline
+\bhac $\epsilon = 0.05$			&	SANE	&	0.94	&	10		&	10		&	\mi{3}   			\\	
+\bhac $\epsilon = 0.05$			&	SANE	&	0.94	&	30		&	10		&	86\,GHz flux   		\\	
+\bhac $\epsilon = 0.05$			&	MAD		&	0.5		&	30		&	160		&	2.2\,$\mu$m flux   	\\	
+\bhac $\epsilon = 0.05$			&	MAD		&	0.5		&	50		&	160		&	2.2\,$\mu$m flux   	\\	
+\bhac $\epsilon = 0.05$			&	MAD		&	0.94	&	10		&	40		&	2.2\,$\mu$m flux   	\\	
+\hline
+\bhac $\epsilon = 0.10$			&	SANE	&	0.94	&	10		&	10		&	2.2\,$\mu$m flux   	\\	
+\bhac $\epsilon = 0.10$			&	MAD		&	0.5		&	30		&	160		&	2.2\,$\mu$m flux   	\\	
+\bhac $\epsilon = 0.10$			&	MAD		&	0.5		&	50		&	160		&	2.2\,$\mu$m flux   	\\	
+\bhac $\epsilon = 0.10$			&	MAD		&	0.94	&	10		&	40		&	2.2\,$\mu$m flux   	\\	
+\hline
+\bhac $\epsilon = 0.20$			&	SANE	&	0.94	&	10		&	10		&	2.2\,$\mu$m flux   	\\	
+\bhac $\epsilon = 0.20$			&	MAD		&	0.94	&	10		&	40		&	2.2\,$\mu$m flux   	\\	
+\bhac $\epsilon = 0.20$			&	MAD		&	0.94	&	10		&	160		&	2.2\,$\mu$m flux   	\\	
+\hline
+\bhac $\kappa = 5$				&	MAD		&	0.94	&	50		&	1		&	2.2\,$\mu$m flux   	\\	
+\hline
+\hamr 30$^\circ$ tilt  			&	INSANE	&	0.94	&	10		&	160		&	86\,GHz size		\\	
+
+
 \end{tabular}
-\label{tab:fail_one}
-\end{table*} 
+\label{tab:fail_one_x}
+\end{table} 
 
 
