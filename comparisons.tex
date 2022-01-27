@@ -9,14 +9,17 @@ Figures~\ref{fig:passfail_sz}, \ref{fig:passfail_va}, and
 For each of these figures, the left panel is the best bet model (see
 Section~\ref{sec:discussions} that passes all the constraints, and the
 right panel is one of the failed models.
-The results of all constraint applications are listed in pass/fail
-tables contained in Appendix \ref{app:tables}, which are available in
-electronic form.
+%The results of all constraint applications are listed in pass/fail
+%tables contained in Appendix \ref{app:tables}, which are available in
+%electronic form.
+
 
 %==============================================================================
 \subsection{Fiducial Models}\label{subsec:thermal}
 
-We start with a set of ``standard'' models with aligned (prograde or retrograde) accretion flows, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.  This selection includes the Illinois (i.e.\ \kharma), Frankfurt (i.e.\ \bhac), and \hamr model sets listed in Table~\ref{tab:radiativemodels}.
+We start with a set of ``standard'' models with aligned (prograde or retrograde) accretion flows, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.  This selection includes the Illinois (i.e.\ \kharma), Frankfurt (i.e.\ \bhac), and \hamr model sets listed in Table~\ref{tab:radiativemodels}. Table~\ref{tab:passfraction_thermal} summarizes the fraction of the thermal models which pass each constraint.
+
+\input{Tables/thermal_model_pass_fraction_table}
 
 %------------------------------------------------------------------------------
 \subsubsection{EHT Constraints}
@@ -703,24 +706,24 @@ For the variable $\kappa$ models two set of models from the \bhac and \hamr code
 \begin{table*}
 \caption{Pass fractions for \bhac and \hamr models for varios eDFs}
 \centering
-\begin{tabular}{l|cccccc|ccc}
+\begin{tabular}{l|cccc|ccc}
 \hline
- constraint/model	& \multicolumn{6}{c}{\bhac}        & \multicolumn{3}{|c}{\hamr} \\
+ constraint/model	& \multicolumn{4}{c}{\bhac}        & \multicolumn{3}{|c}{\hamr} \\
  \hline
-				& thermal & $\kappa(\sigma,\beta)$ & $\kappa=3.5\,\varepsilon=0.05$  & $\kappa=3.5\,\varepsilon=0.1$   & $\kappa=3.5\,\varepsilon=0.2$ & $\kappa=5$ & thermal & $\kappa(\sigma,\beta)$  & $p=4$\\
+				& thermal & $\kappa(\sigma,\beta)$ & $\kappa=3.5\,\varepsilon=0.05,0.1,0.2$  & $\kappa=5$ & thermal & $\kappa(\sigma,\beta)$  & $p=4$\\
 \hline
 \hline
-230\,GHz size&  0.98 	& 0.99	& 0.98 	& 0.98	& 0.98 	& 0.92  & 1.0	& 0.99 	& 0.94 \\
-lc varability&  	  0.27	& 0.30	&  0.47	& 0.47    	& 0.46	& 0.29  & 0.07	& 0.28	&  0.41\\
-VA Morphology& 0.72	& 0.60	&  0.74	& 0.73    	& 0.71	& 0.55  & 0.39	& 0.46	&  0.63\\
-Null location     &0.83	& 0.80	&  0.81	& 0.81    	& 0.78	& 0.59  & 0.80	& 0.88	&  --\\	
-M-ring diameter&0.65	& 0.69	&  0.66	& 0.66    	& 0.67	& 0.71  & 0.61	& 0.67	&  0.89\\
-M-ring width    & 0.21	& 0.21	&  0.24	& 0.23    	& 0.23	& 0.03  & 0.32	& 0.40	&  0.13\\
-M-ring asym.   &0.95		& 0.97	&  0.95	& 0.95    	& 0.94	& 0.73  & 0.99	& 0.97	&  0.98\\
-86\,GHz size   &0.59		& 0.57	&  0.56	& 0.56    	& 0.55	& 0.38  & 0.46	& 0.45	&  0.47\\
-86\,GHz flux    &0.68		& 0.75	&  0.67	& 0.66    	& 0.63	& 0.12  & 0.62	& 0.65	&  0.72\\
-2.2$\mu$m flux&0.55	& 0.35	&  0.14	& 0.12    	& 0.12	& 0.14  & 0.80	& 0.25	&  0.41\\
-x-ray flux& 	0.70		& --		&  --		&  --    	& --		& --  	    & 0.61	&  0.35	& --\\
+230\,GHz size&  0.98 	& 0.99	& 0.98,0.98,0.98 	& 0.92  & 1.0	& 0.99 	& 0.94 \\
+lc varability&  	  0.27	& 0.30	&  0.47,0.47,0.46	& 0.29  & 0.07	& 0.28	&  0.41\\
+VA Morphology& 0.72	& 0.60	&  0.74,0.73,0.71	& 0.55  & 0.39	& 0.46	&  0.63\\
+Null location     &0.83	& 0.80	&  0.81,0.81,0.78	& 0.59  & 0.80	& 0.88	&  --\\	
+M-ring diameter&0.65	& 0.69	&  0.66,0.66,0.67	& 0.71  & 0.61	& 0.67	&  0.89\\
+M-ring width    & 0.21	& 0.21	&  0.24,0.23,0.23	& 0.03  & 0.32	& 0.40	&  0.13\\
+M-ring asym.   &0.95		& 0.97	&  0.95,0.95,0.94	& 0.73  & 0.99	& 0.97	&  0.98\\
+86\,GHz size   &0.59		& 0.57	&  0.56,0.56,0.55	& 0.38  & 0.46	& 0.45	&  0.47\\
+86\,GHz flux    &0.68		& 0.75	&  0.67,0.66,0.63	& 0.12  & 0.62	& 0.65	&  0.72\\
+2.2$\mu$m flux&0.55	& 0.35	&  0.14,0.12,0.12	& 0.14  & 0.80	& 0.25	&  0.41\\
+x-ray flux& 	0.70		& --		    	& --		& --  	    & 0.61	&  0.35	& --\\
 \hline
 \end{tabular}
 \label{tab:passfraction}

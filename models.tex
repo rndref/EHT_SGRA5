@@ -16,7 +16,7 @@ In this paper we assume that \sgra is a black hole described by the Kerr metric.
 The black hole dimensionless spin, $\abh \equiv Jc/G\mbh^2$, is a free parameter with $-1 < \abh < 1$;  $J$, $G$, and $c$ are the black hole spin angular momentum, gravitational constant, and speed of light, respectively.
 Following \citet{M87PaperV}, hereafter \citetalias{M87PaperV}, we use
 $\abh > 0$ to indicate that the angular momentum of the accretion flow and black hole are parallel (the accretion flow is ``prograde'') and
-$\abh < 0$ to indicate that the angular momentum of the accretion flow and black hole are antiparallel (``retrograde'').
+$\abh < 0$ to indicate that the angular momentum of the accretion flow and black hole are antiparallel (``retrograde'').\footnote{For tilted disks the sign of $\abh$ is the sign of ${\bf J}\cdot{\bf L}$ where ${\bf J}$ is black hole spin angular momentum and ${\bf L}$ is accretion flow orbital angular momentum.}
 
 Using the above mass and distance, the implied
 characteristic length: 
@@ -32,7 +32,7 @@ angular scale:
 \begin{equation}
 \vartheta_\mathrm{g} \equiv G\mbh/(c^2 D) \simeq 5.03\uas.
 \end{equation}
-The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D)$ for $\abh = 0$.  For $|\abh| > 0$ the shadow is noncircular and its size and shape depend on $\abh$ and inclination $i$; its width can be as small as $9 G\mbh/(c^2 D)$ for $\abh = 1$ and $i = 90\deg$ \citep{1973blho.conf..215B}.
+The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D)$ for $\abh = 0$.  For $|\abh| > 0$ the shadow is noncircular and its size and shape depend on $\abh$ and inclination $i$ (the angle between the line of sight and the spin axis); its width can be as small as $9 G\mbh/(c^2 D)$ for $\abh = 1$ and $i = 90\deg$ \citep{1973blho.conf..215B}.
 
 If the emitting plasma is ionized hydrogen (electron-proton plasma) then the Eddington luminosity is:
 \begin{equation}
@@ -46,29 +46,27 @@ The corresponding Eddington accretion rate is
 where the nominal efficiency is 10\% and the Eddington ratio:
 $L_\mathrm{bol}/L_\mathrm{Edd} = 1.9 \times 10^{-10} (L_\mathrm{bol} \ergps /10^{35} \ergps)$.
 In a quiescent, non-flaring state, the bolometric luminosity of \sgra is $L_\mathrm{bol} \sim 10^{35}\ergps$, resulting in an extremely small Eddington ratio.
-In what follows we assume that radiative cooling of plasma around the black hole can be neglected (which is partially justified later) and that the emergent radiation can be calculated in a post-processing.
+In what follows we assume that radiative cooling of plasma around the black hole can be neglected (which is partially justified later) and that the emergent radiation can be calculated in post-processing.
 
 %==============================================================================
 \subsection{One-Zone Model Estimates}
 
-Here we use a one-zone model to motivate the more complicated models that follow, as in \citetalias{M87PaperV}.  These results follow one-zone models developed in the literature over many decades \citep[e.g.][]{1996IAUS..169..169F}.
+Here we use a simple, one-zone model to motivate the more complicated models that follow, as in \citetalias{M87PaperV}.  These results follow one-zone models developed in the literature over many decades \citep[e.g.][]{1996IAUS..169..169F}.
 
-Consider a spherical, uniform plasma of radius $r = 5\rg$, comparable to the observed size of \sgra at $230\GHz$ (\citetalias{PaperIII}, \citetalias{PaperIV}), with uniform magnetic field oriented at $\pi/3$ to the line-of-sight.
-The magnetic field is set so that the gas pressure and magnetic pressure are proportional: $n_i k T_i + n_e k T_e = \beta B^2/(8\pi)$, where $T_i \equiv$ ion temperature, $T_e \equiv$ electron temperature, $B \equiv$ magnetic field strength in Gauss.  We assume $\beta=1$, $T_i = 3 T_e$ (a two-temperature plasma), and $\Theta_e \equiv  k T_e / m_e c^2 = 10$ (relativistic electrons and nonrelativistic ions).
+Consider a spherical, uniform plasma of radius $r = 5\rg$, comparable to the observed size of \sgra at $230\GHz$ (\citetalias{PaperIII}, \citetalias{PaperIV}), with uniform magnetic field oriented at $\pi/3$ to the line-of-sight.  In turbulent astrophysical plasmas it is common for  the gas pressure to be comparable to the magnetic pressure, and we assume that here: $n_i k T_i + n_e k T_e = B^2/(8\pi)$, where $T_i \equiv$ ion temperature, $T_e \equiv$ electron temperature, $B \equiv$ magnetic field strength in Gauss.  The plasma is collisionless (checked below), and it is plausible that the ions are preferentially heated, so we assume $T_i \sim 3 T_e$.  If the ions are sub-virial by a factor of about $3$, commonly seen in relativistic MHD simulations, then $(3/2) k T_i \sim (1/3) (1/2) (G M m_p/r)$.  Then the ions are nonrelativistic and the electrons are relativistic, with $\Theta_e \equiv  k T_e / m_e c^2 \sim 10$. 
 
 Using a thermal synchrotron emissivity $j_\nu$ \citep[e.g.,][]{2011ApJ...737...21L} and assuming optically thin emission, the flux density from a uniform sphere, $F_\nu = (4/3)\pi r^3 j_\nu D^{-2} 10^{23}\,\mathrm{Jy}$.  Setting $F_\nu = 2.4\,\mathrm{Jy}$ (the average measured by ALMA during the 2017 campaign; \citealt{Wielgus2022}) yields a nonlinear equation for the electron density, $n_e$, with solution
 \begin{align}
   n_e &\simeq 1.1\times10^6\cm^{-3},\\
-  B   &\simeq 30\,\mathrm{Gauss}
+  B   &\simeq 30\,\mathrm{Gauss}.
   \label{eq:onezone}
 \end{align}
-(the synchrotron optical depth $\tau_\mathrm{sync} = r j_\nu/B_\nu \simeq 0.4$, where $B_\nu$ is the Planck function, so the optically thin approximation is marginal).
+The synchrotron optical depth $\tau_\mathrm{sync} = r j_\nu/B_\nu \simeq 0.4$, where $B_\nu$ is the Planck function, so the optically thin approximation is marginal.
 These values are consistent with $n_e$ and $B$ of a similar one-zone model fitted to archival \sgra millimeter spectrum \citep{2019ApJ...881L...2B}.
 %MM: fit of similar one zone model to Terahertz spectrum from ALMA infers ne=2-5x10^6 cm^-3, B=10-50 Gauss, T_e=1-3x10^11 K => Thetae=16-50
 % CFG: I've placed a mathematica script implementing the one zone model in eht.astro.illinois.edu://bd4/eht/paperV/OneZoneThin.ma
 
-The one-zone model has electron scattering optical depth  $\tau_e \sim \sigma_T n_e r \simeq 2\times10^{-5}$ and thus a small Compton parameter: $y = 16 \Theta_e^2 \max(\tau_e,\tau_e^2) \simeq 0.03$.
-Synchrotron cooling therefore dominates Compton cooling.
+The one-zone model has electron scattering optical depth  $\tau_e \sim \sigma_T n_e r \simeq 2\times10^{-5}$ and thus a small Compton parameter: $y = 16 \Theta_e^2 \max(\tau_e,\tau_e^2) \simeq 0.03$.  Synchrotron cooling therefore dominates Compton cooling.
 
 The synchrotron cooling timescale $t_\mathrm{cool} \equiv u/\Lambda$ where $u_e = 3 n_e k T_e$ is the electron internal energy and $\Lambda \simeq 5.4 B^2 e^4 n_e \Theta_e^2 /(c^3 m_e^2)$ is the synchrotron cooling rate for a thermal population of electrons with $\Theta_e \gtrsim 1$ (see Appendix~A in \citealt{2011ApJ...735....9M}; finite optical depth reduces $\Lambda$).
 The cooling time is therefore $t_\mathrm{cool}=2.3 \times 10^4\sec \simeq 1.1 \times 10^3 \tg$ which is longer than the inflow timescale $r/v^r \sim r^{3/2}$.  This suggests that radiative cooling can be neglected in the plasma models \citep[more detailed calculations confirm this estimate][]{2012MNRAS.426.1928D,2020MNRAS.499.3178Y}.\footnote{Notice that if \sgra is fed by stellar winds then the inflowing plasma may be mainly helium \citep{2019MNRAS.482L.123R}; this changes the one-zone model slightly. Helium accretion is discussed in detail in \citep{Wong_2022}.} 
@@ -101,16 +99,17 @@ nonthermal (unrelaxed) electron distribution functions \citep[see][]{2000ApJ...5
   }
   \startdata
   torus & {\kharma}$^a$ &
-   0,$\pm1/2$,$\pm15/16$  & MAD/SANE     & $\frac{4}{3}/\frac{4}{3}$      & 30,000  & --- & --- & 1000     & 288x128x128
+   0,$\pm 0.5$,$\pm 0.94$  & MAD/SANE     & $\frac{4}{3}/\frac{4}{3}$      & 30,000  & --- & --- & 1000     & 288x128x128
   \\
-   torus & \bhac$^b$   & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $\frac{4}{3}/\frac{4}{3}$      & 30,000  & --- & --- & 3333     & 512x192x192 \\
-  torus & \hamr$^c$ & 0,$\pm1/2$,$\pm15/16$                 & MAD/SANE     & $\frac{13}{9}/\frac{5}{3}$ & 35,000 & --- & --- & 1000/200 & 348/240×192×192 \\
-  torus & \koral$^d$  &  0,$\pm0.3$,$\pm0.5$,$\pm0.7$,$\pm0.9$ 
+   torus & \bhac$^b$   & 0,$\pm 0.5$,$\pm 0.94$                 & MAD/SANE     & $\frac{4}{3}/\frac{4}{3}$      & 30,000  & --- & --- & 3333     & 512x192x192 \\
+  torus & \hamr$^c$ & 0,$\pm 0.5$,$\pm 0.94$                 & MAD/SANE     & $\frac{13}{9}/\frac{5}{3}$ & 35,000 & --- & --- & 1000/200 & 348/240×192×192 \\
+  torus & \koral$^d$  &  0,$\pm0.3$,$\pm0.5$,$\pm0.7$,$\pm 0.9$ 
   & MAD          & $\frac{13}{9}$     & 101,000 & --- & --- & 100,000  & 288x192x144 \\
-   tilted  & \hamr$^e$   & $15/16$     & IN-SANE      & $\frac{5}{3}$        & 105,000 & --- & --- & 100,000  & 448x144x240  \\
+   tilted  & \hamr$^e$   & $0.94$     & IN-SANE      & $\frac{5}{3}$        & 105,000 & --- & --- & 100,000  & 448x144x240  \\
    wind-fed  & \athenapp$^f$ & 0           & ILAF & $\frac{5}{3}$        & 20,000 & --- & --- & 2,400    & 356x128x128  
  \enddata
  \tablecomments{Summary of the EHT \sgra GRMHD simulation library.
+    The last column is $N_1 \times N_2 \times N_3$, with coordinate $x_1$ monotonic in radius, $x_2$ monotonic in colatitude $\theta$, and $x_3$ proportional to longitude $\phi$.
     The first four entries use aligned torus initial conditions.
     The last two entries are tilted accretion models and two realizations of the Wind-fed accretion model which differ in stellar wind magnetization.  Times are given in units of $G M/c^3 = 20.4$sec and radii in units of $G M/c^2$.}
 \tablerefs{
@@ -176,10 +175,10 @@ We integrate the GRMHD equations in three spatial dimensions using multiple algo
 \hamr     \citep{Liska2019},
 \koral    \citep{2013MNRAS.429.3533S}, and
 \athenapp \citep{2016ApJS..225...22W};
-see \citet{2019ApJS..243...26P} and \citet{Olivares_et_al} for comparisons of GRMHD codes.
+see \citet{2019ApJS..243...26P} for comparisons of GRMHD codes.
 All simulations assume constant adiabatic index  $\Gamma_\mathrm{ad}$.
 
-The initial condition for most of our GRMHD simulations is a hydrodynamic, constant-angular-momentum equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F}. Although there are variations in initial conditions between simulations, in all except the \hamr-Tilted models, the torus orbital angular momentum is either parallel or antiparallel to the black hole spin.  The torus is seeded with a weak, poloidal magnetic field.
+The initial conditions for most GRMHD simulations  are a constant-angular-momentum hydrodynamic equilibrium, the Fishbone-Moncrief torus \citep{1976ApJ...207..962F}.  In all except the \hamr-Tilted models the torus orbital angular momentum is either parallel or antiparallel to the black hole spin.  The torus is seeded with a weak, poloidal magnetic field.  There are variations in the radius of the torus pressure maximum (from $\sim 15-40$), in peak temperature, in  adiabatic index, and in field configuration between simulations.  Despite these variations the radiative models based on these simulations are in broad agreement.   
 
 The torus initial conditions are motivated by the notion that the near-horizon flow, where most of the emission is generated (\citetalias{M87PaperV}) relaxes to a statistically steady state that is nearly independent of the flow at larger radius.  This notion is challenged in the stellar wind-fed models of \cite{2020ApJ...896L...6R}, which are included in our study.
 
@@ -222,23 +221,24 @@ The models vary in numerical method and in numerical resolution. We present more
   \label{fig:GRMHD}
 \end{figure*}
 
-One critical feature of the GRMHD simulations that is important for the interpretation of our results is the temperature profile.  Figure \ref{fig:grmhd_temp} shows the time- and azimuth- averaged profiles of the midplane {\em ion} temperature in a set of aligned GRMHD simulations.  The temperature profiles exhibit strong trends with spin and magnetic state (MAD or SANE) that drives many of the trends seen in the radiative models: MAD models are factor of several hotter than than SANE models and both MAD and SANE become hotter as $\abh$ increases.
+One critical feature of the GRMHD simulations that is important for the interpretation of our results is the temperature profile.  Figure \ref{fig:grmhd_temp} shows the time- and azimuth- averaged profiles of the midplane dimensionless {\em ion} temperature in a set of aligned GRMHD simulations.  The temperature profiles exhibit strong trends with spin and magnetic state (MAD or SANE) that drives many of the trends seen in the radiative models: MAD models are factor of several hotter than than SANE models and both MAD and SANE become hotter as $\abh$ increases.
 
 \begin{figure*}
   \centering
   \includegraphics[width=0.9\textwidth]{figures/grmhd_temp.pdf}
-  \caption{Time- and azimuth- averaged profiles of midplane gas temperature in aligned GRMHD simulations.  Evidently MAD models are hotter than SANE, and both MADs and SANEs grow hotter as the black hole spin $\abh$ increases.  The hottest models are $\abh = 0.94$ MAD models.}
+  \caption{Time- and azimuth- averaged profiles of midplane dimensionless ion temperature in fiducial GRMHD simulations from \kharma.  Evidently MAD models are hotter than SANE, and both MADs and SANEs grow hotter as the black hole spin $\abh$ increases.  The hottest models are $\abh = 0.94$ MAD models.}
   \label{fig:grmhd_temp}
 \end{figure*}
 
 %------------------------------------------------------------------------------
 \subsubsection{Radiative Transfer Model}
 
-Synthetic images are generated from the GRMHD simulations in a radiative transfer step.
-The transfer step requires:
+Synthetic images are generated from the GRMHD simulations in a radiative transfer step.  The transfer step requires:
 \emph{i})~a model for the electron temperature and electron distribution function (hereafter eDF);
 \emph{ii})~an assignment of a density scale to the GRMHD simulation;
-\emph{iii})~a numerical radiative transfer step performed after the GRMHD simulation, assuming that the plasma evolution is unaffected by radiation.
+\emph{iii})~a numerical radiative transfer step performed after the GRMHD simulation, assuming that the plasma evolution is unaffected by radiation.  
+
+The transfer step requires that we specify any parameters associated with the eDF (e.g. $\Rh$), the inclination $i$ (angle between the black hole spin axis and the line of sight), and an accretion rate or equivalently a density scale, which is not determined by the GRMHD simulation.  
 
 %..............................................................................
 \subsubsubsection{Electron Distribution Function}
@@ -253,17 +253,20 @@ where $K_2$ is the modified Bessel function of the second kind and $\gamma$ is t
 \begin{align}
   T_e=\frac{2 m_p u}{3 k_B \rho (2+R)}.
 \end{align}
-Here $u$ and $\rho$ are the internal energy density and rest-mass density from the GRMHD simulation.
+Here $u$ and $\rho$ are the internal energy density and rest-mass density from the GRMHD simulation, and we assume that the ions are nonrelativistic with adiabatic index is $5/3$ and the electrons are relativistic with  adiabatic index is $4/3$.
 Thermal models are motivated by the idea that wave-particle scattering drives partial relaxation of the eDF, even though Coulomb scattering is ineffective.
 
-Plasma heating models suggest that the partitioning of dissipation between ions and electrons depends on the local magnetic properties \citep[e.g.,][]{1999ApJ...520..248Q, 2010MNRAS.409L.104H, Kawazura771}.  This motivates a prescription in which the temperature ratio is a function of the plasma $\beta \equiv P_\mathrm{gas}/P_\mathrm{mag}$ \citep{2015ApJ...799....1C}.
+The temperature ratio in a parcel of plasma depends on a balance between microphysical dissipation, radiative cooling, and fluid transport. Models for collisionless dissipation vary widely in their predictions for the ratio of heat deposited in ions and electrons, but most depend strongly on the local magnetic field strength. For simplicity, we adopt a prescription in which the temperature ratio is only a function of the plasma beta
+%Plasma heating models suggest that the partitioning of dissipation between ions and electrons depends on the local magnetic properties \citep[e.g.,][]{1999ApJ...520..248Q, 2010MNRAS.409L.104H, Kawazura771}.  This motivates a prescription in which the temperature ratio is a function of the plasma 
+$\beta \equiv P_\mathrm{gas}/P_\mathrm{mag}$ \citep{2015ApJ...799....1C}.
 We adopt the same model as \citetalias{M87PaperV} and \citetalias{M87PaperVIII}, where $R$ is a smooth function adopted from \cite{2016A&A...586A..38M}:
 \begin{equation}
   R = \frac{T_i}{T_e} = \Rh \frac{b^2}{b^2+1} + \Rl \frac{1}{b^2+1}
   \label{eq:rhigh_prescription}
 \end{equation}
 where $b \equiv \beta/\beta_\mathrm{crit}$.
-This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.  We fix $\Rl = 1$ and $\beta_\mathrm{crit} = 1$, but allow $\Rh$ to vary from 1 to 160. %\cmf{This parameterised electron temperature prescription is well matched to electron temperature distribution obtained by two-temperature GRMHD simulations including electron heating prescription \citep{Mizuno2021}.}\monika{has that been checked for Sgr A* conditions in Mizuno paper?}{\color{red}[AC:] add reference to Paper 8, where we compare Rhigh models directly to two-temperature simulations (of M87). There we do \emph{not} find that Rhigh/low is always a good description, but see more complicated structure in the temperature ratio from two-temperature.}\gw{I'll note that I did a comparison to various simulations (ebhlight and iharm3d) with Howes and Kawazura electrons and also did not find good agreement.}
+This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.  We fix $\Rl = 1$ (consistent with the long cooling time in \sgra; see discussion in \citealt{M87PaperVIII}) and $\beta_\mathrm{crit} = 1$, but allow $\Rh$ to vary from 1 to 160. 
+%\cmf{This parameterised electron temperature prescription is well matched to electron temperature distribution obtained by two-temperature GRMHD simulations including electron heating prescription \citep{Mizuno2021}.}\monika{has that been checked for Sgr A* conditions in Mizuno paper?}{\color{red}[AC:] add reference to Paper 8, where we compare Rhigh models directly to two-temperature simulations (of M87). There we do \emph{not} find that Rhigh/low is always a good description, but see more complicated structure in the temperature ratio from two-temperature.}\gw{I'll note that I did a comparison to various simulations (ebhlight and iharm3d) with Howes and Kawazura electrons and also did not find good agreement.}
 
 In \emph{non-thermal} models, the eDF has a power-law tail extending to high energy.
 We explore two implementations in this paper:
@@ -314,17 +317,17 @@ The plasma mass scale parameter $\Munit$ controls the plasma emissivity and the 
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{figures/example_vas_seds.pdf}
-  \caption{Visibility amplitudes (left) and SEDs (right) of the three examples, compared with the EHT~2017 data.  Black symbols show observations.  Blue, orange, and green are the models showed in Figure~\ref{fig:example_imgs} (see also legend for details).  Observed VAs are 1\,minute incoherently averaged data from the HOPS pipeline on \aprilvii.  Model VAs are shown as a solid line for a section at position angle $0\degree$ for a single snapshot, and the band shows the 1st through 99th percentile over all position angles and all times; in this figure no noise is included in the model VAs.  Model SEDs show a solid line for the mean SED and a band for the range across snapshots.}
+  \caption{Visibility amplitudes (left) and SEDs (right) of the three examples, compared with the calibrated EHT~2017 data.  Black symbols show observations.  Blue, orange, and green are the models showed in Figure~\ref{fig:example_imgs} (see also legend for details).  Observed VAs are 1\,minute incoherently averaged data from the HOPS pipeline on \aprilvii.  Model VAs are shown as a solid line for a section at position angle $0\degree$ for a single snapshot, and the band shows the 1st through 99th percentile over all position angles and all times; in this figure no noise is included in the model VAs.  Model SEDs show a solid line for the mean SED and a band for the range across snapshots.}
   \label{fig:example_vas_seds}
 \end{figure*}
 
-Given an eDF, density scale $\Munit$, and radiative transfer coefficients based on local properties of the plasma, the emergent radiation is obtained by integrating the radiative transfer equation.
+Given an eDF, density scale $\Munit$, the inclination $i$, and radiative transfer coefficients based on local properties of the plasma, the emergent radiation is obtained by integrating the radiative transfer equation.
 We use two classes of numerical methods: ray tracing to generate synthetic images, and Monte Carlo to generate spectral energy distributions (SEDs).
 
 All radiative transport calculations are carried out using the fast light approach, in which plasma variables are read from a single GRMHD dump file and are assumed not to change during ray tracing.
 It has been demonstrated by \citet{2010ApJ...717.1092D} (and recently by \citealt{2021MNRAS.508.4282M}) that including light travel effects in the model introduces minor changes to light curves and images.
 Further detail on numerical methods is given Appendix~\ref{app:radtrans}.
-Comparisons of numerical methods \citep{2020ApJ...897..148G, Prather_et_al_2022} show that differences between radiative transfer schemes do not contribute substantially to the error budget.
+Comparisons of numerical methods \citep{2020ApJ...897..148G} show that differences between radiative transfer schemes do not contribute substantially to the error budget.
 
 The imaged are produced at 86\GHz, 230\GHz and 2.2\um (near infrared, hereafter NIR).
 Direct imaging includes synchrotron and bremsstrahlung \citep[both ion-electron and electron-electron; see][for a recent review]{2020ApJ...898...50Y}.  The image library has a typical field of view (full width), resolution (pixel count), and half-width angular size of: $800\uas$, $200 \times 200$, $80 \vartheta_\mathrm{g}$ at 86\GHz; $200\uas$, $400 \times 400$, $20 \vartheta_\mathrm{g}$ at 230\GHz; and $100\uas$, $200\times 200$, $10 \vartheta_\mathrm{g}$ at $2.2\um$.  A few models are imaged with larger field of view or higher resolution.    
@@ -357,7 +360,7 @@ For the fiducial models and the variable $\kappa$ models we have multiple, redun
   \colhead{Simulation}              &%
   \colhead{Transfer Code} &%
   \colhead{$\Rh$}              &%
-  \colhead{$i^\circ$}          &%
+  \colhead{Inclination}          &%
   \colhead{SED}            &%
   \colhead{$\Delta t/(10^4 GM/c^2)$} &%
   \colhead{Notes}
