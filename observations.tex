@@ -226,12 +226,7 @@ We use $\Delta T = 3$ hours ($\sim 530~\tg$) because it is comparable to the cor
 
 For each model we make a synthetic lightcurve and from that generate a distribution of $\mi{3}$.  We then use a Kolmogorov-Smirnov (KS) test to ask whether that distribution is consistent with the observed distribution, and reject the model if $p < 0.01$.
 
-Here we must make a choice about which lightcurve data to use.  One possibility is to use the $\mi{3}$ measured from the E
-
-For each lightcurve longer than 3 hours in the ALMA data and in earlier SMA and CARMA data (the ``historical dataset''; see \citealt{Wielgus2022}), we take 3 hour segments equally spaced away from the endpoints and each other and calculate  $\mi{3}$ on each segment. This procedure gives us a set of 42 samples of the $\mi{3}$ for the historical dataset.  Other choices for the comparison dataset are possible and the choice is subjective.  We note that the $\mi{3}$ measured from the EHT 2017 observations on April $5-11$ are consistent with being drawn from the historical distribution, although April 7 has one of the quietest segments on record, and April 11 has one of the most variable.  
-
-For each model we make a synthetic lightcurve and from that generate a distribution of $\mi{3}$.  We then use a Kolmogorov-Smirnov (KS) test to ask whether that distribution is consistent with the historical distribution, and reject the model if $p < 0.01$.
-
+Here we must make a choice about which observed distribution of $\mi{3}$ to use.  The natural candidates are the $\mi{3}$ measured from the EHT 2017 observations on April $5-11$ alone, or the $mi{3}$ measured from each lightcurve longer than 3 hours in the ALMA data and in earlier SMA and CARMA data (the ``historical dataset''; see \citealt{Wielgus2022}).  Using April 7 alone would not provide a The procedure in each case is to find all light curves longer than 3 hours, take 3 hour segments equally spaced away from the endpoints and each other, and calculate $\mi{3}$ on each segment.  This procedure yields 42 samples for the full historical distribution, and 7 samples for the 2017 distribution alone.  We note that the 2017 distribution is consistent with being drawn from the historical distribution, although April 7 has one of the quietest segments on record, and April 11 has one of the most variable.  In the results presented below we have opted to use the historical distribution.  Using the 2017 distribution alone rejects slightly {\em more} models and does materially affect any of our conclusions.
 
 \begin{figure*}
   \centering
