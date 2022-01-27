@@ -4,11 +4,11 @@
 \emph{i})~constraints that are believed to be uncorrelated, so that each tests a distinct aspect of the model; \emph{ii})~constraints based on data that can be simulated with the models; and
 \emph{iii})~constraints based on EHT 2017 $230\GHz$ VLBI data or based on photons produced within or close to the $230\GHz$ emission region and observed contemporaneously or near-contemporaneously with the EHT 2017 campaign.
 
-The selected constraints are described in detail below.  In brief, we select 11 constraints that can be grouped into 3 broad classes.  The first class uses EHT data and compares estimates of source size, morphology of the visibility amplitude distribution, and three best-fit parameters to the \mring image model (5 constraints).  The second class uses non-EHT data, including 86\GHz flux density and source size, the median $2.2\um$ flux density, and the X-ray luminosity (4 constraints).  The third class considers variability, including the 230\GHz source-integrated variability and the visibility amplitude (VA) variability (2 constraints). 
+The selected constraints are described in detail below.  In brief, we select 11 constraints that can be grouped into 3 broad classes.  The first class uses EHT data and compares estimates of source size, morphology of the visibility amplitude distribution, and three best-fit parameters to the \mring image model (5 constraints).  The second class uses non-EHT data, including 86\GHz flux density and source size, the median $2.2\um$ flux density, and the X-ray luminosity (4 constraints).  The third class considers variability, including the 230\GHz source-integrated variability and the visibility amplitude (VA) variability (2 constraints).
 
-The selected constraints are heterogeneous and it is not yet possible to combine them in a consistent, fully satisfactory way.  Indeed, uncertainties in the data and the models are not yet well enough understood to make that possible.  In this first analysis, then, we set a pass/fail criterion for each constraint and consider the implications of various combinations of constraints for \sgra.  
+The selected constraints are heterogeneous and it is not yet possible to combine them in a consistent, fully satisfactory way.  Indeed, uncertainties in the data and the models are not yet well enough understood to make that possible.  In this first analysis, then, we set a pass/fail criterion for each constraint and consider the implications of various combinations of constraints for \sgra.
 
-The large number of constraints increases the probability of wrongly rejecting a model.  Consider a set of $N$ constraints, and for each assign a probability $p$ that the model is consistent with the data; the model is rejected if $p < p_c$.  Then the probability that the model is wrongly rejected is $p_c$.  Applying all $N$ constraints, the probability that the model is wrongly rejected is $1 - (1 - p_c)^N$; for $N = 11$ and $p_c = 0.01$, this is $\approx N p_c \simeq 10\%$.  Each of $N$ constraints  must therefore be able to reject a model with probability $\ll 1/N$ or the model scoring is meaningless.  The constraints therefore require low threshold probabilities. 
+The large number of constraints increases the probability of wrongly rejecting a model.  Consider a set of $N$ constraints, and for each assign a probability $p$ that the model is consistent with the data; the model is rejected if $p < p_c$.  Then the probability that the model is wrongly rejected is $p_c$.  Applying all $N$ constraints, the probability that the model is wrongly rejected is $1 - (1 - p_c)^N$; for $N = 11$ and $p_c = 0.01$, this is $\approx N p_c \simeq 10\%$.  Each of $N$ constraints  must therefore be able to reject a model with probability $\ll 1/N$ or the model scoring is meaningless.  The constraints therefore require low threshold probabilities.
 
 The confidence with which a model can be evaluated is limited, however, by sampling noise.  Many constraints (e.g. 86\GHz flux density) compare an observation to a distribution of synthetic observations from a model.  Time series of synthetic observations are not yet well characterized, but most have a correlation time $\tau\sim$ few $\times 100 \tg$.  If the model decorrelates on timescales longer than $\tau$ then a model of duration $T$ yields $\sim T/\tau$ independent samples,\footnote{In what follows we must sometimes estimate how many independent samples are available in a time series.  Rather than estimating $\tau$  model-by-model we uniformly assume $\tau = 540 \tg$.  The analysis is insensitive to this choice.} and thus a fractional error in moments of the distribution $\sim (T/\tau)^{-1/2} = 0.14 (T/(15,000))^{-1/2}(\tau/300)^{1/2}$.  More constraints, then, mean longer and more expensive GRMHD simulations.
 
@@ -36,9 +36,9 @@ the visibilities near zero baseline in the \uv domain, so short
 baseline VAs can be used to directly estimate the source size.
 
 This procedure is used in \citetalias{PaperII} to set an upper limit
-of 95\uas FWHM (full width at half maximum; standard deviation $\times \sqrt{8\log{2}}$.) on the second moment and lower limit of 38\uas FWHM on the second moment along a direction 
+of 95\uas FWHM (full width at half maximum; standard deviation $\times \sqrt{8\log{2}}$.) on the second moment and lower limit of 38\uas FWHM on the second moment along a direction
 through the source corresponding to the orientation of the short
-baselines (SMT-LMT and ALMA-LMT).  This is done without any assumption 
+baselines (SMT-LMT and ALMA-LMT).  This is done without any assumption
 about the structure of the source and is therefore very permissive.
 
 The scattering kernel is estimated to have a 16.2\uas FWHM along the
@@ -48,7 +48,7 @@ from the size.
 This results in an upper limit of 93.6\uas FWHM and a lower limit of
 34.4\uas FWHM.
 
-To score a model we evaluate the second moment tensor for each simulated 230\GHz image 
+To score a model we evaluate the second moment tensor for each simulated 230\GHz image
 and find its eigenvalues $\lambda_\mathrm{maj}^2/(8\log 2)$ and $\lambda_\mathrm{min}^2/(8\log
 2)$, where $\lambda_\mathrm{maj}$ and $\lambda_\mathrm{min}$ are the major and minor axis
 FWHM.
@@ -202,7 +202,8 @@ We compute the 2.2\um flux density using one of two procedures.  If a full SED\t
 %------------------------------------------------------------------------------
 \subsubsection{X-ray Luminosity Constraints}
 
-\sgra flares in the X-ray less than about once per day \citep[see][and references therein]{2018MNRAS.473..306Y}.  Chandra observations during the 2017 campaign suggest a conservative upper limit on the median (quiescent) $\nu L_\nu$ at $6\,\mathrm{keV}$ of $10^{33}\ergps$ (\citetalias{PaperII}).
+\sgra flares in the X-ray less than about once per day \citep[see][and references therein]{2018MNRAS.473..306Y}.
+\emph{Chandra} observations during the 2017 campaign suggest a conservative upper limit on the median (quiescent) $\nu L_\nu$ at $6\,\mathrm{keV}$ of $10^{33}\ergps$ (\citetalias{PaperII}).
 
 Similar to Section~\ref{subsec:nir}, we estimate $\nu L_\nu(6\,\mathrm{keV})$ in two ways.  The SED is used if the model contains Compton scattering and bremsstrahlung.  If the SED is not available then we compute an X-ray image that includes only bremsstrahlung (which dominates the X-ray emission in thermal SANE models with $\Rh = 40$, $160$) enabling us to eliminate a few additional models.  We reject the model if the median $\nu L_\nu(6\,\mathrm{keV}) > 10^{33}\ergps$.
 
