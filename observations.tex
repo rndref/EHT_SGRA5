@@ -1,5 +1,7 @@
 \section{Observational Constraints}\label{sec:observations}
 
+\input{Tables/constraints}
+
 \sgra is one of the most frequently observed objects on the sky: it has been observed with a slew of telescopes over 5 decades in time and 17 decades in electromagnetic frequency. We must identify a manageable subset of this data to constrain our models. In doing so we have attempted to select
 \emph{i})~constraints that are believed to be uncorrelated, so that each tests a distinct aspect of the model; \emph{ii})~constraints based on data that can be simulated with the models; and
 \emph{iii})~constraints based on EHT 2017 $230\GHz$ VLBI data or based on photons produced within or close to the $230\GHz$ emission region and observed contemporaneously or near-contemporaneously with the EHT 2017 campaign.
@@ -8,11 +10,13 @@ The selected constraints are described in detail below.  In brief, we select 11 
 
 The selected constraints are heterogeneous and it is not yet possible to combine them in a consistent, fully satisfactory way.  Indeed, uncertainties in the data and the models are not yet well enough understood to make that possible.  In this first analysis we set a pass/fail criterion for each constraint and consider the implications of various combinations of constraints for \sgra.
 
-As the number of constraints increase, so does the probability of wrongly rejecting a model.  Consider a set of $N$ constraints, and for each assign a probability $p$ that the model is consistent with the data.  The model is rejected if $p < p_c$.  Then the probability that the model is wrongly rejected by a single constraint is $p_c$.  Applying all $N$ constraints, the probability that the model is wrongly rejected is $1 - (1 - p_c)^N$; for $N = 11$ and $p_c = 0.01$, this is $\approx N p_c \simeq 10\%$.  Each of $N$ constraints  must therefore be able to reject a model with probability $\ll 1/N$ or the model scoring is meaningless.  
+As the number of constraints increase, so does the probability of wrongly rejecting a model.  Consider a set of $N$ constraints, and for each assign a probability $p$ that the model is consistent with the data.  The model is rejected if $p < p_c$.  Then the probability that the model is wrongly rejected by a single constraint is $p_c$.  Applying all $N$ constraints, the probability that the model is wrongly rejected is $1 - (1 - p_c)^N$; for $N = 11$ and $p_c = 0.01$, this is $\approx N p_c \simeq 10\%$.  Each of $N$ constraints  must therefore be able to reject a model with probability $\ll 1/N$ or the model scoring is meaningless.
 
 The confidence with which a model can be evaluated is limited, however, by sampling noise.  Many constraints (e.g. 86\GHz flux density) compare an observation to a distribution of synthetic observations from a model.  Time series of synthetic observations are not yet well characterized, but most have a correlation time $\tau\sim$ few $\times 100 \tg$.  If the model decorrelates on timescales longer than $\tau$ then a model of duration $T$ yields $\sim T/\tau$ independent samples,\footnote{In what follows we must sometimes estimate how many independent samples are available in a time series.  Rather than estimating $\tau$  model-by-model we uniformly assume $\tau = 540 \tg$.  The analysis is insensitive to this choice.} and thus a fractional error in moments of the distribution $\sim (T/\tau)^{-1/2} = 0.14 (T/(15,000))^{-1/2}(\tau/300)^{1/2}$.  Increasing the number of constraints, then, requires increasing the duration of the GRMHD simulations.
 
 Evidently the models have significant sampling noise, and our use of hard cuts (pass/fail scoring) amplifies this noise.  We control for this in part by using three redundant fiducial models.  Nevertheless one should not attach too much significance to the success or failure of individual models.  The success or failure of regions in the parameter space is more significant.
+
+[FIXME: Describe Table~\ref{tab:constraints}.]
 
 %==============================================================================
 \subsection{EHT Observational Constraints}
@@ -162,7 +166,7 @@ Next, we read in a series of model images, generate synthetic data for each imag
 
 The synthetic data is generated as follows.  A model image $I(x,y)$ is Fourier transformed to complex visibilities $V(u,v)$ with an assumed position angle then sampled on baselines $i$ drawn from the comparison scan, $V_i \equiv V(u_i,v_i)$.  Normally distributed thermal noise $\delta V_{\mathrm{th},i}$ with amplitude based on telescope performance during the scan is added, and multiplicative, normally distributed noise with unit variance $N$ is added to crudely model gain corrections: $\tilde{V}_i = V_i (1 + \epsilon N) + \delta V_{th,i}$.  We set $\epsilon = 0.05$, but no substantial changes in fit parameters were observed for $\epsilon = 0.02$.  We then fit to the VA $|\tilde{V}_i|$ and closure phases.
 
-We sample the model images once per $500\tg$, which is comparable to a correlation time.  A model with a $15,000\,\tg$ imaging window thus produces $30$ fits per scan per position angle.  This procedure is repeated for 4 position angles (no substantial changes were observed if more position angles were used), yielding $1200$ samples per model distribution.  
+We sample the model images once per $500\tg$, which is comparable to a correlation time.  A model with a $15,000\,\tg$ imaging window thus produces $30$ fits per scan per position angle.  This procedure is repeated for 4 position angles (no substantial changes were observed if more position angles were used), yielding $1200$ samples per model distribution.
 
 In comparing the models to the data we
 \emph{i}) generate the distribution of fit parameters at each position angle;
@@ -198,7 +202,7 @@ Our synthetic 86\GHz images have a 800\uas field of view.  A 200\uas field of vi
 
 \sgra flares in the near infrared (NIR; 2.2\um) a few times per day (1 day $\simeq 4200 \tg$) \citep{2018ApJ...863...15W} and has a quiescent flux that was estimated to be $\simeq 0.8 \pm 0.3\,\mathrm{mJy}$ in 2017 \citep[][see Table 1]{2020A&A...638A...2G}.  Since there is as yet no generally accepted model for NIR flares, we accept models that do not produce flares.  Our working hypothesis is that these models can be made to produce flares by perturbatively introducing a process that accelerates a small fraction of electrons into a nonthermal, NIR-bright tail.  In contrast, if the model overproduces $2.2\um$ emission with any of our eDF models (which do not reliably produce flares) then we reject it.
 
-We compute the model 2.2\um flux density using one of two procedures.  If a full SED\textemdash which includes Compton scattering\textemdash is available, then it is used. The SEDs are generated by the \grmonty Monte Carlo code \citep{2009ApJS..184..387D, Wong_2022}. If a full SED is not available (see Table \ref{tab:radiativemodels}) then we compute a $2.2\um$ image that includes only synchrotron emission and absorption (although synchrotron absorption is negligible at $2.2\um$ for \sgra).  
+We compute the model 2.2\um flux density using one of two procedures.  If a full SED\textemdash which includes Compton scattering\textemdash is available, then it is used. The SEDs are generated by the \grmonty Monte Carlo code \citep{2009ApJS..184..387D, Wong_2022}. If a full SED is not available (see Table \ref{tab:radiativemodels}) then we compute a $2.2\um$ image that includes only synchrotron emission and absorption (although synchrotron absorption is negligible at $2.2\um$ for \sgra).
 
 Although  We reject the model if the median $2.2\um$ flux density exceeds $1.0\,\mathrm{mJy}$.
 
