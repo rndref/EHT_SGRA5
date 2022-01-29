@@ -82,7 +82,8 @@ nonthermal (unrelaxed) electron distribution functions \citep[see][]{2000ApJ...5
 
 % CFG new version
 % do we need the rmax column?  perhaps provide torus information?
-\begin{deluxetable*}{cccccccccc}\label{tab:GRMHDmodels}
+\begin{deluxetable*}{cccccccccc}
+  \label{tab:GRMHDmodels}
   \tablecaption{EHT GRMHD Simulation Library}
   \tablehead{
     \colhead{Setup}                &
@@ -94,7 +95,7 @@ nonthermal (unrelaxed) electron distribution functions \citep[see][]{2000ApJ...5
     \colhead{$r_{\rm in}$}         &
     \colhead{$r_{\rm max}$}        &
     \colhead{$r_{\rm out}$}        &
-    \colhead{Resolution}
+    \colhead{Resolution}%
   }
   \startdata
   torus    & {\kharma}$^a$ & 0, $\pm 0.5$, $\pm 0.94$                      & MAD/SANE & $\frac{4}{3}/\frac{4}{3}$  & 30,000  & --- & --- & 1000     & $288\times128\times128$     \\
@@ -113,13 +114,15 @@ nonthermal (unrelaxed) electron distribution functions \citep[see][]{2000ApJ...5
     realizations of the Wind-fed accretion model which differ in
     stellar wind magnetization.
     Times are given in units of $G M/c^3 = 20.4$sec and radii in units
-    of $G M/c^2$.}
-  \tablerefs{$^a$see \cite{2021JOSS....6.3336P}; \kharma is a
-    GPU-enabled version of the {\tt iharm3d} code.
-    $^b$\cite{2017ComAC...4....1P, 2019A&A...629A..61OF}.
-    $^c$\cite{2021arXiv210812380N}.
-    $^e$\cite{arXiv:1912.10192, Chatterjee2020}.
-    $^f$\cite{2016ApJS..225...22W, 2020ApJ...896L...6R}.}
+    of $G M/c^2$.%
+  }
+  \tablerefs{
+    $^a$see \citet{2021JOSS....6.3336P}; \kharma is a GPU-enabled version of the {\tt iharm3d} code.
+    $^b$\citet{2017ComAC...4....1P, 2019A&A...629A..61OF}.
+    $^c$\citet{2021arXiv210812380N}.
+    $^e$\citet{2019arXiv191210192L, Chatterjee2020}.
+    $^f$\citet{2016ApJS..225...22W, 2020ApJ...896L...6R}.%
+  }
 \end{deluxetable*}
 
 % version as of 1/23/22
