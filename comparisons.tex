@@ -9,19 +9,13 @@ Figures~\ref{fig:passfail_sz}, \ref{fig:passfail_va}, and
 For each of these figures, the left panel is the best bet model (see
 Section~\ref{sec:discussions} that passes all the constraints, and the
 right panel is one of the failed models.
-%The results of all constraint applications are listed in pass/fail
-%tables contained in Appendix \ref{app:tables}, which are available in
-%electronic form.
 
-
-%==============================================================================
 \subsection{Fiducial Models}\label{subsec:thermal}
 
-We start with a set of ``standard'' models with aligned (prograde or retrograde) accretion flows, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.  This selection includes the Illinois (i.e.\ \kharma), Frankfurt (i.e.\ \bhac), and \hamr model sets listed in Table~\ref{tab:radiativemodels}. Table~\ref{tab:passfraction_thermal} summarizes the fraction of the thermal models which pass each constraint.
+We start with the fiducial models, which have aligned (prograde or retrograde) accretion flows, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.  This selection includes the \kharma, \bhac, and \hamr model sets listed in Table~\ref{tab:radiativemodels}. Table~\ref{tab:passfraction_thermal} summarizes the fraction of the thermal models which pass each constraint.
 
 \input{Tables/thermal_model_pass_fraction_table}
 
-%------------------------------------------------------------------------------
 \subsubsection{EHT Constraints}
 
 How do the models fare when compared to the EHT data alone, using the size, null location, and \mring fitting constraints?  The size constraint is simple but uninformative: only two face-on, $\Rh = 1$ models fail the test.  The null location test is informative and tends to rule out edge-on models.  \Mring fits are noisy but also informative---they are also consistent between model sets.  Many thermal model distributions look like the data, but edge-on models are strongly disfavored.
@@ -29,29 +23,17 @@ How do the models fare when compared to the EHT data alone, using the size, null
 %..............................................................................
 \subsubsubsection{Second Moment}
 
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=\columnwidth]{./figures/230GHz_size_Constraints.png}
-%  \caption{2nd moment plots}
-%  \label{fig:cmp_2nd_moment}
-%\end{figure}
-
 Without assuming a ring, the observational data allow a wide range of second moment.  Therefore, the second moment constraint rejects only 1.5\% of models: nearly all models are about the right size once we use the 230\GHz to fix the mass unit $\mathcal{M}$.  The rejected models are $\abh \le 0$, face-on, SANE models with $\Rh = 1$.  These models have extended emission that is large compared to the critical impact parameter $b_c = \sqrt{27} \rg$.  The right panel of Figure~\ref{fig:passfail_sz} shows one of these failed models.
 
 %..............................................................................
 \subsubsubsection{Visibility Amplitude Morphology}
 \label{sec:vam}
 
-% Statement about consistency between overlapping model sets.
-
 \begin{figure*}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_va.pdf}
   \caption{\vam constraint example.  Left: passing snapshot; right: failing snapshot.  The solid lines in each plot show visibility amplitudes on a section through the origin in the \uv domain, at four position angles (PAs), where $0\degree$ is parallel to the projected angular momentum vector of the accretion flow.
-  %, $-90\degree$ is measured from $0\degree$ counterclockwise.
   Solid black points show data from \aprilvii.  The \vam constraint requires that for at least one PA the first minimum in VA fall within the left grey band, and for all PAs the median of the VAs lie inside the right grey band (see Section~\ref{sec:vam} for details).  Evidently the snapshot at right fails {\em both} conditions.
-  % cfg 15-dec: edited down
-  %For each of the panels, we select a snapshot from a model and plot its visibility amplitudes as functions of the $(u,v)$ distance at position angles $-90\degree$ (horizontal), $-45\degree$, $0\degree$ (vertical), and $45\degree$.    Because of the Hermitian symmetry, they cover 8 position angles in the image domain. The EHT \aprilvii VLBI data points are plotted as black circles. Even without further details, it is clear that the model on the left matches reasonably well with the data; while the model on the right is completely off.  The \vam constraint is designed exactly to rule out models like the one on the right. As a visual guideline, the vertical gray band between 2.5 and 3.5$\,\mathrm{G}\lambda$ marks the allowed null location in the \vam constraint; and the gray region between 6 and 8$\,\mathrm{G}\lambda$ marks both the $(u,v)$ distance range for computing the long-baseline median amplitude and its allowed values $\mathrm{median}[V(6\,\mathrm{G}\lambda \leq \lambda \leq      8\,\mathrm{G}\lambda)] \leq (4\%/50\%) V_0$. We numerically find the first local visibility minima along each position angle and show them as solid points. We also compute the median visibility amplitude in the marked region along each position angle, which are marked by dotted lines. A model is rejected if \emph{all} the first nulls land \emph{outside} the virtual gray band, or if \emph{any} of these lines land \emph{outside} the horizontal gray band. For the examples in this figure, the left model passes the \vam constraint because one of the first null (green dot) falls within the allowed range; and none of the long-baseline median (all dotted lines) go above 4\%/50\%. The right model fails the \vam constraint because both of the null location and long-baseline VAs are off.
   }
   \label{fig:passfail_va}
 \end{figure*}
@@ -63,25 +45,6 @@ Without assuming a ring, the observational data allow a wide range of second mom
   }
   \label{fig:mring_width_example}
 \end{figure*}
-
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=0.5\textwidth]{figures/va_compare.pdf}
-%  \caption{Visibility amplitude as a function of baseline length
-%    observed on 2017 April 7.
-%    The pink band marks the location of the first minima in the
-%    visibility amplitude along different orientations.
-%    The horizontal red line marks our conservative upper limit for the
-%    observed visibility amplitude between $6-8$G$\lambda$.}
-%  \label{fig:cmp_null}
-%\end{figure}
-
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=\columnwidth]{./figures/Null_loc_Constraints.png}
-%  \caption{Null Location Constraint\ckc{Texts/labels in pizza plots too %small to read.}}
-%  \label{fig:cmp_ozel}
-%\end{figure}
 
 The \vam constraint checks if the VAs of a model roughly matches the
 observation by comparing its null location and long-baseline visibility
@@ -103,28 +66,13 @@ The \mring fits reject 7\%, 33\%, and 65\% of models for the ring asymmetry, dia
 
 The asymmetry parameter is typically not well constrained. Most rejected models are high inclination MAD models with $\abh \ge 0$.  Some of these models have asymmetries that are large and detectable because Doppler boosting concentrates emission in an equatorial spot on the approaching side of the disk.
 
-%\begin{figure*}
-%  \centering
- % \includegraphics[width=\columnwidth]{./figures/Mring_f1_Constraints.png} %  \caption{\mring asymmetry}
-%  \label{fig:cmp_m-ring_asymm}
-%\end{figure*}
-
 The ring diameter is better constrained than the asymmetry parameter and varies systematically from model to model. For example, the distribution of diameters is much broader at $\Rh = 1$ than at larger values of $\Rh$.  More models therefore fail the ring diameter test.
 
 Most of the models that fail are low inclination models with ring diameters that are too large (no models fail because the ring diameter is too small).  For example, the face-on, $\Rh = 10$ SANE models fail for all spins except $\abh = 0.94$ because the ring is too large.  The same is true for all face-on MAD models with $\Rh = 1$.
 
 Notice that the ring diameter is not degenerate with the second moment constraint; all models that fail the latter pass the former.  Recall that in addition to a blurred ring, the \mrings model contains a centered Gaussian component; the Gaussian tends to grow to absorb the emission when the ring is very extended.
 
-% cfg 15-dec: objection noted, this is going to require some rewriting and re-labeling of figures if we go through with this.
-%\monika{can we stop calling these models Illinois or Frankfurt models???}
-The distribution of ring diameters for many SANE models is multimodal (consistently in the Frankfurt and Illinois model sets), with a secondary peak in the distribution at $\sim 35\uas$.  All $\Rh = 1$ SANE models show this secondary peak.  The images of these models tend to have a well defined ring at the critical impact parameter and a second broad maximum in intensity at larger impact parameter.  The second peak in the distribution is a consequence of limited baseline coverage.
-
-%\begin{figure*}
-%  \centering
-%  \includegraphics[width=\textwidth]{./figures/Mring_d_Constraints.png}
-%  \caption{\Mring diameter.}
-%  \label{fig:cmp_m-ring_diam}
-%\end{figure*}
+The distribution of ring diameters for many SANE models is multimodal (consistently in the fiducial model sets), with a secondary peak in the distribution at $\sim 35\uas$.  All $\Rh = 1$ SANE models show this secondary peak.  The images of these models tend to have a well defined ring at the critical impact parameter and a second broad maximum in intensity at larger impact parameter.  The second peak in the distribution is a consequence of limited baseline coverage.
 
 The \mring width $w$ is the most tightly constrained of our 3 parameters. Although the closure phases constrain $w$ as well, it is easy to see how $w$ affects visibility amplitudes at long baselines. For example, for a simple, symmetric ring the visibility amplitudes are a Bessel function multiplied by a Gaussian with width $\sim 1/w$, and increasing $w$ therefore decreases the amplitude of the long baselines.
 
@@ -134,10 +82,9 @@ Figure~\ref{fig:mring_width_example} shows which models pass this constraint. Al
  \centering
  \includegraphics[width=\textwidth]{./figures/Mring_w_Constraints.png}
   \caption{Pass/fail plot for the \mring widths.}
-% \label{fig:cmp_m-ring_width}
 \end{figure*}
 
-%..............................................................................
+
 \subsubsubsection{EHT Constraint Summary}
 
 We can combine all EHT constraint cuts with a logical {\em and} operation.  The results are summarized in Figure~\ref{fig:all_EHT_constraints}.  Evidently EHT data alone are capable of discriminating between models.   The edge-on ($i = 90\degree$) MAD models all fail, with some failing \mring width, diameter, asymmetry and the null location constraint.  The cuts clearly favor $\abh > 0$ models, although there are exceptions.  For the Illinois model set, we are left with $33/100$ SANE models and $16/100$ MAD models.
@@ -149,7 +96,6 @@ We can combine all EHT constraint cuts with a logical {\em and} operation.  The 
   \label{fig:all_EHT_constraints}
 \end{figure*}
 
-%------------------------------------------------------------------------------
 \subsubsection{Non-EHT Constraints}
 
 We now consider constraints from unresolved $86\GHz$, $2.2\um$, and X-ray
@@ -165,17 +111,12 @@ constraints in aggregate.
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_sed.pdf}
   \caption{
-    % cfg 15-dec: nope, let's keep it. this explicitly shows passing and failing.
-     %\ckc{We may skip this figure given
-      %Fig.~\ref{fig:sample_seds} is similar.}
     Non-EHT flux density constraint example.  Left: passing model with SED close to the measured 86\GHz point and below the quiescent $2.2\um$ and X-ray points.  Right: failing model with inconsistent (strongly rising) millimeter wavelength spectral index, overproduction of $2.2\um$ due to strong Comptonization, and overproduction of X-rays by bremsstrahlung.
-    % cfg 15-dec: edited
-    %This figure is similar to Figure~\ref{fig:sample_seds} but, in addition to show a model that works (left panel), we purposely select a model that fails both both the NIR and X-ray constraints. The right panel is a zero-spin face-on SANE with $\Rh = 1$.  Because of high electron temperature, the synchrotron at $\sim 10^{12}\,\mathrm{Hz}$ peak at $\sim 10^{36}\ergps$, which creates a significant inverse Compton component that pushes the NIR beyond the limit. For the X-ray ray, this model follows the typical SANE behave and    overproduce thermal Bremsstrahlung.
     }
   \label{fig:passfail_sed}
 \end{figure*}
 
-%..............................................................................
+
 \subsubsubsection{$2.2\um$ Median Flux Density}
 
 $2.2\um$ photons are produced by the synchrotron process from electrons on the high energy end of the eDF.  For the one-zone model with $B = 30$G and $\Theta_e = 10$ the mean Lorentz factor is $\gamma = 30$ and the synchrotron critical frequency $\nu_\mathrm{crit} = \gamma^2 e B/(2 \pi m_e c) \simeq 80\GHz$.  Emission at $2.2\um$ is therefore produced by electrons with  Lorentz factor $\gamma \simeq 10^3$, so $2.2\um$ flux density is sensitive to $\Theta_e$ and $B$.  Since both increase toward the horizon and field strength is nearly independent of latitude, $2.2\um$ photons are produced at small radius in regions where $\Theta_e$ is highest.
@@ -190,13 +131,6 @@ The rejected SANE models ($68\%$) include all models at $\Rh = 1$ and all but 2 
 Interestingly, we find that some models are Compton dominated at $2.2\um$.  For example, $\abh = -0.94$ SANE models become optically thin at relatively low frequency as $\Rh$ goes to $1$, and thus synchrotron emission drops off rapidly as frequency increases.
 As $\Rh$ drops and synchrotron decreases the SED becomes dominated by a lower-luminosity bump of underlying Comptonized photons.  Just before this happens, at $\Rh = 10$, the combination of the Compton bump and synchrotron emission is enough to push the median $2.2\um$ flux density above the observational limit, explaining the excluded SANE models at $\Rh = 10$, $\abh = -0.94$.
 
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=\columnwidth]{./figures/2um_flux_Constraints.png}
-%  \caption{NIR flux limit}
-%  \label{fig:cmp_2um_flux}
-%\end{figure}
-%..............................................................................
 \subsubsubsection{X-ray Luminosity}
 
 Many thermal models produce X-ray emission through Compton upscattering of thermal synchrotron photons.  In the first Compton bump $\nu L_\nu$ is proportional to the y-parameter $y \sim 16 \Theta_e^2 \tau_e$ where $\tau_e$ is a characteristic electron-scattering optical depth and $\Theta_e$ is a typical electron temperature.  At $\Rh = 1$ the X-ray band lies in the first Compton bump, while at larger $\Rh$ the bumps move to lower energy because the bulk of the Thomson depth is in the midplane where $\Theta_e \propto 1/\Rh$.
@@ -205,12 +139,6 @@ In many large $\Rh$ SANE models, however, X-ray emission is dominated by bremsst
 
 The X-ray cut results are shown in Appendix~\ref{app:tables} in Figure~\ref{fig:xray_pizza}. Most large $\Rh$ SANE models fail the X-ray test: all but 2/25 at $\Rh = 160$ and all but 2/25 at $\Rh = 40$.  These models fail due to excess bremsstrahlung. The MAD models that fail have low $\Rh$ and are Compton-dominated in the X-ray.  All $\Rh = 1$ MAD models fail the X-ray test, as do all but 6/25 at $\Rh = 10$.  The midplane $\Theta_e$ declines as $\Rh$ drops.  Since the midplane contributes most of the electron scattering optical depth, low $\Rh$ models have the largest $y$ parameter and are at greatest risk of overproducing X-rays.
 
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=\columnwidth]{./figures/Xray_flux_Constraints.png}
-%  \caption{X-ray flux limits}
-%  \label{fig:cmp_xray_flux}
-%\end{figure}
 
 %..............................................................................
 \subsubsubsection{86\GHz Median Flux}
@@ -221,13 +149,6 @@ The 86\GHz/230\GHz color is therefore sensitive to the radial structure of the s
 %\cfg{need more physical discussion}
 Many $\Rh = 1$ models, both MAD and SANE, fail the 86\GHz flux density test: 22/25 SANE and 11/25 MAD; all overproduce 86\GHz emission.  A large set of SANE models (17/100) underproduce 86\GHz emission, and these have $10 \le \Rh \le 40$.
 The 86\GHz flux is sensitive to $\Rh$.  For example, SANE $\abh = 0$, $i = 70,90$deg models are too bright at $\Rh = 1$ and too dim at $\Rh = 10$.  There must be passing models in between, suggesting our parameter space is not sampled densely enough.
-
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=\columnwidth]{./figures/86GHz_flux_Constraints.png}
-%  \caption{86GHz flux limits}
-%  \label{fig:cmp_86ghz_flux}
-%\end{figure}
 
 %..............................................................................
 \subsubsubsection{86\GHz Major Axis}
@@ -241,14 +162,6 @@ $58\%$ of models and is therefore one of the tightest constraints.
 
 The physical picture for 86\GHz source size is complicated, as is the extraction of the constraint itself from observations.  Notice that (1) two different values for the 86\GHz intrinsic source size have been reported in the literature; (2) scattering is $7$ times stronger at 86\GHz than at 230\GHz; (3) scattering must be subtracted accurately to obtain the intrinsic source size; (4) the error bars for the 86\GHz source size are narrow and this plays a key role in determining the strength of the constraint.
 
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=\columnwidth]{./figures/86GHz_size_Constraints.png}
-%  \caption{86GHz size}
-%  \label{fig:cmp_86ghz_size}
-%\end{figure}
-
-%..............................................................................
 \subsubsubsection{Summary of Non-EHT constraints}
 
 Applying only non-EHT constraints, we are left with the 24/200 models shown in Figure~\ref{fig:non_eht_cuts}. The surviving models are the result of applying a heterogeneous and noisy set of constraints using a hard cutoff, which obscures the underlying physical picture.  Nevertheless, the surviving models are nearly all MAD (only 1 SANE model survives), all have $\Rh > 1$, and nearly all are at $i \le 70\degree$.  This leaves a cluster of surviving MAD models at large $\Rh$ and moderate inclination.
@@ -298,7 +211,7 @@ Figure~\ref{fig:cmp_VLBI_var} shows the distribution of $(\afour^2, b)$ from the
 
 By this measure the models tend to be slightly more variable than the observation, with face-on models performing better than edge-on models. For SANE models, $\Rh = 10$ tend to be more variable than others. For MAD models, there is a slight preference for lower $\Rh$.
 
-We have also considered a set of thermal, $\Rh$, MAD models run with the \koral code out to $\sim 100,000\tg$.  These models enable us to assess the importance of integration time for application of the constraints.  They permit us to obtain more accurate distributions for the constraint quantities and to assess whether the constraints evolve from the beginning to end of the integrations. We do not see evidence for evolution in the \koral model set (a full pass/fail table is given in Appendix~\ref{app:tables}, Table~\ref{tab:koralPF} and more detailed discussion in Appendix~\ref{app:variability} and in \citet{Georgiev_2022}). The \koral pass/fail results are similar to those for comparable models in the Illinois thermal model set. Moreover the constraints measured at the beginning of the evolution are similar to those measured at the end.
+We have also considered a set of thermal, $\Rh$, MAD models run with the \koral code out to $\sim 100,000\tg$.  These models enable us to assess the importance of integration time for application of the constraints.  They permit us to obtain more accurate distributions for the constraint quantities and to assess whether the constraints evolve from the beginning to end of the integrations. We do not see evidence for evolution in the \koral model set (a full pass/fail table is given in Appendix~\ref{app:tables}, Table~\ref{tab:koralPF} and more detailed discussion in Appendix~\ref{app:variability} and in \citet{Georgiev_2022}). The \koral pass/fail results are similar to those for comparable models in the fiducial model sets. Moreover the constraints measured at the beginning of the evolution are similar to those measured at the end.
 
 % The distribution of model $4G\lambda$ lightcurve-normalized PSDs are shown in Figure \ref{fig:cmp_VLBI_var}.  The best fit PSD from the 2017 EHT campaign (excluding April 11) is shown as a solid vertical line, with the other vertical lines showing percentiles in the posterior.  Evidently the observations are quieter than both SANEs and MADs as a group.
 
