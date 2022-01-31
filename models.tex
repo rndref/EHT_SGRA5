@@ -18,17 +18,15 @@ Following \citet{M87PaperV}, hereafter \citetalias{M87PaperV}, we use
 $\abh > 0$ to indicate that the angular momentum of the accretion flow and black hole are parallel (the accretion flow is ``prograde'') and
 $\abh < 0$ to indicate that the angular momentum of the accretion flow and black hole are antiparallel (``retrograde'').\footnote{For tilted disks the sign of $\abh$ is the sign of ${\bf J}\cdot{\bf L}$ where ${\bf J}$ is black hole spin angular momentum and ${\bf L}$ is accretion flow orbital angular momentum.}
 
-Using the above mass and distance, the implied
-characteristic length:
+Using the above mass and distance, the implied characteristic length is
 \begin{equation}
 r_\mathrm{g}         \equiv G\mbh/ c^2    \simeq 6.1\times10^{11}\cm,
 \end{equation}
-characteristic time:
+characteristic time is
 \begin{equation}
 t_\mathrm{g}         \equiv G\mbh/ c^3    \simeq 20.4\sec,
 \end{equation}
-and
-angular scale:
+and angular scale is
 \begin{equation}
 \vartheta_\mathrm{g} \equiv G\mbh/(c^2 D) \simeq 5.03\uas.
 \end{equation}
@@ -36,7 +34,7 @@ The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D)$ for
 
 If the emitting plasma is ionized hydrogen (electron-proton plasma) then the Eddington luminosity is:
 \begin{equation}
-L_\mathrm{Edd} \equiv 4\pi G\mbh c m_p/\sigma_\mathrm{T} = 5.2 \times 10^{44}\erg \sec^{-1},
+L_\mathrm{Edd} \equiv 4\pi G\mbh c m_p/\sigma_\mathrm{T} = 5.2 \times 10^{44}\ergps,
 \end{equation}
 where symbols have their usual meaning.
 The corresponding Eddington accretion rate is
@@ -349,7 +347,7 @@ The GRMHD simulation-derived temperatures are unreliable in regions where $\sigm
 %https://docs.google.com/spreadsheets/d/1gw9ichvvYGHLFsZl2wlxqu-O03qEULrwcw3Wixd8BhQ/edit#gid=930351969
 %not sure that gives complete answer, but it will help.
 
-A summary of radiative transfer calculations is given in Table~\ref{tab:radiativemodels}. The entire image library contains $6$ simulation sets; thousands of points in model parameter space and $\sim 1.8$M images at each of 86~GHz, 230~GHz, and $2.2\mu$, and $\sim1.3$M SEDs.  The images and SEDs occupy about $50$TB.
+A summary of radiative transfer calculations is given in Table~\ref{tab:radiativemodels}. The entire image library contains $6$ simulation sets; thousands of points in model parameter space and $\sim 1.8$M images at each of 86\GHz, 230\GHz, and $2.2\mu$, and $\sim1.3$M SEDs.  The images and SEDs occupy about $50$TB.
 
 We refer to the thermal, $\Rh$ models as ``fiducial'' models, and the remainder as ``exploratory'' models that test the effect of incorporating changes in the eDF or initial conditions.  Nearly all the exploratory models (exceptions are described in the discussion) are imaged over $5 \times 10^3 G M/c^3$, in comparison to $> 10^4 G M/c^3$ for the fiducial models. The sampling noise in the exploratory models is therefore larger than in the fiducial models and they cannot be tested as rigorously as the fiducial models.
 
@@ -371,11 +369,11 @@ The library contains multiple, redundant models for the fiducial models and vari
 \startdata
 \multicolumn{7}{c}{\bf Fiducial models}\\
 \hline
-\multicolumn{4}{l}{\it Thermal $\Rh$ models} & &  &\\
+\multicolumn{4}{l}{\it Thermal $\Rh$ models} & & &\\
 \kharma& \ipole & 1, 10, 40, 160 &  10, 30, ..., 170 &  Yes & 15-30 & \\
-\bhac  & \bhoss & 1, 10, 40, 160 &   10, 30, ..., 90  &  Yes & 20-30 & \\
-\hamr  & \ipole & 1, 40, 160     &   10, 50, 90       &  Yes & 30-35 & \\
-\koral & \ipole & 20             &   10, 30, ..., 170 &  No  & 5-100 & \\
+\bhac  & \bhoss & 1, 10, 40, 160 &  10, 30, ..., 90  &  Yes & 20-30 & \\
+\hamr  & \ipole & 1, 40, 160     &  10, 50, 90       &  Yes & 30-35 & \\
+\koral & \ipole & 20             &  10, 30, ..., 170 &  No  & 5-100 & \\
 \hline
 \multicolumn{7}{c}{\bf Exploratory models}\\
 \hline
@@ -398,7 +396,7 @@ Wind Accretion & \ipole & 13, 28  &   N/A     &  No  & 10    &     \\
 \hamr & \ipole & 1, 10, 40, 160 &  10, 30, ..., 90 &  Yes & 30-35 & variable $\kappa=\kappa(\beta, \sigma)$ \\
 \enddata
 \tablecomments{
-Summary of the EHT \sgra model library. All models are imaged at $86\GHz$, $230\GHz$, and $2.2\um$ and some (see column 5) also have spectral energy distributions.  For the wind-fed accretion model the viewing angle is set by the stellar orbits and $\Rh$ is set so the model matches the observed 230\GHz flux; $\Rh = 13, 28$ for models with stellar wind magnetizations $\beta = A, B$ respectively \cite{2020ApJ...896L...6R}.
+Summary of the EHT \sgra model library. All models are imaged at $86\GHz$, $230\GHz$, and $2.2\um$ and some (see column 5) also have spectral energy distributions.  For the wind-fed accretion model the viewing angle is set by the stellar orbits and $\Rh$ is set so the model matches the observed 230\GHz flux; $\Rh = 13, 28$ for models with stellar wind magnetizations $\beta = A, B$, respectively \cite{2020ApJ...896L...6R}.
 }
 
 \end{deluxetable*}
