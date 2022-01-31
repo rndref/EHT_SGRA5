@@ -191,7 +191,8 @@ To compare against these data, we compute a library of 86\GHz images for all GRM
 %------------------------------------------------------------------------------
 \subsubsection{86\GHz Image Size}
 
-The GMVA observations from April 3, 2017 constrain the FWHM of the source major axis ${\rm FWHM}_{maj} = 146^{+11}_{-12}\uas$ \citep[95\% confidence][]{2021ApJ...915...99I}.
+The GMVA observations from April 3, 2017 constrain the FWHM of the source major axis.  Notice that two different values for the major axis FWHM have been published in the literature: $120 \pm 34\uas$ \citep{2019ApJ...871...30I}
+${\rm FWHM}_{maj} = 146^{+11}_{-12}\uas$ \citep[95\% confidence][]{2021ApJ...915...99I}.  We adopt the later analysis.  
 
 We compute the major axis FWHM for each image in the 86\GHz image library.  We assume normally distributed errors with $\sigma = 6\uas$ and convolve the model major axis distribution with the normal distribution.  We reject models with CDF $< 1\%$ or $> 99\%$ at $146\uas$.
 
@@ -267,3 +268,7 @@ The uncertainties in the measurement from the GRMHD simulations due to simulatio
 The measured $\sigma_\text{var}^2$ is well characterized by a power law for $2~{\rm G}\lambda < |u| < 6~{\rm G}\lambda$ \citep{Georgiev_2022}.  For comparison with the models presented here, we distill the $\sigma_{\text{var}}^2$ to two numbers: a normalization at $4~{\rm G}\lambda$, characterized by the amplitude $\afour^2$ and a power law index $b$.  Because the normalization is done in the center of the fit range the estimated $\afour^2=3.7\pm0.8$ and $b=2.5\pm1$ are essentially uncorrelated.
 
 Model predictions for $\afour^2$ and $b$ are computed using the power spectral densities from \citet{Georgiev_2022}.\footnote{\citet{Georgiev_2022} gives the power spectral density of the complex visibility, $\langle\hat{P}(|u|)\rangle$, rather than the VA, and thus $\sigma_\text{var}^2=\langle \hat{P}\rangle/2$. } The anisotropic diffractive scattering kernel from \citet{Johnson_2018} is applied to $\sigma_\text{var}^2(|u|)$ and averaged over relative orientations of the major axis of the scattering kernel and the black hole spin.  These estimates are then azimuthally averaged, and the parameters $\afour^2$ and $b$ are determined from a least-squares linear fit to $\sigma_\text{var}^2(|u|)$ in $2~{\rm G}\lambda < |u| < 6~{\rm G}\lambda$.
+
+For a given model, the fits for $\afour^2$ and $b$ are done separately on each window of length $5 \times 10^3 \tg$, giving at most three measurements for most models. This makes a direct comparison with the measured value difficult, as the distribution for a given model is poorly constrained. 
+
+\citet{Georgiev_2022} gives an estimate of the typical width of the distribution as $\log_{10}(\afour^2) \pm 0.1$. We can obtain a rough estimate for how the models fare compared to the measurement by taking the mean across windows, assuming the width is $\pm 0.1$, and comparing this with the observed distribution under the assumption that both are distributed normally. We then reject models if the two distributions are inconsistent at a 1\% level. 

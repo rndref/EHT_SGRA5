@@ -1,3 +1,8 @@
+
+
+
+
+
 \section{Model Comparison}\label{sec:comparisons}
 
 We now apply the observational constraints from
@@ -74,14 +79,14 @@ Notice that the ring diameter is not degenerate with the second moment constrain
 
 The distribution of ring diameters for many SANE models is multimodal (consistently in the fiducial model sets), with a secondary peak in the distribution at $\sim 35\uas$.  All $\Rh = 1$ SANE models show this secondary peak.  The images of these models tend to have a well defined ring at the critical impact parameter and a second broad maximum in intensity at larger impact parameter.  The second peak in the distribution is a consequence of limited baseline coverage.
 
-The \mring width $w$ is the most tightly constrained of our 3 parameters. Although the closure phases constrain $w$ as well, it is easy to see how $w$ affects visibility amplitudes at long baselines. For example, for a simple, symmetric ring the visibility amplitudes are a Bessel function multiplied by a Gaussian with width $\sim 1/w$, and increasing $w$ therefore decreases the amplitude of the long baselines.
+The \mring width $w$ is the most tightly constrained of our 3 parameters. Although the closure phases constrain $w$ as well, it is easy to see how $w$ affects visibility amplitudes at long baselines. For example, for a simple, symmetric ring the visibility amplitudes are a Bessel function multiplied by a Gaussian with width $\sim 1/w$, and increasing $w$ therefore decreases the amplitude of the long baselines.  Figure~\ref{fig:mring_width_example} shows examples of models that pass and fail the \mring constraint. 
 
-Figure~\ref{fig:mring_width_example} shows which models pass this constraint. All rejected models have median $w$ that is below the median of the data, $ \simeq 17.5\mu$as. The rejected models include all but 3 MAD models at $\abh \le 0$ and all edge-on ($i = 90\degree$) MAD models.  MAD models exhibit a strong trend toward smaller $w$ as $i$ increases.  SANE models exhibit a similar but weaker trend. The SANE model images have  higher optical depth, broader rings, and more substructure than the MAD models.  Their $w$ distributions are typically broad, with mode well below $17.5\mu$as.  Only for $\abh = 0.94$, where the optical depth is lowest due to higher temperatures in the emitting region, do most of the models exhibit a sharply peaked $w$ distribution centered at $17.5\mu$as.
+All rejected models have median $w$ that is below the median of the data, $ \simeq 17.5\mu$as. Figure~\ref{fig:mring_width_salsa} summarizes the \mring  pass/fail status of the fiducial models. The rejected models include all but 3 MAD models at $\abh \le 0$ and all edge-on ($i = 90\degree$) MAD models.  MAD models exhibit a strong trend toward smaller $w$ as $i$ increases.  SANE models exhibit a similar but weaker trend. The SANE model images have  higher optical depth, broader rings, and more substructure than the MAD models.  Their $w$ distributions are typically broad, with mode well below $17.5\mu$as.  Only for $\abh = 0.94$, where the optical depth is lowest due to higher temperatures in the emitting region, do most of the models exhibit a sharply peaked $w$ distribution centered at $17.5\mu$as.
 
-\begin{figure*}
+\begin{figure*}\label{fig:mring_width_salsa}
  \centering
  \includegraphics[width=\textwidth]{./figures/Mring_w_Constraints.png}
-  \caption{Pass/fail plot for the \mring widths.}
+  \caption{Pass/fail plot for the \mring widths.  Green indicates that the \kharma, \bhac, and \hamr models pass, yellow that one or two of the fiducial models fail, and red that all three fail.}
 \end{figure*}
 
 
@@ -89,11 +94,10 @@ Figure~\ref{fig:mring_width_example} shows which models pass this constraint. Al
 
 We can combine all EHT constraint cuts with a logical {\em and} operation.  The results are summarized in Figure~\ref{fig:all_EHT_constraints}.  Evidently EHT data alone are capable of discriminating between models.   The edge-on ($i = 90\degree$) MAD models all fail, with some failing \mring width, diameter, asymmetry and the null location constraint.  The cuts clearly favor $\abh > 0$ models, although there are exceptions.  For the Illinois model set, we are left with $33/100$ SANE models and $16/100$ MAD models.
 
-\begin{figure*}
+\begin{figure*}\label{fig:all_EHT_constraints}
   \centering
     \includegraphics[width=\textwidth]{./figures/Interferometric_Constraints.png}
-  \caption{Combined EHT constraints (logical {\em and}) including the second moment, null location, and \mring fit constraints.}
-  \label{fig:all_EHT_constraints}
+  \caption{Combined EHT constraints (logical {\em and}) including the second moment, null location, and \mring fit constraints.  Green indicates that the \kharma, \bhac, and \hamr models pass, yellow that one or two of the fiducial models fail, and red that all three fail.}
 \end{figure*}
 
 \subsubsection{Non-EHT Constraints}
@@ -116,36 +120,11 @@ constraints in aggregate.
   \label{fig:passfail_sed}
 \end{figure*}
 
-
-\subsubsubsection{$2.2\um$ Median Flux Density}
-
-$2.2\um$ photons are produced by the synchrotron process from electrons on the high energy end of the eDF.  For the one-zone model with $B = 30$G and $\Theta_e = 10$ the mean Lorentz factor is $\gamma = 30$ and the synchrotron critical frequency $\nu_\mathrm{crit} = \gamma^2 e B/(2 \pi m_e c) \simeq 80\GHz$.  Emission at $2.2\um$ is therefore produced by electrons with  Lorentz factor $\gamma \simeq 10^3$, so $2.2\um$ flux density is sensitive to $\Theta_e$ and $B$.  Since both increase toward the horizon and field strength is nearly independent of latitude, $2.2\um$ photons are produced at small radius in regions where $\Theta_e$ is highest.
-
-The sensitivity to $\Theta_e$ implies that $2.2\um$ flux density will be highest for parameters with higher temperatures.  For SANEs the midplane temperature increases with $\abh$.
-The sensitivity to $B$ implies that $2.2\um$ flux density will be highest for parameters with stronger fields.  The $B$ depends on the GRMHD flow configuration and also on the accretion rate, which is fixed by the observed $F_{230}$, so $2.2\um$ will be strongest when the accretion rate is largest.  For SANEs, accretion rate declines as $\abh$ increases and $\Rh$ decreases (discussed in more detail below in  Section~\ref{sec:accrate_outflowpower} and Figure \ref{fig:accretion_outflow_power_illinois_thermal}); for MADs the accretion rate dependence on $\abh$ and $\Rh$ is much weaker.
-Finally, the Doppler effect (blueshift) enables photons that are detected at $2.2\mu$m to be emitted at longer wavelength in plasma that is moving toward the observer, and the accompanying Doppler beaming increases the detected intensity.  We therefore expect that $2.2\um$ flux density to increase with inclination and to peak in the midplane on the approaching side of the flow.
-
-Models that pass the $2.2\um$ flux limit are shown in the Appendix in Figure~\ref{fig:2um_flux_pizza}. The rejected SANE models ($6\%$) tend to be at positive spin and high inclination: their images are dominated by a bright spot on the approaching side of the disk.
-The rejected SANE models ($68\%$) include all models at $\Rh = 1$ and all but 2 models at $\Rh = 10$, where $\Theta_e$ tends to be larger, and {\em all} edge-on models, where the effect of Doppler boosting is largest.
-
-Interestingly, we find that some models are Compton dominated at $2.2\um$.  For example, $\abh = -0.94$ SANE models become optically thin at relatively low frequency as $\Rh$ goes to $1$, and thus synchrotron emission drops off rapidly as frequency increases.
-As $\Rh$ drops and synchrotron decreases the SED becomes dominated by a lower-luminosity bump of underlying Comptonized photons.  Just before this happens, at $\Rh = 10$, the combination of the Compton bump and synchrotron emission is enough to push the median $2.2\um$ flux density above the observational limit, explaining the excluded SANE models at $\Rh = 10$, $\abh = -0.94$.
-
-\subsubsubsection{X-ray Luminosity}
-
-Many thermal models produce X-ray emission through Compton upscattering of thermal synchrotron photons.  In the first Compton bump $\nu L_\nu$ is proportional to the y-parameter $y \sim 16 \Theta_e^2 \tau_e$ where $\tau_e$ is a characteristic electron-scattering optical depth and $\Theta_e$ is a typical electron temperature.  At $\Rh = 1$ the X-ray band lies in the first Compton bump, while at larger $\Rh$ the bumps move to lower energy because the bulk of the Thomson depth is in the midplane where $\Theta_e \propto 1/\Rh$.
-
-In many large $\Rh$ SANE models, however, X-ray emission is dominated by bremsstrahlung.  Since its emissivity $j_{\nu,b} \propto n^2$, bremsstrahlung is dominated by regions with the highest density, i.e., the midplane.  It typically comes from larger radius than the synchrotron and Compton-upscattered X-ray emission and therefore varies more slowly.  Bremsstrahlung therefore dominates Compton in the highest accretion rate models, i.e. when $\Rh$ is large (see Section~\ref{sec:discussions}).  Notice that $j_{\nu,b} \propto \Theta_e^{1/2}$ for $\Theta_e > 1$ and $\Theta_e^{-1/2}$ for $\Theta_e < 1$, so cool disks enhance bremsstrahlung.
-
-The X-ray cut results are shown in Appendix~\ref{app:tables} in Figure~\ref{fig:xray_pizza}. Most large $\Rh$ SANE models fail the X-ray test: all but 2/25 at $\Rh = 160$ and all but 2/25 at $\Rh = 40$.  These models fail due to excess bremsstrahlung. The MAD models that fail have low $\Rh$ and are Compton-dominated in the X-ray.  All $\Rh = 1$ MAD models fail the X-ray test, as do all but 6/25 at $\Rh = 10$.  The midplane $\Theta_e$ declines as $\Rh$ drops.  Since the midplane contributes most of the electron scattering optical depth, low $\Rh$ models have the largest $y$ parameter and are at greatest risk of overproducing X-rays.
-
-
-%..............................................................................
 \subsubsubsection{86\GHz Median Flux}
 
-In a naive picture \sgra's millimeter flux is produced in a photosphere that decreases in size as frequency increases.  Because optical depth is not large at $230\GHz$ ($\sim 0.3$ in the one-zone model) and the source structure is complicated (the optical depth varies across the image; the $\tau = 2/3$ surface is non-spherical, folded, and not even connected) the naive picture is imprecise.  Nevertheless 86\GHz photons are on average produced at larger radius than 230\GHz photons, and the 86\GHz source size is larger than the 230\GHz source size.
+In a naive picture \sgra's millimeter flux is produced in a photosphere that decreases in size as frequency increases.  Because optical depth is not large at $230\GHz$ ($\sim 0.3$ in the one-zone model) and the source structure is complicated (the optical depth varies across the image) the naive picture is imprecise.  Nevertheless 86\GHz photons are on average produced at larger radius than 230\GHz photons, and the 86\GHz source size is larger than the 230\GHz source size.
 
-The 86\GHz/230\GHz color is therefore sensitive to the radial structure of the source plasma.  Figure \ref{fig:86GHz_flux_pizza} shows the full results of applying this constraint.
+The ratio of 86\GHz to 230\GHz flux density is therefore sensitive to the radial structure of the source plasma.  Figure \ref{fig:86GHz_flux_pizza} shows the full results of applying this constraint.
 %\cfg{need more physical discussion}
 Many $\Rh = 1$ models, both MAD and SANE, fail the 86\GHz flux density test: 22/25 SANE and 11/25 MAD; all overproduce 86\GHz emission.  A large set of SANE models (17/100) underproduce 86\GHz emission, and these have $10 \le \Rh \le 40$.
 The 86\GHz flux is sensitive to $\Rh$.  For example, SANE $\abh = 0$, $i = 70,90$deg models are too bright at $\Rh = 1$ and too dim at $\Rh = 10$.  There must be passing models in between, suggesting our parameter space is not sampled densely enough.
@@ -157,20 +136,42 @@ Similarly to the 86\GHz flux, the 86\GHz size is sensitive to optical depth as a
 
 %\cfg{need cites to earlier work for par below}
 
-The 86\GHz size is sensitive to inclination.  For example, the MAD, $\abh = 0$, $\Rh = 160$ models are too small at low inclination and too large when seen edge-on, because the edge-on models have prominent limb-brightened jet walls that are visible to 100$\mu$as.  The 86\GHz size constraint rejects
+The 86\GHz size is sensitive to inclination.  For example, the SANE, $\abh = 0.5$, $\Rh = 40$ models are too small at low inclination and too large when seen edge-on, because the edge-on models have prominent limb-brightened jet walls that are visible to 100$\mu$as.  The 86\GHz size constraint rejects
 $58\%$ of models and is therefore one of the tightest constraints.
 
-The physical picture for 86\GHz source size is complicated, as is the extraction of the constraint itself from observations.  Notice that (1) two different values for the 86\GHz intrinsic source size have been reported in the literature; (2) scattering is $7$ times stronger at 86\GHz than at 230\GHz; (3) scattering must be subtracted accurately to obtain the intrinsic source size; (4) the error bars for the 86\GHz source size are narrow and this plays a key role in determining the strength of the constraint.
+The physical picture for 86\GHz source size is complicated, as is the extraction of the constraint itself from observations.  Notice that (1) two different values for the 86\GHz intrinsic source size have been reported in the literature (see Section \ref{sec:86size}); (2) scattering is $7$ times stronger at 86\GHz than at 230\GHz; (3) scattering must be subtracted accurately to obtain the intrinsic source size; (4) the error bars for the 86\GHz source size are narrow and this plays a key role in determining the strength of the constraint.
+
+\subsubsubsection{$2.2\um$ Median Flux Density}
+
+$2.2\um$ photons are produced by the synchrotron process from electrons on the high energy end of the eDF.  For the one-zone model with $B = 30$G and $\Theta_e = 10$ the mean Lorentz factor is $\gamma = 30$ and the synchrotron critical frequency $\nu_\mathrm{crit} = \gamma^2 e B/(2 \pi m_e c) \simeq 80\GHz$.  Emission at $2.2\um$ is therefore produced by electrons with  Lorentz factor $\gamma \simeq 10^3$, so $2.2\um$ flux density is sensitive to $\Theta_e$ and $B$.  Since both increase toward the horizon and field strength is nearly independent of latitude, $2.2\um$ photons are produced at small radius in regions where $\Theta_e$ is highest.
+
+The sensitivity to $\Theta_e$ implies that $2.2\um$ flux density will be highest for parameters with higher temperatures.  For SANEs the midplane temperature increases with $\abh$.
+The sensitivity to $B$ implies that $2.2\um$ flux density will be highest for parameters with stronger fields.  The $B$ depends on the GRMHD flow configuration and also on the accretion rate, which is fixed by the observed $F_{230}$, so $2.2\um$ will be strongest when the accretion rate is largest.  For SANEs, accretion rate declines as $\abh$ increases and $\Rh$ decreases (discussed in more detail below in  Section~\ref{sec:accrate_outflowpower} and Figure \ref{fig:accretion_outflow_power_illinois_thermal}); for MADs the accretion rate dependence on $\abh$ and $\Rh$ is much weaker.
+Finally, the Doppler effect (blueshift) enables photons that are detected at $2.2\mu$m to be emitted at longer wavelength in plasma that is moving toward the observer, and the accompanying Doppler beaming increases the detected intensity.  We therefore expect $2.2\um$ flux density to increase with inclination and to peak in the midplane on the approaching side of the flow.
+
+Models that pass the $2.2\um$ flux limit are shown in the Appendix in Figure~\ref{fig:2um_flux_pizza}. The rejected SANE models ($6\%$) tend to be at positive spin and high inclination: their images are dominated by a bright spot on the approaching side of the disk.
+The rejected MAD models ($68\%$) include all models at $\Rh = 1$ and all but 2 models at $\Rh = 10$, where $\Theta_e$ tends to be larger, and {\em all} edge-on models, where the effect of Doppler boosting is largest.
+
+Interestingly, we find that some models are Compton dominated at $2.2\um$.  For example, $\abh = -0.94$ SANE models become optically thin at relatively low frequency as $\Rh$ goes to $1$, and thus synchrotron emission drops off rapidly as frequency increases.
+As $\Rh$ drops and synchrotron decreases the SED becomes dominated by a lower-luminosity bump of underlying Comptonized photons.  Just before this happens, at $\Rh = 10$, the combination of the Compton bump and synchrotron emission is enough to push the median $2.2\um$ flux density above the observational limit, explaining the excluded SANE models at $\Rh = 10$, $\abh = -0.94$.
+
+
+\subsubsubsection{X-ray Luminosity}
+
+Many thermal models produce X-ray emission through Compton upscattering of thermal synchrotron photons.  In the first Compton bump $\nu L_\nu$ is proportional to the y-parameter $y \sim 16 \Theta_e^2 \tau_e$ where $\tau_e$ is a characteristic electron-scattering optical depth and $\Theta_e$ is a typical electron temperature.  At $\Rh = 1$ the X-ray band lies in the first Compton bump, while at larger $\Rh$ the bumps move to lower energy because the bulk of the Thomson depth is in the midplane where $\Theta_e \propto 1/\Rh$.
+
+In many large $\Rh$ SANE models, however, X-ray emission is dominated by bremsstrahlung.  Since its emissivity $j_{\nu,b} \propto n^2$, bremsstrahlung is dominated by regions with the highest density, i.e., the midplane.  It typically comes from larger radius than the synchrotron and Compton-upscattered X-ray emission and therefore varies more slowly.  Bremsstrahlung therefore dominates Compton in the highest accretion rate models, i.e. when $\Rh$ is large (see Section~\ref{sec:discussions}).  Notice that $j_{\nu,b} \propto \Theta_e^{1/2}$ for $\Theta_e > 1$ and $\Theta_e^{-1/2}$ for $\Theta_e < 1$, so cool disks enhance bremsstrahlung.
+
+The X-ray cut results are shown in Appendix~\ref{app:tables} in Figure~\ref{fig:xray_pizza}. Most large $\Rh$ SANE models fail the X-ray test: all but 2/25 at $\Rh = 160$ and all but 2/25 at $\Rh = 40$.  These models fail due to excess bremsstrahlung. The MAD models that fail have low $\Rh$ and are Compton-dominated in the X-ray.  All $\Rh = 1$ MAD models fail the X-ray test, as do all but 6/25 at $\Rh = 10$.  The midplane $\Theta_e$ declines as $\Rh$ drops.  Since the midplane contributes most of the electron scattering optical depth, low $\Rh$ models have the largest $y$ parameter and are at greatest risk of overproducing X-rays.
 
 \subsubsubsection{Summary of Non-EHT constraints}
 
 Applying only non-EHT constraints, we are left with the 24/200 models shown in Figure~\ref{fig:non_eht_cuts}. The surviving models are the result of applying a heterogeneous and noisy set of constraints using a hard cutoff, which obscures the underlying physical picture.  Nevertheless, the surviving models are nearly all MAD (only 1 SANE model survives), all have $\Rh > 1$, and nearly all are at $i \le 70\degree$.  This leaves a cluster of surviving MAD models at large $\Rh$ and moderate inclination.
 
-\begin{figure*}
+\begin{figure*}\label{fig:non_eht_cuts}
   \centering
   \includegraphics[width=\textwidth]{./figures/Non_Interferometric_Constraints.png}
-  \caption{Combined non-EHT constraints}
-  \label{fig:non_eht_cuts}
+  \caption{Combined non-EHT constraints (logical {\em and}).  Green indicates that the \kharma, \bhac, and \hamr models pass, yellow that one or two of the fiducial models fail, and red that all three fail.}
 \end{figure*}
 
 %------------------------------------------------------------------------------
@@ -184,13 +185,12 @@ Variability is a strong constraint.  Although models differ in their degree of v
 If we were to apply the variability constraints directly to the models, there would be 37/200 successful models remaining using 1\% cuts (47/200 for the ALMA constraint and 121/200 for the visibility amplitude constraint).  One interpretation of this result is that the surviving models are the correct description of the source (although we would expect some misclassification of models as consistent or inconsistent when using 1\% cuts on such a large model set).  Another interpretation is that there is a missing physical ingredient in the models, which could affect our entire model library. This possibility is discussed in Section \ref{sec:discussions}.
 
 %..............................................................................
-\subsubsubsection{ALMA Lightcurve}
+\subsubsubsection{Modulation Index}
 
-The distributions of 3 hour modulation index (rms \%) across all SANE models, across all MAD models, and across the historical dataset are shown in Figure \ref{fig:cmp_ALMA_var}, along with individual distributions for the models with the lowest and highest $\mi{3}$ for SANEs and MADs. Although some individual models  pass (particularly SANE models), the distributions for the SANEs and the MADs are noticeably offset from the data, with the MADs in particular being more variable. As can be seen, even the quietest MAD model lies above the historical distribution.
+The distributions of 3 hour modulation index ($\mi{3}$) across all fiducial SANE models, across all fiducial MAD models, and across the historical dataset are shown in Figure \ref{fig:cmp_ALMA_var}.  The plot also shows individual distributions for models with the lowest and highest $\mi{3}$.  
 
-If we compare each individual model to the three segments from the April 7, 2017 ALMA observation using a 2-sample KS test, eliminating models with $p < 1\%$, we are left with 56 SANE models and 9 MAD models.
-
-If we instead compare the models to the full historical distribution (40 measurements of $\mi{3}$ in all, including ALMA), we find that 47 SANE models and no MAD models pass. This is more stringent than the comparison with just April 7, since the historical distribution has more samples and thus disparate models can be eliminated with higher confidence.
+The full set of fiducial model results from the $\mi{3}$ constraint is shown in Appendix \ref{app:tables}, Figure \ref{fig:m3_pizza}.  
+We find that: (1) as a group, the fiducial models are more variable than the data; (2) the MAD models are more variable than SANE models; (3) eleven individual models  pass the constraint for all fiducial model sets, and these are exclusively SANE models; (4) there are some differences between variability in the fiducial model sets, with \hamr models notably more variable than \kharma and \bhac models; (5) the pass fractions for the fiducial model sets are $0.2$ for \kharma, $0.27$ for \bhac, and $0.07$ for \hamr.   The modulation index is, by far, the tightest single constraint on the models.  
 
 \begin{figure}
   \centering
@@ -205,29 +205,13 @@ If we instead compare the models to the full historical distribution (40 measure
 
 The power-law index $b$ of the variance $\sigma_\text{var}^2 (|u|)$ at 2--6$~{\rm G}\lambda$ of the models is generally in good agreement with the value measured  from the 2017 EHT campaign (excluding April 11). The amplitude $\afour^2$, however, varies depending on the model.
 
-Figure~\ref{fig:cmp_VLBI_var} shows the distribution of $(\afour^2, b)$ from the EHT observation, along with the distribution across all Illinois models. The models are shown as an aggregate whole, but each model consists of only three measurements of $\afour^2$, one on each window. This makes a direct comparison with the measured value difficult, as the distribution for a given model is poorly constrained.
+Figure~\ref{fig:cmp_VLBI_var} shows the distribution of $(\afour^2, b)$ from the EHT observation, along with the distribution across all fiducial models. The models are shown together, but each model consists of only three measurements of $\afour^2$, one on each window of length $5 \times 10^3 \tg$. This makes a direct comparison with the measured value difficult, as the distribution for a given model is poorly constrained.
 
 \citet{Georgiev_2022} gives an estimate of the typical width of the distribution as $\log_{10}(\afour^2) \pm 0.1$. We can obtain a rough estimate for how the models fare compared to the measurement by taking the mean across windows and the estimate for the width and comparing this with the measurement distribution under the assumption that both are distributed normally. With this approach, 121/200 models (63 SANE and 58 MAD) agree with the data within 1\%, although we caution against interpreting this number as the number of passing or failing models, since the uncertainties in the model distribution are so large.
 
 By this measure the models tend to be slightly more variable than the observation, with face-on models performing better than edge-on models. For SANE models, $\Rh = 10$ tend to be more variable than others. For MAD models, there is a slight preference for lower $\Rh$.
 
 We have also considered a set of thermal, $\Rh$, MAD models run with the \koral code out to $\sim 100,000\tg$.  These models enable us to assess the importance of integration time for application of the constraints.  They permit us to obtain more accurate distributions for the constraint quantities and to assess whether the constraints evolve from the beginning to end of the integrations. We do not see evidence for evolution in the \koral model set (a full pass/fail table is given in Appendix~\ref{app:tables}, Table~\ref{tab:koralPF} and more detailed discussion in Appendix~\ref{app:variability} and in \citet{Georgiev_2022}). The \koral pass/fail results are similar to those for comparable models in the fiducial model sets. Moreover the constraints measured at the beginning of the evolution are similar to those measured at the end.
-
-% The distribution of model $4G\lambda$ lightcurve-normalized PSDs are shown in Figure \ref{fig:cmp_VLBI_var}.  The best fit PSD from the 2017 EHT campaign (excluding April 11) is shown as a solid vertical line, with the other vertical lines showing percentiles in the posterior.  Evidently the observations are quieter than both SANEs and MADs as a group.
-
-% The PSD estimates for the models are broken up into $5000\tg$ windows for each model. To compare the models to the observation, we take the mean value across all windows and assume the width of the distribution is of $\log_{10} a_{4G\lambda} \pm 0.1$. A model is considered passing if this estimated distribution overlaps with the median observed value. \note{refer GRMHD variability paper appendix} \dl{passing criterion subject to change}
-
-% With this approach only 6\% of the models pass, and all SANE. While the quietest models tend to be SANEs, the general distribution across all MADs is not as offset from the SANEs as in the MI distributions.
-
-% \begin{figure}
-%   \centering
-%   \includegraphics[width=\columnwidth]{./figures/va_hist.pdf}
-%   \caption{Distributions of $PSD(4\,\mathrm{G}\lambda)$ for thermal models, compared to the observed distribution from the 2017 EHT campaign.
-%   \dl{HAMR distribution will be updated later.}
-%   \aeb{The quantity on the horizontal axis has been called $a_4$ in \citetalias{PaperIV}.  I have a similar concern regarding the abrupt end of the curves in this plot as well.  What do they mean?  How should these be interpreted?  There are the standard presentation issues (see \autoref{fig:sample_va}).}
-%   \ckc{Nice new plot!  Are you using matplotlib fill\_between?  I suggest setting edgecolor to None and only set facecolor.  (Or setting linewidth=0 should also remove the lines in the orange shade.)}}
-%   \label{fig:cmp_VLBI_var}
-% \end{figure}
 
 \begin{figure}
   \centering
@@ -239,7 +223,8 @@ We have also considered a set of thermal, $\Rh$, MAD models run with the \koral 
 % At a 1\% cut, the models that pass the PSD constraint also all pass the MI constraint. It should be noted that this is partially because these constraints are weakly correlated \dl{also partially because we're imposing constraints differently between VLBI and lightcurve, and the lightcurve constraint is more lenient} None of the 12 models with acceptable variability pass the other tests.
 
 %------------------------------------------------------------------------------
-\subsubsection{Summary of Constraints on Standard Models}
+\subsubsection{Summary of Constraints on Fiducial Models}
+
 \begin{table*}
 \caption{Models that fail only one constraints}
 \centering
@@ -306,7 +291,8 @@ Code/Setup						& MAD/SANE	&	spin	&	inc		&	$\Rh$	&	Constraint failed	\\
 \end{table*} 
 
 \label{sec:summarythermal}
-None of the standard thermal models (Frankfurt or Illinois) survive the full gauntlet of constraints. Variability rejects about $70\%$ of models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models.
+
+None of the fiducial models  survive the full gauntlet of constraints. Variability rejects about $70\%$ of models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models.
 Evidently either (1) the models fail in some important respect, or (2) some of the data underlying the model tests are incorrect, or (3) one or more of the constraints have been misapplied.
 
 We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens when we lift one constraint.  Table~\ref{tab:fail_one} lists the models that fail only one constraints---about 5\% each for the \bhac and \kharma model sets.  For \bhac, 8 models fail only $\mi{3}$, and 2 fail only \mring diameter.  For \kharma, 3 models fail only $\mi{3}$ and 5 fail only the 86\GHz size.  Suspicion therefore falls on $\mi{3}$, which rejects $\approx 70\%$ of \bhac and \kharma models.  Why might the $\mi{3}$ constraint be misleading?
@@ -315,94 +301,29 @@ One possibility is that some fraction of the $230\GHz$ flux density, $f_\mathrm{
 
 A second possibility is that physical or numerical errors in the models cause the variability to be overstated.  Several possibilities, including viscosity, conduction, and radiative cooling are discussed in Section \ref{sec:discussions}.
 
-If extended flux, viscosity and conduction, and radiative cooling each reduce the variability excess by $\sim 10\%$ then many of the MAD models would come into compliance with the data (and some SANE models would become inconsistent because they are not variable enough).  If we set aside the $\mi{3}$ constraint then a cluster of 3 standard models from the independent  Frankfurt and Illinois modeling pipelines survive.  All are MAD, $\Rh = 160$.  These are: $\abh = 0.5, i = 30$; $\abh = 0.94, i = 10$; and $\abh = 0.94, i = 30$.  These models are clustered in parameter space and pass 10 of 11 tests.  We will highlight these models below in our discussion and analysis.
+If extended flux, viscosity and conduction, and radiative cooling each reduce the variability excess by $\sim 10\%$ then many of the MAD models would come into compliance with the data (and some SANE models would become inconsistent because they are not variable enough).  If we set aside the $\mi{3}$ constraint then a cluster of 3 models survives all of the fiducial models.  All are MAD, $\Rh = 160$.  These are: $\abh = 0.5, i = 30$; $\abh = 0.94, i = 10$; and $\abh = 0.94, i = 30$.  These models are clustered in parameter space and pass 10 of 11 tests.  We will highlight these models below in our discussion and analysis.
 
-We consider nonstandard models next, including nonthermal eDF models, wind-fed models, and tilted models next.  None have sharply reduced $\mi{3}$.
+We consider exploratory models next, including nonthermal eDF models, wind-fed models, and tilted models.  None have sharply reduced $\mi{3}$.
 
-%\begin{figure*}
-%  \centering
-%  \includegraphics[width=\textwidth]{./figures/All_Constraints.png}
-%  \caption{Combined EHT and non-EHT constraints, excluding variability.}
- % \label{fig:all_cuts}
-%\end{figure*}
 
-% this is now moved to appendix as discussed on Thursday Dec 9 2021 among coordinators
-% %------------------------------------------------------------------------------
-% \subsubsection{Inter-Model Comparison: $\Rh$ Thermal Models}
+\subsection{Exploratory Models}
 
-% % note: passfail tables are consistently, e.g., tab:illinoisPF or tab:VKhamrPF
-
-% \subsubsubsection{Frankfurt Thermal $\Rh$ Models}
-
-% As can be seen in Table \ref{tab:GRMHDmodels} the thermal models have been calculated for an identical parameter space from two different codes, namely KHARMA and BHAC for the GRMHD simulations and iPOLE and BHOSS for the GRRT calculations. This allows us for the first time to perform an in depth comparison between the different numerical methods used in this work in addition to the EHTC code comparison projects \citep{2019ApJS..243...26P,2020ApJ...897..148G}.
-
-% \begin{figure*}
-%   \centering
-%   \includegraphics[width=0.8\textwidth]{./figures/BHAC_iharm_correlation}
-%   \caption{Correlation between BHAC and KHARMA models for 9 model constraints.  The horizontal axis is the constraint value from \bhac/\bhoss, and the vertical axis shows the constraint value from \kharma/\ipole.  Each point corresponds to a single model, with the width of the distribution shown by the error bars.  See text for details.}
-%   \label{fig:modelcorrelation}
-% \end{figure*}
-
-% In Figure \ref{fig:modelcorrelation} we show the correlation between the thermal KHARMA and BHAC models for constraints where we have predictions from both models.
-
-% The top row shows from left to right the 230\GHz flux density, the 230\GHz modulation index, MI, computed for a time window of 3 hours, and the 230\GHz image size obtained from image moments. Since we normalise the 230\GHz images to an average flux of 2.4\,Jy within a time window of 5000\,M (corresponds to 28.5 h for SgrA a mass of $4.14\times 10^6\,\msun$), the scatter around this values is small. The deviation from an ideal correlation reflects the precision and number of GRMHD snapshots included during normalization procedure.
-
-% The correlation in the 3\,hour modulation index spreads over $\Delta \mi{3}=0.75$ which serves as a measure of intra-code ( e.g., MAD vs. SANE accretion) and inter-code (BHAC vs. KHARMA) differences. Despite these differences the models show a strong correlation throughout the investigated models and parameter space.
-
-% We found a strong correlation between models and codes for the image size computed from image moments, i.e. second moments analysis.
-
-% \cfg{This may change if we recompute the major axis, etc., for the IL 86\GHz large fov images}
-% The middle row presents the correlation plots for the 86\GHz flux density (left), the 86\GHz image size using second moments (middle) and the NIR flux (right). The 86\GHz flux and 86\GHz image size exhibit a shift toward larger values for the BHAC models. This difference can be explained by the larger field of view used for the BHAC models at 86\GHz during the radiative transfer calculations. Thus, more extended structure and therefore a larger total flux is included in the BHAC models. This affects mainly models with large inclinations $i\geq70^\circ$ and jet dominated emission models ($\rm{R}_{\rm high}\geq 40$).
-
-% The NIR fluxes show a tight correlation over four orders of magnitude and systematically larger flux for the BHAC models for low NIR fluxes ($\log_{10}(NIR)<-7$). These fluxes are far below the NIR constraints of $\sim 1mJy$, and therefore they do not affect the passing or failing of the models. In the thermal models the NIR flux is generated from the tail of the electron distribution function and is thus very sensitive to the electron temperature. Small differences in the distribution and value of the electron temperature between the two codes explain the observed de-correlation at very low NIR flux.
-
-% The correlation between models for the \mring parameters is presented in the third row of Fig.~\ref{fig:modelcorrelation}. The correlation of the diameter of the \mring is plotted in the left panel. The spread covers nearly the same extent as the 230\GHz image size (top row, right panel) however the scatter in the correlation is larger.  The same is true for the width of the \mring (middle panel in the last row of Fig.~\ref{fig:modelcorrelation}). Compared to the diameter and width of the \mring, the asymmetry of the \mring is less correlated (right panel). Notice that horizontal and vertical limits in the asymmetries occur since the parameter hits the boundary of the allowed range.
-
-% The smaller correlation of the \mring parameters as compared to the other parameters presented in Fig.~\ref{fig:modelcorrelation} is a consequence of the noisy nature of the \mring fits.  Still, the distributions are quite symmetric under reflection across the diagonal, so the models are at least not biased with respect to each other.  Notice also that these plots do not capture all the information that is contained in the distribution of \mring parameters, just the central value.
-
-% We find ourselves somewhat surprised by the strength of the correlations seen in Figure \ref{fig:modelcorrelation}.  The range of each constraint is significantly larger than the width of the correlation, so the variations between models are real, detectable, and reproducible with independent codes.  The question of the origin of the systematic offsets between models for some constraints (for example, in the NIR) is interesting but beyond the scope of this paper.
-
-% \subsubsubsection{\hamr Models}
-
-% %\note{Doosoo, Koushik to write here about HAMR thermal models.}
-% Along the KHARMA/iPOLE and BHAC/BHOSS models, we produced a set of thermal models out to $35,000\tg$ using the GRMHD code H-AMR and the GRRT code BHOSS (see Table~\ref{tab:GRMHDmodels}). These models consider a gas adiabatic index of $\Gamma_{\rm ad}=5/3$ for the SANE models and $\Gamma_{\rm ad}=13/9$ for the MAD models (Table~\ref{tab:radiativemodels}), allowing us to understand how sensitive the images are to the GRMHD fluid properties, in addition to code numerics.
-
-% We are glad to note that overall, the H-AMR/BHOSS thermal eDF images perform similarly to the KHARMA/iPOLE and BHAC/BHOSS models. \kc{needs verification from Michi}
-
-% \kc{is the plan to do H-AMR and KHARMA correlations similar to figure 18?}
-
-%\subsubsubsection{\koral Long Models}
-% moved up to variability section
-% We have also considered a set of thermal, $\Rh$, MAD models run with the \koral code out to $\sim 100,000\tg$.  These models permit us to assess the importance of integration time for application of the constraints.  They permit us to obtain more accurate distributions for the constraint quantites, and to assess whether the constraints evolve from the beginning to end of the integrations. We do not see evidence for evolution in the \koral  model set (a full pass/fail table is given in Appendix \ref{app:tables}, Table~\ref{tab:koralPF}). The \koral pass/fail results are similar to those for comparable models in the \kharma thermal model set. Moreover the constraints measured at the beginning of the evolution are similar to those measured at the end.
-
-%==============================================================================
-\subsection{Non-Standard Models}
-
-We now turn to models that differ from the standard aligned, thermal, $\Rh$ models.  These include aligned models that use a different scheme for assigning temperatures to a thermal eDF; aligned models with a power-law component or $\kappa$ component in the eDF; tilted models; and stellar wind-fed models.
+We now turn to models that differ from the fiducial aligned, thermal, $\Rh$ models.  These include aligned models that use a different scheme for assigning temperatures to a thermal eDF; aligned models with a power-law component or $\kappa$ component in the eDF; tilted models; and stellar wind-fed models.
 
 %------------------------------------------------------------------------------
 \subsubsection{Critical Beta Model}
 
-First we consider the consequences of changing the $\Rh$ temperature assignment scheme in thermal models.  The $\Rh$ prescription has been the default parameterization.  Assuming that the ion-electron temperature ratio $R$ depends instantaneously on local conditions restricts the range of possibilities but still leaves a vast function space of alternative parameterizations.  A well-motivated choice is the critical beta model \citep{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  This model has two parameters, $f$ and $\beta_c$; we consider a single point in the parameter space, $f = 0.5$, $\beta_c = 1$.  Compared to the \Rh temperature prescription, the main new characteristic of critical beta is that the electron to ion temperature ratio approaches 0 at high $\beta$ instead of $1/\Rh$.  This could lead to much lower electron temperatures in large $\beta$ regions.
+First we consider the consequences of changing the temperature assignment scheme for a thermal eDF.  The $\Rh$ prescription is used for the fiducial models, but that still leaves a vast function space of possible alternatie parameterizations.  One well-motivated choice is the critical beta model \citep{2020MNRAS.493.1404A}, which sets $T_e = T_e(R)$ and $R = f \exp(-\beta/\beta_c)$ (see Equation \ref{eq:Te_vs_R}).  This ``critical beta'' model has two parameters, $f$ and $\beta_c$.  We consider a single point in the parameter space, $f = 0.5$, $\beta_c = 1$.  Compared to the \Rh temperature prescription, the main new characteristic of critical beta is that the electron to ion temperature ratio approaches 0 at high $\beta$ instead of $1/\Rh$.  This could lead to much lower electron temperatures in large $\beta$ regions.
 
 We have run all tests except X-ray for the critical beta models ($2.2\um$ is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}.
 
 All critical beta models fail the non-EHT constraints, with 86GHz size constraint rejecting most models as too small.  The variability constraints fail $77\%$ of the models.  No models survive the combined EHT and non-EHT constraints, excluding variability.  This does not imply that critical beta models are ruled out, since we have only tested a single parameter set.
 
-% cfg commented out 12 dec; edited down for consistency in style.
-
-%to span the uncertainties in emitting particle thermodynamics in EHT analyses. The $\Rh$ models  are compatible with the well-motivated turbulent plasma heating ADAF models of \cite{1999ApJ...520..248Q} in asymptotic behavior of electron-to-total heating ratio as a function of plasma $\beta$. There is, however, a vast function space of possible alternative parameterizations. Here we have also considered the Critical Beta model \cite{2020MNRAS.493.1404A}, which sets $T_e = f (T_e + T_i) \exp(-\beta/\beta_c)$.  The model is motivated by the observation that when the transition between electron heating domination and proton heating domination is smoothed (controlled by increasing exponent parameter $\beta_c$), the 230\GHz emitting region profile tends to be less coronally dominated and more compact and asymmetric. This is a consequence, when fixing synthetic image flux, of higher critical beta values shifting the locus of electrons dominating the emission profile towards the colder, higher density equatorial inflow.  We consider only a single point in the critical beta parameter space, with $f = \beta_c = 1$. We have applied a subset of tests to the critical beta models (all except X-ray; NIR is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}. All Critical beta models with high inclinations fail EHT constraints, which is consistent with our main conclusion about the thermal models. We also find that all critical beta models fail all considered non-EHT constraints.
-
-% CFG: we shouldn't report preliminary indications here
-%A second motivation is that there are preliminary indications that the exponential electron cooling in the Critical Beta Model suppressed the SANE bremsstrahlung spectral component allowing more to pass the X-ray constraint.
-
-%------------------------------------------------------------------------------
 \subsubsection{Thermal Plus \texorpdfstring{$p = 4$}{p=4} Power-law Models}
 
 So far we have assumed a thermal relativistic Maxwell-J{\"u}ttner eDF (Equation~\ref{eq:thermaleDF}). Fully kinetic simulations as well as resistive MHD predict that reconnection in current sheets within the accretion flow and in the jet sheath leads to the acceleration of particles to higher energies, resulting in the emergence of a power-law tail (of the form of Equation~\ref{eq:nonthermaleDF}) in the eDF \citep[e.g.,][and references therein]{Sironi2021}. Such acceleration events are thought to be the origin of near-infrared and X-ray flares detected in \sgra. In this work, we do not address flare mechanisms but seek to constrain the contribution of non-thermal electrons to the quiescent emission of \sgra. In the next few sections, we assume different forms of the eDF assuming that a fraction of the electron population is accelerated to a non-thermal tail. There are multiple ways of doing this, but we will continue to assume that the eDF depends instantaneously on local conditions and set the accretion rate so that the time-averaged 230\GHz compact flux is 2.4 Jy.
 
-% cfg 12-dec: we will comment this out by 13-dec unless we get more info, from here =>
-First we employ a hybrid thermal/power-law tail distribution using \hamr/\bhoss. Since we are modeling the quiescent emission of \sgra, we assume a steep power-law index of $p=4$ with a constant non-thermal acceleration efficiency $\epsilon=n_{\rm e, power-law}/n_{\rm e, thermal}=0.1$, typically found from PIC simulations \citep[e.g.,][]{Sironi2015,Crumley2019}. Following the method given in \citet{Chatterjee2021}, the power-law tail is stitched to the thermal core by choosing the minimum Lorentz factor limit of the power-law $\gamma_{\rm min}$ to be at the peak of the Maxwellian component. The upper end of the power-law is taken to $10^5 \gamma_{\rm min}$.  The temperature of the thermal component is set by the $\Rh$ prescription (Equation~(\ref{eq:rhigh_prescription})). We find that the accretion rate is slightly smaller than for corresponding thermal models, suggesting that the power-law component contributes to the 230\GHz total intensity. The full pass/fail table of hybrid thermal/power-law models is given in Table~\ref{tab:hamr_nth}
+First we employ a hybrid thermal/power-law tail distribution using \hamr/\bhoss. Since we are modeling the quiescent emission of \sgra, we assume a steep power-law index of $p=4$ with a constant non-thermal acceleration efficiency $\epsilon=n_{\rm e, power-law}/n_{\rm e, thermal}=0.1$, typically found from PIC simulations \citep[e.g.,][]{Sironi2015,Crumley2019}. Following the method given in \citet{Chatterjee2021}, the power-law tail is stitched to the thermal core by choosing the minimum Lorentz factor limit of the power-law $\gamma_{\rm min}$ to be at the peak of the Maxwellian component. The upper end of the power-law is taken to $10^5 \gamma_{\rm min}$ (see Equation \ref{eq:nonthermaleDF}).  The temperature of the thermal component is set by the $\Rh$ prescription (Equation~(\ref{eq:rhigh_prescription})). We find that the accretion rate is slightly smaller than for corresponding thermal models, suggesting that the power-law component contributes to the 230\GHz total intensity. The full pass/fail table of hybrid thermal/power-law models is given in Table~\ref{tab:hamr_nth}
 
 %..............................................................................
 \subsubsubsection{230\GHz VLBI pre-image size}
@@ -422,19 +343,7 @@ The addition of the power-law tail primarily increases the flux at $2.2\um$ and 
 
 
 Overall, we see that hamr nonthermal powerlaw models behave quite differently from their thermal versions. For the thermal models, the non-EHT constraints prove to be more crucial in ruling out models (with 9/90 passed cases in total) while the EHT constraints were more lenient with 35/90 models passing. For the power-law model set, we get the opposite: non-EHT constraints pass 35/90 models while EHT constraints allow 10/90 models. Such a disparity occurs due to two reasons: 1. Introducing non-thermal electrons pushes the 86 GHz image size to the acceptable range as thermal models typically exhibit small image sizes, and 2. the m-ring width is found to be smaller for the hybrid models. This could be due to a change in the gas density scaling that is required to match the 230GHz flux. Nonthermal models require a smaller normalization value, meaning a smaller electron number density as compared to the corresponding thermal models. A decrease in the number density would lower the optical depth as well, which could lead to a thinner photon ring. Ultimately, the number of passing models do not change (3 for thermal and 4 for nonthermal models), but the passing models are different: 2 SANE edge-on models from the thermal set and 2 MAD spin 0.5 Rhigh 1 models from the nonthermal set. Additionally, the $\mi{3}$ variability does not change when adding a power-law component to the eDF, except for retrograde SANE models, which perform better than their thermal counterparts.
-%..............................................................................
-%\subsubsubsection{ALMA lightcurves}
 
-
-
-%..............................................................................
-%\subsubsubsection{\Mring}
-
-%\note{Razi to write here about variable $\kappa$ models.  Define a subsection, describe the results and how they differ from the thermal results.}\kc{might be better to move this to 4.2.3 along with bhac/bhoss results}
-
-% cfg 12-dec: we will comment this out by 13-dec unless we get more info, to here <=
-
-%------------------------------------------------------------------------------
 \subsubsection{Constant \texorpdfstring{$\kappa$}{kappa} models with \texorpdfstring{$\kappa = 5$}{kappa = 5}}
 
 Next we consider a model in which {\em all} electrons are in a $\kappa$ eDF, which has a thermal core and a power-law tail.  In the models considered in this section, we set $\kappa = 5$ everywhere,  motivated by \cite{2016PhRvL.117w5101K}, who found $\kappa = 5$ to be a good fit to the ion DF in a 3D hybrid simulation of MHD turbulence. A similar application of $\kappa$ eDFs with fixed $\kappa$ values for SgrA can be found in \citet{davelaar2018}.  The power-law tail then has $p = \kappa - 1 = 4$, and at high frequency $\nu L_\nu \sim \nu^s$ where $s = 2 - \kappa/2 = -1/2$.
@@ -622,7 +531,7 @@ In particular, we set
   w      &= \frac{ \kappa -3 }{\kappa} \Theta_e.
 \end{align}
 
-We use the emissivity and absorptivity, computed numerically for the interval $3 < \kappa \le 8$, from  \cite{2016ApJ...822...34P}. For $\kappa > 8$ we substitute a thermal eDF.  As in the standard models we turn off emission at $\sigma > 1$.
+We use the emissivity and absorptivity, computed numerically for the interval $3 < \kappa \le 8$, from  \cite{2016ApJ...822...34P}. For $\kappa > 8$ we substitute a thermal eDF.  As in the fiducial models we turn off emission at $\sigma > 1$.
 {The variable $\kappa$ models are computed from \hamr and \bhac GRMHD models where the time windows $30-35$\,kM (\hamr) and $25-30$\,kM (\bhac) are used. For the radiative transfer \ipole is applied to the \hamr models and the GRRT code \bhoss is employed for the \bhac models. For both models an image is created every 10\,M and we iterate the mass unit to obtain an average flux of 2.4\,Jy at 230\,GHz. In order to obtain the X-ray luminosity of the models, the monte carlo radiative transfer code \grmonty is connected to the \hamr models.}\\
 %\cmf{The following text is for the \bhac models}
 The required mass accretion rate to obtain 2.4\,Jy increases on average by 4\% as compared to the thermal. The larger mass accretion rate increases the number density of electrons, $n_e$, and thus the variable kappa models are slightly optically thicker than the thermal models.
@@ -771,7 +680,7 @@ Variability increases with the tilt. In tilted disks, accretion occurs via thin 
 
 %\cfg{Statement about which models pass and fail MI}
 %\kc{
-These models generally fare well with the $\mi{3}$ constraint with 20/27 models passing. A few models with $\rm R_{high}=160$ and one model with $\rm R_{high}=40$ fail.  This does not mean that tilted models are less variable, however, since the the constraints on \mi{3} are more than a factor of 2 weaker for the $3000\tg$ integrations considered than for the $15 \times 10^3\tg$ integrations used in our standard models.
+These models generally fare well with the $\mi{3}$ constraint with 20/27 models passing. A few models with $\rm R_{high}=160$ and one model with $\rm R_{high}=40$ fail.  This does not mean that tilted models are less variable, however, since the the constraints on \mi{3} are more than a factor of 2 weaker for the $3000\tg$ integrations considered than for the $15 \times 10^3\tg$ integrations used in our fiducial models.
 %}
 
 $2.2\um$ flux also increases with tilt.  The $2.2\um$ flux exceeds the 1.0 mJy limit for all 3 tilts, with a few exceptions, e.g., $R_{\rm high}=160$ models at $10^{\circ}$ inclination, which makes it difficult to favor the aligned case over the tilted one. Furthermore, the presence of misalignment destroys the axisymmetric nature of the accretion flow.  The current model set covers a small parameter space in inclination and $R_{\rm high}$.  A thorough exploration of the source azimuthal angle with respect to the observer is left to future studies.
@@ -781,7 +690,7 @@ To summarize: for the model set considered here tilt primarily affects variabili
 %==============================================================================
 \subsection{Stellar Wind Fed Models}
 
-The accretion models of \cite{2020ApJ...896L...6R, 2020MNRAS.492.3272R, 2018MNRAS.478.3544R} track plasma from  magnetized stellar winds down to the event horizon and provide a self-consistent picture of the origin of both gas and magnetic fields in the accreting plasma in \sgra.  The resulting inflow does not fully circularize, so the models also provide a distinct alternative to the standard models, which {\em assume} that the torus initial conditions relax to a astrophysically accessible state for the inner accretion flow.
+The accretion models of \cite{2020ApJ...896L...6R, 2020MNRAS.492.3272R, 2018MNRAS.478.3544R} track plasma from  magnetized stellar winds down to the event horizon and provide a self-consistent picture of the origin of both gas and magnetic fields in the accreting plasma in \sgra.  The resulting inflow does not fully circularize, so the models also provide a distinct alternative to the fiducial models, which {\em assume} that the torus initial conditions relax to a astrophysically accessible state for the inner accretion flow.  Recall that in the wind-fed models the density of the wind is fixed, so the 230\GHz flux density is matched to observations by varying $\Rh$ instead.  
 
 We consider two versions of the model: one in which the stellar wind magnetization is low ($\beta = 10^6$) and another and a second in which the magnetization is high ($\beta = 10^2$). $\Rh$ is adjusted until each model has the observed time-averaged 230\GHz flux density, with $\Rh = 13$ ($\beta = 10^6$) and $\Rh = 28$ ($\beta = 10^2$).
 
@@ -789,113 +698,3 @@ Both wind-fed models fail the \mring width test, producing a width that is too s
 
 Both non-EHT and EHT constraints have the power to test the wind-fed model.  It is {\em not} possible to draw broad conclusions about the viability of the wind-fed models in general, however, since the two models tested here contain only a single spin ($a_\star=0$) and all use the $\Rh$ thermal eDF model.
 
-%==============================================================================
-%% \subsection{Featured Models}
-%% \label{sec:bestbets}
-
-%% \begin{deluxetable*}{cccccc}
-%%   \tablewidth{\textwidth}
-%%   \tabletypesize{\footnotesize}
-%%   \renewcommand{\arraystretch}{1.1}
-%%   %
-%%   \tablehead{%
-%%     \colhead{Model}             &%
-%%     \colhead{Spin $\abh$}       &%
-%%     \colhead{Magnetization}     &%
-%%     \colhead{eDF type}          &%
-%%     \colhead{Temp. ratio $\Rh$} &%
-%%     \colhead{Inclination $i$}    %
-%%   }
-%%   \startdata
-%%   A & 0.94 & SANE & thermal                      &  40 & $30\degree$ \\ % Frankfurt
-%%   B & 0.5  & MAD  & thermal                      &  40 & $30\degree$ \\ % Illinois
-%%   C & 0.5  & MAD  & nonthermal variable $\kappa$ & 160 & $30\degree$    % HAMR
-%%   \enddata
-%%   %
-%%   \caption{List of featured models.  The models were selected to sample the plausible regions of parameters space.  We discuss best-bet models (which are close to model B) later.  See Section~\ref{sec:bestbets} for detailed descriptions of these
-%%     models and Section~\ref{sec:discussions} for discussions.}
-%%   \label{tab:bestbets}
-%% \end{deluxetable*}
-
-% cfg 15-dec: correct, that seemed like too much.
-%\ckc{We don't have pizza plot for all the constraints now in the main text?}
-
-%% We have applied 11 observational constraints in this section.
-%% We now consider combining all constraints, excluding variability,
-%% under the hypothesis that
-%% \emph{i}) there is a missing physical ingredient in the models that
-%% would lower variability, but
-%% \emph{ii}) that missing ingredient would not vitiate the model
-%% comparison process entirely.
-
-%% The 6 EHT derived constraints are most constraining on the ring size
-%% and width, roughly reduce the dimension of the parameter space by two,
-%% and carving out a region of the parameter space that prefers prograde
-%% models at low-to-intermediate inclinations
-%% (Figure~\ref{fig:all_EHT_constraints}).
-
-%% The 4 non-EHT constraints (230GHz lightcurve variability excluded) are
-%% most constraining on the strength of the magnetic field and the
-%% electron temperature, roughly reduce the dimension of the parameter
-%% space by another two, and prefer high ion-electron ratio MAD models
-%% (Figure~\ref{fig:non_eht_cuts}).
-
-%% While there are also isolated pockets in the parameter space that pass
-%% many constraints, however, even with an extensive study like this, it
-%% is difficult to draw strong conclusion about these regions.
-%% Among the tens of models that pass 10/11 constraints (see
-%% Appendix~\ref{app:tables}), we feature three models in this section,
-%% summarized in Table~\ref{tab:bestbets}.
-%% These models are selected because they represent the different
-%% magnetic field strength (both SANE and MAD) and eDFs (both thermal and
-%% nonthermal), and represent clusters of passing models in the parameter
-%% space.
-
-%% In Figure~\ref{fig:sample_vas_seds}, we shows the visibility amplitudes and
-%% SEDs of the the feature models and compare them with both EHT and
-%% non-EHT data.
-%% In both panels, symbols in black are from observations; blue is
-%% Model~A ($\abh=0.94$ SANE, $\Rh=40$, $i=30$); orange is Model~B
-%% ($\abh=0.5$ MAD, $\Rh=40$, $i=30$); and green is Model~C ($\abh=0.5$
-%% MAD variable $\kappa$, $\Rh=160$, $i=30$); see
-%% Table~\ref{tab:bestbets}.
-
-%% In the left panel, we show the visibility amplitudes as function of
-%% $(u, v)$ distance similar to Figure~\ref{fig:passfail_va}.
-%% For the observation, we plot 10\sec incoherent averaged data from the
-%% HOPS pipeline on \aprilvii.
-%% For the models, the solid curves are the VAs for only the position
-%% angle $0\degree$ (parallel to the spin axis) for a particular
-%% snapshot.
-%% while the transparent bands show the 1 to 99 percentiles for all
-%% position angles and all time.
-%% This panel shows that the feature models agree well with the EHT VLBI
-%% data.
-
-%% In the right panel, we show the SEDs for the feature models and again
-%% compare them with the observation constraints.
-%% The solid lines are the mean SEDs, while the transparent bands show
-%% the range across different snapshots.
-
-%% In Figure~\ref{fig:bestbet_imgs}, we show the 86\GHz and 230\GHz ray
-%% traced images of the feature models.
-%% The different columns are Models~A, B, and C, respectively.
-%% The top row shows the simulated 86\GHz images, the middle row shows
-%% the simulated 230\GHz images, and the bottom row shows the simulated
-%% 230\GHz images filtered by a Butterworth filter at
-%% 10$\,\mathrm{G}\lambda$, which approximate the resolution of the 2017
-%% EHT array \citep{2020arXiv200406210P}.
-
-%% On one hand, although Model~A looks different than Model~B and C, they
-%% pass all the constraints (excluding variability) we described in this
-%% paper.
-%% On the other hand, Model~B and C, even though one is thermal and the
-%% other is nonthermal, look remarkable similar at 230\GHz.
-%% The former point suggests that there is still ambiguity in the image
-%% morphology, consistent with \citetalias{PaperIII} and
-%% \citetalias{PaperIV}'s conclusions.
-%% The later point suggests that even for the same image morphology,
-%% there are still degeneracy in the eDF, suggesting the importance of
-%% new multiwavelength observations.
-%% In the following sections, we will provide a more in-depth discussions
-%% on their implications.

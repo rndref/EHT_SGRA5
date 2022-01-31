@@ -250,12 +250,11 @@ The transfer step requires that we specify any parameters associated with the eD
 \label{sec:eDF}
 
 In \emph{thermal} models electron energies are distributed into the Maxwell-J{\"u}ttner distribution function:
-\begin{align}
+\begin{align}\label{eq:thermaleDF}
   \frac{1}{n_e}\frac{dn_e}{d\gamma} = \frac{\gamma^2 \sqrt{1-1/\gamma^2}} {\Theta_e K_2(1/\Theta_e)} \exp\left(-\frac{\gamma}{\Theta_e}\right);
-  \label{eq:thermaleDF}
 \end{align}
 where $K_2$ is the modified Bessel function of the second kind and $\gamma$ is the Lorentz factor of an electron. Recall $\Theta_e = k_b T_e/(m_e c^2)$, which is determined by the ion-electron temperature ratio $R \equiv T_i/T_e$:
-\begin{align}
+\begin{align}\label{eq:te_vs_R}
   T_e=\frac{2 m_p u}{3 k_B \rho (2+R)}.
 \end{align}
 Here $u$ and $\rho$ are the internal energy density and rest-mass density from the GRMHD simulation, and we assume that the ions are nonrelativistic with adiabatic index is $5/3$ and the electrons are relativistic with  adiabatic index is $4/3$.
@@ -265,9 +264,8 @@ The temperature ratio in a parcel of plasma depends on a balance between microph
 %Plasma heating models suggest that the partitioning of dissipation between ions and electrons depends on the local magnetic properties \citep[e.g.,][]{1999ApJ...520..248Q, 2010MNRAS.409L.104H, Kawazura771}.  This motivates a prescription in which the temperature ratio is a function of the plasma
 $\beta \equiv P_\mathrm{gas}/P_\mathrm{mag}$ \citep{2015ApJ...799....1C}.
 We adopt the same model as \citetalias{M87PaperV} and \citetalias{M87PaperVIII}, where $R$ is a smooth function adopted from \cite{2016A&A...586A..38M}:
-\begin{equation}
+\begin{equation}\label{eq:rhigh_prescription}
   R = \frac{T_i}{T_e} = \Rh \frac{b^2}{b^2+1} + \Rl \frac{1}{b^2+1}
-  \label{eq:rhigh_prescription}
 \end{equation}
 where $b \equiv \beta/\beta_\mathrm{crit}$.
 This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.  We fix $\Rl = 1$ (consistent with the long cooling time in \sgra; see discussion in \citealt{M87PaperVIII}) and $\beta_\mathrm{crit} = 1$, but allow $\Rh$ to vary from 1 to 160.
@@ -386,7 +384,7 @@ The library contains multiple, redundant models for the fiducial models and vari
 Wind Accretion & \ipole & 13, 28  &   N/A     &  No  & 10    &     \\
 \hline
 \multicolumn{4}{l}{\it Thermal critical $\beta$ model} & & & \\
-\kharma & \ipole & 1, 40, 160 &  10, 50, 90 &  No & 30-35 &  \\
+\kharma & \ipole & N/A &  10, 50, 90 &  No & 30-35 &  \\
 \hline
 \multicolumn{4}{l}{\it Thermal + power-law models} & & & \\
 \hamr &  \ipole & 1, 40, 160 &  10, 50, 90 &  No & 30-35 & $p = 4$ \\
