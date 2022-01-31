@@ -1,5 +1,5 @@
 \begin{deluxetable*}{l|ccccc}\label{tab:fail_one}
-\tablecaption{Models that fail only one constraint}
+\tablecaption{Exploratory models that fail only one constraint}
 \tablehead{
 \colhead{Code/Setup} &
 \colhead{MAD/SANE} &
@@ -9,25 +9,6 @@
 \colhead{Constraint Failed}
 }
 \startdata
-\kharma Thermal					&	SANE	&	0.94	&	10		&	40		&	86\,GHz size		\\
-\kharma Thermal					&	SANE	&	0.94	&	30		&	40		&	86\,GHz size		\\
-\kharma Thermal					&	SANE	&	0.94	&	50		&	1		&	86\,GHz size		\\
-\kharma Thermal					&	MAD		&	0.5		&	30		&	40		&	\mi{3}				\\
-\kharma Thermal					&	MAD		&	0.5		&	30		&	160		&	\mi{3}				\\
-\kharma Thermal					&	MAD		&	0.94	&	10		&	160		&	\mi{3}				\\
-\kharma Thermal					&	MAD		&	0.94	&	30		&	160		&	\mi{3}				\\
-\hline
-\bhac Thermal					&	SANE	&	-0.5	&	30		&	40		&	Mring diameter   	\\
-\bhac Thermal					&	SANE	&	0		&	30		&	40		&	Mring diameter   	\\
-\bhac Thermal					&	SANE	&	0.5		&	10		&	40		&   \mi{3}  			\\
-\bhac Thermal					&	SANE	&	0.5		&	10		&	160		&   \mi{3}  			\\
-\bhac Thermal					&	SANE	&	0.5		&	30		&	40		&   \mi{3}  			\\
-\bhac Thermal					&	SANE	&	0.5		&	30		&	160		&   \mi{3}  			\\
-\bhac Thermal					&	MAD		&	0.5		&	30		&	160		&   \mi{3}  			\\
-\bhac Thermal					&	MAD		&	0.5		&	50		&	160		&   \mi{3}  			\\
-\bhac Thermal					&	MAD		&	0.94	&	10		&	160		&   \mi{3}  			\\
-\bhac Thermal					&	MAD		&	0.94	&	30		&	160		&   \mi{3}  			\\
-\hline
 \bhac $\kappa(\sigma, \beta)$	&	SANE	&	0		&	70		&	1		&	86\,GHz flux		\\	  
 \bhac $\kappa(\sigma, \beta)$	&	MAD		&	0.5		&	10		&	40		&	2.2\,$\mu$m flux	\\	  
 \bhac $\kappa(\sigma, \beta)$	&	SANE	&	0.5		&	10		&	40		&	\mi{3}   			\\	  
@@ -65,3 +46,5 @@
 \tablecomments{Models which pass all of the constraints except for one. Since no model passes all constraints, these represent the parameters that are closest to being consistent with observations.}
 
 \end{deluxetable*}
+\end{table*} 
+

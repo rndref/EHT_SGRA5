@@ -323,7 +323,7 @@ The plasma mass scale parameter $\Munit$ controls the plasma emissivity and the 
 \end{figure*}
 
 Given an eDF, density scale $\Munit$, the inclination $i$, and radiative transfer coefficients based on local properties of the plasma, the emergent radiation is obtained by integrating the radiative transfer equation.
-We use two classes of numerical methods: ray tracing to generate synthetic images, and Monte Carlo to generate spectral energy distributions (SEDs).
+We use two classes of numerical methods: ray tracing to generate synthetic images ({\tt ipole}, \citealt{2018MNRAS.475...43M}), and Monte Carlo to generate spectral energy distributions (SEDs, \citealt{2009ApJS..184..387D}).
 
 All radiative transport calculations are carried out using the fast light approach, in which plasma variables are read from a single GRMHD dump file and are assumed not to change during ray tracing.
 It has been demonstrated by \citet{2010ApJ...717.1092D} (and recently by \citealt{2021MNRAS.508.4282M}) that including light travel effects in the model introduces minor changes to light curves and images.

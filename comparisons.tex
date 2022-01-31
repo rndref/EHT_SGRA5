@@ -55,7 +55,7 @@ The asymmetry parameter is typically not well constrained. Most rejected models 
 
 The ring diameter is better constrained than the asymmetry parameter and varies systematically from model to model. For example, the distribution of diameters is much broader at $\Rh = 1$ than at larger values of $\Rh$.  More models therefore fail the ring diameter test, which rejects 33\% of \kharma models, 35\% of \bhac models, and 39\% of \hamr models.  
 
-Most of the models that fail are low inclination models with ring diameters that are too large (no models fail because the ring diameter is too small).  For example, the $i = 10$deg, $\Rh = 10$ SANE models fail for all spins with $\abh \le 0$ because the ring is too large.  The same is true for all $i = 10$deg MAD models with $\Rh = 1$.
+Most of the models that fail are low inclination models with ring diameters that are too large (no models fail because the ring diameter is too small).  For example, the $i = 10\degree$, $\Rh = 10$ SANE models fail for all spins with $\abh \le 0$ because the ring is too large.  The same is true for all $i = 10\degree$ MAD models with $\Rh = 1$.
 
 % cfg 1/30: removing this claim because of questions raised in internal report
 %Notice that the ring diameter is not degenerate with the second moment constraint; all models that fail the latter pass the former.  Recall that in addition to a blurred ring, the \mrings model contains a centered Gaussian component; the Gaussian tends to grow to absorb the emission when the ring is very extended.
@@ -75,7 +75,7 @@ Figure~\ref{fig:mring_width_salsa} summarizes the \mring  pass/fail status of th
 
 \subsubsubsection{EHT Constraint Summary}
 
-We can combine all EHT constraint cuts with a logical {\em and} operation.  The results are summarized in Figure~\ref{fig:all_EHT_constraints}.  Evidently EHT data alone are capable of discriminating between models.   The edge-on ($i = 90\degree$) models all fail, with some failing \mring width, diameter, asymmetry and the null location constraint.  The cuts clearly favor $\abh > 0$ models, with a few exceptions.  There are two clusters of models that do not fail any constraints in any models: positive spin MAD models at low inclination, and ositive spin SANE models, also at low inclination.   
+We can combine all EHT constraint cuts with a logical {\em and} operation.  The results are summarized in Figure~\ref{fig:all_EHT_constraints}.  Evidently EHT data alone are capable of discriminating between models.   The edge-on ($i = 90\degree$) models all fail, with some failing \mring width, diameter, asymmetry and the null location constraint.  The cuts clearly favor $\abh > 0$ models, with a few exceptions.  There are two clusters of models that do not fail any constraints in any models: positive spin MAD models at low inclination, and positive spin SANE models, also at low inclination.   
 
 \begin{figure*}\label{fig:all_EHT_constraints}
   \centering
@@ -119,7 +119,7 @@ Similarly to the 86\GHz flux, the 86\GHz size is sensitive to optical depth as a
 %\cfg{need cites to earlier work for par below}
 
 The 86\GHz size is sensitive to inclination.  For example, the SANE, $\abh = 0.5$, $\Rh = 40$ models are too small at low inclination and too large when seen edge-on, because the edge-on models have prominent limb-brightened jet walls that are visible to 100$\mu$as.  The 86\GHz size constraint rejects
-$58\%$ of models and is therefore one of the tightest constraints.
+$42\%$ of models and is therefore one of the tightest constraints.
 
 The physical picture for 86\GHz source size is complicated, as is the extraction of the constraint itself from observations.  Notice that (1) two different values for the 86\GHz intrinsic source size have been reported in the literature (see Section \ref{sec:86size}); (2) scattering is $7$ times stronger at 86\GHz than at 230\GHz; (3) scattering must be subtracted accurately to obtain the intrinsic source size; (4) the error bars for the 86\GHz source size are narrow and this plays a key role in determining the strength of the constraint.
 
@@ -177,7 +177,7 @@ We find that: (1) as a group, the fiducial models are more variable than the dat
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{./figures/mi_hist.pdf}
-  \caption{Distributions of 3-hour modulate index $\mi{3}$ for Frankfurt and Illinois models (black), compared to distributions from historical observations (gray). The distributions for models with the lowest (blue) and highest (red) average $\mi{3}$ for SANEs and MADs are also shown. The heights of these distributions have been scaled for clarity.
+  \caption{Distributions of 3-hour modulate index $\mi{3}$ for \bhac and \kharma models (black), compared to distributions from historical observations (gray). The distributions for models with the lowest (blue) and highest (red) average $\mi{3}$ for SANEs and MADs are also shown. The heights of these distributions have been scaled for clarity.
   }
   \label{fig:cmp_ALMA_var}
 \end{figure}
@@ -187,11 +187,13 @@ We find that: (1) as a group, the fiducial models are more variable than the dat
 
 The power-law index $b$ of the variance $\sigma_\text{var}^2 (|u|)$ at 2--6$~{\rm G}\lambda$ of the models is generally in good agreement with the value measured  from the 2017 EHT campaign (excluding April 11). The amplitude $\afour^2$, however, varies depending on the model.
 
-Figure~\ref{fig:cmp_VLBI_var} shows the distribution of $(\afour^2, b)$ from the EHT observation, along with the distribution across all fiducial models. The models are shown together, but each model consists of only three measurements of $\afour^2$, one on each window of length $5 \times 10^3 \tg$. This makes a direct comparison with the measured value difficult, as the distribution for a given model is poorly constrained.
+Figure~\ref{fig:cmp_VLBI_var} shows the distribution of $(\afour^2, b)$ from the EHT observation, along with the distributions across all fiducial models. For a single model, the number of measurements of $(\afour^2, b)$ is equal to the number of windows for that model (three in most cases). 
 
-\citet{Georgiev_2022} gives an estimate of the typical width of the distribution as $\log_{10}(\afour^2) \pm 0.1$. We can obtain a rough estimate for how the models fare compared to the measurement by taking the mean across windows and the estimate for the width and comparing this with the measurement distribution under the assumption that both are distributed normally. With this approach, 121/200 models (63 SANE and 58 MAD) agree with the data within 1\%, although we caution against interpreting this number as the number of passing or failing models, since the uncertainties in the model distribution are so large.
+%The models are shown together, but each model consists of only three measurements of $\afour^2$, one on each window of length $5 \times 10^3 \tg$. This makes a direct comparison with the measured value difficult, as the distribution for a given model is poorly constrained.
 
-By this measure the models tend to be slightly more variable than the observation, with face-on models performing better than edge-on models. For SANE models, $\Rh = 10$ tend to be more variable than others. For MAD models, there is a slight preference for lower $\Rh$.
+%\citet{Georgiev_2022} gives an estimate of the typical width of the distribution as $\log_{10}(\afour^2) \pm 0.1$. We can obtain a rough estimate for how the models fare compared to the measurement by taking the mean across windows and the estimate for the width and comparing this with the measurement distribution under the assumption that both are distributed normally. With this approach, 121/200 models (63 SANE and 58 MAD) agree with the data within 1\%, although we caution against interpreting this number as the number of passing or failing models, since the uncertainties in the model distribution are so large.
+
+The models tend to be slightly more variable than the observation, with face-on models performing better than edge-on models. For SANE models, $\Rh = 10$ tend to be more variable than others. For MAD models, there is a slight preference for lower $\Rh$.
 
 We have also considered a set of thermal, $\Rh$, MAD models run with the \koral code out to $\sim 100,000\tg$.  These models enable us to assess the importance of integration time for application of the constraints.  They permit us to obtain more accurate distributions for the constraint quantities and to assess whether the constraints evolve from the beginning to end of the integrations. We do not see evidence for evolution in the \koral model set (a full pass/fail table is given in Appendix~\ref{app:tables}, Table~\ref{tab:koralPF} and more detailed discussion in Appendix~\ref{app:variability} and in \citet{Georgiev_2022}). The \koral pass/fail results are similar to those for comparable models in the fiducial model sets. Moreover the constraints measured at the beginning of the evolution are similar to those measured at the end.
 
@@ -206,71 +208,7 @@ We have also considered a set of thermal, $\Rh$, MAD models run with the \koral 
 
 %------------------------------------------------------------------------------
 \subsubsection{Summary of Constraints on Fiducial Models}
-
-\begin{table*}
-\caption{Models that fail only one constraints}
-\centering
-\begin{tabular}{l|cccc|c}
-\hline
-Code/Setup						& MAD/SANE	&	spin	&	inc		&	$\Rh$	&	Constraint failed	\\
-\hline
-\kharma Thermal					&	SANE	&	0.94	&	10		&	40		&	86\,GHz size		\\
-\kharma Thermal					&	SANE	&	0.94	&	30		&	40		&	86\,GHz size		\\
-\kharma Thermal					&	SANE	&	0.94	&	50		&	1		&	86\,GHz size		\\
-\kharma Thermal					&	MAD		&	0.5		&	30		&	40		&	\mi{3}				\\
-\kharma Thermal					&	MAD		&	0.5		&	30		&	160		&	\mi{3}				\\
-\kharma Thermal					&	MAD		&	0.94	&	10		&	160		&	\mi{3}				\\
-\kharma Thermal					&	MAD		&	0.94	&	30		&	160		&	\mi{3}				\\
-\hline
-\bhac Thermal					&	SANE	&	-0.5	&	30		&	40		&	Mring diameter   	\\
-\bhac Thermal					&	SANE	&	0		&	30		&	40		&	Mring diameter   	\\
-\bhac Thermal					&	SANE	&	0.5		&	10		&	40		&   \mi{3}  			\\
-\bhac Thermal					&	SANE	&	0.5		&	10		&	160		&   \mi{3}  			\\
-\bhac Thermal					&	SANE	&	0.5		&	30		&	40		&   \mi{3}  			\\
-\bhac Thermal					&	SANE	&	0.5		&	30		&	160		&   \mi{3}  			\\
-\bhac Thermal					&	MAD		&	0.5		&	30		&	160		&   \mi{3}  			\\
-\bhac Thermal					&	MAD		&	0.5		&	50		&	160		&   \mi{3}  			\\
-\bhac Thermal					&	MAD		&	0.94	&	10		&	160		&   \mi{3}  			\\
-\bhac Thermal					&	MAD		&	0.94	&	30		&	160		&   \mi{3}  			\\
-\hline
-\bhac $\kappa(\sigma, \beta)$	&	SANE	&	0		&	70		&	1		&	86\,GHz flux		\\	  
-\bhac $\kappa(\sigma, \beta)$	&	MAD		&	0.5		&	10		&	40		&	2.2\,$\mu$m flux	\\	  
-\bhac $\kappa(\sigma, \beta)$	&	SANE	&	0.5		&	10		&	40		&	\mi{3}   			\\	  
-\bhac $\kappa(\sigma, \beta)$	&	SANE	&	0.5		&	10		&	80		&	\mi{3}   			\\	  
-\bhac $\kappa(\sigma, \beta)$	&	SANE	&	0.5		&	10		&	160		&	\mi{3}   			\\	  
-\bhac $\kappa(\sigma, \beta)$	&	SANE	&	0.5		&	30		&	40		&	\mi{3}   			\\	  
-\bhac $\kappa(\sigma, \beta)$	&	SANE	&	0.5		&	30		&	80		&	\mi{3}   			\\	  
-\bhac $\kappa(\sigma, \beta)$	&	SANE	&	0.5		&	30		&	160		&	\mi{3}   			\\	  
-\bhac $\kappa(\sigma, \beta)$	&	MAD		&	0.5		&	30		&	80		&	\mi{3}   			\\	  
-\bhac $\kappa(\sigma, \beta)$	&	MAD		&	0.5		&	50		&	160		&	\mi{3}   			\\	  
-\bhac $\kappa(\sigma, \beta)$	&	MAD		&	0.94	&	10		&	160		&	\mi{3}   			\\	  
-\bhac $\kappa(\sigma, \beta)$	&	MAD		&	0.5		&	30		&	160		&	\mi{3}				\\	  
-%\bhac $\kappa(\sigma, \beta)$	&	MAD		&	0.5		&	10		&	80		&	??					\\	%This fail two constraints, but only in the extended 15kM runs  
-%\bhac $\kappa(\sigma, \beta)$	&	MAD		&	0.5		&	10		&	160		&	??					\\	%This fail two constraints, but only in the extended 15kM runs   
-\hline
-\bhac $\epsilon = 0.05$			&	SANE	&	0.94	&	10		&	10		&	\mi{3}   			\\	
-\bhac $\epsilon = 0.05$			&	SANE	&	0.94	&	30		&	10		&	86\,GHz flux   		\\	
-\bhac $\epsilon = 0.05$			&	MAD		&	0.5		&	30		&	160		&	2.2\,$\mu$m flux   	\\	
-\bhac $\epsilon = 0.05$			&	MAD		&	0.5		&	50		&	160		&	2.2\,$\mu$m flux   	\\	
-\bhac $\epsilon = 0.05$			&	MAD		&	0.94	&	10		&	40		&	2.2\,$\mu$m flux   	\\	
-\hline
-\bhac $\epsilon = 0.10$			&	SANE	&	0.94	&	10		&	10		&	2.2\,$\mu$m flux   	\\	
-\bhac $\epsilon = 0.10$			&	MAD		&	0.5		&	30		&	160		&	2.2\,$\mu$m flux   	\\	
-\bhac $\epsilon = 0.10$			&	MAD		&	0.5		&	50		&	160		&	2.2\,$\mu$m flux   	\\	
-\bhac $\epsilon = 0.10$			&	MAD		&	0.94	&	10		&	40		&	2.2\,$\mu$m flux   	\\	
-\hline
-\bhac $\epsilon = 0.20$			&	SANE	&	0.94	&	10		&	10		&	2.2\,$\mu$m flux   	\\	
-\bhac $\epsilon = 0.20$			&	MAD		&	0.94	&	10		&	40		&	2.2\,$\mu$m flux   	\\	
-\bhac $\epsilon = 0.20$			&	MAD		&	0.94	&	10		&	160		&	2.2\,$\mu$m flux   	\\	
-\hline
-\bhac $\kappa = 5$				&	MAD		&	0.94	&	50		&	1		&	2.2\,$\mu$m flux   	\\	
-\hline
-\hamr 30$^\circ$ tilt  			&	INSANE	&	0.94	&	10		&	160		&	86\,GHz size		\\	
-
-
-\end{tabular}
-\label{tab:fail_one}
-\end{table*} 
+\input{Tables/fail_one_thermal}
 
 \label{sec:summarythermal}
 
@@ -585,6 +523,8 @@ If non-thermal particles are included also in the disk, either via a power-law w
 
 If all constraints are considered all non-thermal models fail. However there are a few models which only fail the lightcurve variability, $\mi{3}$. These models are: a \hamr MAD $p=4$ model with $a^\star=0.5$ seen under an inclination of 90$^\circ$ and $R_{\rm high}=1$ and a \bhac MAD variable $\kappa$ model with spin $a^\star=0.5$ inclination 30$^\circ$ and $R_{\rm high}=160$. These two models agree with the cluster of thermal models found for both \bhac and \kharma models (see Sect.~\ref{sec:summarythermal}).
 \cmf{there is one \bhac SANE $\varepsilon=0.05$ with spin $a^\star=0.94$, inclination 10$^\circ$, and $R_{\rm high}=10$ which only fails M3. However this one would fail most likely the polarisation constraint. How do include this here? }
+
+\input{Tables/fail_one_nonthermal}
 
 %The exception is for the powerlaw models, where the addition of nonthermal electrons increases the 86GHz size by 50\%. \cmf{howerver, the pass fraction is not changed}
 
