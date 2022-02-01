@@ -37,7 +37,7 @@ the visibilities near zero baseline in the \uv domain, so short
 baseline VAs can be used to directly estimate the source size.
 
 This procedure is used in \citetalias{PaperII} to set an upper limit
-of 95\uas FWHM (full width at half maximum; standard deviation $\times \sqrt{8\log{2}}$.) on the second moment and lower limit of 38\uas FWHM on the second moment along a direction
+of 95\uas FWHM (full width at half maximum; standard deviation $\times \sqrt{8\ln{2}}$.) on the second moment and lower limit of 38\uas FWHM on the second moment along a direction
 through the source corresponding to the orientation of the short
 baselines (SMT-LMT and ALMA-LMT).  This is done without any assumption
 about the structure of the source and is therefore quite  permissive.
@@ -97,10 +97,12 @@ descattered values in the 6--8\,$\mathrm{G}\lambda$ range; refractive
 scattering, on the other hand, introduces noise at all baselines of
 order 0.5--3\%, depending on the particular characteristics of the
 scattering screen \citep{2018arXiv180501242P, 2018ApJ...865..104J}.
-To account for these effects, we classify as compliant a model snapshot with $|V|$
+To account for these effects, we classify as compliant a model snapshot with
+%$|V|$
+VA
 in this range that is $< 5\%$ of the zero baseline flux as compliant.
 
-To apply this constraint, we compute the VA $V$ of each model snapshot
+To apply this constraint, we compute the VA of each model snapshot
 along position angles (PAs) $0^\degree$, $45^\degree$, $90^\degree$,
 $135^\degree$ (because of Hermitian symmetry we need only consider PAs in the $0-180\deg$ range).
 We find the first minimum numerically and compute the median VAs
@@ -108,10 +110,11 @@ between 6 and 8\,$\mathrm{G}\lambda$.
 We classify a snapshot as compliant if
 \emph{i})~for at least one position angle the first minimum falls
 between 2.5 and 3.5\,$\mathrm{G}\lambda$ and
-\emph{ii})~at no position angle do the median VAs exceed $4\% /
-50\%$ of the zero-baseline flux.
-\michi{Does this mean 4\% < VA < 50\%? Then I would rephrase: "at no position angle do the VAs fall outside the range 4\%--50\%" Otherwise I don't understand this sentence.}
-\ckc{It's a division.  I.e. , VA < 0.04 / 0.5 = 0.08.}
+\emph{ii})~at no position angle do the median VAs exceed
+$4\% / 50\% = 0.08$
+of the zero-baseline flux.
+%\michi{Does this mean 4\% < VA < 50\%? Then I would rephrase: "at no position angle do the VAs fall outside the range 4\%--50\%" Otherwise I don't understand this sentence.}
+%\ckc{It's a division.  I.e. , VA < 0.04 / 0.5 = 0.08.}
 %See also Figure~\ref{fig:sample_va} and its caption.
 
 We evaluate the fraction of snapshots from each model that are
@@ -125,12 +128,12 @@ To test model compliance with more general properties of the EHT data that are n
 
 \citetalias{PaperIV} fits an ``\mring'' source model to the April~7 data.  Here we use a simplified \mring model: a $\delta$ function in radius with diameter $d$ multiplied by a truncated (up to $m = 3$; Paper IV truncates at $m = 4$) Fourier series, convolved with a Gaussian of width $w$.  In addition the model contains a centered Gaussian component, with amplitude and width as free parameters, to absorb large scale emission and emission interior to the ring.\footnote{In \cite{PaperIV} this is referred to as an mG-ring.}  The simplified \mring model has 10 parameters;\footnote{The 10 parameters are: ring diameter, ring width, fraction of the flux in the Gaussian component, width of the Gaussian, and six parameters describing the amplitude and phase of the three Fourier components} 3 well constrained and physically interpretable parameters are used here: the \mring diameter $d$, the \mring width $w$ (FWHM of the convolving  Gaussian), and the $m=1$ relative amplitude $\beta_1$ (the ``asymmetry'').
 
-We fit the \mring independently to snapshots consisting of 2-minute intervals of EHT data. Over these short intervals, we approximate the source as static.  Uncertainties in the fitted \mring parameters are dominated by the limited baseline coverage during these snapshots rather than by calibration uncertainties or thermal noise. Because snapshots that are close in time sample nearly identical baselines, they do not provide additional model constraints.
+We fit the \mring independently to snapshots consisting of 2-minute intervals of EHT data (this averaging interval is consistent with that used in \citetalias{PaperIV}). Over these short intervals, we approximate the source as static.  Uncertainties in the fitted \mring parameters are dominated by the limited baseline coverage during these snapshots rather than by calibration uncertainties or thermal noise. Because snapshots that are close in time sample nearly identical baselines, they do not provide additional model constraints.
 
-Thus, to compare fitted \mring parameters from the EHT data to those for synthetic data from simulations, we select a subset of ten 120-\sec scans (averaging is consistent with that used in \citetalias{PaperIV}) that have detections on more than 10 baselines and integration times at all stations $> 40s$. The selected scans are as widely separated in time as possible so that they sample distinct baseline coverage, with an average separation of $\simeq 1240\sec \simeq 60 \tg$, which is small compared to the VA correlation time in the models \citep{Georgiev_2022}.  Note the selected scans overlap with those found in Farah et al. 2022.
+Thus, to compare fitted \mring parameters from the EHT data to those for synthetic data from simulations, we select a subset of ten 120-\sec scans  that have detections on more than 10 baselines and integration times at all stations $> 40s$. The selected scans are as widely separated in time as possible so that they sample distinct baseline coverage, with an average separation of $\simeq 1240\sec \simeq 60 \tg$, which is small compared to the VA correlation time in the models \citep{Georgiev_2022}.  Note the selected scans overlap with those found in Farah et al. 2022.
 Only small changes in model selection were observed if any one scan was removed from the comparison.  The data were descattered before fitting, that is, the VA were divided by the scattering kernel. 
 
-Maximum likelihood \mring parameters were found for each scan using the Julia package \texttt{Comrade.jl} \cite{comrade} in combination with a differential evolution-based optimizer from \cite{meijia} found in the Julia package \texttt{Metaheuristics.jl}\footnote{The set of scripts used for the fits can be found in the GitHub repo \url{https://github.com/ptiede/EHTGRMHDCal}}. For more details about the m-ring model see section XYZ in \cite{PaperIV}.
+Maximum likelihood \mring parameters were found for each scan using the Julia package \texttt{Comrade.jl} \cite{comrade} in combination with a differential evolution-based optimizer from \cite{meijia} found in the Julia package \texttt{Metaheuristics.jl}\footnote{The set of scripts used for the fits can be found in the GitHub repo \url{https://github.com/ptiede/EHTGRMHDCal}}. For more details about the \mring model see section XYZ in \cite{PaperIV}.
 
 The maximum likelihood \mring parameters are listed in Table~\ref{tab:mringfits}.  Evidently the fit parameters are noisy.  The fits for $d$ range from 39\uas to 84\uas, for $w$ from 9\uas to 21\uas, and for $\beta_1$ from $0.04$ to $0.48$ (we require $\beta_1 \le 0.5$ to guarantee  positivity of the model image).  The variation in fit parameters could be caused by source variability, thermal noise, or gain variations.  In the models the main driver of fit variations is source variability.
 
