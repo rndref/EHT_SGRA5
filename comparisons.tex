@@ -208,42 +208,50 @@ We have also considered a set of thermal, $\Rh$, MAD models run with the \koral 
 
 %------------------------------------------------------------------------------
 \subsubsection{Summary of Constraints on Fiducial Models}
+
 \input{Tables/fail_one_thermal}
 
 \label{sec:summarythermal}
 
-None of the fiducial models  survive the full gauntlet of constraints. Variability rejects about $70\%$ of models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models.
-Evidently either (1) the models fail in some important respect, or (2) some of the data underlying the model tests are incorrect, or (3) one or more of the constraints have been misapplied.
+None of the fiducial models  survive the full gauntlet of constraints.   The pass fractions for \bhac, \kharma, and \hamr are listed in Table \ref{tab:passfraction_thermal}.  Notice that the variability constraint is the most severe, followed by the \mring width constraint.  Variability rejects about $80\%$ of fiducial models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models.
 
-We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens when we lift one constraint.  Table~\ref{tab:fail_one} lists the models that fail only one constraints---about 5\% each for the \bhac and \kharma model sets.  For \bhac, 8 models fail only $\mi{3}$, and 2 fail only \mring diameter.  For \kharma, 3 models fail only $\mi{3}$ and 5 fail only the 86\GHz size.  Suspicion therefore falls on $\mi{3}$, which rejects $\approx 70\%$ of \bhac and \kharma models.  Why might the $\mi{3}$ constraint be misleading?
+It is possible (even likely) that the models are physically inadequate.  But it is also possible that one of the constraints is measured incorrectly, used incorrectly as a constraint, or poorly predicted by the numerical models.  Table \ref{tab:fail_one_thermal} lists all fiducial models that fail only one constraint.  Notice that there is overlap between \kharma and \bhac in MAD models that fail the $\mi{3}$ constraint.  No \hamr models are listed because all \hamr models fail at least two constraints.    
 
-One possibility is that some fraction of the $230\GHz$ flux density, $f_\mathrm{ext}$, is in an extended structure (a jet) that is slowly varying, captured in the ALMA lightcurves, and resolved out by EHT.  The implied $f_{ext}$ is model-dependent, but if $f_{ext} \sim 30\%$ then nearly all MAD models would pass $\mi{3}$ and many SANE models would be rejected as too quiet.  The $4$G$\lambda$ amplitude variability is normalized by the lightcurve and thus $a_4$ would increase by a similar factor.  Notice that if $f_{ext} > 0$ then the models would need to be re-normalized (the accretion rate adjusted) so that the compact flux is $(1 - f_{ext}) \times 2.4\,\mathrm{Jy}$.  The extended flux hypothesis can be tested by the addition of new, short baselines to the EHT.
+%Evidently either (1) the models fail in some important respect, or (2) some of the data underlying the model tests are incorrect, or (3) one or more of the constraints have been misapplied.  We 
 
-A second possibility is that physical or numerical errors in the models cause the variability to be overstated.  Several possibilities, including viscosity, conduction, and radiative cooling are discussed in Section \ref{sec:discussions}.
+%We will discuss option (1) later.  To investigate options (2) and (3), we can ask what happens when we lift one constraint.  Table~\ref{tab:fail_one} lists the models that fail only one constraints---about 5\% each for the \bhac and \kharma model sets.  For \bhac, 8 models fail only $\mi{3}$, and 2 fail only \mring diameter.  For \kharma, 3 models fail only $\mi{3}$ and 5 fail only the 86\GHz size.  Suspicion therefore falls on $\mi{3}$, which rejects $\approx 70\%$ of \bhac and \kharma models.  Why might the $\mi{3}$ constraint be misleading?
 
-If extended flux, viscosity and conduction, and radiative cooling each reduce the variability excess by $\sim 10\%$ then many of the MAD models would come into compliance with the data (and some SANE models would become inconsistent because they are not variable enough).  If we set aside the $\mi{3}$ constraint then a cluster of 3 models survives all of the fiducial models.  All are MAD, $\Rh = 160$.  These are: $\abh = 0.5, i = 30$; $\abh = 0.94, i = 10$; and $\abh = 0.94, i = 30$.  These models are clustered in parameter space and pass 10 of 11 tests.  We will highlight these models below in our discussion and analysis.
+%One possibility is that some fraction of the $230\GHz$ flux density, $f_\mathrm{ext}$, is in an extended structure (a jet) that is slowly varying, captured in the ALMA lightcurves, and resolved out by EHT.  The implied $f_{ext}$ is model-dependent, but if $f_{ext} \sim 30\%$ then nearly all MAD models would pass $\mi{3}$ and many SANE models would be rejected as too quiet.  The $4$G$\lambda$ amplitude variability is normalized by the lightcurve and thus $a_4$ would increase by a similar factor.  Notice that if $f_{ext} > 0$ then the models would need to be re-normalized (the accretion rate adjusted) so that the compact flux is $(1 - f_{ext}) \times 2.4\,\mathrm{Jy}$.  The extended flux hypothesis can be tested by the addition of new, short baselines to the EHT.
 
-We consider exploratory models next, including nonthermal eDF models, wind-fed models, and tilted models.  None have sharply reduced $\mi{3}$.
+%A second possibility is that physical or numerical errors in the models cause the variability to be overstated.  Several possibilities, including viscosity, conduction, and radiative cooling are discussed in Section \ref{sec:discussions}.
+
+%If extended flux, viscosity and conduction, and radiative cooling each reduce the variability excess by $\sim 10\%$ then many of the MAD models would come into compliance with the data (and some SANE models would become inconsistent because they are not variable enough).  If we set aside the $\mi{3}$ constraint then a cluster of 3 models survives all of the fiducial models.  All are MAD, $\Rh = 160$.  These are: $\abh = 0.5, i = 30$; $\abh = 0.94, i = 10$; and $\abh = 0.94, i = 30$.  These models are clustered in parameter space and pass 10 of 11 tests.  We will highlight these models below in our discussion and analysis.
+
+%We consider exploratory models next, including nonthermal eDF models, wind-fed models, and tilted models.  None have sharply reduced $\mi{3}$.
 
 
 \subsection{Exploratory Models}
 
-We now turn to models that differ from the fiducial aligned, thermal, $\Rh$ models.  These include aligned models that use a different scheme for assigning temperatures to a thermal eDF; aligned models with a power-law component or $\kappa$ component in the eDF; tilted models; and stellar wind-fed models.
+Next we go beyond the fiducial aligned, thermal, $\Rh$ models and consider aligned models that use a different scheme for assigning temperatures to a thermal eDF; aligned models with a power-law component or $\kappa$ component in the eDF; tilted models; and stellar wind-fed models.  Unless stated otherwise, exploratory models are imaged over only $5 \times 10^3 \tg$, yielding weaker constraints on the models.
 
 %------------------------------------------------------------------------------
 \subsubsection{Critical Beta Model}
 
-First we consider the consequences of changing the temperature assignment scheme for a thermal eDF.  The $\Rh$ prescription is used for the fiducial models, but that still leaves a vast function space of possible alternatie parameterizations.  One well-motivated choice is the critical beta model \citep{2020MNRAS.493.1404A}, which sets $T_e = T_e(R)$ and $R = f \exp(-\beta/\beta_c)$ (see Equation \ref{eq:Te_vs_R}).  This ``critical beta'' model has two parameters, $f$ and $\beta_c$.  We consider a single point in the parameter space, $f = 0.5$, $\beta_c = 1$.  Compared to the \Rh temperature prescription, the main new characteristic of critical beta is that the electron to ion temperature ratio approaches 0 at high $\beta$ instead of $1/\Rh$.  This could lead to much lower electron temperatures in large $\beta$ regions.
+The fiducial $\Rh$ prescription provide a convenient, one-parameter model for assigning electron temperatures, but here is a vast function space of possible alternative parameterizations. One well-motivated choice is the critical beta model \citep{2020MNRAS.493.1404A}, which sets $T_e = T_e(R)$ and $R = f \exp(-\beta/\beta_c)$ (see Equation \ref{eq:thermaleDF}).  This ``critical beta'' model has two parameters, $f$ and $\beta_c$.  We consider a single point in the parameter space: $f = 0.5$, $\beta_c = 1$.  Compared to the \Rh temperature prescription, the main new characteristic of the critical beta models is that the electron to ion temperature ratio approaches 0 at high $\beta$ instead of $1/\Rh$, allowing much lower electron temperatures at high $\beta$.
 
-We have run all tests except X-ray for the critical beta models ($2.2\um$ is calculated with imaging only and therefore does not include Compton scattering).  The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}.
+We have run all tests except X-ray for the critical beta models. $2.2\um$ is calculated with imaging only and therefore does not include Compton scattering.  
+%The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}.
 
-All critical beta models fail the non-EHT constraints, with 86GHz size constraint rejecting most models as too small.  The variability constraints fail $77\%$ of the models.  No models survive the combined EHT and non-EHT constraints, excluding variability.  This does not imply that critical beta models are ruled out, since we have only tested a single parameter set.
+All critical beta models fail the non-EHT constraints, with 86GHz size constraint rejecting most models as too small.  The variability constraints fail $77\%$ of the models.  No models survive the combined EHT and non-EHT constraints, excluding variability.  Notice that this does not imply that critical beta models are ruled out, since we have only tested a single parameter set.
 
 \subsubsection{Thermal Plus \texorpdfstring{$p = 4$}{p=4} Power-law Models}
 
-So far we have assumed a thermal relativistic Maxwell-J{\"u}ttner eDF (Equation~\ref{eq:thermaleDF}). Fully kinetic simulations as well as resistive MHD predict that reconnection in current sheets within the accretion flow and in the jet sheath leads to the acceleration of particles to higher energies, resulting in the emergence of a power-law tail (of the form of Equation~\ref{eq:nonthermaleDF}) in the eDF \citep[e.g.,][and references therein]{Sironi2021}. Such acceleration events are thought to be the origin of near-infrared and X-ray flares detected in \sgra. In this work, we do not address flare mechanisms but seek to constrain the contribution of non-thermal electrons to the quiescent emission of \sgra. In the next few sections, we assume different forms of the eDF assuming that a fraction of the electron population is accelerated to a non-thermal tail. There are multiple ways of doing this, but we will continue to assume that the eDF depends instantaneously on local conditions and set the accretion rate so that the time-averaged 230\GHz compact flux is 2.4 Jy.
+So far we have assumed a thermal relativistic Maxwell-J{\"u}ttner eDF (Equation~\ref{eq:thermaleDF}). Fully kinetic simulations as well as resistive MHD predict that reconnection in current sheets within the accretion flow and in the jet sheath leads to the acceleration of particles to higher energies, resulting in the emergence of a power-law tail (of the form of Equation~\ref{eq:nonthermaleDF}) in the eDF \citep[e.g.,][and references therein]{Sironi2021}. Such acceleration events are thought to be the origin of near-infrared and X-ray flares detected in \sgra. In this work, we do not address flare mechanisms but seek to constrain the contribution of non-thermal electrons to the quiescent emission of \sgra. 
 
-First we employ a hybrid thermal/power-law tail distribution using \hamr/\bhoss. Since we are modeling the quiescent emission of \sgra, we assume a steep power-law index of $p=4$ with a constant non-thermal acceleration efficiency $\epsilon=n_{\rm e, power-law}/n_{\rm e, thermal}=0.1$, typically found from PIC simulations \citep[e.g.,][]{Sironi2015,Crumley2019}. Following the method given in \citet{Chatterjee2021}, the power-law tail is stitched to the thermal core by choosing the minimum Lorentz factor limit of the power-law $\gamma_{\rm min}$ to be at the peak of the Maxwellian component. The upper end of the power-law is taken to $10^5 \gamma_{\rm min}$ (see Equation \ref{eq:nonthermaleDF}).  The temperature of the thermal component is set by the $\Rh$ prescription (Equation~(\ref{eq:rhigh_prescription})). We find that the accretion rate is slightly smaller than for corresponding thermal models, suggesting that the power-law component contributes to the 230\GHz total intensity. The full pass/fail table of hybrid thermal/power-law models is given in Table~\ref{tab:hamr_nth}
+In the next few sections, we assume different forms of the eDF assuming that a fraction of the electron population is accelerated to a non-thermal tail. There are multiple ways of doing this, but we will continue to assume that the eDF depends instantaneously on local conditions and set the accretion rate so that the time-averaged 230\GHz compact flux is 2.4 Jy.
+
+First we employ a hybrid thermal/power-law tail distribution using \hamr/\bhoss. Since we are modeling the quiescent emission of \sgra, we assume a steep power-law index of $p=4$ with a constant non-thermal acceleration efficiency $\epsilon=n_{\rm e, power-law}/n_{\rm e, thermal}=0.1$, typically found from PIC simulations \citep[e.g.,][]{Sironi2015,Crumley2019}. Following the method given in \citet{Chatterjee2021}, the power-law tail is stitched to the thermal core by choosing the minimum Lorentz factor limit of the power-law $\gamma_{\rm min}$ to be at the peak of the Maxwellian component. The upper end of the power-law is taken to $10^5 \gamma_{\rm min}$ (see Equation \ref{eq:nonthermaleDF}).  The temperature of the thermal component is set by the $\Rh$ prescription (Equation~(\ref{eq:rhigh_prescription})). We find that the accretion rate is slightly smaller than for corresponding thermal models, suggesting that the power-law component contributes to the 230\GHz total intensity. 
+%The full pass/fail table of hybrid thermal/power-law models is given in Table~\ref{tab:hamr_nth}
 
 %..............................................................................
 \subsubsubsection{230\GHz VLBI pre-image size}
@@ -253,7 +261,7 @@ Hybrid thermal/power-law models have larger 230\GHz VLBI pre-image sizes compare
 %..............................................................................
 \subsubsubsection{86\GHz flux and image size}
 
-In general, the $R_{\rm high}=1$ models produce too much 86\GHz flux. Since the lower limit of the power-law $\gamma_{\rm min}$ is directly affected by the local electron temperature, the highest energy electrons are located in the jet sheath where the ion and electron temperatures are similar, i.e., $T_i\approx T_e$. Indeed this is why SANE models produce more 86\GHz flux when non-thermal electrons are introduced, especially at larger $R_{\rm high}$ values. On the other hand, MAD pure thermal and mixed thermal/non-thermal models behave similarly as the bulk of the emission is produced in the inner disk.
+In general the $R_{\rm high}=1$ models produce too much 86\GHz flux. Since the lower limit of the power-law $\gamma_{\rm min}$ is directly affected by the local electron temperature, the highest energy electrons are located in the jet sheath where the ion and electron temperatures are similar, i.e., $T_i\approx T_e$. Indeed this is why SANE models produce more 86\GHz flux when non-thermal electrons are introduced, especially at larger $R_{\rm high}$ values. On the other hand, MAD pure thermal and mixed thermal/non-thermal models behave similarly as the bulk of the emission is produced in the inner disk.
 
 Due to the additional power-law component, the 86\GHz image sizes for the hybrid \hamr models are, on average, larger than their thermal-only counterparts, similar to the 230\GHz results. The higher energy electrons of a hybrid thermal/power-law population emit at higher frequencies than their thermal core, thereby extending the image size. This effect is not substantial in the case of MAD accretion models as the image sizes increase by a few percent only.
 
@@ -261,8 +269,9 @@ Due to the additional power-law component, the 86\GHz image sizes for the hybrid
 
 The addition of the power-law tail primarily increases the flux at $2.2\um$ and thus, the GRAVITY $2.2\um$ flux density of $1.0\,\mathrm{mJy}$ could provide a constraint on the power-law index and the acceleration efficiency. In brief, $\Rh=1$ and $40$ MAD models are ruled out by the $2.2\um$ constraint.
 
+\subsubsubsection{Summary}
 
-Overall, we see that hamr nonthermal powerlaw models behave quite differently from their thermal versions. For the thermal models, the non-EHT constraints prove to be more crucial in ruling out models (with 9/90 passed cases in total) while the EHT constraints were more lenient with 35/90 models passing. For the power-law model set, we get the opposite: non-EHT constraints pass 35/90 models while EHT constraints allow 10/90 models. Such a disparity occurs due to two reasons: 1. Introducing non-thermal electrons pushes the 86 GHz image size to the acceptable range as thermal models typically exhibit small image sizes, and 2. the m-ring width is found to be smaller for the hybrid models. This could be due to a change in the gas density scaling that is required to match the 230GHz flux. Nonthermal models require a smaller normalization value, meaning a smaller electron number density as compared to the corresponding thermal models. A decrease in the number density would lower the optical depth as well, which could lead to a thinner photon ring. Ultimately, the number of passing models do not change (3 for thermal and 4 for nonthermal models), but the passing models are different: 2 SANE edge-on models from the thermal set and 2 MAD spin 0.5 Rhigh 1 models from the nonthermal set. Additionally, the $\mi{3}$ variability does not change when adding a power-law component to the eDF, except for retrograde SANE models, which perform better than their thermal counterparts.
+Overall, \hamr nonthermal powerlaw models behave quite differently from their thermal versions. For the thermal models, the non-EHT constraints prove to be more crucial in ruling out models (with 9/90 passed cases in total) while the EHT constraints were more lenient with 35/90 models passing. For the power-law model set, we get the opposite: non-EHT constraints pass 35/90 models while EHT constraints allow 10/90 models. This disparity occurs for two reasons: 1. Introducing non-thermal electrons pushes the 86 GHz image size to the acceptable range as thermal models typically exhibit small image sizes, and 2. the m-ring width is found to be smaller for the hybrid models. This could be due to a change in the gas density scaling that is required to match the 230GHz flux. Nonthermal models require a smaller normalization value, meaning a smaller electron number density as compared to the corresponding thermal models. A decrease in the number density would lower the optical depth as well, which could lead to a thinner photon ring. Ultimately, the number of passing models do not change (3 for thermal and 4 for nonthermal models), but the passing models are different: 2 SANE edge-on models from the thermal set and 2 MAD spin 0.5 Rhigh 1 models from the nonthermal set. Additionally, the $\mi{3}$ variability does not change when adding a power-law component to the eDF, except for retrograde SANE models, which perform better than their thermal counterparts.
 
 \subsubsection{Constant \texorpdfstring{$\kappa$}{kappa} models with \texorpdfstring{$\kappa = 5$}{kappa = 5}}
 
@@ -485,31 +494,8 @@ For the variable $\kappa$ models two set of models from the \bhac and \hamr code
 %We compute the the modulation index  of the lightcurves of variable $\kappa$ models by discretizing the entire window of GRMHD simulations, $\rm 5000\,\tg$ ($\rm 28\,hours$) every $\rm 3\,hour$ (see Table \ref{tab:GRMHDmodels}). Similar to variable efficiency models, the non-thermal particles with variable $\kappa$ has not big impact on the flux at 230\GHz. The behavior of modulation index and total flux for MAD accretion models are same as thermal, and variable efficiency eDFs. We found sightly high modulation index for $R_{\rm high}=1$ and $30^{\circ} \leq i$ for SANE accretion models, the models for $R_{\rm high}=80$ has same trend as $R_{\rm high}=40$.
 
 %------------------------------------------------------------------------------
-\begin{table*}
-\caption{Pass fractions for \bhac and \hamr models for varios eDFs}
-\centering
-\begin{tabular}{l|cccc|ccc}
-\hline
- constraint/model	& \multicolumn{4}{c}{\bhac}        & \multicolumn{3}{|c}{\hamr} \\
- \hline
-				& thermal & $\kappa(\sigma,\beta)$ & $\kappa=3.5\,\varepsilon=0.05,0.1,0.2$  & $\kappa=5$ & thermal & $\kappa(\sigma,\beta)$  & $p=4$\\
-\hline
-\hline
-230\,GHz size&  0.98 	& 0.99	& 0.98,0.98,0.98 	& 0.92  & 1.0	& 0.99 	& 0.94 \\
-lc varability&  	  0.27	& 0.30	&  0.47,0.47,0.46	& 0.29  & 0.07	& 0.28	&  0.41\\
-4G$\lambda$ variability & 0.72	& 0.60	&  0.74,0.73,0.71	& 0.55  & 0.39	& 0.46	&  0.63\\
-Null location     &0.83	& 0.80	&  0.81,0.81,0.78	& 0.59  & 0.80	& 0.88	&  --\\	
-M-ring diameter&0.65	& 0.69	&  0.66,0.66,0.67	& 0.71  & 0.61	& 0.67	&  0.89\\
-M-ring width    & 0.21	& 0.21	&  0.24,0.23,0.23	& 0.03  & 0.32	& 0.40	&  0.13\\
-M-ring asym.   &0.95		& 0.97	&  0.95,0.95,0.94	& 0.73  & 0.99	& 0.97	&  0.98\\
-86\,GHz size   &0.59		& 0.57	&  0.56,0.56,0.55	& 0.38  & 0.46	& 0.45	&  0.47\\
-86\,GHz flux    &0.68		& 0.75	&  0.67,0.66,0.63	& 0.12  & 0.62	& 0.65	&  0.72\\
-2.2$\mu$m flux&0.55	& 0.35	&  0.14,0.12,0.12	& 0.14  & 0.80	& 0.25	&  0.41\\
-X-ray flux& 	0.70		& --		    	& --		& --  	    & 0.61	&  0.35	& --\\
-\hline
-\end{tabular}
-\label{tab:passfraction}
-\end{table*} 
+\input{Tables/nonthermal_model_pass_fraction_table}
+
 
 \subsubsection{Summary of Constraints on Non-Thermal Models}
 In Table \ref{tab:passfraction} we list the pass fractions for \bhac and \hamr models using different eDFs.
