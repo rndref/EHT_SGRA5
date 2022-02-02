@@ -98,13 +98,16 @@ Future global kinetic general relativistic particle-in-cell simulations may be a
 Our models also neglect radiative cooling.  
 Cooling is fastest where the electron temperature is highest, so it has the potential to blunt  local maxima in temperature.  If local maxima with short cooling times contribute significantly to variability then cooling could reduce $\mi{3}$.  Self-consistently cooling requires integration of an electron energy equation  \citep[e.g.]{2015MNRAS.454.1848R}, and assignment of a density scale (mass unit or accretion rate) when the GRMHD simulation is run, vastly increasing computational cost.
 
-Another possibility is that self-consistent electron heating reduces variability.  We have studied a set of models (see Appendix \ref{app:variability}, which uses models from \citet{2020MNRAS.494.4168D})
-with self-consistent electron heating and without radiative cooling.  These models also shows a variability excess.  We have also studied the effect of increasing $\Rl$, which mimics the effect of rapid cooling in regions with $\beta \lesssim 1$.  Ths study is reported in Appendix \ref{app:variability} and shows no clear effect of varying $\Rl$ on \mi{3}.  
+Another possibility is that self-consistent electron heating reduces variability.  In Appendix \ref{app:variability} We consider a set of models from \citet{2020MNRAS.494.4168D}
+with self-consistent electron heating.  These models still shows a variability excess.  
 
-There are more prosaic possible explanations for the variability excess: numerical inaccuracies in radiative transfer, truncation error in the GRMHD integrations (limited resolution), limited simulation duration, or misspecification of the adiabatic index.  These are considered in Appendix~\ref{app:numerical}.  There is no evidence that any of these effects produces a substantial correction to $\mi{3}$.
+The $\Rh$ prescription contains a parameter $\Rl$ that determines the ion-electron temperature ratio at low $\beta$, which we have consistently set to $1$.  Increasing $\Rl$ models the effect of rapid cooling in low $\beta$ regions.  In Appendix \ref{app:variability} we consider $\Rl$ up to 10 in four models and show that it does not systematically reduce variability. 
 
-One plausible scenario is that each of the above effects (extended flux, viscosity, and cooling) contributes 10\% toward moving $\mi{3}$ from the models and data closer together. A small correction to $\mi{3}$ from numerical resolution in ideal GRMHD simulations also cannot be ruled out.
+The variability excess might also be caused by: numerical inaccuracies in radiative transfer, truncation error in the GRMHD integrations (limited resolution), limited simulation duration, or misspecification of the adiabatic index.  These are considered in Appendix~\ref{app:numerical}.  We can find no evidence for any of these numerical effects is driving the variability excess.
 
+\subsection{Best-Bet Region without Variability}
+
+Given the preceding discussion it is plausible that a  combination of extended flux, viscosity, and cooling significantly reduce model variability.  
 
 \subsection{Accretion Rate and Outflow Power}
 \label{sec:accrate_outflowpower}
