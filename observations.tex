@@ -188,10 +188,10 @@ We limit comparison to three bands: 86\GHz, 2.2\um, and X-ray.
 The Global Millimeter VLBI Array (GMVA) observed \sgra on April 3, 2017, just 3 days ($\approx 13,000 \,\tg$) before the EHT campaign.
 \citet{2019ApJ...871...30I} estimate that the compact flux during this observation was $F_{86} = 2.0 \pm 0.2\,\mathrm{Jy}$ ($2\sigma$ errors; S. Issaoun, private communication).
 
-To compare against these data, we compute a library of 86\GHz images for all GRMHD snapshots for all models, and from that the 86\GHz flux density $F_{86}$.  We assume normally distributed measurement errors with $\sigma = 0.1\,\mathrm{Jy}$ and convolve the $F_{86}$ distribution for each model with the resulting Gaussian.  We reject models where the value of the error-broadened $F_{86}$ cumulative distribution function (CDF) at 2.0 Jy is <1\% or >99\%..
+To compare against these data, we compute a library of 86\GHz images for all GRMHD snapshots for all models, and from that the 86\GHz flux density $F_{86}$.  We assume normally distributed measurement errors with $\sigma = 0.1\,\mathrm{Jy}$ and convolve the $F_{86}$ distribution for each model with the resulting Gaussian.  We reject models where the value of the error-broadened $F_{86}$ cumulative distribution function (CDF) at 2.0 Jy is <1\% or >99\%.
 
 %------------------------------------------------------------------------------
-\subsubsection{86\GHz Image Size}
+\subsubsection{86\GHz Image Size}\label{sec:86size}
 
 The GMVA observations from April 3, 2017 constrain the FWHM of the source major axis.  Notice that two different values for the major axis FWHM have been published in the literature: $120 \pm 34\uas$ \citep{2019ApJ...871...30I}
 ${\rm FWHM}_{maj} = 146^{+11}_{-12}\uas$ \citep[95\% confidence][]{2021ApJ...915...99I}.  We adopt the later analysis.
@@ -273,4 +273,4 @@ Model predictions for $\afour^2$ and $b$ are computed using the power spectral d
 
 For a given model, the fits for $\afour^2$ and $b$ are done separately on each window of length $5 \times 10^3 \tg$, giving at most three measurements for most models. This makes a direct comparison with the measured value difficult, as the distribution for a given model is poorly constrained.
 
-\citet{Georgiev_2022} gives an estimate of the typical width of the distribution as $\log_{10}(\afour^2) \pm 0.1$. We can obtain a rough estimate for how the models fare compared to the measurement by taking the mean across windows, assuming the width is $\pm 0.1$, and comparing this with the observed distribution under the assumption that both are distributed normally. We then reject models if the two distributions are inconsistent at a 1\% level.
+\citet{Georgiev_2022} gives an estimate of the typical width of the distribution as $\log_{10}(\afour^2) \pm 0.1$. We can obtain a rough estimate for how the models fare compared to the measurement by taking the mean across windows, assuming the width of the distribution is $\sigma = 0.1$, and comparing this with the observed distribution under the assumption that both are distributed normally. We convolve the two distributions and and reject models with CDF <1\% or >99\% at -3.4.
