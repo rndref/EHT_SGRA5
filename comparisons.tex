@@ -213,9 +213,11 @@ We have also considered a set of thermal, $\Rh$, MAD models run with the \koral 
 
 \label{sec:summarythermal}
 
-None of the fiducial models  survive the full gauntlet of constraints.   The pass fractions for \bhac, \kharma, and \hamr are listed in Table \ref{tab:passfraction_thermal}.  Notice that the variability constraint is the most severe, followed by the \mring width constraint.  Variability rejects about $80\%$ of fiducial models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models.
+None of the fiducial models  survive the full gauntlet of constraints.   The pass fractions for individual constraints for the \bhac, \kharma, and \hamr fiducial models are listed in Table \ref{tab:passfraction_thermal}.  Notice that the variability constraint is the most severe, followed by the \mring width constraint.  Variability rejects about $80\%$ of fiducial models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models.
 
-It is possible (even likely) that the models are physically inadequate.  But it is also possible that one of the constraints is measured incorrectly, used incorrectly as a constraint, or poorly predicted by the numerical models.  Table \ref{tab:fail_one_thermal} lists all fiducial models that fail only one constraint.  Notice that there is overlap between \kharma and \bhac in MAD models that fail the $\mi{3}$ constraint.  No \hamr models are listed because all \hamr models fail at least two constraints.    
+It is possible (even likely) that the models are physically inadequate.  But it is also possible that one of the constraints is measured incorrectly, that one of the constraints is applied incorrectly, or that one of the constraints is poorly predicted for numerical reasons.  To investigate this, we identify all models that fail only one constraint in Table \ref{tab:fail_one_thermal}.  The critical constraints are 86\GHz size, \mring diameter, and $\mi{3}$.  Notice that there is overlap between \kharma and \bhac in MAD models that fail the $\mi{3}$ constraint.  No \hamr models are listed because all \hamr models fail at least two constraints.    
+
+% CFG: commented out 1/31.  This material should go in the discussion section
 
 %Evidently either (1) the models fail in some important respect, or (2) some of the data underlying the model tests are incorrect, or (3) one or more of the constraints have been misapplied.  We 
 
@@ -230,9 +232,9 @@ It is possible (even likely) that the models are physically inadequate.  But it 
 %We consider exploratory models next, including nonthermal eDF models, wind-fed models, and tilted models.  None have sharply reduced $\mi{3}$.
 
 
-\subsection{Exploratory Models}
+\subsection{Exploratory Models}\label{sec:explore}
 
-Next we go beyond the fiducial aligned, thermal, $\Rh$ models and consider aligned models that use a different scheme for assigning temperatures to a thermal eDF; aligned models with a power-law component or $\kappa$ component in the eDF; tilted models; and stellar wind-fed models.  Unless stated otherwise, exploratory models are imaged over only $5 \times 10^3 \tg$, yielding weaker constraints on the models.
+Next we go beyond the fiducial aligned, thermal, $\Rh$ models and consider aligned models that use an alternative scheme for assigning temperatures to a thermal eDF; aligned models with a power-law component or $\kappa$ component in the eDF; tilted models; and stellar wind-fed models.  Unless stated otherwise, exploratory models are imaged over only $5 \times 10^3 \tg$, yielding weaker constraints on the models.
 
 %------------------------------------------------------------------------------
 \subsubsection{Critical Beta Model}
@@ -240,9 +242,10 @@ Next we go beyond the fiducial aligned, thermal, $\Rh$ models and consider align
 The fiducial $\Rh$ prescription provide a convenient, one-parameter model for assigning electron temperatures, but here is a vast function space of possible alternative parameterizations. One well-motivated choice is the critical beta model \citep{2020MNRAS.493.1404A}, which sets $T_e = T_e(R)$ and $R = f \exp(-\beta/\beta_c)$ (see Equation \ref{eq:thermaleDF}).  This ``critical beta'' model has two parameters, $f$ and $\beta_c$.  We consider a single point in the parameter space: $f = 0.5$, $\beta_c = 1$.  Compared to the \Rh temperature prescription, the main new characteristic of the critical beta models is that the electron to ion temperature ratio approaches 0 at high $\beta$ instead of $1/\Rh$, allowing much lower electron temperatures at high $\beta$.
 
 We have run all tests except X-ray for the critical beta models. $2.2\um$ is calculated with imaging only and therefore does not include Compton scattering.  
+
 %The full set of results is given in Appendix~\ref{app:tables}, Table~\ref{tab:betacritPF}.
 
-All critical beta models fail the non-EHT constraints, with 86GHz size constraint rejecting most models as too small.  The variability constraints fail $77\%$ of the models.  No models survive the combined EHT and non-EHT constraints, excluding variability.  Notice that this does not imply that critical beta models are ruled out, since we have only tested a single parameter set.
+All critical beta models fail the non-EHT constraints, with the 86GHz size constraint rejecting most models as too small.  The variability constraints fail $77\%$ of the models.  No models survive the combined EHT and non-EHT constraints, excluding variability.  Notice that this does not imply that critical beta models are ruled out, since we have only tested a single parameter set.
 
 \subsubsection{Thermal Plus \texorpdfstring{$p = 4$}{p=4} Power-law Models}
 
@@ -507,6 +510,8 @@ If non-thermal particles are included also in the disk, either via a power-law w
 \newline In general the fraction of models passing the $\mi{3}$ increase with the addition of non-thermal particles independent on the prescriptions of the eDF \cmf{for the \hamr models there is a large increase from 7\% to 41\% which I think will survive even if we would run all models longer. The change for the \bhac models is smaller and could be removed if the models are run for longer. How to include this?}
 \newline The main characteristic of the non-thermal models is the increase of 2.2\um and X-ray flux densities. However, in a large fraction of models this leads to overproduction of 2.2\um or X-ray flux and reduces the pass fractions.\\
 
+\input{Tables/fail_none}
+
 If all constraints are considered all non-thermal models fail. However there are a few models which only fail the lightcurve variability, $\mi{3}$. These models are: a \hamr MAD $p=4$ model with $a^\star=0.5$ seen under an inclination of 90$^\circ$ and $R_{\rm high}=1$ and a \bhac MAD variable $\kappa$ model with spin $a^\star=0.5$ inclination 30$^\circ$ and $R_{\rm high}=160$. These two models agree with the cluster of thermal models found for both \bhac and \kharma models (see Sect.~\ref{sec:summarythermal}).
 \cmf{there is one \bhac SANE $\varepsilon=0.05$ with spin $a^\star=0.94$, inclination 10$^\circ$, and $R_{\rm high}=10$ which only fails M3. However this one would fail most likely the polarisation constraint. How do include this here? }
 
@@ -573,11 +578,11 @@ To summarize: for the model set considered here tilt primarily affects variabili
 %==============================================================================
 \subsection{Stellar Wind Fed Models}
 
-The accretion models of \cite{2020ApJ...896L...6R, 2020MNRAS.492.3272R, 2018MNRAS.478.3544R} track plasma from  magnetized stellar winds down to the event horizon and provide a self-consistent picture of the origin of both gas and magnetic fields in the accreting plasma in \sgra.  The resulting inflow does not fully circularize, so the models also provide a distinct alternative to the fiducial models, which {\em assume} that the torus initial conditions relax to a astrophysically accessible state for the inner accretion flow.  Recall that in the wind-fed models the density of the wind is fixed, so the 230\GHz flux density is matched to observations by varying $\Rh$ instead.  
+The accretion models of \cite{2020ApJ...896L...6R, 2020MNRAS.492.3272R, 2018MNRAS.478.3544R} track plasma from  magnetized stellar winds down to the event horizon and provide a self-consistent picture of the origin of both gas and magnetic fields in the accreting plasma in \sgra.  The resulting inflow does not fully circularize, so the models also provide a distinct alternative to the fiducial models, which {\em assume} that the torus initial conditions relax to an astrophysically accessible state for the inner accretion flow.  Recall that in the wind-fed models the density of the wind is fixed, so the 230\GHz flux density is matched to observations by varying $\Rh$ instead.  
 
-We consider two versions of the model: one in which the stellar wind magnetization is low ($\beta = 10^6$) and another and a second in which the magnetization is high ($\beta = 10^2$). $\Rh$ is adjusted until each model has the observed time-averaged 230\GHz flux density, with $\Rh = 13$ ($\beta = 10^6$) and $\Rh = 28$ ($\beta = 10^2$).
+We consider two versions of the model: one in which the stellar wind magnetization is low ($\beta = 10^6$) and a second in which the magnetization is high ($\beta = 10^2$). $\Rh$ is adjusted until each model has the observed time-averaged 230\GHz flux density, with $\Rh = 13$ ($\beta = 10^6$) and $\Rh = 28$ ($\beta = 10^2$).
 
-Both wind-fed models fail the \mring width test, producing a width that is too small.  In addition both fail the 86GHz flux test: the 86GHz flux density is too large.  The wind-fed models also fail the $\mi{3}$ test, although they are quieter than MAD models and close to the cutoff.   All scoring results are given in Appendix~\ref{app:tables}, Table \ref{tab:resslerPF}.
+Both wind-fed models fail the \mring width test, producing a width that is too small.  In addition both are too bright at 86\GHz, and fail the $\mi{3}$ test, although they are quieter than MAD models and close to the cutoff.   %All scoring results are given in Appendix~\ref{app:tables}, Table \ref{tab:resslerPF}.
 
-Both non-EHT and EHT constraints have the power to test the wind-fed model.  It is {\em not} possible to draw broad conclusions about the viability of the wind-fed models in general, however, since the two models tested here contain only a single spin ($a_\star=0$) and all use the $\Rh$ thermal eDF model.
+Both non-EHT and EHT constraints have the power to test wind-fed models.  It is {\em not} possible to draw broad conclusions about the viability of the wind-fed models in general, however, since the two models tested here contain only a single spin ($a_\star=0$) and all use the $\Rh$ thermal eDF model.
 
