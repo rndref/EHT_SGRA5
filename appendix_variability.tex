@@ -42,7 +42,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The majority of our simulations fail to recover the \sgra observed variability in total flux.  In this Appendix we discuss and dismiss a few possible causes for the variability excess.  
+The majority of our simulations fail to recover the \sgra observed variability in total flux.
+In this Appendix we discuss and dismiss a few possible causes for the variability excess.
 
 %==============================================================================
 \subsection{Simulations Duration}\label{app:narayan}
@@ -54,66 +55,65 @@ The majority of our simulations fail to recover the \sgra observed variability i
   \label{fig:koral_MI}
 \end{figure}
 
-The fiducial models are evolved for $\sim 30,000 \tg$.  Figure ~\ref{fig:koral_MI} compares $\mi{3}$ distributions from a fiducial \kharma simulation to a \koral model with the same parameters that was evolved approximately three times longer. The $\mi{3}$ distributions have similar mean and standard deviation regardless of time interval chosen for comparison. The two models displayed in the figure differ in resolution of the numerical grid and initial torus size, consistent with the claim that the variability excess is not driven by numerical resolution or initial conditions of the GRMHD simulations.
+The fiducial models are evolved for $\sim 30,000 \tg$.
+Figure ~\ref{fig:koral_MI} compares $\mi{3}$ distributions from a fiducial \kharma simulation to a \koral model with the same parameters that was evolved approximately three times longer.
+The $\mi{3}$ distributions have similar mean and standard deviation regardless of time interval chosen for comparison.
+The two models displayed in the figure differ in resolution of the numerical grid and initial torus size, consistent with the claim that the variability excess is not driven by numerical resolution or initial conditions of the GRMHD simulations.
 
 %==============================================================================
-%
-% some questions about cooling work; commented out until/unless we are sure we understand what is going on.
-\subsection{Effects of $\Rl$ } %and radiative cooling}
+\subsection{Effects of $\Rl$ }
 
-The $\Rh$ prescription (Equation \ref{eq:rhigh_prescription}) has three free parameters: $\Rh$, $\Rl$ and $\beta_\mathrm{crit}$. In the main text the $\Rh$ parameter is varied while $\Rl$ and $\beta_\mathrm{crit}$ are set to unity.
+The $\Rh$ prescription (Equation \ref{eq:rhigh_prescription}) has three free parameters: $\Rh$, $\Rl$ and $\beta_\mathrm{crit}$.
+In the main text the $\Rh$ parameter is varied while $\Rl$ and $\beta_\mathrm{crit}$ are set to unity.
 
-% CFG: this seems to be the opposite of what we intended.
-%because the Particle-in-cell (PIC) simulations modeling turbulent dissipation or dissipation associated with magnetic reconnection suggest preferential heating of the electrons in regions of low plasma $\beta$ (\citealt{2010MNRAS.409L.104H, Rowan_2017, 10.1093/mnras/stx2530, Rowan_2019, Kawazura771, PhysRevX.10.041050, kawazura2021energy}).  
+The $\Rl$ parameter determines the electron temperature in regions of low $\beta$, i.e. in and near the funnel.
+Increasing $\Rl$ mimics rapid electron cooling.
+We are particularly interested in the effect of increasing $\Rl$ on \mi{3}.
 
-The $\Rl$ parameter determines the electron temperature in regions of low $\beta$, i.e. in and near the funnel. Increasing $\Rl$ mimics rapid electron cooling.  We are particularly interested in the effect of increasing $\Rl$ on \mi{3}.  
-
-Figure~\ref{fig:mi_rlow} shows the \mi{3} distribution for a set of four \kharma models with four values of $\Rl$ (1,2,5, and 10).  Evidently the \mi{3} distribution does not exhibit a clear trend with $\Rh$, and is still inconsistent with the observed distribution even at $\Rl = 10$.  
-
-%For systems with sub-Eddington accretion rates, $\Dot{M}\ll\Dot{M}_\mathrm{Edd}$, such as \sgra, radiative processes can usually be neglected during fluid evolution (\citealt{2012MNRAS.426.1928D, 10.1093/mnras/stw3116, Ryan_2017}).
-%However, the uncertainties with electron heating and advection, and a limited understanding of the funnel region warrant a discussion of electron cooling in regions of high magnetization, and in particular, its effect on the 230\,GHz lightcurve variability.
-
-%We first investigate the effect of varying $\Rl$ on the 3 hour modulation index, $\mi{3}$. The $\Rl$ parameter dictates the electron temperature in these regions, that is, in the funnel. Increasing $\Rl$ mimics rapid electron cooling along the funnel.
-%We vary $\Rl$ for various set of the thermal (\kharma datasets) and calculate $\mi{3}$. In Figure~\ref{fig:mi_rlow} we show that the modulation index is weakly dependent on $\Rl$ parameter.
-%The $\mi{3}$ distributions do not match the observational values.
+Figure~\ref{fig:mi_rlow} shows the \mi{3} distribution for a set of four \kharma models with four values of $\Rl$ (1,2,5, and 10).
+Evidently the \mi{3} distribution does not exhibit a clear trend with $\Rh$, and is still inconsistent with the observed distribution even at $\Rl = 10$.
 
 \begin{figure*}
   \centering
   \includegraphics[width=0.95\textwidth]{figures/mi_rlow_select_models.png}
-  \caption{Modulation index computed over 3 hour intervals $\mi{3}$ for a subset of the thermal models (\kharma datasets). For this analysis, we considered the 25,000--30,000$\tg$ time interval.}
+  \caption{Modulation index computed over 3 hour intervals $\mi{3}$ for a subset of the thermal models (\kharma datasets).
+For this analysis, we considered the 25,000--30,000$\tg$ time interval.}
   \label{fig:mi_rlow}
 \end{figure*}
 
-
 %==============================================================================
-%8. The flow is actually made of helium. [George]
-
-%brief discussion, forward reference to Wong+.
-
-% now C4
-
-%==============================================================================
-%9. $\gamma = 5/3$ rather than $4/3$.   [Vedant]  When $\gamma = 4/3$ the compression ratio across the shock is larger.
-
 \subsection{Effect of self-consistent electron heating}
 
-
-\citealt{10.1093/mnras/stv2084} provide a formulation to model electron thermodynamics during the fluid evolution. Numerical dissipation at the grid scale sources entropy generation and is used to heat the electrons based on a microphysical, sub-grid heating prescription. Local fluid and electromagnetic variables are used to compute the electron entropy which, along with the ideal gas equation of state, can be converted into a temperature $\Theta_{e}$. This approach allows computing the electron temperature at each timestep of the simulation rather than post-processing, as is done in the $\Rh$ and Critical-$\beta$ prescriptions.
+\citealt{10.1093/mnras/stv2084} provide a formulation to model electron thermodynamics during the fluid evolution.
+Numerical dissipation at the grid scale sources entropy generation and is used to heat the electrons based on a microphysical, sub-grid heating prescription.
+Local fluid and electromagnetic variables are used to compute the electron entropy which, along with the ideal gas equation of state, can be converted into a temperature $\Theta_{e}$.
+This approach allows computing the electron temperature at each timestep of the simulation rather than post-processing, as is done in the $\Rh$ and Critical-$\beta$ prescriptions.
 
 We consider three sub-grid heating models that prescribe the partition of dissipated energy into electrons and ions.
-\cite{2010MNRAS.409L.104H} computed the ratio of ion-to-electron heating due to dissipation of Alfv\'enic turbulent cascade, while \cite{10.1093/mnras/stx2530} and \cite{Rowan_2017} considered magnetic reconnection as the source of energy dissipation at sub-grid scales. These studies provide approximate fitting formulae for the ion-to-electron heating rate $Q_{i}/Q_{e}$ based on local ion-to-electron temperature ratio $T_{i}/T_{e}$ and local magnetic field strength---parameterized by $\sigma$ or plasma $\beta$.
+\cite{2010MNRAS.409L.104H} computed the ratio of ion-to-electron heating due to dissipation of Alfv\'enic turbulent cascade, while \cite{10.1093/mnras/stx2530} and \cite{Rowan_2017} considered magnetic reconnection as the source of energy dissipation at sub-grid scales.
+These studies provide approximate fitting formulae for the ion-to-electron heating rate $Q_{i}/Q_{e}$ based on local ion-to-electron temperature ratio $T_{i}/T_{e}$ and local magnetic field strength---parameterized by $\sigma$ or plasma $\beta$.
 
-We use a subset of the simulations analyzed in \citealt{2020MNRAS.494.4168D}. These include MAD and SANE accretion flows at spins, $\abh = 0,+1/2,+15/16$. We compute the 3 hour modulation index $\mi{3}$, over the time interval 5,000--10,000$GM/c^{3}$. The average $\mi{3}$ values are comparable to similar $\Rh$ models, with SANE reconnection models exhibiting a reduced variability as compared to the corresponding turbulent heating models. However, the $\mi{3}$ distribution is still inconsistent with the historical data.
+We use a subset of the simulations analyzed in \citealt{2020MNRAS.494.4168D}.
+These include MAD and SANE accretion flows at spins, $\abh = 0,+1/2,+15/16$.
+We compute the 3 hour modulation index $\mi{3}$, over the time interval 5,000--10,000$GM/c^{3}$.
+The average $\mi{3}$ values are comparable to similar $\Rh$ models, with SANE reconnection models exhibiting a reduced variability as compared to the corresponding turbulent heating models.
+However, the $\mi{3}$ distribution is still inconsistent with the historical data.
 
 %==============================================================================
 \subsection{Effects of fluid adiabatic index}
 
-We expect the ions and electrons in hot accretion flows to be thermally decoupled and the resulting plasma to be two-temperature \citep{1976ApJ...204..187S, Quataert_1998, 10.1093/mnras/stw3116, Ryan_2018, Chael2018}. The electrons are relativistic and can be modeled as a fluid with an adiabatic index $\Gamma_{e}=4/3$, while the ions are nonrelativistic with adiabatic index $\Gamma_{i}=5/3$.
+We expect the ions and electrons in hot accretion flows to be thermally decoupled and the resulting plasma to be two-temperature \citep{1976ApJ...204..187S, Quataert_1998, 10.1093/mnras/stw3116, Ryan_2018, Chael2018}.
+The electrons are relativistic and can be modeled as a fluid with an adiabatic index $\Gamma_{e}=4/3$, while the ions are nonrelativistic with adiabatic index $\Gamma_{i}=5/3$.
 
-The adiabatic index of the fluid assumes a value between $\Gamma_{e}$ and $\Gamma_{i}$ dictated by the thermodynamics of the ions and electrons (cf. Figure 4 in \citealt{10.1093/mnras/stw3116}). If the electrons and ions have equal temperature then in the relativistic electron/nonrelativistic ion regime the fluid adiabatic index is 13/9.  
+The adiabatic index of the fluid assumes a value between $\Gamma_{e}$ and $\Gamma_{i}$ dictated by the thermodynamics of the ions and electrons (cf. Figure 4 in \citealt{10.1093/mnras/stw3116}).
+If the electrons and ions have equal temperature then in the relativistic electron/nonrelativistic ion regime the fluid adiabatic index is 13/9.
 
-Our simulations are not fully consistent in their treatment of the adaibatic index.  All use a fixed $\Gamma_\mathrm{ad}$, but some set $\Gamma_\mathrm{ad} = 4/3$ while other use $13/9$ or $5/3$.
+Our simulations are not fully consistent in their treatment of the adaibatic index.
+All use a fixed $\Gamma_\mathrm{ad}$, but some set $\Gamma_\mathrm{ad} = 4/3$ while other use $13/9$ or $5/3$.
 
-Two-temperature simulations can self-consistently evolve adiabatic indices of electrons and ions and compute the net fluid adiabatic index with contributions from both species \cite{10.1093/mnras/stw3116}. These two-temperature simulations often show variation of the adiabatic index with polar angle, with the fluid energy dominated by hot electrons near the poles ($\Gamma = 4/3$) and by cooler ions and  electrons in the midplane ($\Gamma=5/3$).
+Two-temperature simulations can self-consistently evolve adiabatic indices of electrons and ions and compute the net fluid adiabatic index with contributions from both species \cite{10.1093/mnras/stw3116}.
+These two-temperature simulations often show variation of the adiabatic index with polar angle, with the fluid energy dominated by hot electrons near the poles ($\Gamma = 4/3$) and by cooler ions and  electrons in the midplane ($\Gamma=5/3$).
 
-We evaluate the effect of $\Gamma_\mathrm{ad}$ on lightcurve variability by comparing $\mi{3}$ for thermal, GRMHD simulations with varying  $\Gamma_\mathrm{ad}$. This includes MAD models with $\Gamma_\mathrm{ad}=13/9$ (see Section~\ref{app:narayan} and  \citealt{2021arXiv210812380N}) and SANE models with $\Gamma_\mathrm{ad}=5/3$. The models exhibit lightcurve variability similar to the fiducial models and all have \mi{3} distributions that are inconsistent with the historical data.  
+We evaluate the effect of $\Gamma_\mathrm{ad}$ on lightcurve variability by comparing $\mi{3}$ for thermal, GRMHD simulations with varying  $\Gamma_\mathrm{ad}$.
+This includes MAD models with $\Gamma_\mathrm{ad}=13/9$ (see Section~\ref{app:narayan} and  \citealt{2021arXiv210812380N}) and SANE models with $\Gamma_\mathrm{ad}=5/3$.
+The models exhibit lightcurve variability similar to the fiducial models and all have \mi{3} distributions that are inconsistent with the historical data.
