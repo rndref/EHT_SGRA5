@@ -80,7 +80,7 @@ This results in an upper limit of 93.6\uas FWHM and a lower limit of
 
 To score a model we evaluate the second moment tensor for each
 simulated 230\GHz image and find its eigenvalues
-$\lambda_\mathrm{maj}^2/(8\log 2)$ and $\lambda_\mathrm{min}^2/(8\log
+$\lambda_\mathrm{maj}^2/(8\ln 2)$ and $\lambda_\mathrm{min}^2/(8\ln
 2)$, where $\lambda_\mathrm{maj}$ and $\lambda_\mathrm{min}$ are the
 major and minor axis FWHM.
 The image is deemed non-compliant if it is inconsistent with the data
@@ -200,9 +200,8 @@ In the models the main driver of fit variations is source variability.
   \enddata
   %
   \tablecomments{\mring fits to selected 120s scans from \aprilvii.
-Column 2 gives UTC in hours for the observation.
-Columns 3-5 give best-fit parameters for the \mring diameter, width, and asymmetry parameter respectively.}
-
+    Column 2 gives UTC in hours for the observation.
+    Columns 3-5 give best-fit parameters for the \mring diameter, width, and asymmetry parameter respectively.}
 \end{deluxetable}
 
 Next, we read in a series of model images, generate synthetic data for each image for each scan at four position angles ($0, 45, 90, 135$ degrees) for the image, and fit \mrings to the synthetic data.
@@ -328,15 +327,17 @@ Although some pass the constraint that does not mean they are less variable than
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_sz.pdf}
   \caption{Second moment constraint example.
-Left: passing snapshot; right: failing snapshot.
-The model is rejected if $< 1\%$ of model snapshots pass.
-The solid white ellipse  represents the second moments of the image, and the dashed line shows the major axis.
-The two green circles show the observed lower and upper limits from \citetalias{PaperIII}.
-The snapshot is accepted if either the major or minor axis lies between the lower and upper limits.
+    Left: passing snapshot;
+    right: failing snapshot.
+    The model is rejected if $< 1\%$ of model snapshots pass.
+    The solid white ellipse  represents the second moments of the image, and the dashed line shows the major axis.
+    The two green circles show the observed lower and upper limits from \citetalias{PaperIII}.
+    The snapshot is accepted if either the major or minor axis lies between the lower and upper limits.
   }
   \label{fig:passfail_sz}
 \end{figure*}
 
+%------------------------------------------------------------------------------
 \subsubsection{EHT Structural Variability}
 
 Fluctuations in the spatial structure of the source will produce fluctuations in VA.
