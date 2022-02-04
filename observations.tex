@@ -345,16 +345,15 @@ Here we compare  the power spectrum of small-scale structural variability from E
 
 A nonparametric technique to measure the variance of the spatially-detrended VAs at a location in the $(u,v)$-plane is described in \citet{NoiseModeling} and briefly summarized here.
 We use EHT observations of \sgra from April 5, 6, 7, and 10 (notice that April 11 was excluded).
-To exclude correlations associated with  variations in the total flux we normalize the VA data with the contemporaneous intrasite lightcurve \citep{Georgiev_2022}.
+To remove correlations associated with variations in the total flux, we normalize the VA data with the contemporaneous intrasite lightcurve \citep{Georgiev_2022}.
 The lightcurve-normalized visibility amplitudes are then linearly detrended, and variances are computed and azimuthally averaged \citep{NoiseModeling}.
 The result, $\sigma_\text{var}^2 (|u|)$, is a measure of the fractional structural variability as a function of baseline length $|u|$.
 The $\sigma_\text{var}^2 (|u|)$ is included in an inflated error budget when making images of and fitting models to the 2017 EHT observations of \sgra \citepalias{PaperIII, PaperIV}.
 
-This quantity can be measured from the GRMHD simulations; see \citet{Georgiev_2022}.
-For all simulations reported here $\sigma_\text{var}^2$ is well-approximated by a broken power law with parameters that are nearly universal among simulations.
+We measured this quantity from the GRMHD simulations \citep[see][for details]{Georgiev_2022}.
+For all simulations reported here, $\sigma_\text{var}^2$ is well-approximated by a broken power law with parameters that are nearly universal among simulations.
 The $\sigma_\text{var}^2$ is measured over a four-day period, which is longer than the typical duration of our models.
-We therefore expect that model values will be biased downward compared to the data.
-We control for this using multiple simulations with the same parameters and by subdividing the analysis of long simulations into windows.
+We therefore expect that model values will be biased downward compared to the data. Furthermore, each GRMHD simulation can only give one draw from a distrbution that is broader than if the simulation spanned 4 days. This secondary effect negates the downward bias, which is further unimportant as we do not exclude models for being not variable enough. To measure the larger broadness of the distribution, we use multiple simulations with the same parameters and subdivide the analysis of long simulations into windows.
 The uncertainties in the measurement from the GRMHD simulations due to simulation resolution, the fast-light approximation, and code differences are small compared to the uncertainty due to the variability of $\sigma_\text{var}^2$ due to short simulations \citep{Georgiev_2022}.
 
 The measured $\sigma_\text{var}^2$ is well characterized by a power law for $2~{\rm G}\lambda < |u| < 6~{\rm G}\lambda$ \citep{Georgiev_2022}.
