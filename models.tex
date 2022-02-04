@@ -15,7 +15,7 @@ The distance is consistent with maser parallax measurements \citep{2019ApJ...885
 
 We also assume that \sgra is a black hole described by the Kerr metric.
 The black hole dimensionless spin, $\abh \equiv Jc/G\mbh^2$, is a free parameter with $-1 < \abh < 1$, where $J$, $G$, and $c$ are the black hole spin angular momentum, gravitational constant, and speed of light, respectively.
-Following \citet{M87PaperV}, hereafter \citetalias{M87PaperV}, we use
+Following \citetalias{M87PaperV}, we use
 $\abh > 0$ to indicate that the angular momentum of the accretion flow and black hole are parallel (the accretion flow is ``prograde'') and
 $\abh < 0$ to indicate that the angular momentum of the accretion flow and black hole are antiparallel (``retrograde'')\footnote{For tilted disks the sign of $\abh$ is the sign of ${\bf J}\cdot{\bf L}$ where ${\bf J}$ is black hole spin angular momentum and ${\bf L}$ is accretion flow orbital angular momentum.}.
 
@@ -154,6 +154,28 @@ solve the radiative transfer equation along geodesics to produce simulated image
 %------------------------------------------------------------------------------
 \subsubsection{Plasma Flow Model}
 
+\begin{figure*}
+  \centering
+  \includegraphics[width=0.425\textwidth]{figures/sane_3D_corrected.png}\hspace{1.5pt}%
+  \includegraphics[width=0.425\textwidth]{figures/mad_3D_corrected.png}\\
+  \includegraphics[width=0.425\textwidth]{figures/tilted_3D_corrected.png}\hspace{1.5pt}%
+  \includegraphics[width=0.425\textwidth]{figures/ressler_3D_corrected.png}
+  \caption{3-D overview of selected GRMHD simulations of \sgra in our library.
+    The color marks constant dimensionless density surfaces and lines follow magnetic field lines (the magnetic field lines shown are only those which are attached to the inner part of the accretion flow, at $r\approx 5~\rg$).
+    Two top panels show accretion simulations with default torus initial condition and
+    two bottom panels show non-standard accretion models. In case of spinning black holes, the spin is aligned with z-axis.}
+  \label{fig:GRMHD}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/grmhd_temp.pdf}
+  \caption{Time- and azimuth- averaged profiles of midplane dimensionless ion temperature in fiducial GRMHD simulations from \kharma.
+    Evidently MAD models are hotter than SANE, and both MADs and SANEs grow hotter as the black hole spin $\abh$ increases.
+    The hottest models are $\abh = 0.94$ MAD models.}
+  \label{fig:grmhd_temp}
+\end{figure*}
+
 We model the plasma flow around \sgra using ideal, non-radiative GRMHD.
 We assume the gravitational field
 is described by the Kerr metric, with mass from Equation~(\ref{eq:mass}) and with $\abh$ a free parameter \citep[see e.g.,][]{1999ApJ...522..727K,2003ApJ...589..444G, 2003ApJ...589..458D, 2005ApJ...635..723A, 2007A&A...473...11D}.
@@ -176,18 +198,18 @@ Despite these variations the radiative models based on these simulations are in 
 The torus initial conditions are motivated by the notion that the near-horizon flow, where most of the emission is generated (\citetalias{M87PaperV}) relaxes to a statistically steady state that is nearly independent of the flow at larger radius.
 This notion is challenged in the stellar wind-fed models of \cite{2020ApJ...896L...6R}, which are included in our study.
 
-All simulations are run in coordiantes based on the Kerr-Schild coordinates, which are regular on the horizon.
+All simulations are run in coordinates based on the Kerr-Schild coordinates, which are regular on the horizon.
 Specifically, most of the simulations use variations of the spherical polar form of Kerr-Schild coordinates to respect the symmetry of the spacetime.
 Unless stated otherwise, boundary conditions are outflow at the inner boundary, located inside the event horizon, outflow at the outer boundary, located at $r_{\rm max} \gtrsim 1000~\rg$, and reflecting boundary conditions at the poles.
 Most simulations are evolved to $t_\mathrm{final} = 30,000~\tg$.
 
-Once the evolution has started, a combination of instabilities including the magnetorotational instability \citep[MRI][]{1992ApJ...400..610B} drives the torus to a turbulent, fluctuating state.
-If $P_\mathrm{gas} \equiv$ gas pressure and $P_\mathrm{mag} \equiv B^2 / (8\pi) \equiv$ magnetic pressure, the standard accretion flow models can be divided by latitude into three zones:
+Once the evolution has started, a combination of instabilities including the magnetorotational instability \citep[MRI,][]{1992ApJ...400..610B} drives the torus to a turbulent, fluctuating state.
+Defining $P_\mathrm{gas} \equiv$ gas pressure and $P_\mathrm{mag} \equiv B^2 / (8\pi) \equiv$ magnetic pressure, the standard accretion flow models can be divided by latitude into three zones:
 \emph{i})~an equatorial inflow,
 \emph{ii})~a mid-latitude disk wind/corona with  $\beta  \equiv P_\mathrm{gas} / P_\mathrm{mag} \sim 1$, and
 \emph{iii})~a polar ``funnel'' with $\sigma \equiv B^2/4\pi \rho c^2 \gg 1$.
 
-The magnetic flux through the horizon divides the outcome into two categories (see, e.g, \citealt{M87PaperV} and \citealt{M87PaperVIII}, hereafter \citepalias{M87PaperVIII}, and references therein):
+The magnetic flux through the horizon divides the outcome into two categories (see, e.g, \citealt{M87PaperV} and \citealt{M87PaperVIII}, hereafter \citetalias{M87PaperVIII}, and references therein):
 the magnetically arrested disk (MAD) state \citep[e.g.,][]{1974Ap&SS..28...45B, 2003ApJ...592.1042I, 2003PASJ...55L..69N, 2011MNRAS.418L..79T} in which the magnetic flux on the horizon saturates and substantially affects the dynamics of the flow, and the Standard and Normal Evolution (SANE) state \citep[e.g.,][]{2003ApJ...589..444G, 2003ApJ...599.1238D, 2012MNRAS.426.3241N}.
 The dimensionless magnetic flux $\phi \equiv \Phi_{\mathrm{BH}} (\dot{M} r_\mathrm{g}^2 c)^{-1/2}$, where $\Phi_{\rm BH}$ is the magnetic flux interior to the black hole equator and $\dot{M}$ is the mass accretion rate through the horizon.
 MAD models have $\phi \sim \phi_{\rm crit} \sim 60$.\footnote{In the Lorentz-Heaviside units commonly used in GRMHD simulations $\phi_\mathrm{crit}$ is smaller by a factor of $(4\pi)^{1/2} \simeq 3.545$.}
@@ -199,34 +221,12 @@ The wind-fed simulations result in a mode of accretion that is similar to MAD bu
 The wind-fed models have $\abh = 0$.
 
 The GRMHD simulation library is summarized in Table~\ref{tab:GRMHDmodels}.
-In Figure~\ref{fig:GRMHD} we show a few examples of GRMHD simulations for an aligned SANE, an aligned MAD, a tilted torus, and a wind-fed simulation.
-The simulations vary in numerical method and in numerical resolution. We present more information on the numerical methods and models in Appendices~\ref{app:numerical} and \ref{app:variability}.
+In Figure~\ref{fig:GRMHD}, we show a few examples of GRMHD simulations for an aligned SANE, an aligned MAD, a tilted torus, and a wind-fed simulation.
+These simulations vary in numerical method and in numerical resolution. We present more information on the numerical methods and models in Appendices~\ref{app:numerical} and \ref{app:variability}.
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=0.425\textwidth]{figures/sane_3D_corrected.png}\hspace{1.5pt}%
-  \includegraphics[width=0.425\textwidth]{figures/mad_3D_corrected.png}\\
-  \includegraphics[width=0.425\textwidth]{figures/tilted_3D_corrected.png}\hspace{1.5pt}%
-  \includegraphics[width=0.425\textwidth]{figures/ressler_3D_corrected.png}
-  \caption{3-D overview of selected GRMHD simulations of \sgra in our library.
-    The color marks constant dimensionless density surfaces and lines follow magnetic field lines (the magnetic field lines shown are only those which are attached to the inner part of the accretion flow, at $r\approx 5~\rg$).
-    Two top panels show accretion simulations with default torus initial condition and
-    two bottom panels show non-standard accretion models. In case of spinning black holes, the spin is aligned with z-axis.}
-  \label{fig:GRMHD}
-\end{figure*}
-
-One critical feature of the GRMHD simulations that is important for the interpretation of our results is the temperature profile.
+The temperature profile is a critical feature of the GRMHD simulations important for the interpretation of our results.
 Figure \ref{fig:grmhd_temp} shows the time- and azimuth-averaged profiles of the midplane dimensionless {\em ion} temperature in a set of aligned GRMHD simulations.
 The temperature profiles exhibit strong trends with spin and magnetic state (MAD or SANE) that drives many of the trends seen in the radiative models: MAD models are factor of several hotter than than SANE models and both MAD and SANE become hotter as $\abh$ increases.
-
-\begin{figure*}
-  \centering
-  \includegraphics[width=0.9\textwidth]{figures/grmhd_temp.pdf}
-  \caption{Time- and azimuth- averaged profiles of midplane dimensionless ion temperature in fiducial GRMHD simulations from \kharma.
-    Evidently MAD models are hotter than SANE, and both MADs and SANEs grow hotter as the black hole spin $\abh$ increases.
-    The hottest models are $\abh = 0.94$ MAD models.}
-  \label{fig:grmhd_temp}
-\end{figure*}
 
 %------------------------------------------------------------------------------
 \subsubsection{Radiative Transfer Model}
