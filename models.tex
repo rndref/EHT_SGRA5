@@ -246,26 +246,25 @@ The transfer step requires that we specify any parameters associated with the eD
 \subsubsubsection{Electron Distribution Function}
 \label{sec:eDF}
 
-In \emph{thermal} models electron energies are distributed into the Maxwell-J{\"u}ttner distribution function:
+In \emph{thermal} models, electron energies are distributed into the Maxwell-J{\"u}ttner distribution function:
 \begin{align}\label{eq:thermaleDF}
   \frac{1}{n_e}\frac{dn_e}{d\gamma} = \frac{\gamma^2 \sqrt{1-1/\gamma^2}} {\Theta_e K_2(1/\Theta_e)} \exp\left(-\frac{\gamma}{\Theta_e}\right);
 \end{align}
 where $K_2$ is the modified Bessel function of the second kind and $\gamma$ is the Lorentz factor of an electron.
-Recall $\Theta_e = k_b T_e/(m_e c^2)$, which is determined by the ion-electron temperature ratio $R \equiv T_i/T_e$:
+Recall $\Theta_e = \kB T_e/(m_e c^2)$, which is determined by the ion-electron temperature ratio $R \equiv T_i/T_e$:
 \begin{align}\label{eq:te_vs_R}
-  T_e=\frac{2 m_p u}{3 k_B \rho (2+R)}.
+  T_e=\frac{2 m_p u}{3 \kB \rho (2+R)}.
 \end{align}
 Here $u$ and $\rho$ are the internal energy density and rest-mass density from the GRMHD simulation, and we assume that the ions are nonrelativistic with adiabatic index is $5/3$ and the electrons are relativistic with  adiabatic index is $4/3$.
 Thermal models are motivated by the idea that wave-particle scattering drives partial relaxation of the eDF, even though Coulomb scattering is ineffective.
 
 The temperature ratio in a parcel of plasma depends on a balance between microphysical dissipation, radiative cooling, and fluid transport.
-Models for collisionless dissipation vary widely in their predictions for the ratio of heat deposited in ions and electrons, but most depend strongly on the local magnetic field strength.
-For simplicity, we adopt a prescription in which the temperature ratio is only a function of the plasma beta
-This motivates a prescription in which the temperature ratio is a function of the plasma
-$\beta \equiv P_\mathrm{gas}/P_\mathrm{mag}$ \citep{2015ApJ...799....1C}.
+Models for collisionless dissipation vary widely in their predictions for the ratio of heat deposited in ions and electrons, but depend most strongly on the local magnetic field strength.
+For simplicity, we adopt a prescription in which the temperature ratio is only a function of the plasma beta.
+This motivates a prescription in which the temperature ratio depends solely on the plasma $\beta \equiv P_\mathrm{gas}/P_\mathrm{mag}$ \citep{2015ApJ...799....1C}.
 We adopt the same model as \citetalias{M87PaperV} and \citetalias{M87PaperVIII}, where $R$ is a smooth function adopted from \cite{2016A&A...586A..38M}:
 \begin{equation}\label{eq:rhigh_prescription}
-  R = \frac{T_i}{T_e} = \Rh \frac{b^2}{b^2+1} + \Rl \frac{1}{b^2+1}
+  R = \frac{T_i}{T_e} = \Rh \frac{b^2}{b^2+1} + \Rl \frac{1}{b^2+1},
 \end{equation}
 where $b \equiv \beta/\beta_\mathrm{crit}$.
 This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, $\Rh$.
@@ -276,8 +275,7 @@ We explore two implementations in this paper:
 \emph{i}) a power-law distribution function
 \begin{align}
   \frac{1}{n_e} \frac{d n_e}{d\gamma} &=
-  \frac{p-1}{\gamma_{\min}^{1-p} - \gamma_{\vphantom{i}\max}^{1-p}}
-  \gamma^{-p},
+  \frac{p-1}{\gamma_{\min}^{1-p} - \gamma_{\vphantom{i}\max}^{1-p}} \gamma^{-p},
   \label{eq:nonthermaleDF}
 \end{align}
 which has power-law index $p$ and upper and lower limits $\gamma_{\min}$ and $\gamma_{\vphantom{i}\max}$; and
