@@ -282,7 +282,7 @@ which has power-law index $p$ and upper and lower limits $\gamma_{\min}$ and $\g
 \emph{ii}) a so-called $\kappa$ distribution function, inspired by observations of the solar wind and by results of collisionless plasma simulations \citep[e.g.,][and references therein]{2015JPlPh..81e3201K}
 \begin{align}
   \frac{1}{n_e} \frac{d n_e}{d\gamma} =
-  \gamma \sqrt{\gamma^2-1} \left(1+\frac{\gamma+1}{\kappa w}\right)^{-(\kappa+1)},
+  \gamma \sqrt{\gamma^2-1} \left(1+\frac{\gamma-1}{\kappa w}\right)^{-(\kappa+1)},
   \label{eq:kappaeDF}
 \end{align}
 which has width parameter $w$ and power-law index parameter $\kappa$.
@@ -353,7 +353,7 @@ We also find that the X-ray can be dominated by either Compton scattering or bre
 Figures~\ref{fig:example_imgs} and \ref{fig:example_vas_seds} show examples of model images and multiwavelength SEDs from our library.
 
 The GRMHD simulation-derived temperatures are unreliable in regions where $\sigma \equiv B^2/(8\pi\rho c^2)$ is large, because truncation error in integration of the total energy equation produces large fractional errors in temperature.
-All our radiative transfer models therefore set the emissivity, absorptivity, and inverse-Compton scattering cross-sections to $0$ for $\sigma > \sigma_\mathrm{cut} = 1$.
+All our radiative transfer models therefore set the emissivity, absorptivity, and inverse-Compton scattering cross-sections to $0$ for the regions with $\sigma > \sigma_\mathrm{cut} = 1$.
 
 %==============================================================================
 \subsection{Summary of \sgra Model Library}

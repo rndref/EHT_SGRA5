@@ -17,19 +17,19 @@ The selected constraints are heterogeneous and it is not yet possible to combine
 Indeed, uncertainties in the data and the models are not yet well enough understood to make that possible.
 In this first analysis we set a pass/fail criterion for each constraint and consider the implications of various combinations of constraints for \sgra.
 
-As the number of constraints increase, so does the probability of wrongly rejecting a model.
-Consider a set of $N$ constraints, and for each assign a probability $p$ that the model is consistent with the data.
+As the number of constraints increases, so does the probability of wrongly rejecting a model.
+Consider a set of $N$ constraints, and for each assigns a probability $p$ that the model is consistent with the data.
 The model is rejected if $p < p_c$.
 Then the probability that the model is wrongly rejected by a single constraint is $p_c$.
 Applying all $N$ constraints, the probability that the model is wrongly rejected is $1 - (1 - p_c)^N$; for $N = 11$ and $p_c = 0.01$, this is $\approx N p_c \simeq 10\%$.
-Each of $N$ constraints  must therefore be able to reject a model with probability $\ll 1/N$ or the model scoring is meaningless.
+Each of $N$ constraints must therefore be able to reject a model with probability $\ll 1/N$ or the model scoring is meaningless.
 
 The confidence with which a model can be evaluated is limited, however, by sampling noise.
 Many constraints (e.g. 86\GHz flux density) compare an observation to a distribution of synthetic observations from a model.
 Time series of synthetic observations are not yet well characterized, but most have a correlation time $\tau\sim$ few $\times 100 \tg$.
 If the model decorrelates on timescales longer than $\tau$ then a model of duration $T$ yields $\sim T/\tau$ independent samples,\footnote{In what follows we must sometimes estimate how many independent samples are available in a time series.
 Rather than estimating $\tau$  model-by-model we uniformly assume $\tau = 540 \tg$.
-The analysis is insensitive to this choice.} and thus a fractional error in moments of the distribution $\sim (T/\tau)^{-1/2} = 0.14 (T/(15,000))^{-1/2}(\tau/300)^{1/2}$.
+The analysis is insensitive to this choice.} and thus a fractional error in moments of the distribution $\sim (T/\tau)^{-1/2} = 0.14 (T/15,000)^{-1/2}(\tau/300)^{1/2}$.
 Increasing the number of constraints, then, requires increasing the duration of the GRMHD simulations.
 
 Evidently the models have significant sampling noise, and our use of hard cuts (pass/fail scoring) amplifies this noise.
@@ -322,20 +322,6 @@ Through the KS test, the strength of the $\mi{3}$ constraint depends on the numb
 The fiducial models have duration $10^4$ or $1.5\times 10^4 \tg$ (18 or 28 samples), whereas most exploratory models have duration $5 \times 10^3 \tg$ (9 samples).
 The $\mi{3}$ constraint is thus weaker for the exploratory models.
 Although some pass the constraint that does not mean they are less variable than fiducial models that fail the constraint.
-
-\begin{figure*}
-  \centering
-  \includegraphics[width=0.75\textwidth]{figures/passfail_sz.pdf}
-  \caption{Second moment constraint example.
-    Left: passing snapshot;
-    right: failing snapshot.
-    The model is rejected if $< 1\%$ of model snapshots pass.
-    The solid white ellipse  represents the second moments of the image, and the dashed line shows the major axis.
-    The two green circles show the observed lower and upper limits from \citetalias{PaperIII}.
-    The snapshot is accepted if either the major or minor axis lies between the lower and upper limits.
-  }
-  \label{fig:passfail_sz}
-\end{figure*}
 
 %------------------------------------------------------------------------------
 \subsubsection{EHT Structural Variability}
