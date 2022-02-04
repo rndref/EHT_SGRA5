@@ -17,7 +17,7 @@ We also assume that \sgra is a black hole described by the Kerr metric.
 The black hole dimensionless spin, $\abh \equiv Jc/G\mbh^2$, is a free parameter with $-1 < \abh < 1$, where $J$, $G$, and $c$ are the black hole spin angular momentum, gravitational constant, and speed of light, respectively.
 Following \citet{M87PaperV}, hereafter \citetalias{M87PaperV}, we use
 $\abh > 0$ to indicate that the angular momentum of the accretion flow and black hole are parallel (the accretion flow is ``prograde'') and
-$\abh < 0$ to indicate that the angular momentum of the accretion flow and black hole are antiparallel (``retrograde'').\footnote{For tilted disks the sign of $\abh$ is the sign of ${\bf J}\cdot{\bf L}$ where ${\bf J}$ is black hole spin angular momentum and ${\bf L}$ is accretion flow orbital angular momentum.}
+$\abh < 0$ to indicate that the angular momentum of the accretion flow and black hole are antiparallel (``retrograde'')\footnote{For tilted disks the sign of $\abh$ is the sign of ${\bf J}\cdot{\bf L}$ where ${\bf J}$ is black hole spin angular momentum and ${\bf L}$ is accretion flow orbital angular momentum.}.
 
 Using the above mass and distance, the implied characteristic length is
 \begin{equation}
@@ -63,10 +63,12 @@ Here we use a simple, one-zone model to motivate the more complicated models tha
 These results follow one-zone models developed in the literature over many decades \citep[e.g.][]{1996IAUS..169..169F}.
 
 Consider a spherical, uniform plasma of radius $r = 5\rg$, comparable to the observed size of \sgra at $230\GHz$ (\citetalias{PaperIII}, \citetalias{PaperIV}), with uniform magnetic field oriented at $\pi/3$ to the line-of-sight.
-In turbulent astrophysical plasmas it is common for  the gas pressure to be comparable to the magnetic pressure, and we assume that here: $n_i k T_i + n_e k T_e = B^2/(8\pi)$, where $T_i \equiv$ ion temperature, $T_e \equiv$ electron temperature, $B \equiv$ magnetic field strength in Gauss.
+In turbulent astrophysical plasmas, it is common for the gas pressure to be comparable to the magnetic pressure, and we assume that here: $n_i \kB T_i + n_e \kB T_e = B^2/(8\pi)$, where $T_i \equiv$ ion temperature, $T_e \equiv$ electron temperature, $\kB \equiv$ Boltzmann constant, and $B \equiv$ magnetic field strength.
+% in Gauss.
+% ^^^^^^^^ saying "B is magnetic field strength in Gauss means the symbol B is dimensionless.  Since we explicitly use "Gauss" as unit below, we don't need to specify the unit here.
 The plasma is collisionless (checked below), and it is plausible that the ions are preferentially heated, so we assume $T_i \sim 3 T_e$.
-If the ions are sub-virial by a factor of about $3$, commonly seen in relativistic MHD simulations, then $(3/2) k T_i \sim (1/3) (1/2) (G M m_p/r)$.
-Then the ions are nonrelativistic and the electrons are relativistic, with $\Theta_e \equiv  k T_e / m_e c^2 \sim 10$.
+If the ions are sub-virial by a factor of about $3$, commonly seen in relativistic MHD simulations, i.e., $(3/2) k T_i \sim (1/3) (1/2) (G M m_p/r)$,
+then the ions are nonrelativistic and the electrons are relativistic, with $\Theta_e \equiv  \kB T_e / m_e c^2 \sim 10$.
 
 Using a thermal synchrotron emissivity $j_\nu$ \citep[e.g.,][]{2011ApJ...737...21L} and assuming optically thin emission, the flux density from a uniform sphere, $F_\nu = (4/3)\pi r^3 j_\nu D^{-2} 10^{23}\,\mathrm{Jy}$.
 Setting $F_\nu = 2.4\,\mathrm{Jy}$ (the average measured by ALMA during the 2017 campaign; \citealt{Wielgus2022}) yields a nonlinear equation for the electron density, $n_e$, with solution
@@ -85,7 +87,7 @@ The synchrotron cooling timescale $t_\mathrm{cool} \equiv u/\Lambda$ where $u_e 
 The cooling time is therefore $t_\mathrm{cool}=2.3 \times 10^4\sec \simeq 1.1 \times 10^3 \tg$ which is longer than the inflow timescale $r/v^r \sim r^{3/2}$.
 This suggests that radiative cooling can be neglected in the plasma models \citep[more detailed calculations confirm this estimate][]{2012MNRAS.426.1928D,2020MNRAS.499.3178Y}.\footnote{Notice that if \sgra is fed by stellar winds then the inflowing plasma may be mainly helium \citep{2019MNRAS.482L.123R}; this changes the one-zone model slightly. Helium accretion is discussed in detail in \citep{Wong_2022}.}
 
-The one-zone model $n_e, \Theta_e$ imply that the mean free path to Coulomb scattering is large compared to $\rg$, i.e. the source plasma is collisionless.
+The one-zone model $n_e$ and $\Theta_e$ imply that the mean free path to Coulomb scattering is large compared to $\rg$, i.e. the source plasma is collisionless.
 At $\Theta_e \sim 1$, for example, the Coulomb scattering cross section is comparable to the Thomson cross section, and therefore the mean free path $\sim \tau_e^{-1} \rg$.
 The electron-ion Coulomb scattering timescale is also long, and the electrons and ions are therefore poorly coupled.
 This is consistent with our assumption of a two-temperature  plasma where electrons are cooler than the ions \citep{1976ApJ...204..187S,1977ApJ...214..840I, 1982Natur.295...17R} and motivates consideration of nonthermal (unrelaxed) electron distribution functions \citep[see][]{2000ApJ...541..234O, 2009ApJ...701..521C, 2014A&A...570A...7M, 2018A&A...612A..34D, 2021arXiv211102518F, 2021NatAs.tmp..218C, Chatterjee2021, 2021arXiv211203933E, Scepi2021}.
@@ -143,7 +145,11 @@ Steady, disk-like (RIAF) accretion models in the Kerr metric go still further an
 Minor edit to retain that meaning.
 Steady phenomenological models do not, however, self-consistently capture fluctuations in the flow.
 That requires either a statistical model \citep{2021ApJ...906...39L} or a time-dependent numerical simulation.
-Here we use numerical simulations, adopt an ideal GRMHD model for the flow, use simple parameterized models to assign an electron distribution function, and solve the radiative transfer equation along geodesics to produce simulated images.
+Here we
+use numerical simulations,
+adopt an ideal GRMHD model for the flow,
+employ simple parameterized models to assign an electron distribution function, and
+solve the radiative transfer equation along geodesics to produce simulated images.
 
 %------------------------------------------------------------------------------
 \subsubsection{Plasma Flow Model}
