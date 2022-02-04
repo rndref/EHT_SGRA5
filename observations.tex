@@ -37,7 +37,9 @@ the visibilities near zero baseline in the \uv domain, so short
 baseline VAs can be used to directly estimate the source size.
 
 This procedure is used in \citetalias{PaperII} to set an upper limit
-of 95\uas FWHM (full width at half maximum; standard deviation $\times \sqrt{8\ln{2}}$.) on the second moment and lower limit of 38\uas FWHM on the second moment along a direction
+of 95\uas FWHM (full width at half maximum; standard deviation
+$\times \sqrt{8\ln{2}}$) on the second moment and lower limit of
+38\uas FWHM on the second moment along a direction
 through the source corresponding to the orientation of the short
 baselines (SMT-LMT and ALMA-LMT).  This is done without any assumption
 about the structure of the source and is therefore quite  permissive.
@@ -101,8 +103,8 @@ To account for these effects, we classify as compliant a model snapshot with
 VA in this range that is $< 5\%$ of the zero baseline flux as compliant.
 
 To apply this constraint, we compute the VA of each model snapshot
-along position angles (PAs) $0^\degree$, $45^\degree$, $90^\degree$,
-$135^\degree$ (because of Hermitian symmetry we need only consider PAs in the $0-180\deg$ range).
+along position angles (PAs) $0\degree$, $45\degree$, $90\degree$,
+$135\degree$ (because of Hermitian symmetry we need only consider PAs in the 0--$180\degree$ range).
 We find the first minimum numerically and compute the median VAs
 between 6 and 8\,$\mathrm{G}\lambda$.
 We classify a snapshot as compliant if
@@ -216,14 +218,14 @@ median $2.2\um$ flux density exceeds $1.0\,\mathrm{mJy}$.
 
 Similar to Section~\ref{subsec:nir}, we estimate $\nu L_\nu(6\,\mathrm{keV})$ in two ways.  The SED is used if the model contains Compton scattering and bremsstrahlung.  If the SED is not available then we compute an X-ray image that includes only bremsstrahlung (which dominates the X-ray emission in thermal SANE models with $\Rh = 40$, $160$) enabling us to eliminate a few additional models.  We reject the model if the median $\nu L_\nu(6\,\mathrm{keV}) > 10^{33}\ergps$.
 
-
+%==============================================================================
 \subsection{Variability}
 
 \sgra shows variability on a wide range of timescales.  This is expected: fluctuations in stellar wind feeding at the scale of the S-stars plausibly introduce long timescale variations, while turbulence at smaller radii, down to the scale of the event horizon, plausibly introduces a spectrum of shorter timescale variations.  Quantitative comparison of observed variability to the models is therefore a potentially powerful tool for model selection.
 
 Here we consider two measures of variability: one that characterizes variability of the 230\GHz flux density in the lightcurves \citep{Wielgus2022} and a second that characterizes variability of the VA in EHT data (\citetalias{PaperIV}; \citealt{NoiseModeling}).
 
-
+%------------------------------------------------------------------------------
 \subsubsection{230 \GHz Lightcurves}
 
 ALMA and SMA produced \sgra lightcurves at 230\GHz as a byproduct of the 2017 EHT VLBI observing campaign. The complete set of lightcurves is presented and analyzed in \cite{Wielgus2022}.
@@ -255,7 +257,6 @@ Fluctuations in the spatial structure of the source will produce fluctuations in
 A nonparametric technique to measure the variance of the spatially-detrended VAs at a location in the $(u,v)$-plane is described in \citet{NoiseModeling} and briefly summarized here.  We use EHT observations of \sgra from April 5, 6, 7, and 10 (notice that April 11 was excluded).  To exclude correlations associated with  variations in the total flux we normalize the VA data with the contemporaneous intrasite lightcurve \citep{Georgiev_2022}.  The lightcurve-normalized visibility amplitudes are then linearly detrended, and variances are computed and azimuthally averaged \citep{NoiseModeling}.  The result, $\sigma_\text{var}^2 (|u|)$, is a measure of the fractional structural variability as a function of baseline length $|u|$.  The $\sigma_\text{var}^2 (|u|)$ is included in an inflated error budget when making images of and fitting models to the 2017 EHT observations of \sgra \citepalias{PaperIII, PaperIV}.
 
 This quantity can be measured from the GRMHD simulations; see \citet{Georgiev_2022}. For all simulations reported here $\sigma_\text{var}^2$ is well-approximated by a broken power law with parameters that are nearly universal among simulations.
-% cfg rewrite
 The $\sigma_\text{var}^2$ is measured over a four-day period, which is longer than the typical duration of our models.  We therefore expect that model values will be biased downward compared to the data.  We control for this using multiple simulations with the same parameters and by subdividing the analysis of long simulations into windows.
 The uncertainties in the measurement from the GRMHD simulations due to simulation resolution, the fast-light approximation, and code differences are small compared to the uncertainty due to the variability of $\sigma_\text{var}^2$ due to short simulations \citep{Georgiev_2022}.
 
