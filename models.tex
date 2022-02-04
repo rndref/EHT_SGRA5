@@ -13,8 +13,8 @@ In this paper, we assume the mass of and distance to \sgra are
 which are approximately the mean of the values reported by \citet{2019Sci...365..664D} and \citet{2019A&A...625L..10G}, which differ by about 4\%.
 The distance is consistent with maser parallax measurements \citep{2019ApJ...885..131R}.
 
-In this paper we assume that \sgra is a black hole described by the Kerr metric.
-The black hole dimensionless spin, $\abh \equiv Jc/G\mbh^2$, is a free parameter with $-1 < \abh < 1$;  $J$, $G$, and $c$ are the black hole spin angular momentum, gravitational constant, and speed of light, respectively.
+We also assume that \sgra is a black hole described by the Kerr metric.
+The black hole dimensionless spin, $\abh \equiv Jc/G\mbh^2$, is a free parameter with $-1 < \abh < 1$, where $J$, $G$, and $c$ are the black hole spin angular momentum, gravitational constant, and speed of light, respectively.
 Following \citet{M87PaperV}, hereafter \citetalias{M87PaperV}, we use
 $\abh > 0$ to indicate that the angular momentum of the accretion flow and black hole are parallel (the accretion flow is ``prograde'') and
 $\abh < 0$ to indicate that the angular momentum of the accretion flow and black hole are antiparallel (``retrograde'').\footnote{For tilted disks the sign of $\abh$ is the sign of ${\bf J}\cdot{\bf L}$ where ${\bf J}$ is black hole spin angular momentum and ${\bf L}$ is accretion flow orbital angular momentum.}
@@ -32,7 +32,7 @@ and the angular scale is
   \vartheta_\mathrm{g} \equiv G\mbh/(c^2 D) \simeq 5.03\uas.
 \end{equation}
 The expected diameter of the black hole shadow is $2\sqrt{27} G\mbh/(c^2 D)$ for $\abh = 0$.
-For $|\abh| > 0$ the shadow is noncircular and its size and shape depend on $\abh$ and inclination $i$ (the angle between the line of sight and the spin axis); its width can be as small as $9 G\mbh/(c^2 D)$ for $\abh = 1$ and $i = 90\deg$ \citep{1973blho.conf..215B}.
+For $|\abh| > 0$ the shadow is noncircular and its size and shape depend on $\abh$ and inclination $i$ (the angle between the line of sight and the spin axis); its width can be as small as $9 G\mbh/(c^2 D)$ for $\abh = 1$ and $i = 90\degree$ \citep{1973blho.conf..215B}.
 
 If the emitting plasma is ionized hydrogen (electron-proton plasma) then the Eddington luminosity is:
 \begin{align}
@@ -48,10 +48,13 @@ The corresponding Eddington accretion rate is
   &= 5.8 \times 10^{24} \gm \sec^{-1} \nonumber\\
   &= 0.09 \msun \yr^{-1},
 \end{align}
-where the nominal efficiency is 10\% and the Eddington ratio:
-$L_\mathrm{bol}/L_\mathrm{Edd} = 1.9 \times 10^{-10} (L_\mathrm{bol} \ergps /10^{35} \ergps)$.
-In a quiescent, non-flaring state, the bolometric luminosity of \sgra is $L_\mathrm{bol} \sim 10^{35}\ergps$, resulting in an extremely small Eddington ratio.
-In what follows we assume that radiative cooling of plasma around the black hole can be neglected (which is partially justified later) and that the emergent radiation can be calculated in post-processing.
+where the nominal efficiency is 10\%.
+In a quiescent, non-flaring state, the bolometric luminosity of \sgra is $L_\mathrm{bol} \sim 10^{35}\ergps$, resulting in an extremely small Eddington ratio:
+\begin{align}
+  L_\mathrm{bol}/L_\mathrm{Edd} = 1.9 \times 10^{-10} (L_\mathrm{bol} /10^{35} \ergps).
+  % CK: L_bol has dimensional so there is no need to put unit after it.
+\end{align}
+In what follows, we assume that radiative cooling of plasma around the black hole can be neglected (which is partially justified later) and that the emergent radiation can be calculated in post-processing.
 
 %==============================================================================
 \subsection{One-Zone Model Estimates}
