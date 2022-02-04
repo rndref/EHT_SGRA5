@@ -85,7 +85,8 @@ Synchrotron cooling therefore dominates Compton cooling.
 
 The synchrotron cooling timescale $t_\mathrm{cool} \equiv u/\Lambda$ where $u_e = 3 n_e k T_e$ is the electron internal energy and $\Lambda \simeq 5.4 B^2 e^4 n_e \Theta_e^2 /(c^3 m_e^2)$ is the synchrotron cooling rate for a thermal population of electrons with $\Theta_e \gtrsim 1$ (see Appendix~A in \citealt{2011ApJ...735....9M}; finite optical depth reduces $\Lambda$).
 The cooling time is therefore $t_\mathrm{cool}=2.3 \times 10^4\sec \simeq 1.1 \times 10^3 \tg$ which is longer than the inflow timescale $r/v^r \sim r^{3/2}$.
-This suggests that radiative cooling can be neglected in the plasma models \citep[more detailed calculations confirm this estimate][]{2012MNRAS.426.1928D,2020MNRAS.499.3178Y}.\footnote{Notice that if \sgra is fed by stellar winds then the inflowing plasma may be mainly helium \citep{2019MNRAS.482L.123R}; this changes the one-zone model slightly. Helium accretion is discussed in detail in \citep{Wong_2022}.}
+This suggests that radiative cooling can be neglected in the plasma models \citep[more detailed calculations confirm this estimate][]{2012MNRAS.426.1928D,2020MNRAS.499.3178Y}.\footnote{Notice that if \sgra is fed by stellar winds then the inflowing plasma may be mainly helium \citep{2019MNRAS.482L.123R}; this changes the one-zone model slightly.
+Helium accretion is discussed in detail in \citep{Wong_2022}.}
 
 The one-zone model $n_e$ and $\Theta_e$ imply that the mean free path to Coulomb scattering is large compared to $\rg$, i.e. the source plasma is collisionless.
 At $\Theta_e \sim 1$, for example, the Coulomb scattering cross section is comparable to the Thomson cross section, and therefore the mean free path $\sim \tau_e^{-1} \rg$.
@@ -163,7 +164,8 @@ solve the radiative transfer equation along geodesics to produce simulated image
   \caption{3-D overview of selected GRMHD simulations of \sgra in our library.
     The color marks constant dimensionless density surfaces and lines follow magnetic field lines (the magnetic field lines shown are only those which are attached to the inner part of the accretion flow, at $r\approx 5~\rg$).
     Two top panels show accretion simulations with default torus initial condition and
-    two bottom panels show non-standard accretion models. In case of spinning black holes, the spin is aligned with z-axis.}
+    two bottom panels show non-standard accretion models.
+In case of spinning black holes, the spin is aligned with z-axis.}
   \label{fig:GRMHD}
 \end{figure*}
 
@@ -222,7 +224,8 @@ The wind-fed models have $\abh = 0$.
 
 The GRMHD simulation library is summarized in Table~\ref{tab:GRMHDmodels}.
 In Figure~\ref{fig:GRMHD}, we show a few examples of GRMHD simulations for an aligned SANE, an aligned MAD, a tilted torus, and a wind-fed simulation.
-These simulations vary in numerical method and in numerical resolution. We present more information on the numerical methods and models in Appendices~\ref{app:numerical} and \ref{app:variability}.
+These simulations vary in numerical method and in numerical resolution.
+We present more information on the numerical methods and models in Appendices~\ref{app:numerical} and \ref{app:variability}.
 
 The temperature profile is a critical feature of the GRMHD simulations important for the interpretation of our results.
 Figure \ref{fig:grmhd_temp} shows the time- and azimuth-averaged profiles of the midplane dimensionless {\em ion} temperature in a set of aligned GRMHD simulations.
@@ -247,14 +250,17 @@ In \emph{thermal} models electron energies are distributed into the Maxwell-J{\"
 \begin{align}\label{eq:thermaleDF}
   \frac{1}{n_e}\frac{dn_e}{d\gamma} = \frac{\gamma^2 \sqrt{1-1/\gamma^2}} {\Theta_e K_2(1/\Theta_e)} \exp\left(-\frac{\gamma}{\Theta_e}\right);
 \end{align}
-where $K_2$ is the modified Bessel function of the second kind and $\gamma$ is the Lorentz factor of an electron. Recall $\Theta_e = k_b T_e/(m_e c^2)$, which is determined by the ion-electron temperature ratio $R \equiv T_i/T_e$:
+where $K_2$ is the modified Bessel function of the second kind and $\gamma$ is the Lorentz factor of an electron.
+Recall $\Theta_e = k_b T_e/(m_e c^2)$, which is determined by the ion-electron temperature ratio $R \equiv T_i/T_e$:
 \begin{align}\label{eq:te_vs_R}
   T_e=\frac{2 m_p u}{3 k_B \rho (2+R)}.
 \end{align}
 Here $u$ and $\rho$ are the internal energy density and rest-mass density from the GRMHD simulation, and we assume that the ions are nonrelativistic with adiabatic index is $5/3$ and the electrons are relativistic with  adiabatic index is $4/3$.
 Thermal models are motivated by the idea that wave-particle scattering drives partial relaxation of the eDF, even though Coulomb scattering is ineffective.
 
-The temperature ratio in a parcel of plasma depends on a balance between microphysical dissipation, radiative cooling, and fluid transport. Models for collisionless dissipation vary widely in their predictions for the ratio of heat deposited in ions and electrons, but most depend strongly on the local magnetic field strength. For simplicity, we adopt a prescription in which the temperature ratio is only a function of the plasma beta
+The temperature ratio in a parcel of plasma depends on a balance between microphysical dissipation, radiative cooling, and fluid transport.
+Models for collisionless dissipation vary widely in their predictions for the ratio of heat deposited in ions and electrons, but most depend strongly on the local magnetic field strength.
+For simplicity, we adopt a prescription in which the temperature ratio is only a function of the plasma beta
 This motivates a prescription in which the temperature ratio is a function of the plasma
 $\beta \equiv P_\mathrm{gas}/P_\mathrm{mag}$ \citep{2015ApJ...799....1C}.
 We adopt the same model as \citetalias{M87PaperV} and \citetalias{M87PaperVIII}, where $R$ is a smooth function adopted from \cite{2016A&A...586A..38M}:
@@ -307,11 +313,11 @@ Notice that, in this work, model parameters are always varied at constant time-a
   \centering
   \includegraphics[width=\textwidth]{figures/example_imgs.pdf}
   \caption{Example models from the simulation library.
-Left column: best-bet thermal MAD; middle column: nonthermal variable $\kappa$ MAD; right column: thermal SANE model.
-Top row: 86\GHz images; bottom row: 230\GHz images.
-Color represents intensity, or equivalently brightness temperature.
-Angular momentum of the accretion flow projected onto the image points up.
-These are relatively successful models satisfying most of the observational  constraints.}
+    Left column: best-bet thermal MAD; middle column: nonthermal variable $\kappa$ MAD; right column: thermal SANE model.
+    Top row: 86\GHz images; bottom row: 230\GHz images.
+    Color represents intensity, or equivalently brightness temperature.
+    Angular momentum of the accretion flow projected onto the image points up.
+    These are relatively successful models satisfying most of the observational  constraints.}
   \label{fig:example_imgs}
 \end{figure*}
 
@@ -319,11 +325,11 @@ These are relatively successful models satisfying most of the observational  con
   \centering
   \includegraphics[width=\textwidth]{figures/example_vas_seds.pdf}
   \caption{Visibility amplitudes (left) and SEDs (right) of the three examples, compared with the calibrated EHT~2017 data.
-Black symbols show observations.
-Blue, orange, and green are the models shown in Figure~\ref{fig:example_imgs} (see also legend for details).
-Observed VAs are 1\,minute incoherently averaged data from the HOPS pipeline on \aprilvii.
-Model VAs are shown as a solid line for a section at position angle $0\degree$ for a single snapshot, and the band shows the 1st through 99th percentile over all position angles and all times; in this figure no noise is included in the model VAs.
-Model SEDs show a solid line for the mean SED and a band for the range across snapshots.}
+    Black symbols show observations.
+    Blue, orange, and green are the models shown in Figure~\ref{fig:example_imgs} (see also legend for details).
+    Observed VAs are 1\,minute incoherently averaged data from the HOPS pipeline on \aprilvii.
+    Model VAs are shown as a solid line for a section at position angle $0\degree$ for a single snapshot, and the band shows the 1st through 99th percentile over all position angles and all times; in this figure no noise is included in the model VAs.
+    Model SEDs show a solid line for the mean SED and a band for the range across snapshots.}
   \label{fig:example_vas_seds}
 \end{figure*}
 
@@ -340,7 +346,8 @@ Direct imaging includes synchrotron and bremsstrahlung \citep[both ion-electron 
 The image library has a typical field of view (full width), resolution (pixel count), and half-width angular size of: $800\uas$, $200 \times 200$, $80 \vartheta_\mathrm{g}$ at 86\GHz; $200\uas$, $400 \times 400$, $20 \vartheta_\mathrm{g}$ at 230\GHz; and $100\uas$, $200\times 200$, $10 \vartheta_\mathrm{g}$ at $2.2\um$.
 A few models are imaged with larger field of view or higher resolution.
 
-The SEDs are produced for a set of narrow bins in inclination angle. At each inclination, the SED is averaged over azimuth.
+The SEDs are produced for a set of narrow bins in inclination angle.
+At each inclination, the SED is averaged over azimuth.
 The SED includes synchrotron, bremsstrahlung, \emph{and} Compton scattering.
 
 We find that, although $2.2\um$ emission is usually dominated by synchrotron, occasionally $2.2\um$ synchrotron is so weak that Compton scattering dominates.
@@ -357,11 +364,13 @@ All our radiative transfer models therefore set the emissivity, absorptivity and
 %https://docs.google.com/spreadsheets/d/1gw9ichvvYGHLFsZl2wlxqu-O03qEULrwcw3Wixd8BhQ/edit#gid=930351969
 %not sure that gives complete answer, but it will help.
 
-A summary of radiative transfer calculations is given in Table~\ref{tab:radiativemodels}. The entire image library contains $6$ simulation sets; thousands of points in model parameter space and $\sim 1.8$M images at each of 86\GHz, 230\GHz, and $2.2\mu$, and $\sim1.3$M SEDs.
+A summary of radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
+The entire image library contains $6$ simulation sets; thousands of points in model parameter space and $\sim 1.8$M images at each of 86\GHz, 230\GHz, and $2.2\mu$, and $\sim1.3$M SEDs.
 The images and SEDs occupy about $50$TB.
 
 We refer to the thermal, $\Rh$ models as ``fiducial'' models, and the remainder as ``exploratory'' models that test the effect of incorporating changes in the eDF or initial conditions.
-Nearly all the exploratory models (exceptions are described in the discussion) are imaged over $5 \times 10^3 G M/c^3$, in comparison to $> 10^4 G M/c^3$ for the fiducial models. The sampling noise in the exploratory models is therefore larger than in the fiducial models and they cannot be tested as rigorously as the fiducial models.
+Nearly all the exploratory models (exceptions are described in the discussion) are imaged over $5 \times 10^3 G M/c^3$, in comparison to $> 10^4 G M/c^3$ for the fiducial models.
+The sampling noise in the exploratory models is therefore larger than in the fiducial models and they cannot be tested as rigorously as the fiducial models.
 
 The library contains multiple, redundant models for the fiducial models and variable $\kappa$ models.
 This provide some control over uncertainties associated with variations in GRMHD simulation setup and algorithms.
@@ -407,7 +416,8 @@ Wind Accretion & \ipole & 13, 28     & N/A        &  No  & 10       &  \\
 \hamr & \ipole & 1, 10, 40, 160 &  10, 30, ..., 90     &  Yes & 30-35 & variable $\kappa=\kappa(\beta, \sigma)$ \\
 \enddata
 \tablecomments{%
-  Summary of the EHT \sgra model library. All models are imaged at $86\GHz$, $230\GHz$, and $2.2\um$ and some (see column 5) also have spectral energy distributions.
+  Summary of the EHT \sgra model library.
+  All models are imaged at $86\GHz$, $230\GHz$, and $2.2\um$ and some (see column 5) also have spectral energy distributions.
   For the wind-fed accretion model the viewing angle is set by the stellar orbits and $\Rh$ is set so the model matches the observed 230\GHz flux; $\Rh = 13, 28$ for models with stellar wind magnetizations $\beta = A, B$, respectively \cite{2020ApJ...896L...6R}.
 }
 
