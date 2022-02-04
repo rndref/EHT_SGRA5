@@ -342,7 +342,7 @@ Comparisons of numerical methods \citep{2020ApJ...897..148G, Prather_et_al_2022}
 The imaged are produced at 86\GHz, 230\GHz and 2.2\um (near infrared, hereafter NIR).
 Direct imaging includes synchrotron and bremsstrahlung \citep[both ion-electron and electron-electron; see][for a recent review]{2020ApJ...898...50Y}.
 The image library has a typical field of view (full width), resolution (pixel count), and half-width angular size of: $800\uas$, $200 \times 200$, $80 \vartheta_\mathrm{g}$ at 86\GHz; $200\uas$, $400 \times 400$, $20 \vartheta_\mathrm{g}$ at 230\GHz; and $100\uas$, $200\times 200$, $10 \vartheta_\mathrm{g}$ at $2.2\um$.
-A few models are imaged with larger field of view or higher resolution.
+A few models are imaged with larger field of view or higher resolution for validation.
 
 The SEDs are produced for a set of narrow bins in inclination angle.
 At each inclination, the SED is averaged over azimuth.
@@ -353,7 +353,7 @@ We also find that the X-ray can be dominated by either Compton scattering or bre
 Figures~\ref{fig:example_imgs} and \ref{fig:example_vas_seds} show examples of model images and multiwavelength SEDs from our library.
 
 The GRMHD simulation-derived temperatures are unreliable in regions where $\sigma \equiv B^2/(8\pi\rho c^2)$ is large, because truncation error in integration of the total energy equation produces large fractional errors in temperature.
-All our radiative transfer models therefore set the emissivity, absorptivity and inverse-Compton scattering cross-sections to $0$ at $\sigma > \sigma_\mathrm{cut} = 1$.
+All our radiative transfer models therefore set the emissivity, absorptivity, and inverse-Compton scattering cross-sections to $0$ for $\sigma > \sigma_\mathrm{cut} = 1$.
 
 %==============================================================================
 \subsection{Summary of \sgra Model Library}
@@ -371,7 +371,7 @@ Nearly all the exploratory models (exceptions are described in the discussion) a
 The sampling noise in the exploratory models is therefore larger than in the fiducial models and they cannot be tested as rigorously as the fiducial models.
 
 The library contains multiple, redundant models for the fiducial models and variable $\kappa$ models.
-This provide some control over uncertainties associated with variations in GRMHD simulation setup and algorithms.
+This provides some control over the systematic uncertainties associated with variations in GRMHD simulation setup and algorithms.
 
 \begin{deluxetable*}{ccccccc}\label{tab:radiativemodels}
 \tablecaption{EHT Model Library}
