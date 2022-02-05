@@ -28,6 +28,10 @@
 \usepackage{ucs}
 \usepackage{tablefootnote}
 
+\usepackage{numprint}
+\npthousandsep{,}
+\newcommand\no[1]{\numprint{#1}}
+
 %==============================================================================
 \usepackage[T1]{fontenc}
 \newcommand{\cntext}[1]{\begin{CJK}{UTF8}{gbsn}#1\end{CJK}}
