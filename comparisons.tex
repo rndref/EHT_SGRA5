@@ -1,9 +1,5 @@
 \section{Model Comparison}\label{sec:comparisons}
 
-We now apply the observational constraints from Section~\ref{sec:observations} to the models described in Section~\ref{sec:models}.
-We have shown visually how models pass or fail in Figures~\ref{fig:passfail_sz}, \ref{fig:passfail_va}, and \ref{fig:passfail_sed}.
-For each of these figures, the left panel is from the best-bet region (see Section~\ref{sec:discussions}) that passes all but the variability constraints, and the right panel is one of the failed models.
-
 \begin{figure*}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_sz.pdf}
@@ -17,18 +13,6 @@ For each of these figures, the left panel is from the best-bet region (see Secti
   \label{fig:passfail_sz}
 \end{figure*}
 
-%==============================================================================
-\subsection{Fiducial Models}\label{subsec:thermal}
-
-\input{Tables/thermal_model_pass_fraction_table}
-
-We start with the fiducial models.
-Recall that these have aligned (prograde or retrograde) accretion flows, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.
-This selection includes the \kharma, \bhac, and \hamr model sets listed near the top of Table~\ref{tab:radiativemodels}.
-
-A full set of pass/fail plots, showing how the three, redundant fiducial models fare, is provided in Appendix \ref{app:tables}.
-Table~\ref{tab:passfraction_thermal} summarizes the fraction of fiducial \kharma, \bhac, and \hamr models that pass each constraint.
-
 \begin{figure*}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/passfail_va.pdf}
@@ -37,8 +21,7 @@ Table~\ref{tab:passfraction_thermal} summarizes the fraction of fiducial \kharma
     The solid lines in each plot show visibility amplitudes on a section through the origin in the \uv domain, at four position angles (PAs), where $0\degree$ is parallel to the projected angular momentum vector of the accretion flow.
     Solid black points show data from \aprilvii.
     The \vam constraint requires that for at least one PA the first minimum in VA fall within the left grey band, and for all PAs the median of the VAs lie inside the right grey band (see Section~\ref{sec:vam} for details).
-    Evidently the snapshot at right fails {\em both} conditions.
-  }
+    Evidently the snapshot at right fails {\em both} conditions.}
   \label{fig:passfail_va}
 \end{figure*}
 
@@ -46,10 +29,26 @@ Table~\ref{tab:passfraction_thermal} summarizes the fraction of fiducial \kharma
   \centering
   \includegraphics[width=0.75\textwidth]{figures/mring_width_example.pdf}
   \caption{\Mring width constraint example.
-    Top left: image that satisfies the constraint, Gaussian blurred to $20\uas$; top right: image that fails the constraint; bottom left: observed distribution of \mring widths over our 10 selected scans (light grey) and passing image distribution over 10 scans and 4 position angles (black); bottom right: observed distribution of \mring widths over our 10 selected scans (light grey) and failing image distribution (black) over 10 scans and 4 position angles.
-  }
+    Top left: image that satisfies the constraint, Gaussian blurred to $20\uas$;
+    top right: image that fails the constraint;
+    bottom left: observed distribution of \mring widths over our 10 selected scans (light grey) and passing image distribution over 10 scans and 4 position angles (black);
+    bottom right: observed distribution of \mring widths over our 10 selected scans (light grey) and failing image distribution (black) over 10 scans and 4 position angles.}
   \label{fig:mring_width_example}
 \end{figure*}
+
+We now apply the observational constraints from Section~\ref{sec:observations} to the models described in Section~\ref{sec:models}.
+We have shown visually how models pass or fail in Figures~\ref{fig:passfail_sz}, \ref{fig:passfail_va}, and \ref{fig:passfail_sed}.
+For each of these figures, the left panel is from the best-bet region (see Section~\ref{sec:discussions}) that passes all but the variability constraints, and the right panel is one of the failed models.
+
+%==============================================================================
+\subsection{Fiducial Models}\label{subsec:thermal}
+
+We start with the fiducial models.
+Recall that these have aligned (prograde or retrograde) accretion flows, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.
+This selection includes the \kharma, \bhac, and \hamr model sets listed near the top of Table~\ref{tab:radiativemodels}.
+
+A full set of pass/fail plots, showing how the three, redundant fiducial models fare, is provided in Appendix \ref{app:tables}.
+Table~\ref{tab:passfraction_thermal} summarizes the fraction of fiducial \kharma, \bhac, and \hamr models that pass each constraint.
 
 %------------------------------------------------------------------------------
 \subsubsection{EHT Constraints}
@@ -86,6 +85,25 @@ The null location constraint rejects 16\% of \kharma models, 17\% of \bhac model
 \subsubsubsection{\Mring Fits}
 \label{sec:mring}
 
+\begin{figure*}
+ \centering
+ \includegraphics[width=\textwidth]{./figures/Mring_w_Constraints.png}
+  \caption{Pass/fail plot for the \mring widths.
+    Green indicates that the \kharma, \bhac, and \hamr models pass, yellow that one or two of the fiducial models fail, and red that all three fail.
+    The inclination coverage is not uniform: \bhac and \kharma models cover all 5 inclinations while \hamr models cover $i = 10, 50, 90$ only.
+    The $i = 30, 70$ wedges therefore include only the \bhac and \kharma models.}
+  \label{fig:mring_width_salsa} % label must go after figure caption!
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{./figures/Interferometric_Constraints.png}
+  \caption{Combined EHT constraints (logical {\em and}) including the second moment, null location, and \mring fit constraints.
+    Green indicates that the \kharma, \bhac, and \hamr models pass, yellow that one or two of the fiducial models fail, and red that all three fail.
+    The inclination coverage is not uniform: \bhac and \kharma models cover all 5 inclinations while \hamr models cover $i = 10, 50, 90$ only.}
+  \label{fig:all_EHT_constraints} % label must go after figure caption!
+\end{figure*}
+
 The \mring asymmetry, diameter, and width fits are treated as separate constraints.
 Recall that we compare the distribution from the data to that from the model use a two-sample KS test.
 
@@ -118,18 +136,8 @@ The rejected models include all but 3 MAD models at $\abh \le 0$ and all edge-on
 MAD models exhibit a strong trend toward smaller $w$ as $i$ increases.
 SANE models exhibit a similar but weaker trend.
 The SANE model images have  higher optical depth, broader rings, and more substructure than the MAD models.
-Their $w$ distributions are typically broad, with mode well below $17.5\mu$as.
-Only for $\abh = 0.94$, where the optical depth is lower due to higher temperatures in the emitting region, do most of the models exhibit a sharply peaked $w$ distribution centered at $17.5\mu$as.
-
-\begin{figure*}
- \centering
- \includegraphics[width=\textwidth]{./figures/Mring_w_Constraints.png}
-  \caption{Pass/fail plot for the \mring widths.
-    Green indicates that the \kharma, \bhac, and \hamr models pass, yellow that one or two of the fiducial models fail, and red that all three fail.
-    The inclination coverage is not uniform: \bhac and \kharma models cover all 5 inclinations while \hamr models cover $i = 10, 50, 90$ only.
-    The $i = 30, 70$ wedges therefore include only the \bhac and \kharma models.}
-  \label{fig:mring_width_salsa} % label must go after figure caption!
-\end{figure*}
+Their $w$ distributions are typically broad, with mode well below $17.5\uas$.
+Only for $\abh = 0.94$, where the optical depth is lower due to higher temperatures in the emitting region, do most of the models exhibit a sharply peaked $w$ distribution centered at $17.5\uas$.
 
 %..............................................................................
 \subsubsubsection{EHT Constraint Summary}
@@ -141,17 +149,26 @@ The edge-on ($i = 90\degree$) models all fail, with some failing \mring width, d
 The cuts clearly favor $\abh > 0$ models, with a few exceptions.
 There are two clusters of models that do not fail any constraints in any models: positive spin MAD models at low inclination, and positive spin SANE models, also at low inclination.
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\textwidth]{./figures/Interferometric_Constraints.png}
-  \caption{Combined EHT constraints (logical {\em and}) including the second moment, null location, and \mring fit constraints.
-    Green indicates that the \kharma, \bhac, and \hamr models pass, yellow that one or two of the fiducial models fail, and red that all three fail.
-    The inclination coverage is not uniform: \bhac and \kharma models cover all 5 inclinations while \hamr models cover $i = 10, 50, 90$ only.}
-  \label{fig:all_EHT_constraints} % label must go after figure caption!
-\end{figure*}
-
 %------------------------------------------------------------------------------
 \subsubsection{Non-EHT Constraints}
+
+\begin{figure*}[h!]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/passfail_sed.pdf}
+  \caption{%
+    Non-EHT flux density constraint example.
+    Left: passing model with SED close to the measured 86\GHz point and below the quiescent $2.2\um$ and X-ray points.
+    Right: failing model with inconsistent (strongly rising) millimeter wavelength spectral index, overproduction of $2.2\um$ due to strong Comptonization, and overproduction of X-rays by bremsstrahlung.}
+  \label{fig:passfail_sed}
+\end{figure*}
+
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{./figures/Non_Interferometric_Constraints.png}
+  \caption{Combined non-EHT constraints (logical {\em and}).
+    Green indicates that the \kharma, \bhac, and \hamr models pass, yellow that one or two of the fiducial models fail, and red that all three fail.}
+  \label{fig:non_eht_cuts}
+\end{figure*}
 
 We now consider constraints from unresolved $86\GHz$, $2.2\um$, and X-ray
 observations.
@@ -160,17 +177,6 @@ in the compact source from plasma that is close to or overlaps the
 plasma that is producing the 230\GHz-emitting plasma observed by EHT.
 Figure~\ref{fig:noneht_pizza} shows which models pass and fail these
 constraints in aggregate.
-
-\begin{figure*}
-  \centering
-  \includegraphics[width=0.9\textwidth]{figures/passfail_sed.pdf}
-  \caption{
-    Non-EHT flux density constraint example.
-    Left: passing model with SED close to the measured 86\GHz point and below the quiescent $2.2\um$ and X-ray points.
-    Right: failing model with inconsistent (strongly rising) millimeter wavelength spectral index, overproduction of $2.2\um$ due to strong Comptonization, and overproduction of X-rays by bremsstrahlung.
-  }
-  \label{fig:passfail_sed}
-\end{figure*}
 
 %..............................................................................
 \subsubsubsection{86\GHz Median Flux}
@@ -256,15 +262,17 @@ The surviving models are the result of applying a heterogeneous and noisy set of
 Nevertheless, the surviving models are all MAD, all have $\Rh > 10$, and all but two are at $i < 70\degree$.
 This leaves a cluster of surviving MAD models at large $\Rh$ and moderate inclination.
 
-\begin{figure*}\label{fig:non_eht_cuts}
-  \centering
-  \includegraphics[width=\textwidth]{./figures/Non_Interferometric_Constraints.png}
-  \caption{Combined non-EHT constraints (logical {\em and}).
-Green indicates that the \kharma, \bhac, and \hamr models pass, yellow that one or two of the fiducial models fail, and red that all three fail.}
-\end{figure*}
-
 %------------------------------------------------------------------------------
 \subsubsection{Variability}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{./figures/mi_hist.pdf}
+  \caption{Distributions of 3-hour modulate index $\mi{3}$ for \bhac, \kharma, and \hamr models (black), compared to distributions from historical observations (gray).
+The distributions for models with the lowest (blue) and highest (red) average $\mi{3}$ for SANEs and MADs are also shown.
+The heights of these distributions have been scaled for clarity.}
+  \label{fig:cmp_ALMA_var}
+\end{figure}
 
 Variability is central to  the interpretation of \sgra: an $8\,\mathrm{hr}$ observation of \sgra is $1400 \tg$, a timescale over which most models vary substantially.
 In contrast, an $8\,\mathrm{hr}$ observation of M87* is $\sim \tg$ and on this timescale M87* and \sgra hardly vary at all.
@@ -289,18 +297,15 @@ The full set of fiducial model results from the $\mi{3}$ constraint is shown in 
 We find that: (1) as a group, the fiducial models are more variable than the data; (2) the MAD models are more variable than SANE models; (3) eleven individual models  pass the constraint for all fiducial model sets, and these are exclusively SANE models; (4) there are some differences between variability in the fiducial model sets, with \hamr models notably more variable than \kharma and \bhac models; (5) the pass fractions for the fiducial model sets are $0.2$ for \kharma, $0.27$ for \bhac, and $0.07$ for \hamr.
  The modulation index is, by far, the tightest single constraint on the models.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\columnwidth]{./figures/mi_hist.pdf}
-  \caption{Distributions of 3-hour modulate index $\mi{3}$ for \bhac, \kharma, and \hamr models (black), compared to distributions from historical observations (gray).
-The distributions for models with the lowest (blue) and highest (red) average $\mi{3}$ for SANEs and MADs are also shown.
-The heights of these distributions have been scaled for clarity.
-  }
-  \label{fig:cmp_ALMA_var}
-\end{figure}
-
 %..............................................................................
 \subsubsubsection{4 \texorpdfstring{$G\lambda$}{Gl} Visibility Amplitude Variability}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{./figures/grmhd_triangle_debiased_combined.pdf}
+  \caption{Distributions of $(\log_{10}(\afour^2), b)$ for \bhac, \kharma, \koral, and \hamr, compared against the 2017 EHT confidence regions (gray).}
+  \label{fig:cmp_VLBI_var}
+\end{figure}
 
 The power-law index $b$ of the variance $\sigma_\text{var}^2 (|u|)$ at 2--6$~{\rm G}\lambda$ of the models is generally in good agreement with the value measured  from the 2017 EHT campaign (excluding April 11).
 The amplitude $\afour^2$, however, varies depending on the model.
@@ -319,21 +324,16 @@ We do not see evidence for evolution in the \koral model set (a full pass/fail t
 The \koral pass/fail results are similar to those for comparable models in the fiducial model sets.
 Moreover the constraints measured at the beginning of the evolution are similar to those measured at the end.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\columnwidth]{./figures/grmhd_triangle_debiased_combined.pdf}
-  \caption{Distributions of $(\log_{10}(\afour^2),b)$ for \bhac, \kharma, \koral, and \hamr, compared against the 2017 EHT confidence regions (gray).}
-  \label{fig:cmp_VLBI_var}
-\end{figure}
-
 %------------------------------------------------------------------------------
 \subsubsection{Summary of Constraints on Fiducial Models}
 \label{sec:summarythermal}
 
+\input{Tables/thermal_model_pass_fraction_table}
+
 \input{Tables/fail_one_thermal}
 
 None of the fiducial models  survive the full gauntlet of constraints.
- The pass fractions for individual constraints for the \bhac, \kharma, and \hamr fiducial models are listed in Table \ref{tab:passfraction_thermal}.
+The pass fractions for individual constraints for the \bhac, \kharma, and \hamr fiducial models are listed in Table \ref{tab:passfraction_thermal}.
 Notice that the variability constraint is the most severe, followed by the \mring width constraint.
 Variability rejects about $80\%$ of fiducial models and prefers SANEs, which are quieter than MADs, while the remaining constraints prefer MAD models.
 
@@ -498,6 +498,16 @@ Thus, only 14\% of the $\kappa$ models pass in contrast to 70\% of the thermal m
 %------------------------------------------------------------------------------
 \subsubsection{Mixed Thermal/\texorpdfstring{$\kappa$}{kappa} Model}
 
+\begin{figure*}
+  \centering
+  \includegraphics[width=\textwidth]{./figures/SANE_eDFs_diff.pdf}
+  \caption{Influence of the eDF on the image structure for a SANE model with spin $a_{\star}=0.5$ seen under a viewing angle of $30\degree$ using $\Rh = 40$ at $t = 25000\tg$.
+    In the first and third row the panels show the image structure from left to right a thermal, variable kappa $\kappa(\sigma,\beta)$, $\kappa=3.5$ (fixed) with efficiency $\varepsilon=0.2$ and $\kappa=5$ (fixed) everywhere eDF at 230GHz and at 86GHz.
+    Notice the increased field of view for the 86\GHz images.
+    The second and fourth row show the difference between thermal image and the different non-thermal eDFs.}
+  \label{fig:SANE_edfs}
+\end{figure*}
+
 Next we consider a mixed thermal/nonthermal eDF, with the nonthermal component following the $\kappa$ DF with $\kappa = 3.5$.
 At high frequency $\nu L_\nu \sim \nu^s$ with $s = 2 - \kappa/2 = 1/4$, similar to what is seen in $2.2\um$ flares \citep{2007ApJ...667..900H}.
 For this model set the GRMHD simulations use \bhac and the imaging uses \bhoss.
@@ -505,15 +515,15 @@ For this model set the GRMHD simulations use \bhac and the imaging uses \bhoss.
 The fraction of nonthermal electrons is assumed to depend on $\sigma$ and $\beta$.
 We write the emissivity as:
 \begin{equation}
-j_{\nu,\rm{tot}}=(1-\epsilon) j_{\nu,\rm{thermal}} + \epsilon j_{\nu, \kappa},
-\label{eq:kappaeff}
+  j_{\nu,\rm{tot}}=(1-\epsilon) j_{\nu,\rm{thermal}} + \epsilon j_{\nu, \kappa},
+  \label{eq:kappaeff}
 \end{equation}
 where the nonthermal efficiency $\epsilon( \varepsilon, \beta, \sigma)$ is
 \begin{equation}
-    \epsilon(\varepsilon,\beta,\sigma)=\varepsilon\,
-    \left[1 - e^{-\beta^{-2}}\right]
-    \left[1-e^{-(\sigma/\sigma_{\rm min})^2}\right].
-    \label{eq:efficiencybetasigma}
+  \epsilon(\varepsilon,\beta,\sigma)=\varepsilon\,
+  \left[1 - e^{-\beta^{-2}}\right]
+  \left[1-e^{-(\sigma/\sigma_{\rm min})^2}\right].
+  \label{eq:efficiencybetasigma}
 \end{equation}
 Evidently $\epsilon \rightarrow 0$ in the disk while $\epsilon \rightarrow \varepsilon$ in the jet.
 Since we remove emission at $\sigma > \sigma_{\rm cut} = 1$ the non-thermal electrons are confined to the jet sheath.
@@ -522,16 +532,6 @@ We set $\sigma_{\rm min}=0.01$ and vary the base efficiency, $\varepsilon$ over 
 At each $\varepsilon$ we generate a model set spanning the same parameter space as the thermal models (see Table \ref{tab:radiativemodels} for details) and normalize the accretion rate using the standard procedure (see Section \ref{sec:models}.
 The mass accretion rate required to obtain 2.4 Jy at 230\,GHz only changes on average around 1.5\% as compared to the thermal models.
 This small variation in the mass accretion rate reveals the fact that most of the emission at 230\,GHz is created from the thermal part of the hybrid eDF in agreement with the small fraction of non-thermal particles added ($\varepsilon=0.05,0.1,\rm{and}\,0.2$).
-
-\begin{figure*}[t!]
-  \centering
-  \includegraphics[width=\textwidth]{./figures/SANE_eDFs_diff.pdf}
-  \caption{Influence of the eDF on the image structure for a SANE model with spin $a_{\star}=0.5$ seen under a viewing angle of 30$^\degree$ using $R_{\rm high}=40$ at t=25000\,M.
-In the first and third row the panels show the image structure from left to right a thermal, variable kappa $\kappa(\sigma,\beta)$, $\kappa=3.5$ (fixed) with efficiency $\varepsilon=0.2$ and $\kappa=5$ (fixed) everywhere eDF at 230GHz and at 86GHz.
-Notice the increased field of view for the 86\,GHz images.
-The second and fourth row show the difference between thermal image and the different non-thermal eDFs}
-  \label{fig:SANE_edfs}
-\end{figure*}
 
 %..............................................................................
 \subsubsubsection{230\GHz size and Lightcurve Variability}
