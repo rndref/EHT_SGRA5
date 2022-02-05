@@ -20,36 +20,14 @@ For each of these figures, the left panel is from the best-bet region (see Secti
 %==============================================================================
 \subsection{Fiducial Models}\label{subsec:thermal}
 
+\input{Tables/thermal_model_pass_fraction_table}
+
 We start with the fiducial models.
 Recall that these have aligned (prograde or retrograde) accretion flows, thermal eDFs, and electron temperature assigned according to the $\Rh$ model, as in \citetalias{M87PaperV}.
 This selection includes the \kharma, \bhac, and \hamr model sets listed near the top of Table~\ref{tab:radiativemodels}.
 
 A full set of pass/fail plots, showing how the three, redundant fiducial models fare, is provided in Appendix \ref{app:tables}.
-Table ~\ref{tab:passfraction_thermal} summarizes the fraction of fiducial \kharma, \bhac, and \hamr models that pass each constraint.
-
-\input{Tables/thermal_model_pass_fraction_table}
-
-%------------------------------------------------------------------------------
-\subsubsection{EHT Constraints}
-
-How do the models fare when compared to the EHT data alone, using the size, null location, and \mring fitting constraints?  The size constraint is simple but uninformative: only a few face-on, $\Rh = 1$ models fail the test.
-The null location test is informative and tends to rule out edge-on models.
-\Mring fits are noisy but informative---they are also consistent between model sets.
-Many fiducial models look like the data, but edge-on models are strongly disfavored.
-
-%..............................................................................
-\subsubsubsection{Second Moment}
-
-Without assuming a ring, the EHT data allow a wide range of second moments.
-The second moment constraint rejects only 2\% of \kharma and \bhac models and none of the \hamr models.
-In short, nearly all fiducial models are about the right size once we use the 230\GHz to fix the mass unit $\mathcal{M}$.
-The few rejected models are $\abh \le 0$, face-on, SANE models with $\Rh = 1$.
-These models have extended emission that is large compared to the critical impact parameter $b_c = \sqrt{27} \rg$.
-The right panel of Figure~\ref{fig:passfail_sz} shows one of these failed models.
-
-%..............................................................................
-\subsubsubsection{Visibility Amplitude Morphology}
-\label{sec:vam}
+Table~\ref{tab:passfraction_thermal} summarizes the fraction of fiducial \kharma, \bhac, and \hamr models that pass each constraint.
 
 \begin{figure*}
   \centering
@@ -72,6 +50,28 @@ The right panel of Figure~\ref{fig:passfail_sz} shows one of these failed models
   }
   \label{fig:mring_width_example}
 \end{figure*}
+
+%------------------------------------------------------------------------------
+\subsubsection{EHT Constraints}
+
+How do the models fare when compared to the EHT data alone, using the size, null location, and \mring fitting constraints?  The size constraint is simple but uninformative: only a few face-on, $\Rh = 1$ models fail the test.
+The null location test is informative and tends to rule out edge-on models.
+\Mring fits are noisy but informative---they are also consistent between model sets.
+Many fiducial models look like the data, but edge-on models are strongly disfavored.
+
+%..............................................................................
+\subsubsubsection{Second Moment}
+
+Without assuming a ring, the EHT data allow a wide range of second moments.
+The second moment constraint rejects only 2\% of \kharma and \bhac models and none of the \hamr models.
+In short, nearly all fiducial models are about the right size once we use the 230\GHz to fix the mass unit $\mathcal{M}$.
+The few rejected models are $\abh \le 0$, face-on, SANE models with $\Rh = 1$.
+These models have extended emission that is large compared to the critical impact parameter $b_c = \sqrt{27} \rg$.
+The right panel of Figure~\ref{fig:passfail_sz} shows one of these failed models.
+
+%..............................................................................
+\subsubsubsection{Visibility Amplitude Morphology}
+\label{sec:vam}
 
 The \vam constraint tests if the VAs of a model match the
 observations by comparing its null location and long-baseline visibility
@@ -121,13 +121,14 @@ The SANE model images have  higher optical depth, broader rings, and more substr
 Their $w$ distributions are typically broad, with mode well below $17.5\mu$as.
 Only for $\abh = 0.94$, where the optical depth is lower due to higher temperatures in the emitting region, do most of the models exhibit a sharply peaked $w$ distribution centered at $17.5\mu$as.
 
-\begin{figure*}\label{fig:mring_width_salsa}
+\begin{figure*}
  \centering
  \includegraphics[width=\textwidth]{./figures/Mring_w_Constraints.png}
   \caption{Pass/fail plot for the \mring widths.
     Green indicates that the \kharma, \bhac, and \hamr models pass, yellow that one or two of the fiducial models fail, and red that all three fail.
     The inclination coverage is not uniform: \bhac and \kharma models cover all 5 inclinations while \hamr models cover $i = 10, 50, 90$ only.
     The $i = 30, 70$ wedges therefore include only the \bhac and \kharma models.}
+  \label{fig:mring_width_salsa} % label must go after figure caption!
 \end{figure*}
 
 %..............................................................................
@@ -140,12 +141,13 @@ The edge-on ($i = 90\degree$) models all fail, with some failing \mring width, d
 The cuts clearly favor $\abh > 0$ models, with a few exceptions.
 There are two clusters of models that do not fail any constraints in any models: positive spin MAD models at low inclination, and positive spin SANE models, also at low inclination.
 
-\begin{figure*}\label{fig:all_EHT_constraints}
+\begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{./figures/Interferometric_Constraints.png}
   \caption{Combined EHT constraints (logical {\em and}) including the second moment, null location, and \mring fit constraints.
     Green indicates that the \kharma, \bhac, and \hamr models pass, yellow that one or two of the fiducial models fail, and red that all three fail.
     The inclination coverage is not uniform: \bhac and \kharma models cover all 5 inclinations while \hamr models cover $i = 10, 50, 90$ only.}
+  \label{fig:all_EHT_constraints} % label must go after figure caption!
 \end{figure*}
 
 %------------------------------------------------------------------------------
