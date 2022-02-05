@@ -112,13 +112,13 @@ This is consistent with our assumption of a two-temperature  plasma where electr
     \colhead{Resolution}%
   }
   \startdata
-  torus    & {\kharma}$^a$   & 0, $\pm 0.5$, $\pm 0.94$   & MAD/SANE & $\frac{4}{3}/\frac{4}{3}$  & 30,000  & --- & --- & 1000     & $288\times128\times128$     \\
-  torus    & {\bhac}$^b$     & 0, $\pm 0.5$, $\pm 0.94$   & MAD/SANE & $\frac{4}{3}/\frac{4}{3}$  & 30,000  & --- & --- & 3333     & $512\times192\times192$     \\
-  torus    & {\hamr}$^c$     & 0, $\pm 0.5$, $\pm 0.94$   & MAD/SANE & $\frac{13}{9}/\frac{5}{3}$ & 35,000  & --- & --- & 1000/200 & $348/240\times192\times192$ \\
+  torus    & {\kharma}$^a$   & 0, $\pm 0.5$, $\pm 0.94$   & MAD/SANE & $\frac{4}{3}/\frac{4}{3}$  & \no{30000}  & --- & --- & \no{1000}     & $288\times128\times128$     \\
+  torus    & {\bhac}$^b$     & 0, $\pm 0.5$, $\pm 0.94$   & MAD/SANE & $\frac{4}{3}/\frac{4}{3}$  & \no{30000}  & --- & --- & \no{3333}     & $512\times192\times192$     \\
+  torus    & {\hamr}$^c$     & 0, $\pm 0.5$, $\pm 0.94$   & MAD/SANE & $\frac{13}{9}/\frac{5}{3}$ & \no{35000}  & --- & --- & \no{1000}/200 & $348/240\times192\times192$ \\
   torus    & {\koral}$^d$    & \!\!\!\!\!\!0, $\pm 0.3$,  %
-  $\pm 0.5$, $\pm 0.7$, $\pm 0.9$\!\!\!\!\!\!\!\!\!\!\!\! & MAD      & $\frac{13}{9}$             & 101,000 & --- & --- & 100,000  & $288\times192\times144$     \\
-  tilted   & {\hamr}$^e$     & $0.94$                     & IN-SANE  & $\frac{5}{3}$              & 105,000 & --- & --- & 100,000  & $448\times144\times240$     \\
-  wind-fed & {\athenapp}$^f$ & 0                          & ILAF     & $\frac{5}{3}$              & 20,000  & --- & --- & 2,400    & $356\times128\times128$
+  $\pm 0.5$, $\pm 0.7$, $\pm 0.9$\!\!\!\!\!\!\!\!\!\!\!\! & MAD      & $\frac{13}{9}$             & \no{101000} & --- & --- & \no{100000}  & $288\times192\times144$     \\
+  tilted   & {\hamr}$^e$     & $0.94$                     & IN-SANE  & $\frac{5}{3}$              & \no{105000} & --- & --- & \no{100000}  & $448\times144\times240$     \\
+  wind-fed & {\athenapp}$^f$ & 0                          & ILAF     & $\frac{5}{3}$              & \no{20000}  & --- & --- & \no{2400}    & $356\times128\times128$
   \enddata
   \tablecomments{Summary of the EHT \sgra GRMHD simulation library.
     The last column is $N_1 \times N_2 \times N_3$, with coordinate
@@ -202,8 +202,8 @@ This notion is challenged in the stellar wind-fed models of \cite{2020ApJ...896L
 
 All simulations are run in coordinates based on the Kerr-Schild coordinates, which are regular on the horizon.
 Specifically, most of the simulations use variations of the spherical polar form of Kerr-Schild coordinates to respect the symmetry of the spacetime.
-Unless stated otherwise, boundary conditions are outflow at the inner boundary, located inside the event horizon, outflow at the outer boundary, located at $r_{\rm max} \gtrsim 1000~\rg$, and reflecting boundary conditions at the poles.
-Most simulations are evolved to $t_\mathrm{final} = 30,000~\tg$.
+Unless stated otherwise, boundary conditions are outflow at the inner boundary, located inside the event horizon, outflow at the outer boundary, located at $r_{\rm max} \gtrsim \no{1000}\,\rg$, and reflecting boundary conditions at the poles.
+Most simulations are evolved to $t_\mathrm{final} = \no{30000}\,\tg$.
 
 Once the evolution has started, a combination of instabilities including the magnetorotational instability \citep[MRI,][]{1992ApJ...400..610B} drives the torus to a turbulent, fluctuating state.
 Defining $P_\mathrm{gas} \equiv$ gas pressure and $P_\mathrm{mag} \equiv B^2 / (8\pi) \equiv$ magnetic pressure, the standard accretion flow models can be divided by latitude into three zones:
@@ -363,8 +363,8 @@ All our radiative transfer models therefore set the emissivity, absorptivity, an
 %not sure that gives complete answer, but it will help.
 
 A summary of radiative transfer calculations is given in Table~\ref{tab:radiativemodels}.
-The entire image library contains $6$ simulation sets; thousands of points in model parameter space and $\sim 1.8$M images at each of 86\GHz, 230\GHz, and $2.2\mu$, and $\sim1.3$M SEDs.
-The images and SEDs occupy about $50$TB.
+The entire image library contains $6$ simulation sets; thousands of points in model parameter space and $\sim 1.8$\,million images at each of 86\GHz, 230\GHz, and $2.2\um$, and $\sim 1.3$\,million SEDs.
+The images and SEDs occupy about $50$\,terabytes.
 
 We refer to the thermal, $\Rh$ models as ``fiducial'' models, and the remainder as ``exploratory'' models that test the effect of incorporating changes in the eDF or initial conditions.
 Nearly all the exploratory models (exceptions are described in the discussion) are imaged over $5 \times 10^3 G M/c^3$, in comparison to $> 10^4 G M/c^3$ for the fiducial models.
@@ -376,12 +376,12 @@ This provides some control over the systematic uncertainties associated with var
 \begin{deluxetable*}{ccccccc}\label{tab:radiativemodels}
 \tablecaption{EHT Model Library}
 \tablehead{
-  \colhead{Simulation}               &%
-  \colhead{Transfer Code}            &%
-  \colhead{$\Rh$}                    &%
-  \colhead{Inclination}              &%
-  \colhead{SED}                      &%
-  \colhead{$\Delta t/(10^4 GM/c^2)$} &%
+  \colhead{Simulation}           &%
+  \colhead{Transfer Code}        &%
+  \colhead{$\Rh$}                &%
+  \colhead{Inclination}          &%
+  \colhead{SED}                  &%
+  \colhead{$\Delta t/(10^3\tg)$} &%
   \colhead{Notes}%
   }
 \startdata
@@ -400,23 +400,23 @@ This provides some control over the systematic uncertainties associated with var
 Wind Accretion & \ipole & 13, 28     & N/A        &  No  & 10       &  \\
 \hline
 \multicolumn{4}{l}{\it Thermal critical $\beta$ model} & & & \\
-\kharma & \ipole & N/A &  10, 50, 90 &  No & 30-35 &  \\
+\kharma & \ipole & N/A &  10, 50, 90 &  No & 30--35 &  \\
 \hline
 \multicolumn{4}{l}{\it Thermal + power-law models} & & & \\
-\hamr &  \bhoss & 1, 40, 160 &  10, 50, 90 &  No & 30-35 & $p = 4$ \\
+\hamr &  \bhoss & 1, 40, 160 &  10, 50, 90 &  No & 30--35 & $p = 4$ \\
 \hline
 \multicolumn{4}{l}{\it Thermal + $\kappa$ models} & & & \\
-\bhac & \bhoss & 1, 10, 40, 160 &  10, 30, ..., 90     &  No  & 25-30 & $\kappa = 5$ \\
-\bhac & \bhoss & 1, 10, 40, 160 &  10, 30, ..., 90     &  No  & 25-30 & $\kappa = 3.5 (\epsilon_0 = 0.05)$\\
-\bhac & \bhoss & 1, 10, 40, 160 &  10, 30, ..., 90     &  No  & 25-30 & $\kappa = 3.5 (\epsilon_0=0.10)$ \\
-\bhac & \bhoss & 1, 10, 40, 160 &  10, 30, ..., 90     &  No  & 25-30 & $\kappa = 3.5 (\epsilon_0=0.20)$ \\
-\bhac & \bhoss & 1, 10, 40, 80, 160 &  10, 30, ..., 90 &  No  & 25-30 & variable $\kappa=\kappa(\beta, \sigma)$ \\
-\hamr & \ipole & 1, 10, 40, 160 &  10, 30, ..., 90     &  Yes & 30-35 & variable $\kappa=\kappa(\beta, \sigma)$ \\
+\bhac & \bhoss & 1, 10, 40, 160 &  10, 30, ..., 90     &  No  & 25--30 & $\kappa = 5$ \\
+\bhac & \bhoss & 1, 10, 40, 160 &  10, 30, ..., 90     &  No  & 25--30 & $\kappa = 3.5 (\epsilon_0 = 0.05)$\\
+\bhac & \bhoss & 1, 10, 40, 160 &  10, 30, ..., 90     &  No  & 25--30 & $\kappa = 3.5 (\epsilon_0=0.10)$ \\
+\bhac & \bhoss & 1, 10, 40, 160 &  10, 30, ..., 90     &  No  & 25--30 & $\kappa = 3.5 (\epsilon_0=0.20)$ \\
+\bhac & \bhoss & 1, 10, 40, 80, 160 &  10, 30, ..., 90 &  No  & 25--30 & variable $\kappa=\kappa(\beta, \sigma)$ \\
+\hamr & \ipole & 1, 10, 40, 160 &  10, 30, ..., 90     &  Yes & 30--35 & variable $\kappa=\kappa(\beta, \sigma)$ \\
 \enddata
 \tablecomments{%
   Summary of the EHT \sgra model library.
   All models are imaged at $86\GHz$, $230\GHz$, and $2.2\um$ and some (see column 5) also have spectral energy distributions.
-  For the wind-fed accretion model the viewing angle is set by the stellar orbits and $\Rh$ is set so the model matches the observed 230\GHz flux; $\Rh = 13, 28$ for models with stellar wind magnetizations $\beta = A, B$, respectively \cite{2020ApJ...896L...6R}.
+  For the wind-fed accretion model the viewing angle is set by the stellar orbits and $\Rh$ is set so the model matches the observed 230\GHz flux; $\Rh = 13, 28$ for models with stellar wind magnetizations $\beta = A, B$, respectively \citep{2020ApJ...896L...6R}.
 }
 
 \end{deluxetable*}

@@ -26,14 +26,14 @@ The best-bet region MAD models, considered below, have linear polarization compa
 \subsection{Testing Exploratory Models that Pass}
 
 Six exploratory models, considered in Section~\ref{sec:explore},  pass all constraints.
-Although they appear promising these six models are imaged for only $5,000 \tg$ and thus  have been tested more weakly than the fiducial thermal models.
+Although they appear promising these six models are imaged for only $\no{5000}\,\tg$ and thus  have been tested more weakly than the fiducial thermal models.
 
-We imaged each of the passing exploratory models on to $15,000 \tg$.
+We imaged each of the passing exploratory models on to $\no{15000}\,\tg$.
 All failed one or more constraints, and these are listed in Table \ref{tab:fail_none}.
 Evidently the exploratory models, and particularly the models with nonthermal electrons, do not provide any models that pass all constraints.
 
 We draw two conclusions from this.
-First, the pass/fail status of the model can be sensitive to the length of integration, and it is important to image the models for at least $15,000\tg$.
+First, the pass/fail status of the model can be sensitive to the length of integration, and it is important to image the models for at least $\no{15000}\,\tg$.
 In connection with this we note that the \koral models, which were imaged at 230\GHz for $\sim 10^5 \tg$, were generally consistent with the fiducial models but provide tighter $\mi{3}$ constraints (see Appendix~\ref{app:variability}).
 Second, the constraints that are most sensitive to model duration are $\mi{3}$ (all models failed $\mi{3}$ after being extended) and the \mring fits (two failed \mring width, one failed \mring diameter).
 
@@ -150,7 +150,7 @@ This can be understood as a consequence of three facts:
 \emph{iii})~the models need to normalized so that $\langle F_{230}\rangle = 2.4\Jy$.
 The SANE models exhibit a stronger dependence on $\Rh$.
 The emission in the SANE models is predominantly from regions with large $\beta$, where the electron temperature is regulated by $\Rh$.
-MAD models produce a substantial fraction of the emission in regions with $\beta\sim 1$, where $\Rh$ does not notably influence electron temperature and thus have a weaker dependence on $\Rh$ citep[see][Fifgure~4]{M87PaperV}.% (cite figure 4 in M87 paper V).
+MAD models produce a substantial fraction of the emission in regions with $\beta\sim 1$, where $\Rh$ does not notably influence electron temperature and thus have a weaker dependence on $\Rh$ \citep[see][Fifgure~4]{M87PaperV}.% (cite figure 4 in M87 paper V).
 For both SANE and MAD models, $\dot{M}$ reduces with spin.
 This follows from the dependence of temperature on spin shown in Figure~\ref{fig:grmhd_temp}---higher spin corresponds to higher temperatures.
 
@@ -159,10 +159,10 @@ These models have a high midplane density of cool electrons that overproduce X-r
 Our critical beta models have accretion rates that lie between the standard model values for $\Rh = 10$ and $\Rh = 40$ for the selected critical beta parameter values ($f=0.5$, $\beta_\mathrm{crit}=1$).
 
 How do our $\dot{M}$ compare with earlier estimates?
-Linear polarization and Faraday rotation measurements at millimeter and sub-millimeter wavelengths \citep{2000ApJ...538L.121A, 2000ApJ...545..842Q, 2003ApJ...588..331B, 2006ApJ...640..308M, 2006JPhCS..54..354M, 2006ApJ...646L.111M} and X-ray emission \citep{2003ApJ...591..891B, doi:10.1126/science.1240755} combined  with semi-analytic models predict $\dot{M} \sim 10^{-9} - 10^{-7} M_{\odot}\yr^{-1}$.
+Linear polarization and Faraday rotation measurements at millimeter and sub-millimeter (submm) wavelengths \citep{2000ApJ...538L.121A, 2000ApJ...545..842Q, 2003ApJ...588..331B, 2006ApJ...640..308M, 2006JPhCS..54..354M, 2006ApJ...646L.111M} and X-ray emission \citep{2003ApJ...591..891B, doi:10.1126/science.1240755} combined  with semi-analytic models predict $\dot{M} \sim (10^{-9}$--$10^{-7} M_{\odot}\yr^{-1}$.
 The broad range of values is due to the differences in regions of radio emission in the theoretical models that are considered (ADAFs: \citealt{1998ApJ...492..554N, Yuan_2003}; Jet models: \citealt{1993A&A...278L...1F, 2000A&A...362..113F}; ADAF+jet models: \citealt{2002A&A...383..854Y}).
 All our MAD $\dot{M}$ fall within the range of these historical observational estimates.
-Interestingly almost all SANE models with larger $\rhigh$ parameter (except SANE $\abh=0.94$, which is one of our best models) have $\dot{M}$s that are inconsistent with earlier estimates.
+Interestingly almost all SANE models with larger $\Rh$ parameter (except SANE $\abh=0.94$, which is one of our best models) have $\dot{M}$s that are inconsistent with earlier estimates.
 
 All fiducial models produce outflows in the polar regions.
 In many cases the outflows can be divided into a slower, denser disk wind and a relativistic, high $\sigma$ Poynting jet.
@@ -176,14 +176,14 @@ Here we use the time-averaged outflow power near the poles \citepalias{M87PaperV
   P_\mathrm{out} \equiv \frac{1}{\Delta t}\int dt \int d\phi \int_\mathrm{poles} d\theta \sqrt{-g}\left(-T^{r}_{t}-\rho u^{r}\right),
 \end{equation}
 where ``poles'' means $\theta < 1\,\mathrm{rad}$ or $\theta > (\pi-1)\,\mathrm{rad}$ at those $\theta$ where the time- and azimuth-averaged energy flux is outward.
-The integral is evaluated at $r = 100\rg$.
+The integral is evaluated at $r = 100\,\rg$.
 $P_\mathrm{out}$ includes power in the relativistic Poynting jet, if present, and in the slower, denser disk wind.
 
 In Figure~\ref{fig:accretion_outflow_power_illinois_thermal} (bottom panels) we compute $P_\mathrm{out}$ for the standard models.
 As expected, the outflow power increases with black hole spin magnitude.
-SANE models have $P_{out}$ in the range ~$10^{35} \ergps$ to $10^{38} \ergps$.
-Evidently $P_{out}$ increases with $\Rh$,  reflecting the behavior of $\dot{M}$: higher $\dot{M}$ models have stronger magnetic fields.
-MAD models have $P_\mathrm{out}$ in the range $10^{37}$--$10^{39} \ergps$ and are, on average, larger and less sensitive to $\Rh$, again reflecting the behavior of $\dot{M}$.
+SANE models have $P_\mathrm{out}$ in the range $\sim 10^{35} \ergps$ to $10^{38} \ergps$.
+Evidently $P_\mathrm{out}$ increases with $\Rh$, reflecting the behavior of $\dot{M}$: higher $\dot{M}$ models have stronger magnetic fields.
+MAD models have $P_\mathrm{out}$ in the range $(10^{37}$--$10^{39}) \ergps$ and are, on average, larger and less sensitive to $\Rh$, again reflecting the behavior of $\dot{M}$.
 
 Many high spin or large $\Rh$ models have $P_\mathrm{out} \sim 10^{38} \ergps$.
 An outflow with this power could produce dramatic observable effects in the dense interstellar medium of the Galactic Center.
@@ -243,7 +243,7 @@ For example, the first efforts have recently been made with high-resolution glob
 %------------------------------------------------------------------------------
 \subsubsection{Positrons}\label{sec:pair}
 
-So far we have considered only ion-electron plasmas, but pairs can be produced in the 230 GHz emission region through pair discharges or through so-called pair drizzle.
+So far we have considered only ion-electron plasmas, but pairs can be produced in the 230\GHz emission region through pair discharges or through so-called pair drizzle.
 How might our neglect of pairs affect the models?
 
 The importance of pairs has been assessed using phenomenological models \citep{2020ApJ...896...30A, 2021ApJ...923..272E} and depends sensitively on the efficiency with which a reservoir of magnetic energy can be converted into pairs.
@@ -251,9 +251,9 @@ If this efficiency is large then pairs can substantially increase intensity in t
 
 Production of pairs through the drizzle process is weak in \sgra because its luminosity is so low.
 \cite[][see also \citealt{2021ApJ...907...73W}]{2011ApJ...735....9M} estimate the drizzle pair density of \sgra to be $10^{-8}\cm^{-3}$.
-This is well below the Goldreich-Julian density $\sim \abh B c^2/(4 \pi e G M) \sim 10^{-2} \abh [B/(30 {\rm G})] \cm^{-3}$ required to screen electric fields, suggesting pair discharges are likely.
+This is well below the Goldreich-Julian density $\sim \abh B c^2/(4 \pi e G M) \sim 10^{-2} \abh [B/(30\,{\rm G})] \cm^{-3}$ required to screen electric fields, suggesting pair discharges are likely.
 If pair discharges serve only to raise the pair density to the Goldreich-Julian density, however, then the jet is unlikely to outshine the accretion flow, where the magnetic field strength is similar to that in the jet but the characteristic number density is $\sim 10^6 \cm^{-3}$.
-The maximum conceivable impact of pairs on EHT observations is obtained by converting about half of the magnetic energy density into pairs with Lorentz factor $\sim 30$ so that in \sgra's $\sim 30$G magnetic field the emissivity of the resulting pairs peaks close to 230\GHz.
+The maximum conceivable impact of pairs on EHT observations is obtained by converting about half of the magnetic energy density into pairs with Lorentz factor $\sim 30$ so that in \sgra's $\sim 30$\,G magnetic field the emissivity of the resulting pairs peaks close to 230\GHz.
 Then the pair density $\sim 10^{6} \cm^{-3}$ and the jet might compete with the accretion flow.
 
 %==============================================================================
@@ -267,13 +267,13 @@ Our analysis is built on the notion that the near infrared flares, at least, cou
 The monotonic increase in $2.2\um$ flux density with nonthermal population seen in Section~\ref{sec:comparisons} is consistent with this notion.
 
 The agreement between our results on the source size and orientation and those of the GRAVITY collaboration \citep{2018A&A...618L..10G} also support the similarity in the spatial distribution of the electrons producing near-infrared flares and those responsible for the 230\GHz emission.
-\citealt{2018A&A...618L..10G} find that the near-infrared flares originate from a region $\approx$ 40--50$\mu$as from the black hole, only slightly larger than the diameter of the \mring fit to the 230\GHz image.
+\citealt{2018A&A...618L..10G} find that the near-infrared flares originate from a region $\approx 40$--$50\uas$ from the black hole, only slightly larger than the diameter of the \mring fit to the 230\GHz image.
 Moreover, the combined results of our analysis point towards a low observer inclination, again consistent with the GRAVITY results of a hotspot orbiting at $\lesssim 40\degree$ from the plane of the sky.
 
 For M87* we were able to identify a sense of rotation of the source from the asymmetry of the observed ring.
 For \sgra we have not yet been able to identify a preferred position angle for the source or measure the amplitude of source asymmetry, perhaps because it is small (\citetalias{PaperIV}).
 Current sparse baseline coverage sharply limits our ability to detect asymmetry, while future EHT campaigns will add new stations.
-Unless the source is aligned and $i \approx 0$, all our models (which have a definite sense of rotation) predict that the brightest point on the ring is produced by Doppler boosting and should lie on the approaching side of the accretion flow.
+Unless the source is aligned and $i \approx 0\degree$, all our models (which have a definite sense of rotation) predict that the brightest point on the ring is produced by Doppler boosting and should lie on the approaching side of the accretion flow.
 The sense of rotation could then be compared to the clockwise motion of near infrared flares observed by GRAVITY \citep{2018A&A...618L..10G}.
 
 Our analysis shows the value of simultaneous measurements.
@@ -281,7 +281,7 @@ Simultaneous or near-simultaneous GMVA observations, in particular, provide a po
 The eDF is a major source of uncertainty in our analysis, and since the submillimeter (submm) and 2.2\um flux density are most sensitive to the eDF, future analyses should incorporate submm data and future EHT campaigns should seek simultaneous observations.
 
 Our analysis provides some guidance for future numerical modeling of \sgra.
-It is clear that models require long integrations ($\gtrsim  30,000 \tg$) to provide a converged characterization of the source.
+It is clear that models require long integrations ($\gtrsim \no{30000}\,\tg$) to provide a converged characterization of the source.
 We also note that there are regions in parameter space where we may not have sampled densely enough---where, for example, the model is too large and too small at adjacent points in parameter space.
 An example of this is the 86GHz size measurement, which is sensitive to inclination, as seen for the goldilocks model.
 We found that being able to compare three simulation pipelines helped us identify numerical sensitivities and saved us from errors on a number of occasions.
