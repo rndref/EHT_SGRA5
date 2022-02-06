@@ -202,7 +202,7 @@ A model with a $\no{15,000}\,\tg$ imaging window thus produces $30$ fits per sca
 
 In comparing the models to the data we
 \emph{i}) generate the distribution of fit parameters at each position angle;
-\emph{ii}) use a KS test to compare the distribution of $\sim 300$ synthetic data fits with the distribution of $10$ observational fits, and obtain a p-value (what is the probability they are drawn from the same underlying distribution?);
+\emph{ii}) use a Kolmogorov-Smirnov (KS) test to compare the distribution of $\sim 300$ synthetic data fits with the distribution of $10$ observational fits, and obtain a p-value (what is the probability they are drawn from the same underlying distribution?);
 \emph{iii}) average the p-values over the four sampled position angles (i.e., marginalize over position angle; the models do not show a substantial position angle preference); and
 \emph{iv}) reject the model if $p < 0.01$.
 
@@ -291,15 +291,15 @@ Following \citet{2015ApJ...812..103C} we use $\mi{\Delta T}$ because it is easy 
 
 We use $\Delta T = 3$\,hours ($\sim 530\,\tg$) because it is long enough to be comparable to the characteristic timescale measured in damped random walk fits to the ALMA lightcurve \citep[see Table 10 of][]{Wielgus2022} but short enough that the model lightcurves provide a sample that is large enough to be constraining.
 In extracting a sample of $\mi{3}$ from the light curves we use as many 3\,hour segments as possible, equally spaced away from the lightcurve endpoints and each other, and calculate $\mi{3}$ on each segment.
-We treat consecutive measurements of $\mi{3}$ as independent, consistent with the minimal correlation expected in a damped random walk process \citep{Lee_2022}.
+We treat consecutive measurements of $\mi{3}$ as independent, consistent with the minimal correlation expected in a damped random walk \citep{Lee_2022}.
 
 We must select an observed distribution of $\mi{3}$.
 The April 7 data alone provide only a weak constraint because there are only 3 samples.
 The $\mi{3}$ measured from EHT 2017 observations on April 5--11 provide 7 samples, while the $\mi{3}$ measured from all available lightcurves longer than 3 hours, including earlier SMA and CARMA data (the ``historical distribution''; see \citealt{Wielgus2022}) yields 42 samples.
 The 2017 distribution is consistent with being drawn from the historical distribution, although April 6 has one of the quietest segments on record, and April 11 has one of the most variable.
-In the end we selected the historical distribution; the 2017 distribution rejects slightly {\em more} models and leads to identical conclusions.
+We selected the historical distribution and note that the 2017 distribution rejects slightly {\em more} models but leads to identical conclusions.
 
-For each model we use a two-sample Kolmogorov-Smirnov (KS) test to estimate the probability $p$ that the model and observed $\mi{3}$ are drawn from the same underlying distribution.
+For each model we use a two-sample KS test to estimate the probability $p$ that the model and observed $\mi{3}$ are drawn from the same underlying distribution.
 We reject the model if $p < 0.01$.
 
 Through the KS test, the strength of the $\mi{3}$ constraint depends on the number of data and model samples.
@@ -310,7 +310,7 @@ Although some pass the constraint that does not mean they are less variable than
 %------------------------------------------------------------------------------
 \subsubsection{EHT Structural Variability}
 
-Fluctuations in the spatial structure of the source will produce fluctuations in VA.
+Fluctuations in the spatial structure of the source produce fluctuations in the VAs.
 Here we compare  the power spectrum of small-scale structural variability from EHT observations with the predictions of GRMHD models.
 
 A nonparametric technique to measure the variance of the spatially-detrended VAs at a location in the $(u,v)$-plane is described in \citet{NoiseModeling} and briefly summarized here.
@@ -339,4 +339,4 @@ This makes a direct comparison with the measured value difficult, as the distrib
 
 \citet{Georgiev_2022} gives an estimate of the typical width of the distribution as $\log_{10}(\afour^2) \pm 0.1$.
 We can obtain a rough estimate for how the models fare compared to the measurement by taking the mean across windows, assuming the width of the distribution is $\sigma = 0.1$, and comparing this with the observed distribution under the assumption that both are distributed normally.
-We convolve the two distributions and and reject models with CDF <1\% or >99\% at $-3.4$.
+We convolve the two distributions and and reject models with error-broadened CDF <1\% or >99\% at $-3.4$.
