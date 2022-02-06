@@ -142,7 +142,7 @@ Because snapshots that are close in time sample nearly identical baselines, they
 
 Thus, to compare fitted \mring parameters from the EHT data to those for synthetic data from simulations, we select a subset of ten 120-second scans  that have detections on more than 10 baselines and integration times at all stations $> 40\sec$.
 The selected scans are as widely separated in time as possible so that they sample distinct baseline coverage, with an average separation of $\simeq \no{1240}\sec \simeq 60 \,\tg$, which is small compared to the VA correlation time in the models \citep{Georgiev_2022}.
-Note the selected scans overlap with those found in \citep{BestTime}.
+Note the selected scans overlap with those found in \citep{Farah_2022}.
 Only small changes in model selection were observed if any one scan was removed from the comparison.
 The data were descattered before fitting, that is, the VA were divided by the scattering kernel.
 
@@ -192,9 +192,9 @@ A model image $I(x,y)$ is Fourier transformed to complex visibilities $V(u,v)$ w
 Normally distributed thermal noise $\delta V_{\mathrm{th},i}$ with amplitude based on telescope performance during the scan is added, and multiplicative, normally distributed noise with unit variance $N$ is added to crudely model gain corrections: $\tilde{V}_i = V_i (1 + \epsilon N) + \delta V_{\mathrm{th},i}$.
 We set $\epsilon = 0.05$, but no substantial changes in fit parameters were observed for $\epsilon = 0.02$.
 We then fit to the VAs $|\tilde{V}_i|$ and closure phases.
-\footnote{
-Maximum likelihood \mring parameters were found for each scan using the Julia package \texttt{Comrade.jl} \citep{comrade} in combination with a differential evolution-based optimizer from \cite{meijia} found in the Julia package \texttt{Metaheuristics.jl}.  The set of scripts used for the fits can be found in the GitHub repository \url{https://github.com/ptiede/EHTGRMHDCal}.
-}
+\footnote{Maximum likelihood \mring parameters were found for each scan using the Julia package \texttt{Comrade.jl} \citep{comrade} in combination with a differential evolution-based optimizer
+%from \cite{meijia} %% can't find the reference...
+found in the Julia package \texttt{Metaheuristics.jl}.  The set of scripts used for the fits can be found in the GitHub repository \url{https://github.com/ptiede/EHTGRMHDCal}.}
 
 We sample the model images once per $500\,\tg$, which is comparable to a correlation time.
 A model with a $\no{15,000}\,\tg$ imaging window thus produces $30$ fits per scan per position angle.
@@ -239,7 +239,7 @@ A 200\uas field of view cuts off enough emission that the major axis is biased d
 Increasing the field of view beyond 800\uas has negligible effect.
 
 %------------------------------------------------------------------------------
-\subsubsection{$2.2\um$ Median Flux Density Constraint}\label{subsec:nir}
+\subsubsection{\texorpdfstring{$2.2\um$}{2um} Median Flux Density Constraint}\label{subsec:nir}
 
 \sgra has a quiescent and a flaring component in the NIR, with flares occurring a few times per day
 (1 day $\simeq \no{4200}\,\tg$) \citep{2018ApJ...863...15W}.
