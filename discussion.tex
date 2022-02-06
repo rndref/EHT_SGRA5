@@ -2,7 +2,7 @@
 \label{sec:discussions}
 
 %==============================================================================
-\subsection{The Goldilocks Model and Polarization}
+\subsection{The Goldilocks Model and Polarization}\label{sec:goldilocks}
 
 The fiducial models cover a regular grid in parameter space.
 In one instance, for \kharma models, adjacent points in parameter space fail only one constraint for opposite reasons: the SANE, $\abh = 0.5$, $\Rh = 40$ $i = 10\degree$ models fails because the 86\GHz image is too small, while the $i = 30\degree$ models fail because the 86\GHz image is too large, suggesting  that a model with intermediate inclination would pass all constraints.
@@ -224,15 +224,16 @@ Our nonthermal models are only a few points in a vast function space of possible
 %------------------------------------------------------------------------------
 \subsubsection{Collisionless plasma effects}
 
+% cfg 2/5: this seems really different in tone and emphasis from the rest of the paper.  I think it could be reduced in length.  
 {The mean free path to Coulomb scattering for particles is typically larger than or comparable to the system size in \sgra, rendering its plasma collisionless.
 The GRMHD simulations used in this work describe a collisional system, whereas a first-principles modeling of the collisionless plasma requires a fully kinetic treatment.
 General relativistic (radiative) kinetic simulations are crucial for dynamically probing the electron temperature, effects of non-thermal distribution functions, and pressure anisotropy and their interplay with radiation in collisionless plasma in the accretion disk and jet.
 While global general relativistic kinetic simulations cannot be performed with full physical separation between microscopic plasma scales (the particle's Larmor radius $r_{\rm L}$, and plasma skin depth $d_{\rm e}$) and macroscopic scales (the gravitational radius $r_{\rm g}$), they can achieve the right hierarchy of scales ($r_{\rm g} \gg d_{\rm e} \gg r_{\rm L}$) for magnetized plasmas \citep{2018A&A...616A.184L,2018ApJ...863L..31C,2019PhRvL.122c5101P,2020PhRvL.124n5101C,2020ApJ...895..121C,2020ApJ...902...80K,2021A&A...650A.163C,2021PhRvL.127e5101B}.
 Even in GRMHD, it is computationally challenging to resolve plasma heating processes powering the observed radiation in a converged manner.
-It is currently not yet feasible to resolve dissipation at the smallest scales of the turbulent cascade or the interplay between turbulence and reconnection at a similar level as in local box simulations \citep{2012ApJ...755...50R,2013ApJ...773..118H,2015PhRvL.114f1101H,2016PhRvL.117w5101K,2017PhRvL.118e5103Z,2018PhRvL.121y5101C,2018ApJ...859..149I,2019PhRvL.122e5101Z,2021ApJ...921...87N,2021ApJ...923L..13C}.
+It not yet feasible to resolve dissipation at the smallest scales of the turbulent cascade or the interplay between turbulence and reconnection at a similar level as in local box simulations \citep{2012ApJ...755...50R,2013ApJ...773..118H,2015PhRvL.114f1101H,2016PhRvL.117w5101K,2017PhRvL.118e5103Z,2018PhRvL.121y5101C,2018ApJ...859..149I,2019PhRvL.122e5101Z,2021ApJ...921...87N,2021ApJ...923L..13C}.
 However, \citet{2019ApJS..243...26P} and \citet[in prep.]{Olivares_et_al} show that the global accretion dynamics (mass accretion rate, magnetic flux on the horizon, and MRI quality factor) are converging between the different simulations in this work.
 Kinetic processes in the (near-)collisionless plasma may increase the effective particle collision rate \citep[see, e.g.,][]{2016PhRvL.117w5101K}.
-Deviations from the infinitely conductive ideal fluid approximation may alter the thermodynamics of the flow \citep[see, e.g., ][and Appendix~C1]{2017MNRAS.470.2240F}.
+Deviations from the infinitely conductng ideal fluid approximation may alter the thermodynamics of the flow \citep[see, e.g., ][and Appendix~C1]{2017MNRAS.470.2240F}.
 Some aspects of (near-)collisionless plasma dynamics can be described with non-ideal effects (e.g., viscosity, resistivity, heat conduction, pressure anisotropy) in GRMHD simulations of black hole accretion, e.g.,  \cite{2014MNRAS.440L..41B,2015ApJ...810..162C,2016MNRAS.456.1332F,2017ApJ...837...92C,2017MNRAS.470.2240F,2018ApJ...859...28Q,2019ApJS..244...10R,2019ApJ...882....2V,2020ApJ...900..100R,2021PhRvD.104j3028M,2021arXiv211103689N,2021arXiv211105752M}.
 For example, the first efforts have recently been made with high-resolution global GRMHD simulations to capture heating through magnetic reconnection in the largest current sheets in the system \citep{2020MNRAS.495.1549N,2020ApJ...900..100R,2021MNRAS.508.1241C,2022ApJ...924L..32R,2021arXiv211103689N}.}
 
@@ -240,12 +241,11 @@ For example, the first efforts have recently been made with high-resolution glob
 \subsubsection{Positrons}\label{sec:pair}
 
 So far we have considered only ion-electron plasmas, but pairs can be produced in the 230\GHz emission region through pair discharges or through so-called pair drizzle.
-How might our neglect of pairs affect the models?
 
 The importance of pairs has been assessed using phenomenological models \citep{2020ApJ...896...30A, 2021ApJ...923..272E} and depends sensitively on the efficiency with which a reservoir of magnetic energy can be converted into pairs.
 If this efficiency is large then pairs can substantially increase intensity in the jet region.
 
-Production of pairs through the drizzle process is weak in \sgra because its luminosity is so low.
+Production of pairs through the drizzle process is weak in \sgra because its luminosity is low.
 \cite[][see also \citealt{2021ApJ...907...73W}]{2011ApJ...735....9M} estimate the drizzle pair density of \sgra to be $10^{-8}\cm^{-3}$.
 This is well below the Goldreich-Julian density $\sim \abh B c^2/(4 \pi e G M) \sim 10^{-2} \abh [B/(30\,{\rm G})] \cm^{-3}$ required to screen electric fields, suggesting pair discharges are likely.
 If pair discharges serve only to raise the pair density to the Goldreich-Julian density, however, then the jet is unlikely to outshine the accretion flow, where the magnetic field strength is similar to that in the jet but the characteristic number density is $\sim 10^6 \cm^{-3}$.
@@ -255,12 +255,12 @@ Then the pair density $\sim 10^{6} \cm^{-3}$ and the jet might compete with the 
 %==============================================================================
 \subsection{Outlook}\label{sec:future}
 
-Except for the brief discussion above, our analysis omits polarization.
-Future analyses should test our models against integrated polarization of \sgra \citep{2021ApJ...910L..14G} and against polarized imaging, as was done for M87* \citepalias{M87PaperVII, M87PaperVIII}.
+Except for a brief discussion in Section \ref{sec:goldilocks} our analysis omits polarization.
+Future analyses will test our models against integrated polarization of \sgra \citep{2021ApJ...910L..14G} and against polarized imaging, as was done for M87* \citepalias{M87PaperVII, M87PaperVIII}.
 
 Our analysis also omits discussion of one of the main observational features of \sgra: the near infrared and X-ray flares, for which there is as yet no consensus model.
 Our analysis is built on the notion that the near infrared flares, at least, could be produced by accelerating a small fraction of the electron population into a nonthermal tail.
-The monotonic increase in $2.2\um$ flux density with nonthermal population seen in Section~\ref{sec:comparisons} is consistent with this notion.
+The increase in $2.2\um$ flux density with nonthermal population seen in Section~\ref{sec:comparisons} is consistent with this notion.
 
 The agreement between our results on the source size and orientation and those of the GRAVITY collaboration \citep{2018A&A...618L..10G} also support the similarity in the spatial distribution of the electrons producing near-infrared flares and those responsible for the 230\GHz emission.
 \citealt{2018A&A...618L..10G} find that the near-infrared flares originate from a region $\approx 40$--$50\uas$ from the black hole, only slightly larger than the diameter of the \mring fit to the 230\GHz image.
@@ -268,13 +268,12 @@ Moreover, the combined results of our analysis point towards a low observer incl
 
 For M87* we were able to identify a sense of rotation of the source from the asymmetry of the observed ring.
 For \sgra we have not yet been able to identify a preferred position angle for the source or measure the amplitude of source asymmetry, perhaps because it is small (\citetalias{PaperIV}).
-Current sparse baseline coverage sharply limits our ability to detect asymmetry, while future EHT campaigns will add new stations.
-Unless the source is aligned and $i \approx 0\degree$, all our models (which have a definite sense of rotation) predict that the brightest point on the ring is produced by Doppler boosting and should lie on the approaching side of the accretion flow.
-The sense of rotation could then be compared to the clockwise motion of near infrared flares observed by GRAVITY \citep{2018A&A...618L..10G}.
+Current sparse baseline coverage sharply limits our ability to detect asymmetry, but future EHT campaigns will add new stations.
+Unless the source is aligned and $i \approx 0\degree$, all our models (which have a definite sense of rotation) predict that the brightest point on the ring is produced by Doppler boosting and should lie on the approaching side of the accretion flow.  The sense of rotation, determined from either the helicity of spiral features in the flow or from tracking rotation of bright spots, could be compared to the clockwise motion of near infrared flares observed by GRAVITY \citep{2018A&A...618L..10G}.
 
 Our analysis shows the value of simultaneous measurements.
 Simultaneous or near-simultaneous GMVA observations, in particular, provide a powerful constraint on the models.
-The eDF is a major source of uncertainty in our analysis, and since the submillimeter (submm) and 2.2\um flux density are most sensitive to the eDF, future analyses should incorporate submm data and future EHT campaigns should seek simultaneous observations.
+The eDF is a major source of uncertainty in our analysis, and since the submillimeter (submm) and 2.2\um flux density are most sensitive to the eDF, future analyses should incorporate submm data and future EHT campaigns should seek near-simultaneous observations.
 
 Our analysis provides some guidance for future numerical modeling of \sgra.
 It is clear that models require long integrations ($\gtrsim \no{30000}\,\tg$) to provide a converged characterization of the source.
@@ -285,5 +284,5 @@ One point raised in these comparisons is that the $2.2\um$ flux density is sensi
 This point merits future investigation.
 
 Throughout this work we have assumed that the mass and distance to \sgra are known.
-This assumption could be relaxed and the models checked for consistency with the stellar orbit measurements of mass and distance.
-Phenomenological accretion flow models are particularly well suited to this type of study where the number of parameters is large  \citep[e.g.,]{2009ApJ...697...45B}.
+This assumption could be relaxed and the models checked for consistency with the stellar orbit measurements of mass and distance. 
+Phenomenological accretion flow models are particularly well suited to this type of study when the number of parameters is large  \citep[e.g.,]{2009ApJ...697...45B}.
