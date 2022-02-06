@@ -7,8 +7,8 @@
 The fiducial models cover a regular grid in parameter space.
 In one instance, for \kharma models, adjacent points in parameter space fail only one constraint for opposite reasons: the SANE, $\abh = 0.5$, $\Rh = 40$ $i = 10\degree$ models fails because the 86\GHz image is too small, while the $i = 30\degree$ models fail because the 86\GHz image is too large, suggesting  that a model with intermediate inclination would pass all constraints.
 
-We analyzed a representative, intermediate inclination \kharma SANE model with $i = 20\degree$.
-This ``goldilocks'' model passes {\em all} constraints (we did not compute the X-ray luminosity but the $i=10\degree$ and $i=30\degree$ models pass).
+We analyzed an intermediate inclination model at $i = 20\degree$.
+This ``goldilocks'' model passes {\em all} constraints (we did not compute the X-ray luminosity but the neighboring $i=10\degree$ and $i=30\degree$ models pass the X-ray constraint).
 
 We have imaged a series of \kharma models with inclinations between $10\degree$ and $30\degree$.
 The cause of the inclination sensitivity is an extended, 86\GHz-bright, jet.
@@ -18,24 +18,22 @@ Despite this success we regard the goldilocks model as unpromising for two reaso
 First, the $10\degree$ and $30\degree$ \bhac models fail the X-ray constraint, and the neighboring $10\degree$ and $50\degree$ \hamr models fail several constraints.
 
 In addition, the goldilocks model is likely underpolarized at 230\GHz.
-The source-integrated linear polarization of \sgra at the time of the 2017 campaign was between $6.9\%$ and $7.5$\% \citep{2021ApJ...910L..14G}, and this is consistent with historical measurements.
-We will consider linear and circular polarizations in future papers, but the preliminary result is that the goldilocks model has linear polarization $\approx 1$\%, which would fail the goldilocks model.
-The best-bet region MAD models, considered below, have linear polarization comparable to that observed.
+The source-integrated linear polarization of \sgra at the time of the 2017 campaign was between $6.9\%$ and $7.5$\% \citep{2021ApJ...910L..14G}, consistent with historical measurements.
+We will consider linear and circular polarizations in future papers, but our preliminary result is that the goldilocks model has linear polarization $\approx 1$\%, which is far too low. The best-bet region MAD models, considered below, have linear polarization compatible with observations.
 
 %==============================================================================
 \subsection{Testing Exploratory Models that Pass}
 
 Six exploratory models, considered in Section~\ref{sec:explore},  pass all constraints.
-Although they appear promising these six models are imaged for only $\no{5000}\,\tg$ and thus  have been tested more weakly than the fiducial thermal models.
+Although they appear promising these six models are imaged for only $\no{5000}\,\tg$ and thus have been tested less strenuously than the fiducial thermal models.
 
-We imaged each of the passing exploratory models on to $\no{15000}\,\tg$.
-All failed one or more constraints, and these are listed in Table \ref{tab:fail_none}.
-Evidently the exploratory models, and particularly the models with nonthermal electrons, do not provide any models that pass all constraints.
+To evaluate the effect of run duration we imaged each of the passing exploratory models for  $\no{15000}\,\tg$.
+All failed one or more constraints, which are listed in Table \ref{tab:fail_none}.  
+Evidently adding a population of nonthermal electrons does not provide a consist way of transforming failing fiducial models to passing models.  
 
-We draw two conclusions from this.
-First, the pass/fail status of the model can be sensitive to the length of integration, and it is important to image the models for at least $\no{15000}\,\tg$.
+The pass/fail status of the model can be sensitive to the length of integration, and it is important to image the models for at least $\no{15000}\,\tg$.
 In connection with this we note that the \koral models, which were imaged at 230\GHz for $\sim 10^5 \tg$, were generally consistent with the fiducial models but provide tighter $\mi{3}$ constraints (see Appendix~\ref{app:variability}).
-Second, the constraints that are most sensitive to model duration are $\mi{3}$ (all models failed $\mi{3}$ after being extended) and the \mring fits (two failed \mring width, one failed \mring diameter).
+The constraints that are most sensitive to model duration are $\mi{3}$ (all models failed $\mi{3}$ after being extended) and the \mring fits (two failed \mring width, one failed \mring diameter).
 
 %==============================================================================
 \subsection{Origin of Variability Excess}
@@ -65,7 +63,7 @@ Collisionless effects and radiative cooling could both reduce variability.
 
 We model the accreting plasma as an ideal fluid when in fact it is collisionless, with Coulomb mean free path large compared to $\rg$.
 This is less worrisome than one might think: electrons and ions are confined to helical orbits around field lines, implying an effective mean free path perpendicular to the field lines of order the gyroradius $\sim 56 \Theta_e [B/(30\,\mathrm{G})]^{-1} \cm \ll \rg$.
-The mean free path parallel to field lines is still long, but may be governed by scattering off electromagnetic field fluctuations excited by kinetic instabilities rather than Coulomb scattering.
+The mean free path parallel to field lines is still long, but may be limited by scattering off electromagnetic field fluctuations excited by kinetic instabilities rather than Coulomb scattering.
 
 Future global kinetic general relativistic particle-in-cell simulations may be able to test how well the ideal fluid model describes collisionless accretion flows.
 Meanwhile, a relativistic fluid model incorporating small collisionless corrections was developed by \citet{2015ApJ...810..162C} and studied numerically by \citet{2017MNRAS.470.2240F}.
@@ -73,23 +71,22 @@ The leading order corrections are conduction and pressure anisotropy (i.e. visco
 The effect of conduction and viscosity on our constraints is not known, but it is known that viscosity reduces turbulent stress in SANE models \citep{2017MNRAS.470.2240F}, consistent with a reduction in variability.
 It is also plausible that conduction smoothes out temperature maxima, possibly also leading to a reduction in variability.
 
-Our models also neglect radiative cooling.
+Our models neglect radiative cooling.
 Cooling is fastest where the electron temperature is highest, so cooling has the potential to blunt  local maxima in temperature.
 If local maxima with short cooling times contribute significantly to variability then cooling could reduce $\mi{3}$.
 Self-consistent cooling requires integration of an electron energy equation \citep[e.g.][]{2015MNRAS.454.1848R}, and assignment of a density scale (mass unit or accretion rate) when the GRMHD simulation is run, vastly increasing computational cost.
 
 Another possibility is that self-consistent electron heating reduces variability.
-In Appendix~\ref{app:variability} we consider a set of models from \citet{2020MNRAS.494.4168D}
-with self-consistent electron heating.
+In Appendix~\ref{app:variability} we consider a set of such models from \citet{2020MNRAS.494.4168D}.
 These models show similar variability excess to the $\Rh$ models.
 
 The $\Rh$ prescription contains a parameter $\Rl$ that determines the ion-electron temperature ratio at low $\beta$, which we have consistently set to $1$.
 Increasing $\Rl$ models the effect of rapid cooling in low $\beta$ regions.
 In Appendix~\ref{app:variability} we consider $\Rl$ up to 10 in a sample of four models and show that it does not systematically reduce variability.
 
-The variability excess might also be caused by: numerical inaccuracies in radiative transfer, truncation error in the GRMHD integrations (limited resolution), limited simulation duration, or misspecification of the adiabatic index.
+The variability excess might also be caused by numerical inaccuracies in radiative transfer, truncation error in the GRMHD integrations (limited resolution), limited simulation duration, or misspecification of the adiabatic index.
 These are considered in Appendix~\ref{app:numerical}.
-We find no evidence that any of these numerical effects is driving the variability excess.
+We find no evidence that any of these effects is producing the variability excess.
 
 %==============================================================================
 \subsection{Best-Bet Region without Variability}
@@ -124,45 +121,46 @@ The models in the best-bet region merit additional analysis, and it is interesti
 \begin{figure*}
   \centering
   \includegraphics[width=0.95\textwidth]{figures/bhac_kharma_average_mdot_pout.pdf}
-  \caption{{\it Top:} Accretion rate $\dot{M}$ for standard models.
+  \caption{{\it Top:} Accretion rate $\dot{M}$ for fiducial models.
     Since $\dot{M}$ depends weakly on inclination $i$, we show only $i=50\degree$.
-    {\it Bottom:} Outflow power $P_\mathrm{out}$ for standard models at $i = 50\degree$.
+    {\it Bottom:} Outflow power $P_\mathrm{out}$ for fiducial models at $i = 50\degree$.
     The colors and markers vary with $\Rh$.
     The dashed lines correspond to \kharma thermal models while the dotted lines indicate \bhac thermal models.}
   \label{fig:accretion_outflow_power_illinois_thermal}
 \end{figure*}
 
-What is the accretion rate in \sgra?  In our models, we measure the time-averaged accretion rate
+What is the accretion rate in \sgra?  The time-averaged 
 \begin{equation}
-  \dot{M} = \frac{1}{\Delta t}\int dt\int d\theta d\phi\hspace{0.1cm}\sqrt{-g}\big(-\rho u^{r}\big),
+  \dot{M} \equiv \frac{1}{\Delta t}\int dt\int d\theta d\phi\hspace{0.1cm}\sqrt{-g}\big(-\rho u^{r}\big),
 \end{equation}
-at the event horizon; the quantity in the parenthesis is the inward rest-mass flux.
+at the event horizon; the quantity in parentheses is the inward rest-mass flux density.
 
-Figure~\ref{fig:accretion_outflow_power_illinois_thermal} (top panels) shows the time-averaged $\dot{M}$ (in solar masses per year) for the \kharma and \bhac thermal models.
+Figure~\ref{fig:accretion_outflow_power_illinois_thermal} (top panels) shows $\dot{M}$ in solar masses per year for the \kharma and \bhac thermal models.
 The accretion rates follow immediately once the models are normalized so that $\langle F_{230}\rangle = 2.4\,\mathrm{Jy}$.
-A listing of $\dot{M}$ for all models for which it is available is provided in Appendix~\ref{app:tables}.
+% cfg 2/5: since we're not providing the terminals anymore
+%A listing of $\dot{M}$ for all models for which it is available is provided in Appendix~\ref{app:tables}.
 
-The MAD models accrete at $10^{-9}$ to $10^{-8} M_{\odot}$yr$^{-1}$ while the SANE models have a broader range, $10^{-9}$ to $10^{-6} M_{\odot}$yr$^{-1}$.
-$\dot{M}$ is an increasing function of $\Rh$.
-This can be understood as a consequence of three facts:
-\emph{i})~the thermal synchrotron emissivity is an increasing function of temperature;
-\emph{ii})~the electron temperature is inversely proportional to $\Rh$; and
-\emph{iii})~the models need to normalized so that $\langle F_{230}\rangle = 2.4\Jy$.
-The SANE models exhibit a stronger dependence on $\Rh$.
+MAD models accrete at $10^{-9}$ to $10^{-8} M_{\odot}$yr$^{-1}$ while SANE models have a broader range, $10^{-9}$ to $10^{-6} M_{\odot}$yr$^{-1}$.
+$\dot{M}$ is an increasing function of $\Rh$, which is a result of the thermal synchrotron emissivity increasing with increasing electron temperature, so that at fixed flux density lower electron temperature models (higher $\Rh$) have higher $\dot{M}$.  
+%This can be understood as a consequence of three facts:
+%\emph{i})~the thermal synchrotron emissivity is an increasing function of temperature, so at fixed flux density higher electron temperature models have lower $\dot{M}$;
+%\emph{ii})~the electron temperature is inversely proportional to $\Rh$; and
+%\emph{iii})~the models need to normalized so that $\langle F_{230}\rangle = 2.4\Jy$.
+SANE models exhibit a stronger dependence on $\Rh$ than MAD models.
 The emission in the SANE models is predominantly from regions with large $\beta$, where the electron temperature is regulated by $\Rh$.
-MAD models produce a substantial fraction of the emission in regions with $\beta\sim 1$, where $\Rh$ does not notably influence electron temperature and thus have a weaker dependence on $\Rh$ \citep[see][Fifgure~4]{M87PaperV}.% (cite figure 4 in M87 paper V).
-For both SANE and MAD models, $\dot{M}$ reduces with spin.
-This follows from the dependence of temperature on spin shown in Figure~\ref{fig:grmhd_temp}---higher spin corresponds to higher temperatures.
+MAD models produce more of their emission in regions with $\beta\sim 1$, where $\Rh$ only has a weak effect on electron temperature  \citep[see][Fifgure~4]{M87PaperV}.
+For both SANE and MAD models, $\dot{M}$ decreases with increasing spin.
+This follows from the dependence of temperature on spin shown in Figure~\ref{fig:grmhd_temp}---higher spin models have higher gas temperature, which in the $\Rh$ model implies higher electron temperature.
 
 Retrograde SANE, $\Rh=40$ and $160$ models produce the largest accretion rates, $\dot{M} \sim 10^{-6}M_{\odot}\yr^{-1}$.
-These models have a high midplane density of cool electrons that overproduce X-ray emission through bremsstrahlung and are therefore ruled out.
-Our critical beta models have accretion rates that lie between the standard model values for $\Rh = 10$ and $\Rh = 40$ for the selected critical beta parameter values ($f=0.5$, $\beta_\mathrm{crit}=1$).
+These models have a high midplane density of cool electrons that, in \kharma models, overproduce X-ray emission through bremsstrahlung and are therefore ruled out.
+Critical beta models have accretion rates that lie between the fiducial model values for $\Rh = 10$ and $\Rh = 40$ for the selected critical beta parameter values ($f=0.5$, $\beta_\mathrm{crit}=1$).
 
 How do our $\dot{M}$ compare with earlier estimates?
 Linear polarization and Faraday rotation measurements at millimeter and sub-millimeter (submm) wavelengths \citep{2000ApJ...538L.121A, 2000ApJ...545..842Q, 2003ApJ...588..331B, 2006ApJ...640..308M, 2006JPhCS..54..354M, 2006ApJ...646L.111M} and X-ray emission \citep{2003ApJ...591..891B, doi:10.1126/science.1240755} combined  with semi-analytic models predict $\dot{M} \sim (10^{-9}$--$10^{-7} M_{\odot}\yr^{-1}$.
 The broad range of values is due to the differences in regions of radio emission in the theoretical models that are considered (ADAFs: \citealt{1998ApJ...492..554N, Yuan_2003}; Jet models: \citealt{1993A&A...278L...1F, 2000A&A...362..113F}; ADAF+jet models: \citealt{2002A&A...383..854Y}).
 All our MAD $\dot{M}$ fall within the range of these historical observational estimates.
-Interestingly almost all SANE models with larger $\Rh$ parameter (except SANE $\abh=0.94$, which is one of our best models) have $\dot{M}$s that are inconsistent with earlier estimates.
+Interestingly almost all SANE models with larger $\Rh$ parameter (except SANE $\abh=0.94$, which is one of our best models) have an $\dot{M}$s that is inconsistent with earlier estimates.
 
 All fiducial models produce outflows in the polar regions.
 In many cases the outflows can be divided into a slower, denser disk wind and a relativistic, high $\sigma$ Poynting jet.
@@ -171,19 +169,19 @@ What is the outflow power $P_\mathrm{out}$?
 
 First we must define $P_\mathrm{out}$.
 There are a number of competing definitions in the literature: \citet{refId0}, \citet{2014A&A...570A...7M} cut on Bernoulli parameter Be, while \citet{10.1111/j.1365-2966.2012.22002.x} consider the ratio of energy flux to rest mass flux $\mu$, and \citetalias{M87PaperV} applies a $\beta\gamma$ cut to define $P_\mathrm{out}$.
-Here we use the time-averaged outflow power near the poles \citepalias{M87PaperV}:
+Here we use
 \begin{equation}
   P_\mathrm{out} \equiv \frac{1}{\Delta t}\int dt \int d\phi \int_\mathrm{poles} d\theta \sqrt{-g}\left(-T^{r}_{t}-\rho u^{r}\right),
 \end{equation}
-where ``poles'' means $\theta < 1\,\mathrm{rad}$ or $\theta > (\pi-1)\,\mathrm{rad}$ at those $\theta$ where the time- and azimuth-averaged energy flux is outward.
+where ``poles'' means $\theta < 1\,\mathrm{rad}$ or $\theta > (\pi-1)\,\mathrm{rad}$.  We include only those $\theta$ where the time- and azimuth-averaged energy flux is outward.
 The integral is evaluated at $r = 100\,\rg$.
 $P_\mathrm{out}$ includes power in the relativistic Poynting jet, if present, and in the slower, denser disk wind.
 
-In Figure~\ref{fig:accretion_outflow_power_illinois_thermal} (bottom panels) we compute $P_\mathrm{out}$ for the standard models.
+In Figure~\ref{fig:accretion_outflow_power_illinois_thermal} (bottom panels) we compute $P_\mathrm{out}$ for the fiducial models.
 As expected, the outflow power increases with black hole spin magnitude.
 SANE models have $P_\mathrm{out}$ in the range $\sim 10^{35} \ergps$ to $10^{38} \ergps$.
-Evidently $P_\mathrm{out}$ increases with $\Rh$, reflecting the behavior of $\dot{M}$: higher $\dot{M}$ models have stronger magnetic fields.
-MAD models have $P_\mathrm{out}$ in the range $(10^{37}$--$10^{39}) \ergps$ and are, on average, larger and less sensitive to $\Rh$, again reflecting the behavior of $\dot{M}$.
+Evidently $P_\mathrm{out}$ increases with $\Rh$, as expected from the behavior of $\dot{M}$: higher $\dot{M}$ models have stronger magnetic fields.
+MAD models have $P_\mathrm{out} \sim (10^{37}$--$10^{39}) \ergps$ and are, on average, larger and less sensitive to $\Rh$.
 
 Many high spin or large $\Rh$ models have $P_\mathrm{out} \sim 10^{38} \ergps$.
 An outflow with this power could produce dramatic observable effects in the dense interstellar medium of the Galactic Center.
@@ -192,38 +190,36 @@ A more continuous  outflow, however, might clear out a substantial volume of spa
 Nevertheless, there have been a number of large scale features that have been suggested as the result of interaction of a jet with the ISM \citep[e.g.,][]{2013ApJ...779..154L,2021ApJ...922..254C}.
 
 %==============================================================================
-\subsection{Electron Distribution Function}
+\subsection{Caveats and Limitations}\label{sec:limits}
+
+\subsubsection{Electron Distribution Function}
 
 One of the central uncertainties in modeling \sgra is electron distribution function (eDF) assignment.
 Do the surviving models have anything to say about the eDF?
 
-In our standard models, thermal eDFs with equal ion and electron temperature ($\Rh = 1$) are ruled out, in most cases by more than one constraint.
+In our fiducial models, thermal eDFs with equal ion and electron temperature ($\Rh = 1$) are ruled out, in most cases by more than one constraint.
 For MAD models this is easily explained: Comptonization is strong at $\Rh = 1$ and X-rays are overproduced.
-The electron temperature is a maximum when $\Rh = 1$, if all other parameters are fixed.
 For MAD models, $\dot{M}$ and therefore the electron scattering optical depth $\tau_\mathrm{es}$ is insensitive to $\Rh$.
 Since the amplitude of the first Compton bump is $\propto y = 16 \Theta_e^2 \tau_\mathrm{es}$, the high $\Theta_e$ at $\Rh = 1$ produces a large X-ray flux.
 For SANE models the situation is more complicated (see Appendix~\ref{app:tables}), with an \mring width rejecting many $\Rh = 1$ models at $\abh \le 0$, and 86\GHz flux and size rejecting the rest.
 The latter is a consequence of model electron temperature reaching a maximum at large $\abh$ and low $\Rh$, so that optical depth is minimum and therefore so is the 86\GHz image size.
 
-In standard SANE models the sense of the X-ray constraint is reversed: bremsstrahlung is strong and X-rays are overproduced where $\Rh$ is {\em large}.
+In some fiducial SANE models the sense of the X-ray constraint is reversed: bremsstrahlung is strong and X-rays are overproduced where $\Rh$ is {\em large}.
 Again this is easily understood: when $\Rh$ is large the midplane electrons are cold, the accretion rates (and therefore $n^2$) are high, and the bremsstrahlung emissivity is large.
 More generally the X-rays provide a strong constraint on the presence of dark (subrelativistic) electrons, which are otherwise undetectable in millimeter wavelength emission or absorption, although they can produce strong Faraday rotation.
 
 We have also tested a large set of nonthermal models, which have a power-law tail on the eDF.
 Although integration times for the nonthermal models are too short to provide strong model constraints, there are trends that emerge from the existing data.
 
-First, the 230~GHz images are relatively insensitive to the presence of nonthermal electrons, at least for the nonthermal electron models we have studied here.
+First, the 230~GHz images are relatively insensitive to the presence of nonthermal electrons for models in which most of the nonthermal electrons are introduced in and near the outflow region.
 This is encouraging: the 230~GHz image is generated by electrons in an approximately thermal core of the eDF, and is relatively insensitive to the behavior of the tails.
 
-Second, as one might expect, the 2.2\um flux density is a strictly increasing function of nonthermal electron density.
+Second, as one might expect, the 2.2\um flux density is an increasing function of nonthermal electron density.
 In many models (e.g. the variable efficiency models of Section~\ref{sec:constant_kappa}) the addition of a power-law tail changes a thermal model that passes the $2.2\um$ test into a nonthermal model that fails.
 
 Third, it is important to understand that many of the nonthermal models we use are linked to the $\Rh$ prescription in some way.
 For example, the $\kappa$ distribution function contains a width parameter $w$, and this is set using an $\Rh$-like prescription with width depending on $\beta$.
 Our nonthermal models are only a few points in a vast function space of possible nonthermal parameterizations, with none of the models considered allowing for an electron energy density that depends on plasma history as well as instantaneous plasma state.
-
-%==============================================================================
-\subsection{Caveats and Limitations}\label{sec:limits}
 
 %------------------------------------------------------------------------------
 \subsubsection{Collisionless plasma effects}
