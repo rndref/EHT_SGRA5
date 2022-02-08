@@ -66,7 +66,7 @@ and one-zone models developed in the literature over many decades \citep[e.g.][]
 Consider a uniform sphere of plasma with radius $r = 5\rg$, comparable to the observed size of \sgra at $230\GHz$ (\citetalias{PaperIII}, \citetalias{PaperIV}), with uniform magnetic field oriented at $\pi/3$ to the line-of-sight.
 In turbulent astrophysical plasmas, it is common for the gas pressure to be comparable to the magnetic pressure, so we set $n_i \kB T_i + n_e \kB T_e = B^2/(8\pi)$, where $T_i \equiv$ ion temperature, $T_e \equiv$ electron temperature, $\kB \equiv$ Boltzmann constant, and $B \equiv$ magnetic field strength.
 The plasma is collisionless (checked below), and it is plausible that the ions are preferentially heated, so we assume $T_i = 3 T_e$.
-If the ions are sub-virial by a factor of $3$, commonly seen in relativistic MHD simulations, i.e., $(3/2) k T_i \sim (1/3) (1/2) (G M m_p/r)$, then the ions are nonrelativistic and the electrons are relativistic, with $\Theta_e \equiv  \kB T_e / m_e c^2 \sim 10$.
+If the ions are sub-virial by a factor of $3$, as commonly seen in relativistic MHD simulations, i.e., $(3/2) k T_i \sim (1/3) (1/2) (G M m_p/r)$, then the ions are nonrelativistic and the electrons are relativistic, with $\Theta_e \equiv  \kB T_e / (m_e c^2) \sim 10$.
 
 Assuming a thermal distribution of electron energies (eDF) and therefore a thermal synchrotron emissivity $j_\nu$ \citep[e.g.,][]{2011ApJ...737...21L} and assuming optically thin emission, the flux density from a uniform sphere, $F_\nu = (4/3)\pi r^3 j_\nu D^{-2} 10^{23}\,\mathrm{Jy}$.
 Requiring $F_\nu = 2.4\,\mathrm{Jy}$, the average measured by ALMA during the 2017 campaign \citep{Wielgus2022}, yields a nonlinear equation for the electron density $n_e$ with solution
@@ -83,7 +83,7 @@ Synchrotron cooling therefore dominates Compton cooling.
 
 The synchrotron cooling timescale for electrons $t_\mathrm{cool} \equiv u_e/\Lambda$ where $u_e = 3 n_e k T_e$ is the electron internal energy and $\Lambda \simeq 5.4 B^2 e^4 n_e \Theta_e^2 /(c^3 m_e^2)$ is the synchrotron cooling rate for a thermal population of electrons with $\Theta_e \gtrsim 1$ (see Appendix~A in \citealt{2011ApJ...735....9M}; finite optical depth reduces $\Lambda$).
 Therefore $t_\mathrm{cool}=2.3 \times 10^4\sec \simeq 1.1 \times 10^3 \tg$, which is longer than the inflow timescale $r/v^r \sim r^{3/2}$.
-This suggests that radiative cooling can be neglected in the plasma models \citep[more detailed calculations confirm this estimate][]{2012MNRAS.426.1928D,2020MNRAS.499.3178Y}.\footnote{If \sgra is fed by stellar winds then the inflowing plasma may be mainly helium \citep{2019MNRAS.482L.123R}; this changes the one-zone model slightly.
+This suggests that radiative cooling can be neglected in the plasma models. More detailed calculations confirm this estimate \citep{2012MNRAS.426.1928D,2020MNRAS.499.3178Y}.\footnote{If \sgra is fed by stellar winds then the inflowing plasma may be mainly helium \citep{2019MNRAS.482L.123R}; this changes the one-zone model slightly.
 Helium accretion is discussed in \cite{Wong_2022}.}
 
 The one-zone model solution implies that the mean free path to Coulomb scattering is large compared to $\rg$, i.e. the source plasma is collisionless. 
@@ -232,7 +232,7 @@ We present more information on numerical methods in Appendices~\ref{app:numerica
 
 The gas temperature profile is a critical feature of the GRMHD simulations.
 Figure \ref{fig:grmhd_temp} shows the time- and azimuth-averaged profiles of the midplane dimensionless gas temperature $P/(\rho c^2)$ in a set of aligned GRMHD simulations.
-The temperature profiles exhibit trends with spin and magnetic state (MAD or SANE) that drive many of the trends seen in the radiative models: MAD models are factor of several hotter than SANE models and both MAD and SANE become hotter as $\abh$ increases.
+The temperature profiles exhibit trends with spin and magnetic state (MAD or SANE) that drive many of the trends seen in the radiative models: MAD models are a factor of several hotter than SANE models and both MAD and SANE become hotter as $\abh$ increases.
 
 %------------------------------------------------------------------------------
 \subsubsection{Radiative Transfer Model}
