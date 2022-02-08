@@ -197,7 +197,7 @@ We then fit to the VAs $|\tilde{V}_i|$ and closure phases.
 found in the Julia package \texttt{Metaheuristics.jl}.  The set of scripts used for the fits can be found in the GitHub repository \url{https://github.com/ptiede/EHTGRMHDCal}.}
 
 We sample the model images once per $500\,\tg$, which is comparable to a correlation time.
-A model with a $\no{15,000}\,\tg$ imaging window thus produces $30$ fits per scan per position angle.
+A model with a $\no{15000}\,\tg$ imaging window thus produces $30$ fits per scan per position angle.
 %This procedure is repeated for 4 position angles (no substantial changes were observed if more position angles were used), yielding $1200$ samples per model distribution.
 
 In comparing the models to the data we
@@ -221,7 +221,7 @@ The Global Millimeter VLBI Array (GMVA) observed \sgra on April 3, 2017, just 3 
 
 To test the models we compute a library of 86\GHz images for all GRMHD snapshots for all models, and from that $F_{86}$.
 We assume normally distributed measurement errors with $\sigma = 0.1\,\mathrm{Jy}$ and convolve the $F_{86}$ distribution for each model with the resulting Gaussian.
-We reject models where the value of the error-broadened cumulative distribution function (CDF) at 2.0 Jy is <1\% or >99\%.
+We reject models where the value of the error-broadened cumulative distribution function (CDF) at 2.0\,Jy is <1\% or >99\%.
 
 %------------------------------------------------------------------------------
 \subsubsection{86\GHz Image Size}\label{sec:86size}

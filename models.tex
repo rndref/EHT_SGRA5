@@ -266,11 +266,12 @@ The temperature ratio depends on a balance between microphysical dissipation, ra
 Models for collisionless dissipation vary widely in their predictions for the ratio of heat deposited in ions and electrons, but depend most strongly on the local magnetic field strength.
 For simplicity, we adopt a prescription in which the temperature ratio is only a function of the plasma beta.
 This motivates a prescription in which the temperature ratio depends solely on the plasma $\beta \equiv P_\mathrm{gas}/P_\mathrm{mag}$ \citep{2015ApJ...799....1C}.
-We adopt the same model as \citetalias{M87PaperV} and \citetalias{M87PaperVIII}, where $R$ is a smooth function adopted from \cite{2016A&A...586A..38M}:
+We adopt the same model as \citetalias{M87PaperV} and \citetalias{M87PaperVIII}, where 
 \begin{equation}\label{eq:rhigh_prescription}
   R = \frac{T_i}{T_e} = \Rh \frac{b^2}{b^2+1} + \Rl \frac{1}{b^2+1},
 \end{equation}
-where $b \equiv \beta/\beta_\mathrm{crit}$.
+\citep{2016A&A...586A..38M}
+and $b \equiv \beta/\beta_\mathrm{crit}$.
 This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, and $\Rh$.
 We fix $\Rl = 1$ (consistent with the long cooling time in \sgra; see discussion in \citealt{M87PaperVIII}) and $\beta_\mathrm{crit} = 1$, but allow $\Rh$ to vary from 1 to 160.  When $\Rh \gg 1$ emission is shifted away from the midplane and toward the poles.
 
@@ -282,7 +283,7 @@ We explore two implementations:
   \frac{p-1}{\gamma_{\min}^{1-p} - \gamma_{\vphantom{i}\max}^{1-p}} \gamma^{-p},
   \label{eq:nonthermaleDF}
 \end{align}
-which has power-law index $p$ and upper and lower limits $\gamma_{\min}$ and $\gamma_{\vphantom{i}\max}$; and
+with power-law index $p$ and upper and lower limits $\gamma_{\min}$ and $\gamma_{\vphantom{i}\max}$; and
 \emph{ii}) a so-called $\kappa$ distribution function, inspired by observations of the solar wind and by results of collisionless plasma simulations \citep[e.g.,][and references therein]{2015JPlPh..81e3201K}
 \begin{align}
   \frac{1}{n_e} \frac{d n_e}{d\gamma} =
