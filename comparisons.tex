@@ -3,20 +3,20 @@
 \begin{figure*}
   \centering
   \includegraphics[height=3.25in]{figures/passfail_sz.pdf}
-  \caption{Second moment constraint example.
-    \emph{Left}: passing snapshot;
-    \emph{right}: failing snapshot.
+  \caption{Pre-image size constraint example.
+    Left: passing snapshot;
+    right: failing snapshot.
     The model is rejected if $< 1\%$ of model snapshots pass.
     The solid white ellipse  represents the second moments of the image, and the dashed line shows the major axis.
     The two green circles show the observed lower and upper limits from \citetalias{PaperIII}.
-    The snapshot is accepted if any axis size between the major and minor axis lies between the lower and upper limits.}
+    The snapshot is accepted if either the major or minor axis lies between the lower and upper limits.}
   \label{fig:passfail_sz}
 \end{figure*}
 
 \begin{figure*}
   \centering
   \includegraphics[height=3.25in]{figures/passfail_va.pdf}
-  \caption{\vam constraint example.
+  \caption{Visibility amplitude (VA) morphology  constraint example.
     \emph{Left}: passing snapshot;
     \emph{right}: failing snapshot.
     The solid lines in each plot show visibility amplitudes on a section through the origin in the \uv domain, at four position angles (PAs), where $0\degree$ is parallel to the projected angular momentum vector of the accretion flow.
@@ -184,8 +184,8 @@ There are two clusters of models that do not fail any constraints in any models:
 %..............................................................................
 \subsubsubsection{86\,GHz Flux Density}
 
-In a naive picture \sgra's millimeter flux is produced in a photosphere that decreases in size as frequency increases.
-Because optical depth is not large at 230\GHz ($\sim 0.4$ in the one-zone model) and the source structure is complicated (the optical depth varies across the image) the naive picture is imprecise.
+In a simplified picture \sgra's millimeter flux is produced in a photosphere that decreases in size as frequency increases.
+Because optical depth is not large at 230\GHz ($\sim 0.4$ in the one-zone model) and the source structure is complicated (the optical depth varies across the image) the simplified picture is imprecise.
 Nevertheless 86\GHz emission is on average produced at larger radius than 230\GHz emission, and the 86\GHz source size is larger than the 230\GHz source size.  The ratio of 86\GHz to 230\GHz flux density is therefore sensitive to the radial structure of the source plasma.
 
 Figure~\ref{fig:86GHz_flux_pizza} records the results of applying this constraint.
@@ -286,7 +286,7 @@ In contrast, an $8\,\mathrm{hr}$ observation of M87* is $\sim \tg$ and on this t
 % cfg 2/5: this par doesn't add anything
 %Variability is a strong constraint.
 %Although models differ in their degree of variability, both in an integrated sense and on 2--6~$G\lambda$ baselines, only a small fraction of models are as quiet as the data.
-%For the lightcurve variability, this remains true whether we use data from April~7, 2017, all days from the 2017 observing campaign, or from historical monitoring of \sgra.
+%For the light curve variability, this remains true whether we use data from April~7, 2017, all days from the 2017 observing campaign, or from historical monitoring of \sgra.
 %In general, we find that SANE models are quieter than MAD models, and (to a lesser extent) face-on models are quieter than edge-on models.
 
 Recall that we consider two constraints, one on the 230\GHz light curve and the other on 230\GHz VAs.  Here we find that SANE models are less variable than MAD models. Only 3.5\% of models, all SANE, pass both variability constraints.  A possible interpretation is that the models are missing a physical ingredient that would reduce variability, and this is discussed in Section~\ref{sec:discussions}.
@@ -295,7 +295,7 @@ Recall that we consider two constraints, one on the 230\GHz light curve and the 
 %..............................................................................
 \subsubsubsection{Modulation Index}
 
-The distributions of 3 hour modulation index ($\mi{3}$) across all fiducial SANE models, across all fiducial MAD models, and across the historical dataset are shown in Figure~\ref{fig:cmp_ALMA_var}.
+The distributions of 3-hour modulation index ($\mi{3}$) across all fiducial SANE models, across all fiducial MAD models, and across the historical dataset are shown in Figure~\ref{fig:cmp_ALMA_var}.
 The plot also shows distributions for individual models with the lowest and highest $\mi{3}$.
 
 The full set of fiducial model results from the $\mi{3}$ constraint is shown in Appendix \ref{app:tables}, Figure~\ref{fig:m3_pizza}.
@@ -437,7 +437,7 @@ This could be due to a change in the gas density scaling that is required to mat
 Nonthermal models require a smaller normalization value, meaning a smaller electron number density as compared to the corresponding thermal models.
 A decrease in the number density would lower the optical depth as well, which could lead to a thinner photon ring.
 For the initial $\no{5000}\,\tg$ survey, two mid-inclination power-law models survived: a SANE $\abh=0.94$ model and a MAD $\abh=0.5$, $\Rh=1$ model (see Table~\ref{tab:passfraction}), though ultimately both models are ruled out when extended to $\no{15000}\,\tg$. 
-Notably, $\mi{3}$ lightcurve variability performs much better when adding a power-law component to the eDF, possibly due to a more extended emission region.
+Notably, $\mi{3}$ light curve variability performs much better when adding a power-law component to the eDF, possibly due to a more extended emission region.
 %Additionally, $\mi{3}$ does not change when adding a power-law component to the eDF, except for retrograde SANE models, which perform better than their thermal counterparts.
 
 %------------------------------------------------------------------------------
@@ -456,7 +456,7 @@ The accretion rate required to obtain 2.4\Jy is smaller than for the thermal mod
 This implies that many of the $\kappa=5$ models are optically thin at 230\GHz and show fine thin ring feature as compared to their thermal counter-part (see first and second row in Figure~\ref{fig:SANE_edfs}).
 
 %..............................................................................
-\subsubsubsection{230\GHz size and lightcurve variability}
+\subsubsubsection{230\GHz size and light curve variability}
 
 We find that the $\kappa=5$ models produce results that are generally consistent with the \bhac thermal models.
 Especially at 230\GHz we find similar passing fractions for the 230\GHz source sizes.
@@ -551,7 +551,7 @@ The mass accretion rate required to obtain 2.4\Jy at 230\GHz only changes on ave
 This small variation in the mass accretion rate reveals the fact that most of the emission at 230\,GHz is created from the thermal part of the hybrid eDF in agreement with the small fraction of non-thermal particles added ($\varepsilon=0.05$, $0.1$, and $0.2$).
 
 %..............................................................................
-\subsubsubsection{230\GHz size and Lightcurve Variability}
+\subsubsubsection{230\GHz size and light curve Variability}
 \label{varkappa230}
 
 For this model, the addition of non-thermal particles does not substantially affect the flux or size of the image at 230\GHz.
@@ -631,12 +631,12 @@ We find that the mass accretion rate needed to obtain $\langle F_{230} \rangle =
 %The larger mass accretion rate increases the number density of electrons, $n_e$, and thus the variable kappa models are slightly optically thicker than the thermal models.
 
 %..............................................................................
-\subsubsubsection{230\GHz size and Lightcurve Variability}
+\subsubsubsection{230\GHz size and light curve Variability}
 
 The $\kappa$ eDF is mainly applied in the jet sheath while the disk region is mostly populated by thermal particles.
 Therefore, the 230\GHz source size of the variable $\kappa$ models is similar to the thermal ones and no difference in the pass fraction is found.
 98\% of the both models are in agreement with the 230\GHz size estimate (see first and second panel in the top row of Figure~\ref{fig:SANE_edfs}).
-With a passing fraction of 30\% a slightly larger number of $\kappa$ models show the same lightcurve variability as the observations (27\% for thermal models).
+With a passing fraction of 30\% a slightly larger number of $\kappa$ models show the same light curve variability as the observations (27\% for thermal models).
 
 %..............................................................................
 \subsubsubsection{Null location and Visibility Amplitude Morphology}
@@ -678,8 +678,8 @@ Including non-thermal particles via the variable $\kappa$ eDF reduces the pass f
 For the variable $\kappa$ models we have redundant models from \bhac and \hamr (see Table ~\ref{tab:GRMHDmodels}).
 %Given the different adiabatic indices used (see Table~\ref{tab:GRMHDmodels}) a direct comparison between the models is difficult.
 Both models sets show similar trends for all constraints (see Table~\ref{tab:passfraction}).  
-%, with the largest differences for the lightcurve variability and the VA morphology.
-%For the \hamr models there is an increase of 21\% in the passing fraction for the lightcurve variability if non-thermal particles are included.
+%, with the largest differences for the light curve variability and the VA morphology.
+%For the \hamr models there is an increase of 21\% in the passing fraction for the light curve variability if non-thermal particles are included.
 %Similar but not as pronounced for the variability constraint the fraction of passing models for the VA morphology increases from 39\% to 48\% if non-thermal particles are present.
 
 %------------------------------------------------------------------------------
