@@ -29,8 +29,8 @@ The confidence with which a model can be evaluated is limited by sampling noise.
 Many constraints (e.g. 86\GHz flux density) compare an observation to a distribution of synthetic observations from a model.
 Time series of synthetic observations are not yet well characterized, but most have a correlation time $\tau\sim$ few $\times 100\,\tg$.
 If the model decorrelates on timescales longer than $\tau$ then a model of duration $T$ yields $\sim T/\tau$ independent samples,\footnote{In what follows we must sometimes estimate how many independent samples are available in a time series.
-Rather than estimating $\tau$  model-by-model we uniformly assume $\tau = 540 \tg$.
-The analysis is insensitive to this choice.} and thus a fractional error in moments of the distribution $\sim (T/\tau)^{-1/2} = 0.14 (T/\no{15000})^{-1/2}(\tau/300)^{1/2}$.
+Rather than estimating $\tau$  model-by-model we uniformly assume $\tau \simeq 500 \tg$.
+The analysis is insensitive to this choice.} and thus a fractional error in moments of the distribution $\sim (T/\tau)^{-1/2} = 0.18 (T/\no{15000})^{-1/2}(\tau/500)^{1/2}$.
 Increasing the number of constraints, then, requires increasing the duration of the GRMHD simulations.
 
 Evidently the models have significant sampling noise, which we control for in part by using three redundant fiducial models.
@@ -40,17 +40,18 @@ Nevertheless one should not attach too much significance to the success or failu
 %==============================================================================
 \subsection{EHT Observational Constraints}
 
-We test the models against EHT interferometric data, which constrains
-the spatial structure of the source, in three ways.
+We test the models against EHT interferometric data
+%, which constrains the spatial structure of the source, 
+in three ways.
 First, we compare an estimate of the source size (``second moment'')
-against an estimate from the short baseline visibility amplitudes
+against an estimate based on short baseline visibility amplitudes
 (VAs).
 Second, we check the location of the first minimum and the long
 baselines values of the VAs (``\vam'').
 Finally, using a variant of a procedure from \citetalias{PaperIV}, we
 compare fits for the diameter, width, and asymmetry of an \mring (a
-parameterized image-plane model, ``\mring constraints'') to synthetic
-distributions generated from the model library.
+parameterized image-plane model, ``\mring constraints'') to 
+distributions based on synthetic data generated from the model library.
 
 %------------------------------------------------------------------------------
 \subsubsection{230\GHz VLBI Pre-Image Size}
@@ -63,24 +64,24 @@ the visibilities near zero baseline in the \uv domain, so short
 baseline VAs can be used to directly estimate the source size.
 
 This procedure is used in \citetalias{PaperII} to set an upper limit
-of 95\uas FWHM (full width at half maximum) on the second moment and lower limit of 38\uas FWHM on the second moment along a direction
+of 95\uas full width at half maximum (FWHM) and lower limit of 38\uas FWHM for the second moment along a direction
 through the source corresponding to the orientation of the short
 baselines (SMT-LMT and ALMA-LMT). This is done without any assumption about the structure of the source and is therefore quite permissive.
 
-These limits do not include scattering.  The scattering kernel is estimated to have a 16.2\uas FWHM along the relevant EHT baselines. To descatter the sky image size, we subtract this value in quadrature from the limits, which produces a scattering-corrected upper limit of 93.6\uas FWHM and lower limit of 34.4\uas FWHM.
+These limits do not include scattering.  The scattering kernel is estimated to have 16.2\uas FWHM along the relevant EHT baselines. To descatter the sky image size, we subtract this value in quadrature, which produces a scattering-corrected 93.6\uas FWHM upper limit and 34.4\uas FWHM lower limit.
 
 To score a model we evaluate the second moment tensor for each
 simulated 230\GHz image and find its eigenvalues
 $\lambda_\mathrm{maj}^2/(8\ln 2)$ and $\lambda_\mathrm{min}^2/(8\ln
 2)$, where $\lambda_\mathrm{maj}$ and $\lambda_\mathrm{min}$ are the
 major and minor axis FWHM.
-The image is deemed compliant if there exists any position angle for which the second moment would satisfy the size constraints, i.e. it is compliant if there is a $\lambda$,  $\lambda_\mathrm{min} < \lambda < \lambda_\mathrm{maj}$, such that $\lambda$ lies between the scattering-corrected upper and lower limits.  
+The image is deemed compliant if there exists any position angle for which the second moment would satisfy the size constraints, i.e. it is compliant if for any $\lambda$ such that $\lambda_\mathrm{min} \le \lambda \le \lambda_\mathrm{maj}$, $\lambda$ lies between the scattering-corrected upper and lower limits.  
 We reject models with compliance fraction $< 0.01$.
 
 %------------------------------------------------------------------------------
 \subsubsection{230\GHz VLBI Visibility Amplitude Morphology}
 
-Our second constraint provides a morphological check on the VAs.
+The second constraint provides a morphological check on the VAs.
 We ask two questions of each model snapshot:
 \emph{i})~is the first minimum in the visibilities---``the null''---at about the right place and
 \emph{ii})~are the long-baseline VAs have amplitudes comparable to the data?
