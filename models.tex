@@ -341,19 +341,19 @@ Given an eDF, density scale $\Munit$, inclination $i$, and radiative transfer co
 We use two classes of numerical methods: observer-to-emitter ray tracing to generate synthetic images ({\tt ipole}, \citealt{2018MNRAS.475...43M}, {\tt BHOSS}, \citealt{2012A&A...545A..13Y}), and emitter-to-observer Monte Carlo to generate spectral energy distributions (SEDs, using {\tt grmonty}, \citealt{2009ApJS..184..387D}).
 
 All radiative transport calculations are carried out using the fast light approximation, in which plasma variables are read from a GRMHD output file at constant Kerr-Schild time and are assumed not to change during ray tracing.
-Including light travel time effects in the model introduces minor changes to light curves and images \citet{2010ApJ...717.1092D} (and recently by \citealt{2021MNRAS.508.4282M}).
+Including light travel time effects in the model introduces minor changes to light curves and images \citep{2010ApJ...717.1092D, 2021MNRAS.508.4282M}.
 %It has been demonstrated by \citet{2010ApJ...717.1092D} (and recently by \citealt{2021MNRAS.508.4282M}) that including light travel effects in the model introduces minor changes to light curves and images.
 Further detail on numerical methods is given Appendix~\ref{app:radtrans}.
 Comparisons of radiative transfer codes \citep{2020ApJ...897..148G, Prather_et_al_2022} show that differences between codes do not contribute substantially to the error budget.
 
-The images are produced at 86\GHz, 230\GHz and 2.2\um.
+Images are produced at 86\GHz, 230\GHz and 2.2\um.
 Direct imaging includes synchrotron and bremsstrahlung \citep[both ion-electron and electron-electron; see][for a recent review]{2020ApJ...898...50Y}.
 Unless stated otherwise the image library has a field of view (full width), resolution (pixel count), and half-width angular size of: $800\uas$, $200 \times 200$, $80 \vartheta_\mathrm{g}$ at 86\GHz; $200\uas$, $400 \times 400$, $20 \vartheta_\mathrm{g}$ at 230\GHz; and $100\uas$, $200\times 200$, $10 \vartheta_\mathrm{g}$ at $2.2\um$.
 %A few models are imaged with larger field of view or higher resolution for validation.
 
-SEDs are produced for a set of narrow bins in inclination angle.
+SEDs are produced for narrow bins in inclination angle.
 At each inclination, the SED is averaged over azimuth.
-The SED includes synchrotron, bremsstrahlung, \emph{and} Compton scattering.
+The SED includes synchrotron, bremsstrahlung, and Compton scattering.
 
 We find that $2.2\um$ emission is usually dominated by synchrotron, but occasionally $2.2\um$ synchrotron is so weak that Compton scattering dominates.
 We also find that the X-ray can be dominated by either Compton scattering or bremsstrahlung, with the latter dominating in models with a large population of cold electrons at large radius.
@@ -374,8 +374,8 @@ The entire image library contains $6$ simulation sets,  $\sim 1.8$\,million imag
 The images and SEDs together occupy about $50$\,terabytes.
 
 We refer to the thermal, $\Rh$ models as ``fiducial'' models, and the remainder as ``exploratory'' models that test the effect of incorporating changes in the eDF or initial conditions.
-Nearly all the exploratory models (exceptions are described in the discussion) are imaged over $5 \times 10^3 G M/c^3$, in comparison to $\ge 10^4 G M/c^3$ for the fiducial models.
-The sampling noise in the exploratory models is therefore larger than in the fiducial models and they cannot be tested as rigorously.
+Nearly all exploratory models (exceptions are described in the discussion) are imaged over $5 \times 10^3 G M/c^3$, in comparison to $\ge 10^4 G M/c^3$ for the fiducial models.
+The sampling noise in the exploratory models is therefore larger than in the fiducial models and thus they cannot be tested as rigorously.
 
 The library contains multiple, redundant models for the fiducial models and variable $\kappa$ models.
 This provides some control over the systematic uncertainties associated with variations in GRMHD simulation setup and algorithms.
