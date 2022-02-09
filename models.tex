@@ -65,7 +65,7 @@ and one-zone models developed in the literature over many decades \citep[e.g.][]
 
 Consider a uniform sphere of plasma with radius $r = 5\rg$, comparable to the observed size of \sgra at $230\GHz$ (\citetalias{PaperIII}, \citetalias{PaperIV}), with uniform magnetic field oriented at $\pi/3$ to the line-of-sight.
 In turbulent astrophysical plasmas, it is common for the gas pressure to be comparable to the magnetic pressure, so we set $n_i \kB T_i + n_e \kB T_e = B^2/(8\pi)$, where $T_i \equiv$ ion temperature, $T_e \equiv$ electron temperature, $\kB \equiv$ Boltzmann constant, and $B \equiv$ magnetic field strength.
-The plasma is collisionless (checked below), and it is plausible that the ions are preferentially heated, so we assume $T_i = 3 T_e$.
+The plasma is collisionless (as shown below), and it is plausible that the ions are preferentially heated, so we assume $T_i = 3 T_e$.
 If the ions are sub-virial by a factor of $3$, as commonly seen in relativistic MHD simulations, i.e., $(3/2) k T_i \sim (1/3) (1/2) (G M m_p/r)$, then the ions are nonrelativistic and the electrons are relativistic, with $\Theta_e \equiv  \kB T_e / (m_e c^2) \sim 10$.
 
 Assuming a thermal distribution of electron energies (eDF) and therefore a thermal synchrotron emissivity $j_\nu$ \citep[e.g.,][]{2011ApJ...737...21L} and assuming optically thin emission, the flux density from a uniform sphere, $F_\nu = (4/3)\pi r^3 j_\nu D^{-2} 10^{23}\,\mathrm{Jy}$.
@@ -110,7 +110,7 @@ This is consistent with our assumption that the ions and electrons can have diff
     \colhead{Resolution}%
   }
   \startdata
-  torus    & {\kharma}$^a$   & 0, $\pm 0.5$, $\pm 0.94$   & MAD/SANE & $\frac{4}{3}/\frac{4}{3}$  & \no{30000}  & --- & --- & \no{1000}     & $288\times128\times128$     \\
+  torus    & {\kharma}$^a$   & 0, $\pm 0.5$, $\pm 0.94$   & MAD/SANE & $\frac{4}{3}/\frac{4}{3}$  & \no{30000}  & 10  & 20  & \no{1000}     & $288\times128\times128$     \\
   torus    & {\bhac}$^b$     & 0, $\pm 0.5$, $\pm 0.94$   & MAD/SANE & $\frac{4}{3}/\frac{4}{3}$  & \no{30000}  & --- & --- & \no{3333}     & $512\times192\times192$     \\
   torus    & {\hamr}$^c$     & 0, $\pm 0.5$, $\pm 0.94$   & MAD/SANE & $\frac{13}{9}/\frac{5}{3}$ & \no{35000}  & --- & --- & \no{1000}/200 & $348/240\times192\times192$ \\
   torus    & {\koral}$^d$    & \!\!\!\!\!\!0, $\pm 0.3$,  %
