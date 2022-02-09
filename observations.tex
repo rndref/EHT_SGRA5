@@ -19,7 +19,7 @@ Indeed, uncertainties in the data and the models are not well enough understood 
 In this first analysis we set a pass/fail criterion for each constraint and consider the implications of various combinations of constraints.
 
 As the number of constraints increases so does the probability of wrongly rejecting a model.
-Consider a set of $N$ constraints, and for each assigns a probability $p$ that the model is consistent with the data.
+Consider a set of $N$ constraints, and for each assign a probability $p$ that the model is consistent with the data.
 The model is rejected if $p < p_c$.
 Then the probability that the model is wrongly rejected by a single constraint is $p_c$.
 Applying all $N$ constraints, the probability that the model is wrongly rejected is $1 - (1 - p_c)^N$; for $N = 11$ and $p_c = 0.01$, this is $\approx N p_c \simeq 10\%$.
@@ -191,8 +191,7 @@ The synthetic data is generated as follows.
 A model image $I(x,y)$ is Fourier transformed to complex visibilities $V(u,v)$ with an assumed position angle then sampled on baselines $i$ drawn from the comparison scan, $V_i \equiv V(u_i,v_i)$.
 Normally distributed thermal noise $\delta V_{\mathrm{th},i}$ with amplitude based on telescope performance during the scan is added, and multiplicative, normally distributed noise with unit variance $N$ is added to crudely model gain corrections: $\tilde{V}_i = V_i (1 + \epsilon N) + \delta V_{\mathrm{th},i}$.
 We set $\epsilon = 0.05$, but no substantial changes in fit parameters were observed for $\epsilon = 0.02$.
-We then fit to the VAs $|\tilde{V}_i|$ and closure phases.
-\footnote{Maximum likelihood \mring parameters were found for each scan using the Julia package \texttt{Comrade.jl} \citep{comrade} in combination with a differential evolution-based optimizer
+We then fit to the VAs $|\tilde{V}_i|$ and closure phases.\footnote{Maximum likelihood \mring parameters were found for each scan using the Julia package \texttt{Comrade.jl} \citep{comrade} in combination with a differential evolution-based optimizer
 %from \cite{meijia} %% can't find the reference...
 found in the Julia package \texttt{Metaheuristics.jl}.  The set of scripts used for the fits can be found in the GitHub repository \url{https://github.com/ptiede/EHTGRMHDCal}.}
 
