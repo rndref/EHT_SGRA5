@@ -19,15 +19,15 @@ First, the $10\degree$ and $30\degree$ \bhac models fail the X-ray constraint, a
 
 In addition, the goldilocks model is likely underpolarized at 230\GHz.
 The source-integrated linear polarization of \sgra at the time of the 2017 campaign was between $6.9\%$ and $7.5$\% \citep{2021ApJ...910L..14G}, consistent with historical measurements.
-We will consider linear and circular polarizations in future papers, but our preliminary result is that the goldilocks model has linear polarization $\approx 1$\%, which is far too low. The best-bet region MAD models, considered below, have linear polarization compatible with observations.
+We will consider linear and circular polarizations in future papers, but our preliminary finding is that the goldilocks model has linear polarization $\approx 1$\%, which is far too low. We find that the best-bet region MAD models, considered below, have linear polarization compatible with observations.
 
 %==============================================================================
 \subsection{Testing Exploratory Models that Pass}
 
 Six exploratory models, considered in Section~\ref{sec:explore},  pass all constraints.
-Although they appear promising these six models are imaged for only $\no{5000}\,\tg$ and thus have been tested less strenuously than the fiducial thermal models.
+Although they appear promising these six models are imaged for only $\no{5000}\,\tg$ and thus have been tested more weakly than the fiducial thermal models.
 
-To evaluate the effect of run duration we imaged each of the passing exploratory models for  $\no{15000}\,\tg$.
+To evaluate the effect of run duration we imaged the six passing exploratory models for  $\no{15000}\,\tg$.
 All failed one or more constraints, which are listed in Table \ref{tab:fail_none}.  
 Evidently adding a population of nonthermal electrons does not provide a consistent way of transforming failing fiducial models to passing models.  
 
@@ -78,14 +78,14 @@ Self-consistent cooling requires integration of an electron energy equation \cit
 
 Another possibility is that self-consistent electron heating reduces variability.
 In Appendix~\ref{app:variability} we consider a set of such models from \citet{2020MNRAS.494.4168D}.
-These models show similar variability excess to the $\Rh$ models.
+These models show a variability excess that is similar to the fiducial models.
 
 The $\Rh$ prescription contains a parameter $\Rl$ that determines the ion-electron temperature ratio at low $\beta$, which we have consistently set to $1$.
 Increasing $\Rl$ models the effect of rapid cooling in low $\beta$ regions.
 In Appendix~\ref{app:variability} we consider $\Rl$ up to 10 in a sample of four models and show that it does not systematically reduce variability.
 
 The variability excess might also be caused by numerical inaccuracies in radiative transfer, truncation error in the GRMHD integrations (limited resolution), limited simulation duration, or misspecification of the adiabatic index.
-These are considered in Appendix~\ref{app:numerical}.
+These are considered in Appendix~\ref{app:numerical} and~\ref{app:variability}.
 We find no evidence that any of these effects is producing the variability excess.
 
 %==============================================================================
@@ -103,7 +103,7 @@ Green indicates that the \kharma, \bhac, and (for $i = 10, 50, 90$deg) \hamr mod
   \label{fig:all_pizza}
 \end{figure*}
 
-Figure~\ref{fig:all_pizza} (which is also repeated in Figure~\ref{fig:all_pizza_app} in the appendix) shows the result of applying all constraints except structural and flux variability to the fiducial models.
+Figure~\ref{fig:all_pizza} (which also appears as  Figure~\ref{fig:all_pizza_app} in Appendix~\ref{app:tables}) shows the result of applying all constraints except structural and flux variability to the fiducial models.
 Most negative spin models are ruled out, and three MAD, positive spin, low inclination, large $\Rh$ models pass all constraints for \kharma, \bhac, and (at $i = 10\degree$) \hamr.
 Nearby models in parameter space are close to passing in the sense that they pass for one or more of \kharma, \bhac, and \hamr.
 
@@ -111,7 +111,7 @@ We will call the green region of parameter space in Figure~\ref{fig:all_pizza} t
 The models in this part of parameter space perform well and explain nearly all the data.
 
 Given the uncertainty associated with the variability excess and the possibility of missing physical ingredients in the model the existence of the best-bet region cannot be regarded as evidence that \sgra has positive spin and low inclination.
-It is remarkable, however, that {\em any} models perform as well as these do.
+Given the large and uncertain set of constraints, however, it is remarkable that {\em any} models perform as well as these do.
 The models in the best-bet region merit additional analysis, and it is interesting to ask what they predict for future observations.
 
 %==============================================================================
@@ -148,19 +148,19 @@ $\dot{M}$ is an increasing function of $\Rh$, which is a result of the thermal s
 %\emph{iii})~the models need to normalized so that $\langle F_{230}\rangle = 2.4\Jy$.
 SANE models exhibit a stronger dependence on $\Rh$ than MAD models.
 The emission in the SANE models is predominantly from regions with large $\beta$, where the electron temperature is regulated by $\Rh$.
-MAD models produce more of their emission in regions with $\beta\sim 1$, where $\Rh$ only has a weak effect on electron temperature  \citep[see][Fifgure~4]{M87PaperV}.
+MAD models produce more of their emission in regions with $\beta\sim 1$, where $\Rh$ only has a weak effect on electron temperature  (see \citetalias{M87PaperV}, Figure~4).
 For both SANE and MAD models, $\dot{M}$ decreases with increasing spin.
 This follows from the dependence of temperature on spin shown in Figure~\ref{fig:grmhd_temp}---higher spin models have higher gas temperature, which in the $\Rh$ model implies higher electron temperature.
 
-Retrograde SANE, $\Rh=40$ and $160$ models produce the largest accretion rates, $\dot{M} \sim 10^{-6}M_{\odot}\yr^{-1}$.
+Retrograde SANE, $\Rh=40$ and $160$ models produce the largest $\dot{M} \sim 10^{-6}M_{\odot}\yr^{-1}$.
 These models have a high midplane density of cool electrons that, in \kharma models, overproduce X-ray emission through bremsstrahlung and are therefore ruled out.
 Critical beta models have accretion rates that lie between the fiducial model values for $\Rh = 10$ and $\Rh = 40$ for the selected critical beta parameter values ($f=0.5$, $\beta_\mathrm{crit}=1$).
 
 How do our $\dot{M}$ compare with earlier estimates?
 Linear polarization and Faraday rotation measurements at millimeter and sub-millimeter (submm) wavelengths \citep{2000ApJ...538L.121A, 2000ApJ...545..842Q, 2003ApJ...588..331B, 2006ApJ...640..308M, 2006JPhCS..54..354M, 2006ApJ...646L.111M} and X-ray emission \citep{2003ApJ...591..891B, doi:10.1126/science.1240755} combined  with semi-analytic models predict $\dot{M} \sim (10^{-9}$--$10^{-7} M_{\odot}\yr^{-1}$.
 The broad range of values is due to the differences in regions of radio emission in the theoretical models that are considered (ADAFs: \citealt{1998ApJ...492..554N, Yuan_2003}; Jet models: \citealt{1993A&A...278L...1F, 2000A&A...362..113F}; ADAF+jet models: \citealt{2002A&A...383..854Y}).
-All our MAD $\dot{M}$ fall within the range of these historical observational estimates.
-Interestingly almost all SANE models with larger $\Rh$ parameter (except SANE $\abh=0.94$, which is one of our best models) have an $\dot{M}$ that is inconsistent with earlier estimates.
+All our MAD model $\dot{M}$s fall within the range of these historical observational estimates.
+In contrast almost all SANE models with larger $\Rh$ parameter (except SANE $\abh=0.94$, which is one of our best models) have an $\dot{M}$ that is inconsistent with earlier estimates.
 
 All fiducial models produce outflows in the polar regions.
 In many cases the outflows can be divided into a slower, denser disk wind and a relativistic, high $\sigma$ Poynting jet.
@@ -168,20 +168,21 @@ The outflows have a power that is comparable to or larger than the bolometric lu
 What is the outflow power $P_\mathrm{out}$?
 
 First we must define $P_\mathrm{out}$.
-There are a number of competing definitions in the literature: \citet{refId0}, \citet{2014A&A...570A...7M} cut on Bernoulli parameter Be, while \citet{10.1111/j.1365-2966.2012.22002.x} consider the ratio of energy flux to rest mass flux $\mu$, and \citetalias{M87PaperV} applies a $\beta\gamma$ cut to define $P_\mathrm{out}$.
-Here we use
+There are a number of competing definitions in the literature; we set  
+% cfg 2/9: removed this as unhelpful even to the knowledgeable reader.  it conflates the definition of jet and the definition of outflow power.
+%: \citet{refId0}, \citet{2014A&A...570A...7M} identify the jet as the region above a threshold Bernoulli parameter Be, while \citet{10.1111/j.1365-2966.2012.22002.x} define it as the region with the ratio of energy flux to rest mass flux $\mu$ above a critical value, and \citetalias{M87PaperV} applies a $\beta\gamma$ cut to define the jet $P_\mathrm{out}$.  
 \begin{equation}
   P_\mathrm{out} \equiv \frac{1}{\Delta t}\int dt \int d\phi \int_\mathrm{poles} d\theta \sqrt{-g}\left(-T^{r}_{t}-\rho u^{r}\right),
 \end{equation}
-where ``poles'' means $\theta < 1\,\mathrm{rad}$ or $\theta > (\pi-1)\,\mathrm{rad}$.  We include only those $\theta$ where the time- and azimuth-averaged energy flux is outward.
+where ``poles'' indicates $\theta < 1\,\mathrm{rad}$ or $\theta > (\pi-1)\,\mathrm{rad}$.  We include only those $\theta$ where the time- and azimuth-averaged energy flux is outward.
 The integral is evaluated at $r = 100\,\rg$.
 $P_\mathrm{out}$ includes power in the relativistic Poynting jet, if present, and in the slower, denser disk wind.
 
-In Figure~\ref{fig:accretion_outflow_power_illinois_thermal} (bottom panels) we compute $P_\mathrm{out}$ for the fiducial models.
-As expected, the outflow power increases with black hole spin magnitude.
-SANE models have $P_\mathrm{out}$ in the range $\sim 10^{35} \ergps$ to $10^{38} \ergps$.
+Figure~\ref{fig:accretion_outflow_power_illinois_thermal} (bottom panels) shows $P_\mathrm{out}$ for the fiducial \kharma and \bhac models.
+As expected, the outflow power increases with the magnitude of black hole spin.
+We find that SANE models have $10^{35} \lesssim P_\mathrm{out} \lesssim 10^{38} \ergps$.
 Evidently $P_\mathrm{out}$ increases with $\Rh$, as expected from the behavior of $\dot{M}$: higher $\dot{M}$ models have stronger magnetic fields.
-MAD models have $P_\mathrm{out} \sim (10^{37}$--$10^{39}) \ergps$ and are, on average, larger and less sensitive to $\Rh$.
+We find that MAD models have $10^{37} \lesssim P_\mathrm{out} \lesssim 10^{39}\ergps$ and are, on average, more powerful and less sensitive to $\Rh$.
 
 Many high spin or large $\Rh$ models have $P_\mathrm{out} \sim 10^{38} \ergps$.
 An outflow with this power could produce dramatic observable effects in the dense interstellar medium of the Galactic Center.
@@ -201,14 +202,14 @@ In our fiducial models, thermal eDFs with equal ion and electron temperature ($\
 For MAD models this is easily explained: Comptonization is strong at $\Rh = 1$ and X-rays are overproduced.
 For MAD models, $\dot{M}$ and therefore the electron scattering optical depth $\tau_\mathrm{es}$ is insensitive to $\Rh$.
 Since the amplitude of the first Compton bump is $\propto y = 16 \Theta_e^2 \tau_\mathrm{es}$, the high $\Theta_e$ at $\Rh = 1$ produces a large X-ray flux.
-For SANE models the situation is more complicated (see Appendix~\ref{app:tables}), with an \mring width rejecting many $\Rh = 1$ models at $\abh \le 0$, and 86\GHz flux and size rejecting the rest.
-The latter is a consequence of model electron temperature reaching a maximum at large $\abh$ and low $\Rh$, so that optical depth is minimum and therefore so is the 86\GHz image size.
+For SANE models the situation is more complicated (see Appendix~\ref{app:tables}), with \mring width rejecting many $\Rh = 1$ models at $\abh \le 0$, and 86\GHz flux and size rejecting the rest.
+The latter is a consequence of model electron temperature reaching a maximum at large $\abh$ and low $\Rh$, so that optical depth is a minimum and therefore so is the 86\GHz image size.
 
 In some fiducial SANE models the sense of the X-ray constraint is reversed: bremsstrahlung is strong and X-rays are overproduced where $\Rh$ is {\em large}.
 Again this is easily understood: when $\Rh$ is large the midplane electrons are cold, the accretion rates (and therefore $n^2$) are high, and the bremsstrahlung emissivity is large.
 More generally the X-rays provide a strong constraint on the presence of dark (subrelativistic) electrons, which are otherwise undetectable in millimeter wavelength emission or absorption, although they can produce strong Faraday rotation.
 
-We have also tested a large set of nonthermal models, which have a power-law tail on the eDF.
+We have tested a large set of nonthermal models, which have a power-law tail on the eDF.
 Although integration times for the nonthermal models are too short to provide strong model constraints, there are trends that emerge from the existing data.
 
 First, the 230~GHz images are relatively insensitive to the presence of nonthermal electrons for models in which most of the nonthermal electrons are introduced in and near the outflow region.
@@ -264,25 +265,25 @@ The increase in $2.2\um$ flux density with nonthermal population seen in Section
 
 The agreement between our results on the source size and orientation and those of the GRAVITY collaboration \citep{2018A&A...618L..10G} also support the similarity in the spatial distribution of the electrons producing near-infrared flares and those responsible for the 230\GHz emission.
 \citealt{2018A&A...618L..10G} find that the near-infrared flares originate from a region $\approx 40$--$50\uas$ from the black hole, only slightly larger than the diameter of the \mring fit to the 230\GHz image.
-Moreover, the combined results of our analysis point towards a low observer inclination, again consistent with the GRAVITY results of a hotspot orbiting at $\lesssim 40\degree$ from the plane of the sky.
+Moreover, the combined results of our analysis point towards a low observer inclination, again consistent with the GRAVITY results , although the GRAVITY results are based on a model with a hotspot orbiting at $\lesssim 40\degree$ from the plane of the sky.
 
-For M87* we were able to identify a sense of rotation of the source from the asymmetry of the observed ring.
+In M87* we were able to identify a sense of rotation of the source from the asymmetry of the observed ring and the orientation of the large scale jet.
 For \sgra we have not yet been able to identify a preferred position angle for the source or measure the amplitude of source asymmetry, perhaps because it is small (\citetalias{PaperIV}).
 Current sparse baseline coverage sharply limits our ability to detect asymmetry, but future EHT campaigns will add new stations.
 Unless the source is aligned and $i \approx 0\degree$, all our models (which have a definite sense of rotation) predict that the brightest point on the ring is produced by Doppler boosting and should lie on the approaching side of the accretion flow.  The sense of rotation, determined from either the helicity of spiral features in the flow or from tracking rotation of bright spots, could be compared to the clockwise motion of near infrared flares observed by GRAVITY \citep{2018A&A...618L..10G}.
 
 Our analysis shows the value of simultaneous measurements.
 Simultaneous or near-simultaneous GMVA observations, in particular, provide a powerful constraint on the models.
-The eDF is a major source of uncertainty in our analysis, and since the submillimeter (submm) and 2.2\um flux density are most sensitive to the eDF, future analyses should incorporate submm data and future EHT campaigns should seek near-simultaneous observations.
+The eDF is a major source of uncertainty in our analysis, and since the submillimeter (submm) and 2.2\um flux density are most sensitive to the eDF, future analyses should incorporate submm data and future EHT campaigns should seek near-simultaneous submm observations.
 
 Our analysis provides some guidance for future numerical modeling of \sgra.
 It is clear that models require long integrations ($\gtrsim \no{30000}\,\tg$) to provide a converged characterization of the source.
 We also note that there are regions in parameter space where we may not have sampled densely enough---where, for example, the model is too large and too small at adjacent points in parameter space.
 An example of this is the 86GHz size measurement, which is sensitive to inclination, as seen for the goldilocks model.
-We found that being able to compare three simulation pipelines helped us identify numerical sensitivities and saved us from errors on a number of occasions.
+We found that being able to compare three simulation pipelines helped us identify numerical sensitivities and saved us from error on a number of occasions.
 One point raised in these comparisons is that the $2.2\um$ flux density is sensitive to where emission is cut off in high $\sigma$ regions of the flow---the so-called $\sigma_\mathrm{cut}$ parameter.
 This point merits future investigation.
 
 Throughout this work we have assumed that the mass and distance to \sgra are known.
 This assumption could be relaxed and the models checked for consistency with the stellar orbit measurements of mass and distance. 
-Phenomenological accretion flow models are particularly well suited to this type of study when the number of parameters is large  \citep[e.g.,][]{2009ApJ...697...45B}.
+Phenomenological accretion flow models are particularly well suited to this type of study since they are inexpensive to compute \citep[e.g.,][]{2009ApJ...697...45B}.
