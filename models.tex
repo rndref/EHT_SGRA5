@@ -89,7 +89,7 @@ Helium accretion is discussed in \cite{Wong_2022}.}
 The one-zone model solution implies that the mean free path to Coulomb scattering is large compared to $\rg$, i.e. the source plasma is collisionless.
 At $\Theta_e \sim 1$, for example, the electron-electron Coulomb scattering cross section is comparable to the Thomson cross section, and the mean free path is therefore $\sim \tau_e^{-1} \rg$.
 The electron-ion Coulomb scattering mean free path is even longer, and the electrons and ions are therefore poorly coupled.
-This is consistent with our assumption that the ions and electrons can have different temperatures  \citep{1976ApJ...204..187S,1977ApJ...214..840I, 1982Natur.295...17R} and motivates consideration of nonthermal (unrelaxed) electron distribution functions \citep[see][]{2000ApJ...541..234O, 2009ApJ...701..521C, 2014A&A...570A...7M, 2018A&A...612A..34D, 2021arXiv211102518F, 2021NatAs.tmp..218C, Chatterjee2021, 2021arXiv211203933E, Scepi2021}.
+This is consistent with our assumption that the ions and electrons can have different temperatures  \citep{1976ApJ...204..187S,1977ApJ...214..840I, 1982Natur.295...17R} and motivates consideration of non-thermal (unrelaxed) electron distribution functions \citep[see][]{2000ApJ...541..234O, 2009ApJ...701..521C, 2014A&A...570A...7M, 2018A&A...612A..34D, 2021arXiv211102518F, 2021NatAs.tmp..218C, Chatterjee2021, 2021arXiv211203933E, Scepi2021}.
 
 %==============================================================================
 \subsection{Numerical Models}
@@ -275,13 +275,13 @@ and $b \equiv \beta/\beta_\mathrm{crit}$.
 This model has three free parameters: $\beta_\mathrm{crit}$, $\Rl$, and $\Rh$.
 We fix $\Rl = 1$ (consistent with the long cooling time in \sgra; see discussion in \citealt{M87PaperVIII}) and $\beta_\mathrm{crit} = 1$, but allow $\Rh$ to vary from 1 to 160.  When $\Rh \gg 1$ emission is shifted away from the midplane and toward the poles.
 
-In \emph{nonthermal} models, the eDF has a power-law tail extending to high energy.
+In \emph{non-thermal} models, the eDF has a power-law tail extending to high energy.
 We explore two implementations:
 \emph{i}) a power-law distribution function
 \begin{align}
   \frac{1}{n_e} \frac{d n_e}{d\gamma} &=
   \frac{p-1}{\gamma_{\min}^{1-p} - \gamma_{\vphantom{i}\max}^{1-p}} \gamma^{-p},
-  \label{eq:nonthermaleDF}
+  \label{eq:non-thermaleDF}
 \end{align}
 with power-law index $p$ and upper and lower limits $\gamma_{\min}$ and $\gamma_{\vphantom{i}\max}$; and
 \emph{ii}) a so-called $\kappa$ distribution function, inspired by observations of the solar wind and by results of collisionless plasma simulations \citep[e.g.,][and references therein]{2015JPlPh..81e3201K}
@@ -317,7 +317,7 @@ Notice that, in this work, model parameters are always varied at constant time-a
   \centering
   \includegraphics[width=\textwidth]{figures/example_imgs.pdf}
   \caption{Example images from the model library.
-    Left column: thermal MAD from the best-bet region of parameter space; middle column: nonthermal variable $\kappa$ MAD; right column: thermal SANE model.
+    Left column: thermal MAD from the best-bet region of parameter space; middle column: non-thermal variable $\kappa$ MAD; right column: thermal SANE model.
     Top row: 86\GHz images; bottom row: 230\GHz images.
     Color represents intensity, or equivalently brightness temperature.
     Angular momentum of the accretion flow projected onto the image points up.
