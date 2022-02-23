@@ -3,11 +3,33 @@
 
 \begin{figure*}
   \centering
+  \includegraphics[width=\textwidth]{figures/bestbet_imgs_snapshots.pdf}
+  \caption{%
+    230\GHz full resolution snapshots from a fiducial model from the
+    best-bet region.
+    This model passes 10/11 constraints.
+    The different panels are snapshots taken from the time windows
+    that the sythetic observation corresponding to April 7
+    observations has good \uv coverage.}
+  \label{fig:bestbet_imgs_snapshot}
+\end{figure*}
+
+\begin{figure*}
+  \centering
   \includegraphics[width=\textwidth]{figures/bestbet_imgs.pdf}
   \caption{%
-    Example fiducial model from the best-bet region.  This model passes 10/11 constraints.  The leftmost panel shows a 230\GHz full resolution snapshot from the model.  The second panel shows the model averaged over a time interval corresponding to April 7 observations.  The third panel shows an average image reconstructed from synthetic data produced from the same time interval.  The final image shows the average image reconstructed from April 7 EHT data.%
-    %The subsequent panels are the 230\GHz ray traced image, the 230\GHz image convolved with a 20\uas FWHM Gaussian for approximating the image at EHT resolution, and the actual reconstructed image from the EHT 2017 observation. Note that the position angle is not well constrained. So the rotation of the image here for matching the observed image is not statistically meaningful.
-    }
+    Reconstructions of the fiducial model from the best-bet region,
+    compared to the observation.
+    This is the same model shown in
+    Figure~\ref{fig:bestbet_imgs_snapshot}.
+    The leftmost panel is an average of the snapshots used in the
+    sythetic data generation, weighted by the number of baselines.
+    The second panel shows the averaged image convolved with a 20\uas
+    beam.
+    The third panel shows an average image reconstructed from
+    synthetic data.
+    The final image shows the average image reconstructed from April~7
+    EHT data.}
   \label{fig:bestbet_imgs}
 \end{figure*}
 
@@ -45,7 +67,7 @@ The structural variability constraint measures the slope and amplitude of the po
 Remarkably, we find that the power spectrum slope is consistent for all models, while the power spectrum amplitude is consistent for 43\% of fiducial models.
 
 The failure of nearly all fiducial models to match the light curve variability is interesting.
-It may signal the presence of extended, slowly varying structure that is resolved out by EHT, or it may signal that future models need to incorporate collisionless effects (potentially modeled as viscosity and conductivity) or a more sophisticated treatment of electron thermodynamics including cooling.  If when combined these effects were to reduce \mi{3} by 30\% then many MAD models would be consistent with the data.  
+It may signal the presence of extended, slowly varying structure that is resolved out by EHT, or it may signal that future models need to incorporate collisionless effects (potentially modeled as viscosity and conductivity) or a more sophisticated treatment of electron thermodynamics including cooling.  If when combined these effects were to reduce \mi{3} by 30\% then many MAD models would be consistent with the data.
 %If each of these effects reduces $\mi{3}$ by about $10\%$ then many of the MAD models would be consistent with the data.
 
 None of the fiducial models survive the full gauntlet of 11 constraints.
@@ -53,7 +75,7 @@ If we set aside both variability constraints, however, then there is a cluster o
 These models in the ``best-bet region'' are strongly magnetized (MAD) and have $\Rh = 160$, positive spin, and low inclination, with ($\abh, i) = (0.5, 30\degree); (0.94, 10\degree); (0.94, 30\degree$).
 %Images of a model in the best-bet region is shown in Figure~\ref{fig:bestbet_imgs}, along with the observed image.
 They have accretion rates $\dot{M} = (5.2$--$9.5)\times 10^{-9}\msun\yr^{-1}$, which are consistent with earlier estimates and overlap with accretion rates in wind-fed models, $\sim 10^{-8} \msun\yr^{-1}$ \citep{2020ApJ...896L...6R}.
-The $\abh = 0.5$ MAD with $i=30\degree$ model is presented in Figure~\ref{fig:bestbet_imgs} as a snapshot, a time-average, and a reconstructed average image from synthetic data.  One of the reconstructed average images from the 2017 EHT observations is shown for comparison. 
+The $\abh = 0.5$ MAD with $i=30\degree$ model is presented in Figure~\ref{fig:bestbet_imgs} as a snapshot, a time-average, and a reconstructed average image from synthetic data.  One of the reconstructed average images from the 2017 EHT observations is shown for comparison.
 
 We produced synthetic SEDs, and therefore bolometric luminosities $L_\mathrm{bol}$, for all fiducial models.
 Typically $L_\mathrm{bol}$ is dominated by a synchrotron bump in the submm and for the best-bet region is $(6.8$--$9.8)\times10^{35}\ergps$; the corresponding radiative efficiency $L_\mathrm{bol}/(\dot{M} c^2)$ is $(1.3$--$3.0)\times 10^{-3}$.
