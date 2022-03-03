@@ -28,8 +28,8 @@ Six exploratory models, considered in Section~\ref{sec:explore},  pass all const
 Although they appear promising these six models are imaged for only $\no{5000}\,\tg$ and thus have been tested more weakly than the fiducial thermal models.
 
 To evaluate the effect of run duration we imaged the six passing exploratory models for  $\no{15000}\,\tg$.
-All failed one or more constraints, which are listed in Table \ref{tab:fail_none}.  
-Evidently adding a population of non-thermal electrons does not provide a consistent way of transforming failing fiducial models to passing models.  
+All failed one or more constraints, which are listed in Table \ref{tab:fail_none}.
+Evidently adding a population of non-thermal electrons does not provide a consistent way of transforming failing fiducial models to passing models.
 
 The pass/fail status of the model can be sensitive to the length of integration, and it is important to image the models for at least $\no{15000}\,\tg$.
 In connection with this we note that the \koral models, which were imaged at 230\GHz for $\sim 10^5 \tg$, were generally consistent with the fiducial models but provide tighter $\mi{3}$ constraints (see Appendix~\ref{app:variability}).
@@ -86,7 +86,7 @@ In Appendix~\ref{app:variability} we consider $\Rl$ up to 10 in a sample of four
 
 The variability excess might also be caused by numerical inaccuracies in radiative transfer, truncation error in the GRMHD integrations (limited resolution), limited simulation duration, or misspecification of the adiabatic index.
 These are considered in Appendix~\ref{app:numerical} and~\ref{app:variability}.
-We find no evidence that any of these effects is producing the variability excess.  A more extensive study on how these effect could alter the variability is warranted but 
+We find no evidence that any of these effects is producing the variability excess.  A more extensive study on how these effect could alter the variability is warranted but
 outside the scope of this paper.
 
 %==============================================================================
@@ -131,7 +131,7 @@ The models in the best-bet region merit additional analysis, and it is interesti
   \label{fig:accretion_outflow_power_illinois_thermal}
 \end{figure*}
 
-What is the accretion rate in \sgra?  The time-averaged 
+What is the accretion rate in \sgra?  The time-averaged
 \begin{equation}
   \dot{M} \equiv \frac{1}{\Delta t}\int dt\int d\theta d\phi\hspace{0.1cm}\sqrt{-g}\big(-\rho u^{r}\big),
 \end{equation}
@@ -139,15 +139,9 @@ at the event horizon; the quantity in parentheses is the inward rest-mass flux d
 
 Figure~\ref{fig:accretion_outflow_power_illinois_thermal} (top panels) shows $\dot{M}$ in solar masses per year for the \kharma and \bhac thermal models.
 The accretion rates follow immediately once the models are normalized so that $\langle F_{230}\rangle = 2.4\,\mathrm{Jy}$.
-% cfg 2/5: since we're not providing the terminals anymore
-%A listing of $\dot{M}$ for all models for which it is available is provided in Appendix~\ref{app:tables}.
 
 MAD models accrete at $10^{-9}$ to $10^{-8} M_{\odot}$yr$^{-1}$ while SANE models have a broader range, $10^{-9}$ to $10^{-6} M_{\odot}$yr$^{-1}$.
-$\dot{M}$ is an increasing function of $\Rh$, which is a result of the thermal synchrotron emissivity increasing with increasing electron temperature, so that at fixed flux density lower electron temperature models (higher $\Rh$) have higher $\dot{M}$.  
-%This can be understood as a consequence of three facts:
-%\emph{i})~the thermal synchrotron emissivity is an increasing function of temperature, so at fixed flux density higher electron temperature models have lower $\dot{M}$;
-%\emph{ii})~the electron temperature is inversely proportional to $\Rh$; and
-%\emph{iii})~the models need to normalized so that $\langle F_{230}\rangle = 2.4\Jy$.
+$\dot{M}$ is an increasing function of $\Rh$, which is a result of the thermal synchrotron emissivity increasing with increasing electron temperature, so that at fixed flux density lower electron temperature models (higher $\Rh$) have higher $\dot{M}$.
 SANE models exhibit a stronger dependence on $\Rh$ than MAD models.
 The emission in the SANE models is predominantly from regions with large $\beta$, where the electron temperature is regulated by $\Rh$.
 MAD models produce more of their emission in regions with $\beta\sim 1$, where $\Rh$ only has a weak effect on electron temperature  (see \citetalias{M87PaperV}, Figure~4).
@@ -170,9 +164,7 @@ The outflows have a power that is comparable to or larger than the bolometric lu
 What is the outflow power $P_\mathrm{out}$?
 
 First we must define $P_\mathrm{out}$.
-There are a number of competing definitions in the literature; we set  
-% cfg 2/9: removed this as unhelpful even to the knowledgeable reader.  it conflates the definition of jet and the definition of outflow power.
-%: \citet{refId0}, \citet{2014A&A...570A...7M} identify the jet as the region above a threshold Bernoulli parameter Be, while \citet{10.1111/j.1365-2966.2012.22002.x} define it as the region with the ratio of energy flux to rest mass flux $\mu$ above a critical value, and \citetalias{M87PaperV} applies a $\beta\gamma$ cut to define the jet $P_\mathrm{out}$.  
+There are a number of competing definitions in the literature; we set
 \begin{equation}
   P_\mathrm{out} \equiv \frac{1}{\Delta t}\int dt \int d\phi \int_\mathrm{poles} d\theta \sqrt{-g}\left(-T^{r}_{t}-\rho u^{r}\right),
 \end{equation}
@@ -227,7 +219,6 @@ Our non-thermal models are only a few points in a vast function space of possibl
 %------------------------------------------------------------------------------
 \subsubsection{Collisionless plasma effects}
 
-% cfg 2/5: this seems really different in tone and emphasis from the rest of the paper.  I think it could be reduced in length.  
 {The mean free path to Coulomb scattering for particles is typically larger than or comparable to the system size in \sgra, rendering its plasma collisionless.
 The GRMHD simulations used in this work describe a collisional system, whereas a first-principles modeling of the collisionless plasma requires a fully kinetic treatment.
 General relativistic (radiative) kinetic simulations are crucial for dynamically probing the electron temperature, effects of non-thermal distribution functions, and pressure anisotropy and their interplay with radiation in collisionless plasma in the accretion disk and jet.
@@ -287,5 +278,5 @@ One point raised in these comparisons is that the $2.2\um$ flux density is sensi
 This point merits future investigation.
 
 Throughout this work we have assumed that the mass and distance to \sgra are known.
-This assumption could be relaxed and the models checked for consistency with the stellar orbit measurements of mass and distance. 
+This assumption could be relaxed and the models checked for consistency with the stellar orbit measurements of mass and distance.
 Phenomenological accretion flow models are particularly well suited to this type of study since they are inexpensive to compute \citep[e.g.,][]{2009ApJ...697...45B}.

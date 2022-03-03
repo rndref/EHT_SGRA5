@@ -48,8 +48,6 @@ We have selected and applied 11 heterogeneous observational constraints.
 Six derive directly from EHT VLBI data, two derive from 86\GHz VLBI observations with the GMVA, one from variability of the 230\GHz light curve, and one each from the 2.2\um flux density and the X-ray luminosity.
 
 Five structural constraints derive from EHT VLBI data.
-% cfg 2/5: this sounded kind of empty
-%While these constraints are not fully independent, which makes their interpretation as likelihood difficult, the multiple constraints make our analyses more robust.
 When combined these constraints reject about 75\% of our fiducial models.
 The EHT cut favors $\abh \ge 0$ and avoids edge-on ($i = 90\degree$) models and models with equal ion and electron temperatures ($\Rh = 1$).
 We are {\em not} able to constrain the source position angle due to sparse baseline coverage.
@@ -70,12 +68,10 @@ Remarkably, we find that the power spectrum slope is consistent for all models, 
 
 The failure of nearly all fiducial models to match the light curve variability is interesting.
 It may signal the presence of extended, slowly varying structure that is resolved out by EHT, or it may signal that future models need to incorporate collisionless effects (potentially modeled as viscosity and conductivity) or a more sophisticated treatment of electron thermodynamics including cooling. In addition, different initial geometries and polarities of the magnetic field could lead to more slowly varying structures \citep{2021arXiv211103689N}. If when combined these effects were to reduce \mi{3} by 30\% then many MAD models would be consistent with the data.
-%If each of these effects reduces $\mi{3}$ by about $10\%$ then many of the MAD models would be consistent with the data.
 
 None of the fiducial models survive the full gauntlet of 11 constraints.
 If we set aside both variability constraints, however, then there is a cluster of 3 fiducial models that pass the remaining 9 constraints in all simulation pipelines (a few more survive in one model set but not the other).
 These models in the ``best-bet region'' are strongly magnetized (MAD) and have $\Rh = 160$, positive spin, and low inclination, with ($\abh, i) = (0.5, 30\degree); (0.94, 10\degree); (0.94, 30\degree$).
-%Images of a model in the best-bet region is shown in Figure~\ref{fig:bestbet_imgs}, along with the observed image.
 They have accretion rates $\dot{M} = (5.2$--$9.5)\times 10^{-9}\msun\yr^{-1}$, which are consistent with earlier estimates and overlap with accretion rates in wind-fed models, $\sim 10^{-8} \msun\yr^{-1}$ \citep{2020ApJ...896L...6R}.
 The $\abh = 0.5$ MAD with $i=30\degree$ model is presented in Figure~\ref{fig:bestbet_imgs_snapshot} as snapshots and in Figure~\ref{fig:bestbet_imgs} as a weighted average, a convolved average, and a reconstructed average image from synthetic data.
 One of the reconstructed average images from the 2017 EHT observations is shown in the rightmost panel in Figure~\ref{fig:bestbet_imgs} for comparison.
@@ -122,7 +118,3 @@ The outcomes are largely consistent (see Appendix~\ref{app:numerical} for detail
 The code comparisons were valuable and helped identify multiple issues in the independent simulation sets.
 The consistency between codes is remarkable given the complexity of the modeling process and the scope for error.
 Tracking down the remaining discrepancies (for example, in the 2.2\um flux density) and developing a quantitative error budget is an essential but difficult task for the future.
-
-%This first comparison of the EHT 2017 \sgra data to state-of-the-art GRMHD models shows remarkable successes and highlights interesting problems, including the origin of variability.
-%The observational constraints considered here put pressure on the theoretical models and have shown that the models are not trivially adjustable to pass all tests.
-%This work signals the arrival of a new era of precision black hole astrophysics in which close interaction of theory and experiment has the potential to unveil the inner workings of the galactic center.

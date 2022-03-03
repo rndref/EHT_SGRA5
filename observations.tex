@@ -2,7 +2,7 @@
 
 \sgra is one of the most frequently observed objects on the sky: it has been observed with a slew of telescopes over 5 decades in time and 17 decades in electromagnetic frequency.
 We must select a manageable subset of this data to constrain our models.
-In doing so we have attempted to identify constraints 
+In doing so we have attempted to identify constraints
 \emph{i})~that are believed to be uncorrelated, so that each tests a distinct aspect of the model;
 \emph{ii})~that use data that can be simulated with the models; and
 \emph{iii})~that are based on EHT 2017 $230\GHz$ VLBI data or that are based on emission produced within or close to the $230\GHz$ emitting region and \emph{iv})
@@ -41,7 +41,7 @@ Nevertheless one should not attach too much significance to the success or failu
 \subsection{EHT Observational Constraints}
 
 We test the models against EHT interferometric data
-%, which constrains the spatial structure of the source, 
+%, which constrains the spatial structure of the source,
 in three ways.
 First, we compare an estimate of the source size (``second moment'')
 against an estimate based on short baseline visibility amplitudes
@@ -50,7 +50,7 @@ Second, we check the location of the first minimum and the long
 baselines values of the VAs (``\vam'').
 Finally, using a variant of a procedure from \citetalias{PaperIV}, we
 compare fits for the diameter, width, and asymmetry of an \mring (a
-parameterized image-plane model, ``\mring constraints'') to 
+parameterized image-plane model, ``\mring constraints'') to
 distributions based on synthetic data generated from the model library.
 
 %------------------------------------------------------------------------------
@@ -75,7 +75,7 @@ simulated 230\GHz image and find its eigenvalues
 $\lambda_\mathrm{maj}^2/(8\ln 2)$ and $\lambda_\mathrm{min}^2/(8\ln
 2)$, where $\lambda_\mathrm{maj}$ and $\lambda_\mathrm{min}$ are the
 major and minor axis FWHM.
-The image is deemed compliant if there exists any position angle for which the second moment would satisfy the size constraints, i.e. it is compliant if for any $\lambda$ such that $\lambda_\mathrm{min} \le \lambda \le \lambda_\mathrm{maj}$, $\lambda$ lies between the scattering-corrected upper and lower limits.  
+The image is deemed compliant if there exists any position angle for which the second moment would satisfy the size constraints, i.e. it is compliant if for any $\lambda$ such that $\lambda_\mathrm{min} \le \lambda \le \lambda_\mathrm{maj}$, $\lambda$ lies between the scattering-corrected upper and lower limits.
 We reject models with compliance fraction $< 0.01$.
 
 %------------------------------------------------------------------------------
@@ -96,8 +96,6 @@ GRMHD models are more complicated, with fluctuations in the null locations and l
 We compare with data from \aprilvii, which has the best \uv
 coverage near the minima in the VAs.
 The first visibility minimum in both the N-S and E-W directions in the data always occurs between 2.5--3.5\,$\mathrm{G}\lambda$ \citepalias[see][for details]{PaperII}.
-% cfg 2/5: then let's not bring it up
-%We do not consider the depth of the null.
 For the long-baseline interval between 6--8\,$\mathrm{G}\lambda$ in the data,
 the VAs have $\lesssim 4\%$ of the zero-baseline flux.
 One complication when comparing models to data on long baselines is
@@ -108,10 +106,6 @@ descattered values in the 6--8\,$\mathrm{G}\lambda$ range; refractive
 scattering, on the other hand, introduces noise at all baselines of
 order 0.5--3\%, depending on the characteristics of the
 scattering screen \citep{2018arXiv180501242P, 2018ApJ...865..104J}.
-% CK: correct the value 5% -> 4%/50% = 0.08.  But this is repeated in the next paragraph anyway so we may just cut it.
-%To account for these effects, we classify as compliant a model
-%snapshot with VA in this range that is $< 4\% / 50\% = 0.08$ of the zero baseline
-%flux as compliant.
 
 To apply this constraint, we compute the VA of each model snapshot
 along position angles (PAs) $0\degree$, $45\degree$, $90\degree$,
@@ -122,14 +116,12 @@ We classify a snapshot as compliant if
 \emph{i})~for at least one position angle the first minimum falls
 between 2.5 and 3.5\,$\mathrm{G}\lambda$ and
 \emph{ii})~at no position angle do the median VAs exceed $4\% / 50\% = 0.08$ of the zero-baseline flux.
-%We evaluate the fraction of snapshots from each model that are
-%compliant using the criteria described above.
 We reject models with compliance fraction $< 1\%$.
 
 %------------------------------------------------------------------------------
 \subsubsection{230\GHz \Mring Fitting}
 
-Following \citetalias{PaperIV}, we fit an \mring image plane model to snapshots from EHT data and from simulated data and then compare the distributions of fit parameters.  
+Following \citetalias{PaperIV}, we fit an \mring image plane model to snapshots from EHT data and from simulated data and then compare the distributions of fit parameters.
 
 The \mring is a $\delta$ function in radius with diameter $d$ multiplied by a truncated (up to $m = 3$; notice that Paper IV truncates at $m = 4$) Fourier series, convolved with a Gaussian of width $w$.
 The model also contains a centered Gaussian component, with amplitude and width as free parameters, to absorb large scale emission and emission interior to the ring.\footnote{In \citetalias{PaperIV} this is called an mG-ring.}
@@ -146,13 +138,9 @@ Note the selected scans overlap with those found in \cite{Farah_2022}.
 Only small changes in model selection were observed if any one scan was removed from the comparison.
 The data were descattered before fitting, that is, the VA were divided by the scattering kernel.
 
-%Maximum likelihood \mring parameters were found for each scan using the Julia package \texttt{Comrade.jl} \citep{comrade} in combination with a differential evolution-based optimizer from \cite{meijia} found in the Julia package \texttt{Metaheuristics.jl}\footnote{The set of scripts used for the fits can be found in the GitHub repository \url{https://github.com/ptiede/EHTGRMHDCal}.}.
-%For more details about the \mring model see Section~4.3 in \cite{PaperIV}.
-
 The maximum likelihood \mring parameters for the ten selected EHT scans are listed in Table~\ref{tab:mringfits}.
 Evidently the fit parameters are noisy.
-The fits for $d$ range from 39\uas to 84\uas, for $w$ from 9\uas to 21\uas, and for $\beta_1$ from $0.04$ to $0.48$ 
-%(we require $\beta_1 \le 0.5$ to guarantee  positivity of the model image).
+The fits for $d$ range from 39\uas to 84\uas, for $w$ from 9\uas to 21\uas, and for $\beta_1$ from $0.04$ to $0.48$
 The variation in fit parameters could be caused by source variability, thermal noise, or gain variations.
 In the models the main driver of fit variations is source variability.
 
@@ -192,12 +180,10 @@ A model image $I(x,y)$ is Fourier transformed to complex visibilities $V(u,v)$ w
 Normally distributed thermal noise $\delta V_{\mathrm{th},i}$ with amplitude based on telescope performance during the scan is added, and multiplicative, normally distributed noise with unit variance $N$ is added to crudely model gain corrections: $\tilde{V}_i = V_i (1 + \epsilon N) + \delta V_{\mathrm{th},i}$.
 We set $\epsilon = 0.05$, but no substantial changes in fit parameters were observed for $\epsilon = 0.02$.
 We then fit to the VAs $|\tilde{V}_i|$ and closure phases.\footnote{Maximum likelihood \mring parameters were found for each scan using the Julia package \texttt{Comrade.jl} \citep{comrade} in combination with a differential evolution-based optimizer
-%from \cite{meijia} %% can't find the reference...
 found in the Julia package \texttt{Metaheuristics.jl}.  The set of scripts used for the fits can be found in the GitHub repository \url{https://github.com/ptiede/EHTGRMHDCal}.}
 
 We sample the model images once per $500\,\tg$, which is comparable to a correlation time.
 A model with a $\no{15000}\,\tg$ imaging window thus produces $30$ fits per scan per position angle.
-%This procedure is repeated for 4 position angles (no substantial changes were observed if more position angles were used), yielding $1200$ samples per model distribution.
 
 In comparing the models to the data we
 \emph{i}) generate the distribution of fit parameters at each position angle;
@@ -216,7 +202,6 @@ We limit comparison to three bands: 86\GHz, 2.2\um, and X-ray.
 
 The Global Millimeter VLBI Array (GMVA) observed \sgra on April 3, 2017, just 3 days ($\simeq \no{13000}\,\tg$) before the EHT campaign.
 \citet{2019ApJ...871...30I} estimate that the compact flux during this observation was $F_{86} = 2.0 \pm 0.2\,\mathrm{Jy}$ ($2\sigma$ errors).
-% ; S. Issaoun, private communication). %% Eduardo: There are no priv. comm. from a co-author in a paper
 
 To test the models we compute a library of 86\GHz images for all GRMHD snapshots for all models, and integrate over them to obtain  $F_{86}$.
 We assume normally distributed measurement errors with $\sigma = 0.1\,\mathrm{Jy}$ and convolve the $F_{86}$ distribution for each model with the resulting Gaussian.
@@ -281,9 +266,6 @@ We consider two variability measures: one characterizes variability in the 230\G
 %------------------------------------------------------------------------------
 \subsubsection{230 \GHz light curves}
 
-%ALMA and SMA produced \sgra light curves at 230\GHz as a byproduct of the 2017 EHT VLBI observing campaign.
-%The complete set of light curves is presented and analyzed in \cite{Wielgus2022}.
-
 We compare variability in the models to light curve observations of \sgra from 2005--2017 using the 3-hour {\em modulation index} $\mi{3}$, where $\mi{\Delta T} \equiv \sigma_{\Delta T}/\mu_{\Delta T}$, $\sigma_{\Delta T}$ is the standard deviation measured over an interval $\Delta T$ (in hours), and $\mu_{\Delta T}$ is the mean measured over the same interval.
 
 Following \citet{2015ApJ...812..103C} we use $\mi{\Delta T}$ because it is easy to describe, easy to compute, commonly used in the literature (in the X-ray astronomy literature it is ``rms \%''), and closely related to the structure function, since the expectation value for $\sigma_T^2$ is given by an integral over the structure function \citep[see][]{Lee_2022}.
@@ -303,7 +285,7 @@ We reject the model if $p < 0.01$.
 
 Through the KS test, the strength of the $\mi{3}$ constraint depends on the number of data and model samples.
 The fiducial models have duration $10^4$ or $1.5\times 10^4\,\tg$ (18 or 28 samples), whereas most exploratory models have duration $5 \times 10^3\,\tg$ (9 samples).
-The $\mi{3}$ constraint is therefore weaker for the exploratory models: an exploratory model that passes the constraint may be more variable than a fiducial model that fails.  
+The $\mi{3}$ constraint is therefore weaker for the exploratory models: an exploratory model that passes the constraint may be more variable than a fiducial model that fails.
 
 %------------------------------------------------------------------------------
 \subsubsection{EHT Structural Variability}

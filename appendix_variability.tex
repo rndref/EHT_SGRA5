@@ -1,47 +1,5 @@
 \section{Variability of GRMHD models}\label{app:variability}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% notes from people who drafted the section
-
-% \bp{Seems like (1) and (2) here are (or will be) discussed more thoroughly in the Numerical Methods appendix.  Given both seem to conclude that all models are consistent, and thus that changing these parameters would not reduce variability, maybe we can refer there instead of re-writing?}
-%\monika{11Dec:addressed below}
-%==============================================================================
-% 1. GRMHD resolution.
-
-% discussion of varying resolution [Ben to spelunk to find a 448 down set of images]
-
-% Discussion of high resolution HAMR model.
-
-% mapping between 230 GHz variability and accretion rate variability
-%\monika{11Dec:addressed in B1}
-
-%==============================================================================
-%2. Image resolution.
-%\monika{11Dec:addressed in B1}
-%==============================================================================
-%3. Model duration is not sufficiently long.
-%KORAL model analysis.
-% MM 11 Dec: now in C1
-%==============================================================================
-%4. $\sigma_{cut}$ is overproducing variability.
-% MM 11 Dec: when sigma_cut>sigma_crit  physics is unreliable and this is mentioned in the model section now. maybe not appropriate to discuss here
-%==============================================================================
-%5. Initial conditions are not a good model.
-%Comparison of Monika model initial conditions
-% there was nothing added on this to the draft yet
-%==============================================================================
-% 6. Cooling filters the light curve. [Ben]
-% \monika{11Dec:moved at the end: merged into subsection C.2}
-%==============================================================================
-%7. Electron distribution function model is inadequate.
-
-%a.  Discussion of models with varying electron heating models.  Discussion of Jason's eheating models.   Forward reference to Diaz et al.  [Vedant]
-
-%b. Discussion of models with $\Rl = 10$. [Vedant]
-% \monika{11Dec: now in C2}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 Nearly all models fail to recover the variability of \sgra in 230\GHz flux density as measured by \mi{3}.
 In this Appendix we discuss and dismiss four possible causes for this variability excess.
 
@@ -63,14 +21,12 @@ but is beyond the scope of this paper.
   \centering
   \includegraphics[width=\columnwidth]{./figures/Koral_vs_IL_MI.png}
   \caption{Distribution of \mi{3} from \koral models, divided between the first and second half of the simulation, and from the fiducial \kharma models. We choose the models that are at similar points in the parameter space, limiting the comparison to spin -0.9, -0.5, 0.0 and 0.9 over all inclinations for the \koral models and MAD, \Rh 40, spin -0.94, -0.5, 0.0, and 0.94 for the \kharma models.}
-  %Specifically: \koral models are all MAD, inclination 10, 30, 50, 70, 90, spin -0.9, -0.5, 0.0, 0.9, rhigh 20. \kharma models are MAD, inclination 10, 30, 50, 70, 90, spin -0.94, -0.5, 0.0, 0.94, rhigh 40.
   \label{fig:koral_MI}
 \end{figure}
 
 The fiducial models are evolved for $\sim \no{30000}\,\tg$.
 Figure ~\ref{fig:koral_MI} compares $\mi{3}$ distributions from a fiducial \kharma simulation to a \koral model with similar parameters that was evolved and imaged for approximately three times longer.
 The $\mi{3}$ distributions have similar mean and standard deviation regardless of time interval chosen for comparison.
-%The two models displayed in the figure differ in resolution of the numerical grid and initial torus size, consistent with the claim that the variability excess is not driven by numerical resolution or initial conditions of the GRMHD simulations.
 
 %==============================================================================
 \subsection{Effect of \texorpdfstring{$\Rl$}{Rlow}}
