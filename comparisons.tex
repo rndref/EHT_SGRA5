@@ -1,8 +1,8 @@
 \section{Model Comparison}\label{sec:comparisons}
 
 \begin{figure*}
-  \centering
-  \includegraphics[height=3.25in]{figures/passfail_sz.pdf}
+  \centering\hspace{18pt}
+  \includegraphics[width=6.5in]{figures/passfail_sz.pdf}
   \caption{Pre-image size constraint example.
     Left: passing snapshot;
     right: failing snapshot.
@@ -14,21 +14,26 @@
 \end{figure*}
 
 \begin{figure*}
-  \centering
-  \includegraphics[height=3.25in]{figures/passfail_va.pdf}
-  \caption{Visibility amplitude (VA) morphology  constraint example.
+  \centering\hspace{18pt}
+  \includegraphics[width=6.5in]{figures/passfail_va.pdf}
+  \caption{Visibility amplitude (VA) morphology constraint example.
+    \emph{Top}: snapshot images;
+    \emph{Bottom}: visibility amplitude.
     \emph{Left}: passing snapshot;
     \emph{right}: failing snapshot.
-    The solid lines in each plot show visibility amplitudes on a section through the origin in the \uv domain, at four position angles (PAs), where $0\degree$ is parallel to the projected angular momentum vector of the accretion flow.
+    In the bottom row, 
+    the solid lines in each plot show visibility amplitudes on a section through the origin in the \uv domain, at four position angles (PAs), where $0\degree$ is parallel to the projected angular momentum vector of the accretion flow.
     Solid black points show data from \aprilvii.
     The \vam constraint requires that for at least one PA the first minimum in VA fall within the left grey band, and for all PAs the median of the VAs lie inside the right grey band (see Section~\ref{sec:constraints}, \emph{Visibility Amplitude Morphology}, for details).
-    Evidently the snapshot at right fails {\em both} conditions.}
+    Evidently the snapshot at right fails {\em both} conditions.
+    The top row shows the corresponding snapshots in the image domain.
+    The color bar on the right is for both images.}
   \label{fig:passfail_va}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.75\textwidth]{figures/mring_width_example.pdf}
+  \includegraphics[width=6.5in]{figures/mring_width_example.pdf}
   \caption{\Mring width constraint example.
     \emph{Top left}: image that satisfies the constraint, Gaussian blurred to $20\uas$;
     \emph{top right}: image that fails the constraint;
@@ -66,7 +71,8 @@ The right panel of Figure~\ref{fig:passfail_sz} shows an example of one of these
 The \vam constraint tests the null location and long-baseline VAs.  Figure~\ref{fig:passfail_va} shows an example of a passing and failing model.
 The constraint disfavors edge-on models at positive spin and a few large $\Rh$ SANE models.
 This is mainly because the edge-on models contain bright spots, corresponding to the approaching side of the rotating accretion flow, and faint rings, so the first nulls get washed out by the bright features.
-The \vam constraint passes 77\% of all models.
+%The \vam constraint passes 77\% of all models.
+The \vam constraint passes 79\% of all models.
 
 %..............................................................................
 \subsubsubsection{\Mring Fits}
@@ -96,10 +102,12 @@ Recall that we compare the distribution from the data to that from the model usi
 The asymmetry parameter is typically not well constrained.
 Many rejected models are at high inclination and have $\abh =0.94$.
 These models have asymmetries that are large and detectable because Doppler boosting concentrates emission in an equatorial spot on the approaching side of the disk.
-The asymmetry parameter constraint passes 90\% of all models.
+%The asymmetry parameter constraint passes 90\% of all models.
+The asymmetry parameter constraint passes 91\% of all models.
 
 The \mring diameter, which depends on the diameter of the shadow and the ring width, is better constrained than the asymmetry parameter and varies systematically from model to model.
-The ring diameter constraint passes 55\% of all models.
+%The ring diameter constraint passes 55\% of all models.
+The ring diameter constraint passes 54\% of all models.
 
 Most of the models that fail are low inclination models with ring diameters that are too large. Only two \bhac models fail because the ring diameter is too small.  Most of the rejected models are low inclination models at $\abh < 0$.
 
@@ -217,7 +225,7 @@ Since the midplane contributes most of the electron scattering optical depth, lo
 %..............................................................................
 \subsubsubsection{Summary of Non-EHT constraints}
 
-Applying only non-EHT constraints $7\%$ of models as shown in Figure~\ref{fig:non_eht_cuts}.
+Applying only non-EHT constraints leaves $6\%$ of models as shown in Figure~\ref{fig:non_eht_cuts}.
 The surviving models are the result of applying a heterogeneous and noisy set of constraints using a hard cutoff, which somewhat obscures the underlying physical picture.
 Nevertheless, the surviving 13 models are all MAD and all have $\Rh > 10$.  All but two have $i < 70\degree$.
 This leaves a cluster of surviving MAD models at large $\Rh$ and low to moderate inclination.
@@ -297,7 +305,9 @@ It is also possible, however, that one of the constraints is measured incorrectl
 To investigate this, we identify all models that fail only one constraint in Table~\ref{tab:fail_one_thermal}.
 We find that the critical constraints are 86\GHz size, \mring diameter, and $\mi{3}$.
 Notice that there is overlap between \kharma and \bhac in MAD models that fail the $\mi{3}$ constraint.
-No \hamr models are listed because all \hamr models fail at least two constraints.
+The \hamr models fare significantly worse than the \kharma and \bhac models in the $\mi{3}$ constraint: only 7\% of models pass. The remaining models all fail at least one additional constraint, leading to their exclusion from Table~\ref{tab:fail_one_thermal}.
+%All \hamr that pass $\mi{3}$ fail 86GHz flux and size
+%No \hamr models are listed because all \hamr models fail at least two constraints. 
 
 %==============================================================================
 \subsection{Exploratory Models}\label{sec:explore}
