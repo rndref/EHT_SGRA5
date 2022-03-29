@@ -76,13 +76,13 @@ Requiring $F_\nu = 2.4\,\mathrm{Jy}$, the average measured by ALMA during the 20
 This is consistent with a similar one-zone model fit to archival \sgra millimeter spectra \citep{2019ApJ...881L...2B}.
 The synchrotron optical depth $\tau_\mathrm{sync} = r j_\nu/B_\nu \simeq 0.4$, where $B_\nu$ is the Planck function, so the optically thin approximation is marginal.
 
-The one-zone model has electron scattering optical depth  $\tau_e = \sigma_T n_e r \simeq 2\times10^{-6}$ and thus the Compton parameter $y = 16 \Theta_e^2 \max(\tau_e,\tau_e^2) \simeq 0.003$ is small.
+The one-zone model has electron scattering optical depth  $\tau_e = \sigma_\mathrm{T} n_e r \simeq 2\times10^{-6}$ and thus the Compton parameter $y = 16 \Theta_e^2 \max(\tau_e,\tau_e^2) \simeq 0.003$ is small.
 Synchrotron cooling therefore dominates Compton cooling.
 
 The synchrotron cooling timescale for electrons $t_\mathrm{cool} \equiv u_e/\Lambda$ where $u_e = 3 n_e k T_e$ is the electron internal energy and $\Lambda \simeq 5.4 B^2 e^4 n_e \Theta_e^2 /(c^3 m_e^2)$ is the synchrotron cooling rate for a thermal population of electrons with $\Theta_e \gtrsim 1$ (see Appendix~A in \citealt{2011ApJ...735....9M}; finite optical depth reduces $\Lambda$).
 Therefore $t_\mathrm{cool}=2.3 \times 10^4\sec \simeq 1.1 \times 10^3 \tg$, which is longer than the inflow timescale $r/v^r \sim r^{3/2}$.
-This suggests that radiative cooling can be neglected in the plasma models. 
-\footnote{The cooling time for 2.2$\um$ emitting electrons is $\sim 60 (B/(30 {\rm G}))^{-3/2} \tg$, so cooling is a more significant source of uncertainty for model 2.2$\um$ predictions.}
+This suggests that radiative cooling can be neglected in the plasma models.%
+\footnote{The cooling time for 2.2$\um$ emitting electrons is $\sim 60 (B/(30 {\rm G}))^{-3/2} \tg$, so cooling is a more significant source of uncertainty for 2.2$\um$ emission.}
 More detailed calculations confirm this estimate  \citep{2018MNRAS.478.5209C,  2020MNRAS.499.3178Y}.\footnote{If \sgra is fed by stellar winds then the inflowing plasma may be mainly helium \citep{2019MNRAS.482L.123R}; this changes the one-zone model slightly.
 Helium accretion is discussed in \cite{Wong_2022}.}
 
@@ -137,8 +137,8 @@ This is consistent with our assumption that the ions and electrons can have diff
   }
 \end{deluxetable*}
 
-The one-zone model is too simple for comparison with EHT data.
-Steady spherical accretion models \citep[e.g.,][]{2019ApJ...885L..33N, 2022ApJ...925..119B} go one  step beyond the one zone model, incorporating relativistic gravity.
+The one-zone model is too simple for comparison with EHT data.  In particular it does not predict EHT image morphology, and it fails to model emission that arises outside the near-horizon region, including 86GHz emission and X-ray emission. 
+Steady spherical accretion models \citep[e.g.,][]{2019ApJ...885L..33N, 2022ApJ...925..119B} go one  step beyond the one zone model, incorporating relativistic gravity and a radially extended flow.
 Steady, disk-like (RIAF) accretion models in the Kerr metric go still further and include rotation and departures from spherical symmetry \citep[e.g.,][]{2009ApJ...697...45B, 2009ApJ...706..960H,2018ApJ...863..148P}.
 Steady phenomenological models do not, however, self-consistently capture fluctuations in the flow.
 That requires either a statistical model \citep{2021ApJ...906...39L} or a time-dependent numerical simulation.
@@ -197,7 +197,7 @@ All simulations are run in Kerr-Schild-like coordinates, which are regular on th
 Unless stated otherwise, boundary conditions are outflow at the inner boundary, which is located inside the event horizon, and outflow at the outer boundary, which is located at $r_{\rm max} \ge \no{1000}\,\rg$.
 Most simulations are evolved to $t_\mathrm{final} \ge  \no{30000}\,\tg$.
 
-Once the evolution has started, the magnetorotational instability \citep[MRI,][]{1992ApJ...400..610B}, and possibly other instabilities such as magnetic Rayleigh-Taylor instabilities in MAD models  \citep{2018MNRAS.478.1837M}, drive the torus to a turbulent, fluctuating state.
+Once the evolution has started, the magnetorotational instability \citep[MRI,][]{1992ApJ...400..610B}, and possibly other instabilities such as, for MAD models,  magnetic Rayleigh-Taylor instabilities \citep{2018MNRAS.478.1837M}, drive the torus to a turbulent, fluctuating state.
 %Once the evolution has started, a combination of instabilities including the magnetorotational instability \citep[MRI,][]{1992ApJ...400..610B} drives the torus to a turbulent, fluctuating state.
 Defining $P_\mathrm{gas} \equiv$ gas pressure and $P_\mathrm{mag} \equiv B^2 / (8\pi) \equiv$ magnetic pressure, the standard accretion flow models can be divided by latitude into three zones:
 \emph{i})~an equatorial inflow,
