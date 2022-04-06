@@ -79,7 +79,7 @@ The \vam constraint passes 79\% of all models.
 
 \begin{figure*}
  \centering
- \includegraphics[width=\textwidth]{./figures/Mring_w_Constraints.png}
+ \includegraphics[width=\textwidth]{./figures/Mring_w_Constraints.pdf}
   \caption{Pass/fail plot for the \mring widths.
     Green indicates that the \kharma, \bhac, and \hamr models pass, yellow that one or two of the fiducial models fail, and red that all three fail.
     The inclination coverage is not uniform: \bhac and \kharma models cover all 5 inclinations while \hamr models cover $i = 10\degree$, $50\degree$, $90\degree$ only.
@@ -89,7 +89,7 @@ The \vam constraint passes 79\% of all models.
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{./figures/Interferometric_Constraints.png}
+  \includegraphics[width=\textwidth]{./figures/Interferometric_Constraints.pdf}
   \caption{Combined EHT constraints (logical {\em and}) including the second moment, \vam, and \mring fit constraints.
     Green indicates that the \kharma, \bhac, and \hamr fiducial models pass, yellow that one or two of the fiducial models fail, and red that all three fail.
     The inclination coverage is not uniform: \bhac and \kharma models cover all 5 inclinations while \hamr models cover $i = 10\degree$, $50\degree$, $90\degree$ only.}
@@ -150,7 +150,7 @@ There are two clusters of models that do not fail any constraints in any models:
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{./figures/Non_Interferometric_Constraints.png}
+  \includegraphics[width=\textwidth]{./figures/Non_Interferometric_Constraints.pdf}
   \caption{Combined non-EHT constraints (logical {\em and}).
     Green indicates that the \kharma, \bhac, and \hamr models pass, yellow that one or two of the fiducial models fail, and red that all three fail.}
   \label{fig:non_eht_cuts}
@@ -215,7 +215,9 @@ X-ray production in fiducial models is typically dominated by Compton upscatteri
 In the first Compton bump $\nu L_\nu$ is thus proportional to the y-parameter $y \sim 16 \Theta_e^2 \tau_e$ where $\tau_e$ is a characteristic electron-scattering optical depth and $\Theta_e$ is a typical dimensionless electron temperature.
 At $\Rh = 1$ the X-ray band lies in the first Compton bump, while at larger $\Rh$ the bumps move to lower energy because the bulk of the Thomson depth is in the midplane where $\Theta_e \propto 1/\Rh$.
 
-We find that in a few large $\Rh$ SANE models, however, X-ray emission is dominated by bremsstrahlung (synchrotron never dominates the X-ray in thermal models).  Bremsstrahlung emissivity $j_{\nu,b} \propto n^2$, so at fixed temperature bremsstrahlung increases rapidly with density. Notice that $j_{\nu,b} \propto \Theta_e^{1/2}$ for $\Theta_e > 1$ and $\Theta_e^{-1/2}$ for $\Theta_e < 1$, so cool disks enhance bremsstrahlung.  Bremsstrahlung therefore dominates Compton in models with high density and low temperature, which happens in models with large $\Rh$ (see Section~\ref{sec:discussions}).  We note that bremsstrahlung emission arises at larger radii than the synchrotron and Compton-upscattered X-ray emission and therefore varies more slowly.
+We find that in a few large $\Rh$ SANE models, however, X-ray emission is dominated by bremsstrahlung (synchrotron never dominates the X-ray in thermal models).  Bremsstrahlung emissivity $j_{\nu,b} \propto n^2$, so at fixed temperature bremsstrahlung increases rapidly with density. Notice that $j_{\nu,b} \propto \Theta_e^{1/2}$ for $\Theta_e > 1$ and $\Theta_e^{-1/2}$ for $\Theta_e < 1$, so cool disks enhance bremsstrahlung.  Bremsstrahlung therefore dominates Compton in models with high density and low temperature, i.e. some models with large $\Rh$ (see Section~\ref{sec:discussions}).  
+
+In models with bremsstrahlung-dominated X-ray emission the median radius of emission is $\simeq 20 \rg$.  Although the models are equilibrated at this radius the X-ray luminosity may be partially contaminated by emission from unequilibrated plasma at larger radii.  Because the fiducial models start with a torus of finite radial extent, however, they are also missing bremsstrahlung emission from outside the initial torus.  A full assessment of the associated uncertainty requires large, long runs.  Notice that because bremsstrahlung arises at large radii it varies more slowly than the synchrotron and Compton-upscattered X-ray emission and is therefore potentially distinguishable \citep{2013ApJ...774...42N}.  
 
 The X-ray cuts are shown in Appendix~\ref{app:tables},  Figure~\ref{fig:xray_pizza}.  Some large $\Rh$ SANE models fail due to excess bremsstrahlung, although there is notable disagreement between \bhac and \kharma for SANE X-ray fluxes.
 MAD models that fail have low $\Rh$ and are Compton-dominated in the X-ray.
