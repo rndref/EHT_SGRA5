@@ -41,11 +41,15 @@
 \ifnum\value{iPap}=5 \renewcommand{\ehtsubtitle}{Testing Astrophysical Models of the Galactic Center Black Hole}\fi
 \ifnum\value{iPap}=6 \renewcommand{\ehtsubtitle}{Testing the Black Hole Metric}\fi
 
-\title{
+\title{%
 First Sagittarius A* Event Horizon Telescope Results.
 \Roman{iPap}. \ehtsubtitle}
 
+\shorttitle{\ehtsubtitle}
+
 \include{./GAL-only}
+
+\collaboration{0}{The Event Horizon Telescope Collaboration}
 
 \ifnum\value{iPap}=1 \include{./SAL1}\fi
 \ifnum\value{iPap}=2 \include{./SAL2}\fi
@@ -54,8 +58,9 @@ First Sagittarius A* Event Horizon Telescope Results.
 \ifnum\value{iPap}=5 \include{./SAL5}\fi
 \ifnum\value{iPap}=6 \include{./SAL6}\fi
 
-\submitjournal{ApJL}
+\shortauthors{The EHT Collaboration et al.}
 
+\submitjournal{ApJL}
 \received{\today}
 \revised{\today}
 \accepted{\today}
@@ -116,6 +121,8 @@ Frontera supercomputer (Texas Advanced Computing Center), Puma Supercomputer (Ar
 \input{appendix_numerical}
 \input{appendix_variability}
 \input{appendix_tables}
+
+\allauthors
 
 %==============================================================================
 % Ensure that papers are listed in the references
