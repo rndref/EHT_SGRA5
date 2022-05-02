@@ -21,7 +21,7 @@
     \emph{Bottom}: visibility amplitude.
     \emph{Left}: passing snapshot;
     \emph{right}: failing snapshot.
-    In the bottom row, 
+    In the bottom row,
     the solid lines in each plot show visibility amplitudes on a section through the origin in the \uv domain, at four position angles (PAs), where $0\degree$ is parallel to the projected angular momentum vector of the accretion flow.
     Solid black points show data from \aprilvii.
     The \vam constraint requires that for at least one PA the first minimum in VA fall within the left grey band, and for all PAs the median of the VAs lie inside the right grey band (see Section~\ref{sec:constraints}, \emph{Visibility Amplitude Morphology}, for details).
@@ -184,7 +184,7 @@ Notice that
 \emph{i})~two different values for the 86\GHz intrinsic source size have been reported in the literature (see Section~\ref{sec:86size});
 \emph{ii})~scattering is $7$ times stronger at 86\GHz than at 230\GHz;
 \emph{iii})~scattering must be subtracted accurately to obtain the intrinsic source size; and
-\emph{iv})~the error bars for the 86\GHz source size are narrow and this plays a key role in determining the strength of the constraint.  We have re-run the full set of constraints with with the 
+\emph{iv})~the error bars for the 86\GHz source size are narrow and this plays a key role in determining the strength of the constraint.
 
 %..............................................................................
 \subsubsubsection{\texorpdfstring{$2.2\um$}{2.2um} Median Flux Density}
@@ -201,6 +201,7 @@ The sensitivity to $B$ implies that $2.2\um$ flux density will be highest for pa
 
 Finally, the $2.2\um$ flux density is also sensitive to inclination.  A combination of Doppler boosting and the rapid falloff in emissivity in the NIR means that at large inclination lower frequency emission from the approaching side of the accretion flow is boosted into the NIR and thus $2.2\um$ flux is higher at high inclination.
 
+Figure~\ref{fig:passfail_sed} shows sample SEDs from our model library, where the left panel is a model that passes the $2.2\um$ flux limit and the right panel is a model that fails.
 Models that pass the $2.2\um$ flux limit are shown in Appendix~\ref{app:tables} in Figure~\ref{fig:2um_flux_pizza}.
 The rejected SANE models ($7\%$ rejected by all of \kharma, \bhac, and \hamr) tend to be at high inclination: their images are dominated by a bright spot on the approaching side of the disk.
 The rejected MAD models ($53\%$) include nearly all models at $\Rh = 1$ and $\Rh = 10$, where $\Theta_e$ tends to be larger, and the majority of high-inclination models, where the effect of Doppler boosting is largest.
@@ -215,10 +216,11 @@ X-ray production in fiducial models is typically dominated by Compton upscatteri
 In the first Compton bump $\nu L_\nu$ is thus proportional to the y-parameter $y \sim 16 \Theta_e^2 \tau_e$ where $\tau_e$ is a characteristic electron-scattering optical depth and $\Theta_e$ is a typical dimensionless electron temperature.
 At $\Rh = 1$ the X-ray band lies in the first Compton bump, while at larger $\Rh$ the bumps move to lower energy because the bulk of the Thomson depth is in the midplane where $\Theta_e \propto 1/\Rh$.
 
-We find that in a few large $\Rh$ SANE models, however, X-ray emission is dominated by bremsstrahlung (synchrotron never dominates the X-ray in thermal models).  Bremsstrahlung emissivity $j_{\nu,b} \propto n^2$, so at fixed temperature bremsstrahlung increases rapidly with density. Notice that $j_{\nu,b} \propto \Theta_e^{1/2}$ for $\Theta_e > 1$ and $\Theta_e^{-1/2}$ for $\Theta_e < 1$, so cool disks enhance bremsstrahlung.  Bremsstrahlung therefore dominates Compton in models with high density and low temperature, i.e. some models with large $\Rh$ (see Section~\ref{sec:discussions}).  
+We find that in a few large $\Rh$ SANE models, however, X-ray emission is dominated by bremsstrahlung (synchrotron never dominates the X-ray in thermal models).  Bremsstrahlung emissivity $j_{\nu,b} \propto n^2$, so at fixed temperature bremsstrahlung increases rapidly with density. Notice that $j_{\nu,b} \propto \Theta_e^{1/2}$ for $\Theta_e > 1$ and $\Theta_e^{-1/2}$ for $\Theta_e < 1$, so cool disks enhance bremsstrahlung.  Bremsstrahlung therefore dominates Compton in models with high density and low temperature, i.e. some models with large $\Rh$ (see Section~\ref{sec:discussions}).
 
-In models with bremsstrahlung-dominated X-ray emission the median radius of emission is $\simeq 20 \rg$.  Although the models are equilibrated at this radius the X-ray luminosity may be partially contaminated by emission from unequilibrated plasma at larger radii.  Because the fiducial models start with a torus of finite radial extent, however, they are also missing bremsstrahlung emission from outside the initial torus.  A full assessment of the associated uncertainty requires large, long runs.  Notice that because bremsstrahlung arises at large radii it varies more slowly than the synchrotron and Compton-upscattered X-ray emission and is therefore potentially distinguishable \citep{2013ApJ...774...42N}.  
+In models with bremsstrahlung-dominated X-ray emission the median radius of emission is $\simeq 20 \rg$.  Although the models are equilibrated at this radius the X-ray luminosity may be partially contaminated by emission from unequilibrated plasma at larger radii.  Because the fiducial models start with a torus of finite radial extent, however, they are also missing bremsstrahlung emission from outside the initial torus.  A full assessment of the associated uncertainty requires large, long runs.  Notice that because bremsstrahlung arises at large radii it varies more slowly than the synchrotron and Compton-upscattered X-ray emission and is therefore potentially distinguishable \citep{2013ApJ...774...42N}.
 
+The left panel of ﻿Figure﻿~\ref{fig:passfail_sed} shows a model that passes the X-ray ﻿flux limit, while the right panel shows a model that fails.
 The X-ray cuts are shown in Appendix~\ref{app:tables},  Figure~\ref{fig:xray_pizza}.  Some large $\Rh$ SANE models fail due to excess bremsstrahlung, although there is notable disagreement between \bhac and \kharma for SANE X-ray fluxes.
 MAD models that fail have low $\Rh$ and are Compton-dominated in the X-ray.
 Nearly all $\Rh = 1$ MAD models fail the X-ray constraint, as do many at $\Rh = 10$.  This is because the midplane $\Theta_e$ increases as $\Rh$ goes to $1$.
@@ -307,9 +309,10 @@ It is also possible, however, that one of the constraints is measured incorrectl
 To investigate this, we identify all models that fail only one constraint in Table~\ref{tab:fail_one_thermal}.
 We find that the critical constraints are 86\GHz size, \mring diameter, and $\mi{3}$.
 Notice that there is overlap between \kharma and \bhac in MAD models that fail the $\mi{3}$ constraint.
-The \hamr models fare significantly worse than the \kharma and \bhac models in the $\mi{3}$ constraint: only 7\% of models pass. The remaining models all fail at least one additional constraint, leading to their exclusion from Table~\ref{tab:fail_one_thermal}.
+The \hamr models fare significantly worse than the \kharma and \bhac models in the $\mi{3}$ constraint: only 7\% of models pass.
+The remaining models all fail at least one additional constraint, leading to their exclusion from Table~\ref{tab:fail_one_thermal}.
 %All \hamr that pass $\mi{3}$ fail 86GHz flux and size
-%No \hamr models are listed because all \hamr models fail at least two constraints. 
+%No \hamr models are listed because all \hamr models fail at least two constraints.
 
 %==============================================================================
 \subsection{Exploratory Models}\label{sec:explore}
@@ -498,7 +501,7 @@ This small variation in the mass accretion rate reveals the fact that most of th
 
 The addition of non-thermal particles does not substantially affect the flux or size of the image at 230\GHz.
 
-For MAD models, 230\GHz emission is mostly produced in the disk region (see \citetalias{M87PaperV} and Figure~8 in \citealt{Wong_2022} for a 3D rendering).
+For MAD models, 230\GHz emission is mostly produced in the disk region (see \citetalias{M87PaperV} and Figure~8 in \citealt{2022ApJS..259...64W} for a 3D rendering).
 Thus, the images are unaffected by the non-thermal particles, which are located in the jet.
 
 For SANE models, increasing $\Rh$ pushes the emission towards the jet sheath which increases the source size for high spins and large $\Rh$.
@@ -638,6 +641,7 @@ From the \bhac variable $\kappa$ three models are in agreement with all constrai
 The last of the six survivors is a \bhac SANE model with variable efficiency of $\varepsilon=0.05$ with an inclination of 10$^\degree$ and a $\Rh=10$.
 These models share a common low inclination angle $i \leq 60\degree$ and positive spin.
 We note that the MAD models coincide with the cluster of thermal models found for both \bhac and \kharma models (see Section~\ref{sec:summarythermal}).
+We also show the nonthermal models that fail only one constraint in Table~\ref{tab:fail_one_nonthermal}.
 
 \input{Tables/fail_one_nonthermal}
 
